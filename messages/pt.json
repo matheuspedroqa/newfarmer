@@ -69,7 +69,9 @@
   "nav": {
     "dashboard": "Painel",
     "myfarm": "MyFarm",
-    "weather": "Clima"
+    "weather": "Clima",
+    "animals": "Animais",
+    "crops": "Plantações"
   },
   "dashboard": {
     "hello": "Olá, {name}!",
@@ -79,7 +81,10 @@
     "myCrops": "Minhas plantações",
     "noCrops": "Você ainda não marcou plantações.",
     "editFarm": "Editar no MyFarm",
-    "cropsSoon": "Em breve: o que fazer este mês em cada plantação."
+    "thisMonth": "Este mês nas suas plantações",
+    "nothingThisMonth": "Nenhuma das suas plantações tem plantio ou colheita este mês.",
+    "seasonTip": "Dica da estação ({season})",
+    "seasonTipEmpty": "Marque seus animais no MyFarm para receber dicas da estação."
   },
   "email": {
     "resetSubject": "Recupere sua senha do NewFarmer",
@@ -194,5 +199,72 @@
     "languageHelp": "Escolha o idioma do NewFarmer.",
     "saveLanguage": "Salvar idioma",
     "languageSaved": "Idioma salvo."
+  },
+  "seasons": {
+    "summer": "Verão",
+    "autumn": "Outono",
+    "winter": "Inverno",
+    "spring": "Primavera",
+    "current": "Estação atual"
+  },
+  "activities": {
+    "directSowing": "Plantio direto",
+    "seedbed": "Sementeira",
+    "transplant": "Transplante",
+    "harvest": "Colheita"
+  },
+  "months": {
+    "1": "Jan",
+    "2": "Fev",
+    "3": "Mar",
+    "4": "Abr",
+    "5": "Mai",
+    "6": "Jun",
+    "7": "Jul",
+    "8": "Ago",
+    "9": "Set",
+    "10": "Out",
+    "11": "Nov",
+    "12": "Dez"
+  },
+  "countries": {
+    "BR": "Brasil",
+    "US": "Estados Unidos",
+    "CA": "Canadá",
+    "DE": "Alemanha",
+    "ES": "Espanha",
+    "FR": "França",
+    "PT": "Portugal",
+    "IT": "Itália",
+    "MX": "México"
+  },
+  "animalPage": {
+    "breeds": "Raças",
+    "idealTemp": "Temperatura ideal",
+    "tempRange": "{min} °C a {max} °C",
+    "seasonalCare": "Cuidados por estação no seu clima ({zone})",
+    "feeding": "Alimentação",
+    "healthCare": "Cuidados com a saúde",
+    "diseases": "Sinais de doença e tratamento",
+    "signs": "Sinais",
+    "homeCare": "Cuidado caseiro",
+    "vetCare": "Tratamento veterinário",
+    "noContent": "Ficha em preparação."
+  },
+  "cropPage": {
+    "groups": "Plantações por tipo",
+    "calendar": "Calendário no seu clima ({zone}, {hemisphere})",
+    "fertilizing": "Adubação",
+    "pruning": "Poda",
+    "noPruning": "Não precisa de poda.",
+    "watering": "Irrigação",
+    "other": "Outros cuidados",
+    "notSuited": "Não recomendado para o seu clima.",
+    "noContent": "Ficha em preparação."
+  },
+  "content": {
+    "sources": "Fontes",
+    "vetWarning": "Consulte um veterinário antes de medicar. As informações aqui são gerais e não substituem uma consulta.",
+    "inYourCountry": "No seu país: {country}"
   }
 }

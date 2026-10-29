@@ -69,7 +69,9 @@
   "nav": {
     "dashboard": "Dashboard",
     "myfarm": "MyFarm",
-    "weather": "Weather"
+    "weather": "Weather",
+    "animals": "Animals",
+    "crops": "Crops"
   },
   "dashboard": {
     "hello": "Hello, {name}!",
@@ -79,7 +81,10 @@
     "myCrops": "My crops",
     "noCrops": "You have not added any crops yet.",
     "editFarm": "Edit in MyFarm",
-    "cropsSoon": "Coming soon: what to do this month for each crop."
+    "thisMonth": "This month in your crops",
+    "nothingThisMonth": "None of your crops has planting or harvest this month.",
+    "seasonTip": "Seasonal tip ({season})",
+    "seasonTipEmpty": "Add your animals in MyFarm to get seasonal tips."
   },
   "email": {
     "resetSubject": "Recover your NewFarmer password",
@@ -194,5 +199,72 @@
     "languageHelp": "Choose the NewFarmer language.",
     "saveLanguage": "Save language",
     "languageSaved": "Language saved."
+  },
+  "seasons": {
+    "summer": "Summer",
+    "autumn": "Autumn",
+    "winter": "Winter",
+    "spring": "Spring",
+    "current": "Current season"
+  },
+  "activities": {
+    "directSowing": "Direct sowing",
+    "seedbed": "Seedbed",
+    "transplant": "Transplant",
+    "harvest": "Harvest"
+  },
+  "months": {
+    "1": "Jan",
+    "2": "Feb",
+    "3": "Mar",
+    "4": "Apr",
+    "5": "May",
+    "6": "Jun",
+    "7": "Jul",
+    "8": "Aug",
+    "9": "Sep",
+    "10": "Oct",
+    "11": "Nov",
+    "12": "Dec"
+  },
+  "countries": {
+    "BR": "Brazil",
+    "US": "United States",
+    "CA": "Canada",
+    "DE": "Germany",
+    "ES": "Spain",
+    "FR": "France",
+    "PT": "Portugal",
+    "IT": "Italy",
+    "MX": "Mexico"
+  },
+  "animalPage": {
+    "breeds": "Breeds",
+    "idealTemp": "Ideal temperature",
+    "tempRange": "{min} °C to {max} °C",
+    "seasonalCare": "Seasonal care in your climate ({zone})",
+    "feeding": "Feeding",
+    "healthCare": "Health care",
+    "diseases": "Signs of disease and treatment",
+    "signs": "Signs",
+    "homeCare": "Home care",
+    "vetCare": "Veterinary treatment",
+    "noContent": "Guide in preparation."
+  },
+  "cropPage": {
+    "groups": "Crops by type",
+    "calendar": "Calendar for your climate ({zone}, {hemisphere})",
+    "fertilizing": "Fertilizing",
+    "pruning": "Pruning",
+    "noPruning": "No pruning needed.",
+    "watering": "Watering",
+    "other": "Other care",
+    "notSuited": "Not recommended for your climate.",
+    "noContent": "Guide in preparation."
+  },
+  "content": {
+    "sources": "Sources",
+    "vetWarning": "Consult a veterinarian before giving any medication. This information is general and does not replace a consultation.",
+    "inYourCountry": "In your country: {country}"
   }
 }

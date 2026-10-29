@@ -11,9 +11,11 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   if (!user) redirect("/login");
   const t = await getTranslations();
 
-  // Trilho de ícones da variante D. A Etapa 3 acrescenta Animais e Plantações.
+  // Trilho de ícones da variante D. MyFarm e Perfil ficam no menu da conta.
   const nav = [
     { href: "/painel", icon: "📊", label: t("nav.dashboard") },
+    { href: "/animais", icon: "🐔", label: t("nav.animals") },
+    { href: "/plantacoes", icon: "🌱", label: t("nav.crops") },
     { href: "/clima", icon: "☀️", label: t("nav.weather") },
   ];
 

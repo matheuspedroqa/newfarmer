@@ -1,7 +1,10 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { WeatherHero } from "@/components/WeatherHero";
+import { resolveLocale } from "@/i18n/locales";
 import { ANIMALS, CROPS } from "@/lib/catalog";
+import { monthlyTasks, seasonFor } from "@/lib/seasons";
+import { getAllCropContent, getAnimalContent } from "@/server/content";
 import { getCurrentUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getFarm } from "@/server/farm";
@@ -21,6 +24,20 @@ export default async function DashboardPage() {
   const farm = getFarm(db, user.id);
   const forecast = await getForecast(db, getWeatherProvider(), user.latitude, user.longitude);
   const icon = (id: string) => ANIMALS.find((a) => a.id === id)!.icon;
+  const locale = resolveLocale(await getLocale());
+  const month = new Date().getMonth() + 1;
+  const season = seasonFor(month, user.hemisphere);
+  const tasks = monthlyTasks(
+    getAllCropContent().filter((c) => farm.crops.includes(c.id)),
+    user.climateZone,
+    user.hemisphere,
+    month,
+  );
+  const tips = farm.animals
+    .map((a) => ({ id: a.id, content: getAnimalContent(a.id) }))
+    .filter((a) => a.content)
+    .slice(0, 3)
+    .map((a) => ({ id: a.id, text: a.content!.seasonalCare[user.climateZone][season][locale] }));
 
   return (
     <section>
@@ -64,10 +81,39 @@ export default async function DashboardPage() {
                   </span>
                 ))}
               </div>
-              <p className="mt-3 text-sm text-muted">{t("dashboard.cropsSoon")}</p>
+              <div data-testid="monthly-tasks" className="mt-5">
+                <p className="text-sm font-bold uppercase tracking-wide text-accent">{t("dashboard.thisMonth")}</p>
+                {tasks.length ? (
+                  <ul className="mt-2 space-y-1">
+                    {tasks.map((task) => (
+                      <li key={task.cropId}>
+                        <span aria-hidden>{CROPS.find((c) => c.id === task.cropId)!.icon}</span>{" "}
+                        <b>{t(`crops.${task.cropId}`)}</b> · {task.activities.map((a) => t(`activities.${a}`)).join(", ")}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="mt-2 text-muted">{t("dashboard.nothingThisMonth")}</p>
+                )}
+              </div>
             </>
           ) : (
             <p className="mt-3 text-muted">{t("dashboard.noCrops")}</p>
+          )}
+        </section>
+
+        <section data-testid="season-tip" className="col-span-4 rounded-3xl bg-primary p-6 text-primary-text">
+          <p className="font-bold">🍂 {t("dashboard.seasonTip", { season: t(`seasons.${season}`) })}</p>
+          {tips.length ? (
+            <ul className="mt-2 space-y-1">
+              {tips.map((tip) => (
+                <li key={tip.id}>
+                  <span aria-hidden>{icon(tip.id)}</span> <b>{t(`animals.${tip.id}`)}:</b> {tip.text}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-2 opacity-90">{t("dashboard.seasonTipEmpty")}</p>
           )}
         </section>
       </div>
