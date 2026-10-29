@@ -1,0 +1,96 @@
+{
+  "id": "chickens",
+  "summary": {
+    "pt": "Galinhas são a criação mais fácil para começar: precisam de pouco espaço, dão ovos quase todos os dias e transformam restos de horta em adubo. Um galinheiro seco, ventilado e protegido de predadores resolve a maior parte dos problemas.",
+    "en": "Chickens are the easiest animals to start with: they need little space, lay eggs almost every day and turn garden scraps into manure. A dry, ventilated, predator-proof coop solves most problems."
+  },
+  "breeds": [
+    { "name": "Rhode Island Red", "purpose": { "pt": "Ovos e carne", "en": "Eggs and meat" }, "notes": { "pt": "Rústica e calma, boa postura de ovos marrons; tolera bem frio e calor moderado.", "en": "Hardy and calm, good layer of brown eggs; handles cold and moderate heat well." } },
+    { "name": "Embrapa 051 (Colonial)", "purpose": { "pt": "Ovos e carne (caipira)", "en": "Eggs and meat (free-range)" }, "notes": { "pt": "Desenvolvida pela Embrapa para criação caipira; ciclo mais longo e boa adaptação ao clima brasileiro.", "en": "Developed by Embrapa for free-range systems; longer cycle and well adapted to Brazilian climate." } },
+    { "name": "Pescoço Pelado (Naked Neck)", "purpose": { "pt": "Carne e ovos", "en": "Meat and eggs" }, "notes": { "pt": "Tem menos penas no pescoço e por isso aguenta melhor o calor; ótima para regiões quentes.", "en": "Has fewer neck feathers and therefore copes better with heat; great for hot regions." } },
+    { "name": "Plymouth Rock Barrada (Carijó)", "purpose": { "pt": "Ovos e carne", "en": "Eggs and meat" }, "notes": { "pt": "Plumagem listrada, dócil, boa para quintal e para quem está começando.", "en": "Barred plumage, docile, good for backyards and beginners." } }
+  ],
+  "idealTemp": {
+    "minC": 15,
+    "maxC": 25,
+    "notes": {
+      "pt": "Acima de 30 °C as galinhas ofegam, comem menos e botam menos ovos. Pintinhos nas primeiras semanas precisam de aquecimento (cerca de 32 °C na primeira semana, baixando aos poucos).",
+      "en": "Above 30 °C chickens pant, eat less and lay fewer eggs. Chicks in their first weeks need heat (about 32 °C in the first week, lowered gradually)."
+    }
+  },
+  "seasonalCare": {
+    "tropical": {
+      "summer": { "pt": "Calor e chuva: sombra, água fresca sempre, telhado com boa ventilação e cama seca para evitar coccidiose.", "en": "Heat and rain: shade, fresh water at all times, a well-ventilated roof and dry bedding to prevent coccidiosis." },
+      "autumn": { "pt": "Bom momento para vermifugar e revisar a vacinação antes do período seco.", "en": "Good time to deworm and review vaccinations before the dry season." },
+      "winter": { "pt": "Estação seca: complemente o pasto com verdura e milho; controle piolhos e ácaros, que aumentam no tempo seco.", "en": "Dry season: supplement forage with greens and corn; control lice and mites, which increase in dry weather." },
+      "spring": { "pt": "Época boa para chocar e criar pintinhos; prepare a pinteira aquecida e protegida.", "en": "Good time for hatching and raising chicks; prepare a warm, protected brooder." }
+    },
+    "subtropical": {
+      "summer": { "pt": "Dias quentes: sombra, água fresca e galinheiro arejado; recolha os ovos duas vezes ao dia.", "en": "Hot days: shade, fresh water and an airy coop; collect eggs twice a day." },
+      "autumn": { "pt": "Muda de penas: a postura cai; reforce a ração com proteína e não estranhe a pausa.", "en": "Moulting: laying drops; boost protein in the feed and do not worry about the pause." },
+      "winter": { "pt": "Proteja do vento e da umidade; feche frestas sem tirar a ventilação. Dias curtos reduzem a postura.", "en": "Protect from wind and damp; close drafts without blocking ventilation. Short days reduce laying." },
+      "spring": { "pt": "Melhor época para chocar; vacine os pintinhos (Marek, Newcastle, bouba) conforme orientação local.", "en": "Best season for hatching; vaccinate chicks (Marek's, Newcastle, fowl pox) as advised locally." }
+    },
+    "temperate": {
+      "summer": { "pt": "Garanta sombra e água; é a época de maior postura e de mais ácaros no galinheiro.", "en": "Ensure shade and water; peak laying season and peak mite season in the coop." },
+      "autumn": { "pt": "Muda de penas e menos ovos; limpe e desinfete o galinheiro antes do inverno.", "en": "Moult and fewer eggs; clean and disinfect the coop before winter." },
+      "winter": { "pt": "Evite água congelada, use cama grossa e seca e proteja cristas grandes do frio intenso.", "en": "Prevent frozen water, use deep dry bedding and protect large combs from severe cold." },
+      "spring": { "pt": "Época de choco e de comprar pintinhos; vermifugue o plantel antes de soltar no pasto.", "en": "Hatching and chick-buying season; deworm the flock before letting it out on pasture." }
+    },
+    "semiarid": {
+      "summer": { "pt": "Calor forte: sombra de árvores, telhado alto, água fresca em vários pontos; prefira raças de pescoço pelado.", "en": "Intense heat: tree shade, a high roof and fresh water in several spots; prefer naked-neck breeds." },
+      "autumn": { "pt": "Período de chuvas curtas: cuidado com cama molhada e coccidiose.", "en": "Short rainy period: watch for wet bedding and coccidiosis." },
+      "winter": { "pt": "Noites frescas e dias secos: armazene milho e capim para a seca.", "en": "Cool nights and dry days: store corn and forage for the dry period." },
+      "spring": { "pt": "Seca: complemente com ração e restos de horta; água limpa é a prioridade.", "en": "Drought: supplement with feed and garden scraps; clean water is the priority." }
+    },
+    "cold": {
+      "summer": { "pt": "Aproveite o verão curto para criar pintinhos e deixar as aves no pasto.", "en": "Use the short summer to raise chicks and keep birds on pasture." },
+      "autumn": { "pt": "Prepare o galinheiro isolado e escolha só as aves mais resistentes para o inverno.", "en": "Prepare an insulated coop and keep only the hardiest birds for winter." },
+      "winter": { "pt": "Água sem congelar, cama funda, galinheiro fechado mas ventilado; luz artificial ajuda a manter a postura.", "en": "Unfrozen water, deep litter, a closed but ventilated coop; artificial light helps keep laying." },
+      "spring": { "pt": "Retome a postura, faça limpeza geral e controle de ácaros.", "en": "Laying resumes; do a full clean-out and mite control." }
+    }
+  },
+  "feeding": [
+    { "pt": "Ração balanceada (postura ou crescimento) é a base; milho sozinho engorda mas não dá proteína suficiente.", "en": "Balanced feed (layer or grower) is the base; corn alone fattens but lacks protein." },
+    { "pt": "Verduras, restos de horta e pasto completam a dieta das galinhas caipiras.", "en": "Greens, garden scraps and pasture round out free-range hens' diet." },
+    { "pt": "Ofereça cálcio (casca de ostra ou de ovo torrada e moída) para cascas firmes.", "en": "Offer calcium (oyster shell or roasted, ground eggshell) for strong shells." },
+    { "pt": "Água limpa e fresca à vontade, trocada todos os dias.", "en": "Clean, fresh water at all times, changed daily." }
+  ],
+  "healthCare": [
+    { "pt": "Siga o calendário de vacinas da sua região (Marek, Newcastle e bouba são as mais comuns).", "en": "Follow your region's vaccination schedule (Marek's, Newcastle and fowl pox are the most common)." },
+    { "pt": "Mantenha a cama seca e troque a parte molhada perto dos bebedouros.", "en": "Keep bedding dry and replace the wet patches near drinkers." },
+    { "pt": "Coloque aves novas em quarentena por 2 a 3 semanas antes de juntar ao grupo.", "en": "Quarantine new birds for 2 to 3 weeks before mixing them with the flock." },
+    { "pt": "Confira piolhos e ácaros embaixo das asas e perto da cloaca uma vez por mês.", "en": "Check for lice and mites under the wings and around the vent once a month." }
+  ],
+  "diseases": [
+    {
+      "name": { "pt": "Doença de Newcastle", "en": "Newcastle disease" },
+      "signs": { "pt": "Espirros, respiração difícil, torcicolo, paralisia, queda brusca de postura e mortes rápidas.", "en": "Sneezing, laboured breathing, twisted neck, paralysis, sudden drop in laying and rapid deaths." },
+      "homeCare": { "pt": "Isole as aves doentes, não venda nem leve aves para fora e limpe tudo com desinfetante.", "en": "Isolate sick birds, do not sell or move birds off the property and disinfect everything." },
+      "vetCare": { "pt": "Não há tratamento: a prevenção é a vacina. É doença de notificação obrigatória — avise o serviço veterinário oficial.", "en": "There is no treatment: prevention is vaccination. It is a notifiable disease — contact the official veterinary service." }
+    },
+    {
+      "name": { "pt": "Coccidiose", "en": "Coccidiosis" },
+      "signs": { "pt": "Diarreia com sangue, penas arrepiadas, ave encolhida e sem apetite, principalmente em frangos jovens.", "en": "Bloody diarrhoea, ruffled feathers, hunched birds with no appetite, mostly in young birds." },
+      "homeCare": { "pt": "Troque a cama molhada, lave e seque bebedouros e separe as aves mais fracas.", "en": "Replace wet bedding, wash and dry drinkers and separate the weakest birds." },
+      "vetCare": { "pt": "Anticoccidianos na água (como amprólio ou sulfas), sempre com orientação veterinária.", "en": "Anticoccidials in the water (such as amprolium or sulfa drugs), always with veterinary guidance." }
+    },
+    {
+      "name": { "pt": "Bouba aviária (varíola)", "en": "Fowl pox" },
+      "signs": { "pt": "Crostas e verrugas na crista, barbela e em volta dos olhos; às vezes placas na boca.", "en": "Scabs and warts on the comb, wattles and around the eyes; sometimes plaques in the mouth." },
+      "homeCare": { "pt": "Limpe as feridas com antisséptico suave e controle mosquitos, que espalham a doença.", "en": "Clean lesions with a mild antiseptic and control mosquitoes, which spread the disease." },
+      "vetCare": { "pt": "Não há remédio para o vírus; o veterinário pode indicar antibiótico se houver infecção secundária. Prevenção pela vacina.", "en": "There is no cure for the virus; a vet may prescribe antibiotics for secondary infection. Prevent with vaccination." }
+    },
+    {
+      "name": { "pt": "Piolhos e ácaros", "en": "Lice and mites" },
+      "signs": { "pt": "Coceira, penas falhadas, crista pálida, menos ovos; pontinhos andando na pele ou nos poleiros.", "en": "Itching, patchy feathers, pale comb, fewer eggs; tiny moving dots on the skin or perches." },
+      "homeCare": { "pt": "Ofereça banho de terra (areia com cinza), limpe poleiros e ninhos e troque a cama.", "en": "Provide a dust bath (sand with ash), clean perches and nests and change the bedding." },
+      "vetCare": { "pt": "Ectoparasiticidas próprios para aves, aplicados nas aves e no galinheiro conforme orientação veterinária.", "en": "Poultry-approved ectoparasiticides applied to birds and coop as directed by a vet." }
+    }
+  ],
+  "sources": [
+    { "title": "Embrapa Cocais — Manual do Sistema de Produção Sustentável de Galinhas Caipiras (2017)", "url": "https://core.ac.uk/download/211804893.pdf" },
+    { "title": "Embrapa/Emparn/Sebrae — Sistema de produção de galinhas caipiras", "url": "https://www.sebrae.com.br/Sebrae/Portal%20Sebrae/UFs/RN/Anexos/Avicultura-Sistema-de-producao-de-galinhas-caipiras.pdf" },
+    { "title": "Embrapa Meio-Norte — Instalações e conforto térmico para aves caipiras (Prosa Rural, 2020)", "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/1124118" }
+  ]
+}

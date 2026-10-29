@@ -1,0 +1,97 @@
+{
+  "id": "cows",
+  "summary": {
+    "pt": "Vacas pedem mais área e mais investimento, mas dão leite todos os dias e ajudam a manter o pasto. A escolha da raça certa para o seu clima é a decisão mais importante: raças europeias sofrem no calor, raças zebuínas e mestiças aguentam melhor.",
+    "en": "Cows need more land and investment, but they give milk every day and help maintain pasture. Choosing the right breed for your climate is the key decision: European breeds suffer in heat, zebu and crossbreeds cope better."
+  },
+  "breeds": [
+    { "name": "Girolando", "purpose": { "pt": "Leite", "en": "Milk" }, "notes": { "pt": "Cruzamento de Gir com Holandesa; responde por boa parte do leite do Brasil e tolera bem o calor.", "en": "Gir × Holstein cross; supplies much of Brazil's milk and tolerates heat well." } },
+    { "name": "Jersey", "purpose": { "pt": "Leite", "en": "Milk" }, "notes": { "pt": "Porte pequeno, leite rico em gordura, dócil; boa para pequenas propriedades.", "en": "Small frame, butterfat-rich milk, docile; good for small farms." } },
+    { "name": "Holandesa", "purpose": { "pt": "Leite", "en": "Milk" }, "notes": { "pt": "Maior produção de leite, mas sofre com calor; indicada para clima ameno ou frio.", "en": "Highest milk yield but suffers in heat; suited to mild or cold climates." } },
+    { "name": "Gir Leiteiro", "purpose": { "pt": "Leite", "en": "Milk" }, "notes": { "pt": "Zebuína, muito resistente ao calor e a carrapatos.", "en": "Zebu breed, very resistant to heat and ticks." } },
+    { "name": "Nelore", "purpose": { "pt": "Carne", "en": "Beef" }, "notes": { "pt": "Raça de corte mais criada no Brasil; rústica e adaptada ao pasto tropical.", "en": "Brazil's most common beef breed; hardy and adapted to tropical pasture." } }
+  ],
+  "idealTemp": {
+    "minC": 5,
+    "maxC": 25,
+    "notes": {
+      "pt": "Vacas leiteiras europeias produzem melhor entre 5 e 25 °C; acima disso caem o apetite e o leite. Girolando e Gir toleram vários graus a mais.",
+      "en": "European dairy cows produce best between 5 and 25 °C; above that, appetite and milk drop. Girolando and Gir tolerate several degrees more."
+    }
+  },
+  "seasonalCare": {
+    "tropical": {
+      "summer": { "pt": "Sombra no pasto, água à vontade e controle de carrapatos e moscas, que explodem no calor úmido.", "en": "Shade in pasture, unlimited water and control of ticks and flies, which surge in humid heat." },
+      "autumn": { "pt": "Faça silagem ou feno com o excedente de capim para a seca.", "en": "Make silage or hay from surplus grass for the dry season." },
+      "winter": { "pt": "Seca: suplemente com silagem, cana com ureia (sob orientação) e sal mineral.", "en": "Dry season: supplement with silage, sugarcane with urea (with guidance) and mineral salt." },
+      "spring": { "pt": "Volta das chuvas: vacine (aftosa e brucelose conforme calendário oficial) e vermifugue os bezerros.", "en": "Rains return: vaccinate (foot-and-mouth and brucellosis per official schedule) and deworm calves." }
+    },
+    "subtropical": {
+      "summer": { "pt": "Sombra e água; ordenhe nas horas frescas e controle carrapatos.", "en": "Shade and water; milk in the cool hours and control ticks." },
+      "autumn": { "pt": "Plante pastagens de inverno (aveia, azevém) para o frio.", "en": "Sow winter pastures (oats, ryegrass) for the cold season." },
+      "winter": { "pt": "Geada reduz o pasto: complemente com silagem e feno; abrigue os bezerros do vento.", "en": "Frost reduces pasture: supplement with silage and hay; shelter calves from wind." },
+      "spring": { "pt": "Época de partos e de pasto novo; cuidado com timpanismo ao soltar em pasto muito verde.", "en": "Calving season and fresh pasture; watch for bloat when turning out onto lush grass." }
+    },
+    "temperate": {
+      "summer": { "pt": "Pasto farto; garanta sombra e água limpa e controle moscas.", "en": "Plenty of pasture; ensure shade, clean water and fly control." },
+      "autumn": { "pt": "Estoque feno e silagem; vermifugue antes de recolher para o inverno.", "en": "Stock hay and silage; deworm before housing for winter." },
+      "winter": { "pt": "Estábulo seco e ventilado, cama limpa, água sem congelar.", "en": "Dry, ventilated barn, clean bedding, unfrozen water." },
+      "spring": { "pt": "Partos e volta ao pasto aos poucos para evitar timpanismo.", "en": "Calving and gradual return to pasture to prevent bloat." }
+    },
+    "semiarid": {
+      "summer": { "pt": "Calor extremo: sombra, água e raças zebuínas; evite trabalhar o gado no sol.", "en": "Extreme heat: shade, water and zebu breeds; avoid working cattle in the sun." },
+      "autumn": { "pt": "Chuvas curtas: faça reserva de forragem (silagem, palma, feno).", "en": "Short rains: build forage reserves (silage, forage cactus, hay)." },
+      "winter": { "pt": "Suplemente com palma forrageira e sal mineral.", "en": "Supplement with forage cactus and mineral salt." },
+      "spring": { "pt": "Seca severa: ajuste o número de animais à água e comida disponíveis.", "en": "Severe drought: match herd size to available water and feed." }
+    },
+    "cold": {
+      "summer": { "pt": "Aproveite o pasto e faça feno para o longo inverno.", "en": "Use the pasture and make hay for the long winter." },
+      "autumn": { "pt": "Recolha o gado, vermifugue e prepare o estábulo.", "en": "Bring cattle in, deworm and prepare the barn." },
+      "winter": { "pt": "Estábulo protegido do vento, cama seca, mais energia na dieta e água aquecida.", "en": "Wind-protected barn, dry bedding, more energy in the diet and heated water." },
+      "spring": { "pt": "Partos dentro do abrigo; volte ao pasto quando o solo secar.", "en": "Calve indoors; return to pasture once the ground dries." }
+    }
+  },
+  "feeding": [
+    { "pt": "Pasto de boa qualidade é a base; o que faltar se completa com silagem, feno ou capim picado.", "en": "Good pasture is the base; fill gaps with silage, hay or chopped grass." },
+    { "pt": "Sal mineral próprio para bovinos sempre disponível no cocho coberto.", "en": "Cattle mineral salt always available in a covered trough." },
+    { "pt": "Vacas em lactação precisam de concentrado (milho, farelo) conforme a produção.", "en": "Milking cows need concentrate (corn, meal) according to yield." },
+    { "pt": "Uma vaca leiteira pode beber mais de 60 litros de água por dia.", "en": "A dairy cow can drink more than 60 litres of water a day." }
+  ],
+  "healthCare": [
+    { "pt": "Cumpra as vacinas obrigatórias (aftosa onde exigida, brucelose em bezerras) e a vacina contra clostridioses.", "en": "Keep mandatory vaccinations (foot-and-mouth where required, brucellosis in heifers) and clostridial vaccine." },
+    { "pt": "Higiene na ordenha: mãos e tetos limpos, teste da caneca de fundo escuro e desinfecção dos tetos.", "en": "Milking hygiene: clean hands and teats, strip-cup test and teat dipping." },
+    { "pt": "Cure o umbigo dos bezerros recém-nascidos com iodo e garanta que mamem o colostro nas primeiras horas.", "en": "Dip newborn calves' navels in iodine and make sure they drink colostrum in the first hours." },
+    { "pt": "Controle estratégico de carrapatos, alternando produtos com orientação técnica.", "en": "Strategic tick control, rotating products with technical guidance." }
+  ],
+  "diseases": [
+    {
+      "name": { "pt": "Mastite", "en": "Mastitis" },
+      "signs": { "pt": "Leite com grumos ou sangue, úbere inchado, quente e dolorido.", "en": "Milk with clots or blood, swollen, hot and painful udder." },
+      "homeCare": { "pt": "Ordenhe o quarto afetado por último, descarte esse leite e reforce a higiene.", "en": "Milk the affected quarter last, discard that milk and tighten hygiene." },
+      "vetCare": { "pt": "Antibiótico intramamário ou injetável escolhido pelo veterinário; respeite o prazo de descarte do leite.", "en": "Intramammary or injectable antibiotic chosen by a vet; respect the milk withdrawal period." }
+    },
+    {
+      "name": { "pt": "Carrapato e tristeza parasitária", "en": "Ticks and tick fever" },
+      "signs": { "pt": "Muitos carrapatos, febre, mucosas pálidas ou amareladas, urina escura, fraqueza.", "en": "Heavy tick load, fever, pale or yellowish mucosa, dark urine, weakness." },
+      "homeCare": { "pt": "Separe o animal, dê sombra e água e chame o veterinário rápido — pode matar.", "en": "Separate the animal, give shade and water and call a vet quickly — it can be fatal." },
+      "vetCare": { "pt": "Carrapaticidas para o controle; para a tristeza, medicamentos específicos (como imidocarb ou diminazeno) aplicados pelo veterinário.", "en": "Acaricides for control; for tick fever, specific drugs (such as imidocarb or diminazene) given by a vet." }
+    },
+    {
+      "name": { "pt": "Diarreia em bezerros", "en": "Calf scours" },
+      "signs": { "pt": "Fezes líquidas, bezerro fraco, olhos fundos, sem vontade de mamar.", "en": "Watery faeces, weak calf, sunken eyes, no will to suckle." },
+      "homeCare": { "pt": "Soro de reidratação oral entre as mamadas e bezerreiro limpo e seco.", "en": "Oral rehydration solution between feeds and a clean, dry calf pen." },
+      "vetCare": { "pt": "Hidratação venosa e medicamentos conforme a causa, definidos pelo veterinário.", "en": "IV fluids and medication according to the cause, decided by a vet." }
+    },
+    {
+      "name": { "pt": "Timpanismo (estufamento)", "en": "Bloat" },
+      "signs": { "pt": "Lado esquerdo da barriga muito inchado, desconforto, dificuldade para respirar.", "en": "Left side of the belly very swollen, discomfort, difficulty breathing." },
+      "homeCare": { "pt": "Tire do pasto, mantenha o animal em pé andando devagar e chame o veterinário.", "en": "Remove from pasture, keep the animal standing and walking slowly and call a vet." },
+      "vetCare": { "pt": "Antiespumantes e, nos casos graves, sondagem ou punção feitas pelo veterinário.", "en": "Anti-foaming agents and, in severe cases, tubing or trocarisation by a vet." }
+    }
+  ],
+  "sources": [
+    { "title": "Embrapa Gado de Leite — Melhoramento genético de gado de leite", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/996607/1/2006melhoramentoGadodeLeite.pdf" },
+    { "title": "UFRGS — Estresse térmico na produção de leite de bovinos Girolando", "url": "https://repositorioceme.ufrgs.br/handle/10183/197815" },
+    { "title": "Compre Rural — Programa da raça Girolando seleciona animais mais resistentes ao calor", "url": "https://comprerural.com/programa-da-raca-girolando-seleciona-animais-mais-resistentes-ao-calor/" }
+  ]
+}

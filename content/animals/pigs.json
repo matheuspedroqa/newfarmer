@@ -1,0 +1,96 @@
+{
+  "id": "pigs",
+  "summary": {
+    "pt": "Porcos crescem rápido e aproveitam bem restos de lavoura, mas precisam de instalação limpa, sombra e água fresca. Eles não suam: no calor, dependem de sombra, ventilação e lama ou aspersão para se refrescar.",
+    "en": "Pigs grow fast and make good use of crop leftovers, but they need clean housing, shade and fresh water. They do not sweat: in heat they rely on shade, airflow and mud or sprinklers to cool down."
+  },
+  "breeds": [
+    { "name": "Moura", "purpose": { "pt": "Carne (caipira)", "en": "Meat (free-range)" }, "notes": { "pt": "Raça brasileira rústica, boa para criação ao ar livre e pequenas propriedades.", "en": "Hardy Brazilian breed, good for outdoor systems and small farms." } },
+    { "name": "Piau", "purpose": { "pt": "Carne e banha", "en": "Meat and lard" }, "notes": { "pt": "Raça nacional muito resistente, cresce mais devagar, ideal para criação de subsistência.", "en": "Very hardy Brazilian breed, slower growing, ideal for subsistence farming." } },
+    { "name": "Large White", "purpose": { "pt": "Carne", "en": "Meat" }, "notes": { "pt": "Porcas prolíficas e boas mães; sensível ao sol forte (pele clara precisa de sombra).", "en": "Prolific sows and good mothers; sensitive to strong sun (pale skin needs shade)." } },
+    { "name": "Duroc", "purpose": { "pt": "Carne", "en": "Meat" }, "notes": { "pt": "Pelagem avermelhada, carne de boa qualidade, tolera melhor o calor que raças brancas.", "en": "Reddish coat, good meat quality, copes with heat better than white breeds." } }
+  ],
+  "idealTemp": {
+    "minC": 16,
+    "maxC": 24,
+    "notes": {
+      "pt": "Porcos em crescimento e adultos ficam confortáveis entre 16 e 24 °C. Leitões recém-nascidos precisam de 30–34 °C no escamoteador (abrigo aquecido).",
+      "en": "Growing and adult pigs are comfortable between 16 and 24 °C. Newborn piglets need 30–34 °C in a heated creep area."
+    }
+  },
+  "seasonalCare": {
+    "tropical": {
+      "summer": { "pt": "Sombra farta, água fresca e aspersão ou lâmina d'água; evite manejo nas horas quentes.", "en": "Plenty of shade, fresh water and sprinklers or a wallow; avoid handling in the hottest hours." },
+      "autumn": { "pt": "Revise cercas e abrigos; bom momento para vermifugar.", "en": "Check fences and shelters; good time to deworm." },
+      "winter": { "pt": "Estação seca: armazene milho e mandioca; controle sarna e piolho.", "en": "Dry season: store corn and cassava; control mange and lice." },
+      "spring": { "pt": "Prepare a maternidade com escamoteador para os partos.", "en": "Prepare the farrowing pen with a heated creep area for births." }
+    },
+    "subtropical": {
+      "summer": { "pt": "Sombra e água fresca; porcas prenhes sofrem com calor — refresque com aspersão.", "en": "Shade and fresh water; pregnant sows suffer in heat — cool them with sprinklers." },
+      "autumn": { "pt": "Vermifugue e revise a vacinação antes do frio.", "en": "Deworm and review vaccinations before the cold." },
+      "winter": { "pt": "Proteja do vento e da umidade; cama de palha ou maravalha mantém os leitões aquecidos.", "en": "Protect from wind and damp; straw or wood-shaving bedding keeps piglets warm." },
+      "spring": { "pt": "Época boa para cobertura e partos; limpe e desinfete as baias.", "en": "Good season for breeding and farrowing; clean and disinfect pens." }
+    },
+    "temperate": {
+      "summer": { "pt": "Sombra e lama para refrescar; cuidado com queimadura de sol em porcos claros.", "en": "Shade and mud to cool off; watch for sunburn on pale pigs." },
+      "autumn": { "pt": "Engorda final aproveitando sobras de colheita; prepare abrigos para o inverno.", "en": "Finish fattening on harvest leftovers; prepare winter shelters." },
+      "winter": { "pt": "Abrigo fechado e seco, cama grossa, água sem congelar; aumente a ração para manter o calor do corpo.", "en": "Closed, dry shelter, deep bedding, unfrozen water; increase feed to maintain body heat." },
+      "spring": { "pt": "Partos com aquecimento para leitões; vermifugação antes de soltar no piquete.", "en": "Farrowing with heat for piglets; deworm before turning out to paddocks." }
+    },
+    "semiarid": {
+      "summer": { "pt": "Calor extremo: sombra densa, água em abundância e piso molhado; ração nas horas frescas.", "en": "Extreme heat: dense shade, plenty of water and a wet floor; feed in the cool hours." },
+      "autumn": { "pt": "Chuvas curtas: drene as baias para não acumular lama e vermes.", "en": "Short rains: drain pens so mud and worms do not build up." },
+      "winter": { "pt": "Guarde palma forrageira, milho e mandioca para a seca.", "en": "Store forage cactus, corn and cassava for the dry season." },
+      "spring": { "pt": "Seca: reduza o número de animais ao que a água disponível suporta.", "en": "Drought: keep only as many animals as the available water can support." }
+    },
+    "cold": {
+      "summer": { "pt": "Aproveite para criar ao ar livre e engordar com pasto e sobras.", "en": "Use it to raise pigs outdoors and fatten them on pasture and leftovers." },
+      "autumn": { "pt": "Abata ou venda os animais de engorda antes do frio intenso.", "en": "Slaughter or sell finishing pigs before severe cold." },
+      "winter": { "pt": "Galpão isolado, cama funda, aquecimento para leitões e água aquecida.", "en": "Insulated barn, deep bedding, heat for piglets and heated water." },
+      "spring": { "pt": "Partos com abrigo aquecido; limpeza geral e vermifugação.", "en": "Farrowing with heated shelter; full clean-out and deworming." }
+    }
+  },
+  "feeding": [
+    { "pt": "Ração balanceada por fase (leitão, crescimento, terminação); milho e farelo de soja são a base.", "en": "Phase-balanced feed (piglet, grower, finisher); corn and soybean meal are the base." },
+    { "pt": "Mandioca, abóbora, batata-doce e restos de horta complementam, sempre limpos e sem mofo.", "en": "Cassava, pumpkin, sweet potato and garden scraps complement the diet, always clean and mould-free." },
+    { "pt": "Não dê lavagem com restos de carne crus: espalha doenças graves como peste suína.", "en": "Do not feed raw meat scraps (swill): it spreads serious diseases such as swine fever." },
+    { "pt": "Água limpa sempre: um porco adulto bebe de 10 a 20 litros por dia.", "en": "Clean water always: an adult pig drinks 10 to 20 litres a day." }
+  ],
+  "healthCare": [
+    { "pt": "Vermifugue regularmente e antes dos partos.", "en": "Deworm regularly and before farrowing." },
+    { "pt": "Siga a vacinação recomendada na sua região (ex.: parvovirose e erisipela nas matrizes).", "en": "Follow your region's recommended vaccines (e.g. parvovirus and erysipelas in breeding sows)." },
+    { "pt": "Ferro injetável nos leitões nos primeiros dias evita anemia (com orientação veterinária).", "en": "Injectable iron for piglets in the first days prevents anaemia (with veterinary guidance)." },
+    { "pt": "Limpe as baias todos os dias e mantenha área de dormir seca.", "en": "Clean pens daily and keep the sleeping area dry." }
+  ],
+  "diseases": [
+    {
+      "name": { "pt": "Diarreia dos leitões (colibacilose)", "en": "Piglet diarrhoea (colibacillosis)" },
+      "signs": { "pt": "Fezes líquidas amareladas, leitões fracos, desidratados e com frio.", "en": "Watery yellowish faeces, weak, dehydrated and chilled piglets." },
+      "homeCare": { "pt": "Aqueça os leitões, mantenha a baia seca e ofereça soro de reidratação.", "en": "Keep piglets warm, the pen dry and offer oral rehydration solution." },
+      "vetCare": { "pt": "Antibióticos indicados pelo veterinário; vacinação das porcas previne.", "en": "Antibiotics prescribed by a vet; vaccinating sows prevents it." }
+    },
+    {
+      "name": { "pt": "Sarna", "en": "Mange" },
+      "signs": { "pt": "Coceira intensa, porco se esfregando, crostas nas orelhas e pele grossa.", "en": "Intense itching, rubbing against walls, crusts on the ears and thickened skin." },
+      "homeCare": { "pt": "Separe os animais afetados e limpe bem as baias e esfregadores.", "en": "Separate affected pigs and thoroughly clean pens and rubbing posts." },
+      "vetCare": { "pt": "Acaricidas como ivermectina, com dose e intervalo definidos pelo veterinário.", "en": "Acaricides such as ivermectin, with dose and interval set by a vet." }
+    },
+    {
+      "name": { "pt": "Verminose (lombriga)", "en": "Roundworm infection" },
+      "signs": { "pt": "Crescimento lento, barriga grande, pelo arrepiado e tosse em animais jovens.", "en": "Slow growth, pot belly, rough coat and coughing in young pigs." },
+      "homeCare": { "pt": "Rodízio de piquetes e limpeza diária das fezes.", "en": "Rotate paddocks and remove manure daily." },
+      "vetCare": { "pt": "Vermífugos (como fenbendazol ou ivermectina) conforme orientação veterinária.", "en": "Dewormers (such as fenbendazole or ivermectin) as directed by a vet." }
+    },
+    {
+      "name": { "pt": "Pneumonia", "en": "Pneumonia" },
+      "signs": { "pt": "Tosse, respiração pela barriga, febre e falta de apetite.", "en": "Coughing, belly breathing, fever and loss of appetite." },
+      "homeCare": { "pt": "Melhore a ventilação sem deixar corrente de ar e reduza poeira e amônia.", "en": "Improve ventilation without drafts and reduce dust and ammonia." },
+      "vetCare": { "pt": "Antibióticos e anti-inflamatórios prescritos pelo veterinário.", "en": "Antibiotics and anti-inflammatories prescribed by a vet." }
+    }
+  ],
+  "sources": [
+    { "title": "Embrapa — Sistemas de produção, sustentabilidade e desempenho tecnológico na suinocultura", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1178739/1/final10541-Sistemas-de-producao-sustentabilidade-e-desempenho-tecnologico.pdf" },
+    { "title": "UFV/Embrapa Suínos e Aves — Conforto térmico de suínos em cama sobreposta", "url": "https://locus.ufv.br/bitstreams/bad07874-8ccf-44f1-a27f-38bbb1e56a6e/download" },
+    { "title": "UFPel — Abrigo móvel para suínos criados ao ar livre (SISCAL)", "url": "https://anais-siiepe.ufpel.edu.br/2025/XM_06049.pdf" }
+  ]
+}

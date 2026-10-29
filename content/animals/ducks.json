@@ -1,0 +1,96 @@
+{
+  "id": "ducks",
+  "summary": {
+    "pt": "Patos são rústicos, raramente adoecem com bom manejo e comem lesmas e insetos da horta. Precisam de água para molhar a cabeça e limpar os olhos, mas o local de dormir tem que ser seco — cama molhada é a principal causa de problemas.",
+    "en": "Ducks are hardy, rarely get sick with good management and eat garden slugs and insects. They need water to dip their heads and clean their eyes, but their sleeping area must be dry — wet bedding is the main cause of problems."
+  },
+  "breeds": [
+    { "name": "Pequim (Pekin)", "purpose": { "pt": "Carne", "en": "Meat" }, "notes": { "pt": "Branco, cresce muito rápido; sensível ao calor forte.", "en": "White, grows very fast; sensitive to strong heat." } },
+    { "name": "Pato-do-mato (Muscovy)", "purpose": { "pt": "Carne", "en": "Meat" }, "notes": { "pt": "Nativo das Américas, muito rústico, quieto e tolera melhor o calor; ótimo chocador.", "en": "Native to the Americas, very hardy, quiet and more heat tolerant; excellent brooder." } },
+    { "name": "Khaki Campbell", "purpose": { "pt": "Ovos", "en": "Eggs" }, "notes": { "pt": "Uma das maiores poedeiras entre os patos.", "en": "One of the best egg-laying duck breeds." } },
+    { "name": "Corredor Indiano (Indian Runner)", "purpose": { "pt": "Ovos e controle de pragas", "en": "Eggs and pest control" }, "notes": { "pt": "Anda em pé, ótimo para limpar lesmas e caramujos da horta.", "en": "Stands upright, great at clearing slugs and snails from the garden." } }
+  ],
+  "idealTemp": {
+    "minC": 12,
+    "maxC": 25,
+    "notes": {
+      "pt": "Adultos aguentam frio melhor que calor; acima de 27 °C precisam de sombra e água para se refrescar. Patinhos precisam de cerca de 30 °C na primeira semana, baixando 2–3 °C por semana.",
+      "en": "Adults handle cold better than heat; above 27 °C they need shade and water to cool down. Ducklings need about 30 °C in the first week, lowered 2–3 °C each week."
+    }
+  },
+  "seasonalCare": {
+    "tropical": {
+      "summer": { "pt": "Sombra e água limpa para banho; troque a água com frequência para não virar foco de doenças.", "en": "Shade and clean bathing water; change it often so it does not become a disease source." },
+      "autumn": { "pt": "Revise o abrigo e troque a cama úmida.", "en": "Check the shelter and replace damp bedding." },
+      "winter": { "pt": "Estação seca: garanta água suficiente para beber e banhar a cabeça.", "en": "Dry season: make sure there is enough water to drink and dip their heads." },
+      "spring": { "pt": "Época de choco; proteja ninhos e patinhos de predadores e de chuva.", "en": "Nesting season; protect nests and ducklings from predators and rain." }
+    },
+    "subtropical": {
+      "summer": { "pt": "Sombra, água fresca e cama seca; recolha ovos cedo.", "en": "Shade, fresh water and dry bedding; collect eggs early." },
+      "autumn": { "pt": "Muda de penas; aumente a proteína da ração.", "en": "Moulting; increase protein in the feed." },
+      "winter": { "pt": "Abrigo contra vento e chuva fria; cama grossa de palha.", "en": "Shelter from wind and cold rain; deep straw bedding." },
+      "spring": { "pt": "Choco e criação de patinhos; mantenha os filhotes longe de água funda até empenarem.", "en": "Hatching and raising ducklings; keep them away from deep water until feathered." }
+    },
+    "temperate": {
+      "summer": { "pt": "Lago ou tanque limpo, sombra e controle de moscas.", "en": "Clean pond or tub, shade and fly control." },
+      "autumn": { "pt": "Prepare o abrigo para o inverno; escolha as matrizes.", "en": "Prepare the winter shelter; select breeding birds." },
+      "winter": { "pt": "Água sem congelar, cama seca e abrigo fechado à noite.", "en": "Unfrozen water, dry bedding and a closed shelter at night." },
+      "spring": { "pt": "Postura e choco; vigie raposas e outros predadores.", "en": "Laying and hatching; watch for foxes and other predators." }
+    },
+    "semiarid": {
+      "summer": { "pt": "Calor forte: sombra densa e água fresca abundante; prefira pato-do-mato.", "en": "Intense heat: dense shade and plenty of fresh water; prefer Muscovy ducks." },
+      "autumn": { "pt": "Chuvas curtas: evite lama e água parada (risco de botulismo).", "en": "Short rains: avoid mud and stagnant water (botulism risk)." },
+      "winter": { "pt": "Economize água com bebedouros fundos que permitam molhar a cabeça.", "en": "Save water with deep drinkers that let them dip their heads." },
+      "spring": { "pt": "Seca: priorize água limpa; complemente a dieta com ração.", "en": "Drought: prioritise clean water; supplement with feed." }
+    },
+    "cold": {
+      "summer": { "pt": "Aproveite para criar patinhos e soltar na água.", "en": "Raise ducklings and let birds onto water." },
+      "autumn": { "pt": "Reforce a alimentação para a camada de gordura do inverno.", "en": "Increase feed to build up winter fat." },
+      "winter": { "pt": "Abrigo isolado e seco, água aquecida e cama funda; patos toleram bem o frio se estiverem secos.", "en": "Insulated, dry shelter, heated water and deep bedding; ducks cope well with cold if kept dry." },
+      "spring": { "pt": "Volta da postura; limpeza geral do abrigo.", "en": "Laying resumes; full clean-out of the shelter." }
+    }
+  },
+  "feeding": [
+    { "pt": "Ração de aves (inicial para patinhos, depois crescimento/postura), sem anticoccidianos que não sejam próprios para patos.", "en": "Poultry feed (starter for ducklings, then grower/layer), avoiding medications not labelled for ducks." },
+    { "pt": "Patinhos precisam de niacina: ração para patos ou levedura de cerveja misturada evita fraqueza nas pernas.", "en": "Ducklings need niacin: duck feed or added brewer's yeast prevents leg weakness." },
+    { "pt": "Verduras, lesmas, insetos e restos de horta complementam a dieta.", "en": "Greens, slugs, insects and garden scraps round out the diet." },
+    { "pt": "Sempre ofereça água junto com a comida — patos precisam beber para engolir.", "en": "Always provide water with food — ducks need to drink to swallow." }
+  ],
+  "healthCare": [
+    { "pt": "Cama sempre seca e trocada; afaste o bebedouro da área de dormir.", "en": "Bedding always dry and changed; keep the drinker away from the sleeping area." },
+    { "pt": "Troque a água de banho com frequência e evite água parada.", "en": "Change bathing water often and avoid stagnant water." },
+    { "pt": "Não use feno ou cama mofada — causa doença respiratória.", "en": "Never use mouldy hay or bedding — it causes respiratory disease." },
+    { "pt": "Quarentena para aves novas e vacinação conforme a região.", "en": "Quarantine new birds and vaccinate as advised in your region." }
+  ],
+  "diseases": [
+    {
+      "name": { "pt": "Aspergilose", "en": "Aspergillosis" },
+      "signs": { "pt": "Respiração com o bico aberto, chiado, fraqueza, principalmente em patinhos.", "en": "Open-mouth breathing, wheezing, weakness, mostly in ducklings." },
+      "homeCare": { "pt": "Retire toda cama e comida mofadas e melhore a ventilação.", "en": "Remove all mouldy bedding and feed and improve ventilation." },
+      "vetCare": { "pt": "Antifúngicos podem ser indicados pelo veterinário; a prevenção é o principal.", "en": "Antifungals may be prescribed by a vet; prevention is key." }
+    },
+    {
+      "name": { "pt": "Botulismo (pescoço mole)", "en": "Botulism (limberneck)" },
+      "signs": { "pt": "Paralisia que começa nas pernas e asas e chega ao pescoço, que fica caído.", "en": "Paralysis starting in the legs and wings and reaching the neck, which droops." },
+      "homeCare": { "pt": "Tire as aves da água parada e de carcaças em decomposição; dê água limpa.", "en": "Remove birds from stagnant water and rotting carcasses; give clean water." },
+      "vetCare": { "pt": "O veterinário pode usar antitoxina e cuidados de suporte; casos leves podem se recuperar.", "en": "A vet may use antitoxin and supportive care; mild cases can recover." }
+    },
+    {
+      "name": { "pt": "Cólera aviária (pasteurelose)", "en": "Fowl cholera (pasteurellosis)" },
+      "signs": { "pt": "Mortes súbitas, febre, diarreia esverdeada, cabeça arroxeada.", "en": "Sudden deaths, fever, greenish diarrhoea, purplish head." },
+      "homeCare": { "pt": "Isole os doentes, enterre ou queime as aves mortas e desinfete o abrigo.", "en": "Isolate sick birds, bury or burn dead ones and disinfect the shelter." },
+      "vetCare": { "pt": "Antibióticos escolhidos pelo veterinário; vacina onde houver surtos.", "en": "Antibiotics chosen by a vet; vaccine where outbreaks occur." }
+    },
+    {
+      "name": { "pt": "Deficiência de niacina", "en": "Niacin deficiency" },
+      "signs": { "pt": "Patinhos com pernas tortas, fracos, andando com dificuldade.", "en": "Ducklings with bowed legs, weak, struggling to walk." },
+      "homeCare": { "pt": "Use ração própria para patos ou adicione levedura de cerveja à ração.", "en": "Use duck-specific feed or add brewer's yeast to the feed." },
+      "vetCare": { "pt": "Suplemento vitamínico na dose indicada pelo veterinário.", "en": "Vitamin supplement at the dose advised by a vet." }
+    }
+  ],
+  "sources": [
+    { "title": "EMATER-PA — Criação racional de pato regional (manual técnico)", "url": "https://www.emater.pa.gov.br/storage/app/uploads/public/648/b23/3ec/648b233eceef6232754141.pdf" },
+    { "title": "UFAM — Cartilha do Produtor de Patos", "url": "https://zenodo.org/records/8240001/files/Cartilha%20do%20Produtor%20de%20Patos.pdf" },
+    { "title": "Engormix — Manejo de patos Pekin e Muscovy no calor", "url": "https://www.engormix.com/mbr-724425/darofu" }
+  ]
+}

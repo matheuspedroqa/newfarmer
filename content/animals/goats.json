@@ -1,0 +1,97 @@
+{
+  "id": "goats",
+  "summary": {
+    "pt": "Cabras são curiosas, rústicas e comem de tudo um pouco: capim, folhas e arbustos. Dão leite de alto valor e carne, e se adaptam muito bem a regiões secas. Odeiam chuva e lama — precisam de abrigo seco com piso elevado.",
+    "en": "Goats are curious, hardy browsers that eat grass, leaves and shrubs. They give valuable milk and meat and adapt very well to dry regions. They hate rain and mud — they need a dry shelter with a raised floor."
+  },
+  "breeds": [
+    { "name": "Saanen", "purpose": { "pt": "Leite", "en": "Milk" }, "notes": { "pt": "Branca, a mais produtiva em leite; sofre com sol forte e prefere clima ameno.", "en": "White, the highest milk producer; suffers in strong sun and prefers mild climates." } },
+    { "name": "Parda Alpina", "purpose": { "pt": "Leite", "en": "Milk" }, "notes": { "pt": "Boa produção e mais rústica que a Saanen.", "en": "Good yield and hardier than Saanen." } },
+    { "name": "Anglo-Nubiana", "purpose": { "pt": "Leite e carne", "en": "Milk and meat" }, "notes": { "pt": "Orelhas longas e caídas, tolera bem o calor, leite mais gorduroso.", "en": "Long drooping ears, tolerates heat well, richer milk." } },
+    { "name": "Boer", "purpose": { "pt": "Carne", "en": "Meat" }, "notes": { "pt": "Raça sul-africana de corte, cresce rápido.", "en": "South African meat breed, fast-growing." } },
+    { "name": "Moxotó", "purpose": { "pt": "Carne e pele", "en": "Meat and hide" }, "notes": { "pt": "Raça nativa do Nordeste, extremamente rústica e adaptada à caatinga.", "en": "Native north-eastern Brazilian breed, extremely hardy and adapted to the caatinga." } }
+  ],
+  "idealTemp": {
+    "minC": 12,
+    "maxC": 28,
+    "notes": {
+      "pt": "Cabras toleram bem o calor seco, mas sofrem com frio úmido e chuva. Raças leiteiras europeias produzem melhor em clima ameno. Cabritos precisam de abrigo quente e seco.",
+      "en": "Goats handle dry heat well but suffer in cold, damp weather and rain. European dairy breeds produce best in mild climates. Kids need a warm, dry shelter."
+    }
+  },
+  "seasonalCare": {
+    "tropical": {
+      "summer": { "pt": "Chuvas: abrigo seco com piso ripado elevado e controle de vermes com FAMACHA.", "en": "Rainy season: dry shelter with a raised slatted floor and worm control with FAMACHA." },
+      "autumn": { "pt": "Apare os cascos e revise vacinas.", "en": "Trim hooves and review vaccines." },
+      "winter": { "pt": "Seca: complemente com feno, rama de mandioca e sal mineral para caprinos.", "en": "Dry season: supplement with hay, cassava foliage and goat mineral salt." },
+      "spring": { "pt": "Partos: cure o umbigo dos cabritos e garanta o colostro.", "en": "Kidding: dip kids' navels and make sure they get colostrum." }
+    },
+    "subtropical": {
+      "summer": { "pt": "Sombra para raças claras, água fresca e controle de vermes.", "en": "Shade for pale breeds, fresh water and worm control." },
+      "autumn": { "pt": "Época de cobertura; ofereça boa forragem.", "en": "Breeding season; offer good forage." },
+      "winter": { "pt": "Abrigo fechado contra vento e chuva fria; cabritos são os mais sensíveis.", "en": "Shelter closed against wind and cold rain; kids are the most sensitive." },
+      "spring": { "pt": "Partos e lactação; reforce a alimentação das cabras leiteiras.", "en": "Kidding and lactation; increase feed for milking does." }
+    },
+    "temperate": {
+      "summer": { "pt": "Pastoreio de arbustos e capim; controle moscas e vermes.", "en": "Browse shrubs and grass; control flies and worms." },
+      "autumn": { "pt": "Cobertura; prepare feno de boa qualidade.", "en": "Breeding; prepare good-quality hay." },
+      "winter": { "pt": "Abrigo seco e sem correntes de ar; água sem congelar.", "en": "Dry, draught-free shelter; unfrozen water." },
+      "spring": { "pt": "Partos dentro do abrigo; volte ao pasto quando secar.", "en": "Kid indoors; return to pasture once it dries out." }
+    },
+    "semiarid": {
+      "summer": { "pt": "Calor seco: sombra e água; cabras nativas aproveitam bem a caatinga.", "en": "Dry heat: shade and water; native goats make good use of the caatinga." },
+      "autumn": { "pt": "Chuvas curtas: cuidado com lama no aprisco e vermes.", "en": "Short rains: watch for mud in the pen and worms." },
+      "winter": { "pt": "Guarde feno, palma e folhas de leguminosas para a seca.", "en": "Store hay, forage cactus and legume leaves for the dry season." },
+      "spring": { "pt": "Seca: priorize água e ração para cabras prenhes e em lactação.", "en": "Drought: prioritise water and feed for pregnant and milking does." }
+    },
+    "cold": {
+      "summer": { "pt": "Pastoreio à vontade e produção de feno.", "en": "Free grazing and hay making." },
+      "autumn": { "pt": "Cobertura e vermifugação seletiva.", "en": "Breeding and selective deworming." },
+      "winter": { "pt": "Abrigo isolado, cama seca e água aquecida; mais energia na dieta.", "en": "Insulated shelter, dry bedding and heated water; more energy in the diet." },
+      "spring": { "pt": "Partos protegidos do frio.", "en": "Kidding protected from the cold." }
+    }
+  },
+  "feeding": [
+    { "pt": "Cabras preferem folhas e arbustos; misture pasto, feno e ramas.", "en": "Goats prefer leaves and shrubs; mix pasture, hay and browse." },
+    { "pt": "Sal mineral próprio para caprinos sempre à disposição.", "en": "Goat-specific mineral salt always available." },
+    { "pt": "Cabras em lactação precisam de concentrado conforme a produção de leite.", "en": "Milking does need concentrate according to milk yield." },
+    { "pt": "Água limpa e fresca — elas recusam água suja.", "en": "Clean, fresh water — they refuse dirty water." }
+  ],
+  "healthCare": [
+    { "pt": "Controle de vermes pelo método FAMACHA, tratando só quem precisa.", "en": "Worm control using FAMACHA, treating only animals that need it." },
+    { "pt": "Vacina contra clostridioses e, onde houver, contra linfadenite caseosa.", "en": "Clostridial vaccine and, where available, caseous lymphadenitis vaccine." },
+    { "pt": "Aprisco com piso elevado e ripado, sempre seco.", "en": "Pen with a raised, slatted floor, always dry." },
+    { "pt": "Higiene da ordenha para evitar mastite.", "en": "Milking hygiene to prevent mastitis." }
+  ],
+  "diseases": [
+    {
+      "name": { "pt": "Verminose", "en": "Worm infection" },
+      "signs": { "pt": "Mucosa do olho pálida, pelo arrepiado, emagrecimento, diarreia e papeira.", "en": "Pale eyelid mucosa, rough coat, weight loss, diarrhoea and bottle jaw." },
+      "homeCare": { "pt": "Rodízio de piquetes, não deixar pastar com orvalho e boa nutrição.", "en": "Rotate paddocks, avoid grazing on dewy grass and feed well." },
+      "vetCare": { "pt": "Vermífugo indicado pelo veterinário, de preferência após exame de fezes (OPG).", "en": "Dewormer prescribed by a vet, ideally after a faecal egg count." }
+    },
+    {
+      "name": { "pt": "Linfadenite caseosa (mal do caroço)", "en": "Caseous lymphadenitis" },
+      "signs": { "pt": "Caroços com pus grosso nos gânglios do pescoço, paleta e virilha.", "en": "Lumps with thick pus in lymph nodes of the neck, shoulder and groin." },
+      "homeCare": { "pt": "Isole o animal e nunca estoure o caroço no aprisco.", "en": "Isolate the animal and never burst the lump in the pen." },
+      "vetCare": { "pt": "Drenagem, limpeza e cauterização pelo veterinário; vacinação preventiva.", "en": "Drainage, cleaning and cauterisation by a vet; preventive vaccination." }
+    },
+    {
+      "name": { "pt": "Ceratoconjuntivite", "en": "Pinkeye (keratoconjunctivitis)" },
+      "signs": { "pt": "Olho lacrimejando, vermelho, depois branco/opaco; animal evita a luz.", "en": "Watery, red eye that later turns white/cloudy; the animal avoids light." },
+      "homeCare": { "pt": "Deixe o animal na sombra, limpe o olho com soro fisiológico e controle moscas.", "en": "Keep the animal in shade, clean the eye with saline and control flies." },
+      "vetCare": { "pt": "Pomada ou colírio antibiótico indicado pelo veterinário.", "en": "Antibiotic eye ointment or drops prescribed by a vet." }
+    },
+    {
+      "name": { "pt": "Mastite", "en": "Mastitis" },
+      "signs": { "pt": "Úbere quente, duro ou assimétrico; leite com grumos.", "en": "Hot, hard or lopsided udder; milk with clots." },
+      "homeCare": { "pt": "Ordenhe a metade afetada por último e descarte o leite; higiene rigorosa.", "en": "Milk the affected half last and discard the milk; strict hygiene." },
+      "vetCare": { "pt": "Antibiótico intramamário ou injetável conforme o veterinário; respeite o prazo de descarte.", "en": "Intramammary or injectable antibiotic as prescribed; respect the withdrawal period." }
+    }
+  ],
+  "sources": [
+    { "title": "Embrapa Meio-Norte — Recomendações técnicas para criação de cabras leiteiras (Circular Técnica 25)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/61156/1/CIT25.pdf" },
+    { "title": "Embrapa — Criação de caprinos na agricultura familiar", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/65349/1/criacaodecaprinosagricultrafamiliar.pdf" },
+    { "title": "Embrapa Semiárido — Caracterização sanitária de rebanhos caprinos (2018)", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1092299/1/Daniel2018.pdf" }
+  ]
+}

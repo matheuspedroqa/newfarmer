@@ -1,0 +1,97 @@
+{
+  "id": "sheep",
+  "summary": {
+    "pt": "Ovelhas são dóceis, aproveitam bem pastagens pequenas e dão carne, lã ou leite conforme a raça. O maior inimigo é a verminose: controlar os vermes com o método FAMACHA e rodízio de pasto faz toda a diferença.",
+    "en": "Sheep are docile, make good use of small pastures and give meat, wool or milk depending on the breed. The main enemy is worms: controlling them with the FAMACHA method and pasture rotation makes all the difference."
+  },
+  "breeds": [
+    { "name": "Santa Inês", "purpose": { "pt": "Carne (deslanada)", "en": "Meat (hair sheep)" }, "notes": { "pt": "Raça brasileira sem lã, adaptada ao calor e mais resistente a vermes.", "en": "Brazilian hair breed with no wool, heat-adapted and more worm-resistant." } },
+    { "name": "Dorper", "purpose": { "pt": "Carne", "en": "Meat" }, "notes": { "pt": "Cresce rápido e é muito usada em cruzamentos com Santa Inês.", "en": "Fast-growing and widely crossed with Santa Inês." } },
+    { "name": "Morada Nova", "purpose": { "pt": "Carne e pele", "en": "Meat and hide" }, "notes": { "pt": "Nativa do Nordeste, muito rústica e adaptada ao semiárido.", "en": "Native to north-east Brazil, very hardy and adapted to semi-arid areas." } },
+    { "name": "Suffolk", "purpose": { "pt": "Carne", "en": "Meat" }, "notes": { "pt": "Raça lanada de cara preta, indicada para clima ameno ou frio.", "en": "Black-faced wool breed suited to mild or cold climates." } },
+    { "name": "Merino", "purpose": { "pt": "Lã", "en": "Wool" }, "notes": { "pt": "Lã fina de alto valor; precisa de tosquia anual e clima mais seco e frio.", "en": "High-value fine wool; needs yearly shearing and a drier, cooler climate." } }
+  ],
+  "idealTemp": {
+    "minC": 10,
+    "maxC": 25,
+    "notes": {
+      "pt": "Ovelhas lanadas sofrem acima de 25 °C, principalmente sem tosquia. Raças deslanadas (Santa Inês, Morada Nova) toleram bem o calor tropical. Cordeiros recém-nascidos precisam de abrigo seco contra frio e chuva.",
+      "en": "Wool sheep suffer above 25 °C, especially unshorn. Hair breeds (Santa Inês, Morada Nova) handle tropical heat well. Newborn lambs need a dry shelter from cold and rain."
+    }
+  },
+  "seasonalCare": {
+    "tropical": {
+      "summer": { "pt": "Chuva e calor favorecem vermes: faça FAMACHA a cada 15 dias e rode os piquetes.", "en": "Rain and heat favour worms: check FAMACHA every 15 days and rotate paddocks." },
+      "autumn": { "pt": "Apare os cascos e revise vacinas contra clostridioses.", "en": "Trim hooves and review clostridial vaccines." },
+      "winter": { "pt": "Seca: suplemente com feno, silagem e sal mineral próprio para ovinos (sem excesso de cobre).", "en": "Dry season: supplement with hay, silage and sheep mineral salt (low copper)." },
+      "spring": { "pt": "Prepare o aprisco para os partos e cure o umbigo dos cordeiros com iodo.", "en": "Prepare the pen for lambing and dip lambs' navels in iodine." }
+    },
+    "subtropical": {
+      "summer": { "pt": "Sombra e água; controle de vermes com FAMACHA; tosquie raças lanadas antes do calor.", "en": "Shade and water; worm control with FAMACHA; shear wool breeds before the heat." },
+      "autumn": { "pt": "Época de cobertura; ofereça pasto de inverno (aveia, azevém).", "en": "Breeding season; offer winter pasture (oats, ryegrass)." },
+      "winter": { "pt": "Proteja do vento e da chuva fria, principalmente ovelhas recém-tosquiadas e cordeiros.", "en": "Protect from wind and cold rain, especially freshly shorn ewes and lambs." },
+      "spring": { "pt": "Partos e crescimento dos cordeiros; atenção ao frio noturno.", "en": "Lambing and lamb growth; watch for cold nights." }
+    },
+    "temperate": {
+      "summer": { "pt": "Tosquia no início do verão; controle de moscas e bicheiras.", "en": "Shear at the start of summer; control flies and flystrike." },
+      "autumn": { "pt": "Cobertura das ovelhas; vermifugação seletiva antes do inverno.", "en": "Ewe breeding; selective deworming before winter." },
+      "winter": { "pt": "Abrigo seco, feno de qualidade e água sem congelar.", "en": "Dry shelter, quality hay and unfrozen water." },
+      "spring": { "pt": "Parição: abrigo para cordeiros e vigilância contra o frio.", "en": "Lambing: shelter for lambs and watch for cold." }
+    },
+    "semiarid": {
+      "summer": { "pt": "Calor e seca: raças deslanadas, sombra e água; pastoreio cedo e no fim da tarde.", "en": "Heat and drought: hair breeds, shade and water; graze early and late in the day." },
+      "autumn": { "pt": "Chuvas curtas: vermes aumentam — faça FAMACHA e rodízio.", "en": "Short rains: worms increase — check FAMACHA and rotate." },
+      "winter": { "pt": "Reserve forragem (palma, feno de capim nativo).", "en": "Store forage (forage cactus, native grass hay)." },
+      "spring": { "pt": "Seca: ajuste o rebanho à comida e água disponíveis.", "en": "Drought: match flock size to available feed and water." }
+    },
+    "cold": {
+      "summer": { "pt": "Tosquia e pasto à vontade; controle de moscas.", "en": "Shearing and plenty of pasture; fly control." },
+      "autumn": { "pt": "Cobertura e vermifugação; estoque feno.", "en": "Breeding and deworming; stock hay." },
+      "winter": { "pt": "Abrigo fechado mas ventilado, feno e água aquecida; a lã protege bem do frio.", "en": "Closed but ventilated shelter, hay and heated water; wool protects well from cold." },
+      "spring": { "pt": "Parição dentro do abrigo; solte no pasto quando o tempo firmar.", "en": "Lamb indoors; turn out to pasture once weather settles." }
+    }
+  },
+  "feeding": [
+    { "pt": "Pasto é a base; feno ou silagem completam na seca e no inverno.", "en": "Pasture is the base; hay or silage fill in during drought and winter." },
+    { "pt": "Use sal mineral próprio para ovinos: o de bovinos tem cobre demais e pode intoxicar.", "en": "Use sheep-specific mineral salt: cattle minerals contain too much copper and can poison sheep." },
+    { "pt": "Concentrado (milho, farelo) no fim da gestação e para cordeiros em engorda.", "en": "Concentrate (corn, meal) in late pregnancy and for finishing lambs." },
+    { "pt": "Água limpa sempre disponível.", "en": "Clean water always available." }
+  ],
+  "healthCare": [
+    { "pt": "Use o método FAMACHA (cor da mucosa do olho) para vermifugar só quem precisa.", "en": "Use the FAMACHA method (eyelid colour) to deworm only animals that need it." },
+    { "pt": "Vacine contra clostridioses (enterotoxemia, tétano) conforme orientação.", "en": "Vaccinate against clostridial diseases (enterotoxaemia, tetanus) as advised." },
+    { "pt": "Apare os cascos a cada 3–4 meses e mantenha o aprisco seco.", "en": "Trim hooves every 3–4 months and keep the pen dry." },
+    { "pt": "Faça rodízio de piquetes para quebrar o ciclo dos vermes.", "en": "Rotate paddocks to break the worm cycle." }
+  ],
+  "diseases": [
+    {
+      "name": { "pt": "Verminose (Haemonchus)", "en": "Worm infection (Haemonchus)" },
+      "signs": { "pt": "Mucosa do olho pálida, fraqueza, emagrecimento, papeira (inchaço embaixo do queixo).", "en": "Pale eyelid mucosa, weakness, weight loss, bottle jaw (swelling under the jaw)." },
+      "homeCare": { "pt": "Tire o animal do pasto contaminado, ofereça boa comida e água e faça o FAMACHA no rebanho.", "en": "Move the animal off contaminated pasture, give good feed and water and FAMACHA-check the flock." },
+      "vetCare": { "pt": "Vermífugo escolhido pelo veterinário, de preferência após exame de fezes (OPG) para evitar resistência.", "en": "Dewormer chosen by a vet, ideally after a faecal egg count to avoid resistance." }
+    },
+    {
+      "name": { "pt": "Pododermatite (podridão do casco)", "en": "Footrot" },
+      "signs": { "pt": "Manqueira, cheiro forte no casco, ovelha pastando ajoelhada.", "en": "Lameness, foul smell from the hoof, sheep grazing on its knees." },
+      "homeCare": { "pt": "Apare e limpe o casco, mantenha o animal em local seco.", "en": "Trim and clean the hoof and keep the animal on dry ground." },
+      "vetCare": { "pt": "Pedilúvio com sulfato de zinco ou cobre e antibiótico nos casos graves, conforme o veterinário.", "en": "Footbath with zinc or copper sulfate and antibiotics in severe cases, as advised by a vet." }
+    },
+    {
+      "name": { "pt": "Linfadenite caseosa (mal do caroço)", "en": "Caseous lymphadenitis" },
+      "signs": { "pt": "Caroços (abscessos) no pescoço, atrás da orelha, na paleta ou virilha.", "en": "Lumps (abscesses) on the neck, behind the ear, shoulder or groin." },
+      "homeCare": { "pt": "Isole o animal; não estoure o caroço no pasto — o pus contamina o ambiente.", "en": "Isolate the animal; never burst the lump in the field — the pus contaminates the area." },
+      "vetCare": { "pt": "Drenagem e cauterização feitas pelo veterinário em local separado; existe vacina.", "en": "Drainage and cauterisation by a vet in a separate area; a vaccine is available." }
+    },
+    {
+      "name": { "pt": "Enterotoxemia (clostridiose)", "en": "Enterotoxaemia (clostridial disease)" },
+      "signs": { "pt": "Morte súbita de cordeiros bem nutridos, às vezes com convulsões.", "en": "Sudden death of well-fed lambs, sometimes with convulsions." },
+      "homeCare": { "pt": "Mude a alimentação aos poucos, sem excesso de grão de uma vez.", "en": "Change feed gradually, never too much grain at once." },
+      "vetCare": { "pt": "Tratamento raramente funciona; a prevenção é a vacina contra clostridioses.", "en": "Treatment rarely works; prevention is the clostridial vaccine." }
+    }
+  ],
+  "sources": [
+    { "title": "Embrapa Pecuária Sudeste — Principais enfermidades e manejo sanitário de ovinos (2008)", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/48701/1/2008-cppse-livro-acsc-principais-efermidades-manejo-sanitario-ovinos.pdf" },
+    { "title": "Embrapa — Circular Técnica 52: método FAMACHA", "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/37734/1/Circular52.pdf" },
+    { "title": "Embrapa Meio-Norte — Cartilha de verminose em pequenos ruminantes (2021)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1134813/1/VerminosePequenosRuminantesCartilha2021.pdf" }
+  ]
+}
