@@ -64,3 +64,17 @@ describe("resetSchema", () => {
     ).toBe("passwordsDontMatch");
   });
 });
+
+describe("changePasswordSchema", () => {
+  it("exige a senha atual e aplica as regras da nova senha", async () => {
+    const { changePasswordSchema } = await import("@/lib/validation");
+    const errors = (data: unknown) => {
+      const r = changePasswordSchema.safeParse(data);
+      return r.success ? {} : toFieldErrors(r.error);
+    };
+    expect(errors({ currentPassword: "", password: "segredo123", confirmPassword: "segredo123" }).currentPassword).toBe("required");
+    expect(errors({ currentPassword: "x", password: "123", confirmPassword: "123" }).password).toBe("passwordTooShort");
+    expect(errors({ currentPassword: "x", password: "segredo123", confirmPassword: "outra" }).confirmPassword).toBe("passwordsDontMatch");
+    expect(changePasswordSchema.safeParse({ currentPassword: "x", password: "segredo123", confirmPassword: "segredo123" }).success).toBe(true);
+  });
+});

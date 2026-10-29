@@ -23,7 +23,7 @@ describe("createUser", () => {
       climateZone: "subtropical",
       climateEstimated: false,
       hemisphere: "south",
-      locale: "pt",
+      locale: "en",
       theme: "light",
     });
   });

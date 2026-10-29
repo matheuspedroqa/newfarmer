@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { logoutAction } from "@/app/actions/auth";
 import { NavRail } from "@/components/NavRail";
 import { TopControls } from "@/components/TopControls";
+import { UserMenu } from "@/components/UserMenu";
 import { getCurrentUser } from "@/server/current-user";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
@@ -13,7 +14,6 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   // Trilho de ícones da variante D. A Etapa 3 acrescenta Animais e Plantações.
   const nav = [
     { href: "/painel", icon: "📊", label: t("nav.dashboard") },
-    { href: "/myfarm", icon: "🏡", label: t("nav.myfarm") },
     { href: "/clima", icon: "☀️", label: t("nav.weather") },
   ];
 
@@ -30,6 +30,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           </div>
           <div className="flex items-center gap-3">
             <TopControls />
+            <UserMenu name={user.name} />
             <form action={logoutAction}>
               <button type="submit" className="rounded-full border border-border px-3 py-1 text-sm">{t("auth.logout")}</button>
             </form>

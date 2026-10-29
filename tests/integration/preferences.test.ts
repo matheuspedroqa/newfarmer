@@ -16,6 +16,6 @@ describe("setPreferences", () => {
     const db = testDb();
     const id = await makeUser(db);
     setPreferences(db, id, { theme: "dark" });
-    expect(getUserById(db, id)).toMatchObject({ locale: "pt", theme: "dark" });
+    expect(getUserById(db, id)).toMatchObject({ locale: "en", theme: "dark" });
   });
 });

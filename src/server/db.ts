@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS users (
   climate_zone TEXT NOT NULL,
   climate_estimated INTEGER NOT NULL DEFAULT 0,
   hemisphere TEXT NOT NULL,
-  locale TEXT NOT NULL DEFAULT 'pt',
+  locale TEXT NOT NULL DEFAULT 'en',
   theme TEXT NOT NULL DEFAULT 'light',
   created_at INTEGER NOT NULL
 );

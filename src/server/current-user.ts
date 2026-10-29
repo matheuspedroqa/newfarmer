@@ -35,3 +35,7 @@ export async function endSession(): Promise<void> {
 export async function setPreferenceCookie(name: typeof LOCALE_COOKIE | typeof THEME_COOKIE, value: string) {
   (await cookies()).set(name, value, { path: "/", sameSite: "lax", maxAge: ONE_YEAR_S });
 }
+
+export async function getSessionToken(): Promise<string | undefined> {
+  return (await cookies()).get(SESSION_COOKIE)?.value;
+}

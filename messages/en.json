@@ -53,7 +53,8 @@
     "generic": "Something went wrong. Please try again.",
     "countInvalid": "Use a whole number",
     "countTooSmall": "Enter at least 1",
-    "countTooLarge": "At most 100,000"
+    "countTooLarge": "At most 100,000",
+    "wrongPassword": "Current password is incorrect"
   },
   "climate": {
     "tropical": "Tropical",
@@ -166,5 +167,32 @@
     "snow": "Snow",
     "showers": "Rain showers",
     "thunder": "Thunderstorm"
+  },
+  "userMenu": {
+    "open": "Open account menu",
+    "myfarm": "MyFarm",
+    "profile": "Profile"
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English"
+  },
+  "profile": {
+    "title": "Profile",
+    "info": "My information",
+    "name": "Name",
+    "email": "E-mail",
+    "city": "City",
+    "climate": "Climate type",
+    "passwordTitle": "Change password",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm new password",
+    "savePassword": "Save new password",
+    "passwordChanged": "Password changed. Other open sessions were signed out.",
+    "languageTitle": "Language",
+    "languageHelp": "Choose the NewFarmer language.",
+    "saveLanguage": "Save language",
+    "languageSaved": "Language saved."
   }
 }

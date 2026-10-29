@@ -53,7 +53,8 @@
     "generic": "Algo deu errado. Tente de novo.",
     "countInvalid": "Use um número inteiro",
     "countTooSmall": "Informe pelo menos 1",
-    "countTooLarge": "No máximo 100.000"
+    "countTooLarge": "No máximo 100.000",
+    "wrongPassword": "Senha atual incorreta"
   },
   "climate": {
     "tropical": "Tropical",
@@ -166,5 +167,32 @@
     "snow": "Neve",
     "showers": "Pancadas de chuva",
     "thunder": "Tempestade"
+  },
+  "userMenu": {
+    "open": "Abrir menu da conta",
+    "myfarm": "MyFarm",
+    "profile": "Perfil"
+  },
+  "languages": {
+    "pt": "Português",
+    "en": "English"
+  },
+  "profile": {
+    "title": "Perfil",
+    "info": "Minhas informações",
+    "name": "Nome",
+    "email": "E-mail",
+    "city": "Cidade",
+    "climate": "Tipo de clima",
+    "passwordTitle": "Trocar senha",
+    "currentPassword": "Senha atual",
+    "newPassword": "Nova senha",
+    "confirmPassword": "Confirmar nova senha",
+    "savePassword": "Salvar nova senha",
+    "passwordChanged": "Senha alterada. Outros acessos abertos foram encerrados.",
+    "languageTitle": "Idioma",
+    "languageHelp": "Escolha o idioma do NewFarmer.",
+    "saveLanguage": "Salvar idioma",
+    "languageSaved": "Idioma salvo."
   }
 }

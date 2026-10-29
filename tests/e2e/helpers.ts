@@ -1,4 +1,4 @@
-import { expect, type Page } from "@playwright/test";
+import { expect, type BrowserContext, type Page } from "@playwright/test";
 
 export const PASSWORD = "segredo123";
 
@@ -24,4 +24,16 @@ export async function signup(page: Page, email: string, city = "Curitiba") {
   await createAccount(page, email, city);
   await page.getByRole("link", { name: "Pular por enquanto" }).click();
   await expect(page).toHaveURL(/\/painel$/);
+}
+
+/** Sai da conta (apaga os cookies) mas mantém o site em português, como nos demais testes. */
+export async function clearSession(context: BrowserContext) {
+  await context.clearCookies();
+  await context.addCookies([{ name: "nf_locale", value: "pt", domain: "localhost", path: "/" }]);
+}
+
+/** Abre o menu da conta (canto superior direito) e escolhe uma opção. */
+export async function openUserMenu(page: Page, option: "MyFarm" | "Perfil") {
+  await page.getByTestId("user-menu-button").click();
+  await page.getByRole("menuitem", { name: option }).click();
 }

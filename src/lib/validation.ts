@@ -72,3 +72,7 @@ export function parseCityField(raw: FormDataEntryValue | null): unknown {
     return null;
   }
 }
+
+export const changePasswordSchema = z
+  .object({ currentPassword: z.string().min(1, "required"), password: newPassword, confirmPassword: z.string() })
+  .refine((d) => d.password === d.confirmPassword, { path: ["confirmPassword"], message: "passwordsDontMatch" });

@@ -3,6 +3,7 @@ import type { CityChoice } from "@/lib/validation";
 import { resolveLocale, resolveTheme, type Locale, type Theme } from "@/i18n/locales";
 import type { ClimateZone, Hemisphere, ResolvedClimate } from "./climate";
 import type { Db } from "./db";
+import { hashToken } from "./tokens";
 
 const BCRYPT_COST = process.env.NODE_ENV === "test" ? 4 : 12;
 // Compared against when the e-mail does not exist, so both paths take the same time.
@@ -142,4 +143,24 @@ function isLocked(db: Db, email: string, now: number): boolean {
 export async function setPassword(db: Db, userId: number, password: string): Promise<void> {
   const passwordHash = await bcrypt.hash(password, BCRYPT_COST);
   db.prepare("UPDATE users SET password_hash = ? WHERE id = ?").run(passwordHash, userId);
+}
+
+export async function changePassword(
+  db: Db,
+  userId: number,
+  currentPassword: string,
+  newPassword: string,
+  keepSessionToken?: string,
+): Promise<"ok" | "wrongPassword"> {
+  const row = db.prepare("SELECT password_hash FROM users WHERE id = ?").get(userId) as
+    | { password_hash: string }
+    | undefined;
+  if (!row || !(await bcrypt.compare(currentPassword, row.password_hash))) return "wrongPassword";
+  await setPassword(db, userId, newPassword);
+  // Encerra as sessões abertas em outros lugares; a sessão de quem trocou a senha continua.
+  db.prepare("DELETE FROM sessions WHERE user_id = ? AND token_hash != ?").run(
+    userId,
+    keepSessionToken ? hashToken(keepSessionToken) : "",
+  );
+  return "ok";
 }

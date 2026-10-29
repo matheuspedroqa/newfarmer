@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { createAccount, signup, uniqueEmail } from "./helpers";
+import { createAccount, openUserMenu, signup, uniqueEmail } from "./helpers";
 
 test("etapa 2 do cadastro salva animais e plantações e mostra no painel", async ({ page }) => {
   await createAccount(page, uniqueEmail());
@@ -43,7 +43,7 @@ test("MyFarm edita animais e plantações", async ({ page }) => {
   await page.getByRole("button", { name: "Continuar" }).click();
   await expect(page).toHaveURL(/\/painel$/);
 
-  await page.getByRole("link", { name: "MyFarm", exact: true }).click();
+  await openUserMenu(page, "MyFarm");
   await expect(page.locator("#count-chickens")).toHaveValue("12");
   await page.locator("#count-chickens").fill("15");
   await page.getByLabel("Patos").check();

@@ -3,7 +3,7 @@ export type Locale = (typeof LOCALES)[number];
 export type Theme = "light" | "dark";
 
 export function resolveLocale(value: string | undefined | null): Locale {
-  return value === "en" ? "en" : "pt";
+  return value === "pt" ? "pt" : "en";
 }
 
 export function resolveTheme(value: string | undefined | null): Theme {

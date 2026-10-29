@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { PASSWORD, signup, uniqueEmail } from "./helpers";
+import { PASSWORD, clearSession, signup, uniqueEmail } from "./helpers";
 
 test("cadastro passa pela etapa 2 e chega ao painel com o tipo de clima da cidade", async ({ page }) => {
   await signup(page, uniqueEmail());
@@ -30,7 +30,7 @@ test("cidade inexistente mostra aviso", async ({ page }) => {
 test("e-mail repetido avisa que já existe conta", async ({ page, context }) => {
   const email = uniqueEmail();
   await signup(page, email);
-  await context.clearCookies();
+  await clearSession(context);
   await page.goto("/cadastro");
   await page.getByLabel("Nome").fill("Ana");
   await page.getByLabel("E-mail").fill(email);
@@ -86,7 +86,7 @@ test("preferências voltam ao entrar de novo", async ({ page, context }) => {
   await page.getByTestId("theme-toggle").click();
   await expect(page.locator("html")).toHaveClass(/dark/);
 
-  await context.clearCookies();
+  await clearSession(context);
   await page.goto("/login");
   await page.getByLabel("E-mail").fill(email);
   await page.getByLabel("Senha").fill(PASSWORD);
@@ -98,7 +98,7 @@ test("preferências voltam ao entrar de novo", async ({ page, context }) => {
 test("recuperar a senha pela caixa de e-mail de teste", async ({ page, context }) => {
   const email = uniqueEmail();
   await signup(page, email);
-  await context.clearCookies();
+  await clearSession(context);
 
   await page.goto("/recuperar");
   await page.getByLabel("E-mail").fill(email);
