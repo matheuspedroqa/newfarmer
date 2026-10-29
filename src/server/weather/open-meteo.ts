@@ -51,5 +51,38 @@ export function createOpenMeteoProvider(
       }>(url);
       return normalsFromDaily(body.daily);
     },
+
+    async getForecast(latitude: number, longitude: number) {
+      const url = new URL("https://api.open-meteo.com/v1/forecast");
+      url.searchParams.set("latitude", String(latitude));
+      url.searchParams.set("longitude", String(longitude));
+      url.searchParams.set("current", "temperature_2m,weather_code");
+      url.searchParams.set(
+        "daily",
+        "temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code",
+      );
+      url.searchParams.set("forecast_days", "5");
+      url.searchParams.set("timezone", "auto");
+      const body = await getJson<{
+        current: { temperature_2m: number; weather_code: number };
+        daily: {
+          time: string[];
+          temperature_2m_max: number[];
+          temperature_2m_min: number[];
+          precipitation_probability_max: (number | null)[];
+          weather_code: number[];
+        };
+      }>(url);
+      return {
+        current: { temperature: body.current.temperature_2m, weatherCode: body.current.weather_code },
+        days: body.daily.time.map((date, i) => ({
+          date,
+          max: body.daily.temperature_2m_max[i],
+          min: body.daily.temperature_2m_min[i],
+          rainChance: body.daily.precipitation_probability_max[i] ?? null,
+          weatherCode: body.daily.weather_code[i],
+        })),
+      };
+    },
   };
 }

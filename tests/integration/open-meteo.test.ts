@@ -60,3 +60,33 @@ describe("Open-Meteo: getClimateNormals", () => {
     expect(url.searchParams.get("end_date")).toBe("2025-12-31");
   });
 });
+
+describe("Open-Meteo: getForecast", () => {
+  it("pede 5 dias e converte a resposta", async () => {
+    const fetchMock = vi.fn(async () =>
+      jsonResponse({
+        current: { temperature_2m: 18.4, weather_code: 2 },
+        daily: {
+          time: ["2026-10-29", "2026-10-30"],
+          temperature_2m_max: [22, 19],
+          temperature_2m_min: [13, 12],
+          precipitation_probability_max: [40, null],
+          weather_code: [2, 61],
+        },
+      }),
+    );
+    const provider = createOpenMeteoProvider(fetchMock as unknown as typeof fetch);
+    const forecast = await provider.getForecast(-25.43, -49.27);
+    expect(forecast).toEqual({
+      current: { temperature: 18.4, weatherCode: 2 },
+      days: [
+        { date: "2026-10-29", max: 22, min: 13, rainChance: 40, weatherCode: 2 },
+        { date: "2026-10-30", max: 19, min: 12, rainChance: null, weatherCode: 61 },
+      ],
+    });
+    const url = new URL(String((fetchMock.mock.calls[0] as unknown[])[0]));
+    expect(url.hostname).toBe("api.open-meteo.com");
+    expect(url.searchParams.get("forecast_days")).toBe("5");
+    expect(url.searchParams.get("timezone")).toBe("auto");
+  });
+});

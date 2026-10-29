@@ -18,7 +18,9 @@ const CITIES: { city: CityResult; normals: ClimateNormals }[] = [
 
 const plain = (text: string) => text.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
 
-export function createFakeWeatherProvider(options: { failNormals?: boolean } = {}): WeatherProvider {
+export function createFakeWeatherProvider(
+  options: { failNormals?: boolean; failForecast?: boolean } = {},
+): WeatherProvider {
   return {
     async searchCities(query) {
       return CITIES.filter((c) => plain(c.city.label).includes(plain(query))).map((c) => c.city);
@@ -27,6 +29,24 @@ export function createFakeWeatherProvider(options: { failNormals?: boolean } = {
       if (options.failNormals) throw new Error("serviço de clima fora (falso)");
       const match = CITIES.find((c) => c.city.latitude === latitude && c.city.longitude === longitude);
       return match?.normals ?? CITIES[0].normals;
+    },
+    async getForecast() {
+      if (options.failForecast) throw new Error("serviço de previsão fora (falso)");
+      const today = Date.now();
+      const days = [
+        [22, 13, 40, 2],
+        [19, 12, 85, 61],
+        [20, 11, 55, 80],
+        [25, 12, 5, 0],
+        [27, 14, 0, 0],
+      ].map(([max, min, rainChance, weatherCode], i) => ({
+        date: new Date(today + i * 86_400_000).toISOString().slice(0, 10),
+        max,
+        min,
+        rainChance,
+        weatherCode,
+      }));
+      return { current: { temperature: 18, weatherCode: 2 }, days };
     },
   };
 }

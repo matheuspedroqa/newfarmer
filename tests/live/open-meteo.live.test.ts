@@ -16,4 +16,10 @@ describe("Open-Meteo de verdade", () => {
     expect(normals.monthlyMeanTemp).toHaveLength(12);
     expect(normals.annualPrecip).toBeGreaterThan(500);
   });
+
+  it("devolve previsão real de 5 dias", async () => {
+    const forecast = await provider.getForecast(-22.9, -47.06);
+    expect(forecast.days).toHaveLength(5);
+    expect(typeof forecast.current.temperature).toBe("number");
+  });
 });
