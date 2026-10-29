@@ -1,24 +1,7 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test } from "@playwright/test";
+import { PASSWORD, signup, uniqueEmail } from "./helpers";
 
-const PASSWORD = "segredo123";
-
-function uniqueEmail() {
-  return `ana+${Date.now()}${Math.floor(Math.random() * 1000)}@exemplo.com`;
-}
-
-async function signup(page: Page, email: string, city = "Curitiba") {
-  await page.goto("/cadastro");
-  await page.getByLabel("Nome").fill("Ana");
-  await page.getByLabel("E-mail").fill(email);
-  await page.getByLabel("Senha", { exact: true }).fill(PASSWORD);
-  await page.getByLabel("Confirmar senha").fill(PASSWORD);
-  await page.getByTestId("city-input").fill(city);
-  await page.getByTestId("city-option").first().click();
-  await page.getByRole("button", { name: "Criar conta" }).click();
-  await expect(page).toHaveURL(/\/painel$/);
-}
-
-test("cadastro leva ao painel com o tipo de clima da cidade", async ({ page }) => {
+test("cadastro passa pela etapa 2 e chega ao painel com o tipo de clima da cidade", async ({ page }) => {
   await signup(page, uniqueEmail());
   await expect(page.getByRole("heading", { name: "Olá, Ana!" })).toBeVisible();
   await expect(page.getByTestId("user-climate")).toContainText("Curitiba");
