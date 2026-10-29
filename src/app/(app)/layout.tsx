@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import { logoutAction } from "@/app/actions/auth";
+import { NavRail } from "@/components/NavRail";
 import { TopControls } from "@/components/TopControls";
 import { getCurrentUser } from "@/server/current-user";
 
@@ -10,25 +10,16 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   if (!user) redirect("/login");
   const t = await getTranslations();
 
-  // Trilho de ícones da variante D. A Etapa 2 acrescenta MyFarm, Animais, Plantações e Clima.
-  const nav = [{ href: "/painel", icon: "📊", label: t("nav.dashboard") }];
+  // Trilho de ícones da variante D. A Etapa 3 acrescenta Animais e Plantações.
+  const nav = [
+    { href: "/painel", icon: "📊", label: t("nav.dashboard") },
+    { href: "/myfarm", icon: "🏡", label: t("nav.myfarm") },
+    { href: "/clima", icon: "☀️", label: t("nav.weather") },
+  ];
 
   return (
     <div className="flex min-h-screen">
-      <nav className="flex w-20 shrink-0 flex-col items-center gap-3 bg-rail py-6" aria-label={t("app.name")}>
-        <p className="mb-6 text-2xl" aria-hidden>🌾</p>
-        {nav.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            title={item.label}
-            aria-label={item.label}
-            className="flex h-12 w-12 items-center justify-center rounded-2xl bg-soft text-xl dark:bg-primary"
-          >
-            {item.icon}
-          </Link>
-        ))}
-      </nav>
+      <NavRail items={nav} label={t("app.name")} />
       <div className="flex-1 p-8">
         <header className="flex items-center justify-between">
           <div>
