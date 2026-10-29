@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { setThemeAction } from "@/app/actions/preferences";
 import type { Theme } from "@/i18n/locales";
+import { THEME_COOKIE } from "@/lib/cookies";
 
 export function ThemeToggle({ initial }: { initial: Theme }) {
   const t = useTranslations("toggles");
@@ -13,6 +14,8 @@ export function ThemeToggle({ initial }: { initial: Theme }) {
     const next: Theme = theme === "dark" ? "light" : "dark";
     setTheme(next);
     document.documentElement.classList.toggle("dark", next === "dark");
+    // Grava o cookie na hora: se a pessoa recarregar antes de o servidor responder, o tema não se perde.
+    document.cookie = `${THEME_COOKIE}=${next}; path=/; max-age=31536000; samesite=lax`;
     void setThemeAction(next);
   }
 
