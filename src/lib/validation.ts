@@ -1,4 +1,5 @@
 import { z, type ZodError } from "zod";
+import { ANIMAL_IDS, CROP_IDS } from "./catalog";
 
 const email = z.string().trim().toLowerCase().min(1, "required").email("emailInvalid");
 const newPassword = z.string().min(1, "required").min(8, "passwordTooShort").max(128, "passwordTooLong");
@@ -36,8 +37,38 @@ export const resetSchema = z
 export function toFieldErrors(error: ZodError): Record<string, string> {
   const result: Record<string, string> = {};
   for (const issue of error.issues) {
-    const field = String(issue.path[0] ?? "form");
+    const field = issue.path.length ? issue.path.join(".") : "form";
     result[field] ??= issue.message;
   }
   return result;
+}
+
+export const MAX_ANIMAL_COUNT = 100_000;
+
+const animalCount = z.coerce
+  .number({ invalid_type_error: "countInvalid" })
+  .int("countInvalid")
+  .min(1, "countTooSmall")
+  .max(MAX_ANIMAL_COUNT, "countTooLarge");
+
+export const farmSchema = z.object({
+  animals: z.record(z.enum(ANIMAL_IDS), animalCount),
+  crops: z.array(z.enum(CROP_IDS)),
+});
+export type FarmInput = z.infer<typeof farmSchema>;
+
+export function parseFarmForm(formData: FormData): { animals: Record<string, string>; crops: string[] } {
+  const animals: Record<string, string> = {};
+  for (const id of ANIMAL_IDS) {
+    if (formData.get(`animal:${id}`) === "on") animals[id] = String(formData.get(`count:${id}`) ?? "");
+  }
+  return { animals, crops: formData.getAll("crop").map(String) };
+}
+
+export function parseCityField(raw: FormDataEntryValue | null): unknown {
+  try {
+    return typeof raw === "string" && raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
 }

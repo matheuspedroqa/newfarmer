@@ -3,7 +3,14 @@
 import { getLocale } from "next-intl/server";
 import { redirect } from "next/navigation";
 import { resolveLocale } from "@/i18n/locales";
-import { forgotSchema, loginSchema, resetSchema, signupSchema, toFieldErrors } from "@/lib/validation";
+import {
+  forgotSchema,
+  loginSchema,
+  parseCityField,
+  resetSchema,
+  signupSchema,
+  toFieldErrors,
+} from "@/lib/validation";
 import { getUserById, verifyCredentials } from "@/server/accounts";
 import { endSession, startSession } from "@/server/current-user";
 import { getDb } from "@/server/db";
@@ -20,14 +27,6 @@ export type FormState = {
   values?: Record<string, string>;
 };
 
-function parseCity(raw: FormDataEntryValue | null): unknown {
-  try {
-    return typeof raw === "string" && raw ? JSON.parse(raw) : null;
-  } catch {
-    return null;
-  }
-}
-
 function typed(formData: FormData, ...fields: string[]): Record<string, string> {
   return Object.fromEntries(fields.map((f) => [f, String(formData.get(f) ?? "")]));
 }
@@ -39,7 +38,7 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
     email: formData.get("email"),
     password: formData.get("password"),
     confirmPassword: formData.get("confirmPassword"),
-    city: parseCity(formData.get("city")),
+    city: parseCityField(formData.get("city")),
   });
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
 
