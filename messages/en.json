@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "NewFarmer",
+    "tagline": "Your guide to country life",
+    "quote": "“Country life starts with a good neighbor.”",
+    "quoteHelp": "Guides on animals, crops and weather, made for newcomers."
+  },
+  "toggles": { "language": "Language", "themeLight": "Switch to light mode", "themeDark": "Switch to dark mode" },
+  "auth": {
+    "name": "Name",
+    "email": "E-mail",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "city": "City",
+    "cityPlaceholder": "Type your city",
+    "citySearching": "Searching...",
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Sign in to see your farm.",
+    "login": "Sign in",
+    "createAccount": "Create account",
+    "signupTitle": "Create your account",
+    "haveAccount": "Already have an account? Sign in",
+    "forgot": "Forgot my password",
+    "forgotTitle": "Recover password",
+    "forgotHelp": "Enter your e-mail and we will send you a link to create a new password.",
+    "sendLink": "Send link",
+    "forgotSent": "If there is an account with that e-mail, we sent a link. It is valid for 1 hour.",
+    "resetTitle": "New password",
+    "savePassword": "Save new password",
+    "resetDone": "Password changed. You can sign in now.",
+    "backToLogin": "Back to sign in",
+    "logout": "Sign out",
+    "sending": "Sending..."
+  },
+  "errors": {
+    "required": "Please fill in this field",
+    "tooLong": "Text is too long",
+    "emailInvalid": "Enter a valid e-mail",
+    "passwordTooShort": "Password must have at least 8 characters",
+    "passwordTooLong": "Password can have at most 128 characters",
+    "passwordsDontMatch": "Passwords do not match",
+    "cityRequired": "Choose a city from the list",
+    "cityNotFound": "We could not find that city. Try adding the state or country",
+    "citySearchFailed": "Could not search cities right now. Please try again.",
+    "emailTaken": "This e-mail already has an account. Want to sign in?",
+    "invalidCredentials": "Incorrect e-mail or password",
+    "locked": "Too many attempts. Try again in 15 minutes.",
+    "linkExpired": "This link has expired. Request a new one",
+    "generic": "Something went wrong. Please try again."
+  },
+  "climate": {
+    "tropical": "Tropical",
+    "subtropical": "Subtropical",
+    "temperate": "Temperate",
+    "semiarid": "Semi-arid",
+    "cold": "Cold",
+    "estimated": "estimated",
+    "south": "Southern hemisphere",
+    "north": "Northern hemisphere"
+  },
+  "nav": { "dashboard": "Dashboard" },
+  "dashboard": {
+    "hello": "Hello, {name}!",
+    "comingSoon": "Coming soon: your animals, crops and weather forecast will show up here."
+  },
+  "email": {
+    "resetSubject": "Recover your NewFarmer password",
+    "resetBody": "<p>Hello, {name}!</p><p>Click the link below to create a new password. It is valid for 1 hour.</p><p><a href=\"{link}\">{link}</a></p><p>If you did not request this, ignore this e-mail.</p>"
+  },
+  "devInbox": {
+    "title": "Test inbox",
+    "help": "System e-mails show up here while it runs on your computer.",
+    "empty": "No e-mails sent yet.",
+    "to": "To"
+  }
+}

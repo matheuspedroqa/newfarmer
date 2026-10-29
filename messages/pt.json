@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "NewFarmer",
+    "tagline": "Seu guia para a vida no campo",
+    "quote": "“A vida no campo começa com um bom vizinho.”",
+    "quoteHelp": "Guias de animais, plantações e clima, feitos para quem está chegando."
+  },
+  "toggles": { "language": "Idioma", "themeLight": "Ativar modo claro", "themeDark": "Ativar modo noturno" },
+  "auth": {
+    "name": "Nome",
+    "email": "E-mail",
+    "password": "Senha",
+    "confirmPassword": "Confirmar senha",
+    "city": "Cidade",
+    "cityPlaceholder": "Digite sua cidade",
+    "citySearching": "Buscando...",
+    "loginTitle": "Bem-vindo de volta",
+    "loginSubtitle": "Entre para ver sua fazenda.",
+    "login": "Entrar",
+    "createAccount": "Criar conta",
+    "signupTitle": "Crie sua conta",
+    "haveAccount": "Já tem conta? Entrar",
+    "forgot": "Esqueci minha senha",
+    "forgotTitle": "Recuperar senha",
+    "forgotHelp": "Informe seu e-mail e enviaremos um link para criar uma nova senha.",
+    "sendLink": "Enviar link",
+    "forgotSent": "Se houver uma conta com esse e-mail, enviamos um link. Ele vale por 1 hora.",
+    "resetTitle": "Nova senha",
+    "savePassword": "Salvar nova senha",
+    "resetDone": "Senha alterada. Você já pode entrar.",
+    "backToLogin": "Voltar para a entrada",
+    "logout": "Sair",
+    "sending": "Enviando..."
+  },
+  "errors": {
+    "required": "Preencha este campo",
+    "tooLong": "Texto longo demais",
+    "emailInvalid": "Digite um e-mail válido",
+    "passwordTooShort": "A senha precisa ter pelo menos 8 caracteres",
+    "passwordTooLong": "A senha pode ter no máximo 128 caracteres",
+    "passwordsDontMatch": "As senhas não são iguais",
+    "cityRequired": "Escolha uma cidade da lista",
+    "cityNotFound": "Não encontramos essa cidade. Tente com o nome do estado ou país",
+    "citySearchFailed": "Não foi possível buscar cidades agora. Tente de novo.",
+    "emailTaken": "Este e-mail já tem uma conta. Quer entrar?",
+    "invalidCredentials": "E-mail ou senha incorretos",
+    "locked": "Muitas tentativas. Tente de novo em 15 minutos.",
+    "linkExpired": "Este link expirou. Peça um novo",
+    "generic": "Algo deu errado. Tente de novo."
+  },
+  "climate": {
+    "tropical": "Tropical",
+    "subtropical": "Subtropical",
+    "temperate": "Temperado",
+    "semiarid": "Semiárido",
+    "cold": "Frio",
+    "estimated": "estimado",
+    "south": "Hemisfério sul",
+    "north": "Hemisfério norte"
+  },
+  "nav": { "dashboard": "Painel" },
+  "dashboard": {
+    "hello": "Olá, {name}!",
+    "comingSoon": "Em breve: seus animais, plantações e a previsão do tempo aparecem aqui."
+  },
+  "email": {
+    "resetSubject": "Recupere sua senha do NewFarmer",
+    "resetBody": "<p>Olá, {name}!</p><p>Clique no link abaixo para criar uma nova senha. Ele vale por 1 hora.</p><p><a href=\"{link}\">{link}</a></p><p>Se você não pediu isso, ignore este e-mail.</p>"
+  },
+  "devInbox": {
+    "title": "Caixa de e-mail de teste",
+    "help": "Os e-mails do sistema aparecem aqui enquanto ele roda no seu computador.",
+    "empty": "Nenhum e-mail enviado ainda.",
+    "to": "Para"
+  }
+}
