@@ -51,6 +51,15 @@ tests/unit/seasons.test.ts, tests/unit/content-schema.test.ts, tests/unit/conten
 
 ---
 
+### Mudança de escopo (pedido do usuário em 2026-10-29): base de conhecimento de 9 países
+
+- Países: BR, US, CA, DE, ES, FR, PT, IT, MX (`src/lib/countries.ts`).
+- Fase 1 — pesquisa em paralelo (ajudantes): `knowledge/<PAÍS>/<animals|crops>/<id>.md` + `.json`, no formato de `knowledge/README.md`. Animais: 1 ajudante por país; plantações: 2 por país (hortaliças+grãos; frutas+raízes e ervas).
+- Fase 2 — síntese do "melhor manual": cada ficha em `content/` é reescrita juntando o melhor das 9 bases (fontes de vários países) e ganha `countryNotes` com o bloco "No seu país" para os 9 países (`highlights` 2+ PT/EN e fontes).
+- `content.test.ts` exige `countryNotes` para os 9 países em toda ficha.
+- Task 5 ganha o componente `CountryNotes`: mostra o bloco do país do cadastro (`knowledgeCountry(user.countryCode)`); país fora da base não mostra o bloco.
+- Revisão do usuário por lote continua valendo.
+
 ### Task 1: Regras de estação, hemisfério e tarefas do mês
 
 **Files:**

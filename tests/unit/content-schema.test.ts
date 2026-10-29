@@ -43,3 +43,18 @@ describe("cropContentSchema", () => {
   it("recusa URL inválida", () =>
     expect(cropContentSchema.safeParse({ ...crop, sources: [sources[0], { title: "x", url: "nao-e-url" }] }).success).toBe(false));
 });
+
+describe("countryNotes (bloco 'No seu país')", () => {
+  const note = { highlights: [t, t], sources: [sources[0]] };
+
+  it("aceita notas por país da base de conhecimento", () => {
+    expect(animalContentSchema.safeParse({ ...animal, countryNotes: { BR: note, PT: note } }).success).toBe(true);
+    expect(cropContentSchema.safeParse({ ...crop, countryNotes: { US: note } }).success).toBe(true);
+  });
+
+  it("recusa país fora da base, nota com menos de 2 destaques ou sem fonte", () => {
+    expect(animalContentSchema.safeParse({ ...animal, countryNotes: { JP: note } }).success).toBe(false);
+    expect(animalContentSchema.safeParse({ ...animal, countryNotes: { BR: { ...note, highlights: [t] } } }).success).toBe(false);
+    expect(animalContentSchema.safeParse({ ...animal, countryNotes: { BR: { ...note, sources: [] } } }).success).toBe(false);
+  });
+});

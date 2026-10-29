@@ -1,11 +1,17 @@
 import { z } from "zod";
 import { ANIMAL_IDS, CROP_IDS } from "./catalog";
+import { KNOWLEDGE_COUNTRIES } from "./countries";
 
 export const textSchema = z.object({ pt: z.string().trim().min(1), en: z.string().trim().min(1) });
 const zones = <T extends z.ZodTypeAny>(schema: T) =>
   z.object({ tropical: schema, subtropical: schema, temperate: schema, semiarid: schema, cold: schema });
 const sourceSchema = z.object({ title: z.string().trim().min(1), url: z.string().url() });
 const months = z.array(z.number().int().min(1).max(12));
+
+// Bloco "No seu país": o que muda em cada país da base de conhecimento (raças, regras, épocas, cuidados).
+const countryNotesSchema = z
+  .record(z.enum(KNOWLEDGE_COUNTRIES), z.object({ highlights: z.array(textSchema).min(2), sources: z.array(sourceSchema).min(1) }))
+  .optional();
 
 export const animalContentSchema = z.object({
   id: z.enum(ANIMAL_IDS),
@@ -21,6 +27,7 @@ export const animalContentSchema = z.object({
     .array(z.object({ name: textSchema, signs: textSchema, homeCare: textSchema, vetCare: textSchema }))
     .min(3),
   sources: z.array(sourceSchema).min(2),
+  countryNotes: countryNotesSchema,
 });
 export type AnimalContent = z.infer<typeof animalContentSchema>;
 
@@ -38,5 +45,6 @@ export const cropContentSchema = z.object({
   calendar: zones(calendarSchema),
   care: z.object({ fertilizing: textSchema, pruning: textSchema.nullable(), watering: textSchema, other: textSchema }),
   sources: z.array(sourceSchema).min(2),
+  countryNotes: countryNotesSchema,
 });
 export type CropContent = z.infer<typeof cropContentSchema>;
