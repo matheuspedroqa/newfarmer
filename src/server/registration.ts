@@ -1,4 +1,4 @@
-import type { SignupInput } from "@/lib/validation";
+import type { CityChoice, SignupInput } from "@/lib/validation";
 import { EmailTakenError, createUser, getUserById } from "./accounts";
 import {
   classifyClimate,
@@ -34,6 +34,29 @@ export async function registerUser(db: Db, provider: WeatherProvider, input: Sig
     if (error instanceof EmailTakenError) return { ok: false, error: "emailTaken" };
     throw error;
   }
+}
+
+export async function changeCity(
+  db: Db,
+  provider: WeatherProvider,
+  userId: number,
+  city: CityChoice,
+): Promise<ResolvedClimate> {
+  const climate = await resolveClimate(provider, city.latitude, city.longitude);
+  db.prepare(
+    `UPDATE users SET city_label = ?, latitude = ?, longitude = ?, country_code = ?,
+      climate_zone = ?, climate_estimated = ?, hemisphere = ? WHERE id = ?`,
+  ).run(
+    city.label,
+    city.latitude,
+    city.longitude,
+    city.countryCode,
+    climate.zone,
+    climate.estimated ? 1 : 0,
+    climate.hemisphere,
+    userId,
+  );
+  return climate;
 }
 
 export async function refreshEstimatedClimate(db: Db, provider: WeatherProvider, userId: number): Promise<void> {
