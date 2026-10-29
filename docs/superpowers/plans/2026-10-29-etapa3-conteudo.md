@@ -36,6 +36,21 @@ tests/unit/seasons.test.ts, tests/unit/content-schema.test.ts, tests/unit/conten
 
 ---
 
+### Task 0: Menu do usuário, página Perfil e inglês como idioma padrão (pedido do usuário em 2026-10-29)
+
+**Files:**
+- Modify: `src/i18n/locales.ts` (padrão `en`), `src/server/db.ts` (default da coluna `locale` = `'en'`), `src/lib/validation.ts` (`changePasswordSchema`), `src/server/accounts.ts` (`changePassword`), `src/app/(app)/layout.tsx` (menu à esquerda do "Sair"; MyFarm sai do trilho), `messages/*.json`, `playwright.config.ts` e `tests/e2e/helpers.ts` (os robôs continuam em português via cookie `nf_locale=pt`)
+- Create: `src/components/UserMenu.tsx`, `src/app/(app)/perfil/page.tsx`, `src/app/(app)/perfil/PasswordForm.tsx`, `src/app/(app)/perfil/LanguageForm.tsx`, `src/app/actions/profile.ts`
+- Test: `tests/unit/locales.test.ts`, `tests/integration/change-password.test.ts`, casos em `tests/unit/validation.test.ts`, `tests/e2e/profile.spec.ts`
+
+**Comportamento:**
+- Botão no cabeçalho com o nome da pessoa e "▾"; abre um menu com **MyFarm** (`/myfarm`) e **Perfil** (`/perfil`); fecha com Esc, clique fora ou ao escolher; `aria-expanded` correto. Fica à esquerda do "Sair".
+- `/perfil`: mostra nome, e-mail, cidade e tipo de clima; formulário de troca de senha (senha atual, nova, confirmação — mesmas regras de senha do cadastro; senha atual errada → "Senha atual incorreta"; ao trocar, encerra as outras sessões e mantém a atual); escolha de idioma (Português / English) que salva na conta e no cookie.
+- Idioma padrão: inglês quando não há cookie nem preferência salva; contas novas herdam o idioma em uso na tela de cadastro.
+- `changePassword(db, userId, currentPassword, newPassword, keepSessionToken?): Promise<"ok" | "wrongPassword">`.
+
+---
+
 ### Task 1: Regras de estação, hemisfério e tarefas do mês
 
 **Files:**
