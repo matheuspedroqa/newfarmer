@@ -22,9 +22,9 @@
 - Zonas de clima no código: `tropical | subtropical | temperate | semiarid | cold`; hemisfério `south | north`.
 - Cookies de preferência: `nf_locale` (`pt|en`) e `nf_theme` (`light|dark`), 1 ano.
 
-## Pré-requisito: Etapa 0 (protótipos)
+## Visual escolhido (Etapa 0 concluída)
 
-Antes da Task 9, o usuário escolhe um dos protótipos visuais. As cores escolhidas substituem os valores das variáveis CSS em `src/app/globals.css` (Task 9, Step 3) e o fundo da tela de login (Task 10). A estrutura das tarefas não muda.
+Variante D do protótipo (branch `prototype/visual`, arquivo `prototypes/visual-PROTOTYPE.html`): telas públicas em tela dividida com paisagem à esquerda; área logada com trilho de ícones à esquerda. Fontes Fraunces (títulos) e Nunito (texto). Cores na seção "Visual" da spec — já aplicadas no `globals.css` da Task 9 e nos layouts da Task 10. Abrir o protótipo para comparar quando montar as telas.
 
 ## Estrutura de arquivos
 
@@ -2089,31 +2089,37 @@ const nextConfig: NextConfig = {
 export default withNextIntl(nextConfig);
 ```
 
-`src/app/globals.css` (substituir o conteúdo; as cores vêm do protótipo escolhido na Etapa 0 — estes são os valores iniciais):
+`src/app/globals.css` (substituir o conteúdo; cores da variante D):
 ```css
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --bg: #f6f2e8;
+  --bg: #f6f1e7;
   --surface: #ffffff;
-  --text: #2b2a26;
-  --muted: #6b675d;
-  --primary: #3f7d3a;
+  --text: #2e2a22;
+  --muted: #6e675a;
+  --primary: #3f6b3a;
   --primary-text: #ffffff;
-  --border: #e2dccd;
+  --accent: #c8873a;
+  --soft: #fbeedd;
+  --border: #ddd3bf;
+  --rail: #3f6b3a;
   --danger: #b42318;
 }
 
 .dark {
-  --bg: #14170f;
-  --surface: #1f241a;
-  --text: #ece8dc;
-  --muted: #a8a493;
-  --primary: #7fbf6a;
-  --primary-text: #10140c;
-  --border: #343a2b;
+  --bg: #15180f;
+  --surface: #20241a;
+  --text: #ece6d6;
+  --muted: #a8a190;
+  --primary: #9fd08f;
+  --primary-text: #15180f;
+  --accent: #e0a35c;
+  --soft: #2b2316;
+  --border: #3a3f2e;
+  --rail: #1f2a1b;
   --danger: #f97066;
 }
 
@@ -2124,8 +2130,13 @@ export default withNextIntl(nextConfig);
   --color-muted: var(--muted);
   --color-primary: var(--primary);
   --color-primary-text: var(--primary-text);
+  --color-accent: var(--accent);
+  --color-soft: var(--soft);
   --color-border: var(--border);
+  --color-rail: var(--rail);
   --color-danger: var(--danger);
+  --font-sans: var(--font-nunito);
+  --font-display: var(--font-fraunces);
 }
 
 body {
@@ -2139,10 +2150,14 @@ body {
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import { Fraunces, Nunito } from "next/font/google";
 import { cookies } from "next/headers";
 import { resolveTheme } from "@/i18n/locales";
 import { THEME_COOKIE } from "@/lib/cookies";
 import "./globals.css";
+
+const fraunces = Fraunces({ subsets: ["latin"], weight: ["500", "700"], variable: "--font-fraunces" });
+const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-nunito" });
 
 export const metadata: Metadata = { title: "NewFarmer" };
 
@@ -2150,10 +2165,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const locale = await getLocale();
   const messages = await getMessages();
   const theme = resolveTheme((await cookies()).get(THEME_COOKIE)?.value);
+  const classes = [fraunces.variable, nunito.variable, theme === "dark" ? "dark" : ""].join(" ").trim();
 
   return (
-    <html lang={locale === "pt" ? "pt-BR" : "en"} className={theme === "dark" ? "dark" : undefined}>
-      <body className="min-h-screen antialiased">
+    <html lang={locale === "pt" ? "pt-BR" : "en"} className={classes}>
+      <body className="min-h-screen font-sans antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
@@ -2250,7 +2266,7 @@ export async function TopControls() {
   const locale = resolveLocale(await getLocale());
   const theme = resolveTheme((await cookies()).get(THEME_COOKIE)?.value);
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2" data-testid="top-controls">
       <LocaleToggle current={locale} />
       <ThemeToggle initial={theme} />
     </div>
@@ -2564,11 +2580,12 @@ export function CityPicker({ error }: { error?: string }) {
 
 `src/components/AuthCard.tsx`:
 ```tsx
-export function AuthCard({ title, children }: { title: string; children: React.ReactNode }) {
+export function AuthCard({ title, subtitle, children }: { title: string; subtitle?: string; children: React.ReactNode }) {
   return (
-    <div className="w-full max-w-md rounded-2xl border border-border bg-surface/95 p-8 shadow-xl backdrop-blur">
-      <h1 className="mb-6 text-2xl font-bold">{title}</h1>
-      {children}
+    <div className="w-full max-w-sm">
+      <h1 className="font-display text-4xl font-bold">{title}</h1>
+      {subtitle && <p className="mt-2 text-muted">{subtitle}</p>}
+      <div className="mt-8">{children}</div>
     </div>
   );
 }
@@ -2597,7 +2614,9 @@ export function AuthCard({ title, children }: { title: string; children: React.R
 </svg>
 ```
 
-`src/app/(public)/layout.tsx`:
+Acrescentar em `messages/pt.json` → `app`: `"quote": "“A vida no campo começa com um bom vizinho.”"`, `"quoteHelp": "Guias de animais, plantações e clima, feitos para quem está chegando."`; e em `messages/en.json` → `app`: `"quote": "“Country life starts with a good neighbor.”"`, `"quoteHelp": "Guides on animals, crops and weather, made for newcomers."`.
+
+`src/app/(public)/layout.tsx` (tela dividida da variante D: paisagem à esquerda, formulário à direita):
 ```tsx
 import { getTranslations } from "next-intl/server";
 import { TopControls } from "@/components/TopControls";
@@ -2605,19 +2624,26 @@ import { TopControls } from "@/components/TopControls";
 export default async function PublicLayout({ children }: { children: React.ReactNode }) {
   const t = await getTranslations("app");
   return (
-    <div className="relative min-h-screen bg-[url('/landscape.svg')] bg-cover bg-bottom dark:bg-[linear-gradient(rgba(10,12,8,.65),rgba(10,12,8,.65)),url('/landscape.svg')]">
-      <header className="flex items-center justify-between px-8 py-5">
-        <div>
-          <p className="text-2xl font-extrabold text-[#2f5d2a] dark:text-[#cfe8c4]">🌾 {t("name")}</p>
-          <p className="text-sm text-[#2f5d2a]/80 dark:text-[#cfe8c4]/80">{t("tagline")}</p>
+    <div className="grid min-h-screen grid-cols-2">
+      <div className="relative overflow-hidden bg-[url('/landscape.svg')] bg-cover bg-bottom dark:brightness-[.55]">
+        <div className="absolute inset-x-10 bottom-10 rounded-2xl bg-white/70 p-6 backdrop-blur dark:bg-black/50">
+          <p className="font-display text-2xl font-bold text-[#2e2a22] dark:text-[#ece6d6]">{t("quote")}</p>
+          <p className="mt-2 text-sm text-[#2e2a22]/80 dark:text-[#ece6d6]/80">{t("quoteHelp")}</p>
         </div>
-        <TopControls />
-      </header>
-      <main className="flex justify-center px-4 pb-16 pt-6">{children}</main>
+      </div>
+      <div className="flex flex-col px-16 py-8">
+        <header className="flex items-center justify-between">
+          <p className="font-display text-2xl font-bold text-primary">🌾 {t("name")}</p>
+          <TopControls />
+        </header>
+        <main className="m-auto flex w-full justify-center py-10">{children}</main>
+      </div>
     </div>
   );
 }
 ```
+
+O fundo noturno escurece a imagem com `brightness`; a imagem é a mesma nos dois modos.
 
 - [ ] **Step 5: Login**
 
@@ -2924,20 +2950,28 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   if (!user) redirect("/login");
   const t = await getTranslations();
 
+  // Trilho de ícones da variante D. A Etapa 2 acrescenta MyFarm, Animais, Plantações e Clima.
+  const nav = [{ href: "/painel", icon: "📊", label: t("nav.dashboard") }];
+
   return (
     <div className="flex min-h-screen">
-      <nav className="w-60 shrink-0 border-r border-border bg-surface p-6">
-        <p className="mb-8 text-xl font-extrabold text-primary">🌾 {t("app.name")}</p>
-        <ul className="space-y-1">
-          <li>
-            <Link href="/painel" className="block rounded-lg px-3 py-2 font-medium hover:bg-bg">📊 {t("nav.dashboard")}</Link>
-          </li>
-        </ul>
+      <nav className="flex w-20 shrink-0 flex-col items-center gap-3 bg-rail py-6" aria-label={t("app.name")}>
+        <p className="mb-6 text-2xl" aria-hidden>🌾</p>
+        {nav.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            title={item.label}
+            aria-label={item.label}
+            className="flex h-12 w-12 items-center justify-center rounded-2xl bg-soft text-xl dark:bg-primary"
+          >
+            {item.icon}
+          </Link>
+        ))}
       </nav>
-      <div className="flex-1">
-        <header className="flex items-center justify-between border-b border-border bg-surface px-8 py-4">
+      <div className="flex-1 p-8">
+        <header className="flex items-center justify-between">
           <div>
-            <p className="font-semibold">{user.name}</p>
             <p className="text-sm text-muted" data-testid="user-climate">
               {user.cityLabel} · {t(`climate.${user.climateZone}`)}
               {user.climateEstimated && ` (${t("climate.estimated")})`} · {t(`climate.${user.hemisphere}`)}
@@ -2950,7 +2984,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
             </form>
           </div>
         </header>
-        <main className="p-8">{children}</main>
+        <main className="mt-6">{children}</main>
       </div>
     </div>
   );
@@ -2967,7 +3001,7 @@ export default async function DashboardPage() {
   const t = await getTranslations("dashboard");
   return (
     <section className="space-y-2">
-      <h1 className="text-3xl font-bold">{t("hello", { name: user.name })}</h1>
+      <h1 className="font-display text-3xl font-bold">{t("hello", { name: user.name })}</h1>
       <p className="text-muted">{t("comingSoon")}</p>
     </section>
   );

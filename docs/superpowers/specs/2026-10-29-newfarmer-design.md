@@ -56,6 +56,27 @@ Todas as telas têm no canto superior direito: toggle de idioma **PT / EN** e to
    - **Plantações**: sub-abas por grupo; cada plantação com calendário de 12 meses (plantio direto, sementeira, transplante, colheita) para o clima e hemisfério do usuário, e cuidados (adubação, poda se houver, irrigação, outros). Rodapé com fontes.
    - **Clima**: previsão real de 5 dias (máx., mín., chance de chuva, ícone) e horário da última atualização.
 
+### Visual (escolhido no protótipo, variante D — branch `prototype/visual`)
+
+- **Telas públicas** (login, cadastro, recuperar): tela dividida — à esquerda, ilustração de paisagem rural com uma frase de boas-vindas; à direita, logo, botões PT/EN e tema, e o formulário.
+- **Área logada**: trilho estreito de ícones à esquerda (80 px, verde), cabeçalho com saudação, cidade e tipo de clima; Painel em blocos de tamanhos diferentes, com o clima grande em destaque (agora + 5 dias), um bloco por animal com a quantidade, bloco "adicionar animal", faixa "este mês nas suas plantações" e bloco da dica da estação.
+- **Fontes**: Fraunces (títulos e números grandes) e Nunito (texto).
+- **Cores**:
+
+| Uso | Claro | Noturno |
+|---|---|---|
+| Fundo | `#f6f1e7` | `#15180f` |
+| Superfície | `#ffffff` | `#20241a` |
+| Texto | `#2e2a22` | `#ece6d6` |
+| Texto suave | `#6e675a` | `#a8a190` |
+| Principal (verde) | `#3f6b3a` | `#9fd08f` |
+| Texto sobre principal | `#ffffff` | `#15180f` |
+| Destaque (caramelo) | `#c8873a` | `#e0a35c` |
+| Suave (creme) | `#fbeedd` | `#2b2316` |
+| Borda | `#ddd3bf` | `#3a3f2e` |
+| Trilho de ícones | `#3f6b3a` | `#1f2a1b` |
+| Erro | `#b42318` | `#f97066` |
+
 ## 5. Conteúdo
 
 ### Animais
