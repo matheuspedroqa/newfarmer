@@ -8,5 +8,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/painel/:path*", "/myfarm/:path*", "/animais/:path*", "/plantacoes/:path*", "/clima/:path*"],
+  matcher: ["/painel/:path*", "/boas-vindas/:path*", "/myfarm/:path*", "/animais/:path*", "/plantacoes/:path*", "/clima/:path*"],
 };

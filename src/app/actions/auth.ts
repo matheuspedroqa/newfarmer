@@ -48,7 +48,7 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
 
   setPreferences(db, result.userId, { locale: resolveLocale(await getLocale()) });
   await startSession(getUserById(db, result.userId)!);
-  redirect("/painel");
+  redirect("/boas-vindas");
 }
 
 export async function loginAction(_prev: FormState, formData: FormData): Promise<FormState> {
