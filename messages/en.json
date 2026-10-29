@@ -5,7 +5,11 @@
     "quote": "“Country life starts with a good neighbor.”",
     "quoteHelp": "Guides on animals, crops and weather, made for newcomers."
   },
-  "toggles": { "language": "Language", "themeLight": "Switch to light mode", "themeDark": "Switch to dark mode" },
+  "toggles": {
+    "language": "Language",
+    "themeLight": "Switch to light mode",
+    "themeDark": "Switch to dark mode"
+  },
   "auth": {
     "name": "Name",
     "email": "E-mail",
@@ -46,7 +50,10 @@
     "invalidCredentials": "Incorrect e-mail or password",
     "locked": "Too many attempts. Try again in 15 minutes.",
     "linkExpired": "This link has expired. Request a new one",
-    "generic": "Something went wrong. Please try again."
+    "generic": "Something went wrong. Please try again.",
+    "countInvalid": "Use a whole number",
+    "countTooSmall": "Enter at least 1",
+    "countTooLarge": "At most 100,000"
   },
   "climate": {
     "tropical": "Tropical",
@@ -58,10 +65,20 @@
     "south": "Southern hemisphere",
     "north": "Northern hemisphere"
   },
-  "nav": { "dashboard": "Dashboard" },
+  "nav": {
+    "dashboard": "Dashboard",
+    "myfarm": "MyFarm",
+    "weather": "Weather"
+  },
   "dashboard": {
     "hello": "Hello, {name}!",
-    "comingSoon": "Coming soon: your animals, crops and weather forecast will show up here."
+    "myAnimals": "My animals",
+    "addAnimal": "Add animal",
+    "noAnimals": "You have not added any animals yet.",
+    "myCrops": "My crops",
+    "noCrops": "You have not added any crops yet.",
+    "editFarm": "Edit in MyFarm",
+    "cropsSoon": "Coming soon: what to do this month for each crop."
   },
   "email": {
     "resetSubject": "Recover your NewFarmer password",
@@ -72,5 +89,82 @@
     "help": "System e-mails show up here while it runs on your computer.",
     "empty": "No e-mails sent yet.",
     "to": "To"
+  },
+  "animals": {
+    "chickens": "Chickens",
+    "pigs": "Pigs",
+    "cows": "Cows",
+    "sheep": "Sheep",
+    "goats": "Goats",
+    "ducks": "Ducks"
+  },
+  "crops": {
+    "lettuce": "Lettuce",
+    "tomato": "Tomato",
+    "kale": "Kale",
+    "carrot": "Carrot",
+    "onion": "Onion",
+    "corn": "Corn",
+    "beans": "Beans",
+    "rice": "Rice",
+    "wheat": "Wheat",
+    "soy": "Soybean",
+    "banana": "Banana",
+    "orange": "Orange",
+    "passionFruit": "Passion fruit",
+    "strawberry": "Strawberry",
+    "papaya": "Papaya",
+    "cassava": "Cassava",
+    "potato": "Potato",
+    "sweetPotato": "Sweet potato",
+    "parsley": "Parsley",
+    "basil": "Basil"
+  },
+  "cropGroups": {
+    "vegetables": "Vegetables",
+    "grains": "Grains",
+    "fruits": "Fruits",
+    "rootsHerbs": "Roots and herbs"
+  },
+  "farm": {
+    "step": "Step 2 of 2",
+    "title": "My farm",
+    "help": "Tell us what you have. You can change it later in the MyFarm menu.",
+    "animalsTitle": "Animals",
+    "animalsHelp": "Check the animals you have and say how many.",
+    "howMany": "How many?",
+    "cropsTitle": "Crops",
+    "cropsHelp": "Check what you grow.",
+    "save": "Save",
+    "saved": "Saved!",
+    "continue": "Continue",
+    "skip": "Skip for now"
+  },
+  "myfarm": {
+    "title": "MyFarm",
+    "cityTitle": "My city",
+    "currentCity": "Current city",
+    "saveCity": "Change city",
+    "cityChanged": "City updated. Weather and calendars now follow the new city."
+  },
+  "weather": {
+    "title": "Weather",
+    "now": "Now",
+    "next5": "Next 5 days",
+    "rainChance": "Rain",
+    "max": "High",
+    "min": "Low",
+    "seeAll": "See full forecast",
+    "updatedAt": "Forecast saved at {time} — the weather service did not respond right now.",
+    "unavailable": "Forecast unavailable right now. Please try again later.",
+    "clear": "Clear sky",
+    "partlyCloudy": "Partly cloudy",
+    "cloudy": "Cloudy",
+    "fog": "Fog",
+    "drizzle": "Drizzle",
+    "rain": "Rain",
+    "snow": "Snow",
+    "showers": "Rain showers",
+    "thunder": "Thunderstorm"
   }
 }

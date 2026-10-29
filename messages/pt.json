@@ -5,7 +5,11 @@
     "quote": "“A vida no campo começa com um bom vizinho.”",
     "quoteHelp": "Guias de animais, plantações e clima, feitos para quem está chegando."
   },
-  "toggles": { "language": "Idioma", "themeLight": "Ativar modo claro", "themeDark": "Ativar modo noturno" },
+  "toggles": {
+    "language": "Idioma",
+    "themeLight": "Ativar modo claro",
+    "themeDark": "Ativar modo noturno"
+  },
   "auth": {
     "name": "Nome",
     "email": "E-mail",
@@ -46,7 +50,10 @@
     "invalidCredentials": "E-mail ou senha incorretos",
     "locked": "Muitas tentativas. Tente de novo em 15 minutos.",
     "linkExpired": "Este link expirou. Peça um novo",
-    "generic": "Algo deu errado. Tente de novo."
+    "generic": "Algo deu errado. Tente de novo.",
+    "countInvalid": "Use um número inteiro",
+    "countTooSmall": "Informe pelo menos 1",
+    "countTooLarge": "No máximo 100.000"
   },
   "climate": {
     "tropical": "Tropical",
@@ -58,10 +65,20 @@
     "south": "Hemisfério sul",
     "north": "Hemisfério norte"
   },
-  "nav": { "dashboard": "Painel" },
+  "nav": {
+    "dashboard": "Painel",
+    "myfarm": "MyFarm",
+    "weather": "Clima"
+  },
   "dashboard": {
     "hello": "Olá, {name}!",
-    "comingSoon": "Em breve: seus animais, plantações e a previsão do tempo aparecem aqui."
+    "myAnimals": "Meus animais",
+    "addAnimal": "Adicionar animal",
+    "noAnimals": "Você ainda não marcou animais.",
+    "myCrops": "Minhas plantações",
+    "noCrops": "Você ainda não marcou plantações.",
+    "editFarm": "Editar no MyFarm",
+    "cropsSoon": "Em breve: o que fazer este mês em cada plantação."
   },
   "email": {
     "resetSubject": "Recupere sua senha do NewFarmer",
@@ -72,5 +89,82 @@
     "help": "Os e-mails do sistema aparecem aqui enquanto ele roda no seu computador.",
     "empty": "Nenhum e-mail enviado ainda.",
     "to": "Para"
+  },
+  "animals": {
+    "chickens": "Galinhas",
+    "pigs": "Porcos",
+    "cows": "Vacas",
+    "sheep": "Ovelhas",
+    "goats": "Cabras",
+    "ducks": "Patos"
+  },
+  "crops": {
+    "lettuce": "Alface",
+    "tomato": "Tomate",
+    "kale": "Couve",
+    "carrot": "Cenoura",
+    "onion": "Cebola",
+    "corn": "Milho",
+    "beans": "Feijão",
+    "rice": "Arroz",
+    "wheat": "Trigo",
+    "soy": "Soja",
+    "banana": "Banana",
+    "orange": "Laranja",
+    "passionFruit": "Maracujá",
+    "strawberry": "Morango",
+    "papaya": "Mamão",
+    "cassava": "Mandioca",
+    "potato": "Batata",
+    "sweetPotato": "Batata-doce",
+    "parsley": "Salsinha",
+    "basil": "Manjericão"
+  },
+  "cropGroups": {
+    "vegetables": "Hortaliças",
+    "grains": "Grãos",
+    "fruits": "Frutas",
+    "rootsHerbs": "Raízes e ervas"
+  },
+  "farm": {
+    "step": "Etapa 2 de 2",
+    "title": "Minha fazenda",
+    "help": "Conte o que você tem. Dá para mudar depois no menu MyFarm.",
+    "animalsTitle": "Animais",
+    "animalsHelp": "Marque os animais que você tem e diga quantos.",
+    "howMany": "Quantos?",
+    "cropsTitle": "Plantações",
+    "cropsHelp": "Marque o que você planta.",
+    "save": "Salvar",
+    "saved": "Salvo!",
+    "continue": "Continuar",
+    "skip": "Pular por enquanto"
+  },
+  "myfarm": {
+    "title": "MyFarm",
+    "cityTitle": "Minha cidade",
+    "currentCity": "Cidade atual",
+    "saveCity": "Trocar cidade",
+    "cityChanged": "Cidade atualizada. O clima e os calendários já seguem a nova cidade."
+  },
+  "weather": {
+    "title": "Clima",
+    "now": "Agora",
+    "next5": "Próximos 5 dias",
+    "rainChance": "Chuva",
+    "max": "Máx",
+    "min": "Mín",
+    "seeAll": "Ver previsão completa",
+    "updatedAt": "Previsão guardada às {time} — o serviço de clima não respondeu agora.",
+    "unavailable": "Previsão indisponível agora. Tente de novo mais tarde.",
+    "clear": "Céu limpo",
+    "partlyCloudy": "Parcialmente nublado",
+    "cloudy": "Nublado",
+    "fog": "Neblina",
+    "drizzle": "Garoa",
+    "rain": "Chuva",
+    "snow": "Neve",
+    "showers": "Pancadas de chuva",
+    "thunder": "Tempestade"
   }
 }
