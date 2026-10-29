@@ -30,9 +30,9 @@ Usuário do MVP: o próprio dono do projeto, rodando no computador local. A arqu
 | Item | Escolha |
 |---|---|
 | Framework | Next.js (App Router) + TypeScript |
-| Estilo | Tailwind CSS, tema claro/escuro por classe (`next-themes`) |
-| Idiomas | `next-intl`, mensagens em `messages/pt.json` e `messages/en.json` |
-| Banco | SQLite em arquivo local (`data/newfarmer.db`) via `better-sqlite3` + Drizzle ORM |
+| Estilo | Tailwind CSS v4, tema claro/escuro pela classe `dark` no `<html>`, lida de cookie (sem piscar) |
+| Idiomas | `next-intl` sem rotas por idioma (idioma em cookie), mensagens em `messages/pt.json` e `messages/en.json` |
+| Banco | SQLite em arquivo local (`data/newfarmer.db`) via `better-sqlite3`, SQL direto com comandos preparados |
 | Senhas | Hash com `bcryptjs` (custo 12); nunca guardar senha em texto |
 | Sessão | Sessão própria: token aleatório em cookie `httpOnly`, `sameSite=lax`, expira em 30 dias; no banco guarda-se só o hash do token |
 | Validação | `zod` (mesmos esquemas no navegador e no servidor) |
