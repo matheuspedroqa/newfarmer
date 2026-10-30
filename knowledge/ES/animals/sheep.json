@@ -1,0 +1,18 @@
+{
+  "country": "ES",
+  "id": "sheep",
+  "highlights": [
+    { "pt": "Cada ovelha leva um brinco e um identificador eletrônico (em geral um bolo ruminal), e a exploração precisa de registro REGA.", "en": "Each sheep carries an ear tag plus an electronic ID (usually a rumen bolus), and the holding needs REGA registration." },
+    { "pt": "A língua azul é endêmica: a vacina é voluntária, mas o MAPA recomenda vacinar as ovelhas antes do verão.", "en": "Bluetongue is endemic: vaccination is voluntary, but the Ministry recommends vaccinating sheep before summer." },
+    { "pt": "Raças leiteiras locais abastecem queijos DO: Manchega (Manchego), Latxa (Idiazabal, Roncal), Churra.", "en": "Local dairy breeds supply PDO cheeses: Manchega (Manchego), Latxa (Idiazabal, Roncal), Churra." },
+    { "pt": "No verão seco, use restolho de cereal, sombra e água fresca; o pasto volta com as chuvas de outono.", "en": "In the dry summer, use cereal stubble, shade and fresh water; pasture returns with autumn rains." }
+  ],
+  "breeds": ["Merina", "Manchega", "Latxa", "Churra", "Rasa Aragonesa", "Segureña"],
+  "sources": [
+    { "title": "MAPA — Identificación animal: ovino y caprino", "url": "https://www.mapa.gob.es/es/ganaderia/temas/trazabilidad-animal/identificacion-animal/ovino-caprino/" },
+    { "title": "BOE — Real Decreto 685/2013 (derogado por RD 787/2023)", "url": "https://www.boe.es/eli/es/rd/2013/09/16/685/con" },
+    { "title": "MAPA — Logotipo raza autóctona Manchega", "url": "https://www.mapa.gob.es/es/ganaderia/temas/zootecnia/razas-ganaderas/arca/logotipo-manchega.aspx" },
+    { "title": "Agronews Castilla y León — Hoy conocemos la oveja Latxa", "url": "https://www.agronewscastillayleon.com/hoy-conocemos-la-oveja-latxa" },
+    { "title": "MAPA — Situación lengua azul (octubre 2025)", "url": "https://www.mapa.gob.es/va/dam/jcr:c4470d9e-1b49-4fa2-affb-a610d5bef006/situacion%20LA%20oct%202025.pdf" }
+  ]
+}

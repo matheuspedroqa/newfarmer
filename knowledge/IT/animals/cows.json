@@ -1,0 +1,19 @@
+{
+  "country": "IT",
+  "id": "cows",
+  "highlights": [
+    { "pt": "Mesmo uma única vaca exige registro na BDN; cada bezerro recebe dois brincos em até 20 dias e um passaporte.", "en": "Even a single cow requires BDN registration; each calf gets two ear tags within 20 days and a passport." },
+    { "pt": "O nascimento deve entrar na BDN em até 7 dias após a marcação, por você ou por um delegado.", "en": "Births must be recorded in the BDN within 7 days of tagging, by you or a delegate." },
+    { "pt": "O status de tuberculose/brucelose da sua Região define os testes que a ASL fará no rebanho.", "en": "Your Region's TB/brucellosis status sets which tests the ASL will run on your herd." },
+    { "pt": "Raça conforme a região: Bruna e Pezzata Rossa no norte e na montanha; Chianina, Marchigiana e Podolica no centro-sul.", "en": "Breed by region: Bruna and Pezzata Rossa in the north and mountains; Chianina, Marchigiana and Podolica in the centre-south." },
+    { "pt": "Remédio só com receita veterinária eletrônica (REV), respeitando carência de leite e carne.", "en": "Medicines only with an electronic veterinary prescription (REV), respecting milk and meat withdrawal times." }
+  ],
+  "breeds": ["Chianina", "Bruna", "Pezzata Rossa Italiana", "Piemontese", "Marchigiana", "Podolica"],
+  "sources": [
+    { "title": "ASL Vercelli — Anagrafe bovina, istruzioni d'uso", "url": "https://aslvc.piemonte.it/images/downloads/strutture/Veterinario/A.01_ANAGRAFE_BOVINA_istruzioni_uso_agg21.dic.2015.pdf" },
+    { "title": "Ministero della Salute — Anagrafe bovina", "url": "https://www.salute.gov.it/new/sites/default/files/imported/C_17_pagineAree_1571_2_file.pdf" },
+    { "title": "IZS — Il piano italiano di eradicazione per le brucellosi", "url": "https://www.izs.it/IZS/Engine/RAServeFile.php/f/Formazione_corsi_-_convegni/2015/Giornata_Brucellosi/2_Ruocco_Il_piano_italiano_di_eradicazione_per_le_Brucellosi.pdf" },
+    { "title": "Università di Teramo — Schema razze bovine", "url": "https://elearning.unite.it/pluginfile.php/238069/mod_resource/content/1/Schema%20Razze%20Bovine.pdf" },
+    { "title": "Quotidiano Sanità — Ricetta elettronica veterinaria obbligatoria", "url": "https://www.quotidianosanita.it/governo-e-parlamento/ricetta-elettronica-veterinaria-da-domani-parte-obbligo-grillo-finalmente-dati-precisi-sui-consumi-dei-farmaci/" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "country": "PT",
+  "id": "cows",
+  "highlights": [
+    { "pt": "Até 2 vacas em casa é 'detenção caseira', mas exige registo no SNIRA (DGAV) antes de chegar o animal.", "en": "Up to 2 cows at home is 'home keeping', but it must be registered in SNIRA (DGAV) before the animal arrives." },
+    { "pt": "Cada bovino tem brinco nas duas orelhas, nascimento registado no SNIRA e passaporte para circular.", "en": "Every bovine needs ear tags in both ears, a birth recorded in SNIRA and a passport to move." },
+    { "pt": "Raças autóctones como Barrosã, Mirandesa e Arouquesa dão carne DOP e podem ter apoio do PEPAC.", "en": "Native breeds like Barrosã, Mirandesa and Arouquesa yield PDO beef and may get CAP (PEPAC) support." },
+    { "pt": "Guarde feno para o verão seco mediterrâneo, quando os pastos secam.", "en": "Store hay for the dry Mediterranean summer, when pastures dry out." },
+    { "pt": "Comunique à DGAV qualquer suspeita de dermatose nodular (nódulos na pele); antibióticos só com receita.", "en": "Report any suspected lumpy skin disease (skin nodules) to DGAV; antibiotics only with a prescription." }
+  ],
+  "breeds": ["Barrosã", "Mirandesa", "Arouquesa", "Maronesa", "Minhota", "Cachena", "Alentejana", "Mertolenga"],
+  "sources": [
+    { "title": "Agroportal — Portugal tem 61 raças autóctones (Catálogo DGAV/CAP)", "url": "https://www.agroportal.pt/portugal-tem-61-racas-autoctones-e-ovinos-serra-da-estrela-estao-em-maior-numero/" },
+    { "title": "Agroportal — Procedimento para o Registo de Detenção Caseira de animais (DGAV)", "url": "https://www.agroportal.pt/?p=741849" },
+    { "title": "IFAP — Boletim Trimestral 1999 (identificação de bovinos)", "url": "https://www.ifap.pt/portal/documents/182/53896/1999_Boletim+Trismestral_1_2T.pdf/382eb1f9-5409-42e1-84d8-b4623ffcd9b9" },
+    { "title": "DNoticias — Portugal comprou vacinas contra dermatose nodular", "url": "https://www.dnoticias.pt/2026/4/15/488353-portugal-comprou-20000-doses-de-vacinas-contra-dermatose-nodular-mas-espera-nao-usar/" },
+    { "title": "PTPT — Carne Mirandesa DOP", "url": "https://ptpt.pt/en/produtos/71" }
+  ]
+}

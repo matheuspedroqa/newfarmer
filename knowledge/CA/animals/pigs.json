@@ -1,0 +1,19 @@
+{
+  "country": "CA",
+  "id": "pigs",
+  "highlights": [
+    { "pt": "Todo dono de porco, mesmo de um só, deve se registrar no PigTRACE e ter número de propriedade (PID).", "en": "Every pig owner, even of a single pig, must register with PigTRACE and have a premises ID (PID)." },
+    { "pt": "Reporte toda entrada e saída de porcos em até 7 dias; para abate, use a marca de rebanho de 5 dígitos.", "en": "Report every pig movement in or out within 7 days; slaughter pigs carry a 5-digit herd mark." },
+    { "pt": "Peste suína africana é doença de notificação obrigatória ao CFIA e ameaça também os porcos de quintal.", "en": "African swine fever is reportable to the CFIA and threatens backyard pigs too." },
+    { "pt": "No inverno, use abrigo reforçado, cama seca ou profunda e garanta água sem gelo todos os dias.", "en": "In winter, provide a sturdy shelter, dry or deep bedding, and ice-free water every day." },
+    { "pt": "Antibióticos medicamente importantes exigem receita veterinária desde dezembro de 2018.", "en": "Medically important antimicrobials need a veterinary prescription since December 2018." }
+  ],
+  "breeds": [],
+  "sources": [
+    { "title": "Canadian Pork Council — PigTRACE for Small-Scale Pig Producers", "url": "https://www.cpc-ccp.com/pigtrace-for-small-scale-pig-producers" },
+    { "title": "CFIA — African swine fever", "url": "https://inspection.canada.ca/en/animal-health/terrestrial-animals/diseases/reportable/african-swine-fever" },
+    { "title": "Ontario Pork — PigTrace program fact sheet", "url": "https://main.ontariopork.on.ca/Portals/0/Fact_Sheet_PigTrace_program_Final_June2021.pdf" },
+    { "title": "Canadian Food Focus — Where do pigs live", "url": "https://canadianfoodfocus.org/farming/ask-an-expert-where-do-pigs-live/" },
+    { "title": "Beef Cattle Research Council — Prescription required for livestock antibiotics (Dec 2018)", "url": "https://www.beefresearch.ca/blog/prescription-required-for-livestock-cattle-antibiotics-december-2018/" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "country": "DE",
+  "id": "pigs",
+  "highlights": [
+    { "pt": "Peste suína africana (ASP) circula em javalis na Alemanha: não há vacina e a única defesa é biossegurança.", "en": "African swine fever (ASF) circulates in German wild boar: there is no vaccine and biosecurity is the only defence." },
+    { "pt": "É proibido alimentar porcos com restos de cozinha ou comida; guarde ração e palha longe de javalis.", "en": "Feeding pigs kitchen or food waste is prohibited; store feed and straw out of reach of wild boar." },
+    { "pt": "Mesmo um só porco ou miniporco exige registro no Veterinäramt e na Tierseuchenkasse, brinco oficial e livro de registro.", "en": "Even a single pig or mini pig requires registration with the Veterinäramt and Tierseuchenkasse, an official ear tag and a herd register." },
+    { "pt": "Em zonas de restrição da ASP, porcos criados ao ar livre podem ter de ficar confinados.", "en": "In ASF restriction zones, outdoor pigs may have to be kept indoors." },
+    { "pt": "Raças antigas como Buntes Bentheimer e Schwäbisch-Hällisches são rústicas e boas para pasto.", "en": "Heritage breeds such as Buntes Bentheimer and Schwäbisch-Hällisches are hardy and suit pasture." }
+  ],
+  "breeds": ["Buntes Bentheimer Schwein", "Schwäbisch-Hällisches Schwein", "Angler Sattelschwein", "Deutsches Sattelschwein"],
+  "sources": [
+    { "title": "FLI — Maßnahmen gegen Afrikanische Schweinepest", "url": "https://www.fli.de/en/press/press-releases/press-singleview/massnahmen-gegen-afrikanische-schweinepest/" },
+    { "title": "BMEL — Hausschweinbestände schützen (ASP)", "url": "https://www.bmel.de/SharedDocs/Pressemitteilungen/DE/2021/123-asp-hausschweinbestaende-schuetzen.html" },
+    { "title": "LUA Rheinland-Pfalz — Flyer Biosicherheit", "url": "https://lua.rlp.de/fileadmin/lua/Publikationen/Flyer_Biosicherheit_Einzelseiten.pdf" },
+    { "title": "Berlin Neukölln — Nutztierhaltung", "url": "https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/ordnungsamt/veterinaer-und-lebensmittelaufsicht/nutztierhaltung-1402070.php" },
+    { "title": "GEH — Rassebeschreibungen Schweine", "url": "https://g-e-h.de/index.php/rassebeschreibungen/50-schweine" }
+  ]
+}

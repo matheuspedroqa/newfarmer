@@ -1,0 +1,19 @@
+{
+  "country": "IT",
+  "id": "pigs",
+  "highlights": [
+    { "pt": "Registre na BDN mesmo um único porco: a isenção acabou em 2018; \"familiar\" é até 4 animais para consumo próprio.", "en": "Register even a single pig in the BDN: the exemption ended in 2018; a \"family\" holding is up to 4 pigs for home use." },
+    { "pt": "Peste suína africana: proibido dar restos de cozinha e é preciso impedir qualquer contato com javalis (cerca dupla no semiextensivo).", "en": "African swine fever: kitchen scraps are banned and any contact with wild boar must be prevented (double fencing outdoors)." },
+    { "pt": "Abate em casa: até 4 porcos por família, criados por você há pelo menos 30 dias, e a carne não pode ser vendida.", "en": "Home slaughter: up to 4 pigs per household, raised by you for at least 30 days, and the meat cannot be sold." },
+    { "pt": "Remédio só com receita veterinária eletrônica (REV).", "en": "Medicines only with an electronic veterinary prescription (REV)." },
+    { "pt": "Raças pretas autóctones como Cinta Senese, Nero dei Nebrodi e Mora Romagnola rendem bem no semiextensivo.", "en": "Native black breeds such as Cinta Senese, Nero dei Nebrodi and Mora Romagnola thrive in outdoor systems." }
+  ],
+  "breeds": ["Cinta Senese", "Nero dei Nebrodi (Nera Siciliana)", "Mora Romagnola", "Casertana", "Apulo-Calabrese", "Sarda"],
+  "sources": [
+    { "title": "Consulenza Agricola — Fino a 4 suini l'allevamento è ad uso familiare", "url": "https://consulenzaagricola.it/circolari/politica-agricola-comune-e-nazionale/10571-anagrafe-allevamenti-fino-a-4-suini-l-allevamento-e-ad-uso-familiare" },
+    { "title": "ASL CN2 — Nota Regione Piemonte 10/06/2021", "url": "https://www.aslcn2.it/media/2014/02/nota-reg.Piem_.-10.06.21.pdf" },
+    { "title": "3tres3 — Ministero della Salute: misure anti-PSA in Gazzetta", "url": "https://www.3tres3.com/it/ultima-ora/ministero-della-salute-pubblicata-in-gazzetta-misure-anti-psa-pdf_12814/" },
+    { "title": "SIVeMP Veneto — PSA, misure di biosicurezza", "url": "https://sivempveneto.it/?p=127330" },
+    { "title": "Università di Firenze — Italian autochthonous pigs", "url": "https://flore.unifi.it/bitstream/2158/209332/1/ItalianAuthoctonuosPig.pdf" }
+  ]
+}

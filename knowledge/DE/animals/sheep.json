@@ -1,0 +1,18 @@
+{
+  "country": "DE",
+  "id": "sheep",
+  "highlights": [
+    { "pt": "O lobo está em quase todo o país: use cerca elétrica de no mínimo 90 cm e peça subsídio estadual para ela.", "en": "Wolves are present almost nationwide: use an electric fence of at least 90 cm and apply for state funding for it." },
+    { "pt": "Mesmo como hobby, registre no Veterinäramt, no banco HIT e na Tierseuchenkasse.", "en": "Even as a hobby, register with the Veterinäramt, the HIT database and the Tierseuchenkasse." },
+    { "pt": "Cada ovelha leva 2 marcas, uma eletrônica, até os 9 meses ou antes de sair do rebanho.", "en": "Each sheep needs 2 identifiers, one electronic, by 9 months of age or before leaving the flock." },
+    { "pt": "Língua azul (BTV-3) é transmitida por maruins no verão; planeje a vacinação com o veterinário.", "en": "Bluetongue (BTV-3) is spread by biting midges in summer; plan vaccination with your vet." },
+    { "pt": "Raças nativas rústicas como Skudde, Rhönschaf e Bentheimer Landschaf são boas para iniciantes.", "en": "Hardy native breeds such as Skudde, Rhönschaf and Bentheimer Landschaf suit beginners." }
+  ],
+  "breeds": ["Bentheimer Landschaf", "Rhönschaf", "Skudde", "Graue Gehörnte Heidschnucke"],
+  "sources": [
+    { "title": "BZL praxis-agrar — Herdenschutzzäune für Schafe und Ziegen", "url": "https://www.praxis-agrar.de/bundeszentrum-weidetiere-wolf/wissen/fachartikel/herdenschutzzaeune-schafe-ziegen" },
+    { "title": "BZL — Wolf und Weidetierhaltung", "url": "https://www.landwirtschaft.de/tier-und-pflanze/tier/schafe-und-ziegen/wolf-und-weidetierhaltung-ein-loesbarer-konflikt" },
+    { "title": "GEH — Bentheimer Landschaf", "url": "https://www.g-e-h.de/rassebeschreibungen/72-rassebeschreibungen-schafe/318-bentheimer5" },
+    { "title": "Berlin Neukölln — Nutztierhaltung", "url": "https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/ordnungsamt/veterinaer-und-lebensmittelaufsicht/nutztierhaltung-1402070.php" }
+  ]
+}

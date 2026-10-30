@@ -1,0 +1,20 @@
+{
+  "country": "US",
+  "id": "cows",
+  "highlights": [
+    { "pt": "Para levar a outro estado bovinos de reprodução com 18 meses ou mais, gado leiteiro ou de exposição, é obrigatório o brinco oficial eletrônico (RFID) número 840.", "en": "Breeding cattle 18 months and older, dairy cattle and show cattle moving interstate must carry an official 840 electronic (RFID) ear tag." },
+    { "pt": "A bicheira do Novo Mundo voltou ao Texas em 2026: examine umbigos e feridas e avise o veterinário oficial se achar larvas.", "en": "New World screwworm returned to Texas in 2026: check navels and wounds and report any maggots to state or USDA vets." },
+    { "pt": "No inverno do Norte, vento e pelo molhado aumentam o gasto de energia: dê mais feno, quebra-vento e água sem gelo.", "en": "In northern winters, wind and wet hides raise energy needs: feed more hay, give windbreaks and unfrozen water." },
+    { "pt": "Venda de leite cru depende do estado: alguns proíbem, outros só permitem na fazenda ou por cota (cow share).", "en": "Raw milk sales depend on the state: some ban them, others allow only on-farm or cow-share sales." },
+    { "pt": "Antibióticos para bovinos exigem receita veterinária (desde 2023) e VFD quando vão na ração.", "en": "Cattle antibiotics require a vet prescription (since 2023) and a VFD when given in feed." }
+  ],
+  "breeds": ["Angus", "Hereford", "Shorthorn", "Jersey", "Holstein", "Dexter", "Brown Swiss"],
+  "sources": [
+    { "title": "Federal Register — Animal Disease Traceability EID final rule (May 9, 2024)", "url": "https://www.govinfo.gov/content/pkg/FR-2024-05-09/html/2024-09717.htm" },
+    { "title": "Texas Animal Health Commission — USDA ADT EID rule", "url": "https://www.tahc.texas.gov/news/2024/2024-07-17_USDA-ADT-EIDRule.pdf" },
+    { "title": "WLJ — New World screwworm case detected in Texas", "url": "https://www.wlj.net/new-world-screwworm-case-detected-in-texas/" },
+    { "title": "UW-Madison Extension — Manage feeding to help cattle handle cold stress", "url": "https://livestock.extension.wisc.edu/articles/manage-feeding-to-help-cattle-handle-cold-stress" },
+    { "title": "Cornell Small Farms — Selecting a Beef Cattle Breed", "url": "https://smallfarms.cornell.edu/2020/10/selecting-a-beef-cattle-breed/" },
+    { "title": "USDA — National Milk Testing Strategy", "url": "https://www.usda.gov/node/61415" }
+  ]
+}

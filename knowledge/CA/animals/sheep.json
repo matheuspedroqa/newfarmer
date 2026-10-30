@@ -1,0 +1,19 @@
+{
+  "country": "CA",
+  "id": "sheep",
+  "highlights": [
+    { "pt": "Ovelhas precisam de brinco RFID aprovado pelo CSIP (Canadian Sheep Identification Program).", "en": "Sheep must carry an approved CSIP RFID ear tag (Canadian Sheep Identification Program)." },
+    { "pt": "A Rideau Arcott, raça canadense muito prolífica, exige nutrição e parição bem planejadas.", "en": "The Canadian Rideau Arcott is highly prolific, so plan nutrition and lambing carefully." },
+    { "pt": "Neve como água só com reserva de água pronta e inspeção diária (código da NFACC).", "en": "Snow as water only with backup water ready and daily checks (NFACC Code)." },
+    { "pt": "Scrapie é doença de notificação obrigatória ao CFIA, com programa nacional de erradicação.", "en": "Scrapie is reportable to the CFIA under a national eradication program." },
+    { "pt": "Antibióticos medicamente importantes só com receita veterinária desde 2018.", "en": "Medically important antimicrobials require a veterinary prescription since 2018." }
+  ],
+  "breeds": ["Rideau Arcott", "Canadian Arcott", "Outaouais Arcott", "Suffolk", "Finnish Landrace", "East Friesian"],
+  "sources": [
+    { "title": "Canadian Co-operative Wool Growers — Canadian Sheep Identification Program", "url": "https://wool.ca/page/canadian-sheep-identification" },
+    { "title": "Alberta Agriculture — Traceability and Tags for Sheep", "url": "https://www1.agric.gov.ab.ca/$department/deptdocs.nsf/all/sg16055" },
+    { "title": "wool.ca — Rideau Arcott Sheep", "url": "https://wool.ca/page/rideau-arcott-sheep" },
+    { "title": "NFACC — Sheep Code 5-year review", "url": "https://www.nfacc.ca/sheep-5-year-code-review" },
+    { "title": "CFIA — Scrapie", "url": "https://inspection.canada.ca/en/animal-health/terrestrial-animals/diseases/reportable/scrapie" }
+  ]
+}

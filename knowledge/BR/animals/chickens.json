@@ -1,0 +1,20 @@
+{
+  "country": "BR",
+  "id": "chickens",
+  "highlights": [
+    { "pt": "Mortes súbitas em série, crista roxa ou falta de ar podem ser influenza aviária ou Newcastle: avise na hora o serviço veterinário estadual.", "en": "Sudden mass deaths, purple combs or breathing trouble may mean avian influenza or Newcastle disease: report immediately to the state veterinary service." },
+    { "pt": "Tele o galinheiro e proteja água e ração de aves silvestres: a influenza aviária circula em aves silvestres no Brasil desde 2023.", "en": "Net the coop and keep water and feed away from wild birds: avian influenza has circulated in Brazilian wild birds since 2023." },
+    { "pt": "A poedeira Embrapa 051 e raças locais como Canela-Preta e Peloco são opções brasileiras para criação caipira.", "en": "The Embrapa 051 layer and local breeds such as Canela-Preta and Peloco are Brazilian options for free-range flocks." },
+    { "pt": "Granjas comerciais com mais de 1.000 aves precisam de registro no órgão estadual; trânsito de aves exige GTA.", "en": "Commercial farms with over 1,000 birds must register with the state agency; moving birds requires a GTA permit." },
+    { "pt": "Para vender 'ovo caipira', siga a norma ABNT NBR 16437 (acesso a piquete) e tenha inspeção oficial.", "en": "To sell 'free-range' (caipira) eggs, follow ABNT NBR 16437 (outdoor paddock access) and have official inspection." }
+  ],
+  "breeds": ["Embrapa 051 (Colonial)", "Canela-Preta", "Peloco", "Caneluda do Catolé", "Pescoço Pelado", "Rhode Island Red", "Plymouth Rock Barrada (Carijó)"],
+  "sources": [
+    { "title": "Embrapa — Guia de negócio: ovos caipira com a poedeira Embrapa 051", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1135219/1/Guia-de-Negocio-Ovos-caipirapoedeira-Embrapa-051.pdf" },
+    { "title": "MDPI Animals — Diversity and genetic relationship of free-range chickens from Northeast Brazil", "url": "https://mdpi.com/2076-2615/10/10/1857" },
+    { "title": "MAPA/SDA — Plano de contingência para influenza aviária e doença de Newcastle", "url": "https://wikisda.agricultura.gov.br/pt-br/Sa%C3%BAde-Animal/plano-de-contingencia-para-influenza-aviaria-e-doenca-de-newcastle" },
+    { "title": "CNA — Brasil registra o primeiro caso de influenza aviária em granja comercial", "url": "https://cnabrasil.org.br/publicacoes/brasil-registra-o-primeiro-caso-de-influenza-aviaria-em-granja-comercial" },
+    { "title": "Agrodefesa — IN MAPA 56/2007 consolidada com IN 18/2017", "url": "https://goias.gov.br/agrodefesa/wp-content/uploads/sites/49/2014/09/in-56-2007-consolidada-com-in-18-2017-maio-0a6.pdf" },
+    { "title": "Normas.com.br — NBR 16437: requisitos para o ovo caipira", "url": "https://www.normas.com.br/visualizar/artigo-tecnico/2938/nbr-16437-de-12-2016-os-requisitos-para-o-ovo-caipira" }
+  ]
+}

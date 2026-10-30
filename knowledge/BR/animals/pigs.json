@@ -1,0 +1,19 @@
+{
+  "country": "BR",
+  "id": "pigs",
+  "highlights": [
+    { "pt": "Peste suína clássica, peste suína africana e aftosa são de notificação obrigatória: febre, manchas roxas e mortes súbitas devem ser avisadas ao serviço veterinário estadual.", "en": "Classical swine fever, African swine fever and FMD are notifiable: fever, purple skin blotches and sudden deaths must be reported to the state veterinary service." },
+    { "pt": "11 estados do Norte e Nordeste ainda não são zona livre de peste suína clássica, e os focos recentes foram em criações de subsistência.", "en": "11 states in the North and Northeast are still not free of classical swine fever, and recent outbreaks were in backyard herds." },
+    { "pt": "Evite 'lavagem': o MAPA orienta não usar restos de comida, e estados como SC proíbem ou exigem tratamento térmico.", "en": "Avoid swill feeding: MAPA advises against kitchen scraps, and states such as SC ban it or require heat treatment." },
+    { "pt": "Transporte de suínos exige GTA, e carne para venda precisa de abate com inspeção oficial.", "en": "Moving pigs requires a GTA transit permit, and pork for sale must be slaughtered under official inspection." },
+    { "pt": "Raças nacionais como Moura e Piau são rústicas e boas para criação caipira; isole o chiqueiro do javali, espécie invasora.", "en": "Native breeds such as Moura and Piau are hardy and suit free-range farming; keep pens isolated from invasive wild boar." }
+  ],
+  "breeds": ["Moura", "Piau", "Canastra", "Large White", "Landrace", "Duroc", "Pietrain"],
+  "sources": [
+    { "title": "CNA — Ações estruturantes para erradicação da Peste Suína Clássica", "url": "https://cnabrasil.org.br/noticias/cna-defende-acoes-estruturantes-para-erradicacao-da-peste-suina-classica" },
+    { "title": "Notícias Agrícolas — ADAF: restos de comida para suínos devem passar por tratamento térmico", "url": "https://www.noticiasagricolas.com.br/noticias/granjeiros/386017-alimentacao-de-suinos-com-restos-de-comida-com-proteina-animal-devera-passar-por-tratamento-termico-orienta-adaf.html" },
+    { "title": "O Presente Rural — Santa Catarina atualiza legislação contra a peste suína africana", "url": "https://opresenterural.com.br/santa-catarina-atualiza-legislacao-estadual-para-proteger-os-rebanhos-da-peste-suina-africana/" },
+    { "title": "Embrapa — Caracterização de suínos locais (2018)", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1106319/1/2018RACAnandaCBRGCaracterizacao.pdf" },
+    { "title": "IBAMA — Folder javali", "url": "https://www.gov.br/ibama/pt-br/centrais-de-conteudo/publicacoes/arquivos/cetas2020/20201029_folder_javali__a4.pdf" }
+  ]
+}

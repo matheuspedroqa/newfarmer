@@ -1,0 +1,19 @@
+{
+  "country": "DE",
+  "id": "chickens",
+  "highlights": [
+    { "pt": "Mesmo com 2 ou 3 galinhas, registre a criação no Veterinäramt e na Tierseuchenkasse antes de começar.", "en": "Even with 2 or 3 hens, register with the Veterinäramt and the Tierseuchenkasse before you start." },
+    { "pt": "Vacina contra Newcastle é obrigatória desde 1993, em geral pela água e repetida a cada ~6 semanas; guarde os comprovantes.", "en": "Newcastle disease vaccination has been mandatory since 1993, usually via drinking water and repeated about every 6 weeks; keep the records." },
+    { "pt": "Contra gripe aviária é proibido vacinar; no outono/inverno o distrito pode obrigar a manter as aves fechadas, inclusive amadores.", "en": "Vaccinating against avian flu is not allowed; in autumn/winter the district can order birds kept indoors, hobby flocks included." },
+    { "pt": "Inquilinos precisam de autorização do proprietário; o galo costuma gerar conflito com vizinhos e não é necessário para ovos.", "en": "Tenants need the landlord's permission; roosters often cause neighbour disputes and are not needed for eggs." },
+    { "pt": "Galinheiro com no máximo 3 aves/m², portinhola fechada à noite contra raposa e marta, e cerca de 1,20–1,80 m.", "en": "Coop with at most 3 birds/m², a pop hole shut at night against foxes and martens, and a 1.2–1.8 m fence." }
+  ],
+  "breeds": ["Deutsches Reichshuhn", "Zwerghühner (raças anãs)", "Híbridas de postura resgatadas"],
+  "sources": [
+    { "title": "BZL — Hühner halten im eigenen Garten", "url": "https://www.landwirtschaft.de/garten/selbst-anbauen/tiere-halten/huehner-halten-im-eigenen-garten" },
+    { "title": "BZL — Wie gefährlich ist die Vogelgrippe?", "url": "https://www.landwirtschaft.de/tier-und-pflanze/tier/gefluegel/wie-gefaehrlich-ist-die-vogelgrippe" },
+    { "title": "Landkreis Augsburg — Merkblatt Hühnerhaltung", "url": "https://www.landkreis-augsburg.de/fileadmin/user_upload/Veterin%C3%A4ramt/Merkblatt_Huehnerhaltung.pdf" },
+    { "title": "Landkreis München — Newcastle Disease bei Geflügel breitet sich aus", "url": "https://www.landkreis-muenchen.de/artikel/newcastle-disease-bei-gefluegel-breitet-sich-aus/" },
+    { "title": "GEH — Rote Liste", "url": "https://www.g-e-h.de/images/stories/downloadbereich/roteliste.pdf" }
+  ]
+}

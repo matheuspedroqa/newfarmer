@@ -1,0 +1,19 @@
+{
+  "country": "MX",
+  "id": "goats",
+  "highlights": [
+    { "pt": "A cabra é o animal do semiárido do norte (Coahuila, San Luis Potosí, Comarca Lagunera), criada solta em pastagem nativa.", "en": "Goats are the animal of the semi-arid north (Coahuila, San Luis Potosí, La Laguna), herded on native rangeland." },
+    { "pt": "Coahuila lidera o leite de cabra; o cabrito é o outro produto forte. Para carne, o INIFAP sugere reprodutor Boer mantendo sangue criollo.", "en": "Coahuila leads goat milk output; kid meat (cabrito) is the other key product. For meat INIFAP suggests Boer bucks while keeping criollo blood." },
+    { "pt": "Brucelose (febre de Malta) é o grande risco: vacina Rev-1 oficial aplicada por veterinário aprovado.", "en": "Brucellosis (Malta fever) is the main risk: official Rev-1 vaccine given by an approved veterinarian." },
+    { "pt": "Sempre ferva ou pasteurize o leite de cabra antes de beber ou fazer queijo.", "en": "Always boil or pasteurize goat milk before drinking it or making cheese." },
+    { "pt": "Cabras também usam brinco SINIIGA; em San Luis Potosí ele é exigido para mobilização.", "en": "Goats also carry SINIIGA ear tags; in San Luis Potosí they are required for movement." }
+  ],
+  "breeds": ["Cabra criolla", "Boer"],
+  "sources": [
+    { "title": "BM Editores — Promueve INIFAP intercalado de caprinos para mejorar productividad", "url": "https://bmeditores.mx/ganaderia/promueve-inifap-intercalado-de-caprinos-para-mejorar-productividad/" },
+    { "title": "Redalyc — Caprinocultura en Coahuila y la Comarca Lagunera", "url": "https://www.redalyc.org/pdf/629/62921030019.pdf" },
+    { "title": "PRONABIVE — Vacunas utilizadas en la Campaña Nacional contra la Brucelosis en los Animales", "url": "https://www.gob.mx/pronabive/articulos/vacunas-utilizadas-en-la-campana-nacional-contra-la-brucelosis-en-los-animales?idiom=es" },
+    { "title": "NOM-041-ZOO-1995 Campaña Nacional contra la Brucelosis", "url": "https://www.gob.mx/cms/uploads/attachment/file/106184/NOM-041-ZOO-1995.pdf" },
+    { "title": "SEDARH San Luis Potosí — Acuerdo de movilización de ganado con arete SINIIGA", "url": "http://www.sedarh.gob.mx/Transparencia/84/2017/II/Acuerdo_Mov_Ganado_Arete_Siniiga_8_Mpios_210516.pdf" }
+  ]
+}

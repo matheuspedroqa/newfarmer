@@ -1,0 +1,17 @@
+{
+  "country": "FR",
+  "id": "sheep",
+  "highlights": [
+    { "pt": "Mesmo poucas ovelhas de lazer exigem declaração no EDE, dois marcadores (um eletrônico) antes dos 6 meses e recenseamento anual.", "en": "Even a few hobby sheep require EDE registration, two identifiers (one electronic) before 6 months of age, and an annual census." },
+    { "pt": "Movimentos de ovinos são declarados em até 7 dias e você precisa manter um registro de criação.", "en": "Sheep movements must be declared within 7 days and a holding register must be kept." },
+    { "pt": "Vacine contra a febre catarral (FCO) antes do verão: as ovelhas foram grande parte dos focos recentes.", "en": "Vaccinate against bluetongue before summer: sheep made up a large share of recent outbreaks." },
+    { "pt": "Onde há lobo, o Estado financia de 80% a 100% de cercas elétricas e cães de proteção, e a indenização depende dessas proteções.", "en": "In wolf areas the State funds 80–100% of electric fencing and guardian dogs, and compensation depends on having them." }
+  ],
+  "breeds": ["Lacaune", "Manech tête rousse", "Basco-Béarnaise", "Mérinos d'Arles", "Île-de-France", "Rouge de l'Ouest"],
+  "sources": [
+    { "title": "Chambres d'agriculture — Identification des animaux", "url": "https://chambres-agriculture.fr/sinformer/nos-ressources/elevage/identification" },
+    { "title": "Préfecture de la Drôme — Protection des troupeaux", "url": "https://www.drome.gouv.fr/contenu/telechargement/16907/115483/file/protection_des_troupeaux.pdf" },
+    { "title": "info.gouv.fr — L'État mobilisé contre la fièvre catarrhale ovine", "url": "https://www.info.gouv.fr/actualite/letat-mobilise-contre-la-fievre-catarrhale-ovine" },
+    { "title": "Réussir — Programmes de sélection de l'Upra Lacaune", "url": "https://www.reussir.fr/les-quatre-programmes-de-selection-de-lupra-lacaune" }
+  ]
+}

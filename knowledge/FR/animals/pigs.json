@@ -1,0 +1,18 @@
+{
+  "country": "FR",
+  "id": "pigs",
+  "highlights": [
+    { "pt": "Desde 2019, até um único porco (de estimação ou para consumo da família) precisa ser declarado no EDE e identificado.", "en": "Since 2019 even a single pig (pet or for family consumption) must be registered with the EDE and identified." },
+    { "pt": "Por causa da peste suína africana, criar porcos ao ar livre exige cerca dupla ou reforçada contra javalis (postes fixos e aba enterrada ou fios elétricos).", "en": "Because of African swine fever, outdoor pigs need wild-boar-proof fencing (fixed posts plus a buried apron or outer electric wires)." },
+    { "pt": "Restos de cozinha são proibidos na alimentação dos porcos, e qualquer suspeita de doença ou javali morto deve ser avisada.", "en": "Kitchen scraps are banned as pig feed; report any suspected disease or dead wild boar." },
+    { "pt": "Movimentos de porcos são notificados à BDPORC em até 7 dias e os documentos ficam 5 anos no registro.", "en": "Pig movements are notified to BDPORC within 7 days and records are kept for 5 years." },
+    { "pt": "Raças locais como Basque, Gascon e Cul noir Limousin são ótimas para criação extensiva ao ar livre.", "en": "Local breeds like Basque, Gascon and Limousin Black-Rump suit extensive outdoor rearing." }
+  ],
+  "breeds": ["Porc Basque", "Porc Gascon", "Cul noir Limousin", "Porc de Bayeux", "Porc Blanc de l'Ouest", "Nustrale"],
+  "sources": [
+    { "title": "Chambres d'agriculture — Identification des animaux", "url": "https://chambres-agriculture.fr/sinformer/nos-ressources/elevage/identification" },
+    { "title": "Préfecture de Vaucluse — Note création/détention de porc", "url": "https://vaucluse.gouv.fr/contenu/telechargement/14336/126241/file/note_creation_detention_porc.pdf" },
+    { "title": "Préfecture de l'Ardèche — Biosécurité plein air suidés : clôtures", "url": "https://www.ardeche.gouv.fr/contenu/telechargement/17839/143093/file/3_biosecurite_en_elevage_plein_air_de_suides_clotures.pdf" },
+    { "title": "FranceAgriMer — Génétique porcine 2025 (LIGERAL)", "url": "https://www.franceagrimer.fr/content/download/76621/document/GENETIQUE_PORCIN_2025-1.pdf" }
+  ]
+}

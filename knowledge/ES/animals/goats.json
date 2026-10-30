@@ -1,0 +1,19 @@
+{
+  "country": "ES",
+  "id": "goats",
+  "highlights": [
+    { "pt": "A Espanha tem raças leiteiras autóctones de ponta: Murciano-Granadina, Malagueña, Florida e Payoya.", "en": "Spain has top native dairy breeds: Murciano-Granadina, Malagueña, Florida and Payoya." },
+    { "pt": "Cada cabra precisa de um brinco e de um identificador eletrônico, e a exploração de registro REGA, mesmo sendo pequena.", "en": "Each goat needs an ear tag plus an electronic ID, and the holding needs REGA registration, however small." },
+    { "pt": "As campanhas de saneamento contra a brucelose são obrigatórias; a doença também passa para as pessoas.", "en": "Brucellosis sanitation campaigns are mandatory; the disease can also infect people." },
+    { "pt": "No verão, água fresca à vontade, sombra e ventilação; uma queda no leite indica estresse por calor.", "en": "In summer, give unlimited fresh water, shade and ventilation; a drop in milk signals heat stress." },
+    { "pt": "Antibióticos só com receita veterinária (RD 666/2023), respeitando a carência do leite.", "en": "Antibiotics only with a vet prescription (RD 666/2023), respecting milk withdrawal times." }
+  ],
+  "breeds": ["Murciano-Granadina", "Malagueña", "Florida", "Payoya"],
+  "sources": [
+    { "title": "MAPA — Logotipo raza autóctona Murciano-Granadina", "url": "https://www.mapa.gob.es/ca/ganaderia/temas/zootecnia/razas-ganaderas/arca/logotipo-murcianogranadina" },
+    { "title": "MAPA — Programa de cría de la raza Malagueña", "url": "https://www.mapa.gob.es/en/dam/jcr:9e059290-4e8e-4a7d-830c-4ba0418b8eef/Programadecriamalaguena%209oct25.2025-12-17-08-33-29.pdf" },
+    { "title": "Interempresas — Recomendaciones para evitar el estrés térmico en caprino", "url": "https://www.interempresas.net/caprino/659782-Recomendaciones-para-evitar-el-estres-termico-por-calor-en-el-ganado-caprino.html" },
+    { "title": "MAPA — Identificación animal: ovino y caprino", "url": "https://www.mapa.gob.es/es/ganaderia/temas/trazabilidad-animal/identificacion-animal/ovino-caprino/" },
+    { "title": "BOE — Real Decreto 685/2013 (derogado por RD 787/2023)", "url": "https://www.boe.es/eli/es/rd/2013/09/16/685/con" }
+  ]
+}

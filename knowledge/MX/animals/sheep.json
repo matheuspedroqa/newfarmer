@@ -1,0 +1,18 @@
+{
+  "country": "MX",
+  "id": "sheep",
+  "highlights": [
+    { "pt": "No México a ovelha é criada para carne: o cordeiro abastece a barbacoa do centro do país (Estado de México, Hidalgo).", "en": "In Mexico sheep are raised for meat: lambs supply the barbacoa trade of central Mexico (State of Mexico, Hidalgo)." },
+    { "pt": "No calor do trópico use ovelhas de pelo: Pelibuey, Blackbelly, Katahdin e Dorper.", "en": "In the hot tropics use hair sheep: Pelibuey, Blackbelly, Katahdin and Dorper." },
+    { "pt": "Cruzar ovelha Pelibuey com carneiro Katahdin ou Dorper aumenta o crescimento dos cordeiros.", "en": "Crossing Pelibuey ewes with Katahdin or Dorper rams improves lamb growth." },
+    { "pt": "Ovinos também levam o brinco SINIIGA e a vacina de brucelose (Rev-1) é aplicada por veterinário aprovado.", "en": "Sheep also carry the SINIIGA ear tag, and brucellosis vaccine (Rev-1) is given by an approved veterinarian." }
+  ],
+  "breeds": ["Pelibuey", "Blackbelly", "Katahdin", "Dorper", "Rambouillet", "Suffolk", "Hampshire"],
+  "sources": [
+    { "title": "Universidad y Ciencia — Ovinos de pelo en el trópico de México", "url": "https://www.scielo.org.mx/pdf/uc/v28n2/v28n2a6.pdf" },
+    { "title": "INIFAP — Revista Mexicana de Ciencias Pecuarias (ovinos Katahdin y Pelibuey)", "url": "https://cienciaspecuarias.inifap.gob.mx/index.php/Pecuarias/article/download/5157/4417/16129" },
+    { "title": "Agroproductividad — Ovinocultura en el Altiplano", "url": "https://revista-agroproductividad.org/index.php/agroproductividad/article/download/975/833" },
+    { "title": "PRONABIVE — Prevención de la Brucella melitensis en ganado ovino y caprino", "url": "https://www.gob.mx/pronabive/articulos/prevencion-de-la-brucella-melitensis-en-ganado-ovino-y-caprino?idiom=es" },
+    { "title": "ASICA Jalisco — Permiso de internación", "url": "https://asica.jalisco.gob.mx/ASICA/permiso-internacion" }
+  ]
+}

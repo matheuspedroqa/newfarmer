@@ -1,0 +1,18 @@
+{
+  "country": "PT",
+  "id": "goats",
+  "highlights": [
+    { "pt": "Mesmo poucas cabras (até 6) precisam de registo no SNIRA da DGAV como 'detenção caseira'.", "en": "Even a few goats (up to 6) must be registered in DGAV's SNIRA as 'home keeping'." },
+    { "pt": "Cada cabra leva brinco e identificação eletrónica (bolo ou brinco eletrónico).", "en": "Each goat needs an ear tag plus electronic ID (bolus or e-tag)." },
+    { "pt": "A brucelose (febre de Malta) tem programa oficial: faça o saneamento antes de consumir leite.", "en": "Brucellosis (Malta fever) has an official programme: get the herd tested before drinking the milk." },
+    { "pt": "Pode abater até 8 cabritos por ano para a família, mas vender a carne é proibido.", "en": "You may slaughter up to 8 kids a year for your family, but selling the meat is banned." },
+    { "pt": "A cabra Serrana dá o Queijo de Cabra Transmontano DOP; há raças regionais como Bravia, Serpentina e Algarvia.", "en": "Serrana goats produce PDO Transmontano goat cheese; regional breeds include Bravia, Serpentina and Algarvia." }
+  ],
+  "breeds": ["Serrana", "Bravia", "Serpentina", "Algarvia", "Charnequeira", "Preta de Montesinho"],
+  "sources": [
+    { "title": "Agroportal — Portugal tem 61 raças autóctones (Catálogo DGAV/CAP)", "url": "https://www.agroportal.pt/portugal-tem-61-racas-autoctones-e-ovinos-serra-da-estrela-estao-em-maior-numero/" },
+    { "title": "Agroportal — Procedimento para o Registo de Detenção Caseira de animais (DGAV)", "url": "https://www.agroportal.pt/?p=741849" },
+    { "title": "DECO PROteste — Matança do porco fora do matadouro tem novas regras", "url": "https://www.deco.proteste.pt/alimentacao/produtos-alimentares/noticias/matanca-do-porco-fora-do-matadouro-tem-novas-regras" },
+    { "title": "IPB — Raça Serrana, Queijo de Cabra Transmontano e Cabrito Transmontano", "url": "https://core.ac.uk/download/153408296.pdf" }
+  ]
+}

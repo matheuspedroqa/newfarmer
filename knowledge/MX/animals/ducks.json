@@ -1,0 +1,18 @@
+{
+  "country": "MX",
+  "id": "ducks",
+  "highlights": [
+    { "pt": "O pato criollo (Cairina moschata) é nativo do México e foi domesticado na América Latina; é o pato típico de quintal.", "en": "The Muscovy duck (Cairina moschata) is native to Mexico and was domesticated in Latin America; it is the typical backyard duck." },
+    { "pt": "Mantenha patos domésticos longe de aves aquáticas silvestres: elas trazem a influenza aviária.", "en": "Keep domestic ducks away from wild waterfowl, which carry avian influenza." },
+    { "pt": "Mortalidade anormal em aves deve ser avisada ao SENASICA: 800 751 2100 ou app AVISE.", "en": "Report unusual bird deaths to SENASICA: 800 751 2100 or the AVISE app." },
+    { "pt": "Evite cruzar todo o plantel com linhagens comerciais para não perder a rusticidade do pato criollo.", "en": "Avoid crossing the whole flock with commercial lines so the criollo duck keeps its hardiness." }
+  ],
+  "breeds": ["Pato criollo (Cairina moschata domestica)", "Pato Pekín"],
+  "sources": [
+    { "title": "FAO — Producción y productos avícolas: patos", "url": "https://www.fao.org/poultry-production-products/production/poultry-species/ducks/es" },
+    { "title": "Birds Colombia — Pato real / Muscovy Duck / Cairina moschata", "url": "https://birdscolombia.com/2018/06/25/pato-real-muscovy-duck-cairina-moschata/" },
+    { "title": "Agroproductividad — Especies criadas en traspatios rurales de Campeche", "url": "https://biblat.unam.mx/hevila/Agroproductividad/2015/vol8/no4/5.pdf" },
+    { "title": "SENASICA — Reporta Agricultura caso de influenza aviar AH5N1 en aves silvestres", "url": "https://www.gob.mx/senasica/articulos/reporta-agricultura-caso-de-influenza-aviar-ah5n1-en-aves-silvestres-317103" },
+    { "title": "SENASICA — Unidos para mantener estatus de país libre de influenza aviar AH5N1", "url": "https://www.gob.mx/senasica/articulos/unidos-para-mantener-estatus-de-pais-libre-de-influenza-aviar-ah5n1" }
+  ]
+}

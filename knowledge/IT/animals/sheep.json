@@ -1,0 +1,19 @@
+{
+  "country": "IT",
+  "id": "sheep",
+  "highlights": [
+    { "pt": "Mesmo poucas ovelhas precisam de registro na BDN e identificação eletrônica (bolo ou brinco eletrônico).", "en": "Even a few sheep need BDN registration and electronic ID (rumen bolus or electronic ear tag)." },
+    { "pt": "A vacinação contra língua azul é definida pela sua Região: confirme a campanha com a ASL todo ano.", "en": "Bluetongue vaccination is set by your Region: check the campaign with the local ASL every year." },
+    { "pt": "Prefira carneiro com genótipo ARR, resistente à scrapie, como no plano nacional de erradicação.", "en": "Choose an ARR-genotype ram, resistant to scrapie, as in the national eradication plan." },
+    { "pt": "Abate em casa para consumo próprio é possível, com limites regionais e registro na BDN em até 7 dias.", "en": "Home slaughter for own use is allowed, with regional limits and BDN recording within 7 days." },
+    { "pt": "Raças leiteiras locais como Sarda e Comisana são a base do pecorino.", "en": "Local dairy breeds such as Sarda and Comisana are the backbone of pecorino cheese." }
+  ],
+  "breeds": ["Sarda", "Comisana", "Bergamasca", "Lacaune"],
+  "sources": [
+    { "title": "Asso.Na.Pa — Comunicato Agriumbria 2024", "url": "https://www.assonapa.it/public/news-file/COMUNICATO%20STAMPA%20ASSONAPA%20-%20Agriumbria%202024_202404091453210.pdf" },
+    { "title": "Regione Piemonte — DGR 10/03/2025 vaccinazione Blue Tongue BTV-8", "url": "https://www.regione.piemonte.it/governo/bollettino/abbonati/2025/11/attach/dgr_00867_1050_10032025.pdf" },
+    { "title": "IZS — DM 25 novembre 2015 sull'eradicazione della scrapie classica ovina", "url": "https://www.izs.it/IZS/Engine/RAServeFile.php/f/Formazione_corsi_-_convegni/2016/Corso_EST_e_uso_dei_sistemi_informativi_nazionali_veterinari/Perrotta_DM_25_novembre_2015_sull_eradicazione_della_scrapie_classica_ovina.pdf" },
+    { "title": "Regione Emilia-Romagna — Macellazioni per il consumo domestico privato", "url": "https://bur.regione.emilia-romagna.it/area-bollettini/bollettini-in-lavorazione/dicembre-periodico-parte-seconda-2a-quindicina.2022-12-19.8299728859/disposizioni-in-materia-di-macellazioni-per-il-consumo-domestico-privato-in-regione-emilia-romagna/allegato-muf-finale.pdf" },
+    { "title": "ASL Biella — Macellazione a domicilio e autoconsumo", "url": "https://aslbi.piemonte.it/wp-content/uploads/2021/09/volantino_macellazione_a-domicilio_e_autoconsumo_svetB_aslbi.pdf" }
+  ]
+}

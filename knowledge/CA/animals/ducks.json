@@ -1,0 +1,19 @@
+{
+  "country": "CA",
+  "id": "ducks",
+  "highlights": [
+    { "pt": "Pato não está no sistema de cotas, diferente de frango, peru e ovos de galinha.", "en": "Ducks are not under supply-management quota, unlike chicken, turkey and table eggs." },
+    { "pt": "Influenza aviária é doença de notificação obrigatória ao CFIA; mantenha os patos longe de aves aquáticas silvestres na migração.", "en": "Avian influenza is reportable to the CFIA; keep ducks away from wild waterfowl during migration." },
+    { "pt": "No inverno, use bebedouro aquecido e troque a água todo dia; abaixo de zero, evite água de nado.", "en": "In winter, use heated waterers and change water daily; avoid swimming water below freezing." },
+    { "pt": "A Pekin é a raça comercial dominante no Canadá, com a indústria concentrada no Quebec.", "en": "Pekin is Canada's dominant commercial duck, with the industry centred in Quebec." },
+    { "pt": "Antibióticos medicamente importantes só com receita veterinária desde 2018.", "en": "Medically important antimicrobials require a veterinary prescription since 2018." }
+  ],
+  "breeds": ["Pekin"],
+  "sources": [
+    { "title": "Canadian Poultry Magazine — What the duck", "url": "https://www.canadianpoultrymag.com/what-the-duck-30588/" },
+    { "title": "Farms.com — Avian flu devastates Quebec duck producer", "url": "https://www.farms.com/ag-industry-news/avian-flu-devastates-quebec-duck-producer-947.aspx" },
+    { "title": "Ontario.ca — Supply management systems for eggs, poultry and dairy", "url": "https://www.ontario.ca/page/supply-management-systems-eggs-poultry-and-dairy" },
+    { "title": "Ontario Animal Health Network — General Small Flock Resources", "url": "https://www.oahn.ca/resources/general-small-flock-resources/" },
+    { "title": "Nova Scotia — Avian Influenza Fact Sheet", "url": "https://novascotia.ca/agri/programs-and-services/farm-animal-welfare/Avian-Influenza-Fact-Sheet.pdf" }
+  ]
+}

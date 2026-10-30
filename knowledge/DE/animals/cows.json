@@ -1,0 +1,19 @@
+{
+  "country": "DE",
+  "id": "cows",
+  "highlights": [
+    { "pt": "Cada bovino recebe 2 brincos idênticos em até 7 dias após nascer e tudo é comunicado ao banco HIT em 7 dias.", "en": "Every bovine gets 2 identical ear tags within 7 days of birth, and all events are reported to the HIT database within 7 days." },
+    { "pt": "Todo bezerro é testado para BVD por amostra de tecido da orelha, num programa obrigatório de erradicação.", "en": "Every calf is tested for BVD by ear-notch sample under a mandatory eradication programme." },
+    { "pt": "Registre-se no Veterinäramt e na Tierseuchenkasse antes de comprar o primeiro animal.", "en": "Register with the Veterinäramt and the Tierseuchenkasse before buying your first animal." },
+    { "pt": "Língua azul (BTV-3) voltou em 2023; vacinação é registrada no HIT e pode ser exigida para movimentar animais.", "en": "Bluetongue (BTV-3) returned in 2023; vaccination is recorded in HIT and may be required to move animals." },
+    { "pt": "Raças nativas rústicas (Rotes Höhenvieh, Murnau-Werdenfelser, Hinterwälder) são ideais para vaca-mãe com parição na primavera.", "en": "Hardy native breeds (Rotes Höhenvieh, Murnau-Werdenfelser, Hinterwälder) suit suckler herds calving in spring." }
+  ],
+  "breeds": ["Rotes Höhenvieh", "Murnau-Werdenfelser", "Hinterwälder"],
+  "sources": [
+    { "title": "GEH — Extensive Haltung und ganzjährige Freilandhaltung von Rindern", "url": "https://www.g-e-h.de/images/stories/downloadbereich/Extensive_Rinderhaltung_25_11_2019.pdf" },
+    { "title": "GEH — Rotes Höhenvieh", "url": "https://www.g-e-h.de/index.php/rassebeschreibungen/34-rassekurzbeschreibungen-rinder/74-rotes-hoehenvieh" },
+    { "title": "Landkreis Stade — Merkblatt Rinderhaltung", "url": "https://www.landkreis-stade.de/medien/dokumente/merkblatt_rinderhaltung.pdf" },
+    { "title": "Landkreis Nordhausen — Merkblatt Rinderhaltung", "url": "https://landkreis-nordhausen.de/files/landkreis-nordhausen/uploads/veterinaeramt/nutztiere/rind/merkblatt-rinderhaltung.pdf" },
+    { "title": "Kreis Hersfeld-Rotenburg — Allgemeinverfügung Blauzungenkrankheit", "url": "https://hef-rof.de/leben-in-hef-rof/gesundheit-mensch-tier/veterinaerwesen-verbraucherschutz/allgemeinverfuegung-bt-homepage.pdf?cid=85j" }
+  ]
+}

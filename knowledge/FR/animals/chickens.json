@@ -1,0 +1,18 @@
+{
+  "country": "FR",
+  "id": "chickens",
+  "highlights": [
+    { "pt": "Declare suas galinhas no recenseamento oficial (Mes démarches ou mairie), mesmo num quintal sem venda.", "en": "Register your hens in the official keeper census (Mes démarches or the town hall), even for a non-commercial backyard flock." },
+    { "pt": "No outono e inverno, o risco de gripe aviária pode subir para \"élevé\": quintais com menos de 50 aves precisam então prender as aves ou cobrir o cercado com rede.", "en": "In autumn and winter the bird flu risk level may go to \"high\": backyards with fewer than 50 birds must then shut the birds in or cover the run with netting." },
+    { "pt": "Mortes anormais de aves devem ser avisadas ao veterinário ou à DDPP.", "en": "Abnormal bird deaths must be reported to a vet or the DDPP." },
+    { "pt": "Raças patrimoniais como a Poule de Bresse (AOP) são criadas em percurso com capim, de pelo menos 10 m² por ave.", "en": "Heritage breeds like the Bresse hen (PDO) are raised on grass runs of at least 10 m² per bird." },
+    { "pt": "Na UE, antibióticos para animais só com receita veterinária.", "en": "In the EU, antibiotics for animals require a veterinary prescription." }
+  ],
+  "breeds": ["Poule de Bresse", "Bourbonnaise", "Marans", "Gauloise dorée", "Faverolles"],
+  "sources": [
+    { "title": "Ministère de l'Agriculture — Influenza aviaire : mesures de biosécurité (professionnels et particuliers)", "url": "https://agriculture.gouv.fr/influenza-aviaire-les-mesures-de-biosecurite-pour-les-operateurs-professionnels-et-les-particuliers" },
+    { "title": "Ministère de l'Agriculture — Niveau de risque « élevé »", "url": "https://agriculture.gouv.fr/influenza-aviaire-la-france-place-son-territoire-en-niveau-de-risque-eleve-pour-renforcer-la" },
+    { "title": "Réussir — Grippe aviaire : niveau de risque abaissé à négligeable", "url": "https://www.reussir.fr/grippe-aviaire-le-niveau-de-risque-est-abaisse-negligeable" },
+    { "title": "Publication Volaille de Bresse (developpement-durable.gouv.fr)", "url": "https://webissimo-ide.developpement-durable.gouv.fr/IMG/pdf/228_publication_cle2ce583.pdf" }
+  ]
+}

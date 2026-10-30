@@ -1,0 +1,20 @@
+{
+  "country": "ES",
+  "id": "chickens",
+  "highlights": [
+    { "pt": "Mesmo poucas galinhas para consumo próprio precisam ser registradas no REGA da sua comunidade autônoma (RD 637/2021).", "en": "Even a few backyard hens for home use must be registered in REGA with your autonomous community (RD 637/2021)." },
+    { "pt": "Autoconsumo é até cerca de 30 poedeiras, sem vender ovos nem carne, e com um veterinário de referência indicado.", "en": "Home-use flocks are up to about 30 layers, with no sale of eggs or meat and a designated reference vet." },
+    { "pt": "No outono-inverno o governo pode mandar confinar as aves por gripe aviária: tenha um espaço coberto.", "en": "In autumn-winter the government may order poultry kept indoors due to bird flu: have a covered area ready." },
+    { "pt": "Prefira raças autóctones ameaçadas, como a Castellana Negra ou a Pita Pinta.", "en": "Consider endangered native breeds such as Castellana Negra or Pita Pinta." },
+    { "pt": "Antibióticos só com receita veterinária; o veterinário registra a receita no sistema PRESVET.", "en": "Antibiotics only with a vet prescription; the vet reports it to the PRESVET system." }
+  ],
+  "breeds": ["Castellana Negra", "Pita Pinta"],
+  "sources": [
+    { "title": "MAPA — Catálogo de razas: Gallina Castellana Negra", "url": "https://www.mapa.gob.es/ca/ganaderia/temas/zootecnia/razas-ganaderas/razas/catalogo-razas/aviar/gallina-castellana-negra" },
+    { "title": "MAPA — Logotipo raza autóctona Gallina Castellana Negra", "url": "https://www.mapa.gob.es/eu/ganaderia/temas/zootecnia/razas-ganaderas/arca/logotipo-gallina_castellana_negra" },
+    { "title": "BOE — Real Decreto 637/2021", "url": "https://boe.es/boe/dias/2021/07/28/pdfs/BOE-A-2021-12609.pdf" },
+    { "title": "Maldita.es — Multas por gallinas de autoconsumo sin registrar", "url": "https://maldita.es/clima/20250325/multas-3000-euros-gallinas/" },
+    { "title": "Euronews — España levanta el confinamiento de aves de corral", "url": "https://es.euronews.com/salud/2026/04/16/amenaza-gripe-aviar-espana-levanta-confinamiento-aves-corral" },
+    { "title": "MAPA — PRESVET", "url": "https://www.mapa.gob.es/es/ganaderia/temas/sanidad-animal-higiene-ganadera/Higiene-de-la-produccion-primaria-ganadera/medicamentos-veterinarios/Presvet.aspx" }
+  ]
+}

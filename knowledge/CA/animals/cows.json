@@ -1,0 +1,20 @@
+{
+  "country": "CA",
+  "id": "cows",
+  "highlights": [
+    { "pt": "Todo bovino de corte precisa de brinco RFID amarelo aprovado pela CCIA antes de sair da fazenda.", "en": "All beef cattle need a yellow CCIA-approved RFID tag before leaving the farm." },
+    { "pt": "Vaca leiteira usa brinco duplo NLID e as movimentações vão para o DairyTrace; o leite comercial exige cota.", "en": "Dairy cattle are double-tagged (NLID) with movements reported to DairyTrace; commercial milk requires quota." },
+    { "pt": "Vender leite cru é proibido em todo o Canadá.", "en": "Selling raw milk is illegal throughout Canada." },
+    { "pt": "No frio, aumente a energia da dieta e ofereça quebra-vento; neve só substitui a água em casos limitados e com reserva de água.", "en": "In cold weather, raise dietary energy and provide windbreaks; snow can replace water only in limited cases, with backup water." },
+    { "pt": "Antibióticos medicamente importantes só com receita veterinária desde dezembro de 2018.", "en": "Medically important antimicrobials require a veterinary prescription since December 2018." }
+  ],
+  "breeds": ["Angus", "Simmental", "Charolais", "Hereford", "Holstein"],
+  "sources": [
+    { "title": "Alberta Agriculture — Best Practices for RFID Ear Tag Application", "url": "https://www1.agriculture.alberta.ca/$Department/deptdocs.nsf/all/agdex13125" },
+    { "title": "Dairy Farmers of Canada — proAction traceability", "url": "https://www.dairyfarmers.ca/proaction/how-it-works/traceability" },
+    { "title": "Alberta Agriculture — Minimizing Winter Cold Stress", "url": "https://www1.agric.gov.ab.ca/$department/deptdocs.nsf/ba3468a2a8681f69872569d60073fde1/eb26aab6419d221887256bbc0060bd0a/$FILE/Minimizing_Winter_Cold_Stress.pdf" },
+    { "title": "AAFC — Beef registrations in Canada", "url": "https://agriculture.canada.ca/en/sector/animal-industry/canadian-dairy-information-centre/publications/statistics-canadas-animal-genetics/beef-registrations-canada" },
+    { "title": "Health Canada — Statement about drinking raw milk", "url": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/information-product/statement-about-drinking-milk.html" },
+    { "title": "Beef Cattle Research Council — Prescription required for livestock antibiotics (Dec 2018)", "url": "https://www.beefresearch.ca/blog/prescription-required-for-livestock-cattle-antibiotics-december-2018/" }
+  ]
+}

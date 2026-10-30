@@ -1,0 +1,19 @@
+{
+  "country": "CA",
+  "id": "goats",
+  "highlights": [
+    { "pt": "Ontário produz a maior parte do leite de cabra do Canadá, com predominância da Saanen; na carne domina a Boer.", "en": "Ontario produces most of Canada's goat milk, mostly from Saanens; Boer dominates meat production." },
+    { "pt": "A identificação de cabras ainda é voluntária (brincos da CNGF), mas o CFIA está tornando obrigatória; confira antes de vender.", "en": "Goat ID is still voluntary (CNGF tags), but the CFIA is making it mandatory; check before selling." },
+    { "pt": "Vender leite cru é proibido no Canadá; em Ontário, o leite comercial precisa de registro Grade A.", "en": "Selling raw milk is illegal in Canada; in Ontario commercial goat milk needs Grade A registration." },
+    { "pt": "Scrapie é doença de notificação obrigatória e o CFIA testa cabras com mais de 12 meses no abate.", "en": "Scrapie is reportable, and the CFIA tests goats over 12 months at slaughter." },
+    { "pt": "Siga o código de práticas da NFACC para cabras (2022); antibióticos só com receita.", "en": "Follow the 2022 NFACC goat Code of Practice; antibiotics by prescription only." }
+  ],
+  "breeds": ["Saanen", "Alpine", "Nubian", "Toggenburg", "LaMancha", "Boer", "Nigerian Dwarf"],
+  "sources": [
+    { "title": "Ontario.ca — Dairy goat farming", "url": "https://www.ontario.ca/page/dairy-goat-farming" },
+    { "title": "AAFC — Goat registrations in Canada", "url": "https://agriculture.canada.ca/en/sector/animal-industry/canadian-dairy-information-centre/publications/statistics-canadas-animal-genetics/goat-registrations-canada" },
+    { "title": "NFACC — Code of Practice for the Care and Handling of Goats", "url": "https://www.nfacc.ca/goats-code-of-practice" },
+    { "title": "Farmtario — Ontario goat producers and traceability regulations", "url": "https://farmtario.com/livestock/ontario-goat-producers-traceability-regulations-cfia/" },
+    { "title": "CFIA — Scrapie fact sheet", "url": "https://inspection.canada.ca/en/animal-health/terrestrial-animals/diseases/reportable/scrapie/fact-sheet" }
+  ]
+}

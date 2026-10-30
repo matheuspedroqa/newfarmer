@@ -1,0 +1,20 @@
+{
+  "country": "BR",
+  "id": "cows",
+  "highlights": [
+    { "pt": "Desde 2025 o Brasil é livre de febre aftosa sem vacinação: não vacine, mas avise o serviço veterinário estadual de qualquer suspeita.", "en": "Since 2025 Brazil is foot-and-mouth disease free without vaccination: do not vaccinate, but report any suspected case to the state veterinary service." },
+    { "pt": "É obrigatório vacinar contra brucelose todas as bezerras de 3 a 8 meses (PNCEBT), com veterinário cadastrado.", "en": "Brucellosis vaccination of all heifer calves aged 3 to 8 months is mandatory (PNCEBT) and must be done by a registered vet." },
+    { "pt": "Toda movimentação de bovinos exige GTA, e a propriedade precisa estar cadastrada no órgão estadual de defesa.", "en": "Every cattle movement requires a GTA (animal transit permit), and the farm must be registered with the state animal health agency." },
+    { "pt": "A identificação individual com brinco ou botton eletrônico (PNIB) será exigida para o trânsito a partir de 2033.", "en": "Individual electronic ear-tag or button identification (PNIB) will be required for movement from 2033." },
+    { "pt": "Escolha a raça pelo bioma (Nelore e Girolando no calor, taurinas no Sul) e planeje forragem para a seca de maio a setembro.", "en": "Pick the breed for your biome (Nelore and Girolando in the heat, taurine breeds in the South) and plan forage for the May–September dry season." }
+  ],
+  "breeds": ["Nelore", "Girolando", "Gir Leiteiro", "Guzerá", "Curraleiro Pé-duro", "Pantaneiro", "Crioulo Lageano", "Caracu", "Holandesa", "Jersey"],
+  "sources": [
+    { "title": "CNA — Aftosa: perguntas e respostas sobre o novo status sanitário do Brasil", "url": "https://cnabrasil.org.br/noticias/aftosa-perguntas-e-respostas-sobre-o-novo-status-sanitario-do-brasil" },
+    { "title": "MAPA — PNCEBT, medidas sanitárias", "url": "https://www.gov.br/agricultura/pt-br/assuntos/sanidade-animal-e-vegetal/saude-animal/programas-de-saude-animal/pncebt/tb-4-medidas-sanitarias.pdf" },
+    { "title": "MAPA — Plano Nacional de Identificação Individual de Bovinos e Búfalos (PNIB)", "url": "https://www.gov.br/agricultura/pt-br/assuntos/sanidade-animal-e-vegetal/saude-animal/rastreabilidade-animal/pnib-1/PNIBVersofinalDEFESOELEITORAL.pdf" },
+    { "title": "CNA — Cronograma da identificação individual obrigatória de bovinos e bubalinos", "url": "https://cnabrasil.org.br/noticias/governo-federal-define-cronograma-para-identificacao-individual-obrigatoria-de-bovinos-e-bubalinos" },
+    { "title": "Embrapa — Bovinos locais brasileiros (2021)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1134958/1/Bovinos-locais-brasileiros-2021.pdf" },
+    { "title": "Agência Minas — Raiva dos herbívoros", "url": "https://agenciaminas.mg.gov.br/news/pdf/130170.pdf" }
+  ]
+}

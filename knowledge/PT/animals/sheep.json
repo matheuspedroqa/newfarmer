@@ -1,0 +1,19 @@
+{
+  "country": "PT",
+  "id": "sheep",
+  "highlights": [
+    { "pt": "Até 6 ovelhas/cabras é 'detenção caseira', com registo obrigatório no SNIRA (DGAV).", "en": "Up to 6 sheep/goats is 'home keeping', with mandatory SNIRA (DGAV) registration." },
+    { "pt": "Cada ovelha leva brinco e identificação eletrónica (bolo ou brinco eletrónico) até aos 6 meses (9 em extensivo).", "en": "Each sheep needs an ear tag plus electronic ID (bolus or e-tag) by 6 months (9 if extensive)." },
+    { "pt": "Siga o edital da DGAV sobre língua azul: a vacinação contra alguns serótipos é obrigatória e há vacinas gratuitas.", "en": "Follow DGAV's bluetongue notice: vaccination against some serotypes is mandatory and some vaccines are free." },
+    { "pt": "Pasto verde de outono a primavera e seca no verão: guarde feno e dê sombra e água.", "en": "Green pasture from autumn to spring, drought in summer: store hay and provide shade and water." },
+    { "pt": "Raças autóctones como a Serra da Estrela dão queijo DOP e podem ter apoio do PEPAC.", "en": "Native breeds like Serra da Estrela produce PDO cheese and may receive CAP (PEPAC) support." }
+  ],
+  "breeds": ["Serra da Estrela", "Churra da Terra Quente", "Merina Preta", "Merina Branca", "Churra Galega Bragançana", "Campaniça", "Bordaleira de Entre Douro e Minho", "Merina da Beira Baixa", "Saloia"],
+  "sources": [
+    { "title": "Agroportal — Portugal tem 61 raças autóctones (Catálogo DGAV/CAP)", "url": "https://www.agroportal.pt/portugal-tem-61-racas-autoctones-e-ovinos-serra-da-estrela-estao-em-maior-numero/" },
+    { "title": "Agroportal — Procedimento para o Registo de Detenção Caseira de animais (DGAV)", "url": "https://www.agroportal.pt/?p=741849" },
+    { "title": "ISA Lisboa — Ovinos: identificação e ciclos de produção", "url": "https://fenix.isa.ulisboa.pt/downloadFile/844497944595295/MACA%20Ovinos%20Identificacao%20e%20Ciclos%20de%20Producao.pdf" },
+    { "title": "CAP — Edital 83 Febre Catarral Ovina (DGAV, 2024)", "url": "https://cap.pt/storage/app/media/2024/Edital%2083%20FEBRE%20CATARRAL%20OVINA%2030outubro2024.pdf" },
+    { "title": "RR — Língua azul: mais de 1.800 explorações afetadas e 37 mil ovinos mortos", "url": "https://rr.pt/noticia/pais/2025/01/07/lingua-azul-mais-de-1800-exploracoes-afetadas-e-37-mil-ovinos-mortos/408665/" }
+  ]
+}

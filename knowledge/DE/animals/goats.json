@@ -1,0 +1,19 @@
+{
+  "country": "DE",
+  "id": "goats",
+  "highlights": [
+    { "pt": "Mesmo como hobby, registre as cabras no Veterinäramt, no banco HIT e na Tierseuchenkasse.", "en": "Even as a hobby, register goats with the Veterinäramt, the HIT database and the Tierseuchenkasse." },
+    { "pt": "Cada cabra leva 2 marcas, uma eletrônica, até os 9 meses ou antes de sair do rebanho.", "en": "Each goat needs 2 identifiers, one electronic, by 9 months of age or before leaving the herd." },
+    { "pt": "Compre de rebanhos certificados em programas estaduais contra CAE e pseudotuberculose.", "en": "Buy from herds certified under state CAE and pseudotuberculosis programmes." },
+    { "pt": "Lobo presente em quase todo o país: cerca elétrica de no mínimo 90 cm com proteção contra escalada.", "en": "Wolves are almost everywhere: electric fence of at least 90 cm with anti-climb protection." },
+    { "pt": "Raças nativas: Bunte Deutsche Edelziege (leite) e a rústica Thüringer Wald Ziege.", "en": "Native breeds: Bunte Deutsche Edelziege (dairy) and the hardy Thüringer Wald Ziege." }
+  ],
+  "breeds": ["Bunte Deutsche Edelziege", "Thüringer Wald Ziege", "Harzer Ziege"],
+  "sources": [
+    { "title": "GEH — Thüringer Wald Ziege", "url": "https://www.g-e-h.de/index.php/rassebeschreibungen/47-ziegen/80-thueringer-wald-ziege" },
+    { "title": "GEH — Harzer Ziege", "url": "https://g-e-h.de/index.php/rassebeschreibungen/47-ziegen/78-harzziege" },
+    { "title": "BZL praxis-agrar — Herdenschutzzäune für Schafe und Ziegen", "url": "https://www.praxis-agrar.de/bundeszentrum-weidetiere-wolf/wissen/fachartikel/herdenschutzzaeune-schafe-ziegen" },
+    { "title": "Thüringen — Tiergesundheitsprogramm Schafe und Ziegen", "url": "https://soziales.thueringen.de/fileadmin/user_upload/Veterinaerwesen/Dateien/Tiergesundheit/Landesprogramme_Tiergesundheit/konsolidierte_fassung_tg-programm_schafe_ziegen.pdf" },
+    { "title": "Berlin Neukölln — Nutztierhaltung", "url": "https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/ordnungsamt/veterinaer-und-lebensmittelaufsicht/nutztierhaltung-1402070.php" }
+  ]
+}

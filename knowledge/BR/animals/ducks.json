@@ -1,0 +1,19 @@
+{
+  "country": "BR",
+  "id": "ducks",
+  "highlights": [
+    { "pt": "O pato regional brasileiro (Cairina moschata) é rústico, choca bem e aguenta calor; é o pato do pato no tucupi.", "en": "Brazil's regional duck (Cairina moschata, Muscovy) is hardy, broods well and copes with heat; it is the duck used in pato no tucupi." },
+    { "pt": "No Pará há grande demanda no Círio de Nazaré (outubro): um lote leva cerca de 120 dias, então comece em maio ou junho.", "en": "In Pará demand peaks at the Círio de Nazaré festival (October): a batch takes about 120 days, so start in May or June." },
+    { "pt": "Aves aquáticas silvestres carregam a influenza aviária: não deixe seus patos dividirem lagoa com aves silvestres e separe-os das galinhas.", "en": "Wild waterfowl carry avian influenza: keep your ducks off ponds shared with wild birds and separate them from chickens." },
+    { "pt": "Mortes súbitas ou sinais nervosos são de notificação imediata ao serviço veterinário estadual.", "en": "Sudden deaths or nervous signs must be reported immediately to the state veterinary service." },
+    { "pt": "Transporte de patos exige GTA, e o pato-do-mato silvestre não pode ser capturado.", "en": "Moving ducks requires a GTA permit, and wild Muscovy ducks may not be captured." }
+  ],
+  "breeds": ["Pato doméstico/regional (Cairina moschata)", "Mulard", "Pequim (Pekin)", "Khaki Campbell", "Corredor Indiano"],
+  "sources": [
+    { "title": "DOL — Pato está cada vez mais raro nas mesas", "url": "https://dol.com.br/noticias/agropara/672775/pato-esta-cada-vez-mais-raro-nas-mesas" },
+    { "title": "MAPA/SDA — Plano de contingência para influenza aviária e doença de Newcastle", "url": "https://wikisda.agricultura.gov.br/pt-br/Sa%C3%BAde-Animal/plano-de-contingencia-para-influenza-aviaria-e-doenca-de-newcastle" },
+    { "title": "Governo do RJ — Influenza aviária 2025", "url": "https://www.rj.gov.br/agricultura/sites/default/files/2025-04/Influenza%20Avia%CC%81ria%202025.pdf" },
+    { "title": "Defesa Agropecuária SP — Card influenza aviária", "url": "https://www.defesa.agricultura.sp.gov.br/arquivos/educacao-sanitaria/cards/link_doencas_influenza_aviaria.pdf" },
+    { "title": "Agrodefesa — IN MAPA 56/2007 consolidada", "url": "https://goias.gov.br/agrodefesa/wp-content/uploads/sites/49/2014/09/in-56-2007-consolidada-com-in-18-2017-maio-0a6.pdf" }
+  ]
+}

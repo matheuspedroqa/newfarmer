@@ -1,0 +1,17 @@
+{
+  "country": "FR",
+  "id": "ducks",
+  "highlights": [
+    { "pt": "Patos são os mais vigiados para a gripe aviária: no outono e inverno, tenha abrigo ou rede prontos para o confinamento obrigatório.", "en": "Ducks are the most closely watched species for bird flu: in autumn and winter keep a shelter or netting ready for mandatory confinement." },
+    { "pt": "A vacinação contra a gripe aviária é obrigatória só em criações comerciais com mais de 250 patos. O quintal fica fora, mas segue a biossegurança.", "en": "Bird flu vaccination is mandatory only for commercial farms with more than 250 ducks; backyard flocks are exempt but must follow biosecurity rules." },
+    { "pt": "Proteja água e ração das aves selvagens e avise ao veterinário ou à DDPP qualquer mortalidade anormal.", "en": "Keep water and feed away from wild birds and report any abnormal deaths to a vet or the DDPP." },
+    { "pt": "O mulard do foie gras é híbrido estéril: para criar em casa, prefira Barbarie, Rouen ou Challans.", "en": "The foie gras mulard is a sterile hybrid; for home breeding choose Muscovy (Barbarie), Rouen or Challans." }
+  ],
+  "breeds": ["Canard de Barbarie", "Canard de Rouen", "Pékin", "Canard de Challans", "Mulard (hybride)"],
+  "sources": [
+    { "title": "Ministère de l'Agriculture — Niveau de risque « élevé »", "url": "https://agriculture.gouv.fr/influenza-aviaire-la-france-place-son-territoire-en-niveau-de-risque-eleve-pour-renforcer-la" },
+    { "title": "Préfecture du Jura — Vaccination IAHP canard", "url": "https://www.jura.gouv.fr/index.php/contenu/telechargement/27849/216686/file/20231011_Vaccination%20IAHP%20canard.pdf" },
+    { "title": "Chambre d'agriculture des Landes — FAQ vaccination IAHP", "url": "https://landes.chambre-agriculture.fr/fileadmin/user_upload/Nouvelle-Aquitaine/101_Inst-Landes/Documents/techniques_et_innovations/PA/poulets_palmipedes/2023_09_14_FAQ_eleveurs_VaccinationIAHP.pdf" },
+    { "title": "Productions animales (INRAE) — canard mulard", "url": "https://productions-animales.org/article/download/3435/11070/27075" }
+  ]
+}

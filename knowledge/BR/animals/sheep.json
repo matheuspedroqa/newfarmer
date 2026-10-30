@@ -1,0 +1,19 @@
+{
+  "country": "BR",
+  "id": "sheep",
+  "highlights": [
+    { "pt": "No Nordeste e no calor, prefira raças deslanadas nacionais (Santa Inês, Morada Nova, Somalis); no Pampa, lanadas como a Crioula Lanada.", "en": "In the Northeast and hot areas choose Brazilian hair breeds (Santa Inês, Morada Nova, Somalis); in the Pampa, wool breeds such as Crioula Lanada." },
+    { "pt": "O Haemonchus é mais de 80% da verminose: use o FAMACHA e vermifugue só os animais anêmicos.", "en": "Haemonchus makes up over 80% of the worm burden: use FAMACHA and deworm only anaemic animals." },
+    { "pt": "Cadastre a criação no órgão estadual (PNSCO, IN 87/2004) e tire GTA para todo trânsito de ovinos.", "en": "Register your flock with the state agency (PNSCO, IN 87/2004) and get a GTA permit for every sheep movement." },
+    { "pt": "Scrapie e outras doenças são de notificação obrigatória; no RS a epididimite ovina (B. ovis) também.", "en": "Scrapie and other diseases are notifiable; in Rio Grande do Sul so is ovine epididymitis (B. ovis)." },
+    { "pt": "Use sal mineral próprio para ovinos: o de bovinos pode ter cobre demais.", "en": "Use sheep-specific mineral salt: cattle mineral may contain too much copper." }
+  ],
+  "breeds": ["Santa Inês", "Morada Nova", "Somalis Brasileira", "Crioula Lanada", "Dorper", "Texel", "Corriedale", "Ideal", "Suffolk"],
+  "sources": [
+    { "title": "Agrodefesa (GO) — Programa Estadual de Sanidade dos Caprinos e Ovinos", "url": "https://goias.gov.br/agrodefesa/programa-estadual-de-sanidade/" },
+    { "title": "Legisweb — IN SEAPI (RS) nº 8/2025, epididimite ovina", "url": "https://www.legisweb.com.br/legislacao/?id=483591" },
+    { "title": "Embrapa Pecuária Sul — Uma reavaliação dos ovinos Crioulos Lanados sob a ótica de sua conservação (2015)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1033550/1/DT141online.pdf" },
+    { "title": "Embrapa — Verminose em pequenos ruminantes (cartilha 2021)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1134813/1/VerminosePequenosRuminantesCartilha2021.pdf" },
+    { "title": "Embrapa Caprinos — Contribuição ao melhoramento genético (2006)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/996604/1/2006contribuicaoEmbrapaCaprinosMelhorament.pdf" }
+  ]
+}

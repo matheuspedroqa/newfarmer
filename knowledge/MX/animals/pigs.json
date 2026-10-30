@@ -1,0 +1,18 @@
+{
+  "country": "MX",
+  "id": "pigs",
+  "highlights": [
+    { "pt": "Cerca de um terço dos porcos do México vive em quintais (traspatio), soltos e com complemento caseiro.", "en": "About one third of Mexico's pigs live in backyards (traspatio), free ranging with home-supplied feed." },
+    { "pt": "O cerdo pelón mexicano (Yucatán) é uma raça criolla rústica, ameaçada e com mercado gourmet.", "en": "The Mexican hairless pig (Yucatán) is a hardy, endangered criollo breed with a growing gourmet market." },
+    { "pt": "O SENASICA pede para não alimentar porcos com restos de comida, para evitar a peste suína africana.", "en": "SENASICA asks keepers not to feed food waste to pigs, to keep African swine fever out." },
+    { "pt": "Mortes súbitas, febre ou vômito em porcos devem ser avisados ao SENASICA (800 751 2100).", "en": "Report sudden deaths, fever or vomiting in pigs to SENASICA (800 751 2100)." }
+  ],
+  "breeds": ["Cerdo pelón mexicano (Virich)", "Cerdo criollo", "Cruzamentos comerciais"],
+  "sources": [
+    { "title": "FAO — Porcicultura intensiva y medio ambiente en México", "url": "https://www.fao.org/4/x1700t/x1700t03.htm" },
+    { "title": "UNACH — Conservación y uso sustentable del cerdo pelón", "url": "https://www.dgip.unach.mx/images/pdf-REVISTA-QUEHACERCIENTIFICO/2016-ener-jun/Conservacion_y_uso_sustentable_del_cerdo_pelon.pdf" },
+    { "title": "SENASICA — Aplica Sader acciones y medidas para prevenir la entrada de la Peste Porcina Africana", "url": "https://www.gob.mx/senasica/prensa/aplica-sader-acciones-y-medidas-para-prevenir-la-entrada-de-la-peste-porcina-africana-a-mexico" },
+    { "title": "DOF — Acuerdo de medidas zoosanitarias para prevenir la peste porcina africana", "url": "https://sidof.segob.gob.mx/notas/docFuente/5568037" },
+    { "title": "Slow Food — Maiale glabro dello Yucatán", "url": "https://www.fondazioneslowfood.com/it/presidi-slow-food/maiale-glabro-dello-yucatan/" }
+  ]
+}

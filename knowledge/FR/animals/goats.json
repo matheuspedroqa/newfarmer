@@ -1,0 +1,17 @@
+{
+  "country": "FR",
+  "id": "goats",
+  "highlights": [
+    { "pt": "Até cabras de estimação exigem declaração no EDE, dois marcadores (um eletrônico) antes dos 6 meses e recenseamento anual.", "en": "Even pet goats require EDE registration, two identifiers (one electronic) before 6 months of age, and an annual census." },
+    { "pt": "A brucelose tem profilaxia obrigatória. Pequenos detentores podem pedir a derrogação \"petit détenteur\" conforme o arrêté do departamento.", "en": "Brucellosis screening is compulsory; small keepers may apply for the \"petit détenteur\" exemption depending on the departmental order." },
+    { "pt": "Para vender queijo de cabra fermier, declare a atividade à DDPP e siga as regras de higiene do leite cru.", "en": "To sell farmhouse goat cheese, declare the activity to the DDPP and follow raw-milk hygiene rules." },
+    { "pt": "Além da Alpine e da Saanen, a França reconhece 13 raças locais, como Poitevine, Rove e Chèvre des Pyrénées.", "en": "Besides Alpine and Saanen, France recognises 13 local breeds such as Poitevine, Rove and Pyrenean goat." }
+  ],
+  "breeds": ["Alpine", "Saanen", "Poitevine", "Rove", "Chèvre des Pyrénées", "Chèvre des Fossés", "Provençale"],
+  "sources": [
+    { "title": "Chambres d'agriculture — Identification des animaux", "url": "https://chambres-agriculture.fr/sinformer/nos-ressources/elevage/identification" },
+    { "title": "Préfecture du Finistère — Information création cheptel ovins caprins", "url": "https://www.finistere.gouv.fr/index.php/contenu/telechargement/28254/218704/file/Information%20cr%C3%A9ation%20cheptel%20Ovins%20Caprins.pdf" },
+    { "title": "Capgènes — La race Poitevine", "url": "https://www.capgenes.com/wp-content/uploads/2018/04/la_race_poitevine_FR.pdf" },
+    { "title": "Réussir — Tour de France des races caprines de pays", "url": "https://www.reussir.fr/chevre/tour-de-france-des-races-caprines-de-pays" }
+  ]
+}

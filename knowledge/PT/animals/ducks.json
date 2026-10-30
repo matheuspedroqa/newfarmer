@@ -1,0 +1,17 @@
+{
+  "country": "PT",
+  "id": "ducks",
+  "highlights": [
+    { "pt": "Patos contam como aves de capoeira: a capoeira caseira (até 100 aves) tem de ser registada na DGAV.", "en": "Ducks count as poultry: a backyard flock (up to 100 birds) must be registered with DGAV." },
+    { "pt": "No outono/inverno a DGAV costuma mandar confinar as aves por causa da gripe aviária; tenha abrigo coberto com água.", "en": "In autumn/winter DGAV often orders birds kept indoors due to avian flu; have a covered shelter with water." },
+    { "pt": "Evite lagos abertos onde patos selvagens pousam, sobretudo perto de estuários e rias.", "en": "Avoid open ponds where wild ducks land, especially near estuaries and lagoons." },
+    { "pt": "Não há raça autóctone de pato; os mais comuns são pato-mudo, Pequim e Corredor Indiano.", "en": "There is no native Portuguese duck breed; the most common are Muscovy (pato-mudo), Pekin and Indian Runner." }
+  ],
+  "breeds": ["Pato-mudo", "Pequim", "Corredor Indiano"],
+  "sources": [
+    { "title": "Agroportal — Procedimento para o Registo de Detenção Caseira de animais (DGAV)", "url": "https://www.agroportal.pt/?p=741849" },
+    { "title": "Observador — Registo de capoeiras de aves é obrigatório mas nem sempre cumprido", "url": "https://observador.pt/2025/01/29/registo-de-capoeiras-de-aves-e-obrigatorio-mas-nem-sempre-cumprido/" },
+    { "title": "RR — Gripe das aves já matou mais de mil patos de engorda em Benavente", "url": "https://rr.pt/noticia/pais/2025/09/03/gripe-das-aves-ja-matou-mais-de-mil-patos-de-engorda-em-benavente/438391/" },
+    { "title": "Agroportal — Portugal tem 61 raças autóctones (Catálogo DGAV/CAP)", "url": "https://www.agroportal.pt/portugal-tem-61-racas-autoctones-e-ovinos-serra-da-estrela-estao-em-maior-numero/" }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "country": "US",
+  "id": "chickens",
+  "highlights": [
+    { "pt": "Antes de comprar, confira as regras da sua cidade e do condomínio (HOA): muitas limitam o número de galinhas, proíbem galos e exigem licença e distância das divisas.", "en": "Before buying, check your city code and HOA rules: many cap flock size, ban roosters and require a permit and setbacks." },
+    { "pt": "Compre pintinhos de incubatórios do NPIP e inscreva seu plantel no NPIP estadual se for vender aves, ovos férteis ou levar a exposições.", "en": "Buy chicks from NPIP hatcheries and enroll your flock in your state's NPIP if you sell birds, hatching eggs or show them." },
+    { "pt": "Gripe aviária (HPAI) chega por aves silvestres: siga a biossegurança do USDA \"Defend the Flock\" e lave as mãos para evitar salmonela.", "en": "Bird flu (HPAI) spreads from wild birds: follow USDA \"Defend the Flock\" biosecurity and wash hands to avoid Salmonella." },
+    { "pt": "Desde junho de 2023, antibióticos para animais só com receita veterinária, inclusive para galinhas de quintal.", "en": "Since June 2023, animal antibiotics require a veterinary prescription, backyard chickens included." },
+    { "pt": "No Norte, combata a umidade do galinheiro e use bebedouro aquecido; no Sul e no Texas, garanta sombra, ventilação e água fresca.", "en": "In the North, fight coop moisture and use heated waterers; in the South and Texas, provide shade, airflow and cool water." }
+  ],
+  "breeds": ["Rhode Island Red", "Plymouth Rock (Barred Rock)", "Buff Orpington", "Wyandotte", "Australorp", "Leghorn", "Sex-link", "Cornish Cross"],
+  "sources": [
+    { "title": "MSU Extension — Suggestions for Ordinances Allowing Backyard Poultry (E3136)", "url": "https://www.canr.msu.edu/resources/suggestions_for_ordinances_allowing_backyard_poultry_by_darren_karcher_sku" },
+    { "title": "UMN Extension — Raising chickens for eggs", "url": "https://extension.umn.edu/poultry/raising-chickens-eggs" },
+    { "title": "Kentucky Dept. of Agriculture — Backyard Flock NPIP", "url": "https://kyagr.com/statevet/documents/PO_BackyardFlockNPIP.pdf" },
+    { "title": "NC Dept. of Agriculture — National Poultry Improvement Plan", "url": "https://ncagr.gov/divisions/veterinary/poultry/NPIP" },
+    { "title": "AVMA — Over-the-counter antimicrobials changing to prescription-only", "url": "https://avma.org/resources-tools/one-health/antimicrobial-use-and-antimicrobial-resistance/over-counter-antimicrobials-changing-prescription-only" },
+    { "title": "Texas A&M AgriLife — Backyard poultry producers should be wary of high temperatures", "url": "https://agrilifetoday.tamu.edu/2017/08/05/backyard-poultry-producers-should-be-wary-of-high-temperatures/" },
+    { "title": "USDA — Defend the Flock", "url": "https://www.usda.gov/node/27626" }
+  ]
+}

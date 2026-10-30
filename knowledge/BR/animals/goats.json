@@ -1,0 +1,19 @@
+{
+  "country": "BR",
+  "id": "goats",
+  "highlights": [
+    { "pt": "No semiárido, raças nativas como Moxotó e Canindé, ou mestiças com Anglo-Nubiana e Boer, aguentam melhor a seca da caatinga.", "en": "In the semi-arid Northeast, native breeds such as Moxotó and Canindé, or crosses with Anglo-Nubian and Boer, cope best with the caatinga drought." },
+    { "pt": "Contra a CAE, separe os cabritos ao nascer e dê colostro termizado (56 °C por 1 hora), com teste IDGA semestral do rebanho.", "en": "Against CAE, separate kids at birth and feed heat-treated colostrum (56 °C for 1 hour), with twice-yearly AGID testing of the herd." },
+    { "pt": "Cadastre a criação no órgão estadual (PNSCO) e tire GTA para todo transporte de caprinos.", "en": "Register your herd with the state agency (PNSCO) and get a GTA permit for every goat movement." },
+    { "pt": "Planeje a seca com palma forrageira, feno e forrageiras nativas, e use FAMACHA contra o Haemonchus nas chuvas.", "en": "Plan for the dry season with forage cactus, hay and native forages, and use FAMACHA against Haemonchus in the rains." },
+    { "pt": "Vender leite de cabra exige seguir a IN 37/2000 e ter inspeção oficial.", "en": "Selling goat milk requires following IN 37/2000 and official inspection." }
+  ],
+  "breeds": ["Moxotó", "Canindé", "Repartida", "Marota", "Gurguéia", "Anglo-Nubiana", "Boer", "Saanen", "Parda Alpina", "Toggenburg"],
+  "sources": [
+    { "title": "Embrapa Caprinos — Contribuição ao melhoramento genético (2006)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/996604/1/2006contribuicaoEmbrapaCaprinosMelhorament.pdf" },
+    { "title": "Embrapa — Prevenção e controle da artrite-encefalite caprina", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1014569/1/Prevencaoecontroleda.pdf" },
+    { "title": "Agrodefesa (GO) — Programa Estadual de Sanidade dos Caprinos e Ovinos", "url": "https://goias.gov.br/agrodefesa/programa-estadual-de-sanidade/" },
+    { "title": "IN MAPA 37/2000 — Regulamento técnico do leite de cabra", "url": "https://www-rec.franceagrimer.fr/content/download/35272/document/Leite%20de%20Cabra%20IN%2037-2000.pdf" },
+    { "title": "Embrapa — Verminose em pequenos ruminantes (cartilha 2021)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1134813/1/VerminosePequenosRuminantesCartilha2021.pdf" }
+  ]
+}

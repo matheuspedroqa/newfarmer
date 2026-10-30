@@ -1,0 +1,19 @@
+{
+  "country": "US",
+  "id": "pigs",
+  "highlights": [
+    { "pt": "O jeito mais comum de começar é comprar leitões de terminação (feeder pigs) na primavera e abatê-los no outono.", "en": "The usual way to start is buying feeder pigs in spring and finishing them for slaughter in fall." },
+    { "pt": "É crime federal dar restos de comida com carne, frango ou peixe sem licença e cozimento a 100 °C por 30 minutos; muitos estados proíbem de vez.", "en": "Feeding food waste that contains meat, poultry or fish without a license and 212 °F/30-minute cooking is illegal federally; many states ban it outright." },
+    { "pt": "Porcos ferais transmitem pseudorraiva e brucelose: use cerca dupla e mantenha seus porcos longe deles.", "en": "Feral hogs carry pseudorabies and brucellosis: use double fencing and keep your pigs away from them." },
+    { "pt": "Porco quase não sua: no verão, ofereça chafurdo de lama ou sombra com aspersão, principalmente no Sul e no Texas.", "en": "Pigs barely sweat: in summer give a mud wallow or shade with sprinklers, especially in the South and Texas." },
+    { "pt": "Antibiótico na ração exige VFD e, desde 2023, todo antibiótico para animais exige receita veterinária.", "en": "Antibiotics in feed need a VFD and, since 2023, all animal antibiotics need a veterinary prescription." }
+  ],
+  "breeds": ["Yorkshire", "Duroc", "Hampshire", "Berkshire", "Landrace"],
+  "sources": [
+    { "title": "Oregon State Extension — Care and Management of New Feeder Pigs (EM 9271)", "url": "https://extension.oregonstate.edu/catalog/em-9271-care-management-new-feeder-pigs" },
+    { "title": "UMaine Extension — Raising the Backyard Pig in Maine (Bulletin #1119)", "url": "https://extension.umaine.edu/publications/1119e/" },
+    { "title": "USDA APHIS — Swine Health Protection Act fact sheet", "url": "https://www.aphis.usda.gov/sites/default/files/fsc-swine-health-protection-act.pdf" },
+    { "title": "USDA APHIS — Protecting Swine Health fact sheet", "url": "https://www.aphis.usda.gov/sites/default/files/fs-protecting-swine-health.pdf" },
+    { "title": "Penn State Extension — So You Want to Raise Hogs?", "url": "https://extension.psu.edu/so-you-want-to-raise-hogs" }
+  ]
+}

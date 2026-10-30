@@ -1,0 +1,19 @@
+{
+  "country": "US",
+  "id": "goats",
+  "highlights": [
+    { "pt": "Cabras precisam de identificação oficial do programa federal do scrapie para sair da propriedade; o APHIS dá o flock ID e brincos.", "en": "Goats need official federal scrapie-program ID to leave the farm; APHIS issues flock IDs and tags." },
+    { "pt": "Em cidade, onde é permitido, geralmente só raças miniatura (como Nigerian Dwarf), descornadas e com machos castrados.", "en": "In cities that allow them, rules usually require miniature breeds (like Nigerian Dwarf), dehorned, with neutered males." },
+    { "pt": "Cerca é o maior desafio: use arame de alta tensão ou 4–5 fios elétricos e evite telas onde chifres se enroscam.", "en": "Fencing is the big challenge: use high-tensile wire or 4–5 electric strands and avoid netting that traps horns." },
+    { "pt": "Compre só cabras testadas para CAE e CL e teste o rebanho de tempos em tempos.", "en": "Buy only goats tested for CAE and CL, and retest your herd periodically." },
+    { "pt": "No Sul quente e úmido, o verme Haemonchus é o maior risco: use FAMACHA e vermífugo só com orientação veterinária.", "en": "In the hot, humid South, barber pole worm is the top risk: use FAMACHA and deworm only with vet guidance." }
+  ],
+  "breeds": ["Boer", "Kiko", "Spanish", "Myotonic", "Nubian", "Alpine", "LaMancha", "Saanen", "Toggenburg", "Oberhasli", "Nigerian Dwarf", "Pygmy"],
+  "sources": [
+    { "title": "USDA APHIS — Sheep and Goat Identification", "url": "https://aphis-prod.azureedge.us/animal-disease/sheep-goat/scrapie-tag" },
+    { "title": "Langston University — Shelter, fencing and predator control needs on pasture", "url": "https://goats.langston.edu/?p=656" },
+    { "title": "Seattle DPD — Urban agriculture guide (CAM 244)", "url": "https://www.seattle.gov/DPD/Publications/CAM/cam244.pdf" },
+    { "title": "Oregon State Extension — Dairy goat packet", "url": "https://extension.oregonstate.edu/sites/default/files/documents/11866/dairy-goat-doc.pdf" },
+    { "title": "goats.extension.org — FAMACHA Information Guide", "url": "https://goats.extension.org/?p=357" }
+  ]
+}

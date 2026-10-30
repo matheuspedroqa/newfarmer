@@ -1,0 +1,19 @@
+{
+  "country": "PT",
+  "id": "pigs",
+  "highlights": [
+    { "pt": "Até 4 porcos em casa é 'detenção caseira': sem licença, mas com registo obrigatório no SNIRA (DGAV).", "en": "Up to 4 pigs at home counts as 'home keeping': no licence, but mandatory registration in SNIRA (DGAV)." },
+    { "pt": "A matança caseira é legal até 3 porcos por ano, só para a família, registada no RED; vender a carne é proibido.", "en": "Home slaughter is legal for up to 3 pigs a year, family use only, recorded in the RED; selling the meat is banned." },
+    { "pt": "As explorações declaram os porcos em abril, agosto e dezembro (DES) no IFAP/iDigital.", "en": "Holdings declare their pigs in April, August and December (DES) via IFAP/iDigital." },
+    { "pt": "Nunca dê restos de cozinha aos porcos e afaste os javalis: a peste suína africana já está em Espanha.", "en": "Never feed kitchen scraps and keep wild boar away: African swine fever is already in Spain." },
+    { "pt": "Raças autóctones: Bísaro no Norte e Alentejano no montado, engordado com bolota de novembro a fevereiro.", "en": "Native breeds: Bísaro in the North and Alentejano in the oak montado, finished on acorns from November to February." }
+  ],
+  "breeds": ["Alentejana", "Bísara", "Malhado de Alcobaça"],
+  "sources": [
+    { "title": "Agroportal — Procedimento para o Registo de Detenção Caseira de animais (DGAV)", "url": "https://www.agroportal.pt/?p=741849" },
+    { "title": "Agroportal — Porcos têm que ser registados em abril (DGAV)", "url": "https://www.agroportal.pt/porcos-tem-que-ser-registados-em-abril-dgav" },
+    { "title": "DECO PROteste — Matança do porco fora do matadouro tem novas regras", "url": "https://www.deco.proteste.pt/alimentacao/produtos-alimentares/noticias/matanca-do-porco-fora-do-matadouro-tem-novas-regras" },
+    { "title": "Agroportal — DGAV solicita reforço da prevenção da peste suína", "url": "https://www.agroportal.pt/direcao-geral-de-alimentacao-e-veterinaria-solicita-reforco-da-prevencao-apos-agravamento-da-peste-suina" },
+    { "title": "Agroportal — Portugal tem 61 raças autóctones (Catálogo DGAV/CAP)", "url": "https://www.agroportal.pt/portugal-tem-61-racas-autoctones-e-ovinos-serra-da-estrela-estao-em-maior-numero/" }
+  ]
+}

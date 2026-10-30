@@ -1,0 +1,20 @@
+{
+  "country": "MX",
+  "id": "chickens",
+  "highlights": [
+    { "pt": "A criação de quintal (traspatio) com galinhas criollas é tradicional e está em mais de 85% das propriedades rurais.", "en": "Backyard (traspatio) flocks of native criolla hens are traditional and found on over 85% of rural holdings." },
+    { "pt": "Mortalidade anormal nas aves deve ser avisada ao SENASICA: 800 751 2100 ou app AVISE.", "en": "Report unusual bird deaths to SENASICA: 800 751 2100 or the AVISE app." },
+    { "pt": "Influenza aviária já foi confirmada em quintais; isole suas aves de aves silvestres e reforce a biossegurança.", "en": "Avian influenza has been confirmed in backyard flocks; keep birds away from wild birds and tighten biosecurity." },
+    { "pt": "O México se declarou livre de Newcastle velogênica em 2015, mas a vigilância continua e suspeitas devem ser notificadas.", "en": "Mexico declared itself free of velogenic Newcastle disease in 2015, but surveillance continues and suspicions must be reported." },
+    { "pt": "A dieta tradicional é milho e pastejo livre; a galinha criolla é rústica e boa chocadeira.", "en": "Traditional feed is maize plus free ranging; criolla hens are hardy and good brooders." }
+  ],
+  "breeds": ["Gallina criolla", "Gallina cuello desnudo (criolla)", "Linhagens comerciais de postura"],
+  "sources": [
+    { "title": "Hortúa-López et al. — Avicultura de traspatio (Redalyc)", "url": "https://www.redalyc.org/journal/437/43768194022/43768194022.pdf" },
+    { "title": "UADY — Sistema avícola de traspatio en Tetiz, Yucatán", "url": "https://pagosccba.uady.mx/publicaciones/journal/2007-3/183-tetiz-sn.pdf" },
+    { "title": "FAO — Informe de país sobre biodiversidad para la alimentación y la agricultura (México)", "url": "https://openknowledge.fao.org/server/api/core/bitstreams/b882b03d-af2f-41bb-8a58-b7e9386ad81b/content" },
+    { "title": "SENASICA — Confirma caso de influenza aviar AH5N2 en traspatio de Michoacán", "url": "https://www.gob.mx/senasica/articulos/confirma-senasica-caso-de-influenza-aviar-ah5n2-en-traspatio-de-michoacan?idiom=es" },
+    { "title": "SENASICA — Unidos para mantener estatus de país libre de influenza aviar AH5N1", "url": "https://www.gob.mx/senasica/articulos/unidos-para-mantener-estatus-de-pais-libre-de-influenza-aviar-ah5n1" },
+    { "title": "DOF — Aviso de cancelación de la NOM-013-ZOO-1994 (Newcastle)", "url": "https://www.gob.mx/cms/uploads/attachment/file/824721/AvisoCancelNOM-013-ZOO.25jun15OK.pdf" }
+  ]
+}

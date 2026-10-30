@@ -1,0 +1,19 @@
+{
+  "country": "IT",
+  "id": "chickens",
+  "highlights": [
+    { "pt": "Mesmo para consumo próprio, quem começa um galinheiro hoje precisa registrá-lo na ASL/BDN (DM 7/3/2023).", "en": "Even for home use, anyone starting a flock today must register it with the local ASL/BDN (Decree 7 March 2023)." },
+    { "pt": "Coloque telas antipássaro e tenha como fechar as aves: no outono-inverno a influenza aviária pode impor confinamento.", "en": "Fit anti-bird netting and be able to house birds indoors: in autumn-winter avian flu can trigger housing orders." },
+    { "pt": "Remédio só com receita veterinária eletrônica (REV), obrigatória desde 2019; consulte-as no app \"cerca ricetta\".", "en": "Medicines only with an electronic veterinary prescription (REV), mandatory since 2019; check them in the \"cerca ricetta\" app." },
+    { "pt": "Ovos e carne de galinheiro familiar são só para a família: não podem ser vendidos.", "en": "Eggs and meat from a family flock are for household use only: they cannot be sold." },
+    { "pt": "Prefira raças autóctones como Livornese, Padovana e Valdarnese, apoiadas por programas de conservação.", "en": "Consider native breeds such as Livornese, Padovana and Valdarnese, backed by conservation programmes." }
+  ],
+  "breeds": ["Livornese", "Padovana", "Valdarnese bianca", "Pollo nero del Valdarno"],
+  "sources": [
+    { "title": "Il Fatto Alimentare — Polli e galline in un pollaio domestico (Veneto)", "url": "https://ilfattoalimentare.it/pollai-nuove-regole-veneto.html" },
+    { "title": "ATS Mantova — Richiesta registrazione allevamenti familiari autoconsumo", "url": "https://pagamentipa.comune.mantova.it/s3/3824/allegati/suic/attivita_produttive/ats-richiesta-registraz-allev-familiari-autoconsumo.pdf" },
+    { "title": "IZSVe — Piano nazionale influenza aviaria 2022", "url": "https://www.izsvenezie.it/documenti/temi/influenza-aviaria//piani-sorveglianza/piano-nazionale-influenza-aviaria-2022.pdf" },
+    { "title": "Quotidiano Sanità — Ricetta elettronica veterinaria obbligatoria", "url": "https://www.quotidianosanita.it/governo-e-parlamento/ricetta-elettronica-veterinaria-da-domani-parte-obbligo-grillo-finalmente-dati-precisi-sui-consumi-dei-farmaci/" },
+    { "title": "Università di Padova — Tesi sul patrimonio avicolo veneto", "url": "https://thesis.unipd.it/retrieve/fff15e7b-5f61-4171-8f4a-88d17505a2c3/DALLACQUA_ANNA.pdf" }
+  ]
+}

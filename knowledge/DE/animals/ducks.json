@@ -1,0 +1,18 @@
+{
+  "country": "DE",
+  "id": "ducks",
+  "highlights": [
+    { "pt": "Patos contam legalmente como aves: registre no Veterinäramt antes de começar, mesmo com poucos animais.", "en": "Ducks legally count as poultry: register with the Veterinäramt before you start, even with a few birds." },
+    { "pt": "Aves aquáticas são o grupo de maior risco para gripe aviária; impeça contato com aves silvestres e com lagos naturais.", "en": "Waterfowl are the highest-risk group for avian flu; prevent contact with wild birds and natural ponds." },
+    { "pt": "No outono/inverno pode haver confinamento obrigatório: tenha um abrigo fechado com água de banho coberta.", "en": "Autumn/winter housing orders are common: have a closed shelter with covered bathing water." },
+    { "pt": "Água aberta para banho é essencial para a plumagem; nunca crie um pato sozinho.", "en": "Open bathing water is essential for plumage; never keep a single duck." },
+    { "pt": "Raça nativa: Pommernente; a Laufente é tradicional contra lesmas em jardins grandes.", "en": "Native breed: Pommernente; Indian Runners are a traditional slug control in large gardens." }
+  ],
+  "breeds": ["Pommernente", "Laufente (pato corredor)", "Orpingtonente"],
+  "sources": [
+    { "title": "GEH — Wassergeflügel: Haltung, Fütterung, Zucht, Tierwohl", "url": "https://www.g-e-h.de/images/stories/downloadbereich/wassergefluegel.pdf" },
+    { "title": "BZL — Wie gefährlich ist die Vogelgrippe?", "url": "https://www.landwirtschaft.de/tier-und-pflanze/tier/gefluegel/wie-gefaehrlich-ist-die-vogelgrippe" },
+    { "title": "Lahn-Dill-Kreis — Allgemeinverfügung risikoorientierte Aufstallung (2025)", "url": "https://www.lahn-dill-kreis.de/wp-content/uploads/2025/12/2025-12-10-AI-Allgemeinverfuegung-Anordnung-risikoorientierte-Aufstallung-im-LDK_.pdf" },
+    { "title": "Brandenburg MLEUV — Gefährdete Rassen in Brandenburg", "url": "https://mleuv.brandenburg.de/sixcms/media.php/9/Gefaehrdete-Rassen-BB.pdf" }
+  ]
+}

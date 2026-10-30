@@ -1,0 +1,18 @@
+{
+  "country": "IT",
+  "id": "ducks",
+  "highlights": [
+    { "pt": "No norte da Itália patos são de alto risco para influenza aviária: prepare-se para fechá-los no outono-inverno.", "en": "In northern Italy ducks are high-risk for avian flu: be ready to house them in autumn-winter." },
+    { "pt": "Proteja o tanque de água de aves selvagens e mantenha os patos separados das galinhas.", "en": "Keep the pond away from wild birds and keep ducks separate from chickens." },
+    { "pt": "Quem começa uma criação para consumo próprio precisa registrá-la na ASL/BDN.", "en": "Anyone starting a home flock must register it with the ASL/BDN." },
+    { "pt": "Raças vênetas Germanata Veneta e Mignon estão ameaçadas e têm programa regional de conservação.", "en": "The Venetian breeds Germanata Veneta and Mignon are endangered and have a regional conservation programme." },
+    { "pt": "Remédio só com receita veterinária eletrônica (REV).", "en": "Medicines only with an electronic veterinary prescription (REV)." }
+  ],
+  "breeds": ["Germanata Veneta", "Mignon"],
+  "sources": [
+    { "title": "FAO — Animal Genetic Resources: anatre venete", "url": "https://fao.org/docrep/pdf/009/a0389t/a0389t07.pdf" },
+    { "title": "Ministero della Salute — Decreto 30/12/2016 influenza aviaria", "url": "https://unionalimentari.com/wp-content/uploads/2024/09/MINSALUTE-decreto-29861-30.12.2016-influenza-aviaria.pdf" },
+    { "title": "IZSVe — Piano nazionale influenza aviaria 2022", "url": "https://www.izsvenezie.it/documenti/temi/influenza-aviaria//piani-sorveglianza/piano-nazionale-influenza-aviaria-2022.pdf" },
+    { "title": "Il Fatto Alimentare — Polli e galline in un pollaio domestico", "url": "https://ilfattoalimentare.it/pollai-nuove-regole-veneto.html" }
+  ]
+}

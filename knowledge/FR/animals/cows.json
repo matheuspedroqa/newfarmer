@@ -1,0 +1,17 @@
+{
+  "country": "FR",
+  "id": "cows",
+  "highlights": [
+    { "pt": "Declare-se no EDE antes da primeira vaca. Cada bovino leva dois brincos e um passaporte, e os movimentos são declarados em até 7 dias.", "en": "Register with the EDE before your first cow; each bovine has two ear tags and a passport, and movements are declared within 7 days." },
+    { "pt": "A profilaxia obrigatória (brucelose, IBR, leucose, tuberculose) acontece todo ano de outubro a maio. Pergunte ao GDS sobre o regime \"petit détenteur\".", "en": "Compulsory disease screening (brucellosis, IBR, leukosis, TB) runs each year from October to May; ask your GDS about the small-keeper scheme." },
+    { "pt": "Vacine contra a febre catarral (FCO) antes da época dos mosquitos, no verão e outono, conforme a campanha oficial.", "en": "Vaccinate against bluetongue before the midge season (summer–autumn) following the official campaign." },
+    { "pt": "As AOP de queijo definem a raça e o capim: Montbéliarde no Comté e Normande nos queijos da Normandia.", "en": "Cheese PDOs set the breed and grazing rules: Montbéliarde for Comté, Normande for Normandy cheeses." }
+  ],
+  "breeds": ["Normande", "Montbéliarde", "Prim'Holstein", "Charolaise", "Limousine", "Salers", "Aubrac"],
+  "sources": [
+    { "title": "Chambres d'agriculture — Identification des animaux", "url": "https://chambres-agriculture.fr/sinformer/nos-ressources/elevage/identification" },
+    { "title": "Pleinchamp — Campagne de prophylaxie bovine 2025-2026 en Creuse", "url": "https://www.pleinchamp.com/actualite/lancement-de-la-campagne-de-prophylaxie-bovine-2025-2026-en-creuse" },
+    { "title": "info.gouv.fr — L'État mobilisé contre la fièvre catarrhale ovine", "url": "https://www.info.gouv.fr/actualite/letat-mobilise-contre-la-fievre-catarrhale-ovine" },
+    { "title": "DRAAF Bourgogne-Franche-Comté — Fiche AOP Comté", "url": "https://draaf.bourgogne-franche-comte.agriculture.gouv.fr/IMG/pdf/FicheAOPComte_cle81fe31.pdf" }
+  ]
+}

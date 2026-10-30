@@ -1,0 +1,19 @@
+{
+  "country": "ES",
+  "id": "pigs",
+  "highlights": [
+    { "pt": "Autoconsumo: no máximo 3 porcos de engorda por ano em intensivo ou 5 em extensivo, sem porcas reprodutoras, com registro REGA e livro de registro.", "en": "Home use: at most 3 fattening pigs a year indoors or 5 outdoors, no breeding sows, with REGA registration and a record book." },
+    { "pt": "O porco Ibérico engorda na dehesa com bolota durante a montanera, de outubro a março.", "en": "Iberian pigs fatten on acorns in the dehesa during the montanera, October to March." },
+    { "pt": "Há peste suína africana em javalis na Catalunha: cercas fechadas e nada de restos de comida com carne.", "en": "African swine fever is present in wild boar in Catalonia: keep fences tight and never feed meat scraps." },
+    { "pt": "No verão seco, dê sombra, muita água e um lugar para o porco se molhar.", "en": "In the dry summer, provide shade, plenty of water and a place for pigs to wet themselves." },
+    { "pt": "Antibióticos só com receita veterinária (RD 666/2023, sistema PRESVET).", "en": "Antibiotics only with a vet prescription (RD 666/2023, PRESVET system)." }
+  ],
+  "breeds": ["Ibérico"],
+  "sources": [
+    { "title": "Govern de les Illes Balears — Explotaciones porcinas", "url": "https://www.caib.es/sites/prodramadera/es/explotaciones_porcinas/" },
+    { "title": "MAPA — Preguntas y respuestas sobre el RD 306/2020", "url": "https://servicio.mapa.gob.es/es/ganaderia/temas/produccion-y-mercados-ganaderos/preguntasyrespuestassobreelrd306-2020deordenacion-v12_tcm30-575711.pdf" },
+    { "title": "BOE — Norma de calidad del ibérico (RD 4/2014)", "url": "https://www.boe.es/buscar/pdf/2014/BOE-A-2014-318-consolidado.pdf" },
+    { "title": "Interempresas — Cataluña refuerza la caza de jabalíes (PPA)", "url": "https://www.interempresas.net/porcino/631875-Cataluna-refuerza-la-caza-de-jabalies-y-estudia-levantar-restricciones-en-el-medio-natural.html" },
+    { "title": "MAPA — PRESVET", "url": "https://www.mapa.gob.es/es/ganaderia/temas/sanidad-animal-higiene-ganadera/Higiene-de-la-produccion-primaria-ganadera/medicamentos-veterinarios/Presvet.aspx" }
+  ]
+}

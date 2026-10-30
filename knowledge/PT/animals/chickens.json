@@ -1,0 +1,19 @@
+{
+  "country": "PT",
+  "id": "chickens",
+  "highlights": [
+    { "pt": "Mesmo uma capoeira caseira tem de ser registada na DGAV (SNIRA); a detenção caseira vai até 100 aves.", "en": "Even a backyard coop must be registered with DGAV (SNIRA); home keeping allows up to 100 birds." },
+    { "pt": "O registo faz-se na DAV/NAV da sua área com o Modelo 1340/DGAV e o número de beneficiário IFAP.", "en": "Register at your local DAV/NAV office with form Modelo 1340/DGAV and an IFAP beneficiary number." },
+    { "pt": "No outono/inverno a DGAV costuma mandar confinar as aves por causa da gripe aviária: tenha um galinheiro fechado e coberto.", "en": "In autumn/winter DGAV often orders birds kept indoors due to avian flu: have a closed, roofed coop." },
+    { "pt": "Prefira raças autóctones como a Preta Lusitânica (boa chocadeira) ou a Pedrês Portuguesa.", "en": "Consider native breeds like Preta Lusitânica (a good brooder) or Pedrês Portuguesa." },
+    { "pt": "Antibióticos só com receita veterinária eletrónica (PEMV), como manda a regra da UE.", "en": "Antibiotics only with an electronic vet prescription (PEMV), as EU rules require." }
+  ],
+  "breeds": ["Pedrês Portuguesa", "Preta Lusitânica", "Amarela", "Branca"],
+  "sources": [
+    { "title": "Agroportal — Procedimento para o Registo de Detenção Caseira de animais (DGAV)", "url": "https://www.agroportal.pt/?p=741849" },
+    { "title": "Observador — Registo de capoeiras de aves é obrigatório mas nem sempre cumprido", "url": "https://observador.pt/2025/01/29/registo-de-capoeiras-de-aves-e-obrigatorio-mas-nem-sempre-cumprido/" },
+    { "title": "Agroportal — Portugal tem 61 raças autóctones (Catálogo DGAV/CAP)", "url": "https://www.agroportal.pt/portugal-tem-61-racas-autoctones-e-ovinos-serra-da-estrela-estao-em-maior-numero/" },
+    { "title": "Agroportal/RTP — Faça Chuva Faça Sol T8 Ep.9 (raças de galinha)", "url": "https://www.agroportal.pt/?p=1076140" },
+    { "title": "Agroportal — Implementação do Regulamento (UE) 2019/6", "url": "https://www.agroportal.pt/?p=1006979" }
+  ]
+}

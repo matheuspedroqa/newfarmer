@@ -1,0 +1,19 @@
+{
+  "country": "US",
+  "id": "ducks",
+  "highlights": [
+    { "pt": "Patos podem carregar gripe aviária sem sintomas: mantenha-os longe de lagoas com aves silvestres e não os misture com galinhas.", "en": "Ducks can carry bird flu without symptoms: keep them away from ponds used by wild waterfowl and don't mix them with chickens." },
+    { "pt": "Patinhos precisam de mais niacina que pintinhos: use ração para aves aquáticas ou suplemente e confira o rótulo.", "en": "Ducklings need more niacin than chicks: use waterfowl feed or a supplement and check the label." },
+    { "pt": "Muscovy é protegido por lei federal: é proibido soltar Muscovies criados em cativeiro na natureza.", "en": "Muscovy ducks fall under federal rules: releasing captive-reared Muscovies into the wild is prohibited." },
+    { "pt": "Pekin (carne) e Khaki Campbell (ovos) são as raças mais comuns; quase não chocam, então use chocadeira.", "en": "Pekin (meat) and Khaki Campbell (eggs) are the most common breeds; they rarely go broody, so use an incubator." },
+    { "pt": "Antibióticos para patos de quintal também exigem receita veterinária desde 2023.", "en": "Antibiotics for backyard ducks also need a vet prescription since 2023." }
+  ],
+  "breeds": ["Pekin", "Khaki Campbell", "Indian Runner", "Rouen", "Muscovy"],
+  "sources": [
+    { "title": "MU Extension — Brooding and Rearing Ducklings and Goslings (G8920)", "url": "https://extension.missouri.edu/publications/g8920" },
+    { "title": "Oklahoma State Extension — Avian influenza (2023)", "url": "https://extension.okstate.edu/articles/2023/avian-influenza-23" },
+    { "title": "UT Extension — Backyard flock biosecurity (D157)", "url": "https://utia.tennessee.edu/publications/wp-content/uploads/sites/269/2023/10/D157.pdf" },
+    { "title": "Federal Register — Muscovy duck control order (Oct 1, 2010)", "url": "https://www.govinfo.gov/content/pkg/FR-2010-10-01/html/2010-23139.htm" },
+    { "title": "Metzer Farms — Supplementing your ducks' diet with niacin", "url": "https://www.metzerfarms.com/blog/determining-how-to-supplement-your-ducks-diet-with-niacin.html" }
+  ]
+}

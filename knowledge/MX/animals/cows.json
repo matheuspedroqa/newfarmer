@@ -1,0 +1,20 @@
+{
+  "country": "MX",
+  "id": "cows",
+  "highlights": [
+    { "pt": "Todo bovino precisa do brinco SINIIGA; sem ele e sem a guia REEMO o gado não pode ser transportado nem abatido.", "en": "Every bovine needs a SINIIGA ear tag; without it and a REEMO permit cattle cannot be moved or slaughtered." },
+    { "pt": "A bicheira (gusano barrenador) voltou em 2024: cure umbigos, trate feridas na hora e avise larvas ao SENASICA (800 751 2100).", "en": "New World screwworm returned in 2024: treat navels and wounds promptly and report larvae to SENASICA (800 751 2100)." },
+    { "pt": "No trópico o padrão é a vaca de duplo propósito (Suizo Pardo ou Simmental × Cebu), para leite e bezerro.", "en": "In the tropics the norm is the dual-purpose cow (Brown Swiss or Simmental × Zebu) for milk and calves." },
+    { "pt": "Tuberculose, brucelose e carrapato Boophilus têm campanhas nacionais obrigatórias com testes e certificação de rebanho livre.", "en": "Tuberculosis, brucellosis and Boophilus ticks have mandatory national campaigns with testing and herd-free certification." },
+    { "pt": "Para mover gado é preciso antiparasitário dias antes do certificado zoossanitário e banho antes da viagem.", "en": "Moving cattle requires antiparasitic treatment days before the movement certificate and a dip before travel." }
+  ],
+  "breeds": ["Cebú", "Suizo Pardo × Cebú", "Simmental × Cebú", "Charolais × Cebú", "Suiz-bú"],
+  "sources": [
+    { "title": "Agronomía Mesoamericana — Vacas de doble propósito en el trópico de México", "url": "https://www.scielo.sa.cr/pdf/am/v26n1/a02v26n1.pdf" },
+    { "title": "SENASICA — Campaña Nacional para el control de la garrapata Boophilus spp.", "url": "https://www.gob.mx/senasica/acciones-y-programas/campana-nacional-para-el-control-de-la-garrapata-boophilus-spp" },
+    { "title": "SENASICA — Brucelosis en animales", "url": "https://www.gob.mx/senasica/acciones-y-programas/campana-nacional-contra-la-brucelosis" },
+    { "title": "DOF — Acuerdo para la operación de la Campaña Nacional contra la Tuberculosis Bovina", "url": "https://sidof.segob.gob.mx/notas/docFuente/5746338" },
+    { "title": "SADER — Amplía acciones para controlar la movilización de ganado y contener el gusano barrenador", "url": "https://www.gob.mx/agricultura/prensa/amplia-agricultura-acciones-para-controlar-la-movilizacion-de-ganado-y-contener-el-gusano-barrenador" },
+    { "title": "SADER Sinaloa — No se podrá movilizar ganado sin su respectivo Reemo y Siniiga", "url": "https://www.gob.mx/agricultura/sinaloa/articulos/no-se-podra-movilizar-ganado-sin-su-respectivo-reemo-y-siniiga-senasica?idiom=es" }
+  ]
+}

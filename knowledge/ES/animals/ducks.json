@@ -1,0 +1,18 @@
+{
+  "country": "ES",
+  "id": "ducks",
+  "highlights": [
+    { "pt": "Em surtos de gripe aviária, a Espanha já proibiu criar patos e gansos junto com outras aves: tenha cercados separados.", "en": "During bird flu outbreaks Spain has banned keeping ducks and geese with other poultry: have separate pens." },
+    { "pt": "Do outono ao inverno, mantenha os patos cobertos e longe de lagoas com aves selvagens, sobretudo perto de humedales.", "en": "From autumn to winter, keep ducks under cover and away from ponds with wild birds, especially near wetlands." },
+    { "pt": "Patos de quintal também precisam de registro REGA como granja avícola de autoconsumo (RD 637/2021).", "en": "Backyard ducks also need REGA registration as a home-use poultry holding (RD 637/2021)." },
+    { "pt": "As raças mais usadas são Barbarie e Pekín; muitos patinhos vêm de incubadoras francesas.", "en": "The most used breeds are Muscovy (Barbarie) and Pekin; many ducklings come from French hatcheries." }
+  ],
+  "breeds": ["Barbarie", "Pekín", "Pato común"],
+  "sources": [
+    { "title": "Avinews — Cría de patos: manejo y arranque", "url": "https://avinews.com/cria-de-patos-manejo-y-arranque/?noamp=mobile" },
+    { "title": "RTVC — El Gobierno confina todas las explotaciones de aves de corral al aire libre", "url": "https://rtvc.es/el-gobierno-confina-todas-las-explotaciones-de-aves-de-corral-al-aire-libre-por-gripe-aviar-13-noviembre-2025/" },
+    { "title": "BOE — Orden de 13/11/2025 influenza aviar", "url": "https://boe.es/boe/dias/2025/11/13/pdfs/BOE-A-2025-22954.pdf" },
+    { "title": "BOE — Real Decreto 637/2021", "url": "https://boe.es/boe/dias/2021/07/28/pdfs/BOE-A-2021-12609.pdf" },
+    { "title": "Euronews — España levanta el confinamiento de aves de corral", "url": "https://es.euronews.com/salud/2026/04/16/amenaza-gripe-aviar-espana-levanta-confinamiento-aves-corral" }
+  ]
+}

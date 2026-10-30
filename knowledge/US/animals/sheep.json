@@ -1,0 +1,19 @@
+{
+  "country": "US",
+  "id": "sheep",
+  "highlights": [
+    { "pt": "Programa federal do scrapie: ovelhas precisam de brinco oficial do USDA para sair da propriedade; peça seu flock ID e brincos gratuitos ao APHIS.", "en": "Federal scrapie program: sheep need an official USDA ear tag to leave the farm; request a flock ID and free tags from APHIS." },
+    { "pt": "No Sul e no Sudeste, prefira raças deslanadas como Katahdin e Dorper, que dispensam tosquia e aguentam calor e vermes.", "en": "In the South and Southeast, choose hair breeds like Katahdin and Dorper: no shearing, better heat and worm tolerance." },
+    { "pt": "O verme Haemonchus já resiste a vários vermífugos: use FAMACHA e trate só os animais anêmicos.", "en": "Barber pole worm resists many dewormers: use FAMACHA and treat only anemic animals." },
+    { "pt": "Coiotes são o principal predador: cães de guarda, lhamas ou burros ajudam a proteger o rebanho.", "en": "Coyotes are the main predator: guardian dogs, llamas or donkeys help protect the flock." },
+    { "pt": "Nunca dê mineral ou ração de cabra ou de gado para ovelhas: o cobre extra pode matá-las.", "en": "Never feed goat or cattle mineral or feed to sheep: the extra copper can kill them." }
+  ],
+  "breeds": ["Katahdin", "Dorper", "Suffolk", "Hampshire", "Dorset", "Rambouillet"],
+  "sources": [
+    { "title": "USDA APHIS — Sheep and Goat Identification", "url": "https://aphis-prod.azureedge.us/animal-disease/sheep-goat/scrapie-tag" },
+    { "title": "ASI — National Scrapie Eradication Program ID Requirements (2024)", "url": "https://www.sheepusa.org/wp-content/uploads/2024/05/2024-05-21_NationalScrapieEradicationProgram_IDRequirements.pdf" },
+    { "title": "Oregon State Extension — Sheep management calendar", "url": "https://extension.oregonstate.edu/animals-livestock/sheep-goats/sheep-management-calendar" },
+    { "title": "Ohio State Sheep Team — Use FAMACHA Correctly", "url": "https://u.osu.edu/sheep/?p=255" },
+    { "title": "UMaine Extension — Sheep Best Management Practices", "url": "https://extension.umaine.edu/livestock/sheep-entrepreneurs/tools-resources-for-participants/sheep-best-management-practices/" }
+  ]
+}

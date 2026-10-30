@@ -1,0 +1,19 @@
+{
+  "country": "CA",
+  "id": "chickens",
+  "highlights": [
+    { "pt": "Frango e ovos estão sob cotas (supply management); em Ontário, até 300 frangos/ano sem cota pelo programa Family Food.", "en": "Chicken and eggs are under quota (supply management); in Ontario up to 300 broilers/year are quota-free under the Family Food program." },
+    { "pt": "Influenza aviária é doença de notificação obrigatória ao CFIA, inclusive para galinhas de quintal.", "en": "Avian influenza is federally reportable to the CFIA, including for backyard flocks." },
+    { "pt": "Reforce a biossegurança na primavera e no outono, épocas de migração de aves silvestres.", "en": "Tighten biosecurity in spring and fall, during wild bird migration." },
+    { "pt": "Prefira raças de crista pequena como a canadense Chantecler e use bebedouro aquecido no inverno.", "en": "Choose small-combed breeds like the Canadian Chantecler and use heated waterers in winter." },
+    { "pt": "Desde dez/2018, antibióticos medicamente importantes só com receita veterinária.", "en": "Since Dec 2018, medically important antimicrobials require a veterinary prescription." }
+  ],
+  "breeds": ["Chantecler"],
+  "sources": [
+    { "title": "Ontario.ca — Supply management systems for eggs, poultry and dairy", "url": "https://www.ontario.ca/page/supply-management-systems-eggs-poultry-and-dairy" },
+    { "title": "Better Farming — Quota exemption for Ontario's small chicken farmers", "url": "https://betterfarming.com/magazines/better-farming-ontario/featured-articles/quota-exemption-for-ontarios-small-chicken-farmers" },
+    { "title": "Alberta Agriculture — Avian flu and small flock poultry", "url": "https://www1.agriculture.alberta.ca/$department/deptdocs.nsf/ba3468a2a8681f69872569d60073fde1/6cfe85d6c5b8cb2b87257ebc0054d22a/$FILE/avian-flu-small-flock-poultry.pdf" },
+    { "title": "Livestock Conservancy — Chantecler chicken", "url": "https://livestockconservancy.org/chantecler-chicken/" },
+    { "title": "Beef Cattle Research Council — Prescription required for livestock antibiotics (Dec 2018)", "url": "https://www.beefresearch.ca/blog/prescription-required-for-livestock-cattle-antibiotics-december-2018/" }
+  ]
+}

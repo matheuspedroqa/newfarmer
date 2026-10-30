@@ -1,0 +1,18 @@
+{
+  "country": "IT",
+  "id": "goats",
+  "highlights": [
+    { "pt": "Toda cabra precisa de registro na BDN e identificação eletrônica, mesmo em criação familiar.", "en": "Every goat must be registered in the BDN and electronically identified, even in a family holding." },
+    { "pt": "No norte use raças alpinas leiteiras (Saanen, Camosciata); no sul seco, rústicas como a Girgentana.", "en": "In the north use Alpine dairy breeds (Saanen, Camosciata); in the dry south, hardy ones like Girgentana." },
+    { "pt": "No sul a brucelose (febre de Malta) ainda existe: não tome leite cru de rebanho sem controle da ASL.", "en": "Brucellosis (Malta fever) still occurs in the south: don't drink raw milk from untested herds." },
+    { "pt": "Abate de cabrito em casa só seguindo as regras da ASL e lançando na BDN em 7 dias.", "en": "Home slaughter of kids only under ASL rules and recorded in the BDN within 7 days." },
+    { "pt": "Remédio só com receita veterinária eletrônica (REV), respeitando a carência do leite.", "en": "Medicines only with an electronic veterinary prescription (REV), observing milk withdrawal times." }
+  ],
+  "breeds": ["Saanen", "Camosciata delle Alpi", "Orobica", "Girgentana"],
+  "sources": [
+    { "title": "Università di Teramo — Caprini", "url": "https://elearning.unite.it/pluginfile.php/207290/mod_resource/content/1/04.06.CAPRINI.pdf" },
+    { "title": "Università di Milano — Genomica delle razze caprine italiane (SIPAOC)", "url": "https://air.unimi.it/retrieve/handle/2434/241610/325563/Abstract-SIPAOC-IGC-v5.pdf" },
+    { "title": "IZS — Il piano italiano di eradicazione per le brucellosi", "url": "https://www.izs.it/IZS/Engine/RAServeFile.php/f/Formazione_corsi_-_convegni/2015/Giornata_Brucellosi/2_Ruocco_Il_piano_italiano_di_eradicazione_per_le_Brucellosi.pdf" },
+    { "title": "Regione Emilia-Romagna — Macellazioni per il consumo domestico privato", "url": "https://bur.regione.emilia-romagna.it/area-bollettini/bollettini-in-lavorazione/dicembre-periodico-parte-seconda-2a-quindicina.2022-12-19.8299728859/disposizioni-in-materia-di-macellazioni-per-il-consumo-domestico-privato-in-regione-emilia-romagna/allegato-muf-finale.pdf" }
+  ]
+}

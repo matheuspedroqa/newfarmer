@@ -1,0 +1,19 @@
+{
+  "country": "ES",
+  "id": "cows",
+  "highlights": [
+    { "pt": "Cada bovino leva dois brincos e um documento DIB; o nascimento deve ser notificado em até 7 dias.", "en": "Each bovine carries two ear tags and a DIB document; births must be reported within 7 days." },
+    { "pt": "Os rebanhos passam por campanhas obrigatórias de saneamento contra tuberculose e brucelose.", "en": "Herds go through mandatory sanitation campaigns for tuberculosis and brucellosis." },
+    { "pt": "A vacina contra a língua azul é voluntária desde 2025, mas o MAPA recomenda vacinar.", "en": "Bluetongue vaccination has been voluntary since 2025, but the Ministry recommends it." },
+    { "pt": "Raças locais como a Rubia Gallega têm selo IGP (Ternera Gallega) e valem mais.", "en": "Local breeds like Rubia Gallega carry a PGI label (Ternera Gallega) and fetch higher prices." },
+    { "pt": "No verão seco do sul o pasto acaba: planeje feno, sombra e muita água.", "en": "In the dry southern summer pasture runs out: plan hay, shade and plenty of water." }
+  ],
+  "breeds": ["Rubia Gallega", "Morenas Gallegas", "Asturiana de los Valles", "Avileña-Negra Ibérica", "Retinta"],
+  "sources": [
+    { "title": "MAPA — Identificación animal: bovino", "url": "https://www.mapa.gob.es/eu/ganaderia/temas/trazabilidad-animal/identificacion-animal/bovino" },
+    { "title": "Gobierno de Aragón — Identificación animal", "url": "https://www.aragon.es/-/identificacion-animal" },
+    { "title": "AGACAL/Xunta — Pliego de condiciones IGP Ternera Gallega", "url": "https://agacal.xunta.gal/sites/default/files/calidade-alimentaria/produtos-carnicos/PC_Ternera_Gallega_Enero_2024_ES.pdf" },
+    { "title": "MAPA — España indemne de brucelosis bovina", "url": "https://www.mapa.gob.es/es/prensa/ultimas-noticias/detalle_noticias/la-union-europea-declara-a-espana-indemne-de-brucelosis-bovina-y-al-pais-vasco-de-tuberculosis-bovina/8822f387-0813-4a97-bd34-1f6ddc848cd5" },
+    { "title": "MAPA — Situación lengua azul (octubre 2025)", "url": "https://www.mapa.gob.es/va/dam/jcr:c4470d9e-1b49-4fa2-affb-a610d5bef006/situacion%20LA%20oct%202025.pdf" }
+  ]
+}
