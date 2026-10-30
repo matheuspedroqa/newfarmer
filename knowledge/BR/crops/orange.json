@@ -1,0 +1,28 @@
+{
+  "country": "BR",
+  "id": "orange",
+  "highlights": [
+    { "pt": "Compre mudas só de viveiro telado e certificado; em SP, a muda de viveiro a céu aberto é proibida desde 2003.", "en": "Buy trees only from certified screenhouse nurseries; in São Paulo, open-air nursery trees have been banned since 2003." },
+    { "pt": "O greening (HLB) não tem cura: inspecione o pomar, arranque a planta doente e controle o psilídeo, como manda a lei.", "en": "Greening (HLB) has no cure: scout the grove, remove sick trees and control the psyllid, as the law requires." },
+    { "pt": "A laranja Pera, a mais plantada, é colhida de julho a outubro; combine com Hamlin (precoce) e Valência (tardia).", "en": "Pera, the most planted orange, is harvested July–October; pair it with early Hamlin and late Valência." },
+    { "pt": "Use mudas pré-imunizadas contra a tristeza, e lembre que a Pera precisa de interenxerto em porta-enxertos como o Sunki.", "en": "Use tristeza pre-immunised trees, and note that Pera needs an interstock on rootstocks such as Sunki." },
+    { "pt": "Plante na estação chuvosa e faça a calagem cerca de 2 meses antes.", "en": "Plant in the rainy season and lime the soil about 2 months beforehand." }
+  ],
+  "varieties": ["Pera (Pêra Rio)", "Hamlin", "Valência", "Natal", "Bahia", "Rubi", "Cara Cara"],
+  "localCalendar": {
+    "region": "Cinturão citrícola de São Paulo e Triângulo Mineiro",
+    "hemisphere": "south",
+    "climate": "tropical",
+    "directSowing": [],
+    "seedbed": [],
+    "transplant": [10, 11, 12, 1, 2],
+    "harvest": [7, 8, 9, 10]
+  },
+  "sources": [
+    { "title": "Aegro — Laranja Pera: guia de produção", "url": "https://aegro.com.br/blog/producao-de-laranja-pera/" },
+    { "title": "Revista Cultivar — Greening atinge 20,87% das laranjeiras", "url": "https://revistacultivar.com.br/noticias/greening-atinge-20-87-das-laranjeiras-do-cinturao-citricola-de-sp-e-mg" },
+    { "title": "Revista Cultivar — Muda protegida", "url": "https://revistacultivar.com.br/artigos/muda-protegida" },
+    { "title": "Embrapa — Sistema de Produção de Mudas de Citros", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1155982/1/Sistema-de-Producao-de-Mudas-de-Citros.pdf" },
+    { "title": "Embrapa — Recomendação de calagem e adubação (2020)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1127322/1/LV-RecomendacaoSolo-2020-345-347.pdf" }
+  ]
+}

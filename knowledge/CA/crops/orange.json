@@ -1,0 +1,29 @@
+{
+  "country": "CA",
+  "id": "orange",
+  "highlights": [
+    { "pt": "No Canadá laranja não se cultiva ao ar livre: só em vaso dentro de casa ou em estufa.", "en": "In Canada oranges are not grown outdoors: only in pots indoors or in a greenhouse." },
+    { "pt": "Calamondin e limão Meyer são os cítricos de vaso mais fáceis para iniciantes.", "en": "Calamondin and Meyer lemon are the easiest potted citrus for beginners." },
+    { "pt": "Leve o vaso para fora só depois das geadas e traga de volta antes da primeira geada, aos poucos.", "en": "Move the pot outside only after frosts end and bring it back before the first frost, gradually." },
+    { "pt": "No inverno, deixe na janela mais clara, não adube e polinize as flores à mão com um pincel.", "en": "In winter keep it in the brightest window, don't fertilize, and hand-pollinate flowers with a brush." },
+    { "pt": "Dentro de casa, vigie cochonilhas e ácaros, favorecidos pelo ar seco do aquecimento.", "en": "Indoors, watch for scale, mealybugs and spider mites, favored by dry heated air." }
+  ],
+  "varieties": ["Calamondin", "Tahitian orange", "Kumquat", "Tangerina anã", "Improved Meyer (limão)"],
+  "localCalendar": {
+    "region": "Sul de Ontário (sem cultivo ao ar livre; só vaso/estufa)",
+    "hemisphere": "north",
+    "climate": "temperate",
+    "note": "Sem calendário de campo: cítricos não toleram o inverno canadense. Vaso fica fora de jun a set e dentro de casa de out a mai.",
+    "directSowing": [],
+    "seedbed": [],
+    "transplant": [],
+    "harvest": []
+  },
+  "sources": [
+    { "title": "Natural Resources Canada — Plant hardiness zone maps update", "url": "https://natural-resources.canada.ca/stories/simply-science/zone-canada-s-plant-hardiness-zone-maps-website-get-update" },
+    { "title": "AAFC — Statistical Overview of the Canadian Fruit Industry 2023", "url": "https://publications.gc.ca/collections/collection_2024/aac-aafc/A71-33-2023-eng.pdf" },
+    { "title": "Ottawa Citizen — Patience is needed to grow citrus indoors", "url": "https://www.pressreader.com/canada/ottawa-citizen/20180106/281900183599648" },
+    { "title": "Northern Gardener — Growing Citrus in the North", "url": "https://northerngardener.org/?p=53730" },
+    { "title": "CFIA — D-08-04 Import requirements for plants for planting", "url": "https://inspection.canada.ca/en/plant-health/invasive-species/directives/imports/08-04" }
+  ]
+}

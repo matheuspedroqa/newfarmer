@@ -1,0 +1,29 @@
+{
+  "country": "US",
+  "id": "lettuce",
+  "highlights": [
+    { "pt": "Plante pela data de última geada da sua região: mudas dentro de casa 4–6 semanas antes.", "en": "Plan by your local last frost date: start transplants indoors 4–6 weeks before it." },
+    { "pt": "No Norte faça duas safras (primavera e outono); no Sul e na Califórnia a alface é cultura de inverno.", "en": "In the North grow spring and fall crops; in the South and California lettuce is a winter crop." },
+    { "pt": "No Midwest, cubra com manta de tecido contra a cigarrinha que transmite o amarelo-do-áster.", "en": "In the Midwest, use floating row cover against the leafhopper that spreads aster yellows." },
+    { "pt": "No Sul prefira romana, folha solta e manteiga; a alface americana sofre com o calor.", "en": "In the South choose romaine, leaf and butterhead; head lettuce struggles in the heat." },
+    { "pt": "Faça teste de solo no laboratório da extensão da universidade do seu estado.", "en": "Get a soil test through your state's university extension lab." }
+  ],
+  "varieties": ["Buttercrunch", "Black-seeded Simpson", "Red Sails", "Little Gem", "Green Towers", "Slobolt"],
+  "localCalendar": {
+    "region": "Midwest (USDA zone 4–6, e.g. Minnesota)",
+    "hemisphere": "north",
+    "climate": "temperate",
+    "directSowing": [4, 5, 8],
+    "seedbed": [3, 4],
+    "transplant": [4, 5],
+    "harvest": [5, 6, 7, 9, 10]
+  },
+  "sources": [
+    { "title": "UMN Extension — Growing lettuce, endive and radicchio", "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-lettuce-endive-and-radicchio" },
+    { "title": "UC IPM — Cultural Tips for Growing Lettuce", "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-lettuce/" },
+    { "title": "UGA Extension — Home Garden Lettuce (C1018)", "url": "https://fieldreport.caes.uga.edu/publications/C1018/" },
+    { "title": "UMN IPM — Leafhoppers & Aster Yellows Risk", "url": "https://blog-fruit-vegetable-ipm.extension.umn.edu/2021/06/leafhopper-watch-hot-weather-and-aster.html" },
+    { "title": "Penn State Extension — Soil Testing", "url": "https://extension.psu.edu/soil-testing" },
+    { "title": "USDA ARS — 2023 Plant Hardiness Zone Map", "url": "https://planthardiness.ars.usda.gov/" }
+  ]
+}

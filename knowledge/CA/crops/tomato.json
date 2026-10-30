@@ -1,0 +1,28 @@
+{
+  "country": "CA",
+  "id": "tomato",
+  "highlights": [
+    { "pt": "No Canadá tomate é sempre muda: semeie dentro de casa 6–8 semanas antes e transplante 1–2 semanas após a última geada, com solo acima de 15 °C.", "en": "In Canada tomatoes are always transplants: start indoors 6–8 weeks ahead and set out 1–2 weeks after last frost, with soil above 15 °C." },
+    { "pt": "Nas Pradarias escolha variedades determinadas de menos de 85 dias, como Sub Arctic Plenty.", "en": "On the Prairies choose determinate varieties under 85 days, such as Sub Arctic Plenty." },
+    { "pt": "Protetores tipo Wall O' Water seguram geada até cerca de −11 °C e deixam transplantar 2 semanas antes.", "en": "Wall O' Water protectors hold off frost to about −11 °C and let you transplant 2 weeks earlier." },
+    { "pt": "Em Ontário, pulverize contra pinta-preta e requeima guiado pelos avisos TOM-CAST e BliteCast, só com produtos registrados na PMRA.", "en": "In Ontario, time sprays for early and late blight with TOM-CAST and BliteCast advisories, using only PMRA-registered products." }
+  ],
+  "varieties": ["Sub Arctic Plenty", "Glacier", "Stupice"],
+  "localCalendar": {
+    "region": "Sul de Ontário (Chatham-Kent / Essex)",
+    "hemisphere": "north",
+    "climate": "temperate",
+    "directSowing": [],
+    "seedbed": [3, 4],
+    "transplant": [5, 6],
+    "harvest": [7, 8, 9, 10]
+  },
+  "sources": [
+    { "title": "Tomato News — Ontario production holding steady in Chatham-Kent", "url": "https://tomatonews.com/ontario-production-holding-steady-in-chatham-kent/" },
+    { "title": "Hortidaily — Chatham-Kent accounts for 55% of Ontario's tomato production", "url": "https://www.hortidaily.com/article/6020654/canada-chatham-kent-accounts-for-55-of-ontario-s-tomato-production/" },
+    { "title": "USask Gardening — Tomatoes", "url": "https://gardening.usask.ca/documents/grow-with-us-pdfs/tomatoes_website2025.pdf" },
+    { "title": "ONvegetables — How to access TOMcast", "url": "https://onvegetables.com/2015/07/02/how-to-access-tomcast-vegtools/" },
+    { "title": "ONvegetables — Current late blight risk in Ontario field tomatoes", "url": "https://onvegetables.com/2019/06/20/current-late-blight-risk-in-ontario-field-tomatoes-june-20-2019/" },
+    { "title": "The Packer — Ontario on top (greenhouse)", "url": "https://www.thepacker.com/news/industry/ontario-top-north-americas-powerhouse-greenhouse-growing-continues-expand-and-innov" }
+  ]
+}

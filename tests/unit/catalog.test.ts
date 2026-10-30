@@ -8,10 +8,10 @@ describe("catálogo", () => {
     expect(ANIMALS.map((a) => a.id)).toEqual(["chickens", "pigs", "cows", "sheep", "goats", "ducks"]);
   });
 
-  it("tem 20 plantações, 5 em cada grupo, sem repetição", () => {
-    expect(CROPS).toHaveLength(20);
-    expect(new Set(CROPS.map((c) => c.id)).size).toBe(20);
-    for (const group of CROP_GROUPS) expect(CROPS.filter((c) => c.group === group)).toHaveLength(5);
+  it("tem as 100 culturas mais conhecidas, sem repetição, em 4 grupos", () => {
+    expect(CROPS).toHaveLength(100);
+    expect(new Set(CROPS.map((c) => c.id)).size).toBe(100);
+    expect(CROP_GROUPS.map((g) => CROPS.filter((c) => c.group === g).length)).toEqual([30, 15, 30, 25]);
   });
 
   it.each([

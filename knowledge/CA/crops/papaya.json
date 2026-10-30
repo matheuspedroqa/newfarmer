@@ -1,0 +1,27 @@
+{
+  "country": "CA",
+  "id": "papaya",
+  "highlights": [
+    { "pt": "No Canadá o mamão não se cultiva ao ar livre: precisa de estufa aquecida (zona 10–12; o Canadá vai até a 9).", "en": "In Canada papaya is not grown outdoors: it needs a heated greenhouse (zone 10–12; Canada only reaches 9)." },
+    { "pt": "Em Huron County, Ontário, há mamão produzido em estufas tipo túnel junto com banana e maracujá.", "en": "In Huron County, Ontario, papaya is grown in hoop houses alongside bananas and passion fruit." },
+    { "pt": "Em vaso, pode passar o verão fora, mas volta para dentro antes da primeira geada.", "en": "In a pot it can summer outside, but must come in before the first frost." },
+    { "pt": "Mudas importadas exigem certificado fitossanitário e, de fora dos EUA, permissão do CFIA.", "en": "Imported plants need a phytosanitary certificate and, from outside the US, a CFIA import permit." }
+  ],
+  "varieties": [],
+  "localCalendar": {
+    "region": "Sul de Ontário (sem cultivo ao ar livre; só estufa aquecida)",
+    "hemisphere": "north",
+    "climate": "temperate",
+    "note": "Sem calendário de campo: o mamoeiro não tolera frio. Em estufa aquecida pode ser plantado em qualquer mês.",
+    "directSowing": [],
+    "seedbed": [],
+    "transplant": [],
+    "harvest": []
+  },
+  "sources": [
+    { "title": "World Plants — Carica papaya (Papaya)", "url": "https://worldplants.ca/display.php?id=4490" },
+    { "title": "Natural Resources Canada — Plant hardiness zone maps update", "url": "https://natural-resources.canada.ca/stories/simply-science/zone-canada-s-plant-hardiness-zone-maps-website-get-update" },
+    { "title": "FreshPlaza — Bananas and other tropical fruit growing in Ontario", "url": "https://www.freshplaza.com/north-america/article/2178897/bananas-and-other-tropical-fruit-growing-in-ontario-canada/" },
+    { "title": "CFIA — D-08-04 Import requirements for plants for planting", "url": "https://inspection.canada.ca/en/plant-health/invasive-species/directives/imports/08-04" }
+  ]
+}

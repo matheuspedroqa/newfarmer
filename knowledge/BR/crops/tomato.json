@@ -1,0 +1,28 @@
+{
+  "country": "BR",
+  "id": "tomato",
+  "highlights": [
+    { "pt": "No Sul e Sudeste plante de agosto a janeiro; no Norte, Nordeste e Centro-Oeste, de março a outubro.", "en": "In the South and Southeast plant from August to January; in the North, Northeast and Center-West, from March to October." },
+    { "pt": "A traça-do-tomateiro é a praga nº 1 do país: vistorie folhas e frutos e use Bt ou Trichogramma.", "en": "The tomato leafminer (Tuta absoluta) is Brazil's top tomato pest: scout leaves and fruit and use Bt or Trichogramma." },
+    { "pt": "Mosca-branca transmite geminivírus: use cultivares resistentes, mudas sadias e alterne inseticidas.", "en": "Whiteflies spread geminiviruses: use resistant cultivars, healthy seedlings and rotate insecticides." },
+    { "pt": "BRS Nagai, híbrido Santa Cruz da Embrapa, tolera calor e serve para campo e estufa.", "en": "BRS Nagai, an Embrapa Santa Cruz hybrid, tolerates heat and suits both open field and greenhouse." },
+    { "pt": "Calagem e cálcio evitam o fundo-preto; irrigue por gotejamento para reduzir requeima.", "en": "Liming and calcium prevent blossom-end rot; drip irrigation reduces late blight." }
+  ],
+  "varieties": ["BRS Nagai", "Santa Cruz", "Salada/caqui (longa vida)", "Italiano (saladete)", "Cereja"],
+  "localCalendar": {
+    "region": "Sudeste/Centro-Sul (São Paulo, Minas Gerais)",
+    "hemisphere": "south",
+    "climate": "subtropical",
+    "directSowing": [],
+    "seedbed": [8, 9, 10, 11, 12, 1],
+    "transplant": [9, 10, 11, 12, 1, 2],
+    "harvest": [12, 1, 2, 3, 4, 5]
+  },
+  "sources": [
+    { "title": "Embrapa — BRS Nagai (BP30)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1109674/1/BP30.pdf" },
+    { "title": "Tribuna de Jundiaí — Melhor época para plantar tomate", "url": "https://tribunadejundiai.com.br/mais/horta-e-jardim/melhor-epoca-para-plantar-tomate/" },
+    { "title": "Revista Cultivar — Pragas e doenças comprometem a produção de tomates", "url": "https://revistacultivar.com.br/artigos/pragas-e-doencas-comprometem-a-producao-de-tomates" },
+    { "title": "Embrapa — Avanços no manejo da mosca-branca", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/155460/1/AvancosnoManejodaMoscaBrancapag87110.pdf" },
+    { "title": "Embrapa Clima Temperado — Época de semeadura de tomateiro em estufa", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1169231/1/AP-ClimaTermperado-epoca-de-semeadura-de-tomateiro-em-estufa-plastica-para-producao-na-entressafra.pdf" }
+  ]
+}

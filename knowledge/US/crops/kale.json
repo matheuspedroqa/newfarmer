@@ -1,0 +1,28 @@
+{
+  "country": "US",
+  "id": "kale",
+  "highlights": [
+    { "pt": "Nos EUA há kale (couve-crespa, Norte) e collards (couve lisa, tradição do Sul).", "en": "The US grows kale (curly, North) and collards (smooth-leaf, a Southern tradition)." },
+    { "pt": "Para a safra de outono semeie cerca de 3 meses antes da primeira geada média.", "en": "For a fall crop, sow about 3 months before the average first frost." },
+    { "pt": "Uma geada leve deixa as folhas mais doces; o kale aguenta até cerca de -7 °C.", "en": "A light frost sweetens the leaves; kale survives down to about 20 °F." },
+    { "pt": "Cubra com manta de tecido contra lagarta-da-couve, mede-palmo e traça; Bt funciona.", "en": "Use row cover against cabbageworm, looper and diamondback moth; Bt works." },
+    { "pt": "No Sul (Geórgia) plante de meados de agosto ao fim de setembro e colha no inverno.", "en": "In the South (Georgia) plant mid-August to late September and harvest through winter." }
+  ],
+  "varieties": ["Winterbor", "Dwarf Blue Curled Vates", "Red Russian", "Lacinato", "Champion (collard)", "Georgia Southern (collard)"],
+  "localCalendar": {
+    "region": "Midwest (USDA zone 4–6, e.g. Minnesota)",
+    "hemisphere": "north",
+    "climate": "temperate",
+    "directSowing": [5, 7],
+    "seedbed": [3, 4],
+    "transplant": [4, 5],
+    "harvest": [6, 7, 9, 10, 11]
+  },
+  "sources": [
+    { "title": "UMN Extension — Growing collards and kale in home gardens", "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale" },
+    { "title": "UGA Extension — Fall Vegetable Gardening (C1258)", "url": "https://fieldreport.caes.uga.edu/publications/C1258/fall-vegetable-gardening/" },
+    { "title": "Penn State Master Gardener — Fall Vegetables with Succession Planting", "url": "https://extension.psu.edu/programs/master-gardener/counties/allegheny/news/fall-vegetables-with-succession-planting" },
+    { "title": "NC State Extension — Growing Kale From Seed", "url": "https://pender.ces.ncsu.edu/2019/08/growing-kale-from-seed/" },
+    { "title": "UMN Extension — Caterpillars on cole crops", "url": "https://extension.umn.edu/yard-and-garden-insects/caterpillars-cole-crops" }
+  ]
+}

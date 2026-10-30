@@ -1,0 +1,28 @@
+{
+  "country": "US",
+  "id": "tomato",
+  "highlights": [
+    { "pt": "Semeie dentro de casa 5–6 semanas antes da última geada e só transplante depois dela (no Midwest, meados de maio).", "en": "Start seeds indoors 5–6 weeks before the last frost and transplant after it (mid-May in the Midwest)." },
+    { "pt": "Escolha pelo código de resistência no pacote (V, F, N, T, A, TSW).", "en": "Choose by the resistance codes on the packet (V, F, N, T, A, TSW)." },
+    { "pt": "No Sul há duas safras: primavera (mar–mai) e uma segunda plantada no fim de julho.", "en": "The South gets two crops: spring (Mar–May) and a second one planted in late July." },
+    { "pt": "Regue o solo e não as folhas para evitar pinta-preta e septoriose, comuns no verão úmido.", "en": "Water the soil, not the leaves, to limit early blight and Septoria in humid summers." },
+    { "pt": "Corrija pH (6,2–6,8) e cálcio pelo teste de solo da extensão para evitar podridão apical.", "en": "Fix pH (6.2–6.8) and calcium from an extension soil test to prevent blossom-end rot." }
+  ],
+  "varieties": ["Early Girl", "Better Boy", "Big Beef", "Celebrity", "Sungold", "Super Sweet 100", "Oregon Spring", "Brandywine"],
+  "localCalendar": {
+    "region": "Midwest (USDA zone 4–6, e.g. Minnesota)",
+    "hemisphere": "north",
+    "climate": "temperate",
+    "directSowing": [],
+    "seedbed": [4],
+    "transplant": [5, 6],
+    "harvest": [7, 8, 9]
+  },
+  "sources": [
+    { "title": "UMN Extension — Growing tomatoes in home gardens", "url": "https://extension.umn.edu/vegetables/growing-tomatoes" },
+    { "title": "UMN Extension — Early blight in tomato and potato", "url": "https://extension.umn.edu/disease-management/early-blight-tomato-and-potato" },
+    { "title": "OSU Extension — Grow your own tomatoes and tomatillos (EC 1333)", "url": "https://extension.oregonstate.edu/catalog/ec-1333-grow-your-own-tomatoes-tomatillos" },
+    { "title": "UGA Extension — Georgia Homegrown Tomatoes (B1271)", "url": "https://fieldreport.caes.uga.edu/publications/B1271/" },
+    { "title": "Texas A&M AgriLife — Tomato (EHT-043)", "url": "https://aggie-horticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2013/09/EHT-043.pdf" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "country": "CA",
+  "id": "passionFruit",
+  "highlights": [
+    { "pt": "No Canadá o maracujá de fruta não se cultiva ao ar livre: só em estufa ou em vaso dentro de casa.", "en": "In Canada fruiting passion fruit is not grown outdoors: only in a greenhouse or in pots indoors." },
+    { "pt": "Na costa da Colúmbia Britânica, a Passiflora caerulea sobrevive contra um muro virado ao sul, mas é ornamental.", "en": "On the BC coast, Passiflora caerulea survives against a south-facing wall, but it is ornamental." },
+    { "pt": "Vaso fica fora só no verão e entra antes da primeira geada de outono.", "en": "Keep the pot outside only in summer and bring it in before the first fall frost." },
+    { "pt": "Mudas importadas exigem certificado fitossanitário e, de fora dos EUA, permissão do CFIA.", "en": "Imported plants need a phytosanitary certificate and, from outside the US, a CFIA import permit." }
+  ],
+  "varieties": ["Passiflora edulis (só estufa/vaso)", "Passiflora caerulea (ornamental, costa de BC)", "Passiflora incarnata (maypop)"],
+  "localCalendar": {
+    "region": "Sul de Ontário (sem cultivo ao ar livre; só estufa/vaso)",
+    "hemisphere": "north",
+    "climate": "temperate",
+    "note": "Sem calendário de campo: o maracujá comestível não tolera geada. Em estufa aquecida cresce o ano todo.",
+    "directSowing": [],
+    "seedbed": [],
+    "transplant": [],
+    "harvest": []
+  },
+  "sources": [
+    { "title": "Natural Resources Canada — Plant hardiness zone maps update", "url": "https://natural-resources.canada.ca/stories/simply-science/zone-canada-s-plant-hardiness-zone-maps-website-get-update" },
+    { "title": "FreshPlaza — Bananas and other tropical fruit growing in Ontario", "url": "https://www.freshplaza.com/north-america/article/2178897/bananas-and-other-tropical-fruit-growing-in-ontario-canada/" },
+    { "title": "Phoenix Perennials — Passiflora caerulea", "url": "https://www.phoenixperennials.com/?p=4348" },
+    { "title": "CFIA — D-08-04 Import requirements for plants for planting", "url": "https://inspection.canada.ca/en/plant-health/invasive-species/directives/imports/08-04" }
+  ]
+}

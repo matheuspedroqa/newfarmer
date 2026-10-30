@@ -1,0 +1,27 @@
+{
+  "country": "CA",
+  "id": "cassava",
+  "highlights": [
+    { "pt": "No Canadá a mandioca não se cultiva ao ar livre: é muito sensível à geada e o verão é curto demais.", "en": "In Canada cassava is not grown outdoors: it is very frost-sensitive and the summer is too short." },
+    { "pt": "Só dá para tentar em vaso grande ou estufa, levando para fora no verão e recolhendo antes da geada.", "en": "You can only try it in a large pot or greenhouse, outside in summer and back in before frost." },
+    { "pt": "Em Ontário, a raiz de clima quente testada pela pesquisa (Vineland) é a batata-doce, não a mandioca.", "en": "In Ontario, the warm-climate root crop tested by research (Vineland) is sweet potato, not cassava." },
+    { "pt": "Estacas importadas exigem certificado fitossanitário e, de fora dos EUA, permissão do CFIA.", "en": "Imported cuttings need a phytosanitary certificate and, from outside the US, a CFIA import permit." }
+  ],
+  "varieties": [],
+  "localCalendar": {
+    "region": "Sul de Ontário (sem cultivo ao ar livre)",
+    "hemisphere": "north",
+    "climate": "temperate",
+    "note": "Sem calendário de campo: a mandioca não tolera geada e precisa de mais meses quentes do que o verão canadense oferece.",
+    "directSowing": [],
+    "seedbed": [],
+    "transplant": [],
+    "harvest": []
+  },
+  "sources": [
+    { "title": "ECHOcommunity — Cassava (Manihot esculenta)", "url": "https://www.echocommunity.org/plants/337/plant_varieties" },
+    { "title": "Natural Resources Canada — Plant hardiness zone maps update", "url": "https://natural-resources.canada.ca/stories/simply-science/zone-canada-s-plant-hardiness-zone-maps-website-get-update" },
+    { "title": "Better Farming — Feds throw money into Vineland station's crop projects", "url": "https://www.betterfarming.com/magazines/better-farming-ontario/featured-articles/feds-throw-money-into-vineland-stations-crop-projects" },
+    { "title": "CFIA — D-08-04 Import requirements for plants for planting", "url": "https://inspection.canada.ca/en/plant-health/invasive-species/directives/imports/08-04" }
+  ]
+}

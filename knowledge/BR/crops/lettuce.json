@@ -1,0 +1,28 @@
+{
+  "country": "BR",
+  "id": "lettuce",
+  "highlights": [
+    { "pt": "No verão quente a alface pendoa e amarga: use crespas tolerantes ao calor, como BRS Leila ou BRS Mediterrânea.", "en": "In hot summers lettuce bolts and turns bitter: use heat-tolerant loose-leaf types such as BRS Leila or BRS Mediterrânea." },
+    { "pt": "No Sudeste dá para plantar o ano todo; outono e inverno (mar–ago) dão as melhores cabeças.", "en": "In Southeast Brazil you can plant all year; autumn and winter (Mar–Aug) give the best heads." },
+    { "pt": "No verão, cubra o canteiro com sombrite de 50 a 70%; nas chuvas, prefira estufa ou túnel.", "en": "In summer, cover beds with 50–70% shade cloth; in the rainy season, prefer a greenhouse or tunnel." },
+    { "pt": "Faça calagem uns 20 dias antes do transplante, para saturação por bases perto de 70%.", "en": "Lime about 20 days before transplanting, aiming at roughly 70% base saturation." },
+    { "pt": "Tripes transmitem o vira-cabeça, que pode destruir a lavoura: mudas sadias, tela e capina.", "en": "Thrips spread tomato spotted wilt ('vira-cabeça'), which can wipe out a crop: use healthy seedlings, netting and weeding." }
+  ],
+  "varieties": ["BRS Leila", "BRS Mediterrânea", "BRS Lélia", "Americana Piedade"],
+  "localCalendar": {
+    "region": "Sudeste/Centro-Sul (São Paulo, sul de Minas)",
+    "hemisphere": "south",
+    "climate": "subtropical",
+    "directSowing": [],
+    "seedbed": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "transplant": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "sources": [
+    { "title": "Embrapa — Alface crespa (2018)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1092024/1/Alface-Crespa.2018.pdf" },
+    { "title": "Revista Cultivar — Embrapa lança variedade de alface tolerante ao calor", "url": "https://revistacultivar.com.br/noticias/embrapa-lanca-variedade-de-alface-tolerante-ao-calor" },
+    { "title": "Revista Cultivar — Embrapa apresenta alfaces tolerantes às altas temperaturas na Hortitec", "url": "https://revistacultivar.com.br/noticias/embrapa-apresenta-alfaces-tolerantes-as-altas-temperaturas-na-hortitec" },
+    { "title": "Embrapa — Recomendação de calagem e adubação para hortaliças (2020)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1127293/1/LV-RecomendacaoSolo-2020-299-301.pdf" },
+    { "title": "Embrapa Hortaliças — Doenças da alface", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/866064/1/CNPHDOEN.DAALFACE10.pdf" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "country": "US",
+  "id": "banana",
+  "highlights": [
+    { "pt": "Só dá fruto em zonas quentes (Sul da Flórida, Havaí, Sul do Texas). Abaixo de 28 °F morre até o chão, mas costuma rebrotar do rizoma.", "en": "Fruits only in warm zones (South Florida, Hawaii, South Texas). Below 28°F it dies back to the ground but usually regrows from the rhizome." },
+    { "pt": "Na Flórida, plante os filhotes em maio–junho, no começo das chuvas, no canto mais quente e que não alaga.", "en": "In Florida, plant suckers in May–June as the rains start, in the warmest spot that doesn't flood." },
+    { "pt": "Deixe no máximo 4 filhotes por touceira e corte o pseudocaule depois de colher o cacho.", "en": "Keep no more than 4 suckers per clump and cut the pseudostem after harvesting the bunch." },
+    { "pt": "No Havaí é proibido levar mudas de bananeira de Oahu e de Kona para outras ilhas, por causa do vírus do topo-em-leque (BBTV).", "en": "In Hawaii, moving banana plants from Oahu and Kona to other islands is prohibited because of banana bunchy top virus." },
+    { "pt": "No Havaí a apple banana (Dwarf Brazilian) é a mais plantada porque tolera o BBTV.", "en": "In Hawaii, the apple banana (Dwarf Brazilian) leads because it tolerates bunchy top." }
+  ],
+  "varieties": ["Dwarf Cavendish", "Williams", "Dwarf Brazilian (Hawaiian apple)", "Apple/Manzana", "Lady Finger", "Ice Cream (Blue Java)", "Orinoco", "Rajapuri", "Goldfinger (FHIA-01)", "Namwa"],
+  "localCalendar": {
+    "region": "South Florida (Miami-Dade/Palm Beach)",
+    "hemisphere": "north",
+    "climate": "subtropical",
+    "directSowing": [],
+    "seedbed": [],
+    "transplant": [5, 6],
+    "harvest": [7, 8, 9, 10, 11]
+  },
+  "sources": [
+    { "title": "UF/IFAS Indian River County — Growing Bananas in Florida", "url": "https://blogs.ifas.ufl.edu/indianriverco/2020/06/03/growing-bananas-in-florida/" },
+    { "title": "UF/IFAS EDIS — Banana Growing in the Florida Home Landscape (MG040)", "url": "https://ask.ifas.ufl.edu/publication/MG040" },
+    { "title": "HDOA — Banana Stats 2020", "url": "https://dab.hawaii.gov/add/files/2021/09/Banana-Stats-2020_SOH_09.30.21.pdf" },
+    { "title": "Haw. Code R. §4-72-11 — Restrictions on banana", "url": "https://www.law.cornell.edu/regulations/hawaii/Haw-Code-R-SS-4-72-11" },
+    { "title": "HDOA — Interisland Inspection Program", "url": "https://dab.hawaii.gov/pi/?p=319" }
+  ]
+}

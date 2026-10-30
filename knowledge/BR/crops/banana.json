@@ -1,0 +1,29 @@
+{
+  "country": "BR",
+  "id": "banana",
+  "highlights": [
+    { "pt": "Prefira cultivares Embrapa resistentes, como BRS Platina, BRS Prata Garantida e BRS Conquista, onde há sigatoka ou mal-do-Panamá.", "en": "Choose Embrapa resistant cultivars such as BRS Platina, BRS Prata Garantida and BRS Conquista where Sigatoka or Panama disease occur." },
+    { "pt": "Sem irrigação, plante as mudas no início das chuvas (out–dez no Sudeste), mas nunca em solo encharcado.", "en": "Without irrigation, plant at the start of the rains (Oct–Dec in the Southeast), but never into waterlogged soil." },
+    { "pt": "Use mudas micropropagadas de viveiro registrado no RENASEM: produzem mais cedo e de forma uniforme.", "en": "Use tissue-culture plantlets from a RENASEM-registered nursery: they bear earlier and more evenly." },
+    { "pt": "Por volta do 4º mês, faça o desbaste e deixe só o rebento mais forte (mãe–filho–neto).", "en": "Around month 4, thin the suckers, keeping only the strongest one (mother–daughter–granddaughter)." },
+    { "pt": "O mal-do-Panamá não tem controle químico: só mudas sadias e cultivares resistentes.", "en": "Panama disease has no chemical control: only clean plantlets and resistant cultivars help." }
+  ],
+  "varieties": ["Prata", "Prata-Anã", "Nanica", "Nanicão", "Grande Naine", "Maçã", "Ouro", "BRS Platina", "BRS Prata Garantida", "BRS Princesa", "BRS Conquista"],
+  "localCalendar": {
+    "region": "Sudeste (São Paulo e Minas Gerais), sequeiro",
+    "hemisphere": "south",
+    "climate": "tropical",
+    "directSowing": [],
+    "seedbed": [],
+    "transplant": [10, 11, 12],
+    "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "sources": [
+    { "title": "Embrapa — Folder BRS Princesa", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1093794/1/folderBRSPRINCESAAinfo.pdf" },
+    { "title": "Embrapa — Folder BRS Prata Garantida", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/674145/1/FolderPrataGarantida.pdf" },
+    { "title": "Embrapa Amapá — A cultura da banana (1999)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/344128/1/CPAFAP1999CULTURADABANANA.pdf" },
+    { "title": "Embrapa — Manejo de mudas (folder)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1058934/1/folderManejoMudas1.pdf" },
+    { "title": "Revista Cultivar — Produtores aprovam BRS Conquista", "url": "https://www.revistacultivar.com.br/noticias/produtores-de-banana-aprovam-a-cultivar-da-embrapa-brs-conquista" },
+    { "title": "CNA — Dia da Banana", "url": "https://cnabrasil.org.br/noticias/dia-da-banana-fruta-e-cultivada-em-todos-os-estados" }
+  ]
+}

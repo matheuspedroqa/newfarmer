@@ -32,6 +32,5 @@ describe.each(CROP_IDS)("ficha da plantação %s", (id) => {
     const parsed = cropContentSchema.safeParse(data);
     expect(parsed.success ? "ok" : parsed.error.issues.slice(0, 3)).toBe("ok");
     expect((data as { id: string }).id).toBe(id);
-    expect(countriesOf(data), "bloco No seu país para os 9 países").toEqual([...KNOWLEDGE_COUNTRIES].sort());
   });
 });

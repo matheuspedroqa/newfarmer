@@ -1,0 +1,29 @@
+{
+  "country": "CA",
+  "id": "lettuce",
+  "highlights": [
+    { "pt": "Plante pela data de geada da sua cidade: a alface tolera geada leve e pode ir para o campo em abril no sul de Ontário e em meados de maio nas Pradarias.", "en": "Plant by your town's frost date: lettuce tolerates light frost and can go out in April in southern Ontario and mid-May on the Prairies." },
+    { "pt": "Acima de 20 °C a alface pendoa; faça plantios curtos e escalonados na primavera e volte a semear em agosto para colher no outono.", "en": "Above 20 °C lettuce bolts; sow short successive crops in spring and sow again in August for a fall harvest." },
+    { "pt": "Nas Pradarias evite alface americana (iceberg); prefira folha, manteiga e romana com ciclo menor que 60 dias.", "en": "On the Prairies avoid iceberg; choose leaf, butterhead and romaine types maturing in under 60 days." },
+    { "pt": "Vigie a cigarrinha que transmite o amarelo-do-áster; ela passa o inverno no trigo e centeio de inverno e não há cultivar resistente.", "en": "Watch for the aster leafhopper that spreads aster yellows; it overwinters in winter wheat and rye and no resistant cultivar exists." },
+    { "pt": "Use só pesticidas registrados na PMRA (Health Canada) e conforme o rótulo; em Ontário pesticidas cosméticos são proibidos em hortas domésticas.", "en": "Use only PMRA-registered pesticides as labelled; in Ontario cosmetic pesticides are banned in home vegetable gardens." }
+  ],
+  "varieties": ["Buttercrunch", "Parris Island Cos", "Jericho"],
+  "localCalendar": {
+    "region": "Sul de Ontário (Toronto / Holland Marsh)",
+    "hemisphere": "north",
+    "climate": "temperate",
+    "directSowing": [4, 5, 8],
+    "seedbed": [3, 4],
+    "transplant": [4, 5],
+    "harvest": [5, 6, 7, 8, 9, 10]
+  },
+  "sources": [
+    { "title": "Ontario.ca — Climate zones and planting dates for vegetables in Ontario", "url": "https://www.ontario.ca/page/climate-zones-and-planting-dates-vegetables-ontario" },
+    { "title": "Ontario.ca — Aster leafhopper and aster yellows", "url": "https://ontario.ca/page/aster-leafhopper-and-aster-yellows" },
+    { "title": "USask Gardening — Lettuce", "url": "https://gardening.usask.ca/documents/grow-with-us-pdfs/lettuce_website2025.pdf" },
+    { "title": "USask Gardening — Determining planting dates", "url": "https://gardening.usask.ca/articles-and-lists/articles-notillgardening/planting-dates.php" },
+    { "title": "Holland Marsh Profile of Horticulture", "url": "https://edo.simcoe.ca/wp-content/uploads/2023/02/Holland-Marsh-Profile-of-Horticulture.pdf" },
+    { "title": "Health Canada — Pesticides and pest management FAQ", "url": "https://www.canada.ca/en/health-canada/services/consumer-product-safety/pesticides-pest-management/frequently-asked-questions.html" }
+  ]
+}

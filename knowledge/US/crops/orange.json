@@ -1,0 +1,28 @@
+{
+  "country": "US",
+  "id": "orange",
+  "highlights": [
+    { "pt": "Por causa do greening (HLB), é proibido levar plantas e frutos de citros para fora das áreas em quarentena. Nunca transporte mudas do quintal.", "en": "Because of citrus greening (HLB), moving citrus plants and fruit out of quarantined areas is illegal. Never move backyard trees." },
+    { "pt": "Compre só mudas de viveiro certificado do seu estado. Mudas só cruzam fronteiras estaduais com acordo de conformidade com o APHIS.", "en": "Buy trees only from a certified in-state nursery; nursery stock crosses state lines only under an APHIS compliance agreement." },
+    { "pt": "Na Flórida, a melhor época para plantar laranjeira é de julho a outubro.", "en": "In Florida, the best time to plant a citrus tree is July through October." },
+    { "pt": "Combine variedades: Hamlin ou Valencia precoce (nov–fev) e Valencia (mar–jun) dão fruta de novembro a junho.", "en": "Mix varieties: Hamlin or early Valencia (Nov–Feb) plus Valencia (Mar–Jun) gives fruit from November to June." },
+    { "pt": "Proteja as mudas com tela contra o psilídeo e use adubo próprio para citros com regularidade.", "en": "Screen young trees against the psyllid and fertilize regularly with a citrus fertilizer." }
+  ],
+  "varieties": ["Hamlin", "Valencia", "Early Valencia (UF/IFAS)", "Sugar Belle (mandarin hybrid)"],
+  "localCalendar": {
+    "region": "Central Florida (Polk County/Lakeland)",
+    "hemisphere": "north",
+    "climate": "subtropical",
+    "directSowing": [],
+    "seedbed": [],
+    "transplant": [7, 8, 9, 10],
+    "harvest": [11, 12, 1, 2, 3, 4, 5, 6]
+  },
+  "sources": [
+    { "title": "UF/IFAS CREC — Home Citrus: Getting Ready", "url": "https://crec.ifas.ufl.edu/home-citrus/getting-ready/" },
+    { "title": "UF/IFAS Hillsborough — Growing Citrus in the Florida Home Landscape", "url": "https://blogs.ifas.ufl.edu/hillsboroughco/2026/05/25/growing-citrus-in-the-florida-home-landscape/" },
+    { "title": "UF/IFAS News — Two new early Valencia orange varieties", "url": "https://blogs.ifas.ufl.edu/news/2016/05/05/nurseries-excited-about-two-new-early-valencia-orange-varieties-from-ufifas/" },
+    { "title": "USDA — Save Our Citrus", "url": "https://www.usda.gov/node/18299" },
+    { "title": "USDA APHIS — Protocol for interstate movement of citrus nursery stock", "url": "https://direct.aphis.usda.gov/sites/default/files/citrus-nursery-stock-protocol-interstate-movement.pdf" }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "country": "CA",
+  "id": "banana",
+  "highlights": [
+    { "pt": "No Canadá a banana não se cultiva ao ar livre: só em estufa aquecida ou em vaso dentro de casa.", "en": "In Canada bananas are not grown outdoors: only in heated greenhouses or in pots indoors." },
+    { "pt": "Prefira bananeiras anãs (cerca de 2 m) e mantenha uns 20 °C com umidade alta.", "en": "Choose dwarf bananas (about 2 m) and keep around 20 °C with high humidity." },
+    { "pt": "A Musa basjoo aguenta o inverno com cobertura de palha, mas é só ornamental: não dá fruta comestível.", "en": "Musa basjoo survives winter under straw mulch, but it is ornamental only: no edible fruit." },
+    { "pt": "Vaso pode ir para fora no verão, mas volta para dentro antes da primeira geada.", "en": "Pots can go outside in summer but must come in before the first frost." },
+    { "pt": "Mudas importadas exigem certificado fitossanitário e, de fora dos EUA, permissão do CFIA.", "en": "Imported plants need a phytosanitary certificate and, from outside the US, a CFIA import permit." }
+  ],
+  "varieties": ["Bananeira anã (dwarf)", "Musa basjoo (ornamental, sem fruta)"],
+  "localCalendar": {
+    "region": "Sul de Ontário (sem cultivo ao ar livre; só estufa aquecida)",
+    "hemisphere": "north",
+    "climate": "temperate",
+    "note": "Sem calendário de campo: a bananeira não tolera geada. Em estufa a ~20 °C cresce o ano todo e frutifica em 8 a 18 meses.",
+    "directSowing": [],
+    "seedbed": [],
+    "transplant": [],
+    "harvest": []
+  },
+  "sources": [
+    { "title": "Statistics Canada — Bananas: Peeling away at inflation", "url": "https://www.statcan.gc.ca/o1/en/plus/6085-bananas-peeling-away-inflation" },
+    { "title": "Natural Resources Canada — Plant hardiness zone maps update", "url": "https://natural-resources.canada.ca/stories/simply-science/zone-canada-s-plant-hardiness-zone-maps-website-get-update" },
+    { "title": "Farm Show — They're Growing Bananas In Canada", "url": "https://farmshow.com/a_article.php?aid=35493" },
+    { "title": "FreshPlaza — Bananas and other tropical fruit growing in Ontario", "url": "https://www.freshplaza.com/north-america/article/2178897/bananas-and-other-tropical-fruit-growing-in-ontario-canada/" },
+    { "title": "CFIA — D-08-04 Import requirements for plants for planting", "url": "https://inspection.canada.ca/en/plant-health/invasive-species/directives/imports/08-04" }
+  ]
+}
