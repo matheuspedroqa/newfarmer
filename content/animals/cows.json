@@ -1,97 +1,785 @@
 {
   "id": "cows",
   "summary": {
-    "pt": "Vacas pedem mais área e mais investimento, mas dão leite todos os dias e ajudam a manter o pasto. A escolha da raça certa para o seu clima é a decisão mais importante: raças europeias sofrem no calor, raças zebuínas e mestiças aguentam melhor.",
-    "en": "Cows need more land and investment, but they give milk every day and help maintain pasture. Choosing the right breed for your climate is the key decision: European breeds suffer in heat, zebu and crossbreeds cope better."
+    "pt": "Vacas pedem mais área e mais investimento, mas dão leite todos os dias e ajudam a manter o pasto. A escolha da raça certa para o seu clima é a decisão mais importante: raças europeias sofrem no calor, zebuínas e mestiças aguentam melhor, e no frio o desafio é vento, cama e água sem gelo. Antes do primeiro animal, registre a propriedade: bovinos têm brinco, documento de trânsito e exames oficiais em quase todos os países.",
+    "en": "Cows need more land and investment, but they give milk every day and help maintain pasture. Choosing the right breed for your climate is the key decision: European breeds suffer in heat, zebu and crossbreeds cope better, and in the cold the challenge is wind, bedding and ice-free water. Register your farm before the first animal: cattle need ear tags, movement papers and official tests in almost every country."
   },
   "breeds": [
-    { "name": "Girolando", "purpose": { "pt": "Leite", "en": "Milk" }, "notes": { "pt": "Cruzamento de Gir com Holandesa; responde por boa parte do leite do Brasil e tolera bem o calor.", "en": "Gir × Holstein cross; supplies much of Brazil's milk and tolerates heat well." } },
-    { "name": "Jersey", "purpose": { "pt": "Leite", "en": "Milk" }, "notes": { "pt": "Porte pequeno, leite rico em gordura, dócil; boa para pequenas propriedades.", "en": "Small frame, butterfat-rich milk, docile; good for small farms." } },
-    { "name": "Holandesa", "purpose": { "pt": "Leite", "en": "Milk" }, "notes": { "pt": "Maior produção de leite, mas sofre com calor; indicada para clima ameno ou frio.", "en": "Highest milk yield but suffers in heat; suited to mild or cold climates." } },
-    { "name": "Gir Leiteiro", "purpose": { "pt": "Leite", "en": "Milk" }, "notes": { "pt": "Zebuína, muito resistente ao calor e a carrapatos.", "en": "Zebu breed, very resistant to heat and ticks." } },
-    { "name": "Nelore", "purpose": { "pt": "Carne", "en": "Beef" }, "notes": { "pt": "Raça de corte mais criada no Brasil; rústica e adaptada ao pasto tropical.", "en": "Brazil's most common beef breed; hardy and adapted to tropical pasture." } }
+    {
+      "name": "Girolando",
+      "purpose": {
+        "pt": "Leite",
+        "en": "Milk"
+      },
+      "notes": {
+        "pt": "Cruzamento brasileiro de Gir com Holandesa; responde por boa parte do leite do Brasil e tolera bem o calor tropical.",
+        "en": "Brazilian Gir × Holstein cross; supplies much of Brazil's milk and tolerates tropical heat well."
+      }
+    },
+    {
+      "name": "Nelore",
+      "purpose": {
+        "pt": "Carne",
+        "en": "Beef"
+      },
+      "notes": {
+        "pt": "Zebuína, a raça de corte mais criada no Brasil; rústica, resistente a carrapatos e adaptada ao pasto tropical e à seca do Cerrado.",
+        "en": "Zebu breed, Brazil's most common beef breed; hardy, tick-resistant and adapted to tropical pasture and the Cerrado dry season."
+      }
+    },
+    {
+      "name": "Holandesa (Holstein)",
+      "purpose": {
+        "pt": "Leite",
+        "en": "Milk"
+      },
+      "notes": {
+        "pt": "Maior produção de leite e raça leiteira dominante nos EUA, Canadá e Europa, mas sofre com calor; indicada para clima temperado ou frio.",
+        "en": "Highest milk yield and the dominant dairy breed in the US, Canada and Europe, but suffers in heat; suited to temperate or cold climates."
+      }
+    },
+    {
+      "name": "Jersey",
+      "purpose": {
+        "pt": "Leite",
+        "en": "Milk"
+      },
+      "notes": {
+        "pt": "De porte pequeno, leite rico em gordura e dócil; muito usada como 'vaca da família' nos EUA e boa para pequenas propriedades.",
+        "en": "Small frame, butterfat-rich milk and docile; popular as a 'family milk cow' in the US and good for small farms."
+      }
+    },
+    {
+      "name": "Angus",
+      "purpose": {
+        "pt": "Carne",
+        "en": "Beef"
+      },
+      "notes": {
+        "pt": "A raça de corte mais registrada no Canadá e popular nos EUA; mansa, fértil e boa para iniciantes em clima temperado e frio.",
+        "en": "The most registered beef breed in Canada and popular in the US; calm, fertile and good for beginners in temperate and cold climates."
+      }
+    },
+    {
+      "name": "Montbéliarde",
+      "purpose": {
+        "pt": "Leite (queijo)",
+        "en": "Milk (cheese)"
+      },
+      "notes": {
+        "pt": "Raça francesa de montanha, exigida no leite do queijo Comté; boa para clima temperado e frio com pasto de altitude.",
+        "en": "French mountain breed required for Comté cheese milk; suits temperate and cold climates with upland pasture."
+      }
+    },
+    {
+      "name": "Rubia Gallega",
+      "purpose": {
+        "pt": "Carne",
+        "en": "Beef"
+      },
+      "notes": {
+        "pt": "Raça do norte atlântico úmido da Espanha, base da IGP Ternera Gallega; adaptada a pasto verde e clima ameno.",
+        "en": "Breed from Spain's humid Atlantic north, the basis of the Ternera Gallega PGI; adapted to green pasture and mild climates."
+      }
+    },
+    {
+      "name": "Suizo Pardo × Cebú (duplo propósito)",
+      "purpose": {
+        "pt": "Leite e bezerro",
+        "en": "Milk and calves"
+      },
+      "notes": {
+        "pt": "Cruzamento típico do trópico mexicano; aguenta calor e carrapato e dá leite e bezerro na mesma vaca.",
+        "en": "Typical cross in Mexico's tropics; copes with heat and ticks and gives both milk and a calf from the same cow."
+      }
+    }
   ],
   "idealTemp": {
     "minC": 5,
     "maxC": 25,
     "notes": {
-      "pt": "Vacas leiteiras europeias produzem melhor entre 5 e 25 °C; acima disso caem o apetite e o leite. Girolando e Gir toleram vários graus a mais.",
-      "en": "European dairy cows produce best between 5 and 25 °C; above that, appetite and milk drop. Girolando and Gir tolerate several degrees more."
+      "pt": "Vacas leiteiras europeias produzem melhor entre 5 e 25 °C; acima disso caem o apetite, a ruminação e o leite (sinais de estresse por calor: respiração acelerada, boca aberta e baba). Girolando, Gir, Nelore e cruzas com Cebu toleram vários graus a mais. No frio, uma vaca adulta seca e com pelo de inverno começa a gastar mais energia por volta de -8 °C, mas vento e pelo molhado antecipam muito o problema; tremor, perda de peso e congelamento das pontas são alertas. Bezerros recém-nascidos sentem frio e calor bem antes dos adultos.",
+      "en": "European dairy cows produce best between 5 and 25 °C; above that appetite, rumination and milk drop (heat-stress signs: fast breathing, open-mouth panting and drooling). Girolando, Gir, Nelore and zebu crosses tolerate several degrees more. In the cold, a dry adult cow with a winter coat starts burning extra energy around -8 °C, but wind and a wet coat bring the problem on much sooner; shivering, weight loss and frostbitten extremities are warnings. Newborn calves feel cold and heat well before adults."
     }
   },
   "seasonalCare": {
     "tropical": {
-      "summer": { "pt": "Sombra no pasto, água à vontade e controle de carrapatos e moscas, que explodem no calor úmido.", "en": "Shade in pasture, unlimited water and control of ticks and flies, which surge in humid heat." },
-      "autumn": { "pt": "Faça silagem ou feno com o excedente de capim para a seca.", "en": "Make silage or hay from surplus grass for the dry season." },
-      "winter": { "pt": "Seca: suplemente com silagem, cana com ureia (sob orientação) e sal mineral.", "en": "Dry season: supplement with silage, sugarcane with urea (with guidance) and mineral salt." },
-      "spring": { "pt": "Volta das chuvas: vacine (aftosa e brucelose conforme calendário oficial) e vermifugue os bezerros.", "en": "Rains return: vaccinate (foot-and-mouth and brucellosis per official schedule) and deworm calves." }
+      "summer": {
+        "pt": "Época das águas: sombra no pasto, água à vontade e controle de carrapatos, moscas e berne, que explodem no calor úmido. Cure o umbigo dos bezerros na hora contra bicheira.",
+        "en": "Rainy season: shade in pasture, unlimited water and control of ticks, flies and botfly, which surge in humid heat. Treat calves' navels right away against screwworm."
+      },
+      "autumn": {
+        "pt": "Faça silagem ou feno com o excedente de capim para a seca.",
+        "en": "Make silage or hay from surplus grass for the dry season."
+      },
+      "winter": {
+        "pt": "Seca: suplemente com silagem, cana com ureia (sob orientação) e sal mineral ou proteinado; ajuste a lotação ao pasto.",
+        "en": "Dry season: supplement with silage, sugarcane with urea (with guidance) and mineral or protein salt; match stocking to pasture."
+      },
+      "spring": {
+        "pt": "Volta das chuvas: siga o calendário oficial (ex.: brucelose nas bezerras), vermifugue os bezerros e revise o controle de carrapato.",
+        "en": "Rains return: follow the official schedule (e.g. brucellosis in heifer calves), deworm calves and review tick control."
+      }
     },
     "subtropical": {
-      "summer": { "pt": "Sombra e água; ordenhe nas horas frescas e controle carrapatos.", "en": "Shade and water; milk in the cool hours and control ticks." },
-      "autumn": { "pt": "Plante pastagens de inverno (aveia, azevém) para o frio.", "en": "Sow winter pastures (oats, ryegrass) for the cold season." },
-      "winter": { "pt": "Geada reduz o pasto: complemente com silagem e feno; abrigue os bezerros do vento.", "en": "Frost reduces pasture: supplement with silage and hay; shelter calves from wind." },
-      "spring": { "pt": "Época de partos e de pasto novo; cuidado com timpanismo ao soltar em pasto muito verde.", "en": "Calving season and fresh pasture; watch for bloat when turning out onto lush grass." }
+      "summer": {
+        "pt": "Verão seco seca o pasto: sombra, muita água e feno guardado; ordenhe e maneje nas horas frescas.",
+        "en": "Dry summer burns off pasture: shade, plenty of water and stored hay; milk and handle in the cool hours."
+      },
+      "autumn": {
+        "pt": "Chuvas renovam o pasto; plante pastagens de inverno (aveia, azevém). Época de mosquitos da língua azul: vacine quando a autoridade recomendar.",
+        "en": "Rains renew pasture; sow winter pastures (oats, ryegrass). Bluetongue midge season: vaccinate when the authority recommends it."
+      },
+      "winter": {
+        "pt": "Geada reduz o pasto: complemente com silagem e feno; abrigue os bezerros do vento e da chuva.",
+        "en": "Frost reduces pasture: supplement with silage and hay; shelter calves from wind and rain."
+      },
+      "spring": {
+        "pt": "Pasto farto e época de fenação e partos; cuidado com timpanismo ao soltar em pasto muito verde.",
+        "en": "Abundant pasture, haymaking and calving season; watch for bloat when turning out onto lush grass."
+      }
     },
     "temperate": {
-      "summer": { "pt": "Pasto farto; garanta sombra e água limpa e controle moscas.", "en": "Plenty of pasture; ensure shade, clean water and fly control." },
-      "autumn": { "pt": "Estoque feno e silagem; vermifugue antes de recolher para o inverno.", "en": "Stock hay and silage; deworm before housing for winter." },
-      "winter": { "pt": "Estábulo seco e ventilado, cama limpa, água sem congelar.", "en": "Dry, ventilated barn, clean bedding, unfrozen water." },
-      "spring": { "pt": "Partos e volta ao pasto aos poucos para evitar timpanismo.", "en": "Calving and gradual return to pasture to prevent bloat." }
+      "summer": {
+        "pt": "Pasto farto ou pasto de montanha; garanta sombra, água limpa e controle de moscas. Vacine contra língua azul antes da época dos mosquitos.",
+        "en": "Plenty of pasture or mountain grazing; ensure shade, clean water and fly control. Vaccinate against bluetongue before midge season."
+      },
+      "autumn": {
+        "pt": "Estoque feno e silagem; vermifugue antes de recolher. Na Europa é época dos exames oficiais do rebanho (tuberculose, brucelose).",
+        "en": "Stock hay and silage; deworm before housing. In Europe it is official herd-testing season (tuberculosis, brucellosis)."
+      },
+      "winter": {
+        "pt": "Estábulo seco e ventilado, cama limpa, água sem congelar; até raças rústicas ao ar livre precisam de abrigo contra chuva fria e vento.",
+        "en": "Dry, ventilated barn, clean bedding, unfrozen water; even hardy breeds kept outdoors need shelter from cold rain and wind."
+      },
+      "spring": {
+        "pt": "Partos junto com o crescimento do pasto; volte ao pasto aos poucos para evitar timpanismo.",
+        "en": "Calve as pasture starts growing; return to grazing gradually to prevent bloat."
+      }
     },
     "semiarid": {
-      "summer": { "pt": "Calor extremo: sombra, água e raças zebuínas; evite trabalhar o gado no sol.", "en": "Extreme heat: shade, water and zebu breeds; avoid working cattle in the sun." },
-      "autumn": { "pt": "Chuvas curtas: faça reserva de forragem (silagem, palma, feno).", "en": "Short rains: build forage reserves (silage, forage cactus, hay)." },
-      "winter": { "pt": "Suplemente com palma forrageira e sal mineral.", "en": "Supplement with forage cactus and mineral salt." },
-      "spring": { "pt": "Seca severa: ajuste o número de animais à água e comida disponíveis.", "en": "Severe drought: match herd size to available water and feed." }
+      "summer": {
+        "pt": "Calor extremo: sombra, água abundante e raças zebuínas ou cruzadas; não trabalhe o gado no sol.",
+        "en": "Extreme heat: shade, plenty of water and zebu or crossbred cattle; do not work cattle in the sun."
+      },
+      "autumn": {
+        "pt": "Chuvas curtas: faça reserva de forragem (silagem, palma, feno) e de água.",
+        "en": "Short rains: build forage reserves (silage, forage cactus, hay) and water stores."
+      },
+      "winter": {
+        "pt": "Suplemente com palma forrageira, feno e sal mineral; revise feridas e umbigos contra bicheira.",
+        "en": "Supplement with forage cactus, hay and mineral salt; check wounds and navels for screwworm."
+      },
+      "spring": {
+        "pt": "Seca severa: ajuste o número de animais à água e comida disponíveis.",
+        "en": "Severe drought: match herd size to available water and feed."
+      }
     },
     "cold": {
-      "summer": { "pt": "Aproveite o pasto e faça feno para o longo inverno.", "en": "Use the pasture and make hay for the long winter." },
-      "autumn": { "pt": "Recolha o gado, vermifugue e prepare o estábulo.", "en": "Bring cattle in, deworm and prepare the barn." },
-      "winter": { "pt": "Estábulo protegido do vento, cama seca, mais energia na dieta e água aquecida.", "en": "Wind-protected barn, dry bedding, more energy in the diet and heated water." },
-      "spring": { "pt": "Partos dentro do abrigo; volte ao pasto quando o solo secar.", "en": "Calve indoors; return to pasture once the ground dries." }
+      "summer": {
+        "pt": "Aproveite o pasto e faça feno ou silagem para o longo inverno.",
+        "en": "Use the pasture and make hay or silage for the long winter."
+      },
+      "autumn": {
+        "pt": "Recolha o gado, vermifugue, prepare quebra-ventos e o estábulo e confira os brincos antes de vender.",
+        "en": "Bring cattle in, deworm, prepare windbreaks and the barn and check ear tags before selling."
+      },
+      "winter": {
+        "pt": "Quebra-vento, cama seca, mais energia na dieta (feno melhor ou grão) e água sem gelo; neve não substitui a água para vacas em lactação ou magras.",
+        "en": "Windbreaks, dry bedding, more energy in the diet (better hay or grain) and ice-free water; snow is no substitute for water for milking or thin cows."
+      },
+      "spring": {
+        "pt": "Partos dentro do abrigo e bezerros secos logo ao nascer; volte ao pasto quando o solo secar.",
+        "en": "Calve indoors and dry calves off right after birth; return to pasture once the ground dries."
+      }
     }
   },
   "feeding": [
-    { "pt": "Pasto de boa qualidade é a base; o que faltar se completa com silagem, feno ou capim picado.", "en": "Good pasture is the base; fill gaps with silage, hay or chopped grass." },
-    { "pt": "Sal mineral próprio para bovinos sempre disponível no cocho coberto.", "en": "Cattle mineral salt always available in a covered trough." },
-    { "pt": "Vacas em lactação precisam de concentrado (milho, farelo) conforme a produção.", "en": "Milking cows need concentrate (corn, meal) according to yield." },
-    { "pt": "Uma vaca leiteira pode beber mais de 60 litros de água por dia.", "en": "A dairy cow can drink more than 60 litres of water a day." }
+    {
+      "pt": "Pasto de boa qualidade é a base; o que faltar se completa com silagem, feno ou capim picado, planejados antes da seca ou do inverno.",
+      "en": "Good pasture is the base; fill gaps with silage, hay or chopped grass, planned before the dry season or winter."
+    },
+    {
+      "pt": "Sal mineral próprio para bovinos sempre disponível no cocho coberto.",
+      "en": "Cattle mineral salt always available in a covered trough."
+    },
+    {
+      "pt": "Vacas em lactação precisam de concentrado (milho, cevada, farelo) conforme a produção; no frio, todo o rebanho precisa de mais energia.",
+      "en": "Milking cows need concentrate (corn, barley, meal) according to yield; in the cold, the whole herd needs more energy."
+    },
+    {
+      "pt": "Água limpa sempre: uma vaca leiteira pode beber mais de 60 litros por dia, bem mais no calor. No inverno, bebedouro protegido contra congelamento.",
+      "en": "Clean water always: a dairy cow can drink more than 60 litres a day, much more in heat. In winter, use frost-protected drinkers."
+    },
+    {
+      "pt": "Não dê restos de comida com proteína animal a bovinos: é risco sanitário e proibido em vários lugares.",
+      "en": "Do not feed food scraps containing animal protein to cattle: it is a health risk and banned in many places."
+    },
+    {
+      "pt": "Bovinos são animais de rebanho: evite criar uma vaca sozinha.",
+      "en": "Cattle are herd animals: avoid keeping a single cow alone."
+    }
   ],
   "healthCare": [
-    { "pt": "Cumpra as vacinas obrigatórias (aftosa onde exigida, brucelose em bezerras) e a vacina contra clostridioses.", "en": "Keep mandatory vaccinations (foot-and-mouth where required, brucellosis in heifers) and clostridial vaccine." },
-    { "pt": "Higiene na ordenha: mãos e tetos limpos, teste da caneca de fundo escuro e desinfecção dos tetos.", "en": "Milking hygiene: clean hands and teats, strip-cup test and teat dipping." },
-    { "pt": "Cure o umbigo dos bezerros recém-nascidos com iodo e garanta que mamem o colostro nas primeiras horas.", "en": "Dip newborn calves' navels in iodine and make sure they drink colostrum in the first hours." },
-    { "pt": "Controle estratégico de carrapatos, alternando produtos com orientação técnica.", "en": "Strategic tick control, rotating products with technical guidance." }
+    {
+      "pt": "Registre a propriedade no órgão oficial antes do primeiro animal; brinque os bezerros no prazo, guarde o documento de cada animal e comunique nascimentos e movimentos quando a autoridade exigir.",
+      "en": "Register your farm with the official agency before the first animal; tag calves on time, keep each animal's document and report births and movements when the authority requires it."
+    },
+    {
+      "pt": "Cumpra os programas oficiais: vacina de brucelose nas bezerras onde for obrigatória, exames de tuberculose e brucelose, e vacina de clostridioses e de raiva em áreas de risco.",
+      "en": "Follow official programmes: brucellosis vaccination of heifer calves where mandatory, tuberculosis and brucellosis testing, and clostridial and rabies vaccines in risk areas."
+    },
+    {
+      "pt": "Higiene na ordenha: mãos e tetos limpos, teste da caneca de fundo escuro e desinfecção dos tetos.",
+      "en": "Milking hygiene: clean hands and teats, strip-cup test and teat dipping."
+    },
+    {
+      "pt": "Garanta que o bezerro mame o colostro nas primeiras horas e cure o umbigo com iodo; examine umbigos e feridas todos os dias onde há bicheira.",
+      "en": "Make sure the calf drinks colostrum in the first hours and dip the navel in iodine; check navels and wounds daily where screwworm occurs."
+    },
+    {
+      "pt": "Controle estratégico de carrapatos, alternando princípios ativos com orientação técnica para evitar resistência.",
+      "en": "Strategic tick control, rotating active ingredients with technical guidance to avoid resistance."
+    },
+    {
+      "pt": "Antibiótico só com receita veterinária, respeitando a carência do leite e da carne. Bolhas na boca e nas patas, nódulos na pele ou mordida de morcego: avise o serviço veterinário oficial.",
+      "en": "Antibiotics only on a vet's prescription, respecting milk and meat withdrawal times. Blisters on the mouth and feet, skin nodules or vampire bat bites: report to the official veterinary service."
+    }
   ],
   "diseases": [
     {
-      "name": { "pt": "Mastite", "en": "Mastitis" },
-      "signs": { "pt": "Leite com grumos ou sangue, úbere inchado, quente e dolorido.", "en": "Milk with clots or blood, swollen, hot and painful udder." },
-      "homeCare": { "pt": "Ordenhe o quarto afetado por último, descarte esse leite e reforce a higiene.", "en": "Milk the affected quarter last, discard that milk and tighten hygiene." },
-      "vetCare": { "pt": "Antibiótico intramamário ou injetável escolhido pelo veterinário; respeite o prazo de descarte do leite.", "en": "Intramammary or injectable antibiotic chosen by a vet; respect the milk withdrawal period." }
+      "name": {
+        "pt": "Mastite",
+        "en": "Mastitis"
+      },
+      "signs": {
+        "pt": "Leite com grumos ou sangue, úbere inchado, quente e dolorido; às vezes febre e queda no apetite.",
+        "en": "Milk with clots or blood, swollen, hot and painful udder; sometimes fever and loss of appetite."
+      },
+      "homeCare": {
+        "pt": "Ordenhe o quarto afetado por último, descarte esse leite, ofereça água e reforce a higiene e a cama limpa.",
+        "en": "Milk the affected quarter last, discard that milk, offer water and tighten hygiene and clean bedding."
+      },
+      "vetCare": {
+        "pt": "Antibiótico intramamário ou injetável escolhido pelo veterinário, com receita; respeite o prazo de descarte do leite.",
+        "en": "Intramammary or injectable antibiotic chosen by a vet, on prescription; respect the milk withdrawal period."
+      }
     },
     {
-      "name": { "pt": "Carrapato e tristeza parasitária", "en": "Ticks and tick fever" },
-      "signs": { "pt": "Muitos carrapatos, febre, mucosas pálidas ou amareladas, urina escura, fraqueza.", "en": "Heavy tick load, fever, pale or yellowish mucosa, dark urine, weakness." },
-      "homeCare": { "pt": "Separe o animal, dê sombra e água e chame o veterinário rápido — pode matar.", "en": "Separate the animal, give shade and water and call a vet quickly — it can be fatal." },
-      "vetCare": { "pt": "Carrapaticidas para o controle; para a tristeza, medicamentos específicos (como imidocarb ou diminazeno) aplicados pelo veterinário.", "en": "Acaricides for control; for tick fever, specific drugs (such as imidocarb or diminazene) given by a vet." }
+      "name": {
+        "pt": "Carrapato e tristeza parasitária (babesiose e anaplasmose)",
+        "en": "Ticks and tick fever (babesiosis and anaplasmosis)"
+      },
+      "signs": {
+        "pt": "Muitos carrapatos, febre, mucosas pálidas ou amareladas, urina escura, fraqueza.",
+        "en": "Heavy tick load, fever, pale or yellowish mucosa, dark urine, weakness."
+      },
+      "homeCare": {
+        "pt": "Separe o animal, dê sombra e água e chame o veterinário rápido — pode matar.",
+        "en": "Separate the animal, give shade and water and call a vet quickly — it can be fatal."
+      },
+      "vetCare": {
+        "pt": "Carrapaticidas para o controle; para a tristeza, medicamentos específicos (como imidocarb ou diminazeno) aplicados pelo veterinário. No México há campanha oficial contra o carrapato Boophilus.",
+        "en": "Acaricides for control; for tick fever, specific drugs (such as imidocarb or diminazene) given by a vet. Mexico runs an official campaign against Boophilus ticks."
+      }
     },
     {
-      "name": { "pt": "Diarreia em bezerros", "en": "Calf scours" },
-      "signs": { "pt": "Fezes líquidas, bezerro fraco, olhos fundos, sem vontade de mamar.", "en": "Watery faeces, weak calf, sunken eyes, no will to suckle." },
-      "homeCare": { "pt": "Soro de reidratação oral entre as mamadas e bezerreiro limpo e seco.", "en": "Oral rehydration solution between feeds and a clean, dry calf pen." },
-      "vetCare": { "pt": "Hidratação venosa e medicamentos conforme a causa, definidos pelo veterinário.", "en": "IV fluids and medication according to the cause, decided by a vet." }
+      "name": {
+        "pt": "Tuberculose e brucelose",
+        "en": "Tuberculosis and brucellosis"
+      },
+      "signs": {
+        "pt": "Tuberculose: emagrecimento lento, tosse e fraqueza. Brucelose: abortos no fim da gestação, retenção de placenta e queda de fertilidade. Muitas vezes não há sinal nenhum.",
+        "en": "Tuberculosis: slow weight loss, coughing and weakness. Brucellosis: late abortions, retained afterbirth and poor fertility. Often there are no signs at all."
+      },
+      "homeCare": {
+        "pt": "Isole a vaca que abortou, use luvas e enterre ou destrua o feto e a placenta; não beba leite cru. Evite contato do gado com javalis e veados.",
+        "en": "Isolate a cow that aborted, wear gloves and bury or destroy the foetus and afterbirth; do not drink raw milk. Keep cattle away from wild boar and deer."
+      },
+      "vetCare": {
+        "pt": "Passam para pessoas e estão em programas oficiais de notificação e erradicação: testes periódicos, retirada dos positivos e vacina de brucelose nas bezerras onde exigida. Não se tratam com remédio.",
+        "en": "They spread to people and are under official notification and eradication programmes: regular testing, removal of positive animals and brucellosis vaccination of heifer calves where required. They are not treated with medicine."
+      }
     },
     {
-      "name": { "pt": "Timpanismo (estufamento)", "en": "Bloat" },
-      "signs": { "pt": "Lado esquerdo da barriga muito inchado, desconforto, dificuldade para respirar.", "en": "Left side of the belly very swollen, discomfort, difficulty breathing." },
-      "homeCare": { "pt": "Tire do pasto, mantenha o animal em pé andando devagar e chame o veterinário.", "en": "Remove from pasture, keep the animal standing and walking slowly and call a vet." },
-      "vetCare": { "pt": "Antiespumantes e, nos casos graves, sondagem ou punção feitas pelo veterinário.", "en": "Anti-foaming agents and, in severe cases, tubing or trocarisation by a vet." }
+      "name": {
+        "pt": "Língua azul (febre catarral)",
+        "en": "Bluetongue"
+      },
+      "signs": {
+        "pt": "Febre, inchaço e feridas na boca e no focinho, baba, manqueira e queda no leite; transmitida por mosquitos (maruins).",
+        "en": "Fever, swelling and sores on the mouth and muzzle, drooling, lameness and a drop in milk; spread by biting midges."
+      },
+      "homeCare": {
+        "pt": "Dê sombra, água e comida macia, recolha os animais ao entardecer e reduza água parada e esterco úmido perto do curral.",
+        "en": "Provide shade, water and soft feed, house animals at dusk and reduce standing water and wet manure near the yard."
+      },
+      "vetCare": {
+        "pt": "Doença sob controle oficial na Europa; não há tratamento específico, só de apoio pelo veterinário. Vacine antes da época dos mosquitos conforme a campanha oficial.",
+        "en": "Officially controlled in Europe; there is no specific treatment, only supportive care by a vet. Vaccinate before midge season following the official campaign."
+      }
+    },
+    {
+      "name": {
+        "pt": "Bicheira (gusano barrenador / screwworm)",
+        "en": "New World screwworm"
+      },
+      "signs": {
+        "pt": "Ferida ou umbigo que cresce, com larvas, cheiro forte e secreção com sangue; animal inquieto.",
+        "en": "A growing wound or navel with maggots, a strong smell and bloody discharge; restless animal."
+      },
+      "homeCare": {
+        "pt": "Cure umbigos e trate qualquer ferida na hora, mantenha o animal separado e não o transporte.",
+        "en": "Treat navels and any wound right away, keep the animal apart and do not move it."
+      },
+      "vetCare": {
+        "pt": "Avise o serviço veterinário oficial (no México e nos EUA as autoridades pedem aviso imediato de qualquer larva); o tratamento com larvicidas segue a orientação da autoridade.",
+        "en": "Report to the official veterinary service (Mexican and US authorities ask for immediate reports of any maggots); treatment with larvicides follows the authority's guidance."
+      }
+    },
+    {
+      "name": {
+        "pt": "Diarreia em bezerros",
+        "en": "Calf scours"
+      },
+      "signs": {
+        "pt": "Fezes líquidas, bezerro fraco, olhos fundos, sem vontade de mamar.",
+        "en": "Watery faeces, weak calf, sunken eyes, no will to suckle."
+      },
+      "homeCare": {
+        "pt": "Soro de reidratação oral entre as mamadas, bezerreiro limpo, seco e protegido do vento.",
+        "en": "Oral rehydration solution between feeds and a clean, dry, wind-protected calf pen."
+      },
+      "vetCare": {
+        "pt": "Hidratação venosa e medicamentos conforme a causa, definidos pelo veterinário. Na Alemanha todo bezerro é testado para BVD, uma das causas.",
+        "en": "IV fluids and medication according to the cause, decided by a vet. In Germany every calf is tested for BVD, one of the causes."
+      }
     }
   ],
   "sources": [
-    { "title": "Embrapa Gado de Leite — Melhoramento genético de gado de leite", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/996607/1/2006melhoramentoGadodeLeite.pdf" },
-    { "title": "UFRGS — Estresse térmico na produção de leite de bovinos Girolando", "url": "https://repositorioceme.ufrgs.br/handle/10183/197815" },
-    { "title": "Compre Rural — Programa da raça Girolando seleciona animais mais resistentes ao calor", "url": "https://comprerural.com/programa-da-raca-girolando-seleciona-animais-mais-resistentes-ao-calor/" }
-  ]
+    {
+      "title": "Embrapa Gado de Leite — Melhoramento genético de gado de leite",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/996607/1/2006melhoramentoGadodeLeite.pdf"
+    },
+    {
+      "title": "MAPA — PNCEBT, medidas sanitárias",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/sanidade-animal-e-vegetal/saude-animal/programas-de-saude-animal/pncebt/tb-4-medidas-sanitarias.pdf"
+    },
+    {
+      "title": "UW-Madison Extension — Manage feeding to help cattle handle cold stress",
+      "url": "https://livestock.extension.wisc.edu/articles/manage-feeding-to-help-cattle-handle-cold-stress"
+    },
+    {
+      "title": "Alberta Agriculture — Minimizing Winter Cold Stress",
+      "url": "https://www1.agric.gov.ab.ca/$department/deptdocs.nsf/ba3468a2a8681f69872569d60073fde1/eb26aab6419d221887256bbc0060bd0a/$FILE/Minimizing_Winter_Cold_Stress.pdf"
+    },
+    {
+      "title": "GEH — Extensive Haltung und ganzjährige Freilandhaltung von Rindern",
+      "url": "https://www.g-e-h.de/images/stories/downloadbereich/Extensive_Rinderhaltung_25_11_2019.pdf"
+    },
+    {
+      "title": "MAPA — Identificación animal: bovino",
+      "url": "https://www.mapa.gob.es/eu/ganaderia/temas/trazabilidad-animal/identificacion-animal/bovino"
+    },
+    {
+      "title": "info.gouv.fr — L'État mobilisé contre la fièvre catarrhale ovine",
+      "url": "https://www.info.gouv.fr/actualite/letat-mobilise-contre-la-fievre-catarrhale-ovine"
+    },
+    {
+      "title": "IZS — Il piano italiano di eradicazione per le brucellosi",
+      "url": "https://www.izs.it/IZS/Engine/RAServeFile.php/f/Formazione_corsi_-_convegni/2015/Giornata_Brucellosi/2_Ruocco_Il_piano_italiano_di_eradicazione_per_le_Brucellosi.pdf"
+    },
+    {
+      "title": "SENASICA — Campaña Nacional para el control de la garrapata Boophilus spp.",
+      "url": "https://www.gob.mx/senasica/acciones-y-programas/campana-nacional-para-el-control-de-la-garrapata-boophilus-spp"
+    },
+    {
+      "title": "Agronomía Mesoamericana — Vacas de doble propósito en el trópico de México",
+      "url": "https://www.scielo.sa.cr/pdf/am/v26n1/a02v26n1.pdf"
+    },
+    {
+      "title": "UFRGS — Estresse térmico na produção de leite de bovinos Girolando",
+      "url": "https://repositorioceme.ufrgs.br/handle/10183/197815"
+    },
+    {
+      "title": "Compre Rural — Programa da raça Girolando seleciona animais mais resistentes ao calor",
+      "url": "https://comprerural.com/programa-da-raca-girolando-seleciona-animais-mais-resistentes-ao-calor/"
+    }
+  ],
+  "countryNotes": {
+    "BR": {
+      "highlights": [
+        {
+          "pt": "O Brasil é livre de febre aftosa sem vacinação: não vacine, mas avise o serviço veterinário estadual de qualquer suspeita.",
+          "en": "Brazil is foot-and-mouth disease free without vaccination: do not vaccinate, but report any suspected case to the state veterinary service."
+        },
+        {
+          "pt": "É obrigatório vacinar contra brucelose todas as bezerras de 3 a 8 meses (PNCEBT), com veterinário cadastrado.",
+          "en": "Brucellosis vaccination of all heifer calves aged 3 to 8 months is mandatory (PNCEBT) and must be done by a registered vet."
+        },
+        {
+          "pt": "Toda movimentação de bovinos exige GTA, e a propriedade precisa estar cadastrada no órgão estadual de defesa.",
+          "en": "Every cattle movement requires a GTA (animal transit permit), and the farm must be registered with the state animal health agency."
+        },
+        {
+          "pt": "A identificação individual com brinco ou botton eletrônico (PNIB) passará a ser exigida para o trânsito conforme o cronograma do MAPA.",
+          "en": "Individual electronic ear-tag or button identification (PNIB) will become mandatory for movement under MAPA's schedule."
+        },
+        {
+          "pt": "Escolha a raça pelo bioma (Nelore e Girolando no calor, taurinas no Sul) e planeje forragem para a seca de maio a setembro.",
+          "en": "Pick the breed for your biome (Nelore and Girolando in the heat, taurine breeds in the South) and plan forage for the May–September dry season."
+        }
+      ],
+      "sources": [
+        {
+          "title": "CNA — Aftosa: perguntas e respostas sobre o novo status sanitário do Brasil",
+          "url": "https://cnabrasil.org.br/noticias/aftosa-perguntas-e-respostas-sobre-o-novo-status-sanitario-do-brasil"
+        },
+        {
+          "title": "MAPA — PNCEBT, medidas sanitárias",
+          "url": "https://www.gov.br/agricultura/pt-br/assuntos/sanidade-animal-e-vegetal/saude-animal/programas-de-saude-animal/pncebt/tb-4-medidas-sanitarias.pdf"
+        },
+        {
+          "title": "MAPA — Plano Nacional de Identificação Individual de Bovinos e Búfalos (PNIB)",
+          "url": "https://www.gov.br/agricultura/pt-br/assuntos/sanidade-animal-e-vegetal/saude-animal/rastreabilidade-animal/pnib-1/PNIBVersofinalDEFESOELEITORAL.pdf"
+        },
+        {
+          "title": "Embrapa — Bovinos locais brasileiros (2021)",
+          "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1134958/1/Bovinos-locais-brasileiros-2021.pdf"
+        }
+      ]
+    },
+    "US": {
+      "highlights": [
+        {
+          "pt": "Para levar a outro estado bovinos de reprodução com 18 meses ou mais, gado leiteiro ou de exposição, é obrigatório o brinco oficial eletrônico (RFID) número 840.",
+          "en": "Breeding cattle 18 months and older, dairy cattle and show cattle moving interstate must carry an official 840 electronic (RFID) ear tag."
+        },
+        {
+          "pt": "A bicheira do Novo Mundo voltou ao Texas: examine umbigos e feridas e avise o veterinário oficial se achar larvas.",
+          "en": "New World screwworm has returned to Texas: check navels and wounds and report any maggots to state or USDA vets."
+        },
+        {
+          "pt": "No inverno do Norte, vento e pelo molhado aumentam o gasto de energia: dê mais feno, quebra-vento e água sem gelo.",
+          "en": "In northern winters, wind and wet hides raise energy needs: feed more hay, give windbreaks and unfrozen water."
+        },
+        {
+          "pt": "Venda de leite cru depende do estado: alguns proíbem, outros só permitem na fazenda ou por cota (cow share).",
+          "en": "Raw milk sales depend on the state: some ban them, others allow only on-farm or cow-share sales."
+        },
+        {
+          "pt": "Antibióticos para bovinos exigem receita veterinária (desde 2023) e VFD quando vão na ração.",
+          "en": "Cattle antibiotics require a vet prescription (since 2023) and a VFD when given in feed."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Federal Register — Animal Disease Traceability EID final rule (May 9, 2024)",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2024-05-09/html/2024-09717.htm"
+        },
+        {
+          "title": "WLJ — New World screwworm case detected in Texas",
+          "url": "https://www.wlj.net/new-world-screwworm-case-detected-in-texas/"
+        },
+        {
+          "title": "UW-Madison Extension — Manage feeding to help cattle handle cold stress",
+          "url": "https://livestock.extension.wisc.edu/articles/manage-feeding-to-help-cattle-handle-cold-stress"
+        },
+        {
+          "title": "Cornell Small Farms — Selecting a Beef Cattle Breed",
+          "url": "https://smallfarms.cornell.edu/2020/10/selecting-a-beef-cattle-breed/"
+        }
+      ]
+    },
+    "CA": {
+      "highlights": [
+        {
+          "pt": "Todo bovino de corte precisa de brinco RFID amarelo aprovado pela CCIA antes de sair da fazenda.",
+          "en": "All beef cattle need a yellow CCIA-approved RFID tag before leaving the farm."
+        },
+        {
+          "pt": "Vaca leiteira usa brinco duplo NLID e as movimentações vão para o DairyTrace; o leite comercial exige cota.",
+          "en": "Dairy cattle are double-tagged (NLID) with movements reported to DairyTrace; commercial milk requires quota."
+        },
+        {
+          "pt": "Vender leite cru é proibido em todo o Canadá.",
+          "en": "Selling raw milk is illegal throughout Canada."
+        },
+        {
+          "pt": "No frio, aumente a energia da dieta e ofereça quebra-vento; neve só substitui a água em casos limitados e com reserva de água.",
+          "en": "In cold weather, raise dietary energy and provide windbreaks; snow can replace water only in limited cases, with backup water."
+        },
+        {
+          "pt": "Antibióticos medicamente importantes só com receita veterinária desde dezembro de 2018.",
+          "en": "Medically important antimicrobials require a veterinary prescription since December 2018."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Alberta Agriculture — Best Practices for RFID Ear Tag Application",
+          "url": "https://www1.agriculture.alberta.ca/$Department/deptdocs.nsf/all/agdex13125"
+        },
+        {
+          "title": "Dairy Farmers of Canada — proAction traceability",
+          "url": "https://www.dairyfarmers.ca/proaction/how-it-works/traceability"
+        },
+        {
+          "title": "Alberta Agriculture — Minimizing Winter Cold Stress",
+          "url": "https://www1.agric.gov.ab.ca/$department/deptdocs.nsf/ba3468a2a8681f69872569d60073fde1/eb26aab6419d221887256bbc0060bd0a/$FILE/Minimizing_Winter_Cold_Stress.pdf"
+        },
+        {
+          "title": "Health Canada — Statement about drinking raw milk",
+          "url": "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/information-product/statement-about-drinking-milk.html"
+        }
+      ]
+    },
+    "DE": {
+      "highlights": [
+        {
+          "pt": "Cada bovino recebe 2 brincos idênticos em até 7 dias após nascer e tudo é comunicado ao banco HIT em 7 dias.",
+          "en": "Every bovine gets 2 identical ear tags within 7 days of birth, and all events are reported to the HIT database within 7 days."
+        },
+        {
+          "pt": "Todo bezerro é testado para BVD por amostra de tecido da orelha, num programa obrigatório de erradicação.",
+          "en": "Every calf is tested for BVD by ear-notch sample under a mandatory eradication programme."
+        },
+        {
+          "pt": "Registre-se no Veterinäramt e na Tierseuchenkasse antes de comprar o primeiro animal.",
+          "en": "Register with the Veterinäramt and the Tierseuchenkasse before buying your first animal."
+        },
+        {
+          "pt": "Língua azul (BTV-3) voltou em 2023; vacinação é registrada no HIT e pode ser exigida para movimentar animais.",
+          "en": "Bluetongue (BTV-3) returned in 2023; vaccination is recorded in HIT and may be required to move animals."
+        },
+        {
+          "pt": "Raças nativas rústicas (Rotes Höhenvieh, Murnau-Werdenfelser, Hinterwälder) são ideais para vaca-mãe com parição na primavera.",
+          "en": "Hardy native breeds (Rotes Höhenvieh, Murnau-Werdenfelser, Hinterwälder) suit suckler herds calving in spring."
+        }
+      ],
+      "sources": [
+        {
+          "title": "GEH — Extensive Haltung und ganzjährige Freilandhaltung von Rindern",
+          "url": "https://www.g-e-h.de/images/stories/downloadbereich/Extensive_Rinderhaltung_25_11_2019.pdf"
+        },
+        {
+          "title": "GEH — Rotes Höhenvieh",
+          "url": "https://www.g-e-h.de/index.php/rassebeschreibungen/34-rassekurzbeschreibungen-rinder/74-rotes-hoehenvieh"
+        },
+        {
+          "title": "Landkreis Stade — Merkblatt Rinderhaltung",
+          "url": "https://www.landkreis-stade.de/medien/dokumente/merkblatt_rinderhaltung.pdf"
+        },
+        {
+          "title": "Kreis Hersfeld-Rotenburg — Allgemeinverfügung Blauzungenkrankheit",
+          "url": "https://hef-rof.de/leben-in-hef-rof/gesundheit-mensch-tier/veterinaerwesen-verbraucherschutz/allgemeinverfuegung-bt-homepage.pdf?cid=85j"
+        }
+      ]
+    },
+    "ES": {
+      "highlights": [
+        {
+          "pt": "Cada bovino leva dois brincos e um documento DIB; o nascimento deve ser notificado em até 7 dias.",
+          "en": "Each bovine carries two ear tags and a DIB document; births must be reported within 7 days."
+        },
+        {
+          "pt": "Os rebanhos passam por campanhas obrigatórias de saneamento contra tuberculose e brucelose.",
+          "en": "Herds go through mandatory sanitation campaigns for tuberculosis and brucellosis."
+        },
+        {
+          "pt": "A vacina contra a língua azul é voluntária, mas o MAPA recomenda vacinar.",
+          "en": "Bluetongue vaccination is voluntary, but the Ministry recommends it."
+        },
+        {
+          "pt": "Raças locais como a Rubia Gallega têm selo IGP (Ternera Gallega) e valem mais.",
+          "en": "Local breeds like Rubia Gallega carry a PGI label (Ternera Gallega) and fetch higher prices."
+        },
+        {
+          "pt": "No verão seco do sul o pasto acaba: planeje feno, sombra e muita água.",
+          "en": "In the dry southern summer pasture runs out: plan hay, shade and plenty of water."
+        }
+      ],
+      "sources": [
+        {
+          "title": "MAPA — Identificación animal: bovino",
+          "url": "https://www.mapa.gob.es/eu/ganaderia/temas/trazabilidad-animal/identificacion-animal/bovino"
+        },
+        {
+          "title": "AGACAL/Xunta — Pliego de condiciones IGP Ternera Gallega",
+          "url": "https://agacal.xunta.gal/sites/default/files/calidade-alimentaria/produtos-carnicos/PC_Ternera_Gallega_Enero_2024_ES.pdf"
+        },
+        {
+          "title": "MAPA — España indemne de brucelosis bovina",
+          "url": "https://www.mapa.gob.es/es/prensa/ultimas-noticias/detalle_noticias/la-union-europea-declara-a-espana-indemne-de-brucelosis-bovina-y-al-pais-vasco-de-tuberculosis-bovina/8822f387-0813-4a97-bd34-1f6ddc848cd5"
+        },
+        {
+          "title": "MAPA — Situación lengua azul (octubre 2025)",
+          "url": "https://www.mapa.gob.es/va/dam/jcr:c4470d9e-1b49-4fa2-affb-a610d5bef006/situacion%20LA%20oct%202025.pdf"
+        }
+      ]
+    },
+    "FR": {
+      "highlights": [
+        {
+          "pt": "Declare-se no EDE antes da primeira vaca. Cada bovino leva dois brincos e um passaporte, e os movimentos são declarados em até 7 dias.",
+          "en": "Register with the EDE before your first cow; each bovine has two ear tags and a passport, and movements are declared within 7 days."
+        },
+        {
+          "pt": "A profilaxia obrigatória (brucelose, IBR, leucose, tuberculose) acontece todo ano de outubro a maio. Pergunte ao GDS sobre o regime \"petit détenteur\".",
+          "en": "Compulsory disease screening (brucellosis, IBR, leukosis, TB) runs each year from October to May; ask your GDS about the small-keeper scheme."
+        },
+        {
+          "pt": "Vacine contra a febre catarral (FCO) antes da época dos mosquitos, no verão e outono, conforme a campanha oficial.",
+          "en": "Vaccinate against bluetongue before the midge season (summer–autumn) following the official campaign."
+        },
+        {
+          "pt": "As AOP de queijo definem a raça e o capim: Montbéliarde no Comté e Normande nos queijos da Normandia.",
+          "en": "Cheese PDOs set the breed and grazing rules: Montbéliarde for Comté, Normande for Normandy cheeses."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Chambres d'agriculture — Identification des animaux",
+          "url": "https://chambres-agriculture.fr/sinformer/nos-ressources/elevage/identification"
+        },
+        {
+          "title": "Pleinchamp — Campagne de prophylaxie bovine 2025-2026 en Creuse",
+          "url": "https://www.pleinchamp.com/actualite/lancement-de-la-campagne-de-prophylaxie-bovine-2025-2026-en-creuse"
+        },
+        {
+          "title": "info.gouv.fr — L'État mobilisé contre la fièvre catarrhale ovine",
+          "url": "https://www.info.gouv.fr/actualite/letat-mobilise-contre-la-fievre-catarrhale-ovine"
+        },
+        {
+          "title": "DRAAF Bourgogne-Franche-Comté — Fiche AOP Comté",
+          "url": "https://draaf.bourgogne-franche-comte.agriculture.gouv.fr/IMG/pdf/FicheAOPComte_cle81fe31.pdf"
+        }
+      ]
+    },
+    "PT": {
+      "highlights": [
+        {
+          "pt": "Até 2 vacas em casa é 'detenção caseira', mas exige registo no SNIRA (DGAV) antes de chegar o animal.",
+          "en": "Up to 2 cows at home is 'home keeping', but it must be registered in SNIRA (DGAV) before the animal arrives."
+        },
+        {
+          "pt": "Cada bovino tem brinco nas duas orelhas, nascimento registado no SNIRA e passaporte para circular.",
+          "en": "Every bovine needs ear tags in both ears, a birth recorded in SNIRA and a passport to move."
+        },
+        {
+          "pt": "Raças autóctones como Barrosã, Mirandesa e Arouquesa dão carne DOP e podem ter apoio do PEPAC.",
+          "en": "Native breeds like Barrosã, Mirandesa and Arouquesa yield PDO beef and may get CAP (PEPAC) support."
+        },
+        {
+          "pt": "Guarde feno para o verão seco mediterrâneo, quando os pastos secam.",
+          "en": "Store hay for the dry Mediterranean summer, when pastures dry out."
+        },
+        {
+          "pt": "Comunique à DGAV qualquer suspeita de dermatose nodular (nódulos na pele); antibióticos só com receita.",
+          "en": "Report any suspected lumpy skin disease (skin nodules) to DGAV; antibiotics only with a prescription."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Agroportal — Portugal tem 61 raças autóctones (Catálogo DGAV/CAP)",
+          "url": "https://www.agroportal.pt/portugal-tem-61-racas-autoctones-e-ovinos-serra-da-estrela-estao-em-maior-numero/"
+        },
+        {
+          "title": "Agroportal — Procedimento para o Registo de Detenção Caseira de animais (DGAV)",
+          "url": "https://www.agroportal.pt/?p=741849"
+        },
+        {
+          "title": "DNoticias — Portugal comprou vacinas contra dermatose nodular",
+          "url": "https://www.dnoticias.pt/2026/4/15/488353-portugal-comprou-20000-doses-de-vacinas-contra-dermatose-nodular-mas-espera-nao-usar/"
+        },
+        {
+          "title": "PTPT — Carne Mirandesa DOP",
+          "url": "https://ptpt.pt/en/produtos/71"
+        }
+      ]
+    },
+    "IT": {
+      "highlights": [
+        {
+          "pt": "Mesmo uma única vaca exige registro na BDN; cada bezerro recebe dois brincos em até 20 dias e um passaporte.",
+          "en": "Even a single cow requires BDN registration; each calf gets two ear tags within 20 days and a passport."
+        },
+        {
+          "pt": "O nascimento deve entrar na BDN em até 7 dias após a marcação, por você ou por um delegado.",
+          "en": "Births must be recorded in the BDN within 7 days of tagging, by you or a delegate."
+        },
+        {
+          "pt": "O status de tuberculose/brucelose da sua Região define os testes que a ASL fará no rebanho.",
+          "en": "Your Region's TB/brucellosis status sets which tests the ASL will run on your herd."
+        },
+        {
+          "pt": "Raça conforme a região: Bruna e Pezzata Rossa no norte e na montanha; Chianina, Marchigiana e Podolica no centro-sul.",
+          "en": "Breed by region: Bruna and Pezzata Rossa in the north and mountains; Chianina, Marchigiana and Podolica in the centre-south."
+        },
+        {
+          "pt": "Remédio só com receita veterinária eletrônica (REV), respeitando carência de leite e carne.",
+          "en": "Medicines only with an electronic veterinary prescription (REV), respecting milk and meat withdrawal times."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ministero della Salute — Anagrafe bovina",
+          "url": "https://www.salute.gov.it/new/sites/default/files/imported/C_17_pagineAree_1571_2_file.pdf"
+        },
+        {
+          "title": "ASL Vercelli — Anagrafe bovina, istruzioni d'uso",
+          "url": "https://aslvc.piemonte.it/images/downloads/strutture/Veterinario/A.01_ANAGRAFE_BOVINA_istruzioni_uso_agg21.dic.2015.pdf"
+        },
+        {
+          "title": "IZS — Il piano italiano di eradicazione per le brucellosi",
+          "url": "https://www.izs.it/IZS/Engine/RAServeFile.php/f/Formazione_corsi_-_convegni/2015/Giornata_Brucellosi/2_Ruocco_Il_piano_italiano_di_eradicazione_per_le_Brucellosi.pdf"
+        },
+        {
+          "title": "Università di Teramo — Schema razze bovine",
+          "url": "https://elearning.unite.it/pluginfile.php/238069/mod_resource/content/1/Schema%20Razze%20Bovine.pdf"
+        }
+      ]
+    },
+    "MX": {
+      "highlights": [
+        {
+          "pt": "Todo bovino precisa do brinco SINIIGA; sem ele e sem a guia REEMO o gado não pode ser transportado nem abatido.",
+          "en": "Every bovine needs a SINIIGA ear tag; without it and a REEMO permit cattle cannot be moved or slaughtered."
+        },
+        {
+          "pt": "A bicheira (gusano barrenador) voltou ao país: cure umbigos, trate feridas na hora e avise larvas ao SENASICA (800 751 2100).",
+          "en": "New World screwworm has returned: treat navels and wounds promptly and report larvae to SENASICA (800 751 2100)."
+        },
+        {
+          "pt": "No trópico o padrão é a vaca de duplo propósito (Suizo Pardo ou Simmental × Cebu), para leite e bezerro.",
+          "en": "In the tropics the norm is the dual-purpose cow (Brown Swiss or Simmental × Zebu) for milk and calves."
+        },
+        {
+          "pt": "Tuberculose, brucelose e carrapato Boophilus têm campanhas nacionais obrigatórias com testes e certificação de rebanho livre.",
+          "en": "Tuberculosis, brucellosis and Boophilus ticks have mandatory national campaigns with testing and herd-free certification."
+        },
+        {
+          "pt": "Para mover gado é preciso antiparasitário dias antes do certificado zoossanitário e banho antes da viagem.",
+          "en": "Moving cattle requires antiparasitic treatment days before the movement certificate and a dip before travel."
+        }
+      ],
+      "sources": [
+        {
+          "title": "SENASICA — Campaña Nacional para el control de la garrapata Boophilus spp.",
+          "url": "https://www.gob.mx/senasica/acciones-y-programas/campana-nacional-para-el-control-de-la-garrapata-boophilus-spp"
+        },
+        {
+          "title": "DOF — Acuerdo para la operación de la Campaña Nacional contra la Tuberculosis Bovina",
+          "url": "https://sidof.segob.gob.mx/notas/docFuente/5746338"
+        },
+        {
+          "title": "SADER — Amplía acciones para controlar la movilización de ganado y contener el gusano barrenador",
+          "url": "https://www.gob.mx/agricultura/prensa/amplia-agricultura-acciones-para-controlar-la-movilizacion-de-ganado-y-contener-el-gusano-barrenador"
+        },
+        {
+          "title": "SADER Sinaloa — No se podrá movilizar ganado sin su respectivo Reemo y Siniiga",
+          "url": "https://www.gob.mx/agricultura/sinaloa/articulos/no-se-podra-movilizar-ganado-sin-su-respectivo-reemo-y-siniiga-senasica?idiom=es"
+        }
+      ]
+    }
+  }
 }

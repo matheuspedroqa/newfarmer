@@ -1,96 +1,735 @@
 {
   "id": "ducks",
   "summary": {
-    "pt": "Patos são rústicos, raramente adoecem com bom manejo e comem lesmas e insetos da horta. Precisam de água para molhar a cabeça e limpar os olhos, mas o local de dormir tem que ser seco — cama molhada é a principal causa de problemas.",
-    "en": "Ducks are hardy, rarely get sick with good management and eat garden slugs and insects. They need water to dip their heads and clean their eyes, but their sleeping area must be dry — wet bedding is the main cause of problems."
+    "pt": "Patos são rústicos, raramente adoecem com bom manejo e comem lesmas e insetos da horta. Precisam de água para molhar a cabeça e limpar olhos e narinas, mas o local de dormir tem que ser seco — cama molhada é a principal causa de problemas. Como podem carregar a gripe aviária sem mostrar sinais, mantenha-os longe de lagoas com aves silvestres e, se possível, separados das galinhas.",
+    "en": "Ducks are hardy, rarely get sick with good management and eat garden slugs and insects. They need water to dip their heads and clean their eyes and nostrils, but their sleeping area must be dry — wet bedding is the main cause of problems. Because they can carry bird flu without showing signs, keep them away from ponds used by wild birds and, if possible, separate from chickens."
   },
   "breeds": [
-    { "name": "Pequim (Pekin)", "purpose": { "pt": "Carne", "en": "Meat" }, "notes": { "pt": "Branco, cresce muito rápido; sensível ao calor forte.", "en": "White, grows very fast; sensitive to strong heat." } },
-    { "name": "Pato-do-mato (Muscovy)", "purpose": { "pt": "Carne", "en": "Meat" }, "notes": { "pt": "Nativo das Américas, muito rústico, quieto e tolera melhor o calor; ótimo chocador.", "en": "Native to the Americas, very hardy, quiet and more heat tolerant; excellent brooder." } },
-    { "name": "Khaki Campbell", "purpose": { "pt": "Ovos", "en": "Eggs" }, "notes": { "pt": "Uma das maiores poedeiras entre os patos.", "en": "One of the best egg-laying duck breeds." } },
-    { "name": "Corredor Indiano (Indian Runner)", "purpose": { "pt": "Ovos e controle de pragas", "en": "Eggs and pest control" }, "notes": { "pt": "Anda em pé, ótimo para limpar lesmas e caramujos da horta.", "en": "Stands upright, great at clearing slugs and snails from the garden." } }
+    {
+      "name": "Pato-do-mato / pato criollo (Muscovy, Barbarie, pato-mudo)",
+      "purpose": {
+        "pt": "Carne",
+        "en": "Meat"
+      },
+      "notes": {
+        "pt": "Nativo das Américas (México e América do Sul) — é o \"pato regional\" do Brasil e o pato criollo do México. Muito rústico, quieto, ótimo chocador e o que melhor tolera calor: ideal para clima tropical e semiárido.",
+        "en": "Native to the Americas (Mexico and South America) — Brazil's \"regional duck\" and Mexico's criollo duck. Very hardy, quiet, an excellent brooder and the most heat tolerant: ideal for tropical and semi-arid climates."
+      }
+    },
+    {
+      "name": "Pequim (Pekin)",
+      "purpose": {
+        "pt": "Carne",
+        "en": "Meat"
+      },
+      "notes": {
+        "pt": "É a raça comercial dominante nos EUA, Canadá e Espanha. Branco, cresce muito rápido, quase não choca e é sensível ao calor forte; vai melhor em clima temperado ou frio.",
+        "en": "It is the leading commercial breed in the US, Canada and Spain. White, grows very fast, rarely goes broody and is sensitive to strong heat; does best in temperate or cold climates."
+      }
+    },
+    {
+      "name": "Khaki Campbell",
+      "purpose": {
+        "pt": "Ovos",
+        "en": "Eggs"
+      },
+      "notes": {
+        "pt": "Muito criada nos EUA, uma das maiores poedeiras entre os patos; leve, quase não choca (use chocadeira). Boa em clima temperado e subtropical.",
+        "en": "Widely kept in the US, one of the best egg-laying ducks; light and rarely broody (use an incubator). Good in temperate and subtropical climates."
+      }
+    },
+    {
+      "name": "Corredor Indiano (Indian Runner, Laufente)",
+      "purpose": {
+        "pt": "Ovos e controle de pragas",
+        "en": "Eggs and pest control"
+      },
+      "notes": {
+        "pt": "Anda em pé e é tradicional na Alemanha e comum em Portugal para limpar lesmas e caramujos da horta; precisa de espaço (jardins grandes).",
+        "en": "Stands upright and is traditional in Germany and common in Portugal for clearing slugs and snails from the garden; needs space (large gardens)."
+      }
+    },
+    {
+      "name": "Rouen (Canard de Rouen)",
+      "purpose": {
+        "pt": "Carne",
+        "en": "Meat"
+      },
+      "notes": {
+        "pt": "Raça francesa clássica, derivada do pato-real, criada pela carne e boa para reprodução em casa; indicada para clima temperado.",
+        "en": "Classic French breed derived from the mallard, raised for meat and good for home breeding; suited to temperate climates."
+      }
+    },
+    {
+      "name": "Pommernente",
+      "purpose": {
+        "pt": "Carne e ovos",
+        "en": "Meat and eggs"
+      },
+      "notes": {
+        "pt": "Raça nativa do nordeste da Alemanha (Pomerânia), boa poedeira e hoje ameaçada; boa opção para clima temperado e frio.",
+        "en": "Native breed from northeastern Germany (Pomerania), a good layer and now endangered; a good option for temperate and cold climates."
+      }
+    },
+    {
+      "name": "Germanata Veneta",
+      "purpose": {
+        "pt": "Carne e ovos",
+        "en": "Meat and eggs"
+      },
+      "notes": {
+        "pt": "Raça do Vêneto (Norte da Itália), muito rústica, ameaçada e com programa regional de conservação; boa para clima temperado.",
+        "en": "Breed from Veneto (northern Italy), very hardy, endangered and backed by a regional conservation programme; good for temperate climates."
+      }
+    },
+    {
+      "name": "Mulard",
+      "purpose": {
+        "pt": "Carne",
+        "en": "Meat"
+      },
+      "notes": {
+        "pt": "Híbrido estéril de macho Muscovy com pata Pequim ou Rouen, muito usado na França e no Sul do Brasil; não se reproduz, então é preciso comprar os patinhos a cada lote.",
+        "en": "Sterile hybrid of a Muscovy drake and a Pekin or Rouen duck, widely used in France and southern Brazil; it does not breed, so ducklings must be bought for each batch."
+      }
+    }
   ],
   "idealTemp": {
     "minC": 12,
     "maxC": 25,
     "notes": {
-      "pt": "Adultos aguentam frio melhor que calor; acima de 27 °C precisam de sombra e água para se refrescar. Patinhos precisam de cerca de 30 °C na primeira semana, baixando 2–3 °C por semana.",
-      "en": "Adults handle cold better than heat; above 27 °C they need shade and water to cool down. Ducklings need about 30 °C in the first week, lowered 2–3 °C each week."
+      "pt": "Adultos aguentam frio melhor que calor, desde que fiquem secos: pato molhado perde calor. Acima de 27 °C precisam de sombra e água para se refrescar. Patinhos precisam de cerca de 30 °C na primeira semana, baixando 2–3 °C por semana, e não devem nadar até empenarem. Abaixo de zero, muitos criadores tiram a água de nado e deixam só baldes para molhar a cabeça.",
+      "en": "Adults handle cold better than heat, as long as they stay dry: a wet duck loses heat. Above 27 °C they need shade and water to cool down. Ducklings need about 30 °C in the first week, lowered 2–3 °C each week, and should not swim until feathered. Below freezing, many keepers remove swimming water and offer only buckets for head-dipping."
     }
   },
   "seasonalCare": {
     "tropical": {
-      "summer": { "pt": "Sombra e água limpa para banho; troque a água com frequência para não virar foco de doenças.", "en": "Shade and clean bathing water; change it often so it does not become a disease source." },
-      "autumn": { "pt": "Revise o abrigo e troque a cama úmida.", "en": "Check the shelter and replace damp bedding." },
-      "winter": { "pt": "Estação seca: garanta água suficiente para beber e banhar a cabeça.", "en": "Dry season: make sure there is enough water to drink and dip their heads." },
-      "spring": { "pt": "Época de choco; proteja ninhos e patinhos de predadores e de chuva.", "en": "Nesting season; protect nests and ducklings from predators and rain." }
+      "summer": {
+        "pt": "Calor e chuva (Brasil, Sul do México): sombra e água limpa para banho, trocada com frequência; evite barro e água parada perto do abrigo.",
+        "en": "Heat and rain (Brazil, southern Mexico): shade and clean bathing water, changed often; avoid mud and standing water near the shelter."
+      },
+      "autumn": {
+        "pt": "Revise o abrigo e troque a cama úmida. No Pará, é a época de venda do Círio: lotes começados em maio ou junho ficam prontos em outubro.",
+        "en": "Check the shelter and replace damp bedding. In Pará this is Círio selling season: batches started in May or June are ready in October."
+      },
+      "winter": {
+        "pt": "Estação seca: garanta água suficiente para beber e banhar a cabeça e complemente o pasto com ração, milho ou mandioca.",
+        "en": "Dry season: make sure there is enough water to drink and dip their heads, and supplement forage with feed, corn or cassava."
+      },
+      "spring": {
+        "pt": "Época de choco (a pata Muscovy choca bem); proteja ninhos e patinhos de predadores e de chuva.",
+        "en": "Nesting season (Muscovy ducks brood well); protect nests and ducklings from predators and rain."
+      }
     },
     "subtropical": {
-      "summer": { "pt": "Sombra, água fresca e cama seca; recolha ovos cedo.", "en": "Shade, fresh water and dry bedding; collect eggs early." },
-      "autumn": { "pt": "Muda de penas; aumente a proteína da ração.", "en": "Moulting; increase protein in the feed." },
-      "winter": { "pt": "Abrigo contra vento e chuva fria; cama grossa de palha.", "en": "Shelter from wind and cold rain; deep straw bedding." },
-      "spring": { "pt": "Choco e criação de patinhos; mantenha os filhotes longe de água funda até empenarem.", "en": "Hatching and raising ducklings; keep them away from deep water until feathered." }
+      "summer": {
+        "pt": "Verão seco (Portugal, Espanha, Sul da Itália, Sul dos EUA): sombra, água fresca para beber e molhar a cabeça e cama seca; recolha ovos cedo.",
+        "en": "Dry summer (Portugal, Spain, southern Italy, the southern US): shade, fresh water to drink and dip heads, and dry bedding; collect eggs early."
+      },
+      "autumn": {
+        "pt": "Muda de penas: aumente a proteína. Com a migração, afaste os patos de lagoas e zonas úmidas e deixe um abrigo coberto pronto para quando a autoridade mandar confinar.",
+        "en": "Moulting: increase protein. With migration under way, keep ducks away from ponds and wetlands and have a covered shelter ready for when the authorities order birds indoors."
+      },
+      "winter": {
+        "pt": "Abrigo contra vento e chuva fria (no Sul do Brasil, aqueça os patinhos); cama grossa de palha e água de banho dentro da área coberta.",
+        "en": "Shelter from wind and cold rain (heat ducklings in southern Brazil); deep straw bedding and bathing water inside the covered area."
+      },
+      "spring": {
+        "pt": "Choco e criação de patinhos; mantenha os filhotes longe de água funda até empenarem.",
+        "en": "Hatching and raising ducklings; keep them away from deep water until feathered."
+      }
     },
     "temperate": {
-      "summer": { "pt": "Lago ou tanque limpo, sombra e controle de moscas.", "en": "Clean pond or tub, shade and fly control." },
-      "autumn": { "pt": "Prepare o abrigo para o inverno; escolha as matrizes.", "en": "Prepare the winter shelter; select breeding birds." },
-      "winter": { "pt": "Água sem congelar, cama seca e abrigo fechado à noite.", "en": "Unfrozen water, dry bedding and a closed shelter at night." },
-      "spring": { "pt": "Postura e choco; vigie raposas e outros predadores.", "en": "Laying and hatching; watch for foxes and other predators." }
+      "summer": {
+        "pt": "Lago ou tanque limpo (água parada estraga rápido), sombra e controle de moscas.",
+        "en": "A clean pond or tub (still water spoils quickly), shade and fly control."
+      },
+      "autumn": {
+        "pt": "Alemanha, França e Norte da Itália costumam decretar confinamento por gripe aviária: prepare um abrigo fechado com bacia de banho coberta e escolha as matrizes.",
+        "en": "Germany, France and northern Italy often issue bird flu housing orders: prepare a closed shelter with a covered bathing tub and select breeding birds."
+      },
+      "winter": {
+        "pt": "Água sem congelar, cama seca e abrigo fechado à noite contra raposas; não deixe a água de banho deixar a cama molhada.",
+        "en": "Unfrozen water, dry bedding and a shelter closed at night against foxes; do not let bathing water soak the bedding."
+      },
+      "spring": {
+        "pt": "Postura e choco; compre patinhos e vigie raposas e outros predadores.",
+        "en": "Laying and hatching; buy ducklings and watch for foxes and other predators."
+      }
     },
     "semiarid": {
-      "summer": { "pt": "Calor forte: sombra densa e água fresca abundante; prefira pato-do-mato.", "en": "Intense heat: dense shade and plenty of fresh water; prefer Muscovy ducks." },
-      "autumn": { "pt": "Chuvas curtas: evite lama e água parada (risco de botulismo).", "en": "Short rains: avoid mud and stagnant water (botulism risk)." },
-      "winter": { "pt": "Economize água com bebedouros fundos que permitam molhar a cabeça.", "en": "Save water with deep drinkers that let them dip their heads." },
-      "spring": { "pt": "Seca: priorize água limpa; complemente a dieta com ração.", "en": "Drought: prioritise clean water; supplement with feed." }
+      "summer": {
+        "pt": "Calor forte (Nordeste do Brasil, Norte do México, Sudeste da Espanha, Sudoeste dos EUA): sombra densa e água fresca abundante; prefira o pato-do-mato.",
+        "en": "Intense heat (northeastern Brazil, northern Mexico, southeastern Spain, the southwestern US): dense shade and plenty of fresh water; prefer Muscovy ducks."
+      },
+      "autumn": {
+        "pt": "Chuvas curtas: evite lama e água parada (risco de botulismo).",
+        "en": "Short rains: avoid mud and stagnant water (botulism risk)."
+      },
+      "winter": {
+        "pt": "Economize água com bebedouros fundos que permitam molhar a cabeça; não deixe os patos dividirem açudes com aves silvestres.",
+        "en": "Save water with deep drinkers that let them dip their heads; do not let ducks share reservoirs with wild birds."
+      },
+      "spring": {
+        "pt": "Seca: priorize água limpa; complemente a dieta com ração.",
+        "en": "Drought: prioritise clean water; supplement with feed."
+      }
     },
     "cold": {
-      "summer": { "pt": "Aproveite para criar patinhos e soltar na água.", "en": "Raise ducklings and let birds onto water." },
-      "autumn": { "pt": "Reforce a alimentação para a camada de gordura do inverno.", "en": "Increase feed to build up winter fat." },
-      "winter": { "pt": "Abrigo isolado e seco, água aquecida e cama funda; patos toleram bem o frio se estiverem secos.", "en": "Insulated, dry shelter, heated water and deep bedding; ducks cope well with cold if kept dry." },
-      "spring": { "pt": "Volta da postura; limpeza geral do abrigo.", "en": "Laying resumes; full clean-out of the shelter." }
+      "summer": {
+        "pt": "Aproveite o verão curto (Canadá, Alemanha) para criar patinhos e soltar na água.",
+        "en": "Use the short summer (Canada, Germany) to raise ducklings and let birds onto water."
+      },
+      "autumn": {
+        "pt": "Reforce a alimentação para a camada de gordura do inverno e mantenha os patos longe de aves aquáticas migratórias.",
+        "en": "Increase feed to build up winter fat and keep ducks away from migrating wild waterfowl."
+      },
+      "winter": {
+        "pt": "Abrigo seco e sem correntes de ar, cama funda e bebedouro aquecido com água trocada todo dia; abaixo de zero, só água para beber e molhar a cabeça, sem nado.",
+        "en": "A dry, draught-free shelter, deep bedding and a heated waterer changed daily; below freezing, only water for drinking and head-dipping, no swimming."
+      },
+      "spring": {
+        "pt": "Volta da postura; limpeza geral do abrigo e biossegurança reforçada na migração de primavera.",
+        "en": "Laying resumes; full clean-out of the shelter and tighter biosecurity during spring migration."
+      }
     }
   },
   "feeding": [
-    { "pt": "Ração de aves (inicial para patinhos, depois crescimento/postura), sem anticoccidianos que não sejam próprios para patos.", "en": "Poultry feed (starter for ducklings, then grower/layer), avoiding medications not labelled for ducks." },
-    { "pt": "Patinhos precisam de niacina: ração para patos ou levedura de cerveja misturada evita fraqueza nas pernas.", "en": "Ducklings need niacin: duck feed or added brewer's yeast prevents leg weakness." },
-    { "pt": "Verduras, lesmas, insetos e restos de horta complementam a dieta.", "en": "Greens, slugs, insects and garden scraps round out the diet." },
-    { "pt": "Sempre ofereça água junto com a comida — patos precisam beber para engolir.", "en": "Always provide water with food — ducks need to drink to swallow." }
+    {
+      "pt": "Ração de aves (inicial para patinhos, depois crescimento/postura); prefira ração não medicada ou própria para aves aquáticas.",
+      "en": "Poultry feed (starter for ducklings, then grower/layer); prefer unmedicated or waterfowl-specific feed."
+    },
+    {
+      "pt": "Patinhos precisam de mais niacina que pintinhos: ração para patos ou levedura de cerveja misturada evita fraqueza nas pernas — confira no rótulo.",
+      "en": "Ducklings need more niacin than chicks: duck feed or added brewer's yeast prevents leg weakness — check the label."
+    },
+    {
+      "pt": "Verduras, milho, mandioca, lesmas, insetos e restos de horta complementam a dieta. Evite restos de cozinha com carne: em vários lugares, como na UE, a lei proíbe dá-los a animais de produção.",
+      "en": "Greens, corn, cassava, slugs, insects and garden scraps round out the diet. Avoid kitchen leftovers with meat: in many places, such as the EU, the law bans feeding them to farm animals."
+    },
+    {
+      "pt": "Sempre ofereça água funda o bastante para mergulhar a cabeça junto com a comida — patos precisam beber para engolir.",
+      "en": "Always provide water deep enough to dip the head alongside food — ducks need to drink to swallow."
+    },
+    {
+      "pt": "Deixe ração e água dentro de área coberta, para não atrair aves silvestres.",
+      "en": "Keep feed and water under cover so they do not attract wild birds."
+    }
   ],
   "healthCare": [
-    { "pt": "Cama sempre seca e trocada; afaste o bebedouro da área de dormir.", "en": "Bedding always dry and changed; keep the drinker away from the sleeping area." },
-    { "pt": "Troque a água de banho com frequência e evite água parada.", "en": "Change bathing water often and avoid stagnant water." },
-    { "pt": "Não use feno ou cama mofada — causa doença respiratória.", "en": "Never use mouldy hay or bedding — it causes respiratory disease." },
-    { "pt": "Quarentena para aves novas e vacinação conforme a região.", "en": "Quarantine new birds and vaccinate as advised in your region." }
+    {
+      "pt": "Cama sempre seca e trocada; afaste o bebedouro da área de dormir e nunca use feno ou cama mofada.",
+      "en": "Bedding always dry and changed; keep the drinker away from the sleeping area and never use mouldy hay or bedding."
+    },
+    {
+      "pt": "Troque a água de banho com frequência e evite água parada e lagoas usadas por aves silvestres; não instale o abrigo em área alagada.",
+      "en": "Change bathing water often and avoid stagnant water and ponds used by wild birds; do not site the shelter in a flood-prone area."
+    },
+    {
+      "pt": "Mantenha patos separados das galinhas e tenha um abrigo coberto com água de banho para cumprir ordens de confinamento sem prejudicar as penas.",
+      "en": "Keep ducks separate from chickens and have a covered shelter with bathing water so you can follow housing orders without harming their plumage."
+    },
+    {
+      "pt": "Patos são sociais: nunca crie um sozinho; comece com 4 a 6 aves e feche-os à noite contra predadores.",
+      "en": "Ducks are social: never keep one alone; start with 4 to 6 birds and shut them in at night against predators."
+    },
+    {
+      "pt": "Quarentena para aves novas, vacinação conforme a região e mãos lavadas depois de mexer nos patinhos (salmonela).",
+      "en": "Quarantine new birds, vaccinate as advised in your region and wash your hands after handling ducklings (Salmonella)."
+    },
+    {
+      "pt": "Antibióticos só com receita veterinária (regra na UE, EUA e Canadá), respeitando a carência da carne e dos ovos.",
+      "en": "Antibiotics only with a vet prescription (the rule in the EU, US and Canada), respecting the withdrawal period for meat and eggs."
+    }
   ],
   "diseases": [
     {
-      "name": { "pt": "Aspergilose", "en": "Aspergillosis" },
-      "signs": { "pt": "Respiração com o bico aberto, chiado, fraqueza, principalmente em patinhos.", "en": "Open-mouth breathing, wheezing, weakness, mostly in ducklings." },
-      "homeCare": { "pt": "Retire toda cama e comida mofadas e melhore a ventilação.", "en": "Remove all mouldy bedding and feed and improve ventilation." },
-      "vetCare": { "pt": "Antifúngicos podem ser indicados pelo veterinário; a prevenção é o principal.", "en": "Antifungals may be prescribed by a vet; prevention is key." }
+      "name": {
+        "pt": "Gripe aviária (influenza aviária)",
+        "en": "Avian influenza (bird flu)"
+      },
+      "signs": {
+        "pt": "Em patos os sinais podem ser discretos ou nenhum: apatia, comer menos, sinais nervosos, queda de postura ou mortes sem explicação.",
+        "en": "In ducks signs may be mild or absent: dullness, eating less, nervous signs, a drop in laying or unexplained deaths."
+      },
+      "homeCare": {
+        "pt": "Não mova nem venda as aves, não toque em aves silvestres mortas, feche o abrigo a visitas e avise na hora o serviço veterinário oficial.",
+        "en": "Do not move or sell the birds, do not touch dead wild birds, close the shelter to visitors and report immediately to the official veterinary service."
+      },
+      "vetCare": {
+        "pt": "Não há tratamento. É doença de notificação obrigatória em todos os países; o serviço oficial confirma e define abate e zonas de controle. A vacina, onde existe, é só para criações comerciais (ex.: França).",
+        "en": "There is no treatment. It is notifiable in every country; the official service confirms it and sets culling and control zones. Where vaccination exists it is only for commercial farms (e.g. France)."
+      }
     },
     {
-      "name": { "pt": "Botulismo (pescoço mole)", "en": "Botulism (limberneck)" },
-      "signs": { "pt": "Paralisia que começa nas pernas e asas e chega ao pescoço, que fica caído.", "en": "Paralysis starting in the legs and wings and reaching the neck, which droops." },
-      "homeCare": { "pt": "Tire as aves da água parada e de carcaças em decomposição; dê água limpa.", "en": "Remove birds from stagnant water and rotting carcasses; give clean water." },
-      "vetCare": { "pt": "O veterinário pode usar antitoxina e cuidados de suporte; casos leves podem se recuperar.", "en": "A vet may use antitoxin and supportive care; mild cases can recover." }
+      "name": {
+        "pt": "Aspergilose",
+        "en": "Aspergillosis"
+      },
+      "signs": {
+        "pt": "Respiração com o bico aberto, chiado, fraqueza, principalmente em patinhos.",
+        "en": "Open-mouth breathing, wheezing, weakness, mostly in ducklings."
+      },
+      "homeCare": {
+        "pt": "Retire toda cama e comida mofadas, melhore a ventilação e separe as aves que respiram mal.",
+        "en": "Remove all mouldy bedding and feed, improve ventilation and separate birds that are struggling to breathe."
+      },
+      "vetCare": {
+        "pt": "Antifúngicos podem ser indicados pelo veterinário; a prevenção é o principal.",
+        "en": "Antifungals may be prescribed by a vet; prevention is key."
+      }
     },
     {
-      "name": { "pt": "Cólera aviária (pasteurelose)", "en": "Fowl cholera (pasteurellosis)" },
-      "signs": { "pt": "Mortes súbitas, febre, diarreia esverdeada, cabeça arroxeada.", "en": "Sudden deaths, fever, greenish diarrhoea, purplish head." },
-      "homeCare": { "pt": "Isole os doentes, enterre ou queime as aves mortas e desinfete o abrigo.", "en": "Isolate sick birds, bury or burn dead ones and disinfect the shelter." },
-      "vetCare": { "pt": "Antibióticos escolhidos pelo veterinário; vacina onde houver surtos.", "en": "Antibiotics chosen by a vet; vaccine where outbreaks occur." }
+      "name": {
+        "pt": "Botulismo (pescoço mole)",
+        "en": "Botulism (limberneck)"
+      },
+      "signs": {
+        "pt": "Paralisia que começa nas pernas e asas e chega ao pescoço, que fica caído.",
+        "en": "Paralysis starting in the legs and wings and reaching the neck, which droops."
+      },
+      "homeCare": {
+        "pt": "Tire as aves da água parada e de carcaças em decomposição; deixe-as na sombra com água limpa ao alcance.",
+        "en": "Remove birds from stagnant water and rotting carcasses; keep them in the shade with clean water within reach."
+      },
+      "vetCare": {
+        "pt": "O veterinário pode usar antitoxina e cuidados de suporte; casos leves podem se recuperar.",
+        "en": "A vet may use antitoxin and supportive care; mild cases can recover."
+      }
     },
     {
-      "name": { "pt": "Deficiência de niacina", "en": "Niacin deficiency" },
-      "signs": { "pt": "Patinhos com pernas tortas, fracos, andando com dificuldade.", "en": "Ducklings with bowed legs, weak, struggling to walk." },
-      "homeCare": { "pt": "Use ração própria para patos ou adicione levedura de cerveja à ração.", "en": "Use duck-specific feed or add brewer's yeast to the feed." },
-      "vetCare": { "pt": "Suplemento vitamínico na dose indicada pelo veterinário.", "en": "Vitamin supplement at the dose advised by a vet." }
+      "name": {
+        "pt": "Cólera aviária (pasteurelose)",
+        "en": "Fowl cholera (pasteurellosis)"
+      },
+      "signs": {
+        "pt": "Mortes súbitas, febre, diarreia esverdeada, cabeça arroxeada.",
+        "en": "Sudden deaths, fever, greenish diarrhoea, purplish head."
+      },
+      "homeCare": {
+        "pt": "Isole os doentes, enterre ou queime as aves mortas e desinfete o abrigo. Como mortes súbitas também podem ser gripe aviária, avise o veterinário.",
+        "en": "Isolate sick birds, bury or burn dead ones and disinfect the shelter. Because sudden deaths can also be bird flu, call a vet."
+      },
+      "vetCare": {
+        "pt": "Antibióticos escolhidos e receitados pelo veterinário; vacina onde houver surtos.",
+        "en": "Antibiotics chosen and prescribed by a vet; vaccine where outbreaks occur."
+      }
+    },
+    {
+      "name": {
+        "pt": "Deficiência de niacina",
+        "en": "Niacin deficiency"
+      },
+      "signs": {
+        "pt": "Patinhos com pernas tortas, fracos, mancando ou andando com dificuldade.",
+        "en": "Ducklings with bowed legs, weak, limping or struggling to walk."
+      },
+      "homeCare": {
+        "pt": "Use ração própria para patos ou adicione levedura de cerveja à ração.",
+        "en": "Use duck-specific feed or add brewer's yeast to the feed."
+      },
+      "vetCare": {
+        "pt": "Suplemento vitamínico (niacina) conforme orientação do veterinário.",
+        "en": "Vitamin (niacin) supplement as advised by a vet."
+      }
     }
   ],
   "sources": [
-    { "title": "EMATER-PA — Criação racional de pato regional (manual técnico)", "url": "https://www.emater.pa.gov.br/storage/app/uploads/public/648/b23/3ec/648b233eceef6232754141.pdf" },
-    { "title": "UFAM — Cartilha do Produtor de Patos", "url": "https://zenodo.org/records/8240001/files/Cartilha%20do%20Produtor%20de%20Patos.pdf" },
-    { "title": "Engormix — Manejo de patos Pekin e Muscovy no calor", "url": "https://www.engormix.com/mbr-724425/darofu" }
-  ]
+    {
+      "title": "UFAM — Cartilha do Produtor de Patos",
+      "url": "https://zenodo.org/records/8240001/files/Cartilha%20do%20Produtor%20de%20Patos.pdf"
+    },
+    {
+      "title": "MAPA/SDA — Plano de contingência para influenza aviária e doença de Newcastle",
+      "url": "https://wikisda.agricultura.gov.br/pt-br/Sa%C3%BAde-Animal/plano-de-contingencia-para-influenza-aviaria-e-doenca-de-newcastle"
+    },
+    {
+      "title": "MU Extension — Brooding and Rearing Ducklings and Goslings (G8920)",
+      "url": "https://extension.missouri.edu/publications/g8920"
+    },
+    {
+      "title": "Oklahoma State Extension — Avian influenza (2023)",
+      "url": "https://extension.okstate.edu/articles/2023/avian-influenza-23"
+    },
+    {
+      "title": "Ontario Animal Health Network — General Small Flock Resources",
+      "url": "https://www.oahn.ca/resources/general-small-flock-resources/"
+    },
+    {
+      "title": "GEH — Wassergeflügel: Haltung, Fütterung, Zucht, Tierwohl",
+      "url": "https://www.g-e-h.de/images/stories/downloadbereich/wassergefluegel.pdf"
+    },
+    {
+      "title": "Ministère de l'Agriculture — Niveau de risque « élevé »",
+      "url": "https://agriculture.gouv.fr/influenza-aviaire-la-france-place-son-territoire-en-niveau-de-risque-eleve-pour-renforcer-la"
+    },
+    {
+      "title": "Productions animales (INRAE) — canard mulard",
+      "url": "https://productions-animales.org/article/download/3435/11070/27075"
+    },
+    {
+      "title": "FAO — Animal Genetic Resources: anatre venete",
+      "url": "https://fao.org/docrep/pdf/009/a0389t/a0389t07.pdf"
+    },
+    {
+      "title": "FAO — Producción y productos avícolas: patos",
+      "url": "https://www.fao.org/poultry-production-products/production/poultry-species/ducks/es"
+    },
+    {
+      "title": "EMATER-PA — Criação racional de pato regional (manual técnico)",
+      "url": "https://www.emater.pa.gov.br/storage/app/uploads/public/648/b23/3ec/648b233eceef6232754141.pdf"
+    },
+    {
+      "title": "Engormix — Manejo de patos Pekin e Muscovy no calor",
+      "url": "https://www.engormix.com/mbr-724425/darofu"
+    }
+  ],
+  "countryNotes": {
+    "BR": {
+      "highlights": [
+        {
+          "pt": "O pato regional brasileiro (Cairina moschata) é rústico, choca bem e aguenta calor; é o pato do pato no tucupi.",
+          "en": "Brazil's regional duck (Cairina moschata, Muscovy) is hardy, broods well and copes with heat; it is the duck used in pato no tucupi."
+        },
+        {
+          "pt": "No Pará há grande demanda no Círio de Nazaré (outubro): um lote leva cerca de 120 dias, então comece em maio ou junho.",
+          "en": "In Pará demand peaks at the Círio de Nazaré festival (October): a batch takes about 120 days, so start in May or June."
+        },
+        {
+          "pt": "Aves aquáticas silvestres carregam a gripe aviária: não deixe seus patos dividirem lagoa com aves silvestres e separe-os das galinhas.",
+          "en": "Wild waterfowl carry avian influenza: keep your ducks off ponds shared with wild birds and separate them from chickens."
+        },
+        {
+          "pt": "Mortes súbitas ou sinais nervosos são de notificação imediata ao serviço veterinário estadual.",
+          "en": "Sudden deaths or nervous signs must be reported immediately to the state veterinary service."
+        },
+        {
+          "pt": "Transporte de patos exige GTA, e o pato-do-mato silvestre não pode ser capturado.",
+          "en": "Moving ducks requires a GTA permit, and wild Muscovy ducks may not be captured."
+        }
+      ],
+      "sources": [
+        {
+          "title": "DOL — Pato está cada vez mais raro nas mesas",
+          "url": "https://dol.com.br/noticias/agropara/672775/pato-esta-cada-vez-mais-raro-nas-mesas"
+        },
+        {
+          "title": "MAPA/SDA — Plano de contingência para influenza aviária e doença de Newcastle",
+          "url": "https://wikisda.agricultura.gov.br/pt-br/Sa%C3%BAde-Animal/plano-de-contingencia-para-influenza-aviaria-e-doenca-de-newcastle"
+        },
+        {
+          "title": "Governo do RJ — Influenza aviária 2025",
+          "url": "https://www.rj.gov.br/agricultura/sites/default/files/2025-04/Influenza%20Avia%CC%81ria%202025.pdf"
+        },
+        {
+          "title": "Agrodefesa — IN MAPA 56/2007 consolidada",
+          "url": "https://goias.gov.br/agrodefesa/wp-content/uploads/sites/49/2014/09/in-56-2007-consolidada-com-in-18-2017-maio-0a6.pdf"
+        }
+      ]
+    },
+    "US": {
+      "highlights": [
+        {
+          "pt": "Patos podem carregar gripe aviária sem sintomas: mantenha-os longe de lagoas com aves silvestres e não os misture com galinhas.",
+          "en": "Ducks can carry bird flu without symptoms: keep them away from ponds used by wild waterfowl and don't mix them with chickens."
+        },
+        {
+          "pt": "Patinhos precisam de mais niacina que pintinhos: use ração para aves aquáticas ou suplemente e confira o rótulo.",
+          "en": "Ducklings need more niacin than chicks: use waterfowl feed or a supplement and check the label."
+        },
+        {
+          "pt": "O Muscovy está sob regras federais: é proibido soltar Muscovies criados em cativeiro na natureza.",
+          "en": "Muscovy ducks fall under federal rules: releasing captive-reared Muscovies into the wild is prohibited."
+        },
+        {
+          "pt": "Pekin (carne) e Khaki Campbell (ovos) são as raças mais comuns; quase não chocam, então use chocadeira.",
+          "en": "Pekin (meat) and Khaki Campbell (eggs) are the most common breeds; they rarely go broody, so use an incubator."
+        },
+        {
+          "pt": "Antibióticos para patos de quintal também exigem receita veterinária.",
+          "en": "Antibiotics for backyard ducks also need a vet prescription."
+        }
+      ],
+      "sources": [
+        {
+          "title": "MU Extension — Brooding and Rearing Ducklings and Goslings (G8920)",
+          "url": "https://extension.missouri.edu/publications/g8920"
+        },
+        {
+          "title": "UT Extension — Backyard flock biosecurity (D157)",
+          "url": "https://utia.tennessee.edu/publications/wp-content/uploads/sites/269/2023/10/D157.pdf"
+        },
+        {
+          "title": "Federal Register — Muscovy duck control order (Oct 1, 2010)",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2010-10-01/html/2010-23139.htm"
+        },
+        {
+          "title": "Metzer Farms — Supplementing your ducks' diet with niacin",
+          "url": "https://www.metzerfarms.com/blog/determining-how-to-supplement-your-ducks-diet-with-niacin.html"
+        }
+      ]
+    },
+    "CA": {
+      "highlights": [
+        {
+          "pt": "Pato não está no sistema de cotas, diferente de frango, peru e ovos de galinha.",
+          "en": "Ducks are not under supply-management quota, unlike chicken, turkey and table eggs."
+        },
+        {
+          "pt": "Gripe aviária é doença de notificação obrigatória ao CFIA; mantenha os patos longe de aves aquáticas silvestres na migração.",
+          "en": "Avian influenza is reportable to the CFIA; keep ducks away from wild waterfowl during migration."
+        },
+        {
+          "pt": "No inverno, use bebedouro aquecido e troque a água todo dia; abaixo de zero, evite água de nado.",
+          "en": "In winter, use heated waterers and change water daily; avoid swimming water below freezing."
+        },
+        {
+          "pt": "A Pekin é a raça comercial dominante no Canadá, com a indústria concentrada no Quebec.",
+          "en": "Pekin is Canada's dominant commercial duck, with the industry centred in Quebec."
+        },
+        {
+          "pt": "Antibióticos medicamente importantes só com receita veterinária.",
+          "en": "Medically important antimicrobials require a veterinary prescription."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ontario.ca — Supply management systems for eggs, poultry and dairy",
+          "url": "https://www.ontario.ca/page/supply-management-systems-eggs-poultry-and-dairy"
+        },
+        {
+          "title": "Canadian Poultry Magazine — What the duck",
+          "url": "https://www.canadianpoultrymag.com/what-the-duck-30588/"
+        },
+        {
+          "title": "Ontario Animal Health Network — General Small Flock Resources",
+          "url": "https://www.oahn.ca/resources/general-small-flock-resources/"
+        },
+        {
+          "title": "Nova Scotia — Avian Influenza Fact Sheet",
+          "url": "https://novascotia.ca/agri/programs-and-services/farm-animal-welfare/Avian-Influenza-Fact-Sheet.pdf"
+        }
+      ]
+    },
+    "DE": {
+      "highlights": [
+        {
+          "pt": "Patos contam legalmente como aves de produção: registre no Veterinäramt antes de começar, mesmo com poucos animais.",
+          "en": "Ducks legally count as poultry: register with the Veterinäramt before you start, even with a few birds."
+        },
+        {
+          "pt": "Aves aquáticas são o grupo de maior risco para gripe aviária; impeça contato com aves silvestres e com lagos naturais.",
+          "en": "Waterfowl are the highest-risk group for avian flu; prevent contact with wild birds and natural ponds."
+        },
+        {
+          "pt": "No outono/inverno o distrito pode decretar confinamento: tenha um abrigo fechado com água de banho coberta.",
+          "en": "In autumn/winter the district may order birds indoors: have a closed shelter with covered bathing water."
+        },
+        {
+          "pt": "Água aberta para banho é essencial para a plumagem; nunca crie um pato sozinho.",
+          "en": "Open bathing water is essential for plumage; never keep a single duck."
+        },
+        {
+          "pt": "Raça nativa: Pommernente; a Laufente (corredor) é tradicional contra lesmas em jardins grandes.",
+          "en": "Native breed: Pommernente; Indian Runners (Laufente) are a traditional slug control in large gardens."
+        }
+      ],
+      "sources": [
+        {
+          "title": "GEH — Wassergeflügel: Haltung, Fütterung, Zucht, Tierwohl",
+          "url": "https://www.g-e-h.de/images/stories/downloadbereich/wassergefluegel.pdf"
+        },
+        {
+          "title": "BZL — Wie gefährlich ist die Vogelgrippe?",
+          "url": "https://www.landwirtschaft.de/tier-und-pflanze/tier/gefluegel/wie-gefaehrlich-ist-die-vogelgrippe"
+        },
+        {
+          "title": "Lahn-Dill-Kreis — Allgemeinverfügung risikoorientierte Aufstallung (2025)",
+          "url": "https://www.lahn-dill-kreis.de/wp-content/uploads/2025/12/2025-12-10-AI-Allgemeinverfuegung-Anordnung-risikoorientierte-Aufstallung-im-LDK_.pdf"
+        },
+        {
+          "title": "Brandenburg MLEUV — Gefährdete Rassen in Brandenburg",
+          "url": "https://mleuv.brandenburg.de/sixcms/media.php/9/Gefaehrdete-Rassen-BB.pdf"
+        }
+      ]
+    },
+    "ES": {
+      "highlights": [
+        {
+          "pt": "Em surtos de gripe aviária, a Espanha já proibiu criar patos e gansos junto com outras aves: tenha cercados separados.",
+          "en": "During bird flu outbreaks Spain has banned keeping ducks and geese with other poultry: have separate pens."
+        },
+        {
+          "pt": "Do outono ao inverno, mantenha os patos cobertos e longe de lagoas com aves selvagens, sobretudo perto de humedales.",
+          "en": "From autumn to winter, keep ducks under cover and away from ponds with wild birds, especially near wetlands."
+        },
+        {
+          "pt": "Patos de quintal também precisam de registro REGA como granja avícola de autoconsumo (RD 637/2021).",
+          "en": "Backyard ducks also need REGA registration as a home-use poultry holding (RD 637/2021)."
+        },
+        {
+          "pt": "As raças mais usadas são Barbarie e Pekín; muitos patinhos vêm de incubadoras francesas.",
+          "en": "The most used breeds are Muscovy (Barbarie) and Pekin; many ducklings come from French hatcheries."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Avinews — Cría de patos: manejo y arranque",
+          "url": "https://avinews.com/cria-de-patos-manejo-y-arranque/?noamp=mobile"
+        },
+        {
+          "title": "RTVC — El Gobierno confina todas las explotaciones de aves de corral al aire libre",
+          "url": "https://rtvc.es/el-gobierno-confina-todas-las-explotaciones-de-aves-de-corral-al-aire-libre-por-gripe-aviar-13-noviembre-2025/"
+        },
+        {
+          "title": "BOE — Real Decreto 637/2021",
+          "url": "https://boe.es/boe/dias/2021/07/28/pdfs/BOE-A-2021-12609.pdf"
+        }
+      ]
+    },
+    "FR": {
+      "highlights": [
+        {
+          "pt": "Patos são os mais vigiados para a gripe aviária: no outono e inverno, tenha abrigo ou rede prontos para o confinamento obrigatório.",
+          "en": "Ducks are the most closely watched species for bird flu: in autumn and winter keep a shelter or netting ready for mandatory confinement."
+        },
+        {
+          "pt": "A vacinação contra a gripe aviária é obrigatória só em criações comerciais com mais de 250 patos; o quintal fica fora, mas segue a biossegurança.",
+          "en": "Bird flu vaccination is mandatory only for commercial farms with more than 250 ducks; backyard flocks are exempt but must follow biosecurity rules."
+        },
+        {
+          "pt": "Proteja água e ração das aves selvagens e avise ao veterinário ou à DDPP qualquer mortalidade anormal.",
+          "en": "Keep water and feed away from wild birds and report any abnormal deaths to a vet or the DDPP."
+        },
+        {
+          "pt": "O mulard do foie gras é híbrido estéril: para criar em casa, prefira Barbarie, Rouen ou Challans.",
+          "en": "The foie gras mulard is a sterile hybrid; for home breeding choose Muscovy (Barbarie), Rouen or Challans."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ministère de l'Agriculture — Niveau de risque « élevé »",
+          "url": "https://agriculture.gouv.fr/influenza-aviaire-la-france-place-son-territoire-en-niveau-de-risque-eleve-pour-renforcer-la"
+        },
+        {
+          "title": "Préfecture du Jura — Vaccination IAHP canard",
+          "url": "https://www.jura.gouv.fr/index.php/contenu/telechargement/27849/216686/file/20231011_Vaccination%20IAHP%20canard.pdf"
+        },
+        {
+          "title": "Productions animales (INRAE) — canard mulard",
+          "url": "https://productions-animales.org/article/download/3435/11070/27075"
+        }
+      ]
+    },
+    "PT": {
+      "highlights": [
+        {
+          "pt": "Patos contam como aves de capoeira: a capoeira caseira (até 100 aves) tem de ser registada na DGAV.",
+          "en": "Ducks count as poultry: a backyard flock (up to 100 birds) must be registered with DGAV."
+        },
+        {
+          "pt": "No outono/inverno a DGAV costuma mandar confinar as aves por causa da gripe aviária; tenha abrigo coberto com água.",
+          "en": "In autumn/winter DGAV often orders birds kept indoors due to avian flu; have a covered shelter with water."
+        },
+        {
+          "pt": "Evite lagos abertos onde patos selvagens pousam, sobretudo perto de estuários e rias.",
+          "en": "Avoid open ponds where wild ducks land, especially near estuaries and lagoons."
+        },
+        {
+          "pt": "Não há raça autóctone de pato; os mais comuns são pato-mudo, Pequim e Corredor Indiano.",
+          "en": "There is no native Portuguese duck breed; the most common are Muscovy (pato-mudo), Pekin and Indian Runner."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Agroportal — Procedimento para o Registo de Detenção Caseira de animais (DGAV)",
+          "url": "https://www.agroportal.pt/?p=741849"
+        },
+        {
+          "title": "Observador — Registo de capoeiras de aves é obrigatório mas nem sempre cumprido",
+          "url": "https://observador.pt/2025/01/29/registo-de-capoeiras-de-aves-e-obrigatorio-mas-nem-sempre-cumprido/"
+        },
+        {
+          "title": "RR — Gripe das aves já matou mais de mil patos de engorda em Benavente",
+          "url": "https://rr.pt/noticia/pais/2025/09/03/gripe-das-aves-ja-matou-mais-de-mil-patos-de-engorda-em-benavente/438391/"
+        }
+      ]
+    },
+    "IT": {
+      "highlights": [
+        {
+          "pt": "No norte da Itália patos são de alto risco para gripe aviária: prepare-se para fechá-los no outono-inverno.",
+          "en": "In northern Italy ducks are high-risk for avian flu: be ready to house them in autumn-winter."
+        },
+        {
+          "pt": "Proteja o tanque de água de aves selvagens e mantenha os patos separados das galinhas.",
+          "en": "Keep the pond away from wild birds and keep ducks separate from chickens."
+        },
+        {
+          "pt": "Quem começa uma criação para consumo próprio precisa registrá-la na ASL/BDN.",
+          "en": "Anyone starting a home flock must register it with the ASL/BDN."
+        },
+        {
+          "pt": "As raças vênetas Germanata Veneta e Mignon estão ameaçadas e têm programa regional de conservação.",
+          "en": "The Venetian breeds Germanata Veneta and Mignon are endangered and have a regional conservation programme."
+        },
+        {
+          "pt": "Remédio só com receita veterinária eletrônica (REV).",
+          "en": "Medicines only with an electronic veterinary prescription (REV)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "FAO — Animal Genetic Resources: anatre venete",
+          "url": "https://fao.org/docrep/pdf/009/a0389t/a0389t07.pdf"
+        },
+        {
+          "title": "IZSVe — Piano nazionale influenza aviaria 2022",
+          "url": "https://www.izsvenezie.it/documenti/temi/influenza-aviaria//piani-sorveglianza/piano-nazionale-influenza-aviaria-2022.pdf"
+        },
+        {
+          "title": "Il Fatto Alimentare — Polli e galline in un pollaio domestico",
+          "url": "https://ilfattoalimentare.it/pollai-nuove-regole-veneto.html"
+        }
+      ]
+    },
+    "MX": {
+      "highlights": [
+        {
+          "pt": "O pato criollo (Cairina moschata) é nativo do México e foi domesticado na América Latina; é o pato típico de quintal.",
+          "en": "The Muscovy duck (Cairina moschata) is native to Mexico and was domesticated in Latin America; it is the typical backyard duck."
+        },
+        {
+          "pt": "Mantenha patos domésticos longe de aves aquáticas silvestres: elas trazem a gripe aviária.",
+          "en": "Keep domestic ducks away from wild waterfowl, which carry avian influenza."
+        },
+        {
+          "pt": "Mortalidade anormal em aves deve ser avisada ao SENASICA: 800 751 2100 ou app AVISE.",
+          "en": "Report unusual bird deaths to SENASICA: 800 751 2100 or the AVISE app."
+        },
+        {
+          "pt": "Evite cruzar todo o plantel com linhagens comerciais para não perder a rusticidade do pato criollo.",
+          "en": "Avoid crossing the whole flock with commercial lines so the criollo duck keeps its hardiness."
+        }
+      ],
+      "sources": [
+        {
+          "title": "FAO — Producción y productos avícolas: patos",
+          "url": "https://www.fao.org/poultry-production-products/production/poultry-species/ducks/es"
+        },
+        {
+          "title": "Agroproductividad — Especies criadas en traspatios rurales de Campeche",
+          "url": "https://biblat.unam.mx/hevila/Agroproductividad/2015/vol8/no4/5.pdf"
+        },
+        {
+          "title": "SENASICA — Reporta Agricultura caso de influenza aviar AH5N1 en aves silvestres",
+          "url": "https://www.gob.mx/senasica/articulos/reporta-agricultura-caso-de-influenza-aviar-ah5n1-en-aves-silvestres-317103"
+        },
+        {
+          "title": "SENASICA — Unidos para mantener estatus de país libre de influenza aviar AH5N1",
+          "url": "https://www.gob.mx/senasica/articulos/unidos-para-mantener-estatus-de-pais-libre-de-influenza-aviar-ah5n1"
+        }
+      ]
+    }
+  }
 }

@@ -1,96 +1,767 @@
 {
   "id": "chickens",
   "summary": {
-    "pt": "Galinhas são a criação mais fácil para começar: precisam de pouco espaço, dão ovos quase todos os dias e transformam restos de horta em adubo. Um galinheiro seco, ventilado e protegido de predadores resolve a maior parte dos problemas.",
-    "en": "Chickens are the easiest animals to start with: they need little space, lay eggs almost every day and turn garden scraps into manure. A dry, ventilated, predator-proof coop solves most problems."
+    "pt": "Galinhas são a criação mais fácil para começar: precisam de pouco espaço, dão ovos quase todos os dias e transformam restos de horta em adubo. Um galinheiro seco, ventilado, protegido de predadores e de aves silvestres resolve a maior parte dos problemas. Antes da primeira ave, confira se o seu país ou cidade exige registro ou licença — em muitos lugares, mesmo 2 ou 3 galinhas precisam ser declaradas.",
+    "en": "Chickens are the easiest animals to start with: they need little space, lay eggs almost every day and turn garden scraps into manure. A dry, ventilated coop that keeps out predators and wild birds solves most problems. Before your first bird, check whether your country or town requires registration or a permit — in many places even 2 or 3 hens must be declared."
   },
   "breeds": [
-    { "name": "Rhode Island Red", "purpose": { "pt": "Ovos e carne", "en": "Eggs and meat" }, "notes": { "pt": "Rústica e calma, boa postura de ovos marrons; tolera bem frio e calor moderado.", "en": "Hardy and calm, good layer of brown eggs; handles cold and moderate heat well." } },
-    { "name": "Embrapa 051 (Colonial)", "purpose": { "pt": "Ovos e carne (caipira)", "en": "Eggs and meat (free-range)" }, "notes": { "pt": "Desenvolvida pela Embrapa para criação caipira; ciclo mais longo e boa adaptação ao clima brasileiro.", "en": "Developed by Embrapa for free-range systems; longer cycle and well adapted to Brazilian climate." } },
-    { "name": "Pescoço Pelado (Naked Neck)", "purpose": { "pt": "Carne e ovos", "en": "Meat and eggs" }, "notes": { "pt": "Tem menos penas no pescoço e por isso aguenta melhor o calor; ótima para regiões quentes.", "en": "Has fewer neck feathers and therefore copes better with heat; great for hot regions." } },
-    { "name": "Plymouth Rock Barrada (Carijó)", "purpose": { "pt": "Ovos e carne", "en": "Eggs and meat" }, "notes": { "pt": "Plumagem listrada, dócil, boa para quintal e para quem está começando.", "en": "Barred plumage, docile, good for backyards and beginners." } }
+    {
+      "name": "Rhode Island Red",
+      "purpose": {
+        "pt": "Ovos e carne",
+        "en": "Eggs and meat"
+      },
+      "notes": {
+        "pt": "Raça dos EUA, rústica e calma, boa postura de ovos marrons; vai bem em clima temperado e aguenta calor moderado.",
+        "en": "US breed, hardy and calm, a good layer of brown eggs; does well in temperate climates and handles moderate heat."
+      }
+    },
+    {
+      "name": "Embrapa 051 (Colonial)",
+      "purpose": {
+        "pt": "Ovos (caipira)",
+        "en": "Eggs (free-range)"
+      },
+      "notes": {
+        "pt": "Poedeira brasileira da Embrapa (cruzamento de Rhode Island Red com Plymouth Rock Branca) para pequenos produtores; rústica, serve para aviário e piquete em clima tropical e subtropical.",
+        "en": "Brazilian layer developed by Embrapa (Rhode Island Red × White Plymouth Rock) for smallholders; hardy, suits housed or paddock systems in tropical and subtropical climates."
+      }
+    },
+    {
+      "name": "Pescoço Pelado (Naked Neck / cuello desnudo)",
+      "purpose": {
+        "pt": "Carne e ovos",
+        "en": "Meat and eggs"
+      },
+      "notes": {
+        "pt": "Comum nos quintais do Brasil e entre as galinhas criollas do México; com menos penas no pescoço, aguenta melhor o calor — ótima para clima tropical e semiárido.",
+        "en": "Common in Brazilian backyards and among Mexican criolla hens; with fewer neck feathers it copes better with heat — great for tropical and semi-arid climates."
+      }
+    },
+    {
+      "name": "Plymouth Rock Barrada (Carijó / Barred Rock)",
+      "purpose": {
+        "pt": "Ovos e carne",
+        "en": "Eggs and meat"
+      },
+      "notes": {
+        "pt": "Raça americana de plumagem listrada, muito criada nos EUA e no Brasil; dócil, boa para quintal e para quem está começando, em clima temperado ou subtropical.",
+        "en": "American breed with barred plumage, widely kept in the US and Brazil; docile, good for backyards and beginners in temperate or subtropical climates."
+      }
+    },
+    {
+      "name": "Chantecler",
+      "purpose": {
+        "pt": "Ovos e carne",
+        "en": "Eggs and meat"
+      },
+      "notes": {
+        "pt": "Raça canadense criada no Quebec para o frio extremo: crista e barbelas pequenas e penas rentes ao corpo reduzem o congelamento; boa poedeira no inverno.",
+        "en": "Canadian breed developed in Quebec for extreme cold: a small comb and wattles and tight feathering reduce frostbite; a good winter layer."
+      }
+    },
+    {
+      "name": "Castellana Negra",
+      "purpose": {
+        "pt": "Ovos",
+        "en": "Eggs"
+      },
+      "notes": {
+        "pt": "Raça autóctone de Castela (Espanha), historicamente uma das principais poedeiras do país e hoje ameaçada; adaptada ao clima mediterrâneo e continental da Meseta.",
+        "en": "Native breed from Castile (Spain), historically one of the country's main layers and now endangered; adapted to the Mediterranean and continental climate of the Meseta."
+      }
+    },
+    {
+      "name": "Preta Lusitânica",
+      "purpose": {
+        "pt": "Ovos e carne",
+        "en": "Eggs and meat"
+      },
+      "notes": {
+        "pt": "Raça autóctone portuguesa, rústica, boa poedeira e ótima chocadeira; adaptada ao clima mediterrâneo/subtropical.",
+        "en": "Native Portuguese breed, hardy, a good layer and an excellent brooder; adapted to Mediterranean/subtropical climates."
+      }
+    },
+    {
+      "name": "Livornese",
+      "purpose": {
+        "pt": "Ovos",
+        "en": "Eggs"
+      },
+      "notes": {
+        "pt": "Raça italiana que deu origem à Leghorn: poedeira leve e rústica; raças leves como ela costumam lidar melhor com o calor do clima mediterrâneo.",
+        "en": "Italian breed behind the Leghorn: a light, hardy layer; light breeds like this usually cope better with Mediterranean heat."
+      }
+    }
   ],
   "idealTemp": {
     "minC": 15,
     "maxC": 25,
     "notes": {
-      "pt": "Acima de 30 °C as galinhas ofegam, comem menos e botam menos ovos. Pintinhos nas primeiras semanas precisam de aquecimento (cerca de 32 °C na primeira semana, baixando aos poucos).",
-      "en": "Above 30 °C chickens pant, eat less and lay fewer eggs. Chicks in their first weeks need heat (about 32 °C in the first week, lowered gradually)."
+      "pt": "Acima de 30 °C as galinhas ofegam, abrem as asas longe do corpo, comem menos e botam ovos de casca fina. Pintinhos nas primeiras semanas precisam de aquecimento (cerca de 32 °C na primeira semana, baixando aos poucos). No frio intenso, o maior risco de congelar crista e pés vem da umidade dentro do galinheiro, mais do que do frio em si: ventile bem e prefira raças de crista pequena.",
+      "en": "Above 30 °C chickens pant, hold their wings away from the body, eat less and lay thin-shelled eggs. Chicks in their first weeks need heat (about 32 °C in the first week, lowered gradually). In severe cold, frostbite on combs and feet comes more from moisture inside the coop than from the cold itself: ventilate well and choose small-combed breeds."
     }
   },
   "seasonalCare": {
     "tropical": {
-      "summer": { "pt": "Calor e chuva: sombra, água fresca sempre, telhado com boa ventilação e cama seca para evitar coccidiose.", "en": "Heat and rain: shade, fresh water at all times, a well-ventilated roof and dry bedding to prevent coccidiosis." },
-      "autumn": { "pt": "Bom momento para vermifugar e revisar a vacinação antes do período seco.", "en": "Good time to deworm and review vaccinations before the dry season." },
-      "winter": { "pt": "Estação seca: complemente o pasto com verdura e milho; controle piolhos e ácaros, que aumentam no tempo seco.", "en": "Dry season: supplement forage with greens and corn; control lice and mites, which increase in dry weather." },
-      "spring": { "pt": "Época boa para chocar e criar pintinhos; prepare a pinteira aquecida e protegida.", "en": "Good time for hatching and raising chicks; prepare a warm, protected brooder." }
+      "summer": {
+        "pt": "Calor e chuva (como no Brasil e no Sul do México): sombra, água fresca sempre, telhado ventilado e cama seca para evitar coccidiose; combata moscas.",
+        "en": "Heat and rain (as in Brazil and southern Mexico): shade, fresh water at all times, a ventilated roof and dry bedding to prevent coccidiosis; control flies."
+      },
+      "autumn": {
+        "pt": "Bom momento para vermifugar e revisar a vacinação antes do período seco; proteja pintinhos do barro e da umidade.",
+        "en": "Good time to deworm and review vaccinations before the dry season; protect chicks from mud and damp."
+      },
+      "winter": {
+        "pt": "Estação seca: complemente o pasto com verdura, mandioca ou abóbora e milho; controle piolhos e ácaros, que aumentam no tempo seco.",
+        "en": "Dry season: supplement forage with greens, cassava or squash and corn; control lice and mites, which increase in dry weather."
+      },
+      "spring": {
+        "pt": "Época boa para chocar (galinhas caipiras e criollas chocam bem); prepare ninhos limpos e uma pinteira aquecida e protegida.",
+        "en": "Good time for hatching (free-range and criolla hens brood well); prepare clean nests and a warm, protected brooder."
+      }
     },
     "subtropical": {
-      "summer": { "pt": "Dias quentes: sombra, água fresca e galinheiro arejado; recolha os ovos duas vezes ao dia.", "en": "Hot days: shade, fresh water and an airy coop; collect eggs twice a day." },
-      "autumn": { "pt": "Muda de penas: a postura cai; reforce a ração com proteína e não estranhe a pausa.", "en": "Moulting: laying drops; boost protein in the feed and do not worry about the pause." },
-      "winter": { "pt": "Proteja do vento e da umidade; feche frestas sem tirar a ventilação. Dias curtos reduzem a postura.", "en": "Protect from wind and damp; close drafts without blocking ventilation. Short days reduce laying." },
-      "spring": { "pt": "Melhor época para chocar; vacine os pintinhos (Marek, Newcastle, bouba) conforme orientação local.", "en": "Best season for hatching; vaccinate chicks (Marek's, Newcastle, fowl pox) as advised locally." }
+      "summer": {
+        "pt": "Calor seco (Portugal, Espanha, Sul da Itália, Sul dos EUA): sombra, água fresca em vários pontos e galinheiro arejado, sem sol da tarde; recolha os ovos duas vezes ao dia.",
+        "en": "Dry heat (Portugal, Spain, southern Italy, the southern US): shade, fresh water in several spots and an airy coop out of the afternoon sun; collect eggs twice a day."
+      },
+      "autumn": {
+        "pt": "Muda de penas e menos ovos; reforce a proteína. É a época de aves migratórias: deixe pronto um espaço coberto para quando a autoridade mandar confinar as aves.",
+        "en": "Moult and fewer eggs; boost protein. Wild birds are migrating: have a covered area ready in case the authorities order poultry kept indoors."
+      },
+      "winter": {
+        "pt": "Proteja do vento e da chuva fria (no Sul do Brasil, também da geada); feche frestas sem tirar a ventilação. Dias curtos reduzem a postura.",
+        "en": "Protect from wind and cold rain (and frost in southern Brazil); close drafts without blocking ventilation. Short days reduce laying."
+      },
+      "spring": {
+        "pt": "Melhor época para chocar e comprar pintinhos, e pico de postura; vacine os pintinhos conforme o calendário local.",
+        "en": "Best season for hatching and buying chicks, and peak laying; vaccinate chicks following the local schedule."
+      }
     },
     "temperate": {
-      "summer": { "pt": "Garanta sombra e água; é a época de maior postura e de mais ácaros no galinheiro.", "en": "Ensure shade and water; peak laying season and peak mite season in the coop." },
-      "autumn": { "pt": "Muda de penas e menos ovos; limpe e desinfete o galinheiro antes do inverno.", "en": "Moult and fewer eggs; clean and disinfect the coop before winter." },
-      "winter": { "pt": "Evite água congelada, use cama grossa e seca e proteja cristas grandes do frio intenso.", "en": "Prevent frozen water, use deep dry bedding and protect large combs from severe cold." },
-      "spring": { "pt": "Época de choco e de comprar pintinhos; vermifugue o plantel antes de soltar no pasto.", "en": "Hatching and chick-buying season; deworm the flock before letting it out on pasture." }
+      "summer": {
+        "pt": "Garanta sombra (arbustos também protegem de aves de rapina) e água fresca; é a época de maior postura e de mais ácaros no galinheiro.",
+        "en": "Provide shade (shrubs also protect against birds of prey) and fresh water; peak laying season and peak mite season in the coop."
+      },
+      "autumn": {
+        "pt": "Muda e menos ovos; limpe e desinfete o galinheiro. Na Alemanha, França, Norte da Itália e Norte dos EUA, fique atento a ordens de confinamento por gripe aviária.",
+        "en": "Moult and fewer eggs; clean and disinfect the coop. In Germany, France, northern Italy and the northern US, watch for bird flu housing orders."
+      },
+      "winter": {
+        "pt": "Galinheiro com luz natural, cama grossa e seca e boa ventilação contra a umidade; evite água congelada e proteja cristas grandes do frio.",
+        "en": "A coop with daylight, deep dry bedding and good ventilation against damp; prevent frozen water and protect large combs from the cold."
+      },
+      "spring": {
+        "pt": "Época de choco e de comprar frangas ou pintinhos; vermifugue o plantel e faça rodízio do piquete para a grama se recuperar.",
+        "en": "Hatching and pullet- or chick-buying season; deworm the flock and rotate the run so the grass can recover."
+      }
     },
     "semiarid": {
-      "summer": { "pt": "Calor forte: sombra de árvores, telhado alto, água fresca em vários pontos; prefira raças de pescoço pelado.", "en": "Intense heat: tree shade, a high roof and fresh water in several spots; prefer naked-neck breeds." },
-      "autumn": { "pt": "Período de chuvas curtas: cuidado com cama molhada e coccidiose.", "en": "Short rainy period: watch for wet bedding and coccidiosis." },
-      "winter": { "pt": "Noites frescas e dias secos: armazene milho e capim para a seca.", "en": "Cool nights and dry days: store corn and forage for the dry period." },
-      "spring": { "pt": "Seca: complemente com ração e restos de horta; água limpa é a prioridade.", "en": "Drought: supplement with feed and garden scraps; clean water is the priority." }
+      "summer": {
+        "pt": "Calor forte (Nordeste do Brasil, Norte do México, Sudeste da Espanha, Sudoeste dos EUA): sombra de árvores, telhado alto, água fresca em vários pontos e bebedouros longe do sol; prefira raças de pescoço pelado.",
+        "en": "Intense heat (northeastern Brazil, northern Mexico, southeastern Spain, the southwestern US): tree shade, a high roof, fresh water in several spots and drinkers out of the sun; prefer naked-neck breeds."
+      },
+      "autumn": {
+        "pt": "Período de chuvas curtas: cuidado com cama molhada e coccidiose.",
+        "en": "Short rainy period: watch for wet bedding and coccidiosis."
+      },
+      "winter": {
+        "pt": "Noites frescas e dias secos: proteja os pintinhos do frio da noite e armazene milho e capim para a seca.",
+        "en": "Cool nights and dry days: protect chicks from night chill and store corn and forage for the dry period."
+      },
+      "spring": {
+        "pt": "Seca: complemente com ração e restos de horta; água limpa é a prioridade.",
+        "en": "Drought: supplement with feed and garden scraps; clean water is the priority."
+      }
     },
     "cold": {
-      "summer": { "pt": "Aproveite o verão curto para criar pintinhos e deixar as aves no pasto.", "en": "Use the short summer to raise chicks and keep birds on pasture." },
-      "autumn": { "pt": "Prepare o galinheiro isolado e escolha só as aves mais resistentes para o inverno.", "en": "Prepare an insulated coop and keep only the hardiest birds for winter." },
-      "winter": { "pt": "Água sem congelar, cama funda, galinheiro fechado mas ventilado; luz artificial ajuda a manter a postura.", "en": "Unfrozen water, deep litter, a closed but ventilated coop; artificial light helps keep laying." },
-      "spring": { "pt": "Retome a postura, faça limpeza geral e controle de ácaros.", "en": "Laying resumes; do a full clean-out and mite control." }
+      "summer": {
+        "pt": "Aproveite o verão curto (Canadá, Alemanha) para criar pintinhos e deixar as aves no pasto.",
+        "en": "Use the short summer (Canada, Germany) to raise chicks and keep birds on pasture."
+      },
+      "autumn": {
+        "pt": "Prepare o galinheiro isolado e escolha aves de crista pequena para o inverno; reforce a biossegurança na migração das aves silvestres.",
+        "en": "Prepare an insulated coop and keep small-combed birds for winter; tighten biosecurity during wild bird migration."
+      },
+      "winter": {
+        "pt": "Bebedouro aquecido (cuidado com fios e poeira), cama funda e galinheiro fechado mas ventilado; dê um pouco mais de energia na ração e confira crista e pés.",
+        "en": "A heated waterer (mind wiring and dust), deep litter and a closed but ventilated coop; give a little more energy in the feed and check combs and feet."
+      },
+      "spring": {
+        "pt": "A postura volta; faça limpeza geral, controle de ácaros e mantenha a biossegurança alta na migração de primavera.",
+        "en": "Laying resumes; do a full clean-out and mite control, and keep biosecurity high during spring migration."
+      }
     }
   },
   "feeding": [
-    { "pt": "Ração balanceada (postura ou crescimento) é a base; milho sozinho engorda mas não dá proteína suficiente.", "en": "Balanced feed (layer or grower) is the base; corn alone fattens but lacks protein." },
-    { "pt": "Verduras, restos de horta e pasto completam a dieta das galinhas caipiras.", "en": "Greens, garden scraps and pasture round out free-range hens' diet." },
-    { "pt": "Ofereça cálcio (casca de ostra ou de ovo torrada e moída) para cascas firmes.", "en": "Offer calcium (oyster shell or roasted, ground eggshell) for strong shells." },
-    { "pt": "Água limpa e fresca à vontade, trocada todos os dias.", "en": "Clean, fresh water at all times, changed daily." }
+    {
+      "pt": "Ração balanceada para cada fase (inicial, crescimento, postura) é a base; milho sozinho engorda mas não dá proteína suficiente.",
+      "en": "Balanced feed for each stage (starter, grower, layer) is the base; corn alone fattens but lacks protein."
+    },
+    {
+      "pt": "Verduras, restos de horta e pasto completam a dieta. Evite restos de cozinha com carne ou peixe: em vários lugares, como na União Europeia, a lei proíbe dá-los a animais de produção.",
+      "en": "Greens, garden scraps and pasture round out the diet. Avoid kitchen leftovers containing meat or fish: in many places, such as the European Union, the law bans feeding them to farm animals."
+    },
+    {
+      "pt": "Ofereça cálcio (casca de ostra ou de ovo torrada e moída) para cascas firmes e grit (pedrinhas) para a moela.",
+      "en": "Offer calcium (oyster shell or roasted, ground eggshell) for strong shells and grit (small stones) for the gizzard."
+    },
+    {
+      "pt": "Água limpa e fresca à vontade, trocada todos os dias; no calor, em vários pontos e na sombra.",
+      "en": "Clean, fresh water at all times, changed daily; in hot weather, in several shaded spots."
+    },
+    {
+      "pt": "Deixe ração e água dentro do galinheiro ou cobertas, para não atrair aves silvestres nem roedores.",
+      "en": "Keep feed and water inside the coop or under cover so they do not attract wild birds or rodents."
+    }
   ],
   "healthCare": [
-    { "pt": "Siga o calendário de vacinas da sua região (Marek, Newcastle e bouba são as mais comuns).", "en": "Follow your region's vaccination schedule (Marek's, Newcastle and fowl pox are the most common)." },
-    { "pt": "Mantenha a cama seca e troque a parte molhada perto dos bebedouros.", "en": "Keep bedding dry and replace the wet patches near drinkers." },
-    { "pt": "Coloque aves novas em quarentena por 2 a 3 semanas antes de juntar ao grupo.", "en": "Quarantine new birds for 2 to 3 weeks before mixing them with the flock." },
-    { "pt": "Confira piolhos e ácaros embaixo das asas e perto da cloaca uma vez por mês.", "en": "Check for lice and mites under the wings and around the vent once a month." }
+    {
+      "pt": "Siga o calendário de vacinas da sua região (Marek, Newcastle e bouba são as mais comuns). Na Alemanha a vacina de Newcastle é obrigatória mesmo para poucas galinhas.",
+      "en": "Follow your region's vaccination schedule (Marek's, Newcastle and fowl pox are the most common). In Germany Newcastle vaccination is mandatory even for a few hens."
+    },
+    {
+      "pt": "Biossegurança contra gripe aviária: tela no galinheiro, nada de contato com aves silvestres, calçado só para o galinheiro, e um espaço coberto pronto para quando a autoridade mandar confinar.",
+      "en": "Bird flu biosecurity: net the coop, no contact with wild birds, dedicated coop footwear, and a covered area ready for when the authorities order birds kept indoors."
+    },
+    {
+      "pt": "Compre aves de incubatórios certificados e coloque aves novas em quarentena por 2 a 3 semanas antes de juntar ao grupo.",
+      "en": "Buy birds from certified hatcheries and quarantine new birds for 2 to 3 weeks before mixing them with the flock."
+    },
+    {
+      "pt": "Mantenha a cama seca, troque a parte molhada perto dos bebedouros e confira piolhos e ácaros embaixo das asas uma vez por mês.",
+      "en": "Keep bedding dry, replace wet patches near drinkers and check for lice and mites under the wings once a month."
+    },
+    {
+      "pt": "Lave as mãos depois de mexer nas aves (salmonela) e não leve galinhas para dentro de casa; crianças pequenas só com supervisão.",
+      "en": "Wash your hands after handling birds (Salmonella) and do not bring chickens indoors; supervise young children."
+    },
+    {
+      "pt": "Antibióticos só com receita veterinária (regra na UE, EUA e Canadá) e respeitando o prazo de carência dos ovos e da carne.",
+      "en": "Antibiotics only with a vet prescription (the rule in the EU, US and Canada) and respecting the withdrawal period for eggs and meat."
+    }
   ],
   "diseases": [
     {
-      "name": { "pt": "Doença de Newcastle", "en": "Newcastle disease" },
-      "signs": { "pt": "Espirros, respiração difícil, torcicolo, paralisia, queda brusca de postura e mortes rápidas.", "en": "Sneezing, laboured breathing, twisted neck, paralysis, sudden drop in laying and rapid deaths." },
-      "homeCare": { "pt": "Isole as aves doentes, não venda nem leve aves para fora e limpe tudo com desinfetante.", "en": "Isolate sick birds, do not sell or move birds off the property and disinfect everything." },
-      "vetCare": { "pt": "Não há tratamento: a prevenção é a vacina. É doença de notificação obrigatória — avise o serviço veterinário oficial.", "en": "There is no treatment: prevention is vaccination. It is a notifiable disease — contact the official veterinary service." }
+      "name": {
+        "pt": "Gripe aviária (influenza aviária)",
+        "en": "Avian influenza (bird flu)"
+      },
+      "signs": {
+        "pt": "Mortes súbitas em série, crista e barbela roxas, falta de ar, apatia, sinais nervosos e queda brusca de postura.",
+        "en": "Sudden mass deaths, purple combs and wattles, breathing trouble, dullness, nervous signs and a sudden drop in laying."
+      },
+      "homeCare": {
+        "pt": "Não mexa nem mova as aves, não toque em aves silvestres mortas, feche o galinheiro a visitas e avise na hora o serviço veterinário oficial.",
+        "en": "Do not handle or move the birds, do not touch dead wild birds, close the coop to visitors and report immediately to the official veterinary service."
+      },
+      "vetCare": {
+        "pt": "Não há tratamento. É doença de notificação obrigatória em todos os países: o serviço oficial confirma, faz o abate sanitário e cria zonas de controle. Em vários países a vacina é proibida ou só para criações comerciais.",
+        "en": "There is no treatment. It is notifiable in every country: the official service confirms it, culls affected birds and sets control zones. In many countries vaccination is banned or limited to commercial farms."
+      }
     },
     {
-      "name": { "pt": "Coccidiose", "en": "Coccidiosis" },
-      "signs": { "pt": "Diarreia com sangue, penas arrepiadas, ave encolhida e sem apetite, principalmente em frangos jovens.", "en": "Bloody diarrhoea, ruffled feathers, hunched birds with no appetite, mostly in young birds." },
-      "homeCare": { "pt": "Troque a cama molhada, lave e seque bebedouros e separe as aves mais fracas.", "en": "Replace wet bedding, wash and dry drinkers and separate the weakest birds." },
-      "vetCare": { "pt": "Anticoccidianos na água (como amprólio ou sulfas), sempre com orientação veterinária.", "en": "Anticoccidials in the water (such as amprolium or sulfa drugs), always with veterinary guidance." }
+      "name": {
+        "pt": "Doença de Newcastle",
+        "en": "Newcastle disease"
+      },
+      "signs": {
+        "pt": "Espirros, respiração difícil, torcicolo, paralisia, queda brusca de postura e mortes rápidas.",
+        "en": "Sneezing, laboured breathing, twisted neck, paralysis, sudden drop in laying and rapid deaths."
+      },
+      "homeCare": {
+        "pt": "Isole as aves doentes, não venda nem leve aves para fora e limpe tudo com desinfetante.",
+        "en": "Isolate sick birds, do not sell or move birds off the property and disinfect everything."
+      },
+      "vetCare": {
+        "pt": "Não há tratamento: a prevenção é a vacina. É doença de notificação obrigatória — avise o serviço veterinário oficial.",
+        "en": "There is no treatment: prevention is vaccination. It is a notifiable disease — contact the official veterinary service."
+      }
     },
     {
-      "name": { "pt": "Bouba aviária (varíola)", "en": "Fowl pox" },
-      "signs": { "pt": "Crostas e verrugas na crista, barbela e em volta dos olhos; às vezes placas na boca.", "en": "Scabs and warts on the comb, wattles and around the eyes; sometimes plaques in the mouth." },
-      "homeCare": { "pt": "Limpe as feridas com antisséptico suave e controle mosquitos, que espalham a doença.", "en": "Clean lesions with a mild antiseptic and control mosquitoes, which spread the disease." },
-      "vetCare": { "pt": "Não há remédio para o vírus; o veterinário pode indicar antibiótico se houver infecção secundária. Prevenção pela vacina.", "en": "There is no cure for the virus; a vet may prescribe antibiotics for secondary infection. Prevent with vaccination." }
+      "name": {
+        "pt": "Coccidiose",
+        "en": "Coccidiosis"
+      },
+      "signs": {
+        "pt": "Diarreia com sangue, penas arrepiadas, ave encolhida e sem apetite, principalmente em frangos jovens e em época de chuva.",
+        "en": "Bloody diarrhoea, ruffled feathers, hunched birds with no appetite, mostly in young birds and in rainy weather."
+      },
+      "homeCare": {
+        "pt": "Troque a cama molhada, lave e seque bebedouros, mantenha água limpa à vontade e separe as aves mais fracas.",
+        "en": "Replace wet bedding, wash and dry drinkers, keep clean water available and separate the weakest birds."
+      },
+      "vetCare": {
+        "pt": "Anticoccidianos na água (como amprólio ou sulfas), sempre com orientação e, quando a lei exige, receita veterinária.",
+        "en": "Anticoccidials in the water (such as amprolium or sulfa drugs), always with veterinary guidance and a prescription where the law requires it."
+      }
     },
     {
-      "name": { "pt": "Piolhos e ácaros", "en": "Lice and mites" },
-      "signs": { "pt": "Coceira, penas falhadas, crista pálida, menos ovos; pontinhos andando na pele ou nos poleiros.", "en": "Itching, patchy feathers, pale comb, fewer eggs; tiny moving dots on the skin or perches." },
-      "homeCare": { "pt": "Ofereça banho de terra (areia com cinza), limpe poleiros e ninhos e troque a cama.", "en": "Provide a dust bath (sand with ash), clean perches and nests and change the bedding." },
-      "vetCare": { "pt": "Ectoparasiticidas próprios para aves, aplicados nas aves e no galinheiro conforme orientação veterinária.", "en": "Poultry-approved ectoparasiticides applied to birds and coop as directed by a vet." }
+      "name": {
+        "pt": "Bouba aviária (varíola)",
+        "en": "Fowl pox"
+      },
+      "signs": {
+        "pt": "Crostas e verrugas na crista, barbela e em volta dos olhos; às vezes placas na boca.",
+        "en": "Scabs and warts on the comb, wattles and around the eyes; sometimes plaques in the mouth."
+      },
+      "homeCare": {
+        "pt": "Separe as aves afetadas, limpe as feridas com antisséptico suave e controle mosquitos, que espalham a doença.",
+        "en": "Separate affected birds, clean lesions with a mild antiseptic and control mosquitoes, which spread the disease."
+      },
+      "vetCare": {
+        "pt": "Não há remédio para o vírus; o veterinário pode indicar antibiótico se houver infecção secundária. Prevenção pela vacina.",
+        "en": "There is no cure for the virus; a vet may prescribe antibiotics for secondary infection. Prevent with vaccination."
+      }
+    },
+    {
+      "name": {
+        "pt": "Piolhos e ácaros",
+        "en": "Lice and mites"
+      },
+      "signs": {
+        "pt": "Coceira, penas falhadas, crista pálida, menos ovos; pontinhos andando na pele ou nos poleiros.",
+        "en": "Itching, patchy feathers, pale comb, fewer eggs; tiny moving dots on the skin or perches."
+      },
+      "homeCare": {
+        "pt": "Ofereça banho de terra (areia com cinza), limpe poleiros e ninhos e troque a cama.",
+        "en": "Provide a dust bath (sand with ash), clean perches and nests and change the bedding."
+      },
+      "vetCare": {
+        "pt": "Ectoparasiticidas próprios para aves, aplicados nas aves e no galinheiro conforme orientação veterinária, respeitando a carência dos ovos.",
+        "en": "Poultry-approved ectoparasiticides applied to birds and coop as directed by a vet, respecting the egg withdrawal period."
+      }
     }
   ],
   "sources": [
-    { "title": "Embrapa Cocais — Manual do Sistema de Produção Sustentável de Galinhas Caipiras (2017)", "url": "https://core.ac.uk/download/211804893.pdf" },
-    { "title": "Embrapa/Emparn/Sebrae — Sistema de produção de galinhas caipiras", "url": "https://www.sebrae.com.br/Sebrae/Portal%20Sebrae/UFs/RN/Anexos/Avicultura-Sistema-de-producao-de-galinhas-caipiras.pdf" },
-    { "title": "Embrapa Meio-Norte — Instalações e conforto térmico para aves caipiras (Prosa Rural, 2020)", "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/1124118" }
-  ]
+    {
+      "title": "Embrapa — Guia de negócio: ovos caipira com a poedeira Embrapa 051",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1135219/1/Guia-de-Negocio-Ovos-caipirapoedeira-Embrapa-051.pdf"
+    },
+    {
+      "title": "MAPA/SDA — Plano de contingência para influenza aviária e doença de Newcastle",
+      "url": "https://wikisda.agricultura.gov.br/pt-br/Sa%C3%BAde-Animal/plano-de-contingencia-para-influenza-aviaria-e-doenca-de-newcastle"
+    },
+    {
+      "title": "UMN Extension — Raising chickens for eggs",
+      "url": "https://extension.umn.edu/poultry/raising-chickens-eggs"
+    },
+    {
+      "title": "Texas A&M AgriLife — Backyard poultry producers should be wary of high temperatures",
+      "url": "https://agrilifetoday.tamu.edu/2017/08/05/backyard-poultry-producers-should-be-wary-of-high-temperatures/"
+    },
+    {
+      "title": "Alberta Agriculture — Avian flu and small flock poultry",
+      "url": "https://www1.agriculture.alberta.ca/$department/deptdocs.nsf/ba3468a2a8681f69872569d60073fde1/6cfe85d6c5b8cb2b87257ebc0054d22a/$FILE/avian-flu-small-flock-poultry.pdf"
+    },
+    {
+      "title": "Livestock Conservancy — Chantecler chicken",
+      "url": "https://livestockconservancy.org/chantecler-chicken/"
+    },
+    {
+      "title": "BZL — Hühner halten im eigenen Garten",
+      "url": "https://www.landwirtschaft.de/garten/selbst-anbauen/tiere-halten/huehner-halten-im-eigenen-garten"
+    },
+    {
+      "title": "MAPA (España) — Catálogo de razas: Gallina Castellana Negra",
+      "url": "https://www.mapa.gob.es/ca/ganaderia/temas/zootecnia/razas-ganaderas/razas/catalogo-razas/aviar/gallina-castellana-negra"
+    },
+    {
+      "title": "Ministère de l'Agriculture — Influenza aviaire : mesures de biosécurité (professionnels et particuliers)",
+      "url": "https://agriculture.gouv.fr/influenza-aviaire-les-mesures-de-biosecurite-pour-les-operateurs-professionnels-et-les-particuliers"
+    },
+    {
+      "title": "Agroportal/RTP — Faça Chuva Faça Sol T8 Ep.9 (raças de galinha)",
+      "url": "https://www.agroportal.pt/?p=1076140"
+    },
+    {
+      "title": "Embrapa Cocais — Manual do Sistema de Produção Sustentável de Galinhas Caipiras (2017)",
+      "url": "https://core.ac.uk/download/211804893.pdf"
+    },
+    {
+      "title": "Embrapa/Emparn/Sebrae — Sistema de produção de galinhas caipiras",
+      "url": "https://www.sebrae.com.br/Sebrae/Portal%20Sebrae/UFs/RN/Anexos/Avicultura-Sistema-de-producao-de-galinhas-caipiras.pdf"
+    },
+    {
+      "title": "Embrapa Meio-Norte — Instalações e conforto térmico para aves caipiras (Prosa Rural, 2020)",
+      "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/1124118"
+    }
+  ],
+  "countryNotes": {
+    "BR": {
+      "highlights": [
+        {
+          "pt": "Mortes súbitas em série, crista roxa ou falta de ar podem ser gripe aviária ou Newcastle: avise na hora o serviço veterinário estadual.",
+          "en": "Sudden mass deaths, purple combs or breathing trouble may mean avian influenza or Newcastle disease: report immediately to the state veterinary service."
+        },
+        {
+          "pt": "Tele o galinheiro e proteja água e ração de aves silvestres: a gripe aviária circula em aves silvestres no Brasil desde 2023.",
+          "en": "Net the coop and keep water and feed away from wild birds: avian influenza has circulated in Brazilian wild birds since 2023."
+        },
+        {
+          "pt": "A poedeira Embrapa 051 e raças locais como Canela-Preta e Peloco são opções brasileiras para criação caipira.",
+          "en": "The Embrapa 051 layer and local breeds such as Canela-Preta and Peloco are Brazilian options for free-range flocks."
+        },
+        {
+          "pt": "Granjas comerciais com mais de 1.000 aves precisam de registro no órgão estadual; o trânsito de aves exige GTA.",
+          "en": "Commercial farms with over 1,000 birds must register with the state agency; moving birds requires a GTA permit."
+        },
+        {
+          "pt": "Para vender \"ovo caipira\", siga a norma ABNT NBR 16437 (acesso a piquete) e tenha inspeção oficial.",
+          "en": "To sell \"caipira\" (free-range) eggs, follow ABNT NBR 16437 (outdoor paddock access) and have official inspection."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Embrapa — Guia de negócio: ovos caipira com a poedeira Embrapa 051",
+          "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1135219/1/Guia-de-Negocio-Ovos-caipirapoedeira-Embrapa-051.pdf"
+        },
+        {
+          "title": "MAPA/SDA — Plano de contingência para influenza aviária e doença de Newcastle",
+          "url": "https://wikisda.agricultura.gov.br/pt-br/Sa%C3%BAde-Animal/plano-de-contingencia-para-influenza-aviaria-e-doenca-de-newcastle"
+        },
+        {
+          "title": "Agrodefesa — IN MAPA 56/2007 consolidada com IN 18/2017",
+          "url": "https://goias.gov.br/agrodefesa/wp-content/uploads/sites/49/2014/09/in-56-2007-consolidada-com-in-18-2017-maio-0a6.pdf"
+        },
+        {
+          "title": "Normas.com.br — NBR 16437: requisitos para o ovo caipira",
+          "url": "https://www.normas.com.br/visualizar/artigo-tecnico/2938/nbr-16437-de-12-2016-os-requisitos-para-o-ovo-caipira"
+        }
+      ]
+    },
+    "US": {
+      "highlights": [
+        {
+          "pt": "Antes de comprar, confira as regras da sua cidade e do condomínio (HOA): muitas limitam o número de galinhas, proíbem galos e exigem licença e distância das divisas.",
+          "en": "Before buying, check your city code and HOA rules: many cap flock size, ban roosters and require a permit and setbacks."
+        },
+        {
+          "pt": "Compre pintinhos de incubatórios do NPIP e inscreva seu plantel no NPIP estadual se for vender aves, ovos férteis ou levar a exposições.",
+          "en": "Buy chicks from NPIP hatcheries and enroll your flock in your state's NPIP if you sell birds, hatching eggs or show them."
+        },
+        {
+          "pt": "A gripe aviária (HPAI) chega por aves silvestres: siga a biossegurança do USDA \"Defend the Flock\" e lave as mãos para evitar salmonela.",
+          "en": "Bird flu (HPAI) spreads from wild birds: follow USDA \"Defend the Flock\" biosecurity and wash hands to avoid Salmonella."
+        },
+        {
+          "pt": "Antibióticos para animais só com receita veterinária, inclusive para galinhas de quintal.",
+          "en": "Animal antibiotics require a veterinary prescription, backyard chickens included."
+        },
+        {
+          "pt": "No Norte, combata a umidade do galinheiro e use bebedouro aquecido; no Sul e no Texas, garanta sombra, ventilação e água fresca.",
+          "en": "In the North, fight coop moisture and use heated waterers; in the South and Texas, provide shade, airflow and cool water."
+        }
+      ],
+      "sources": [
+        {
+          "title": "UMN Extension — Raising chickens for eggs",
+          "url": "https://extension.umn.edu/poultry/raising-chickens-eggs"
+        },
+        {
+          "title": "NC Dept. of Agriculture — National Poultry Improvement Plan",
+          "url": "https://ncagr.gov/divisions/veterinary/poultry/NPIP"
+        },
+        {
+          "title": "USDA — Defend the Flock",
+          "url": "https://www.usda.gov/node/27626"
+        },
+        {
+          "title": "AVMA — Over-the-counter antimicrobials changing to prescription-only",
+          "url": "https://avma.org/resources-tools/one-health/antimicrobial-use-and-antimicrobial-resistance/over-counter-antimicrobials-changing-prescription-only"
+        }
+      ]
+    },
+    "CA": {
+      "highlights": [
+        {
+          "pt": "Frango e ovos estão sob cotas (supply management); quem cria pouco fica abaixo dos limites de isenção, que mudam por província — confirme antes de vender.",
+          "en": "Chicken and eggs are under quota (supply management); small flocks fall below exemption limits that vary by province — check before selling."
+        },
+        {
+          "pt": "Gripe aviária é doença de notificação obrigatória ao CFIA, inclusive para galinhas de quintal.",
+          "en": "Avian influenza is federally reportable to the CFIA, including for backyard flocks."
+        },
+        {
+          "pt": "Reforce a biossegurança na primavera e no outono, épocas de migração de aves silvestres, e evite feiras e trocas de aves nesses períodos.",
+          "en": "Tighten biosecurity in spring and fall, during wild bird migration, and avoid poultry fairs and swaps at those times."
+        },
+        {
+          "pt": "Prefira raças de crista pequena como a canadense Chantecler e use bebedouro aquecido no inverno.",
+          "en": "Choose small-combed breeds like the Canadian Chantecler and use heated waterers in winter."
+        },
+        {
+          "pt": "Antibióticos medicamente importantes só com receita veterinária.",
+          "en": "Medically important antimicrobials require a veterinary prescription."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ontario.ca — Supply management systems for eggs, poultry and dairy",
+          "url": "https://www.ontario.ca/page/supply-management-systems-eggs-poultry-and-dairy"
+        },
+        {
+          "title": "Alberta Agriculture — Avian flu and small flock poultry",
+          "url": "https://www1.agriculture.alberta.ca/$department/deptdocs.nsf/ba3468a2a8681f69872569d60073fde1/6cfe85d6c5b8cb2b87257ebc0054d22a/$FILE/avian-flu-small-flock-poultry.pdf"
+        },
+        {
+          "title": "Livestock Conservancy — Chantecler chicken",
+          "url": "https://livestockconservancy.org/chantecler-chicken/"
+        },
+        {
+          "title": "Beef Cattle Research Council — Prescription required for livestock antibiotics (Dec 2018)",
+          "url": "https://www.beefresearch.ca/blog/prescription-required-for-livestock-cattle-antibiotics-december-2018/"
+        }
+      ]
+    },
+    "DE": {
+      "highlights": [
+        {
+          "pt": "Mesmo com 2 ou 3 galinhas, registre a criação no Veterinäramt e na Tierseuchenkasse antes de começar.",
+          "en": "Even with 2 or 3 hens, register with the Veterinäramt and the Tierseuchenkasse before you start."
+        },
+        {
+          "pt": "A vacina contra Newcastle é obrigatória, em geral pela água e com reforços periódicos combinados com o veterinário; guarde os comprovantes.",
+          "en": "Newcastle disease vaccination is mandatory, usually via drinking water with regular boosters agreed with your vet; keep the records."
+        },
+        {
+          "pt": "Contra gripe aviária é proibido vacinar; no outono/inverno o distrito pode obrigar a manter as aves fechadas, inclusive em criações amadoras.",
+          "en": "Vaccinating against avian flu is not allowed; in autumn/winter the district can order birds kept indoors, hobby flocks included."
+        },
+        {
+          "pt": "Inquilinos precisam de autorização do proprietário; o galo costuma gerar conflito com vizinhos e não é necessário para ter ovos.",
+          "en": "Tenants need the landlord's permission; roosters often cause neighbour disputes and are not needed for eggs."
+        },
+        {
+          "pt": "Galinheiro com no máximo 3 aves/m², portinhola fechada à noite contra raposa e marta, e cerca de 1,20–1,80 m.",
+          "en": "Coop with at most 3 birds/m², a pop hole shut at night against foxes and martens, and a 1.2–1.8 m fence."
+        }
+      ],
+      "sources": [
+        {
+          "title": "BZL — Hühner halten im eigenen Garten",
+          "url": "https://www.landwirtschaft.de/garten/selbst-anbauen/tiere-halten/huehner-halten-im-eigenen-garten"
+        },
+        {
+          "title": "BZL — Wie gefährlich ist die Vogelgrippe?",
+          "url": "https://www.landwirtschaft.de/tier-und-pflanze/tier/gefluegel/wie-gefaehrlich-ist-die-vogelgrippe"
+        },
+        {
+          "title": "Landkreis Augsburg — Merkblatt Hühnerhaltung",
+          "url": "https://www.landkreis-augsburg.de/fileadmin/user_upload/Veterin%C3%A4ramt/Merkblatt_Huehnerhaltung.pdf"
+        },
+        {
+          "title": "Landkreis München — Newcastle Disease bei Geflügel breitet sich aus",
+          "url": "https://www.landkreis-muenchen.de/artikel/newcastle-disease-bei-gefluegel-breitet-sich-aus/"
+        }
+      ]
+    },
+    "ES": {
+      "highlights": [
+        {
+          "pt": "Mesmo poucas galinhas para consumo próprio precisam ser registradas no REGA da sua comunidade autônoma (RD 637/2021).",
+          "en": "Even a few backyard hens for home use must be registered in REGA with your autonomous community (RD 637/2021)."
+        },
+        {
+          "pt": "Autoconsumo é até cerca de 30 poedeiras, sem vender ovos nem carne, e com um veterinário de referência indicado.",
+          "en": "Home-use flocks are up to about 30 layers, with no sale of eggs or meat and a designated reference vet."
+        },
+        {
+          "pt": "No outono-inverno o governo pode mandar confinar as aves por gripe aviária: tenha um espaço coberto.",
+          "en": "In autumn-winter the government may order poultry kept indoors due to bird flu: have a covered area ready."
+        },
+        {
+          "pt": "Prefira raças autóctones ameaçadas, como a Castellana Negra ou a Pita Pinta.",
+          "en": "Consider endangered native breeds such as Castellana Negra or Pita Pinta."
+        },
+        {
+          "pt": "Antibióticos só com receita veterinária; o veterinário registra a receita no sistema PRESVET.",
+          "en": "Antibiotics only with a vet prescription; the vet reports it to the PRESVET system."
+        }
+      ],
+      "sources": [
+        {
+          "title": "BOE — Real Decreto 637/2021",
+          "url": "https://boe.es/boe/dias/2021/07/28/pdfs/BOE-A-2021-12609.pdf"
+        },
+        {
+          "title": "Maldita.es — Multas por gallinas de autoconsumo sin registrar",
+          "url": "https://maldita.es/clima/20250325/multas-3000-euros-gallinas/"
+        },
+        {
+          "title": "MAPA — Catálogo de razas: Gallina Castellana Negra",
+          "url": "https://www.mapa.gob.es/ca/ganaderia/temas/zootecnia/razas-ganaderas/razas/catalogo-razas/aviar/gallina-castellana-negra"
+        },
+        {
+          "title": "MAPA — PRESVET",
+          "url": "https://www.mapa.gob.es/es/ganaderia/temas/sanidad-animal-higiene-ganadera/Higiene-de-la-produccion-primaria-ganadera/medicamentos-veterinarios/Presvet.aspx"
+        }
+      ]
+    },
+    "FR": {
+      "highlights": [
+        {
+          "pt": "Declare suas galinhas no recenseamento oficial de detentores (Mes démarches), mesmo num quintal sem venda; confirme também com a sua mairie.",
+          "en": "Register your hens in the official keeper census (Mes démarches), even for a non-commercial backyard flock; also check with your town hall."
+        },
+        {
+          "pt": "No outono e inverno, o risco de gripe aviária pode subir para \"élevé\": quintais com menos de 50 aves precisam então prender as aves ou cobrir o cercado com rede.",
+          "en": "In autumn and winter the bird flu risk level may go to \"high\": backyards with fewer than 50 birds must then shut the birds in or cover the run with netting."
+        },
+        {
+          "pt": "Mortes anormais de aves devem ser avisadas ao veterinário ou à DDPP.",
+          "en": "Abnormal bird deaths must be reported to a vet or the DDPP."
+        },
+        {
+          "pt": "Raças patrimoniais como a Poule de Bresse (AOP) são criadas em percurso com capim, de pelo menos 10 m² por ave.",
+          "en": "Heritage breeds like the Bresse hen (PDO) are raised on grass runs of at least 10 m² per bird."
+        },
+        {
+          "pt": "Na UE, antibióticos para animais só com receita veterinária.",
+          "en": "In the EU, antibiotics for animals require a veterinary prescription."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ministère de l'Agriculture — Influenza aviaire : mesures de biosécurité (professionnels et particuliers)",
+          "url": "https://agriculture.gouv.fr/influenza-aviaire-les-mesures-de-biosecurite-pour-les-operateurs-professionnels-et-les-particuliers"
+        },
+        {
+          "title": "Ministère de l'Agriculture — Niveau de risque « élevé »",
+          "url": "https://agriculture.gouv.fr/influenza-aviaire-la-france-place-son-territoire-en-niveau-de-risque-eleve-pour-renforcer-la"
+        },
+        {
+          "title": "Publication Volaille de Bresse (developpement-durable.gouv.fr)",
+          "url": "https://webissimo-ide.developpement-durable.gouv.fr/IMG/pdf/228_publication_cle2ce583.pdf"
+        }
+      ]
+    },
+    "PT": {
+      "highlights": [
+        {
+          "pt": "Mesmo uma capoeira caseira tem de ser registada na DGAV (SNIRA); a detenção caseira vai até 100 aves.",
+          "en": "Even a backyard coop must be registered with DGAV (SNIRA); home keeping allows up to 100 birds."
+        },
+        {
+          "pt": "O registo faz-se na DAV/NAV da sua área com o Modelo 1340/DGAV e o número de beneficiário IFAP.",
+          "en": "Register at your local DAV/NAV office with form Modelo 1340/DGAV and an IFAP beneficiary number."
+        },
+        {
+          "pt": "No outono/inverno a DGAV costuma mandar confinar as aves por causa da gripe aviária: tenha um galinheiro fechado e coberto.",
+          "en": "In autumn/winter DGAV often orders birds kept indoors due to avian flu: have a closed, roofed coop."
+        },
+        {
+          "pt": "Prefira raças autóctones como a Preta Lusitânica (boa chocadeira) ou a Pedrês Portuguesa.",
+          "en": "Consider native breeds like Preta Lusitânica (a good brooder) or Pedrês Portuguesa."
+        },
+        {
+          "pt": "Antibióticos só com receita veterinária eletrónica (PEMV), como manda a regra da UE.",
+          "en": "Antibiotics only with an electronic vet prescription (PEMV), as EU rules require."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Agroportal — Procedimento para o Registo de Detenção Caseira de animais (DGAV)",
+          "url": "https://www.agroportal.pt/?p=741849"
+        },
+        {
+          "title": "Observador — Registo de capoeiras de aves é obrigatório mas nem sempre cumprido",
+          "url": "https://observador.pt/2025/01/29/registo-de-capoeiras-de-aves-e-obrigatorio-mas-nem-sempre-cumprido/"
+        },
+        {
+          "title": "Agroportal — Portugal tem 61 raças autóctones (Catálogo DGAV/CAP)",
+          "url": "https://www.agroportal.pt/portugal-tem-61-racas-autoctones-e-ovinos-serra-da-estrela-estao-em-maior-numero/"
+        },
+        {
+          "title": "Agroportal — Implementação do Regulamento (UE) 2019/6",
+          "url": "https://www.agroportal.pt/?p=1006979"
+        }
+      ]
+    },
+    "IT": {
+      "highlights": [
+        {
+          "pt": "Mesmo para consumo próprio, quem começa um galinheiro hoje precisa registrá-lo na ASL/BDN (DM 7/3/2023).",
+          "en": "Even for home use, anyone starting a flock today must register it with the local ASL/BDN (Decree 7 March 2023)."
+        },
+        {
+          "pt": "Coloque telas antipássaro e tenha como fechar as aves: no outono-inverno a gripe aviária pode impor confinamento.",
+          "en": "Fit anti-bird netting and be able to house birds indoors: in autumn-winter avian flu can trigger housing orders."
+        },
+        {
+          "pt": "Remédio só com receita veterinária eletrônica (REV); consulte-as no app \"cerca ricetta\".",
+          "en": "Medicines only with an electronic veterinary prescription (REV); check them in the \"cerca ricetta\" app."
+        },
+        {
+          "pt": "Ovos e carne de galinheiro familiar são só para a família: não podem ser vendidos.",
+          "en": "Eggs and meat from a family flock are for household use only: they cannot be sold."
+        },
+        {
+          "pt": "Prefira raças autóctones como Livornese, Padovana e Valdarnese, apoiadas por programas de conservação.",
+          "en": "Consider native breeds such as Livornese, Padovana and Valdarnese, backed by conservation programmes."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Il Fatto Alimentare — Polli e galline in un pollaio domestico (Veneto)",
+          "url": "https://ilfattoalimentare.it/pollai-nuove-regole-veneto.html"
+        },
+        {
+          "title": "ATS Mantova — Richiesta registrazione allevamenti familiari autoconsumo",
+          "url": "https://pagamentipa.comune.mantova.it/s3/3824/allegati/suic/attivita_produttive/ats-richiesta-registraz-allev-familiari-autoconsumo.pdf"
+        },
+        {
+          "title": "IZSVe — Piano nazionale influenza aviaria 2022",
+          "url": "https://www.izsvenezie.it/documenti/temi/influenza-aviaria//piani-sorveglianza/piano-nazionale-influenza-aviaria-2022.pdf"
+        },
+        {
+          "title": "Quotidiano Sanità — Ricetta elettronica veterinaria obbligatoria",
+          "url": "https://www.quotidianosanita.it/governo-e-parlamento/ricetta-elettronica-veterinaria-da-domani-parte-obbligo-grillo-finalmente-dati-precisi-sui-consumi-dei-farmaci/"
+        }
+      ]
+    },
+    "MX": {
+      "highlights": [
+        {
+          "pt": "A criação de quintal (traspatio) com galinhas criollas é tradicional e está em mais de 85% das propriedades rurais.",
+          "en": "Backyard (traspatio) flocks of native criolla hens are traditional and found on over 85% of rural holdings."
+        },
+        {
+          "pt": "Mortalidade anormal nas aves deve ser avisada ao SENASICA: 800 751 2100 ou app AVISE.",
+          "en": "Report unusual bird deaths to SENASICA: 800 751 2100 or the AVISE app."
+        },
+        {
+          "pt": "Gripe aviária já foi confirmada em quintais; isole suas aves de aves silvestres e reforce a biossegurança.",
+          "en": "Avian influenza has been confirmed in backyard flocks; keep birds away from wild birds and tighten biosecurity."
+        },
+        {
+          "pt": "O México se declarou livre de Newcastle velogênica em 2015, mas a vigilância continua e suspeitas devem ser notificadas.",
+          "en": "Mexico declared itself free of velogenic Newcastle disease in 2015, but surveillance continues and suspicions must be reported."
+        },
+        {
+          "pt": "A dieta tradicional é milho e pastejo livre; a galinha criolla é rústica e boa chocadeira.",
+          "en": "Traditional feed is maize plus free ranging; criolla hens are hardy and good brooders."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hortúa-López et al. — Avicultura de traspatio (Redalyc)",
+          "url": "https://www.redalyc.org/journal/437/43768194022/43768194022.pdf"
+        },
+        {
+          "title": "SENASICA — Confirma caso de influenza aviar AH5N2 en traspatio de Michoacán",
+          "url": "https://www.gob.mx/senasica/articulos/confirma-senasica-caso-de-influenza-aviar-ah5n2-en-traspatio-de-michoacan?idiom=es"
+        },
+        {
+          "title": "SENASICA — Unidos para mantener estatus de país libre de influenza aviar AH5N1",
+          "url": "https://www.gob.mx/senasica/articulos/unidos-para-mantener-estatus-de-pais-libre-de-influenza-aviar-ah5n1"
+        },
+        {
+          "title": "DOF — Aviso de cancelación de la NOM-013-ZOO-1994 (Newcastle)",
+          "url": "https://www.gob.mx/cms/uploads/attachment/file/824721/AvisoCancelNOM-013-ZOO.25jun15OK.pdf"
+        }
+      ]
+    }
+  }
 }
