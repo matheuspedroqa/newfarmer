@@ -2,11 +2,13 @@ import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { WeatherHero } from "@/components/WeatherHero";
 import { resolveLocale } from "@/i18n/locales";
+import { formatDay } from "@/lib/format";
 import { ANIMALS, CROPS } from "@/lib/catalog";
 import { monthlyTasks, seasonFor } from "@/lib/seasons";
 import { getAllCropContent, getAnimalContent } from "@/server/content";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
+import { listDiary } from "@/server/diary";
 import { getFarm } from "@/server/farm";
 import { getForecast } from "@/server/forecast";
 import { getWeatherProvider } from "@/server/weather";
@@ -33,6 +35,7 @@ export default async function DashboardPage() {
     user.hemisphere,
     month,
   );
+  const recentNotes = listDiary(db, user.id, { limit: 3 });
   const tips = farm.animals
     .map((a) => ({ id: a.id, content: getAnimalContent(a.id) }))
     .filter((a) => a.content)
@@ -41,7 +44,7 @@ export default async function DashboardPage() {
   return (
     <section>
       <h1 className="font-display text-3xl font-bold">{t("dashboard.hello", { name: user.name })}</h1>
-      <div className="mt-6 grid auto-rows-[150px] grid-cols-4 gap-4">
+      <div className="mt-6 grid auto-rows-[minmax(150px,auto)] grid-cols-4 gap-4">
         <WeatherHero result={forecast} />
 
         {farm.animals.map((animal, i) => (
@@ -115,6 +118,22 @@ export default async function DashboardPage() {
             <p className="mt-2 opacity-90">{t("dashboard.seasonTipEmpty")}</p>
           )}
         </section>
+
+        {recentNotes.length > 0 && (
+          <section data-testid="diary-recent" className="col-span-4 rounded-3xl bg-surface p-6 shadow-sm">
+            <p className="text-sm font-bold uppercase tracking-wide text-accent">{t("dashboard.diaryRecent")}</p>
+            <ul className="mt-2 space-y-1">
+              {recentNotes.map((e) => (
+                <li key={e.id}>
+                  <Link href={`/animais/${e.animalId}?aba=diario`} className="hover:underline">
+                    <span aria-hidden>{icon(e.animalId)}</span> <b>{formatDay(e.date, locale, "long")}</b> ·{" "}
+                    {t(`diary.kinds.${e.kind}`)}{e.animalName && ` · ${e.animalName}`}: {e.note}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </div>
     </section>
   );

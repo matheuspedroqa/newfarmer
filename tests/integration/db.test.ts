@@ -11,6 +11,7 @@ describe("openDb", () => {
     ).map((r) => r.name);
     expect(names).toEqual([
       "dev_emails",
+      "diary_entries",
       "farm_animals",
       "farm_crops",
       "login_attempts",

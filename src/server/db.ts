@@ -52,6 +52,17 @@ CREATE TABLE IF NOT EXISTS farm_crops (
   crop_id TEXT NOT NULL,
   PRIMARY KEY (user_id, crop_id)
 );
+CREATE TABLE IF NOT EXISTS diary_entries (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  animal_id TEXT NOT NULL,
+  entry_date TEXT NOT NULL,
+  kind TEXT NOT NULL,
+  animal_name TEXT NOT NULL DEFAULT '',
+  note TEXT NOT NULL,
+  created_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_diary_user ON diary_entries (user_id, animal_id, entry_date);
 CREATE TABLE IF NOT EXISTS weather_cache (
   key TEXT PRIMARY KEY,
   payload TEXT NOT NULL,

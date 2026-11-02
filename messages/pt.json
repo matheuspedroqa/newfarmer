@@ -54,7 +54,9 @@
     "countInvalid": "Use um número inteiro",
     "countTooSmall": "Informe pelo menos 1",
     "countTooLarge": "No máximo 100.000",
-    "wrongPassword": "Senha atual incorreta"
+    "wrongPassword": "Senha atual incorreta",
+    "dateInvalid": "Escolha uma data válida",
+    "dateInFuture": "A data não pode ser no futuro"
   },
   "climate": {
     "tropical": "Tropical",
@@ -84,7 +86,8 @@
     "thisMonth": "Este mês nas suas plantações",
     "nothingThisMonth": "Nenhuma das suas plantações tem plantio ou colheita este mês.",
     "seasonTip": "Dica da estação ({season})",
-    "seasonTipEmpty": "Marque seus animais no MyFarm para receber dicas da estação."
+    "seasonTipEmpty": "Marque seus animais no MyFarm para receber dicas da estação.",
+    "diaryRecent": "Últimas anotações do diário"
   },
   "email": {
     "resetSubject": "Recupere sua senha do NewFarmer",
@@ -346,5 +349,27 @@
     "sources": "Fontes",
     "vetWarning": "Consulte um veterinário antes de medicar. As informações aqui são gerais e não substituem uma consulta.",
     "inYourCountry": "No seu país: {country}"
+  },
+  "diary": {
+    "tabManual": "Ficha",
+    "tabDiary": "Diário",
+    "title": "Diário: {animal}",
+    "date": "Data",
+    "kind": "Tipo",
+    "animalName": "Qual animal (opcional)",
+    "animalNameHint": "Nome, brinco ou apelido",
+    "note": "Anotação",
+    "save": "Salvar anotação",
+    "saved": "Anotação salva.",
+    "empty": "Nenhuma anotação ainda.",
+    "delete": "Apagar anotação",
+    "kinds": {
+      "vaccine": "Vacina",
+      "medicine": "Remédio",
+      "birth": "Parto",
+      "illness": "Doença",
+      "feeding": "Alimentação",
+      "other": "Outro"
+    }
   }
 }

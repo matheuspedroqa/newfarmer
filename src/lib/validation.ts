@@ -76,3 +76,24 @@ export function parseCityField(raw: FormDataEntryValue | null): unknown {
 export const changePasswordSchema = z
   .object({ currentPassword: z.string().min(1, "required"), password: newPassword, confirmPassword: z.string() })
   .refine((d) => d.password === d.confirmPassword, { path: ["confirmPassword"], message: "passwordsDontMatch" });
+
+export const DIARY_KINDS = ["vaccine", "medicine", "birth", "illness", "feeding", "other"] as const;
+
+function isRealDate(value: string): boolean {
+  const d = new Date(`${value}T00:00:00Z`);
+  return !Number.isNaN(d.getTime()) && d.toISOString().startsWith(value);
+}
+
+export const diarySchema = z.object({
+  animalId: z.enum(ANIMAL_IDS),
+  date: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "dateInvalid")
+    .refine(isRealDate, "dateInvalid")
+    // um dia de folga: o fuso da pessoa pode estar à frente do servidor
+    .refine((v) => v <= new Date(Date.now() + 86_400_000).toISOString().slice(0, 10), "dateInFuture"),
+  kind: z.enum(DIARY_KINDS),
+  animalName: z.string().nullish().transform((v) => (v ?? "").trim()).pipe(z.string().max(60, "tooLong")),
+  note: z.string().trim().min(1, "required").max(1000, "tooLong"),
+});
+export type DiaryInput = z.infer<typeof diarySchema>;

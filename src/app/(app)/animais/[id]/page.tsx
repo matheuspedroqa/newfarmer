@@ -1,19 +1,31 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { deleteDiaryAction } from "@/app/actions/diary";
 import { CountryNotes } from "@/components/CountryNotes";
+import { DiaryForm } from "@/components/DiaryForm";
 import { SourcesList } from "@/components/SourcesList";
 import { VetWarning } from "@/components/VetWarning";
 import { resolveLocale } from "@/i18n/locales";
 import { ANIMALS, ANIMAL_IDS, type AnimalId } from "@/lib/catalog";
 import { seasonFor, type Season } from "@/lib/seasons";
+import { formatDay } from "@/lib/format";
 import { getAnimalContent } from "@/server/content";
 import { requireUser } from "@/server/current-user";
+import { getDb } from "@/server/db";
+import { listDiary } from "@/server/diary";
 
 const SEASONS: Season[] = ["summer", "autumn", "winter", "spring"];
 
-export default async function AnimalPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function AnimalPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ aba?: string }>;
+}) {
   const { id } = await params;
+  const showDiary = (await searchParams).aba === "diario";
   if (!(ANIMAL_IDS as readonly string[]).includes(id)) notFound();
   const user = await requireUser();
   const t = await getTranslations();
@@ -21,6 +33,7 @@ export default async function AnimalPage({ params }: { params: Promise<{ id: str
   const content = getAnimalContent(id as AnimalId);
   const current = seasonFor(new Date().getMonth() + 1, user.hemisphere);
   const tx = (v: { pt: string; en: string }) => v[locale];
+  const diary = showDiary ? listDiary(getDb(), user.id, { animalId: id as AnimalId }) : [];
 
   return (
     <section className="space-y-8">
@@ -39,7 +52,50 @@ export default async function AnimalPage({ params }: { params: Promise<{ id: str
       </nav>
 
       <h1 className="font-display text-4xl font-bold">{t(`animals.${id}`)}</h1>
-      {!content ? (
+      <nav className="flex gap-2 border-b border-border" aria-label={t(`animals.${id}`)}>
+        {[
+          { href: `/animais/${id}`, label: t("diary.tabManual"), active: !showDiary },
+          { href: `/animais/${id}?aba=diario`, label: t("diary.tabDiary"), active: showDiary },
+        ].map((tab) => (
+          <Link
+            key={tab.href}
+            href={tab.href}
+            aria-current={tab.active ? "page" : undefined}
+            className={`-mb-px border-b-2 px-4 py-2 font-semibold ${tab.active ? "border-primary text-primary" : "border-transparent text-muted hover:text-primary"}`}
+          >
+            {tab.label}
+          </Link>
+        ))}
+      </nav>
+      {showDiary ? (
+        <section className="space-y-4">
+          <h2 className="font-display text-2xl font-bold">{t("diary.title", { animal: t(`animals.${id}`) })}</h2>
+          <DiaryForm animalId={id} today={new Date().toISOString().slice(0, 10)} />
+          {diary.length ? (
+            <ul className="space-y-3">
+              {diary.map((e) => (
+                <li key={e.id} data-testid="diary-entry" className="flex items-start justify-between gap-4 rounded-2xl bg-surface p-4 ring-1 ring-border">
+                  <div>
+                    <p className="text-sm text-accent">
+                      <b>{formatDay(e.date, locale, "long")}</b> · {t(`diary.kinds.${e.kind}`)}
+                      {e.animalName && <> · {e.animalName}</>}
+                    </p>
+                    <p className="mt-1 whitespace-pre-line">{e.note}</p>
+                  </div>
+                  <form action={deleteDiaryAction}>
+                    <input type="hidden" name="id" value={e.id} />
+                    <button type="submit" aria-label={t("diary.delete")} title={t("diary.delete")} className="rounded-full px-3 py-1 text-muted hover:bg-soft hover:text-danger">
+                      ✕
+                    </button>
+                  </form>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-muted">{t("diary.empty")}</p>
+          )}
+        </section>
+      ) : !content ? (
         <p className="text-muted">{t("animalPage.noContent")}</p>
       ) : (
         <>

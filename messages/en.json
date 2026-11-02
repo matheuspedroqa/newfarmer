@@ -54,7 +54,9 @@
     "countInvalid": "Use a whole number",
     "countTooSmall": "Enter at least 1",
     "countTooLarge": "At most 100,000",
-    "wrongPassword": "Current password is incorrect"
+    "wrongPassword": "Current password is incorrect",
+    "dateInvalid": "Choose a valid date",
+    "dateInFuture": "The date can't be in the future"
   },
   "climate": {
     "tropical": "Tropical",
@@ -84,7 +86,8 @@
     "thisMonth": "This month in your crops",
     "nothingThisMonth": "None of your crops has planting or harvest this month.",
     "seasonTip": "Seasonal tip ({season})",
-    "seasonTipEmpty": "Add your animals in MyFarm to get seasonal tips."
+    "seasonTipEmpty": "Add your animals in MyFarm to get seasonal tips.",
+    "diaryRecent": "Latest diary notes"
   },
   "email": {
     "resetSubject": "Recover your NewFarmer password",
@@ -346,5 +349,27 @@
     "sources": "Sources",
     "vetWarning": "Consult a veterinarian before giving any medication. This information is general and does not replace a consultation.",
     "inYourCountry": "In your country: {country}"
+  },
+  "diary": {
+    "tabManual": "Guide",
+    "tabDiary": "Diary",
+    "title": "Diary: {animal}",
+    "date": "Date",
+    "kind": "Type",
+    "animalName": "Which animal (optional)",
+    "animalNameHint": "Name, ear tag or nickname",
+    "note": "Note",
+    "save": "Save note",
+    "saved": "Note saved.",
+    "empty": "No notes yet.",
+    "delete": "Delete note",
+    "kinds": {
+      "vaccine": "Vaccine",
+      "medicine": "Medicine",
+      "birth": "Birth",
+      "illness": "Illness",
+      "feeding": "Feeding",
+      "other": "Other"
+    }
   }
 }
