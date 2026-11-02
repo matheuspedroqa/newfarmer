@@ -9,7 +9,7 @@ test("etapa 2 do cadastro salva animais e plantações e mostra no painel", asyn
   await page.locator("#count-chickens").fill("12");
   await page.getByLabel("Cabras").check();
   await page.locator("#count-goats").fill("3");
-  await page.getByLabel("Tomate").check();
+  await page.getByRole("checkbox", { name: "Tomate", exact: true }).check();
   await page.getByRole("button", { name: "Continuar" }).click();
 
   await expect(page).toHaveURL(/\/painel$/);
@@ -39,7 +39,7 @@ test("MyFarm edita animais e plantações", async ({ page }) => {
   await createAccount(page, uniqueEmail());
   await page.getByLabel("Galinhas").check();
   await page.locator("#count-chickens").fill("12");
-  await page.getByLabel("Tomate").check();
+  await page.getByRole("checkbox", { name: "Tomate", exact: true }).check();
   await page.getByRole("button", { name: "Continuar" }).click();
   await expect(page).toHaveURL(/\/painel$/);
 
@@ -48,8 +48,8 @@ test("MyFarm edita animais e plantações", async ({ page }) => {
   await page.locator("#count-chickens").fill("15");
   await page.getByLabel("Patos").check();
   await page.locator("#count-ducks").fill("5");
-  await page.getByLabel("Tomate").uncheck();
-  await page.getByLabel("Milho").check();
+  await page.getByRole("checkbox", { name: "Tomate", exact: true }).uncheck();
+  await page.getByRole("checkbox", { name: "Milho", exact: true }).check();
   await page.getByRole("button", { name: "Salvar", exact: true }).click();
   await expect(page.getByText("Salvo!")).toBeVisible();
 
