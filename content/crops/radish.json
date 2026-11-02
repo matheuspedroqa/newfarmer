@@ -1,0 +1,25 @@
+{
+  "id": "radish",
+  "summary": {
+    "pt": "Rabanete: a hortaliça mais rápida da horta, pronta em 3 a 6 semanas. Ótima para começar e para encaixar entre outros cultivos.",
+    "en": "Radish: the fastest crop in the garden, ready in 3 to 6 weeks. Great for beginners and for squeezing between other crops."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [4, 5, 6, 7, 8], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8, 9], "notes": { "pt": "Prefira os meses mais frescos; com muito calor a raiz fica ardida e oca.", "en": "Prefer the cooler months; in strong heat roots turn hot and pithy." } },
+    "subtropical": { "directSowing": [3, 4, 5, 6, 7, 8, 9], "seedbed": [], "transplant": [], "harvest": [4, 5, 6, 7, 8, 9, 10] },
+    "temperate": { "directSowing": [8, 9, 10, 1, 2, 3], "seedbed": [], "transplant": [], "harvest": [9, 10, 11, 2, 3, 4], "notes": { "pt": "Primavera e outono; semeie um pouco a cada 7–10 dias para colher sempre.", "en": "Spring and autumn; sow a little every 7–10 days for a steady harvest." } },
+    "semiarid": { "directSowing": [4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8], "notes": { "pt": "Com irrigação, nos meses mais frescos.", "en": "With irrigation, in the coolest months." } },
+    "cold": { "directSowing": [10, 11, 12, 1, 2], "seedbed": [], "transplant": [], "harvest": [11, 12, 1, 2, 3], "notes": { "pt": "Semeie assim que o solo puder ser trabalhado; aguenta geadas leves.", "en": "Sow as soon as the soil can be worked; tolerates light frost." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Misture composto ou esterco bem curtido no canteiro antes de semear. Geralmente não precisa de cobertura, porque o ciclo é muito curto. Evite esterco fresco e excesso de nitrogênio, que dão folha e pouca raiz.", "en": "Mix compost or well-aged manure into the bed before sowing. It usually needs no side-dressing because the cycle is so short. Avoid fresh manure and excess nitrogen, which give leaves instead of roots." },
+    "pruning": null,
+    "watering": { "pt": "Regue pouco e sempre, mantendo o solo úmido. Falta de água deixa o rabanete ardido, duro e rachado.", "en": "Water little and often to keep soil moist. Lack of water makes radishes hot, tough and cracked." },
+    "other": { "pt": "Sol ou meia-sombra, solo fofo. Desbaste deixando 3–5 cm entre plantas. Colha logo que estiver no ponto: se passar, fica oco e esponjoso.", "en": "Sun or part shade, loose soil. Thin to 3–5 cm apart. Harvest as soon as ready: left too long, roots go hollow and spongy." }
+  },
+  "sources": [
+    { "title": "Iowa State University Extension — Planting and harvesting times for garden vegetables (PM 534)", "url": "https://store.extension.iastate.edu/Product/pm534-pdf" },
+    { "title": "University of Nebraska–Lincoln Extension — Root vegetables", "url": "https://extension.unl.edu/statewide/buffalo/Yard/Root%20Vegetables%204-28-2018.pdf" },
+    { "title": "Embrapa Hortaliças — Hortaliças na agricultura familiar (circular técnica)", "url": "https://core.ac.uk/download/15428632.pdf" }
+  ]
+}

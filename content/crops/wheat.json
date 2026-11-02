@@ -1,0 +1,63 @@
+{
+  "id": "wheat",
+  "summary": {
+    "pt": "O trigo é um cereal de inverno, base da farinha do pão. Gosta de frio moderado no crescimento e tempo seco na colheita.",
+    "en": "Wheat is a cool-season cereal and the base of bread flour. It likes mild cold while growing and dry weather at harvest."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [2, 3, 5],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [6, 7, 8, 9],
+      "notes": { "pt": "No Cerrado: de sequeiro no fim das chuvas (fev–mar) ou irrigado em maio. Precisa de variedade adaptada ao calor.", "en": "In tropical savanna: rain-fed at the end of the rains (Feb–Mar) or irrigated in May. Needs heat-adapted varieties." }
+    },
+    "subtropical": {
+      "directSowing": [5, 6, 7],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [10, 11, 12]
+    },
+    "temperate": {
+      "directSowing": [3, 4],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [12, 1],
+      "notes": { "pt": "Trigo de inverno: semeado no outono, passa o frio no campo e é colhido no início do verão.", "en": "Winter wheat: sown in autumn, overwinters in the field and is harvested in early summer." }
+    },
+    "semiarid": {
+      "directSowing": [5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [9, 10],
+      "notes": { "pt": "Na estação mais fresca, com irrigação.", "en": "In the cooler season, with irrigation." }
+    },
+    "cold": {
+      "directSowing": [10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3],
+      "notes": { "pt": "Trigo de primavera: semeie assim que o solo descongelar e der para trabalhar.", "en": "Spring wheat: sow as soon as the soil thaws and can be worked." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Corrija a acidez com calcário (o trigo sofre em solo ácido). No plantio, NPK com um pouco de nitrogênio (20–40 kg/ha de N), sem ureia encostada na semente. O resto do nitrogênio vai em cobertura no perfilhamento (quando a planta solta os brotos laterais).",
+      "en": "Lime acid soils (wheat struggles in acid soil). At sowing, use an NPK with a little nitrogen (about 20–40 kg/ha N), keeping urea away from the seed. Side-dress the rest of the nitrogen at tillering, when side shoots appear."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Precisa de umidade no perfilhamento e no espigamento. Chuva na colheita estraga o grão; colha logo que secar.",
+      "en": "Needs moisture at tillering and heading. Rain at harvest spoils the grain; harvest as soon as it dries."
+    },
+    "other": {
+      "pt": "Pleno sol. Semeie na época certa: muito cedo, a geada pega a espiga; muito tarde, o calor encurta o ciclo. Fique atento à ferrugem nas folhas e à giberela na espiga com tempo úmido.",
+      "en": "Full sun. Sow on time: too early and frost hits the heads; too late and heat cuts the cycle short. Watch for leaf rust, and for head blight in humid weather."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Manejo do nitrogênio no trigo de sequeiro no Cerrado (Reunião de Pesquisa de Trigo)", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1029735/1/ID434312013reuniaotrigoecologia601.pdf" },
+    { "title": "Embrapa Soja — Boletim de Pesquisa e Desenvolvimento 81 (adubação do trigo no Paraná)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1008455/1/BoletimPD81.pdf" },
+    { "title": "Kansas State University — Topdressing wheat with nitrogen: timing, methods, sources and rates", "url": "https://eupdate.agronomy.ksu.edu/article/topdressing-wheat-with-nitrogen-timing-application-methods-source-and-rates-546-1" }
+  ]
+}

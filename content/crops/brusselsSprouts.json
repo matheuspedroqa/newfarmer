@@ -1,0 +1,37 @@
+{
+  "id": "brusselsSprouts",
+  "summary": {
+    "pt": "A couve-de-bruxelas forma pequenos repolhinhos ao longo do caule. É de clima frio, tem ciclo longo (100–130 dias) e fica mais doce depois de uma geada leve.",
+    "en": "Brussels sprouts form small mini-cabbages along the stem. A cold-weather crop with a long cycle (100–130 days), they get sweeter after a light frost."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [], "seedbed": [3, 4], "transplant": [4, 5], "harvest": [7, 8, 9], "notes": { "pt": "Só em regiões de altitude e no outono-inverno; acima de 25 °C os repolhinhos não se formam bem.", "en": "Only at altitude and in autumn–winter; above 25 °C sprouts form poorly." } },
+    "subtropical": { "directSowing": [], "seedbed": [2, 3, 4], "transplant": [3, 4, 5], "harvest": [6, 7, 8, 9] },
+    "temperate": { "directSowing": [], "seedbed": [12, 1, 2], "transplant": [1, 2, 3], "harvest": [4, 5, 6, 7, 8] },
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não indicada: o calor impede a formação dos repolhinhos.", "en": "Not recommended: heat prevents sprouts from forming." } },
+    "cold": { "directSowing": [], "seedbed": [10, 11], "transplant": [11, 12, 1], "harvest": [3, 4, 5, 6], "notes": { "pt": "Plante para que a colheita caia no outono; geadas leves melhoram o sabor, mas abaixo de -6 °C a planta sofre.", "en": "Time planting so harvest falls in autumn; light frosts improve flavor, but below -6 °C plants are damaged." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Corrija o solo com calcário (pH 6–7) e misture bastante composto ou esterco curtido e um NPK equilibrado no transplante. Cerca de 3 semanas depois, faça cobertura com nitrogênio ou esterco. Quando os repolhinhos começarem a se formar, pare com o nitrogênio (excesso deixa os brotos manchados e soltos).",
+      "en": "Lime the soil to pH 6–7 and mix in plenty of compost or aged manure plus a balanced NPK at transplanting. About 3 weeks later, side-dress with nitrogen or manure. Once sprouts start forming, stop nitrogen (excess gives spotty, loose sprouts)."
+    },
+    "pruning": {
+      "pt": "Retire as folhas de baixo amareladas conforme os repolhinhos crescem. Cerca de 3 semanas antes da colheita, pode cortar a ponta da planta (desponte) para os repolhinhos engrossarem juntos.",
+      "en": "Remove yellowing lower leaves as sprouts grow. About 3 weeks before harvest you can cut off the growing tip (topping) so sprouts size up together."
+    },
+    "watering": {
+      "pt": "Mantenha o solo úmido o ciclo todo, sem encharcar. Falta de água deixa os repolhinhos pequenos e amargos.",
+      "en": "Keep soil moist the whole cycle, without waterlogging. Lack of water gives small, bitter sprouts."
+    },
+    "other": {
+      "pt": "Sol pleno, 50–60 cm entre plantas; a planta fica alta e pode precisar de tutor. Colha de baixo para cima os repolhinhos firmes com 2–4 cm. Lagartas e pulgões são as pragas principais.",
+      "en": "Full sun, 50–60 cm between plants; plants get tall and may need staking. Harvest firm 2–4 cm sprouts from the bottom up. Caterpillars and aphids are the main pests."
+    }
+  },
+  "sources": [
+    { "title": "University of Illinois Extension — Brussels Sprouts", "url": "https://extension.illinois.edu/gardening/brussels-sprouts" },
+    { "title": "Iowa State University Extension — Growing Brussels Sprouts in the Home Garden", "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-brussels-sprouts-home-garden" },
+    { "title": "UFFS — Cultivo de couve-de-bruxelas no Sul do Brasil (SEPE)", "url": "https://portaleventos.uffs.edu.br/index.php/SEPE-UFFS/article/view/19471/12752" }
+  ]
+}

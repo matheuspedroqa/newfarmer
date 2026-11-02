@@ -1,0 +1,68 @@
+{
+  "id": "avocado",
+  "summary": {
+    "pt": "Árvore grande e perene que, enxertada, produz do 3º–4º ano e dura décadas. Gosta de calor, odeia encharcamento e, misturando variedades, a colheita se espalha por boa parte do ano.",
+    "en": "A large evergreen tree that, when grafted, bears from year 3–4 and lasts decades. It likes warmth, hates waterlogging, and mixing varieties spreads the harvest over much of the year."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11, 12, 1],
+      "harvest": [2, 3, 4, 5, 6, 7, 8, 9],
+      "notes": { "pt": "Plante no início das chuvas. Variedades tropicais (Margarida, Fortuna, Quintal) colhem em épocas diferentes. Muito calor faz a árvore crescer muito e produzir menos.", "en": "Plant at the start of the rains. Tropical varieties ripen at different times. Too much heat makes the tree grow a lot and bear less." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10, 11],
+      "harvest": [3, 4, 5, 6, 7, 8, 9, 10],
+      "notes": { "pt": "Plante na primavera, depois das geadas. Ótimo para Hass e Fuerte (colheita mai–out). Proteja a muda nova de geada nos primeiros invernos.", "en": "Plant in spring, after frosts. Great for Hass and Fuerte (picked May–Oct). Protect young trees from frost in their first winters." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10],
+      "harvest": [8, 9, 10, 11, 12],
+      "notes": { "pt": "Só onde a geada é leve (até cerca de −1 °C), como no litoral mediterrâneo e no Chile central. Use Hass ou Bacon, as mais resistentes. Com geada forte, não vinga.", "en": "Only where frost is light (to about −1 °C), as on the Mediterranean coast or central Chile. Use Hass or Bacon, the hardiest. With hard frost it won't survive." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [11, 12, 1, 2],
+      "harvest": [2, 3, 4, 5, 6, 7, 8],
+      "notes": { "pt": "Só com irrigação regular. Calor seco na florada derruba flores; quebra-vento ajuda.", "en": "Regular irrigation only. Dry heat at bloom drops flowers; a windbreak helps." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não aguenta inverno rigoroso; morre com geada forte. Só em estufa, e mesmo assim produz pouco.", "en": "Can't survive harsh winters; dies with hard frost. Only in a greenhouse, and even then it bears little." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Calcário antes de plantar, conforme análise de solo, e esterco curtido ou composto na cova. Depois, NPK (com nitrogênio e zinco) em doses na época das chuvas, espalhado na projeção da copa. Mantenha as folhas que caem no chão: viram adubo.",
+      "en": "Lime before planting, by soil test, and rotted manure or compost in the hole. Later, NPK (with nitrogen and zinc) in doses during the rainy season, spread under the canopy edge. Leave fallen leaves on the ground: they become mulch."
+    },
+    "pruning": {
+      "pt": "Pouca poda. Logo depois da colheita, tire ramos secos e baixe os galhos mais altos para a árvore não passar de uns 5–6 m e facilitar a colheita.",
+      "en": "Little pruning. Right after harvest, remove dead branches and cut back the tallest limbs so the tree stays around 5–6 m and is easier to pick."
+    },
+    "watering": {
+      "pt": "Primeiro ano: solo sempre úmido, mas nunca encharcado. Árvore adulta: regas fundas e espaçadas na seca (gotejamento é ótimo). Água parada causa podridão da raiz.",
+      "en": "First year: keep soil moist but never soggy. Mature trees: deep, spaced watering in dry spells (drip is great). Standing water causes root rot."
+    },
+    "other": {
+      "pt": "Sol pleno e solo muito bem drenado; em solo pesado, plante em leirão (monte). Não plante onde um abacateiro morreu. A podridão da raiz (Phytophthora) é o maior problema.",
+      "en": "Full sun and very well-drained soil; in heavy soil, plant on a mound. Don't plant where an avocado has died. Root rot (Phytophthora) is the biggest problem."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Aspectos técnicos da produção de abacate", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/140180/1/AspectosTecnicosdaProducaopag156165.pdf" },
+    { "title": "Embrapa Roraima — Cultivo do abacateiro (Circular Técnica)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/694244/1/abacateiroCIT.pdf" },
+    { "title": "Master Gardeners of San Diego County — Avocado Production in Home Gardens", "url": "https://mastergardenerssandiego.org/downloads/Avocado%20Production%20in%20Home%20Gardens.pdf" },
+    { "title": "University of Hawaii CTAHR — Avocado (HC-4)", "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/hc-4.pdf" }
+  ]
+}

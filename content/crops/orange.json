@@ -1,0 +1,69 @@
+{
+  "id": "orange",
+  "summary": {
+    "pt": "Árvore frutífera perene que começa a produzir bem a partir do 3º–4º ano e dura décadas. Misturando variedades precoces e tardias, dá para colher laranja boa parte do ano.",
+    "en": "A long-lived fruit tree that starts bearing well from year 3–4 and lasts decades. Mixing early and late varieties gives oranges for much of the year."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11, 12, 1, 2],
+      "harvest": [4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Plante na estação chuvosa. Hamlin é precoce, Pera colhe jul–out e Valência é tardia.", "en": "Plant in the rainy season. Hamlin is early, Pera is picked Jul–Oct and Valência is late." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10, 11],
+      "harvest": [5, 6, 7, 8, 9, 10],
+      "notes": { "pt": "Plante na primavera, depois das geadas, para a muda pegar antes do inverno seguinte.", "en": "Plant in spring, after frosts, so the tree establishes before the next winter." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10],
+      "harvest": [5, 6, 7, 8, 9, 10],
+      "notes": { "pt": "Só onde a geada é leve (até cerca de −2 °C), como no litoral mediterrâneo. Em geada forte, plante em vaso e abrigue.", "en": "Only where frost is light (to about −2 °C), as on the Mediterranean coast. With hard frost, grow in a pot and shelter it." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [11, 12, 1, 2],
+      "harvest": [5, 6, 7, 8, 9, 10],
+      "notes": { "pt": "Só com irrigação.", "en": "Irrigation only." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não tolera inverno rigoroso; só em vaso dentro de casa ou estufa.", "en": "Does not survive harsh winters; only in a pot indoors or in a greenhouse." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça a calagem uns 2 meses antes do plantio. Não ponha adubo químico na cova; comece umas 3 semanas depois. Adube com NPK (ou esterco curtido) em 3–4 doses na época das chuvas, espalhando na projeção da copa, conforme análise de solo.",
+      "en": "Lime about 2 months before planting. Don't put chemical fertilizer in the hole; start about 3 weeks after. Apply NPK (or rotted manure) in 3–4 doses during the rainy season, spread under the canopy edge, by soil test."
+    },
+    "pruning": {
+      "pt": "Poda leve: tire ramos secos, doentes e os brotos que saem abaixo do enxerto (ladrões). Abrir um pouco o centro da copa deixa entrar luz.",
+      "en": "Light pruning: remove dead or diseased branches and shoots below the graft (suckers). Opening the canopy centre a little lets light in."
+    },
+    "watering": {
+      "pt": "Muda nova: regue com frequência nos primeiros meses. Árvore adulta: regas fundas e espaçadas na seca, principalmente na florada e no pegamento dos frutos. Encharcamento apodrece a raiz.",
+      "en": "Young trees: water often in the first months. Mature trees: deep, spaced watering in the dry season, especially at bloom and fruit set. Waterlogging rots roots."
+    },
+    "other": {
+      "pt": "Sol pleno e solo bem drenado. Compre muda certificada de viveiro telado. O greening (HLB) não tem cura: arranque a planta doente e controle o psilídeo.",
+      "en": "Full sun and well-drained soil. Buy certified trees from a screenhouse nursery. Greening (HLB) has no cure: remove sick trees and control the psyllid."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Sistema de Produção de Mudas de Citros", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1155982/1/Sistema-de-Producao-de-Mudas-de-Citros.pdf" },
+    { "title": "Embrapa — Recomendação de calagem e adubação (2020)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1127322/1/LV-RecomendacaoSolo-2020-345-347.pdf" },
+    { "title": "Aegro — Laranja Pera: guia de produção", "url": "https://aegro.com.br/blog/producao-de-laranja-pera/" },
+    { "title": "UF/IFAS Extension — Citrus Care Basics", "url": "https://blogs.ifas.ufl.edu/bakerco/2021/05/10/citrus-care-basics/" },
+    { "title": "UC ANR — Citrus in the home garden", "url": "https://www.ccfruitandnuts.ucanr.edu/sites/default/files/2013-07/72239.pdf" }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "blackberry",
+  "summary": {
+    "pt": "Arbusto perene e rústico que dá frutinhas pretas doces, boas para comer frescas, geleia e polpa. Produz a partir do 2º ano e dura 12–15 anos com bom manejo.",
+    "en": "A hardy perennial cane shrub with sweet black berries for fresh eating, jam and pulp. Crops from the second year and lasts 12–15 years with good care."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "No calor o ano todo quase não floresce, por falta de frio. Só em regiões altas (serra), com variedades de pouco frio como 'Tupy'.", "en": "In year-round heat it hardly flowers due to lack of chill. Only in highlands, with low-chill varieties such as 'Tupy'." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [7, 8, 9],
+      "harvest": [11, 12, 1],
+      "notes": { "pt": "Use variedades de pouca exigência em frio (ex.: 'Tupy', 'BRS Xavante'). Plante no fim do inverno; com irrigação pode ir até o início do verão.", "en": "Use low-chill varieties (e.g. 'Tupy', 'BRS Xavante'). Plant in late winter; with irrigation you can go into early summer." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [7, 8, 9],
+      "harvest": [12, 1, 2],
+      "notes": { "pt": "Clima ideal. Plante as mudas no fim do inverno ou início da primavera.", "en": "Ideal climate. Plant in late winter or early spring." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Calor seco e falta de frio prejudicam a floração. Só em altitude e com gotejamento.", "en": "Dry heat and lack of chill hurt flowering. Only at altitude and with drip irrigation." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10],
+      "harvest": [1, 2, 3],
+      "notes": { "pt": "Plante na primavera após o degelo. Prefira variedades resistentes ao frio; inverno muito rigoroso pode matar as hastes.", "en": "Plant in spring after thaw. Choose cold-hardy varieties; very harsh winters can kill canes." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Gosta de solo levemente ácido (pH 5,5–6,0): faça calagem se a análise pedir. Uns 3 meses antes do plantio, incorpore esterco bem curtido na linha. Depois, todo ano, composto ou esterco e uma dose leve de NPK (ex.: 10-10-10, meia a 1 xícara por planta) no início da brotação/floração.",
+      "en": "Likes slightly acid soil (pH 5.5–6.0): lime if the soil test calls for it. About 3 months before planting, work well-rotted manure into the row. Then yearly, compost or manure plus a light NPK dose (e.g. 10-10-10, half to 1 cup per plant) at bud break/bloom."
+    },
+    "pruning": {
+      "pt": "As hastes dão fruto no 2º ano e depois secam. Logo após a colheita, corte rente ao chão as que produziram. No verão, desponte as hastes novas uns 20 cm acima do arame para engrossar e ramificar. No inverno, deixe 4–6 hastes fortes por planta e encurte os ramos laterais.",
+      "en": "Canes fruit in their second year then die. Right after harvest, cut spent canes at ground level. In summer, tip new canes about 20 cm above the wire so they thicken and branch. In winter, keep 4–6 strong canes per plant and shorten side branches."
+    },
+    "watering": {
+      "pt": "Regue com frequência no primeiro ano e da floração à colheita, de preferência por gotejamento. Evite encharcamento.",
+      "en": "Water often in the first year and from bloom to harvest, ideally with drip. Avoid waterlogging."
+    },
+    "other": {
+      "pt": "Sol pleno e espaldeira de arame. Espaçamento de 0,3–0,7 m entre plantas e 2,5–3 m entre linhas. Arranque os brotos que nascem fora da linha, senão vira mato. Colha a cada 2–3 dias.",
+      "en": "Full sun and a wire trellis. Space 0.3–0.7 m between plants and 2.5–3 m between rows. Pull suckers that come up outside the row or it becomes a thicket. Pick every 2–3 days."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Clima Temperado — Aspectos técnicos da cultura da amora-preta (Documentos 122)", "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/744812/1/documento122.pdf" },
+    { "title": "Embrapa — Sistema de Produção da Amoreira-Preta", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1155983/1/Sistema-de-Producao-da-Amoreira-Preta.pdf" },
+    { "title": "Clemson Cooperative Extension HGIC — Blackberry", "url": "https://hgic.clemson.edu/factsheet/blackberry/" },
+    { "title": "UF/IFAS EDIS — Floricane Blackberry Pruning Guide for Florida", "url": "https://journals.flvc.org/edis/article/view/131944" }
+  ]
+}

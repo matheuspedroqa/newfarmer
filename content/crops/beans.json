@@ -1,0 +1,65 @@
+{
+  "id": "beans",
+  "summary": {
+    "pt": "O feijão é rápido (cerca de 90 dias), dá até três safras por ano no clima quente e ainda melhora o solo, porque fixa nitrogênio do ar.",
+    "en": "Beans are fast (about 90 days), give up to three crops a year in warm climates and improve the soil, since they fix nitrogen from the air."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [10, 11, 12, 1, 2, 5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [1, 2, 3, 4, 5, 8, 9],
+      "notes": { "pt": "Três épocas: 'das águas' (out–dez), 'da seca' (jan–fev) e 'de inverno' (mai–jun, só com irrigação).", "en": "Three seasons: rainy-season (Oct–Dec), late-rains (Jan–Feb) and winter (May–Jun, irrigated only)." }
+    },
+    "subtropical": {
+      "directSowing": [8, 9, 10, 1, 2],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [11, 12, 1, 4, 5],
+      "notes": { "pt": "Plante depois das geadas (safra) ou em jan–fev (safrinha), colhendo antes do frio.", "en": "Sow after the frosts (main crop) or in Jan–Feb (second crop), harvesting before the cold." }
+    },
+    "temperate": {
+      "directSowing": [11, 12],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3],
+      "notes": { "pt": "Semeie com o solo acima de 15 °C. Abaixo de 10 °C a semente apodrece.", "en": "Sow when the soil is above 15 °C (60 °F). Below 10 °C (50 °F) seeds rot." }
+    },
+    "semiarid": {
+      "directSowing": [12, 1, 2, 3],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [3, 4, 5, 6],
+      "notes": { "pt": "Plante com as primeiras chuvas. O feijão-de-corda (caupi) aguenta melhor a seca.", "en": "Sow with the first rains. Cowpea handles drought better than common beans." }
+    },
+    "cold": {
+      "directSowing": [12],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [3],
+      "notes": { "pt": "Verão curto: use variedades precoces e plante só quando o solo esquentar.", "en": "Short summer: use early varieties and sow only once the soil has warmed." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo e corrija a acidez com calcário. No plantio, use esterco curtido ou NPK com bastante fósforo, sem encostar o adubo na semente. Inocule a semente com rizóbio se a área nunca teve feijão. Um pouco de nitrogênio em cobertura aos 20–25 dias ajuda.",
+      "en": "Test the soil and lime acid soils. At sowing, use aged manure or a phosphorus-rich NPK, kept away from the seed. Inoculate seed with rhizobia if the field never grew beans. A little nitrogen side-dressed at 20–25 days helps."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Precisa de água na germinação e principalmente na floração e formação das vagens. Encharcamento faz a raiz apodrecer.",
+      "en": "Needs water at germination and above all at flowering and pod fill. Waterlogged soil rots the roots."
+    },
+    "other": {
+      "pt": "Pleno sol e solo bem drenado. Mantenha o mato limpo nos primeiros 30 dias. Evite mexer nas plantas molhadas para não espalhar doenças.",
+      "en": "Full sun and well-drained soil. Keep weeds down for the first 30 days. Avoid working among wet plants so diseases don't spread."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Circular técnica: cultivo do feijão em Minas Gerais (épocas das águas, seca e inverno)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/210473/1/circ50.pdf" },
+    { "title": "Embrapa Arroz e Feijão — Boletim de Pesquisa e Desenvolvimento 60 (épocas de semeadura e nitrogênio em Goiás)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1144395/1/bpd-60.pdf" },
+    { "title": "Washington State University Extension — Growing dry bean in the home garden (FS135E)", "url": "https://wpcdn.web.wsu.edu/extension/uploads/sites/25/FS135E-Growing-dry-bean-in-home-garden-publication.pdf" },
+    { "title": "University of Nebraska–Lincoln Extension — Dry bean production (G1713)", "url": "https://extensionpubs.unl.edu/publication/g1713/2013/pdf/view/g1713-2013.pdf" }
+  ]
+}

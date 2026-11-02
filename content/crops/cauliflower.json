@@ -1,0 +1,64 @@
+{
+  "id": "cauliflower",
+  "summary": {
+    "pt": "Couve-flor: cabeça branca muito apreciada, mas é a brássica mais exigente com temperatura. Escolha a cultivar certa para a época (inverno ou verão).",
+    "en": "Cauliflower: a prized white head, but the most temperature-sensitive brassica. Pick the right variety for the season (winter or summer)."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [3, 4, 5],
+      "transplant": [4, 5, 6],
+      "harvest": [7, 8, 9],
+      "notes": { "pt": "Só com cultivares de verão e na época mais fresca; no calor forte não forma cabeça.", "en": "Only with summer varieties and in the cooler season; in strong heat it does not head." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [1, 2, 3, 4, 5],
+      "transplant": [2, 3, 4, 5, 6],
+      "harvest": [5, 6, 7, 8, 9, 10],
+      "notes": { "pt": "Cultivares de inverno precisam de frio para formar a cabeça; de verão aguentam mais calor. Evite colher no calor de fim de outubro.", "en": "Winter varieties need cold to head; summer ones handle more heat. Avoid harvests in late-October heat." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [8, 9, 12, 1],
+      "transplant": [9, 10, 1, 2],
+      "harvest": [11, 12, 4, 5],
+      "notes": { "pt": "Primavera (transplante depois da geada) ou outono (semear no início do verão).", "en": "Spring (transplant after frost) or autumn (sow in early summer)." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [4, 5],
+      "transplant": [5, 6],
+      "harvest": [8, 9],
+      "notes": { "pt": "Difícil: só com irrigação, cultivares de verão e nos meses mais frescos.", "en": "Difficult: only with irrigation, summer varieties and in the coolest months." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [10],
+      "transplant": [11, 12],
+      "harvest": [2, 3],
+      "notes": { "pt": "Use variedades de ciclo curto ou proteção (túnel/estufa).", "en": "Use short-season varieties or protection (tunnel/greenhouse)." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Calcário conforme análise (pH acima de 7 piora a falta de boro). Esterco curtido ou composto e NPK no plantio; nitrogênio em cobertura e boro e molibdênio se a análise pedir. Falta de boro escurece a cabeça.",
+      "en": "Lime per soil test (pH above 7 worsens boron shortage). Rotted manure or compost and NPK at planting; side-dress nitrogen and add boron and molybdenum if the test calls for it. Boron shortage browns the curd."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Regas regulares, sem deixar secar; estresse de água ou calor faz a planta formar cabeça pequena antes da hora.",
+      "en": "Water regularly without letting it dry out; water or heat stress makes the plant form a small head too early."
+    },
+    "other": {
+      "pt": "Quando a cabeça aparecer, dobre ou amarre as folhas por cima dela para ficar branca. Sol pleno, 50–60 cm entre plantas. Pragas: lagartas e pulgão.",
+      "en": "When the head appears, fold or tie leaves over it to keep it white (blanching). Full sun, 50–60 cm between plants. Pests: caterpillars and aphids."
+    }
+  },
+  "sources": [
+    { "title": "EPAMIG — Couve-flor", "url": "https://livrariaepamig.com.br/wp-content/uploads/2023/02/Couve-flor.pdf" },
+    { "title": "WVU Extension — Growing cauliflower in West Virginia", "url": "https://extension.wvu.edu/files/d/45de8f85-5907-42d0-932a-10900e5e3fcb/growing-cauliflower-in-west-virginia.pdf" },
+    { "title": "UMN Extension — Caterpillars on cole crops", "url": "https://extension.umn.edu/yard-and-garden-insects/caterpillars-cole-crops" }
+  ]
+}

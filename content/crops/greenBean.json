@@ -1,0 +1,25 @@
+{
+  "id": "greenBean",
+  "summary": {
+    "pt": "Feijão-vagem: semeado direto no canteiro, cresce rápido e começa a dar vagens em 50–70 dias. Há tipos anões (moita) e de trepar (precisam de tutor).",
+    "en": "Green bean: sown straight into the bed, it grows fast and starts bearing pods in 50–70 days. There are bush types and pole types (which need support)."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [3, 4, 5, 6, 7, 8], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8, 9, 10], "notes": { "pt": "Pode plantar quase o ano todo; evite colher no auge das chuvas e do calor.", "en": "Can be planted almost year-round; avoid harvesting at the peak of rain and heat." } },
+    "subtropical": { "directSowing": [8, 9, 10, 11, 12, 1, 2], "seedbed": [], "transplant": [], "harvest": [10, 11, 12, 1, 2, 3, 4], "notes": { "pt": "Não tolera geada: plante depois do frio.", "en": "Not frost-tolerant: plant after the cold." } },
+    "temperate": { "directSowing": [10, 11, 12, 1], "seedbed": [], "transplant": [], "harvest": [12, 1, 2, 3], "notes": { "pt": "Semeie após a última geada, com o solo aquecido. Semeaduras a cada 2–3 semanas estendem a colheita.", "en": "Sow after the last frost, in warm soil. Sowing every 2–3 weeks extends the harvest." } },
+    "semiarid": { "directSowing": [3, 4, 5, 6, 7, 8], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8, 9, 10], "notes": { "pt": "Com irrigação; calor extremo derruba as flores.", "en": "With irrigation; extreme heat makes flowers drop." } },
+    "cold": { "directSowing": [11, 12], "seedbed": [], "transplant": [], "harvest": [1, 2], "notes": { "pt": "Verão curto: prefira variedades anãs e precoces.", "en": "Short summer: choose early bush varieties." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Corrija o solo com calcário e coloque esterco curtido ou composto na linha de plantio. Uma adubação leve de cobertura com nitrogênio e potássio no início da floração ajuda. Não exagere no nitrogênio.", "en": "Lime the soil and add aged manure or compost along the row. A light side-dressing of nitrogen and potassium at the start of flowering helps. Don't overdo nitrogen." },
+    "pruning": null,
+    "watering": { "pt": "Rega regular, sem encharcar, principalmente na floração e formação das vagens. Molhe o solo, não as folhas.", "en": "Regular watering without waterlogging, especially during flowering and pod set. Water the soil, not the leaves." },
+    "other": { "pt": "Sol pleno. Tipo de trepar: covas a 50 cm, 3–4 sementes, e tutor ou cerca de 1,8–2 m. Colha as vagens novas, antes dos grãos estufarem, a cada 2–3 dias. Atenção a pulgões e vaquinhas.", "en": "Full sun. Pole types: holes 50 cm apart, 3–4 seeds each, with a 1.8–2 m stake or trellis. Pick young pods before seeds bulge, every 2–3 days. Watch for aphids and bean beetles." }
+  },
+  "sources": [
+    { "title": "Embrapa — Manual de calagem e adubação: feijão-vagem (2020)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1127298/1/LV-RecomendacaoSolo-2020-303-304.pdf" },
+    { "title": "Washington State University Extension — Legumes (beans and peas)", "url": "https://extension.wsu.edu/snohomish/legumes" },
+    { "title": "University of Idaho / PNW Extension — Growing beans and peas (PNW 495)", "url": "https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/publications/pnw/pnw0495.pdf?la=en" }
+  ]
+}

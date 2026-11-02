@@ -1,0 +1,37 @@
+{
+  "id": "lavender",
+  "summary": {
+    "pt": "A lavanda é um arbusto perene perfumado, usado em sachês, chás, óleos e para atrair abelhas. Gosta de sol, solo pobre e pouca água, e vive vários anos.",
+    "en": "Lavender is a fragrant perennial shrub used for sachets, tea, oils and to attract bees. It likes sun, poor soil and little water, and lives for several years."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [6, 7, 8, 9], "notes": { "pt": "Vai melhor em regiões altas e secas; em calor úmido a raiz apodrece. A lavanda-dentata é a mais tolerante.", "en": "Does best in high, dry areas; humid heat rots the roots. French (dentata) lavender is the most tolerant." } },
+    "subtropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 8, 9], "harvest": [5, 6, 7, 8, 9, 10, 11] },
+    "temperate": { "directSowing": [], "seedbed": [], "transplant": [9, 10, 11], "harvest": [12, 1, 2] },
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [4, 5, 6], "harvest": [7, 8, 9, 10], "notes": { "pt": "Adapta-se bem ao seco; regue só até pegar e em estiagens longas.", "en": "Adapts well to dry climates; water only to establish and in long droughts." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [10, 11, 12], "harvest": [1, 2], "notes": { "pt": "Use a lavanda-inglesa (angustifolia), a mais resistente ao frio; plante depois das geadas.", "en": "Use English lavender (angustifolia), the most cold-hardy; plant after frosts." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Quase não precisa de adubo: solo fértil demais dá muita folha e pouca flor. Faça calagem se o solo for ácido (gosta de pH 6,5–7,5). No máximo, um pouco de composto ou adubo pobre em nitrogênio uma vez por ano, no início da primavera.",
+      "en": "Needs almost no fertilizer: rich soil gives lots of leaves and few flowers. Lime acid soil (it likes pH 6.5–7.5). At most, a little compost or low-nitrogen fertilizer once a year in early spring."
+    },
+    "pruning": {
+      "pt": "Depois da floração, corte cerca de 1/3 da planta dando forma de bola. Corte só a parte verde: nunca pode o tronco lenhoso, que não rebrota.",
+      "en": "After flowering, cut back about 1/3 of the plant into a dome shape. Cut only green growth: never prune into old wood, which won't regrow."
+    },
+    "watering": {
+      "pt": "Regue até a muda pegar. Depois, só quando o solo estiver bem seco. Excesso de água é a principal causa de morte.",
+      "en": "Water until the plant is established. Then only when the soil is quite dry. Overwatering is the main cause of death."
+    },
+    "other": {
+      "pt": "Sol pleno e solo muito bem drenado; em terra pesada, plante em canteiro elevado ou monte de terra. Espaçamento de 60–90 cm. Colha as flores quando os primeiros botões abrirem.",
+      "en": "Full sun and very well-drained soil; in heavy soil, plant on a raised bed or mound. Space 60–90 cm apart. Harvest flowers when the first buds open."
+    }
+  },
+  "sources": [
+    { "title": "UC IPM (University of California) — Cultural tips for growing lavender", "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-lavender/" },
+    { "title": "American Meadows — How to grow lavender", "url": "https://www.americanmeadows.com/blogs/perennials/how-to-grow-lavender" },
+    { "title": "Correio Braziliense — Como cuidar de lavanda: rega, drenagem e sol", "url": "https://www.correiobraziliense.com.br/cbradar/como-cuidar-de-lavanda-regar-drenagem-sol/" }
+  ]
+}

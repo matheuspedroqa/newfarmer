@@ -1,0 +1,67 @@
+{
+  "id": "coffee",
+  "summary": {
+    "pt": "Arbusto perene de clima quente que dá os grãos de café. Começa a produzir cerca de 2–3 anos após o plantio e dura décadas; o arábica prefere lugares altos e frescos, o conilon/robusta aguenta mais calor.",
+    "en": "A warm-climate perennial shrub that produces coffee beans. Starts bearing about 2–3 years after planting and lasts decades; arabica prefers cool highlands, robusta/conilon handles more heat."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11, 12],
+      "harvest": [5, 6, 7, 8],
+      "notes": { "pt": "Plante as mudas no início das chuvas. Em terras baixas e muito quentes use conilon/robusta; arábica só em altitude.", "en": "Plant seedlings at the start of the rains. In hot lowlands use robusta/conilon; arabica only at altitude." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [11, 12, 1],
+      "harvest": [5, 6, 7, 8],
+      "notes": { "pt": "Bom para arábica. Geada queima a planta: evite baixadas e encostas viradas para o sul.", "en": "Good for arabica. Frost burns the plants: avoid low spots and cold-facing slopes." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não tolera geada nem inverno frio. Só em vaso, protegido dentro de casa ou estufa.", "en": "Can't tolerate frost or cold winters. Only in a pot, indoors or in a greenhouse." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [11, 12],
+      "harvest": [5, 6, 7],
+      "notes": { "pt": "Só com irrigação o ano todo (gotejamento ou pivô). Sem água, a florada falha.", "en": "Only with year-round irrigation (drip or pivot). Without water, flowering fails." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não sobrevive ao frio. Só como planta de vaso dentro de casa.", "en": "Does not survive the cold. Only as an indoor potted plant." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo e calagem antes de plantar (gosta de pH 5,5–6,5). Na cova, esterco curtido (~5 L) e fósforo (ex.: superfosfato simples). Depois, adube com NPK (rico em nitrogênio e potássio) dividido em 3–4 vezes durante as chuvas. Palha do café e composto devolvidos ao pé ajudam muito.",
+      "en": "Soil test and lime before planting (likes pH 5.5–6.5). In the hole, rotted manure (~5 L) and phosphorus (e.g. single superphosphate). Then feed NPK (rich in nitrogen and potassium) split into 3–4 doses during the rainy season. Returning coffee husks and compost to the base helps a lot."
+    },
+    "pruning": {
+      "pt": "Faça a poda logo depois da colheita e antes da florada. Tire ramos secos, doentes e 'ladrões' (brotos retos do tronco). Quando a planta fica alta demais ou fraca, faça uma poda mais forte (recepa ou decote) para renovar.",
+      "en": "Prune right after harvest and before flowering. Remove dead, diseased branches and suckers (upright shoots from the trunk). When plants get too tall or weak, cut back harder (stumping or topping) to renew them."
+    },
+    "watering": {
+      "pt": "Precisa de chuva bem distribuída ou irrigação, principalmente na florada e no enchimento dos grãos. Um período seco curto antes da florada ajuda a florir junto.",
+      "en": "Needs well-spread rain or irrigation, especially at flowering and bean filling. A short dry spell before flowering helps it bloom evenly."
+    },
+    "other": {
+      "pt": "Use mudas sadias de viveiro registrado. Espaçamento comum de 2,5–3,5 m entre linhas e 0,5–1 m entre plantas. Fique de olho na ferrugem (pó laranja nas folhas) e na broca do café.",
+      "en": "Use healthy seedlings from a certified nursery. Common spacing is 2.5–3.5 m between rows and 0.5–1 m between plants. Watch for coffee leaf rust (orange powder on leaves) and the coffee berry borer."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Café — Sistemas de Produção 1: Café", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1148365/1/Sistemas-de-Producao-1-Cafe.pdf" },
+    { "title": "Embrapa — Cafeicultura (Circular Técnica 125)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/999518/1/ct125cafeicultura.pdf" },
+    { "title": "University of Hawaii CTAHR — Growing Coffee in Hawaii", "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/coffee08.pdf" }
+  ]
+}

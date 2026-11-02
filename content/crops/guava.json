@@ -1,0 +1,68 @@
+{
+  "id": "guava",
+  "summary": {
+    "pt": "Árvore rústica e produtiva que começa a dar frutos a partir do 2º ano. Com poda de frutificação dá para escolher a época da colheita e colher quase o ano todo.",
+    "en": "A hardy, productive tree that starts bearing from year 2. With fruiting pruning you can choose when to harvest and pick almost all year."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11, 12, 1],
+      "harvest": [1, 2, 3, 4],
+      "notes": { "pt": "Plante no início das chuvas. A safra natural é no fim do verão; com poda e irrigação colhe-se o ano todo (cerca de 6 meses depois de cada poda).", "en": "Plant at the start of the rains. The natural crop is in late summer; with pruning and irrigation you can harvest all year (about 6 months after each pruning)." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10, 11],
+      "harvest": [1, 2, 3, 4],
+      "notes": { "pt": "Plante na primavera. Geada forte queima a planta nova; proteja nos 2 primeiros invernos.", "en": "Plant in spring. Hard frost burns young trees; protect them for the first 2 winters." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não tolera geada forte (abaixo de cerca de −2 °C). Só em vaso, abrigado no inverno.", "en": "Does not tolerate hard frost (below about −2 °C). Only in a pot sheltered in winter." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [1, 2, 3],
+      "harvest": [6, 7, 8, 9, 10, 11],
+      "notes": { "pt": "Produz muito bem com irrigação; com podas escalonadas colhe-se o ano todo. Plante no período das chuvas.", "en": "Bears very well with irrigation; with staggered pruning you can harvest all year. Plant in the rainy season." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não sobrevive ao inverno rigoroso. Só em estufa.", "en": "Does not survive harsh winters. Greenhouse only." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo e calagem antes do plantio. Esterco curtido ou composto e fósforo na cova. Depois, NPK em cobertura cerca de 3 vezes por ano (ex.: nov, jan e mar no Sul) e sempre após a poda.",
+      "en": "Test and lime the soil before planting. Rotted manure or compost plus phosphorus in the hole. Then side-dress NPK about 3 times a year and always after pruning."
+    },
+    "pruning": {
+      "pt": "Forme a copa baixa e aberta (3–4 ramos). Na poda de frutificação, encurte os ramos do ano: os frutos nascem nos brotos novos e ficam prontos cerca de 6 meses depois. Tire ramos secos e brotos do tronco.",
+      "en": "Train a low, open canopy (3–4 branches). For fruiting pruning, shorten the year's shoots: fruit forms on new growth and is ready about 6 months later. Remove dead branches and trunk sprouts."
+    },
+    "watering": {
+      "pt": "Regue a muda nova com frequência. Na adulta, regue na seca, principalmente da florada à formação dos frutos.",
+      "en": "Water young trees often. For mature trees, water in dry spells, mainly from bloom to fruit growth."
+    },
+    "other": {
+      "pt": "Sol pleno. Deixe uns 4–6 m entre árvores. A principal praga é o bicho-da-goiaba (larva da mosca-das-frutas e gorgulho): ensaque os frutos pequenos e recolha os caídos.",
+      "en": "Full sun. Leave about 4–6 m between trees. The main pest is fruit fly larvae and the guava weevil: bag young fruits and pick up fallen ones."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Produção de goiaba", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1155656/1/Producao-de-goiaba.pdf" },
+    { "title": "Embrapa Clima Temperado — Circular Técnica 110 (goiabeira)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/905037/1/circular110.pdf" },
+    { "title": "Embrapa — Épocas e intensidades de poda na goiabeira", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/488379/1/Epocasintensidades.pdf" },
+    { "title": "UF/IFAS EDIS — Guava Growing in the Florida Home Landscape", "url": "https://ask.ifas.ufl.edu/publication/MG045" }
+  ]
+}

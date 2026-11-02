@@ -1,0 +1,67 @@
+{
+  "id": "cacao",
+  "summary": {
+    "pt": "Árvore perene de floresta tropical úmida, cujos frutos dão as sementes do chocolate. Gosta de calor, umidade e meia-sombra; começa a produzir em 3–5 anos (clones, em 2–3).",
+    "en": "A perennial rainforest tree whose pods hold the seeds used for chocolate. Likes heat, humidity and partial shade; starts bearing in 3–5 years (grafted clones in 2–3)."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [11, 12, 1, 2, 3],
+      "harvest": [10, 11, 12, 1, 2, 3],
+      "notes": { "pt": "Plante as mudas no início da estação das chuvas, com a sombra já formada (bananeira ou árvores plantadas ~6 meses antes). Há uma safra principal e uma menor (temporão) no resto do ano.", "en": "Plant seedlings at the start of the rainy season, with shade already in place (bananas or trees planted ~6 months earlier). There is a main crop plus a smaller off-season crop the rest of the year." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Inverno ameno já é frio demais: abaixo de ~10 °C a planta sofre e não produz bem. Só em locais muito protegidos, sem nenhuma geada.", "en": "Even a mild winter is too cold: below ~10 °C the plant suffers and bears poorly. Only in very sheltered, totally frost-free spots." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não tolera frio nem geada. Só em estufa aquecida e úmida.", "en": "Can't tolerate cold or frost. Only in a heated, humid greenhouse." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Ar seco e falta de chuva matam o cacau. Só com irrigação constante, sombra e quebra-vento — pouco viável para iniciantes.", "en": "Dry air and lack of rain kill cacao. Only with constant irrigation, shade and windbreaks — hardly practical for beginners." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não sobrevive ao frio. Só em estufa aquecida.", "en": "Does not survive the cold. Only in a heated greenhouse." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo antes e corrija com calcário se o solo for ácido. Na cova, esterco curtido ou composto e fósforo. Depois, adube com NPK em 2–3 vezes durante as chuvas, aumentando a dose à medida que a planta cresce. Deixe as folhas caídas no chão: viram adubo.",
+      "en": "Soil test first and lime if the soil is acid. In the hole, rotted manure or compost and phosphorus. Then feed NPK in 2–3 doses during the rains, increasing as the tree grows. Leave fallen leaves on the ground: they become fertilizer."
+    },
+    "pruning": {
+      "pt": "Poda de formação nos primeiros anos para deixar um tronco e 3–4 galhos principais. Depois, poda de manutenção todo ano: tire brotos 'ladrões', ramos secos, doentes e frutos podres. A cada 2–3 anos, uma poda mais forte para baixar a copa.",
+      "en": "Formative pruning in the first years to keep one trunk and 3–4 main branches. Then yearly maintenance: remove suckers, dead and diseased branches and rotten pods. Every 2–3 years, a harder cut to lower the canopy."
+    },
+    "watering": {
+      "pt": "Precisa de chuva farta e bem distribuída (ou irrigação) e solo sempre úmido, mas sem encharcar. Não aguenta seca longa.",
+      "en": "Needs plentiful, well-spread rain (or irrigation) and soil that stays moist but not waterlogged. Can't take long droughts."
+    },
+    "other": {
+      "pt": "Meia-sombra, principalmente quando jovem; proteja do vento. Espaçamento comum de 3 × 3 m (clones 3 × 2,5 m). Colha os frutos maduros com podão, sem ferir a almofada floral do tronco. Atenção à vassoura-de-bruxa.",
+      "en": "Partial shade, especially when young; protect from wind. Common spacing 3 × 3 m (clones 3 × 2.5 m). Cut ripe pods with a pruning knife without damaging the flower cushion on the trunk. Watch for witches' broom disease."
+    }
+  },
+  "sources": [
+    { "title": "EMDAGRO Sergipe — Cartilha do cacau", "url": "https://emdagro.se.gov.br/wp-content/uploads/2026/07/cacau-site1.pdf" },
+    { "title": "Embrapa — Cacau", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/375788/1/CACAU.pdf" },
+    { "title": "UF/IFAS EDIS — Cocoa (Chocolate Bean) Growing in the Florida Home Landscape (HS307)", "url": "https://journals.flvc.org/edis/article/view/116117" }
+  ]
+}

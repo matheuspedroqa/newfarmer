@@ -1,0 +1,63 @@
+{
+  "id": "soy",
+  "summary": {
+    "pt": "A soja é uma leguminosa de verão rica em proteína e óleo. Fixa nitrogênio do ar e por isso precisa de pouco adubo nitrogenado.",
+    "en": "Soybean is a summer legume rich in protein and oil. It fixes nitrogen from the air, so it needs little nitrogen fertilizer."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [10, 11, 12],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [1, 2, 3, 4],
+      "notes": { "pt": "Semeie quando as chuvas firmarem. No Brasil, siga a janela do zoneamento agrícola (ZARC) do seu município.", "en": "Sow once the rains are steady. In Brazil, follow the official climate-risk zoning (ZARC) window for your municipality." }
+    },
+    "subtropical": {
+      "directSowing": [10, 11, 12],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [3, 4, 5]
+    },
+    "temperate": {
+      "directSowing": [11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [3, 4],
+      "notes": { "pt": "Semeie depois da última geada, com o solo acima de 10–15 °C.", "en": "Sow after the last frost, with soil above 10–15 °C (50–60 °F)." }
+    },
+    "semiarid": {
+      "directSowing": [12, 1],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [4, 5],
+      "notes": { "pt": "Arriscado só com chuva; melhor com irrigação e variedade precoce.", "en": "Risky on rain alone; better with irrigation and an early variety." }
+    },
+    "cold": {
+      "directSowing": [11, 12],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [3, 4],
+      "notes": { "pt": "Só com variedades muito precoces, feitas para verão curto.", "en": "Only with very early varieties bred for short summers." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo e corrija a acidez com calcário (pH perto de 6,0–6,5). Inocule a semente com bactéria (Bradyrhizobium) logo antes de plantar, em dose dobrada se a área nunca teve soja. No plantio, adube com fósforo e potássio; não precisa de ureia.",
+      "en": "Test the soil and lime to about pH 6.0–6.5. Inoculate seed with Bradyrhizobium just before sowing, at a double rate on fields that never grew soybeans. At sowing, apply phosphorus and potassium; no urea needed."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Precisa de água para germinar e principalmente na floração e no enchimento dos grãos. Não tolera encharcamento.",
+      "en": "Needs water to germinate and above all at flowering and pod fill. Does not tolerate waterlogging."
+    },
+    "other": {
+      "pt": "Pleno sol. Escolha variedade indicada para a sua região, porque a soja muda o ciclo conforme o tamanho do dia. Vigie lagartas, percevejos e a ferrugem-asiática.",
+      "en": "Full sun. Pick a variety suited to your region, since soybean timing depends on day length. Watch for caterpillars, stink bugs and Asian soybean rust."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Soja — Indicações técnicas para a cultura da soja (Reunião de Pesquisa de Soja da Região Sul, 2025)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1183120/1/Indicacoes2025.pdf" },
+    { "title": "Perennia (Nova Scotia) — Soybean Production Guide", "url": "https://www.perennia.ca/wp-content/uploads/2018/03/Soybean-Production-GuideV2.pdf" },
+    { "title": "Terres Inovia — Soybean planting: aiming for rapid emergence", "url": "https://www.terresinovia.fr/en/news/soybean-planting-aiming-rapid-emergence" }
+  ]
+}

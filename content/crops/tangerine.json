@@ -1,0 +1,68 @@
+{
+  "id": "tangerine",
+  "summary": {
+    "pt": "Árvore cítrica perene, de fruta fácil de descascar, que produz do 3º ano e dura décadas. É dos cítricos que mais aguentam frio, e Ponkan e Murcott juntas espalham a colheita pelo inverno.",
+    "en": "An evergreen citrus tree with easy-peel fruit that bears from year 3 and lasts decades. It's among the more cold-tolerant citrus, and early and late varieties together spread the harvest through winter."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11, 12, 1, 2],
+      "harvest": [4, 5, 6, 7, 8],
+      "notes": { "pt": "Plante no início das chuvas. Ponkan colhe mais cedo (abr–jul) e Murcott depois (jun–ago). Com calor o ano todo, a casca fica mais verde.", "en": "Plant at the start of the rains. Ponkan is picked earlier (Apr–Jul) and Murcott later (Jun–Aug). Year-round heat leaves the peel greener." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10, 11],
+      "harvest": [4, 5, 6, 7, 8, 9],
+      "notes": { "pt": "Plante na primavera, depois das geadas. O inverno ameno dá cor e sabor melhores à fruta.", "en": "Plant in spring, after frosts. Mild winters give the fruit better colour and flavour." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10],
+      "harvest": [4, 5, 6, 7],
+      "notes": { "pt": "Prefira satsumas, que aguentam geada leve (até cerca de −7 °C na árvore adulta), sobre porta-enxerto trifoliata. A fruta sofre mais com o frio que a árvore.", "en": "Prefer satsumas, which handle light frost (to about −7 °C on mature trees), on trifoliate rootstock. The fruit suffers from cold more than the tree." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [11, 12, 1, 2],
+      "harvest": [4, 5, 6, 7, 8],
+      "notes": { "pt": "Só com irrigação.", "en": "Irrigation only." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não aguenta inverno rigoroso; só em vaso dentro de casa ou estufa.", "en": "Can't survive harsh winters; only in a pot indoors or in a greenhouse." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Calcário uns 2 meses antes do plantio e esterco curtido na cova. Comece o adubo químico umas 3 semanas depois do plantio. Depois, NPK ou esterco em 3–4 doses na época das chuvas, na projeção da copa, conforme análise de solo.",
+      "en": "Lime about 2 months before planting and rotted manure in the hole. Start chemical fertilizer about 3 weeks after planting. Then NPK or manure in 3–4 doses during the rainy season, under the canopy edge, by soil test."
+    },
+    "pruning": {
+      "pt": "Poda leve: tire ramos secos, doentes e os brotos abaixo do enxerto. Se carregar demais e os galhos vergarem, raleie frutos.",
+      "en": "Light pruning: remove dead or diseased branches and shoots below the graft. If the tree overbears and branches sag, thin the fruit."
+    },
+    "watering": {
+      "pt": "Muda nova: regue com frequência nos primeiros meses. Adulta: regas fundas na seca, principalmente na florada e no pegamento dos frutos. Não encharque.",
+      "en": "Young trees: water often in the first months. Mature trees: deep watering in dry spells, especially at bloom and fruit set. Don't waterlog."
+    },
+    "other": {
+      "pt": "Sol pleno e solo bem drenado. Compre muda certificada. Colha logo que madurar: a casca da Ponkan solta e a fruta passa rápido. Gomose e greening são as doenças mais graves.",
+      "en": "Full sun and well-drained soil. Buy certified trees. Pick as soon as ripe: loose-peel fruit goes past its best quickly. Gummosis and greening (HLB) are the worst diseases."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Tabuleiros Costeiros — Comunicado Técnico 242 (tangerinas)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1133867/1/COT-242-21-Embrapa-Tabuleiros-Costeiros.pdf" },
+    { "title": "Revista Cultivar — A produção e a comercialização de tangerinas", "url": "https://revistacultivar.com.br/artigos/a-producao-e-a-comercializacao-de-tangerinas" },
+    { "title": "UGA Extension — Bulletin 804-6 (cold-hardy citrus)", "url": "https://secure.caes.uga.edu/extension/publications/files/pdf/B%20804_6.PDF" },
+    { "title": "Mississippi State Extension — Fruit and Nut Review: Citrus", "url": "https://extension.msstate.edu/publications/fruit-and-nut-review-citrus" }
+  ]
+}

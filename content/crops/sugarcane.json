@@ -1,0 +1,64 @@
+{
+  "id": "sugarcane",
+  "summary": {
+    "pt": "Capim gigante semiperene, plantado por pedaços do colmo (toletes), que rebrota por vários anos. Serve para açúcar, caldo, rapadura e como ótima ração de seca para o gado.",
+    "en": "A giant semi-perennial grass planted from stalk pieces (setts) that regrows for several years. Used for sugar, juice, raw sugar and as great dry-season cattle feed."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [1, 2, 3, 9, 10, 11],
+      "harvest": [5, 6, 7, 8, 9, 10, 11],
+      "notes": { "pt": "Toletes em sulco. Cana de ano: plantio set–nov; cana de ano e meio: jan–mar. Corte na seca.", "en": "Setts in furrows. One-year cane: plant Sep–Nov; 18-month cane: Jan–Mar. Cut in the dry season." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [8, 9, 10],
+      "harvest": [5, 6, 7, 8],
+      "notes": { "pt": "Plante na primavera, após as geadas; geada forte queima a cana.", "en": "Plant in spring, after frosts; hard frost burns the cane." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Geada frequente mata a cana; só vale em áreas quase sem geada.", "en": "Frequent frost kills cane; only worthwhile in nearly frost-free spots." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [4, 5, 6, 7, 8],
+      "harvest": [9, 10, 11, 12, 1, 2],
+      "notes": { "pt": "Só com irrigação.", "en": "Irrigation only." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não se cultiva: precisa de calor e não tolera geada.", "en": "Not grown: needs heat and does not tolerate frost." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça calagem antes do plantio. Coloque o adubo (NPK conforme análise de solo, com bastante fósforo) no fundo do sulco; esterco curtido ou torta de filtro ajudam. Depois de cada corte, adube a soqueira com nitrogênio e potássio.",
+      "en": "Lime before planting. Place fertilizer (NPK by soil test, rich in phosphorus) in the furrow bottom; rotted manure or filter cake help. After each cut, feed the ratoon with nitrogen and potassium."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Precisa de muita água na fase de crescimento (estação chuvosa) e de um período seco antes do corte para acumular açúcar.",
+      "en": "Needs plenty of water while growing (rainy season) and a dry spell before cutting to build up sugar."
+    },
+    "other": {
+      "pt": "Sol pleno. Use toletes sadios com 3 gemas, deitados no sulco a cerca de 1,2–1,5 m entre linhas. Capine nos primeiros meses, até a cana fechar.",
+      "en": "Full sun. Use healthy setts with 3 buds, laid in furrows about 1.2–1.5 m apart. Weed in the first months until the cane closes the rows."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Gado de Leite — Tecnologia e custo da cana-de-açúcar para alimentação animal", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1063670/1/COT80TecnologiaeCustodaCanadeacucarparaaAlimentacaoAnimal.pdf" },
+    { "title": "Embrapa — Formação do canavial (folder)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/710745/1/folderformacaocanavial.pdf" },
+    { "title": "Embrapa — Utilização da cana-de-açúcar na alimentação animal", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/352205/1/AP2005utilizacaocanadeacucaralimentacaoanimal.pdf" }
+  ]
+}

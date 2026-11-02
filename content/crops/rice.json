@@ -1,0 +1,64 @@
+{
+  "id": "rice",
+  "summary": {
+    "pt": "O arroz é um cereal de verão que gosta de calor e muita água. Pode ser plantado em sequeiro (só com chuva) ou alagado em várzea.",
+    "en": "Rice is a summer cereal that loves heat and plenty of water. It can be grown rain-fed (upland) or in flooded paddies."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [10, 11, 12],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3, 4],
+      "notes": { "pt": "Arroz de sequeiro: semeie com as chuvas, de outubro a meados de dezembro.", "en": "Upland rice: sow with the rains, from October to mid-December." }
+    },
+    "subtropical": {
+      "directSowing": [9, 10, 11],
+      "seedbed": [9, 10],
+      "transplant": [10, 11],
+      "harvest": [2, 3, 4],
+      "notes": { "pt": "Arroz irrigado de várzea: semeadura direta ou mudas transplantadas para a área alagada.", "en": "Flooded lowland rice: direct-seeded or seedlings transplanted into the flooded field." }
+    },
+    "temperate": {
+      "directSowing": [10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3],
+      "notes": { "pt": "Só em áreas de verão quente, com irrigação por alagamento.", "en": "Only where summers are hot, with flood irrigation." }
+    },
+    "semiarid": {
+      "directSowing": [12, 1, 2],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [4, 5, 6],
+      "notes": { "pt": "Só com irrigação garantida; com a chuva curta o risco de perder é alto.", "en": "Only with reliable irrigation; the short rainy season makes losses likely." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não indicado: o arroz precisa de verão longo e quente.", "en": "Not suitable: rice needs a long, hot summer." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo; o arroz tolera solo um pouco ácido, então use pouco calcário. No plantio, NPK com fósforo e potássio. Divida o nitrogênio (ureia) em duas coberturas: perto de 15–20 dias e no início da formação da panícula. No arroz alagado, jogue a ureia no solo seco e alague logo depois.",
+      "en": "Test the soil; rice tolerates slightly acid soil, so lime lightly. At sowing, use an NPK with phosphorus and potassium. Split nitrogen (urea) into two side-dressings: around 15–20 days and at early panicle formation. In flooded rice, spread urea on dry soil and flood right after."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Sequeiro: depende de chuva regular, principalmente na floração. Irrigado: mantenha uma lâmina de 5–10 cm de água desde as 4–5 folhas até perto da colheita.",
+      "en": "Upland: needs steady rain, especially at flowering. Flooded: keep 5–10 cm (2–4 in) of water from the 4–5 leaf stage until shortly before harvest."
+    },
+    "other": {
+      "pt": "Pleno sol e calor. Controle o mato cedo, que é o maior inimigo. A brusone (manchas nas folhas e no pescoço da panícula) é a principal doença: use variedade resistente.",
+      "en": "Full sun and heat. Control weeds early; they are the biggest enemy. Blast (spots on leaves and the panicle neck) is the main disease: choose resistant varieties."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Arroz e Feijão — Arroz de terras altas (cultivo, épocas e adubação)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/63947/1/Arrozdeterrasaltas.pdf" },
+    { "title": "Embrapa — Tecnologias para a produção de arroz de terras altas", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/575472/1/Tecnologiasparaarroz.pdf" },
+    { "title": "University of Arkansas Cooperative Extension — Arkansas Rice Quick Facts", "url": "https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/2017%20Arkansas%20Rice%20Quick%20Facts.pdf" }
+  ]
+}

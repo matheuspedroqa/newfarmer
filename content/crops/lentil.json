@@ -1,0 +1,64 @@
+{
+  "id": "lentil",
+  "summary": {
+    "pt": "Leguminosa de grão pequena, de ciclo curto (3–4 meses), que gosta de tempo fresco e seco. Fixa nitrogênio e melhora o solo para a cultura seguinte.",
+    "en": "A small grain legume with a short cycle (3–4 months) that likes cool, dry weather. It fixes nitrogen and improves soil for the next crop."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [4, 5],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [8, 9],
+      "notes": { "pt": "Só na estação seca e fresca, com irrigação; calor forte e chuva atrapalham.", "en": "Only in the cool dry season, with irrigation; strong heat and rain hurt it." }
+    },
+    "subtropical": {
+      "directSowing": [5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [10, 11, 12],
+      "notes": { "pt": "Cultivo de inverno.", "en": "Winter crop." }
+    },
+    "temperate": {
+      "directSowing": [9, 10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [1, 2],
+      "notes": { "pt": "Semeie cedo na primavera; plantar tarde atrasa a maturação e aumenta perdas.", "en": "Sow early in spring; late sowing delays maturity and raises losses." }
+    },
+    "semiarid": {
+      "directSowing": [5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [10, 11],
+      "notes": { "pt": "Semeie com a chuva de inverno; tolera seca no fim do ciclo.", "en": "Sow with the winter rains; tolerates drought late in the cycle." }
+    },
+    "cold": {
+      "directSowing": [10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3],
+      "notes": { "pt": "Semeie assim que o solo puder ser trabalhado; a planta jovem aguenta geada leve.", "en": "Sow as soon as the soil can be worked; young plants tolerate light frost." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Não precisa de adubo nitrogenado: inocule a semente com rizóbio próprio da lentilha. Use fósforo no plantio (ou composto curtido) e calcário se o solo for ácido.",
+      "en": "No nitrogen fertilizer needed: inoculate seed with lentil-specific rhizobium. Apply phosphorus at sowing (or well-rotted compost) and lime if soil is acidic."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Precisa de pouca água. Regue na germinação e na floração; evite encharcar. Pare de regar quando as vagens amarelarem.",
+      "en": "Needs little water. Water at germination and flowering; avoid waterlogging. Stop when pods turn yellow."
+    },
+    "other": {
+      "pt": "Sol pleno e solo bem drenado. Compete mal com mato: capine no começo. Colha quando as vagens estiverem secas e chocalhando.",
+      "en": "Full sun and well-drained soil. Competes poorly with weeds: weed early. Harvest when pods are dry and rattle."
+    }
+  },
+  "sources": [
+    { "title": "Manitoba Agriculture — Lentils: Production and Management", "url": "https://www.gov.mb.ca/agriculture/crops/crop-management/lentils.html" },
+    { "title": "University of Wisconsin — Alternative Field Crops Manual: Lentil", "url": "https://corn.aae.wisc.edu/Crops/Lentil.aspx" },
+    { "title": "GRDC — GrowNote Lentil West: Planting", "url": "https://grdc.com.au/__data/assets/pdf_file/0025/366163/GrowNote-Lentil-West-4-Planting.pdf" }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "taro",
+  "summary": {
+    "pt": "Taro (inhame-comum no Sudeste, Colocasia): planta de folhas grandes que forma rizomas comestíveis. Gosta de calor e muita água, e é fácil de manter em pequenas áreas.",
+    "en": "Taro (Colocasia): a large-leaved plant that forms edible corms. It likes heat and plenty of water and is easy to keep on small plots."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [8, 9, 10, 11], "seedbed": [], "transplant": [], "harvest": [4, 5, 6, 7], "notes": { "pt": "Plante rizomas-filhos (ou mudas) no início das chuvas. Em lugares quentes e com água pode plantar o ano todo. Colhe-se 7–9 meses depois, quando as folhas amarelam.", "en": "Plant side corms (or suckers) at the start of the rains. Where it is warm and water is available it can be planted year-round. Harvest 7–9 months later, when leaves yellow." } },
+    "subtropical": { "directSowing": [8, 9, 10], "seedbed": [], "transplant": [], "harvest": [5, 6, 7], "notes": { "pt": "Plante depois do frio. Abaixo de 18 °C a planta quase para de crescer.", "en": "Plant after the cold. Below 18 °C growth almost stops." } },
+    "temperate": { "directSowing": [10], "seedbed": [], "transplant": [], "harvest": [4, 5], "notes": { "pt": "Só onde o verão é longo e quente; colha antes da primeira geada. Rende pouco.", "en": "Only where summers are long and hot; harvest before the first frost. Low yields." } },
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Só com irrigação constante: o taro precisa de solo sempre úmido.", "en": "Only with constant irrigation: taro needs soil that is always moist." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não se cultiva: não tolera frio nem geada.", "en": "Not grown: does not tolerate cold or frost." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "No sulco de plantio, use bastante composto ou esterco curtido e corrija o solo ácido com calcário. Faça 1–2 coberturas com esterco ou NPK durante os primeiros 3 meses. Nunca encoste adubo químico na muda, pois queima o broto.", "en": "Put plenty of compost or aged manure in the planting furrow and lime acidic soil. Side-dress once or twice with manure or NPK in the first 3 months. Never let chemical fertilizer touch the sucker; it burns the bud." },
+    "pruning": null,
+    "watering": { "pt": "Precisa de muita água: mantenha o solo sempre úmido (rega semanal ou mais no seco). Aceita até solo encharcado, como em várzeas.", "en": "Needs lots of water: keep soil constantly moist (weekly or more in dry spells). It even tolerates waterlogged soil, as in lowland plots." },
+    "other": { "pt": "Espaçamento de cerca de 1 m entre linhas e 30–40 cm entre plantas. Capine no 1º mês e faça a amontoa (chegar terra ao pé) por volta dos 90 dias. Cru, irrita a boca: sempre cozinhe.", "en": "Space about 1 m between rows and 30–40 cm between plants. Weed in the first month and hill soil around the base at about 90 days. Raw taro irritates the mouth: always cook it." }
+  },
+  "sources": [
+    { "title": "Embrapa Agrobiologia — Comunicado técnico 88: cultivo orgânico de taro", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/629291/1/cot088.pdf" },
+    { "title": "UFV — Série Conhecimento: Taro", "url": "https://serieconhecimento.cead.ufv.br/wp-content/uploads/2021/08/taro-cead.pdf" },
+    { "title": "USDA NRCS — Plant Guide: Taro (Colocasia esculenta)", "url": "https://webarchive.library.unt.edu/web/20090304235425/http://plants.usda.gov/plantguide/doc/cs_coes.doc" }
+  ]
+}

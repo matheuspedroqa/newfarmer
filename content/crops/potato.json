@@ -1,0 +1,65 @@
+{
+  "id": "potato",
+  "summary": {
+    "pt": "Planta de clima fresco plantada a partir de batatas-semente, que forma os tubérculos embaixo da terra em 3–4 meses. Rende muito em pouco espaço.",
+    "en": "A cool-season plant grown from seed potatoes that forms tubers underground in 3–4 months. Yields a lot in little space."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [4, 5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [7, 8, 9],
+      "notes": { "pt": "Plante na época mais fresca e seca (outono/inverno), com irrigação. Em regiões altas vai melhor; no calor forte quase não forma batatas.", "en": "Plant in the cooler, drier season (autumn/winter) with irrigation. Best in highlands; in strong heat it barely forms tubers." }
+    },
+    "subtropical": {
+      "directSowing": [2, 3, 7, 8, 9],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [5, 6, 11, 12, 1],
+      "notes": { "pt": "Duas épocas: safra das águas (plante jul–set, colha nov–jan) e safra da seca (plante fev–mar, colha mai–jun). Evite que a geada pegue a planta.", "en": "Two seasons: spring crop (plant Jul–Sep, harvest Nov–Jan) and autumn crop (plant Feb–Mar, harvest May–Jun). Keep frost off the plants." }
+    },
+    "temperate": {
+      "directSowing": [8, 9, 10],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [12, 1, 2, 3],
+      "notes": { "pt": "Plante no início da primavera, quando o solo estiver a ~13 °C e passarem as geadas fortes.", "en": "Plant in early spring once soil is about 13 °C and hard frosts are over." }
+    },
+    "semiarid": {
+      "directSowing": [4, 5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [7, 8, 9],
+      "notes": { "pt": "Só com irrigação e na estação fresca.", "en": "Only with irrigation, in the cool season." }
+    },
+    "cold": {
+      "directSowing": [10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [1, 2, 3],
+      "notes": { "pt": "Plante na primavera, depois da última geada. Cresce bem em verão curto e fresco.", "en": "Plant in spring after the last frost. Does well in short, cool summers." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Gosta de solo solto e levemente ácido (pH 5,0–6,0): pouca calagem. No sulco, esterco bem curtido ou composto, todo o fósforo, ~30% do nitrogênio e metade do potássio (NPK conforme análise). Aos 25–35 dias, na amontoa, o resto do nitrogênio e do potássio.",
+      "en": "Likes loose, slightly acid soil (pH 5.0–6.0): little lime. In the furrow, well-rotted manure or compost, all the phosphorus, ~30% of the nitrogen and half the potassium (NPK by soil test). At 25–35 days, when hilling, the rest of the nitrogen and potassium."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Mantenha o solo úmido por igual, principalmente quando começam a formar as batatas (na floração). Pare de regar quando as ramas secarem. Encharcar apodrece os tubérculos.",
+      "en": "Keep soil evenly moist, especially as tubers start forming (around flowering). Stop watering when the tops die down. Waterlogging rots tubers."
+    },
+    "other": {
+      "pt": "Use batata-semente sadia (não a do mercado). Faça a amontoa (puxar terra para o pé) quando as plantas tiverem ~15 cm, para a batata não ficar verde — batata verde é tóxica. Colha 2 semanas depois das ramas secarem. Atenção à requeima em tempo úmido.",
+      "en": "Use healthy certified seed potatoes (not supermarket ones). Hill soil around plants when ~15 cm tall so tubers don't turn green — green potatoes are toxic. Harvest 2 weeks after tops die. Watch for late blight in wet weather."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Sistemas de produção para a cultura da batata", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/903233/1/SIDDOCUMENTOS21SISTEMASDEPRODUCAOPARAACULTURADABATATA.pdf" },
+    { "title": "Embrapa Clima Temperado — Cultivo orgânico de batata na região Sul (Sistemas de Produção 27, 2024)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1169880/1/Sistemas-de-producao-27-2024-Cultivo-organico-de-batata-na-regiao-sul.pdf" },
+    { "title": "University of Idaho Extension — Growing Potatoes in the Home Garden (CIS 1000)", "url": "https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/publications/cis/cis1000.pdf?la=en" },
+    { "title": "Montana State University Extension — Potato Growing Guide", "url": "https://www.montana.edu/extension/valley/potatoguide.html" }
+  ]
+}

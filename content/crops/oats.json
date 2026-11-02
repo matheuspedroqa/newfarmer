@@ -1,0 +1,65 @@
+{
+  "id": "oats",
+  "summary": {
+    "pt": "A aveia é um cereal de clima fresco, rústico e fácil. Serve para grão, para pasto e feno dos animais e para cobrir e proteger o solo no inverno.",
+    "en": "Oats are a hardy, easy cool-season cereal. They give grain, pasture and hay for livestock, and protect the soil as a winter cover crop."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [3, 4],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [7, 8],
+      "notes": { "pt": "Plante no fim das chuvas, mais para pasto ou cobertura de solo. Em regiões baixas e quentes rende pouco grão.", "en": "Sow at the end of the rains, mainly for pasture or cover. In hot lowlands it yields little grain." }
+    },
+    "subtropical": {
+      "directSowing": [3, 4, 5, 6, 7],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [8, 9, 10, 11],
+      "notes": { "pt": "Para pasto, semeie cedo (mar–abr); para grão, abr–jun.", "en": "For grazing, sow early (Mar–Apr); for grain, Apr–Jun." }
+    },
+    "temperate": {
+      "directSowing": [9, 10],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [1, 2],
+      "notes": { "pt": "Aveia de primavera: semeie assim que der para trabalhar o solo. Onde o inverno é ameno, também se semeia no outono.", "en": "Spring oats: sow as soon as the soil can be worked. Where winters are mild, oats can also be sown in autumn." }
+    },
+    "semiarid": {
+      "directSowing": [5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [9, 10],
+      "notes": { "pt": "Na estação fresca, com irrigação; boa opção de forragem.", "en": "In the cool season, with irrigation; a good forage option." }
+    },
+    "cold": {
+      "directSowing": [10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3],
+      "notes": { "pt": "Semeie cedo na primavera; a aveia aguenta geadas leves.", "en": "Sow early in spring; oats handle light frosts." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Corrija a acidez com calcário (a aveia-preta tolera solo mais ácido que a branca). No plantio, NPK com fósforo e potássio ou esterco curtido. Nitrogênio moderado: um pouco no plantio e outro tanto quando as plantas tiverem 10–15 cm. Excesso de nitrogênio faz a aveia acamar (tombar).",
+      "en": "Lime acid soils (black oats tolerate acidity better than white oats). At sowing, use an NPK with phosphorus and potassium, or aged manure. Moderate nitrogen: a little at sowing and a bit more when plants are 10–15 cm tall. Too much nitrogen makes oats lodge (fall over)."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Normalmente basta a chuva. Precisa de umidade no perfilhamento e no espigamento.",
+      "en": "Rain is usually enough. Needs moisture at tillering and heading."
+    },
+    "other": {
+      "pt": "Pleno sol. Semeie a lanço ou em linhas próximas (17–20 cm). Para pasto, deixe crescer uns 25–30 cm antes de soltar os animais. Ferrugem é a doença mais comum: use variedade resistente.",
+      "en": "Full sun. Broadcast or drill in narrow rows (17–20 cm). For grazing, let it reach 25–30 cm before turning animals in. Rust is the most common disease: use resistant varieties."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Trigo — Aveia (cultivo, épocas de semeadura e usos)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/242258/1/AVEIA.pdf" },
+    { "title": "Embrapa — Indicações técnicas e recomendação de cultivares de aveia", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1166364/1/RecomendacaoCultivaresAveia.pdf" },
+    { "title": "Oklahoma State University Extension — Managing spring planted oats for hay production", "url": "https://extension.okstate.edu/fact-sheets/managing-spring-planted-oats-for-hay-production.html" },
+    { "title": "IHARF (Saskatchewan) — Oat Production", "url": "https://iharf.ca/wp-content/uploads/2024/02/Oat-Production.pdf" }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "kale",
+  "summary": {
+    "pt": "Couve de folha (couve-manteiga, kale): um único pé dá folhas por meses. Rústica, aguenta frio e fica até mais doce depois de uma geada leve.",
+    "en": "Leafy kale (collard-type greens): one plant gives leaves for months. Hardy, tolerates cold and even gets sweeter after a light frost."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [3, 4, 5, 6, 7, 8],
+      "transplant": [4, 5, 6, 7, 8, 9],
+      "harvest": [6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Planta-se o ano todo, mas rende mais na época mais fresca e seca, com irrigação.", "en": "Can be planted year-round, but does best in the cooler, drier season with irrigation." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [2, 3, 4, 5, 6, 7, 8],
+      "transplant": [3, 4, 5, 6, 7, 8, 9],
+      "harvest": [5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Outono e inverno são a melhor época; no verão quente aparecem mais lagartas e pulgões.", "en": "Autumn and winter are best; in hot summers caterpillars and aphids increase." }
+    },
+    "temperate": {
+      "directSowing": [1],
+      "seedbed": [9],
+      "transplant": [10],
+      "harvest": [11, 12, 1, 2, 3, 4, 5],
+      "notes": { "pt": "Mudas no fim do inverno para colher na primavera; semeadura direta no meio do verão para colher no outono e inverno.", "en": "Start seedlings in late winter for spring; direct-sow in midsummer for autumn and winter harvest." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [3, 4, 5, 6],
+      "transplant": [4, 5, 6, 7],
+      "harvest": [6, 7, 8, 9, 10, 11],
+      "notes": { "pt": "Com irrigação, nos meses mais frescos.", "en": "With irrigation, in the cooler months." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [10],
+      "transplant": [11, 12],
+      "harvest": [1, 2, 3, 4],
+      "notes": { "pt": "Aguenta geada leve; colha até o solo congelar.", "en": "Tolerates light frost; harvest until the ground freezes." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Calcário conforme análise de solo. Na cova, esterco curtido ou composto e um NPK de plantio. Como se colhe folha por meses, faça cobertura com nitrogênio (esterco, composto ou ureia) a cada 30 dias.",
+      "en": "Lime according to a soil test. Put rotted manure or compost and starter NPK in the hole. Since leaves are picked for months, side-dress with nitrogen (manure, compost or urea) every 30 days."
+    },
+    "pruning": {
+      "pt": "Colha as folhas de baixo para cima, deixando o broto do topo. Retire folhas amarelas e os brotos laterais se quiser folhas maiores.",
+      "en": "Pick leaves from the bottom up, leaving the top bud. Remove yellow leaves and side shoots if you want bigger leaves."
+    },
+    "watering": {
+      "pt": "Mantenha a terra sempre úmida, com regas regulares; falta d'água deixa a folha dura e amarga.",
+      "en": "Keep soil evenly moist with regular watering; drought makes leaves tough and bitter."
+    },
+    "other": {
+      "pt": "Sol pleno e espaçamento de 50 cm entre plantas e 80–90 cm entre linhas. Principal praga: lagartas (curuquerê) e pulgão; use tela/manta ou Bt.",
+      "en": "Full sun; space 50 cm between plants and 80–90 cm between rows. Main pests: cabbage caterpillars and aphids; use row cover or Bt."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Roraima — Informativo Ano I nº 4 (out/1995), época de plantio de hortaliças", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/687513/1/ANO-I-N-4-OUT95.pdf" },
+    { "title": "UMN Extension — Growing collards and kale in home gardens", "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale" },
+    { "title": "UGA Extension — Fall Vegetable Gardening (C1258)", "url": "https://fieldreport.caes.uga.edu/publications/C1258/fall-vegetable-gardening/" },
+    { "title": "UMN Extension — Caterpillars on cole crops", "url": "https://extension.umn.edu/yard-and-garden-insects/caterpillars-cole-crops" }
+  ]
+}

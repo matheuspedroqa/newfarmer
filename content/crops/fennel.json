@@ -1,0 +1,35 @@
+{
+  "id": "fennel",
+  "summary": {
+    "pt": "O funcho (erva-doce) é uma erva aromática de sabor anisado: dá folhas para tempero, sementes para chá e, em algumas variedades, um bulbo comestível. É rústico e cresce em quase todo o Brasil.",
+    "en": "Fennel is an aromatic herb with an anise flavor: it gives leaves for seasoning, seeds for tea and, in some varieties, an edible bulb. It is hardy and grows in most climates."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [3, 4, 5], "seedbed": [], "transplant": [], "harvest": [6, 7, 8, 9, 10], "notes": { "pt": "Semeie no fim das chuvas; folhas em 60–90 dias, sementes em cerca de 6 meses.", "en": "Sow at the end of the rains; leaves in 60–90 days, seeds in about 6 months." } },
+    "subtropical": { "directSowing": [2, 3, 4, 8, 9], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8, 11, 12, 1] },
+    "temperate": { "directSowing": [9, 10, 11], "seedbed": [], "transplant": [], "harvest": [12, 1, 2, 3, 4] },
+    "semiarid": { "directSowing": [2, 3, 4], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8, 9], "notes": { "pt": "No Nordeste, plante no início das chuvas para colher antes do pico de pulgões; complete com irrigação.", "en": "In NE Brazil, plant at the start of the rains to harvest before aphids peak; supplement with irrigation." } },
+    "cold": { "directSowing": [10, 11], "seedbed": [], "transplant": [], "harvest": [1, 2, 3], "notes": { "pt": "Semeie depois da última geada; em inverno rigoroso trate como anual.", "en": "Sow after the last frost; in harsh winters treat it as an annual." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Adubação orgânica: esterco bovino ou de galinha bem curtido ou composto no preparo do canteiro, e uma cobertura de esterco ou composto no meio do ciclo. Precisa de nitrogênio moderado e pouco fósforo e potássio.",
+      "en": "Organic feeding: well-aged cattle or poultry manure or compost when preparing the bed, plus a side-dress of manure or compost mid-cycle. Needs moderate nitrogen and little phosphorus and potassium."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Regue com regularidade para não secar o solo, principalmente na germinação e, no funcho de bulbo, enquanto ele engorda. Evite encharcar.",
+      "en": "Water regularly so the soil doesn't dry out, especially during germination and, for bulb fennel, while the bulb swells. Avoid waterlogging."
+    },
+    "other": {
+      "pt": "Semeie direto no local: a raiz pivotante não gosta de transplante. Sol pleno, 30–45 cm entre plantas; a planta chega a 1,5 m. Colha as sementes antes de secarem por completo, para não caírem. Atenção aos pulgões. Não plante perto do endro (cruzam).",
+      "en": "Sow in place: the taproot dislikes transplanting. Full sun, 30–45 cm apart; plants reach 1.5 m. Harvest seeds before fully dry so they don't drop. Watch for aphids. Don't plant near dill (they cross)."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Pantanal — Funcho (folder)", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/927107/1/funcho.pdf" },
+    { "title": "Utah State University Extension — Fennel in the garden", "url": "https://extension.usu.edu/yardandgarden/research/fennel-in-the-garden.php" },
+    { "title": "University of Arkansas Extension — FSA 6083 (herbs)", "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6083.pdf" },
+    { "title": "Cadernos de Agroecologia — Época de plantio e adubação orgânica de erva-doce", "url": "https://revista.aba-agroecologia.org.br/cad/article/download/2523/2250/9570" }
+  ]
+}

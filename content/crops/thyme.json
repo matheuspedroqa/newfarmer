@@ -1,0 +1,26 @@
+{
+  "id": "thyme",
+  "summary": {
+    "pt": "Tomilho: subarbusto perene e pequeno, de folhas miúdas e muito aromáticas. Resistente à seca, cabe em vaso ou na borda do canteiro e dá ramos o ano todo.",
+    "en": "Thyme: a small perennial subshrub with tiny, very aromatic leaves. Drought-tolerant, it fits in a pot or bed edge and gives sprigs all year."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Plante mudas no fim das chuvas, em lugar bem drenado. Sofre com calor úmido e chuva em excesso; vaso ou canteiro alto ajudam.", "en": "Plant seedlings at the end of the rains, in a well-drained spot. It suffers in humid heat and heavy rain; pots or raised beds help." } },
+    "subtropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 8, 9, 10], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Plante no outono ou na primavera. Colheita contínua o ano todo.", "en": "Plant in autumn or spring. Continuous harvest all year." } },
+    "temperate": { "directSowing": [], "seedbed": [], "transplant": [9, 10, 11], "harvest": [10, 11, 12, 1, 2, 3, 4, 5], "notes": { "pt": "Plante na primavera, depois das geadas. Resiste ao inverno; corte pouco nessa época.", "en": "Plant in spring after frosts. Survives winter; cut lightly during that season." } },
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [2, 3, 4, 5], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Vai bem no clima seco; regue até pegar e depois pouco.", "en": "Does well in dry climates; water until established, then sparingly." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [10, 11], "harvest": [11, 12, 1, 2, 3], "notes": { "pt": "Aguenta frio com cobertura de palha no inverno; em lugares muito rigorosos, cultive em vaso protegido.", "en": "Handles cold with a straw mulch in winter; in very harsh places, grow it in a sheltered pot." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Precisa de pouco adubo: composto no plantio e uma cobertura leve de composto ou adubo orgânico com pouco nitrogênio uma vez por ano. Corrija solo ácido com calcário. Em vaso, adubo orgânico leve uma vez por mês.", "en": "Needs little fertilizer: compost at planting and a light top-dressing of compost or low-nitrogen organic fertilizer once a year. Lime acidic soil. In pots, a light organic feed once a month." },
+    "pruning": { "pt": "Corte as pontas com frequência para a planta ficar cheia e não virar só galho lenhoso. Depois da floração, apare cerca de 1/3. A cada 3–4 anos, troque por mudas novas de estaca.", "en": "Trim tips often so the plant stays bushy and doesn't turn woody. After flowering, cut back about 1/3. Every 3–4 years, replace with new plants from cuttings." },
+    "watering": { "pt": "Regue só quando a terra estiver seca. Água demais e solo pesado apodrecem a raiz.", "en": "Water only when the soil is dry. Too much water and heavy soil rot the roots." },
+    "other": { "pt": "Sol pleno e solo leve, pedregoso ou arenoso, bem drenado. Espaçamento de 30–45 cm. Não plante junto da hortelã, que pede muita água.", "en": "Full sun and light, stony or sandy, well-drained soil. Space 30–45 cm apart. Don't plant next to mint, which needs much more water." }
+  },
+  "sources": [
+    { "title": "SENAR — Coleção 213: Plantas medicinais, aromáticas e condimentares", "url": "https://www.cnabrasil.org.br/assets/arquivos/213-PLANTAS-MEDICINAIS-NOVO.pdf" },
+    { "title": "University of Delaware Cooperative Extension — Thyme fact sheet", "url": "https://udel.edu/academics/colleges/canr/cooperative-extension/fact-sheets/thyme/" },
+    { "title": "University of Maryland Extension — Thyme", "url": "https://extension.umd.edu/resources/yard-garden/herbs/thyme" },
+    { "title": "University of Arizona Extension — Growing herbs", "url": "https://www.extension.arizona.edu/sites/default/files/attachment/growingherbs_0.pdf" }
+  ]
+}

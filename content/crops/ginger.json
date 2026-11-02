@@ -1,0 +1,26 @@
+{
+  "id": "ginger",
+  "summary": {
+    "pt": "Gengibre: planta tropical cultivada pelo rizoma picante, usado em chás e temperos. Ocupa pouco espaço, vai bem em canteiro ou vaso e tem boa procura nas feiras.",
+    "en": "Ginger: a tropical plant grown for its spicy rhizome, used in teas and cooking. It takes little space, does well in beds or pots and sells well at markets."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [8, 9, 10], "seedbed": [], "transplant": [], "harvest": [4, 5, 6, 7], "notes": { "pt": "Plante pedaços de rizoma (cerca de 5–10 cm, com 2–3 gemas) no início das chuvas. Colhe-se 7–10 meses depois, quando as folhas secam.", "en": "Plant rhizome pieces (about 5–10 cm, with 2–3 buds) at the start of the rains. Harvest 7–10 months later, when the leaves die back." } },
+    "subtropical": { "directSowing": [9, 10], "seedbed": [], "transplant": [], "harvest": [5, 6, 7], "notes": { "pt": "Plante quando o solo esquentar, depois do frio. Colha antes de geadas.", "en": "Plant once the soil warms, after the cold. Harvest before frosts." } },
+    "temperate": { "directSowing": [10, 11], "seedbed": [8, 9], "transplant": [], "harvest": [3, 4], "notes": { "pt": "Pré-brote os rizomas em vasos dentro de casa no fim do inverno e plante fora quando o solo passar de ~13 °C. Rende melhor em túnel ou estufa; colha antes da geada (gengibre 'baby').", "en": "Pre-sprout rhizomes in pots indoors in late winter and plant out once soil is above ~13 °C. Best in a tunnel or greenhouse; harvest before frost (baby ginger)." } },
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Só com irrigação e sombra parcial; o ar seco e o sol forte queimam as folhas. Plante no início das chuvas locais.", "en": "Only with irrigation and partial shade; dry air and strong sun scorch leaves. Plant at the start of the local rains." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Só em vaso dentro de casa ou em estufa aquecida.", "en": "Only in pots indoors or in a heated greenhouse." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Antes de plantar, misture bastante composto ou esterco curtido e um adubo com fósforo; corrija a acidez com calcário. Faça coberturas com esterco ou NPK por volta de 90 e 120 dias. Não exagere no nitrogênio: dá muita folha e pouco rizoma.", "en": "Before planting, mix in plenty of compost or aged manure plus a phosphorus fertilizer; lime acidic soil. Side-dress with manure or NPK at about 90 and 120 days. Don't overdo nitrogen: it gives lots of leaves and small rhizomes." },
+    "pruning": null,
+    "watering": { "pt": "Mantenha o solo úmido, mas nunca encharcado (o rizoma apodrece). Reduza a rega quando as folhas começarem a amarelar, perto da colheita.", "en": "Keep soil moist but never soggy (rhizomes rot). Cut back watering when leaves start to yellow near harvest." },
+    "other": { "pt": "Prefere meia-sombra e solo fofo, rico e bem drenado. Plante a 5 cm de profundidade, 20–25 cm entre plantas, e cubra com palha. Faça amontoa (chegar terra) quando os rizomas aparecerem.", "en": "Prefers partial shade and loose, rich, well-drained soil. Plant 5 cm deep, 20–25 cm apart, and mulch with straw. Hill soil over rhizomes when they show at the surface." }
+  },
+  "sources": [
+    { "title": "Ifes Centro Serrano — Boletim agrícola 05: Gengibre", "url": "https://centroserrano.ifes.edu.br/images/stories/Artigos/Boletim_Agrícola/2023/Boletim_05_-_Gengibre.pdf" },
+    { "title": "Embrapa Pantanal — Folder: gengibre", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/984007/1/Foldergengibre.pdf" },
+    { "title": "UF/IFAS Extension — Growing turmeric & ginger in Florida", "url": "https://blogs.ifas.ufl.edu/marionco/2023/09/01/growing-turmeric-ginger-in-florida-part-2-of-2" },
+    { "title": "University of Kentucky CCD — Ginger and turmeric crop profile", "url": "https://ccd.uky.edu/sites/default/files/2024-11/ccd-cp-138_ginger-and-turmeric_0.pdf" }
+  ]
+}

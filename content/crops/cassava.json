@@ -1,0 +1,65 @@
+{
+  "id": "cassava",
+  "summary": {
+    "pt": "Arbusto tropical plantado por pedaços do caule (manivas), que forma raízes ricas em amido. É rústica, aguenta seca e solo fraco, e pode ser colhida de 8 a 24 meses depois do plantio.",
+    "en": "A tropical shrub grown from stem cuttings that forms starchy roots. It's hardy, tolerates drought and poor soil, and can be harvested 8 to 24 months after planting."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [10, 11, 12],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [5, 6, 7, 8, 9],
+      "notes": { "pt": "Plante as manivas no início das chuvas. Com irrigação, pode plantar o ano todo. Colha de 8 a 24 meses depois, de preferência na época seca.", "en": "Plant cuttings at the start of the rains. With irrigation you can plant year-round. Harvest 8 to 24 months later, ideally in the dry season." }
+    },
+    "subtropical": {
+      "directSowing": [8, 9, 10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [5, 6, 7, 8],
+      "notes": { "pt": "Plante depois do frio, quando o solo esquentar. Colha no outono/inverno seguinte (ou deixe mais um ano). Geada queima a parte de cima.", "en": "Plant after the cold, once the soil warms. Harvest the following autumn/winter (or leave another year). Frost burns the tops." }
+    },
+    "temperate": {
+      "directSowing": [10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [4, 5],
+      "notes": { "pt": "Ciclo curto entre as geadas: plante após a última geada e colha antes da primeira. As raízes ficam pequenas.", "en": "Short season between frosts: plant after the last frost and harvest before the first. Roots stay small." }
+    },
+    "semiarid": {
+      "directSowing": [12, 1, 2, 3],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [7, 8, 9, 10, 11],
+      "notes": { "pt": "Plante logo no início das chuvas, que são curtas. Aguenta bem a seca depois de pegar; colha a partir de 10–12 meses.", "en": "Plant right at the start of the short rains. Handles drought well once established; harvest from 10–12 months." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Verão curto e frio demais: a mandioca não forma raízes. Não recomendado.", "en": "Summer is too short and cool: cassava won't form roots. Not recommended." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo e calagem se o solo for muito ácido. Na cova ou sulco, um pouco de esterco curtido (~1 L) ou composto e fósforo. Se usar nitrogênio, ponha 1/3 no plantio e 2/3 em cobertura uns 60 dias depois. Não exagere no nitrogênio: dá muita rama e pouca raiz.",
+      "en": "Soil test and lime if very acid. In the hole or furrow, a little rotted manure (~1 L) or compost and phosphorus. If using nitrogen, put 1/3 at planting and 2/3 as side-dressing about 60 days later. Don't overdo nitrogen: lots of leaves, few roots."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Precisa de umidade no solo nos primeiros 3–4 meses para pegar. Depois aguenta bem a seca. Não plante em terreno que encharca: a raiz apodrece.",
+      "en": "Needs soil moisture in the first 3–4 months to establish. After that it tolerates drought well. Don't plant where water pools: roots rot."
+    },
+    "other": {
+      "pt": "Use manivas de 15–20 cm, com 5–7 gemas, de plantas sadias de 10–14 meses; plante deitadas a 5–10 cm de fundura, ~1 × 0,6 m. Mantenha sem mato nos primeiros meses. Mandioca brava (amarga) é tóxica crua: para comer, use mandioca mansa (aipim/macaxeira).",
+      "en": "Use 15–20 cm cuttings with 5–7 buds from healthy 10–14-month-old plants; lay them 5–10 cm deep, about 1 × 0.6 m apart. Keep weed-free in the first months. Bitter cassava is toxic raw: for eating, grow sweet cassava."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Cartilha mandioca (3ª edição)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1133699/1/Cartilha-mandioca-3a-edicao.pdf" },
+    { "title": "Embrapa — Mandioca: o produtor pergunta, a Embrapa responde (500 perguntas)", "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/120506/1/500perguntasmandioca.pdf" },
+    { "title": "Embrapa — Sistemas de produção para a cultura da mandioca no Sul de Minas", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/908697/1/SIDDOCUMENTOS317SISTEMASDEPRODUCAOPARAACULTURADAMANDIOCASULDEMINASMGCDU633493.pdf" },
+    { "title": "ECHOcommunity — Cassava (Manihot esculenta)", "url": "https://www.echocommunity.org/plants/337/plant_varieties" }
+  ]
+}

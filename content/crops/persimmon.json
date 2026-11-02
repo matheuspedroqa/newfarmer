@@ -1,0 +1,67 @@
+{
+  "id": "persimmon",
+  "summary": {
+    "pt": "Árvore frutífera de folhas que caem no inverno, com frutos laranja doces no outono. Pede pouco frio, é rústica e começa a produzir em 3–4 anos.",
+    "en": "A deciduous fruit tree with sweet orange fruit in autumn. Needs little winter chill, is hardy and starts bearing in 3–4 years."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "No calor constante a árvore não descansa e produz pouco. Só em regiões altas (acima de ~700 m), plantando no início das chuvas.", "en": "In constant heat the tree doesn't go dormant and bears little. Only in highlands (above ~700 m), planting at the start of the rains." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [6, 7, 8],
+      "harvest": [3, 4, 5, 6],
+      "notes": { "pt": "Clima muito bom. Plante as mudas no inverno, com a árvore sem folhas.", "en": "Very good climate. Plant trees in winter while they are leafless." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [6, 7, 8],
+      "harvest": [3, 4, 5],
+      "notes": { "pt": "Vai bem. Geada tardia na primavera pode queimar a brotação nova; evite baixadas onde a geada se acumula.", "en": "Grows well. Late spring frost can burn new shoots; avoid low spots where frost settles." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [5, 6, 7],
+      "harvest": [8, 9, 10, 11, 12],
+      "notes": { "pt": "Só com irrigação e manejo de poda; em altitude é melhor. No Vale do São Francisco colhe-se fora da época normal (ago–dez).", "en": "Only with irrigation and pruning management; better at altitude. In Brazil's São Francisco Valley it is harvested off-season (Aug–Dec)." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Inverno longo e rigoroso mata ramos e o verão é curto para amadurecer os frutos. Não recomendado.", "en": "Long harsh winters kill branches and summer is too short to ripen fruit. Not recommended." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Na cova, misture esterco curtido ou composto, calcário (conforme análise) e fósforo, bem misturados e úmidos. Depois, todo ano no fim do inverno, espalhe composto e uma dose moderada de NPK sob a copa. Pouco nitrogênio: em excesso faz os frutos caírem.",
+      "en": "In the planting hole, mix rotted manure or compost, lime (by soil test) and phosphorus, well mixed and moist. Then each late winter, spread compost and a moderate NPK dose under the canopy. Go light on nitrogen: too much makes fruit drop."
+    },
+    "pruning": {
+      "pt": "Nos primeiros anos, faça poda de formação no inverno para formar 3–4 galhos principais em forma de taça. Depois, poda leve no inverno: tire galhos secos, doentes, cruzados e os que crescem para dentro. Ramos que já produziram podem ser encurtados para renovar.",
+      "en": "In early years, do formative pruning in winter to build 3–4 main branches in an open vase. Afterwards, light winter pruning: remove dead, diseased, crossing and inward-growing branches. Branches that have fruited can be shortened to renew them."
+    },
+    "watering": {
+      "pt": "Regue bem no primeiro ano. Árvore adulta aguenta secas curtas, mas falta de água no verão faz cair frutos; regue nesses períodos.",
+      "en": "Water well in the first year. Mature trees tolerate short droughts, but summer dry spells cause fruit drop; water then."
+    },
+    "other": {
+      "pt": "Sol pleno (6 h ou mais) e solo bem drenado. Espaçamento de ~5 × 4 m. Variedades taninosas (ex.: 'Rama Forte') precisam tirar o 'travo' depois de colhidas; 'Fuyu' pode ser comida firme.",
+      "en": "Full sun (6+ hours) and well-drained soil. Spacing about 5 × 4 m. Astringent varieties need de-astringing after harvest; non-astringent ones like 'Fuyu' can be eaten firm."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Semiárido — Cultivo do caquizeiro no Vale do São Francisco", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1011852/1/CTE107.pdf" },
+    { "title": "Mississippi State University Extension — Persimmons (P3802)", "url": "https://extension.msstate.edu/sites/default/files/publications/P3802_web.pdf" },
+    { "title": "UC Master Gardeners — Persimmon", "url": "https://ucanr.edu/node/152234" }
+  ]
+}

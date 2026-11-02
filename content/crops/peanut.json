@@ -1,0 +1,64 @@
+{
+  "id": "peanut",
+  "summary": {
+    "pt": "O amendoim é uma leguminosa de calor que forma as vagens debaixo da terra. Fixa nitrogênio do ar e rende bem em solo leve e arenoso.",
+    "en": "Peanut is a warm-season legume that forms its pods underground. It fixes nitrogen from the air and does well in light, sandy soil."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [10, 11, 2, 3],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [1, 2, 3, 5, 6, 7],
+      "notes": { "pt": "Duas épocas: 'das águas' (out–nov) e 'da seca' (fev–mar). Evite colher em época de chuva forte.", "en": "Two seasons: early rains (Oct–Nov) and late rains (Feb–Mar). Avoid harvesting during heavy rain." }
+    },
+    "subtropical": {
+      "directSowing": [9, 10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [1, 2, 3]
+    },
+    "temperate": {
+      "directSowing": [11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [3, 4],
+      "notes": { "pt": "Só em regiões de verão quente e longo. Plante com o solo acima de 18–20 °C por 3 dias seguidos.", "en": "Only where summers are long and hot. Sow when the soil stays above 18–20 °C (65–68 °F) for 3 days in a row." }
+    },
+    "semiarid": {
+      "directSowing": [1, 2, 3],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [4, 5, 6],
+      "notes": { "pt": "Plante com as chuvas, usando variedade precoce (cerca de 90 dias).", "en": "Sow with the rains, using an early variety (about 90 days)." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não indicado: precisa de calor (25–30 °C) por uns 4 meses.", "en": "Not suitable: needs heat (25–30 °C) for about 4 months." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo e aplique calcário 30–45 dias antes do plantio (pH perto de 6,0). O amendoim precisa muito de cálcio e fósforo; o cálcio tem que estar na camada de cima, onde se formam as vagens, então use gesso agrícola no começo da floração se a análise pedir. Não precisa de nitrogênio. Evite muito potássio junto da semente.",
+      "en": "Test the soil and lime 30–45 days before sowing (pH around 6.0). Peanuts need lots of calcium and phosphorus; calcium must be in the topsoil where pods form, so apply gypsum at early bloom if the soil test calls for it. No nitrogen needed. Avoid heavy potassium near the seed."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Precisa de chuva bem distribuída (uns 500–700 mm no ciclo), principalmente na floração e formação das vagens. Precisa de tempo seco na colheita.",
+      "en": "Needs well-spread rain (about 500–700 mm over the cycle), especially at flowering and pod formation. Needs dry weather at harvest."
+    },
+    "other": {
+      "pt": "Pleno sol e solo solto e bem drenado. Não mexa no solo perto das plantas depois que começam a soltar os 'esporões' que entram na terra. Seque bem os grãos depois de arrancar para evitar mofo (aflatoxina). Não repita amendoim na mesma área por 3 anos.",
+      "en": "Full sun and loose, well-drained soil. Don't disturb the soil near plants once the pegs start entering the ground. Dry pods well after digging to avoid mold (aflatoxin). Wait 3 years before planting peanuts in the same spot."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Algodão — Circular técnica 102: recomendações para o cultivo do amendoim", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/274708/1/CIRTEC102.pdf" },
+    { "title": "Embrapa — Recomendações técnicas para o cultivo de amendoim precoce no período das águas", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/269461/1/CNPADOCUMETO20RECOMENTACOESTECNICASPARAOCULTIVODEAMENDOIMPRECOCENOPERIODODASAGUASF.pdf" },
+    { "title": "NC State Extension — Peanut Notes (comments from Dan Anco, Clemson, No. 48 2026)", "url": "https://peanut.ces.ncsu.edu/news/comments-from-dan-anco-at-clemson-peanut-notes-no-48-2026/" },
+    { "title": "University of Georgia Extension — Irwin County ANR newsletter, June 2022 (gypsum and calcium for peanuts)", "url": "https://extension.uga.edu/content/dam/extension-county-offices/irwin-county/anr/vol20-anr-newsletter-june2022.pdf" }
+  ]
+}

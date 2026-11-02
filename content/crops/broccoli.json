@@ -1,0 +1,65 @@
+{
+  "id": "broccoli",
+  "summary": {
+    "pt": "Brócolis: colhe-se a cabeça de botões verdes antes de abrir em flor. Gosta de clima fresco; depois da cabeça principal, muitos tipos soltam brotos laterais.",
+    "en": "Broccoli: you harvest the green bud head before it flowers. It likes cool weather; after the main head, many types keep giving side shoots."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [3, 4, 5, 6],
+      "transplant": [4, 5, 6, 7],
+      "harvest": [6, 7, 8, 9, 10],
+      "notes": { "pt": "Prefira a época mais fresca e cultivares de verão. No calor a cabeça fica solta e pequena.", "en": "Prefer the cooler season and heat-tolerant varieties. In heat the head is loose and small." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [2, 3, 4, 5, 6, 7],
+      "transplant": [3, 4, 5, 6, 7, 8],
+      "harvest": [5, 6, 7, 8, 9, 10, 11],
+      "notes": { "pt": "Outono e inverno são a melhor época; com híbridos de verão dá para estender.", "en": "Autumn and winter are best; summer hybrids extend the season." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [8, 9, 12],
+      "transplant": [9, 10, 2, 3],
+      "harvest": [11, 12, 4, 5],
+      "notes": { "pt": "Safra de primavera (transplante no fim do inverno) e de outono (transplante no fim do verão).", "en": "Spring crop (transplant in late winter) and autumn crop (transplant in late summer)." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [4, 5, 6],
+      "transplant": [5, 6, 7],
+      "harvest": [7, 8, 9],
+      "notes": { "pt": "Com irrigação, nos meses mais frescos.", "en": "With irrigation, in the cooler months." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [10],
+      "transplant": [11],
+      "harvest": [1, 2, 3],
+      "notes": { "pt": "Mudas dentro de casa e transplante depois das geadas fortes.", "en": "Start indoors and transplant after hard frosts." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Calcário conforme análise. Esterco curtido ou composto e NPK no plantio; nitrogênio em cobertura a cada 15–20 dias. Não esqueça o boro: falta dele deixa o talo oco e as pontas mortas.",
+      "en": "Lime per soil test. Rotted manure or compost and NPK at planting; side-dress nitrogen every 15–20 days. Don't forget boron: shortage causes hollow stems and dead tips."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Terra sempre úmida, sem encharcar; falta d'água na formação da cabeça reduz muito a colheita.",
+      "en": "Keep soil evenly moist, not soggy; drought while the head forms cuts the harvest a lot."
+    },
+    "other": {
+      "pt": "Colha quando os botões estiverem firmes e fechados, antes de amarelar. Sol pleno, 40–50 cm entre plantas. Pragas: lagartas e pulgão.",
+      "en": "Harvest while buds are tight and firm, before they yellow. Full sun, 40–50 cm between plants. Pests: caterpillars and aphids."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — A cultura dos brócolis (2015)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1044078/1/PLANTARBrocolised012015.pdf" },
+    { "title": "Embrapa Hortaliças — Nutrição de brócolis", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1100358/1/digitalizar0127.pdf" },
+    { "title": "NC State Extension — Growing Broccoli in the Home Garden", "url": "https://franklin.ces.ncsu.edu/news/growing-broccoli-in-the-home-garden/" },
+    { "title": "Mississippi State Extension — Broccoli", "url": "https://extension.msstate.edu/lawn-and-garden/vegetable-gardens/broccoli" }
+  ]
+}

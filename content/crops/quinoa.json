@@ -1,0 +1,65 @@
+{
+  "id": "quinoa",
+  "summary": {
+    "pt": "Grão andino muito nutritivo, rico em proteína e sem glúten. Tolera seca, frio leve e solo pobre, mas não gosta de calor forte na floração.",
+    "en": "A very nutritious Andean grain, high in protein and gluten-free. It tolerates drought, light frost and poor soil, but dislikes strong heat at flowering."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [2, 3, 4],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [6, 7, 8],
+      "notes": { "pt": "Plante na safrinha (fim das chuvas). Na época chuvosa e quente não é recomendada.", "en": "Sow as a second crop (end of the rains). Not recommended in the hot rainy season." }
+    },
+    "subtropical": {
+      "directSowing": [3, 4],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [7, 8],
+      "notes": { "pt": "Semeadura de outono; março costuma dar mais grão.", "en": "Autumn sowing; March usually gives the best yield." }
+    },
+    "temperate": {
+      "directSowing": [9, 10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3],
+      "notes": { "pt": "Semeie na primavera, com o solo já aquecido e úmido.", "en": "Sow in spring, once soil is warm and moist." }
+    },
+    "semiarid": {
+      "directSowing": [4, 5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [9, 10],
+      "notes": { "pt": "Cultivo da estação fresca, com irrigação de apoio.", "en": "Cool-season crop, with supplemental irrigation." }
+    },
+    "cold": {
+      "directSowing": [9, 10],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [4, 5],
+      "notes": { "pt": "Como no altiplano andino: semeie com as primeiras chuvas da primavera.", "en": "As in the Andean highlands: sow with the first spring rains." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Aceita solo pobre, mas responde bem a nitrogênio. Use esterco curtido ou composto antes do plantio e NPK conforme análise de solo; calcário se o solo for muito ácido.",
+      "en": "Accepts poor soil but responds well to nitrogen. Apply well-rotted manure or compost before sowing and NPK by soil test; lime if soil is very acidic."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Pouca água. Mantenha o solo úmido até as plantas firmarem; depois regue só em seca longa, sobretudo na floração. Não encharque.",
+      "en": "Low water needs. Keep soil moist until plants establish; then water only in long dry spells, mainly at flowering. Do not waterlog."
+    },
+    "other": {
+      "pt": "Sementes miúdas: semeie raso (1–2 cm) em solo bem preparado. Capine cedo. Lave os grãos antes de comer para tirar a saponina (amargor).",
+      "en": "Tiny seeds: sow shallow (1–2 cm) in a fine seedbed. Weed early. Rinse grains before eating to remove saponin (bitterness)."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Comunicado Técnico 348: quinoa BRS Piabiru", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1084511/1/Comunicado348.pdf" },
+    { "title": "Revista Ciência Agronômica — Quinoa semeada em diferentes datas na safrinha", "url": "https://periodicos.ufc.br/revistacienciaagronomica/article/view/84269" },
+    { "title": "Frontiers in Plant Science — Quinoa sowing date and nitrogen review (2025)", "url": "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2025.1522995/pdf" },
+    { "title": "UnB — Quinoa in the Brazilian Cerrado", "url": "https://repositorio.unb.br/bitstream/10482/42546/1/ARTIGO_QuinoaBrazilianCerrado.pdf" }
+  ]
+}

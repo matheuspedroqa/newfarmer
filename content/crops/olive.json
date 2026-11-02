@@ -1,0 +1,67 @@
+{
+  "id": "olive",
+  "summary": {
+    "pt": "Árvore de vida longuíssima, típica do Mediterrâneo, que dá azeitona para conserva e azeite. Começa a produzir por volta do 4º–5º ano e precisa de um inverno frio para florescer.",
+    "en": "A very long-lived Mediterranean tree that gives olives for curing and oil. Starts bearing around year 4–5 and needs a cool winter to flower."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "A árvore cresce, mas não floresce: precisa de semanas de frio no inverno (abaixo de ~12 °C). No Brasil tropical, só dá em serras altas (ex.: sul de MG, acima de ~900 m).", "en": "The tree grows but does not flower: it needs weeks of winter cold (below ~12 °C). In the tropics it only works in high mountains." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10, 11],
+      "harvest": [2, 3, 4],
+      "notes": { "pt": "Só onde o inverno é frio o bastante (como RS, serras de SC/PR e sul de MG). Inverno ameno demais dá pouca flor; chuva na florada também atrapalha.", "en": "Only where winter is cold enough. A too-mild winter gives few flowers; rain at bloom also hurts." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10],
+      "harvest": [4, 5, 6],
+      "notes": { "pt": "Clima ideal, sobretudo o mediterrâneo (verão seco). Plante na primavera, depois das geadas. Geada forte (abaixo de −7 a −10 °C) danifica a árvore.", "en": "Ideal climate, especially Mediterranean (dry summer). Plant in spring after frosts. Hard frost (below −7 to −10 °C) damages the tree." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [8, 9, 10],
+      "harvest": [4, 5, 6],
+      "notes": { "pt": "Aguenta muito bem a seca, mas só produz se o inverno for frio (semiárido de inverno frio, como no interior da Espanha ou em Mendoza). No semiárido quente o ano todo, como o Nordeste, não floresce. Irrigação aumenta muito a colheita.", "en": "Very drought tolerant, but only bears with a cool winter (cold-winter dry areas like inland Spain or Mendoza). In hot-all-year dry areas it doesn't flower. Irrigation greatly raises yields." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Inverno rigoroso mata a planta. Só em vaso, guardada em lugar fresco e claro, sem congelar.", "en": "Harsh winters kill it. Only in a pot, kept somewhere cool and bright but frost-free." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Gosta de solo neutro a alcalino: corrija a acidez com calcário antes do plantio. Esterco curtido ou composto na cova. Na árvore adulta, nitrogênio e potássio no fim do inverno/início da brotação, conforme análise de solo e folha.",
+      "en": "Likes neutral to alkaline soil: lime acidic soil before planting. Rotted manure or compost in the hole. For mature trees, nitrogen and potassium in late winter/early growth, by soil and leaf tests."
+    },
+    "pruning": {
+      "pt": "Nos primeiros anos, forme a copa em vaso (3–4 ramos principais). Depois, poda leve no fim do inverno, depois da colheita: a azeitona nasce nos ramos do ano anterior, então podar muito ou fora de época tira a safra.",
+      "en": "In early years, train an open vase (3–4 main branches). Then prune lightly in late winter after harvest: olives grow on last year's shoots, so heavy or badly timed pruning loses the crop."
+    },
+    "watering": {
+      "pt": "Muda nova: regue com regularidade nos 2 primeiros anos. Árvore adulta aguenta seca, mas uma rega funda na florada e no crescimento da azeitona aumenta a colheita. Não tolera encharcamento.",
+      "en": "Young trees: water regularly for the first 2 years. Mature trees handle drought, but a deep watering at bloom and while olives grow raises yields. Does not tolerate waterlogging."
+    },
+    "other": {
+      "pt": "Sol pleno e solo muito bem drenado. Escolha variedade adaptada ao seu frio (ex.: Arbequina e Koroneiki precisam de menos frio). Cuidado com formigas cortadeiras na muda nova.",
+      "en": "Full sun and very well-drained soil. Pick a variety suited to your winter (e.g. Arbequina and Koroneiki need less chill). Protect young trees from leaf-cutter ants."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa / IDR-Paraná — Riscos climáticos para a olivicultura no Paraná (BT 110)", "url": "https://www.idrparana.pr.gov.br/system/files/publico/pesquisa/publicacoes/bt/110/BT110%20-%20Riscos%20climaticos%20para%20a%20olivicultura%20no%20estado%20do%20Parana%20-%20Livro%20-%2013-05-2026.pdf" },
+    { "title": "Epagri — Horas de frio e risco de geada para a oliveira em Santa Catarina", "url": "https://publicacoes.epagri.sc.gov.br/RAC/article/download/91/27/0" },
+    { "title": "Haifa Group — Crop guide: growing olives", "url": "https://www.haifa-group.com/olives-fertilizer/crop-guide-growing-olives" }
+  ]
+}

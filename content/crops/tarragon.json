@@ -1,0 +1,37 @@
+{
+  "id": "tarragon",
+  "summary": {
+    "pt": "O estragão é uma erva perene de sabor levemente anisado, clássica na cozinha francesa (molhos, frango, vinagre). Prefere clima ameno a frio e se multiplica por divisão de touceira, pois quase não dá semente.",
+    "en": "Tarragon is a perennial herb with a mild anise flavor, a French-cooking classic (sauces, chicken, vinegar). It prefers mild to cold climates and is propagated by division, since it rarely sets seed."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [], "seedbed": [], "transplant": [4, 5], "harvest": [6, 7, 8, 9, 10], "notes": { "pt": "O estragão-francês precisa de inverno frio e sofre no calor úmido; só vai bem em regiões altas. Em clima quente, o estragão-mexicano (Tagetes lucida) é um substituto mais fácil.", "en": "French tarragon needs a cold winter and struggles in humid heat; it does well only in highlands. In hot climates, Mexican tarragon (Tagetes lucida) is an easier substitute." } },
+    "subtropical": { "directSowing": [], "seedbed": [], "transplant": [8, 9], "harvest": [10, 11, 12, 1, 2, 3, 4] },
+    "temperate": { "directSowing": [], "seedbed": [], "transplant": [9, 10], "harvest": [11, 12, 1, 2, 3, 4] },
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [4, 5], "harvest": [6, 7, 8, 9, 10], "notes": { "pt": "Com irrigação leve e sombra parcial nas horas mais quentes.", "en": "With light irrigation and partial shade in the hottest hours." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [10, 11], "harvest": [12, 1, 2, 3], "notes": { "pt": "Muito resistente ao frio; cubra a base com palha no inverno.", "en": "Very cold-hardy; mulch the base with straw in winter." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Pouco adubo: misture composto ou esterco curtido à cova no plantio. Depois, só um pouco de composto na primavera. Solo pobre dá folha mais saborosa.",
+      "en": "Little fertilizer: mix compost or aged manure into the hole at planting. Afterwards, just a little compost in spring. Lean soil gives more flavorful leaves."
+    },
+    "pruning": {
+      "pt": "Corte as pontas com frequência para a planta ficar cheia e remova os botões de flor. No fim da estação, corte os ramos secos rente ao chão. Divida a touceira a cada 3–4 anos.",
+      "en": "Pinch tips often to keep the plant bushy and remove flower buds. At the end of the season, cut dead stems to the ground. Divide the clump every 3–4 years."
+    },
+    "watering": {
+      "pt": "Regue moderadamente, deixando o solo secar entre as regas. Encharcamento apodrece a raiz.",
+      "en": "Water moderately, letting the soil dry between waterings. Waterlogging rots the roots."
+    },
+    "other": {
+      "pt": "Sol pleno ou meia-sombra, solo bem drenado, 45–60 cm entre plantas. Compre mudas de estragão-francês (o russo, vendido em semente, quase não tem sabor). Colha folhas novas quando a planta tiver 20 cm.",
+      "en": "Full sun or part shade, well-drained soil, 45–60 cm apart. Buy French tarragon plants (Russian tarragon, sold as seed, has little flavor). Pick young leaves once plants reach 20 cm."
+    }
+  },
+  "sources": [
+    { "title": "RHS — How to grow tarragon", "url": "https://www.rhs.org.uk/herbs/tarragon/grow-your-own" },
+    { "title": "Harvest to Table — How to plant, grow and harvest French tarragon", "url": "https://harvesttotable.com/how_to_grow_french_tarragon/" },
+    { "title": "Embrapa Infoteca — Folder de plantas medicinais e aromáticas (estragão)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/786613/1/FOL106.pdf" }
+  ]
+}

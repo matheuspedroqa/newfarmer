@@ -1,0 +1,65 @@
+{
+  "id": "cabbage",
+  "summary": {
+    "pt": "Repolho: cabeça de folhas firmes, rende muito por metro e aguenta bem o frio. Guarda por semanas na geladeira.",
+    "en": "Cabbage: a firm head of leaves, high yield per square metre and good cold tolerance. Keeps for weeks in the fridge."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [4, 5, 6, 7],
+      "transplant": [5, 6, 7, 8],
+      "harvest": [8, 9, 10, 11],
+      "notes": { "pt": "A época seca tem menos pragas e doenças e rende mais. Use cultivares de verão se plantar no calor.", "en": "The dry season has fewer pests and diseases and yields more. Use summer varieties if planting in the heat." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [2, 3, 4, 5, 6, 7],
+      "transplant": [3, 4, 5, 6, 7, 8],
+      "harvest": [6, 7, 8, 9, 10, 11],
+      "notes": { "pt": "Cresce melhor entre 15 e 21 °C. Com cultivares de verão dá para plantar quase o ano todo.", "en": "Grows best at 15–21 °C. With summer varieties it can be planted almost year-round." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [9, 10, 12],
+      "transplant": [10, 11, 1],
+      "harvest": [1, 2, 3, 4, 5],
+      "notes": { "pt": "Safra de primavera (mudas no fim do inverno) e de outono (mudas no início do verão).", "en": "Spring crop (seedlings in late winter) and autumn crop (seedlings in early summer)." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [4, 5, 6],
+      "transplant": [5, 6, 7],
+      "harvest": [8, 9, 10],
+      "notes": { "pt": "Com irrigação, nos meses mais frescos.", "en": "With irrigation, in the cooler months." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [10],
+      "transplant": [11, 12],
+      "harvest": [2, 3, 4],
+      "notes": { "pt": "Mudas feitas dentro de casa; aguenta geada leve no fim da safra.", "en": "Start seedlings indoors; tolerates light frost at the end of the season." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Calcário conforme análise de solo. Na cova, esterco curtido ou composto e NPK de plantio; cobertura com nitrogênio aos 20 e 40 dias após o transplante. Repolho também precisa de boro.",
+      "en": "Lime per soil test. Put rotted manure or compost and starter NPK in the hole; side-dress nitrogen at 20 and 40 days after transplanting. Cabbage also needs boron."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Regas regulares para a cabeça crescer; perto da colheita, excesso de água depois de seca racha a cabeça.",
+      "en": "Water regularly so the head grows; near harvest, heavy water after dryness splits heads."
+    },
+    "other": {
+      "pt": "Sol pleno, espaçamento de cerca de 40–50 cm entre plantas. Principal praga: lagartas (traça-das-crucíferas, curuquerê); use manta, Bt e rotação com não-brássicas.",
+      "en": "Full sun, about 40–50 cm between plants. Main pests: caterpillars (diamondback moth, cabbage worm); use row cover, Bt and rotate with non-brassicas."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Acre — Época de plantio de repolho (1994)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/492211/1/968.pdf" },
+    { "title": "EPAMIG — Repolho verde", "url": "https://livrariaepamig.com.br/wp-content/uploads/2023/02/Repolho-verde.pdf" },
+    { "title": "UMN Extension — Caterpillars on cole crops", "url": "https://extension.umn.edu/yard-and-garden-insects/caterpillars-cole-crops" },
+    { "title": "Illinois Extension — Broccoli (cole crop timing)", "url": "https://extension.illinois.edu/gardening/broccoli" }
+  ]
+}

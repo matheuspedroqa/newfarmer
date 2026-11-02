@@ -1,0 +1,68 @@
+{
+  "id": "watermelon",
+  "summary": {
+    "pt": "Fruta de verão rasteira, de ciclo curto (cerca de 80–100 dias da semeadura à colheita). Precisa de calor, sol e espaço para as ramas se espalharem.",
+    "en": "A sprawling summer fruit with a short cycle (about 80–100 days from sowing to harvest). Needs heat, sun and room for the vines to spread."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [4, 5, 6, 7, 8, 9],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Dá para plantar quase o ano todo; o melhor é na estação mais seca, com irrigação. Chuva forte na formação dos frutos piora a qualidade.", "en": "Can be planted almost all year; best in the drier season with irrigation. Heavy rain while fruit forms lowers quality." }
+    },
+    "subtropical": {
+      "directSowing": [9, 10, 11, 12],
+      "seedbed": [8, 9],
+      "transplant": [9, 10],
+      "harvest": [12, 1, 2, 3],
+      "notes": { "pt": "Semeie só depois das geadas, com o solo já quente.", "en": "Sow only after frosts, once the soil is warm." }
+    },
+    "temperate": {
+      "directSowing": [11, 12],
+      "seedbed": [9, 10],
+      "transplant": [11],
+      "harvest": [1, 2, 3],
+      "notes": { "pt": "Espere o solo passar de 16–18 °C. Produzir mudas em copinho dentro de casa adianta a safra.", "en": "Wait until soil is above 16–18 °C. Starting seedlings in cups indoors gives an earlier harvest." }
+    },
+    "semiarid": {
+      "directSowing": [5, 6, 7, 8, 9, 10],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [8, 9, 10, 11, 12, 1],
+      "notes": { "pt": "Cultura forte do Nordeste irrigado; com irrigação planta-se quase o ano todo.", "en": "A major crop in irrigated semi-arid areas; with irrigation it can be planted almost all year." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [10],
+      "transplant": [12],
+      "harvest": [2, 3],
+      "notes": { "pt": "Verão curto: só variedades precoces de fruto pequeno, com mudas feitas dentro de casa, plástico preto no solo ou túnel/estufa.", "en": "Short summer: only early, small-fruited varieties, with seedlings started indoors, black plastic mulch or a tunnel/greenhouse." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo; o ideal é pH 6–6,8 (corrija com calcário antes). Na cova, esterco curtido ou composto e adubo com fósforo. Depois, nitrogênio e potássio em 2–3 doses até o início dos frutos.",
+      "en": "Test the soil; ideal pH is 6–6.8 (lime beforehand if needed). In the hole, rotted manure or compost plus a phosphorus fertilizer. Then nitrogen and potassium in 2–3 doses until fruits start forming."
+    },
+    "pruning": {
+      "pt": "Não é obrigatório. Pode deixar só 2–3 frutos por planta para eles ficarem maiores.",
+      "en": "Not required. You can keep only 2–3 fruits per plant so they grow bigger."
+    },
+    "watering": {
+      "pt": "Regue bem do plantio até os frutos crescerem, molhando o solo e não as folhas. Diminua a rega na última semana antes da colheita: a fruta fica mais doce.",
+      "en": "Water well from planting until fruits grow, wetting the soil and not the leaves. Reduce watering in the last week before harvest: the fruit gets sweeter."
+    },
+    "other": {
+      "pt": "Sol pleno, solo leve e bem drenado, e espaço (cerca de 2–3 m entre linhas). Está madura quando a gavinha perto do fruto seca e a parte que toca o chão fica amarelada.",
+      "en": "Full sun, light well-drained soil, and space (about 2–3 m between rows). It is ripe when the tendril near the fruit dries and the spot touching the ground turns yellowish."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Meio-Norte — Melancia: boas práticas de cultivo", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/56747/1/Melanciaboas0001.pdf" },
+    { "title": "Embrapa — Apostila: cultura da melancia", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/151720/1/ApostilaMELANCIA.pdf" },
+    { "title": "NC State Extension — Watermelons in the Home Garden", "url": "https://franklin.ces.ncsu.edu/news/watermelons-in-the-home-garden/" },
+    { "title": "UGA Extension — Home Garden Watermelon (C 1035)", "url": "https://fieldreport.caes.uga.edu/publications/C1035/home-garden-watermelon/" }
+  ]
+}

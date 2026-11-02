@@ -1,0 +1,67 @@
+{
+  "id": "passionFruit",
+  "summary": {
+    "pt": "Trepadeira de clima quente que cresce rápido e começa a dar fruto 8–10 meses após o plantio. Precisa de espaldeira (cerca de arame) e de abelhas mamangavas para polinizar.",
+    "en": "A fast-growing warm-climate vine that starts fruiting 8–10 months after planting. It needs a wire trellis and carpenter bees for pollination."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [8, 9],
+      "transplant": [10, 11],
+      "harvest": [12, 1, 2, 3, 4, 5, 6, 7],
+      "notes": { "pt": "Faça as mudas uns 2 meses antes e plante no início das chuvas. Com irrigação, pode plantar o ano todo.", "en": "Raise seedlings about 2 months ahead and plant at the start of the rains. With irrigation, plant year-round." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [7, 8],
+      "transplant": [9, 10],
+      "harvest": [1, 2, 3, 4, 5, 6],
+      "notes": { "pt": "Plante após as geadas; o frio para a produção no inverno.", "en": "Plant after frosts; cold stops fruiting in winter." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Geada mata o maracujá-amarelo; só em estufa ou em local muito abrigado.", "en": "Frost kills yellow passion fruit; greenhouse or very sheltered spot only." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [6, 7],
+      "transplant": [8, 9],
+      "harvest": [2, 3, 4, 5, 6, 7, 8],
+      "notes": { "pt": "Só com irrigação, de preferência gotejamento.", "en": "Irrigation only, preferably drip." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não se cultiva fora de estufa.", "en": "Not grown outside a greenhouse." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça calagem conforme análise de solo. Na cova, use esterco curtido ou composto com fósforo. Depois, adube com nitrogênio e potássio em pequenas doses a cada 1–2 meses, ao redor da planta.",
+      "en": "Lime by soil test. In the hole, use rotted manure or compost with phosphorus. Then feed nitrogen and potassium in small doses every 1–2 months around the plant."
+    },
+    "pruning": {
+      "pt": "Poda de formação: conduza um só ramo até o arame (1,9–2 m), corte a ponta e deixe dois ramos correndo para os lados. Tire brotos laterais abaixo do arame e, depois da safra, galhos secos e doentes.",
+      "en": "Training: grow one stem up to the wire (1.9–2 m), pinch the tip and let two branches run sideways. Remove side shoots below the wire and, after harvest, dead or diseased branches."
+    },
+    "watering": {
+      "pt": "Gosta de solo úmido, principalmente na floração e no enchimento dos frutos. Na seca, regue 2–3 vezes por semana; evite encharcar.",
+      "en": "Likes moist soil, especially at flowering and fruit fill. In dry spells, water 2–3 times a week; avoid waterlogging."
+    },
+    "other": {
+      "pt": "Sol pleno e espaldeira de arame. Preserve as mamangavas (não pulverize de manhã). Renove o plantio a cada 1–2 anos por causa de doenças de solo e viroses.",
+      "en": "Full sun and a wire trellis. Protect carpenter bees (don't spray in the morning). Replant every 1–2 years because of soil diseases and viruses."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — A cultura do maracujá", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/100655/1/Aculturadomaracuja.pdf" },
+    { "title": "Embrapa Amapá — Recomendações técnicas para o cultivo do maracujazeiro (1998)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/344131/1/AP1998recomendacoestecnicascultivomaracujazeiro.pdf" },
+    { "title": "Embrapa — Maracujá: sistema de produção convencional", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/902786/1/MARACUJASISTEMADEPRODUCAOCONVENCIONALCARLOSESTEVAO.pdf" }
+  ]
+}

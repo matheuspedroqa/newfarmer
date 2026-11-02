@@ -1,0 +1,65 @@
+{
+  "id": "onion",
+  "summary": {
+    "pt": "Tempero básico de toda cozinha e fácil de armazenar depois de curada. O segredo é escolher a variedade certa para a sua região (dia curto ou dia longo).",
+    "en": "A basic in every kitchen that stores well once cured. The key is picking the right variety for your region (short-day or long-day)."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [2, 3, 4, 5],
+      "transplant": [3, 4, 5, 6, 7],
+      "harvest": [7, 8, 9, 10, 11],
+      "notes": { "pt": "Use cebolas de dia curto. Plante para colher na época seca.", "en": "Use short-day onions. Plant so harvest falls in the dry season." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [3, 4, 5, 6],
+      "transplant": [5, 6, 7, 8],
+      "harvest": [10, 11, 12, 1],
+      "notes": { "pt": "Ciclo longo (cerca de 7 meses no Sul). Há cultivares Embrapa para plantio antecipado em dez/jan.", "en": "Long cycle (about 7 months in southern Brazil). Embrapa has varieties for early planting in Dec/Jan." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [8],
+      "transplant": [9, 10],
+      "harvest": [2, 3],
+      "notes": { "pt": "Use cebolas de dia longo. Plante mudas ou bulbinhos no começo da primavera, assim que der para mexer na terra.", "en": "Use long-day onions. Plant transplants or sets in early spring, as soon as the soil can be worked." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [1, 2, 3],
+      "transplant": [2, 3, 4],
+      "harvest": [5, 6, 7],
+      "notes": { "pt": "Com irrigação dá o ano todo; o pico de plantio é jan–mar, ciclo de uns 120 dias.", "en": "With irrigation it grows year-round; peak planting is Jan–Mar, cycle about 120 days." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [9],
+      "transplant": [11],
+      "harvest": [2, 3],
+      "notes": { "pt": "Dia longo; prefira mudas ou bulbinhos para ganhar tempo no verão curto.", "en": "Long-day; prefer transplants or sets to gain time in the short summer." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Calcário conforme análise (gosta de pH 6–6,5). No canteiro, composto ou esterco curtido e NPK com bastante fósforo no plantio; cobertura com nitrogênio até uns 60 dias. Nitrogênio tarde demais atrasa o bulbo e prejudica a conservação.",
+      "en": "Lime per soil test (likes pH 6–6.5). Add compost or rotted manure and phosphorus-rich NPK at planting; side-dress nitrogen until about 60 days. Late nitrogen delays bulbing and hurts storage."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Regas regulares durante o crescimento do bulbo. Corte a água 2–3 semanas antes de colher, quando as folhas começam a tombar.",
+      "en": "Water regularly while bulbs grow. Stop watering 2–3 weeks before harvest, when the tops start to fall over."
+    },
+    "other": {
+      "pt": "Mudas prontas com 30–35 dias (no Nordeste) ou mais no Sul. Mantenha o canteiro sem mato: a cebola compete mal. Depois de colher, deixe secar (curar) à sombra antes de guardar.",
+      "en": "Seedlings are ready in 30–35 days in warm areas, longer in cool ones. Keep beds weed-free: onions compete poorly. After harvest, cure in the shade before storing."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Sistemas de produção para cebola (Documentos 65)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/907121/1/SIDDOCUMENTOS65SISTEMASDEPRODUCAOPARACEBOLAREVISAOCDU63525.pdf" },
+    { "title": "Embrapa — A cultura da cebola", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/156688/1/Aculturadacebola.pdf" },
+    { "title": "Illinois Extension — Onion", "url": "https://extension.illinois.edu/gardening/onion" },
+    { "title": "Nebraska Extension (Lancaster) — Onions: long day, short day or neutral?", "url": "https://lancaster.unl.edu/onions" }
+  ]
+}

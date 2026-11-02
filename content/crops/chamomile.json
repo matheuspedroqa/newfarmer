@@ -1,0 +1,34 @@
+{
+  "id": "chamomile",
+  "summary": {
+    "pt": "A camomila é uma erva anual de flores pequenas usadas no chá calmante. Gosta de clima fresco e floresce cerca de 10–12 semanas após a semeadura.",
+    "en": "Chamomile is an annual herb with small flowers used for calming tea. It likes cool weather and flowers about 10–12 weeks after sowing."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [4, 5, 6], "seedbed": [], "transplant": [], "harvest": [7, 8, 9], "notes": { "pt": "Planta anual de clima fresco: só vai bem em regiões altas, na estação seca e mais fria.", "en": "Cool-season annual: does well only in highland areas, in the cooler dry season." } },
+    "subtropical": { "directSowing": [4, 5, 6], "seedbed": [], "transplant": [], "harvest": [8, 9, 10, 11], "notes": { "pt": "No Paraná (maior produtor do Brasil) semeia-se no outono, em maio, e colhe-se no fim do inverno e primavera.", "en": "In Paraná (Brazil's top producer) it is sown in autumn, in May, and harvested in late winter and spring." } },
+    "temperate": { "directSowing": [3, 4, 9, 10], "seedbed": [], "transplant": [], "harvest": [11, 12, 1, 2] },
+    "semiarid": { "directSowing": [5, 6], "seedbed": [], "transplant": [], "harvest": [8, 9], "notes": { "pt": "Com irrigação e só no período mais fresco do ano.", "en": "With irrigation and only in the coolest part of the year." } },
+    "cold": { "directSowing": [10, 11], "seedbed": [], "transplant": [], "harvest": [12, 1, 2, 3], "notes": { "pt": "Semeie quando o solo descongelar; aguenta geadas leves.", "en": "Sow once the soil thaws; tolerates light frost." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Prepare o canteiro com composto ou esterco curtido (cama de aviário curtida funciona bem). Se as plantas ficarem amareladas, uma cobertura leve de nitrogênio (ureia ou esterco) no início do crescimento.",
+      "en": "Prepare the bed with compost or aged manure (aged poultry litter works well). If plants look yellow, a light nitrogen side-dress (urea or manure) early in growth."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Mantenha a superfície úmida até germinar (10–14 dias). Depois, regue quando o solo secar; não tolera encharcamento.",
+      "en": "Keep the surface moist until germination (10–14 days). Then water when the soil dries; it does not tolerate waterlogging."
+    },
+    "other": {
+      "pt": "Semente muito pequena: espalhe na superfície misturada com areia ou fubá e só aperte, sem cobrir. Sol pleno, desbaste para 10–15 cm. Colha as flores bem abertas, com frequência — isso estimula mais flores. Seque à sombra.",
+      "en": "Seed is tiny: scatter on the surface mixed with sand or cornmeal and press in without covering. Full sun; thin to 10–15 cm. Pick fully open flowers often — this encourages more blooms. Dry in the shade."
+    }
+  },
+  "sources": [
+    { "title": "UFPR — Processo de produção agrícola da cultura da camomila no município de Mandirituba, PR", "url": "https://acervodigital.ufpr.br/handle/1884/37759" },
+    { "title": "RHS — How to grow chamomile", "url": "https://www.rhs.org.uk/herbs/chamomile/grow-your-own?type=h" },
+    { "title": "Vital Seeds — How to grow German chamomile", "url": "https://vitalseeds.co.uk/guides/how-to-grow-german-chamomile" }
+  ]
+}

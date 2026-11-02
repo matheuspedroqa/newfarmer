@@ -1,0 +1,68 @@
+{
+  "id": "raspberry",
+  "summary": {
+    "pt": "Arbusto perene de hastes espinhosas (ou sem espinhos) que dá frutinhas vermelhas ou amarelas muito valorizadas. Precisa de inverno frio e produz a partir do 2º ano.",
+    "en": "A perennial cane shrub (thorny or thornless) bearing prized red or yellow berries. Needs a cold winter and crops from the second year."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não produz bem no calor o ano todo: falta frio no inverno. Só em regiões de serra muito altas, com variedades remontantes.", "en": "Doesn't crop well in year-round heat: it lacks winter chill. Only in very high mountain areas, with everbearing varieties." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [6, 7, 8],
+      "harvest": [11, 12, 1, 3, 4],
+      "notes": { "pt": "Prefira variedades remontantes (que dão no verão e de novo no outono), pois o frio costuma ser pouco. Melhor em regiões altas.", "en": "Choose everbearing varieties (summer plus autumn crop), since chill is usually short. Best at higher elevations." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [6, 7, 8],
+      "harvest": [11, 12, 1, 2, 3, 4],
+      "notes": { "pt": "Clima ideal. Plante as mudas dormentes no inverno. Safra principal no início do verão; as remontantes dão de novo no fim do verão e outono.", "en": "Ideal climate. Plant dormant canes in winter. Main crop in early summer; everbearers crop again in late summer and autumn." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Calor seco e falta de frio prejudicam muito. Só em altitude, com sombreamento parcial e gotejamento.", "en": "Dry heat and lack of chill hurt it badly. Only at altitude, with partial shade and drip irrigation." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10],
+      "harvest": [12, 1, 2, 3],
+      "notes": { "pt": "Plante na primavera, depois do degelo. É bem resistente ao frio; cubra a base com palha no inverno.", "en": "Plant in spring after thaw. Very cold-hardy; mulch the base with straw in winter." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Corrija o pH com calcário antes de plantar (gosta de solo levemente ácido, pH 5,5–6,5) e misture bastante esterco curtido ou composto. Umas 2 semanas após o plantio, um punhado de NPK (ex.: 5-10-5 ou 10-10-10) em volta da planta. Todo fim de inverno, repita o composto e uma dose leve de NPK.",
+      "en": "Lime before planting if needed (likes slightly acid soil, pH 5.5–6.5) and mix in plenty of rotted manure or compost. About 2 weeks after planting, a handful of NPK (e.g. 5-10-5 or 10-10-10) around each plant. Each late winter, repeat compost and a light NPK dose."
+    },
+    "pruning": {
+      "pt": "Toda haste dá frutos uma vez e depois seca. Depois da colheita, corte rente ao chão as hastes que já produziram e deixe as novas, mais fortes. No inverno, desbaste deixando umas 4–6 hastes por metro e corte as pontas acima de ~1,1 m. Remontantes podem ser roçadas inteiras no inverno.",
+      "en": "Each cane fruits once then dies. After harvest, cut spent canes at ground level and keep the strongest new ones. In winter, thin to about 4–6 canes per metre and tip canes above ~1.1 m. Everbearers can be mown down entirely in winter."
+    },
+    "watering": {
+      "pt": "Raiz rasa: mantenha o solo úmido, principalmente na floração e frutificação, de preferência por gotejamento. Não deixe encharcar, pois a raiz apodrece.",
+      "en": "Shallow roots: keep soil moist, especially during flowering and fruiting, ideally with drip. Avoid waterlogging, which rots roots."
+    },
+    "other": {
+      "pt": "Sol pleno, solo bem drenado e espaldeira de arame para segurar as hastes (linhas a ~2,5 m). Cubra o chão com palha contra mato e calor. Colha a cada 2–3 dias, pois a fruta estraga rápido.",
+      "en": "Full sun, well-drained soil and a wire trellis to hold canes (rows ~2.5 m apart). Mulch with straw against weeds and heat. Pick every 2–3 days as the fruit spoils quickly."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Clima Temperado — Aspectos técnicos da cultura da framboeseira (Documentos 120)", "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/744781/4/documento120.pdf" },
+    { "title": "Embrapa — Técnicas de produção de framboesa e mirtilo", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1067604/1/TecnicasdeProducaodeFramboesaeMirtiloIncluido.pdf" },
+    { "title": "University of Illinois Extension — Caring for Raspberries", "url": "https://extension.illinois.edu/small-fruits/caring-raspberries" },
+    { "title": "Oregon State University Extension — Growing Raspberries in Your Home Garden", "url": "https://extension.oregonstate.edu/sites/extd8/files/documents/12281/growingraspberries.pdf" }
+  ]
+}

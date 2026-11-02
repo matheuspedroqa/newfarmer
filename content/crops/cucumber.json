@@ -1,0 +1,68 @@
+{
+  "id": "cucumber",
+  "summary": {
+    "pt": "Pepino: trepadeira de clima quente e crescimento rápido; começa a dar frutos uns 45–60 dias após semear. Com tutor, ocupa pouco chão e produz bastante.",
+    "en": "Cucumber: a fast warm-season vine that starts bearing about 45–60 days after sowing. On a trellis it takes little ground and yields a lot."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Planta-se o ano todo; nas chuvas fortes aumentam as doenças de folha, então prefira a época mais seca com irrigação.", "en": "Can be planted year-round; heavy rains bring leaf diseases, so prefer the drier season with irrigation." }
+    },
+    "subtropical": {
+      "directSowing": [8, 9, 10, 11, 12, 1, 2],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [10, 11, 12, 1, 2, 3, 4],
+      "notes": { "pt": "Primavera e verão. No inverno, só onde não geia.", "en": "Spring and summer. In winter, only where there is no frost." }
+    },
+    "temperate": {
+      "directSowing": [11, 12],
+      "seedbed": [10],
+      "transplant": [11],
+      "harvest": [1, 2, 3],
+      "notes": { "pt": "Semeie só depois da última geada, com o solo a uns 20 °C. Mudas podem ser feitas 2–3 semanas antes, em local protegido.", "en": "Sow only after the last frost, with soil around 20 °C. Seedlings can be started indoors 2–3 weeks earlier." }
+    },
+    "semiarid": {
+      "directSowing": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Com irrigação dá quase o ano todo.", "en": "With irrigation it grows almost year-round." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [11],
+      "transplant": [12],
+      "harvest": [1, 2, 3],
+      "notes": { "pt": "Verão curto: prefira estufa ou túnel e mudas feitas dentro de casa.", "en": "Short summer: prefer a greenhouse or tunnel and indoor-raised seedlings." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Calcário conforme análise. Na cova, 4–5 litros de esterco curtido (ou cama de aviário curtida) e NPK de plantio (ex.: 4-14-8); duas coberturas com nitrogênio e potássio, aos 15 e 30 dias.",
+      "en": "Lime per soil test. Put 4–5 litres of rotted manure (or composted poultry litter) and starter NPK (e.g. 4-14-8) in each hole; side-dress twice with nitrogen and potassium, at 15 and 30 days."
+    },
+    "pruning": {
+      "pt": "No tutor, tire os brotos laterais até uns 40–50 cm de altura e conduza a haste principal para cima; acima disso, deixe os ramos com 1–2 frutos e corte a ponta.",
+      "en": "On a trellis, remove side shoots up to about 40–50 cm and train the main stem upward; above that, let side branches keep 1–2 fruits and pinch their tips."
+    },
+    "watering": {
+      "pt": "Muita água e regular, principalmente na frutificação; falta d'água deixa o fruto torto e amargo. Regue no pé, sem molhar as folhas.",
+      "en": "Plenty of regular water, especially while fruiting; drought makes fruit crooked and bitter. Water at the base, not on the leaves."
+    },
+    "other": {
+      "pt": "Sol pleno e tutor (rede ou fios de arame), que deixa o fruto limpo e reto e reduz doenças. Colha a cada 2–3 dias, ainda verde. Pragas: vaquinha e pulgão; doenças: oídio e míldio.",
+      "en": "Full sun and a trellis (net or wires), which keeps fruit clean and straight and cuts disease. Pick every 2–3 days while green. Pests: cucumber beetles and aphids; diseases: powdery and downy mildew."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Amapá — Híbrido de pepino recomendado (1998)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/344135/1/CPAFAP1998Hibridopepino.pdf" },
+    { "title": "Embrapa — Circular Técnica 113", "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/956387/1/ct113.pdf" },
+    { "title": "Clemson HGIC — Cucumber", "url": "https://hgic.clemson.edu/factsheet/cucumber/" },
+    { "title": "NC State Extension — Growing Cucumbers in the Home Garden", "url": "https://franklin.ces.ncsu.edu/2024/08/growing-cucumbers-in-the-home-garden/" }
+  ]
+}

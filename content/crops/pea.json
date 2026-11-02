@@ -1,0 +1,25 @@
+{
+  "id": "pea",
+  "summary": {
+    "pt": "Ervilha: leguminosa de clima frio, semeada direto no canteiro. Produz vagens doces (torta ou de grão) e ainda melhora o solo com nitrogênio.",
+    "en": "Pea: a cool-season legume sown straight into the bed. It gives sweet pods (snow/snap peas or shelling peas) and adds nitrogen to the soil."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [4, 5, 6], "seedbed": [], "transplant": [], "harvest": [6, 7, 8, 9], "notes": { "pt": "Só nos meses mais frescos e secos, de preferência em lugares altos, com irrigação. Não gosta de calor.", "en": "Only in the coolest, driest months, ideally at higher altitude, with irrigation. Dislikes heat." } },
+    "subtropical": { "directSowing": [3, 4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [6, 7, 8, 9, 10], "notes": { "pt": "Cultivo de outono-inverno. Chuva na colheita escurece os grãos.", "en": "Autumn–winter crop. Rain at harvest discolors the peas." } },
+    "temperate": { "directSowing": [8, 9, 10], "seedbed": [], "transplant": [], "harvest": [10, 11, 12], "notes": { "pt": "Semeie no fim do inverno, assim que o solo puder ser trabalhado; aguenta geadas leves.", "en": "Sow in late winter as soon as the soil can be worked; tolerates light frost." } },
+    "semiarid": { "directSowing": [5, 6], "seedbed": [], "transplant": [], "harvest": [7, 8, 9], "notes": { "pt": "Só com irrigação, nos meses mais frescos do ano.", "en": "Irrigation only, in the coolest months of the year." } },
+    "cold": { "directSowing": [10, 11], "seedbed": [], "transplant": [], "harvest": [12, 1], "notes": { "pt": "Semeie logo que o solo descongelar.", "en": "Sow as soon as the soil thaws." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Corrija a acidez com calcário e misture um pouco de composto antes de semear. Não precisa de adubo nitrogenado: a ervilha fabrica o próprio nitrogênio, e o excesso dá muita folha e poucas vagens.", "en": "Lime acidic soil and mix in some compost before sowing. No nitrogen fertilizer needed: peas make their own nitrogen, and too much gives lots of leaves and few pods." },
+    "pruning": null,
+    "watering": { "pt": "Mantenha o solo úmido, principalmente na floração e no enchimento das vagens. Evite molhar as folhas.", "en": "Keep the soil moist, especially during flowering and pod filling. Avoid wetting the leaves." },
+    "other": { "pt": "Sol pleno. Semeie a 2–5 cm de profundidade e 3–5 cm entre sementes. Variedades altas precisam de cerca ou tela para subir. Colha a ervilha-torta logo após a flor e a de grão quando a vagem estiver cheia.", "en": "Full sun. Sow 2–5 cm deep and 3–5 cm apart. Tall varieties need a fence or trellis to climb. Pick snow/snap peas soon after flowering and shelling peas when pods are full." }
+  },
+  "sources": [
+    { "title": "Embrapa Hortaliças — Cultivo da ervilha", "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/759567?locale=en" },
+    { "title": "Utah State University Extension — Peas in the garden", "url": "https://extension.usu.edu/yardandgarden/research/peas-in-the-garden.php" },
+    { "title": "University of Minnesota Extension — Growing peas in home gardens", "url": "https://extension.umn.edu/vegetables/growing-peas-home-gardens" }
+  ]
+}

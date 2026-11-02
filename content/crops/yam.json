@@ -1,0 +1,25 @@
+{
+  "id": "yam",
+  "summary": {
+    "pt": "Inhame (cará, Dioscorea): trepadeira tropical que forma túberas grandes e nutritivas. Rústico, guarda bem depois de colhido e rende muito em clima quente e úmido.",
+    "en": "Yam (Dioscorea): a tropical climbing vine that forms large, nutritious tubers. Hardy, stores well after harvest and yields well in hot, humid climates."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [8, 9, 10, 11], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8], "notes": { "pt": "Plante pedaços de túbera (200–300 g, com broto) quando as chuvas já estiverem firmes. Colhe-se 8–10 meses depois, quando as ramas secam.", "en": "Plant tuber pieces (200–300 g, with a bud) once rains are steady. Harvest 8–10 months later, when the vines die back." } },
+    "subtropical": { "directSowing": [9, 10, 11], "seedbed": [], "transplant": [], "harvest": [6, 7, 8], "notes": { "pt": "Plante depois que passar o frio; a planta para de crescer no inverno e é colhida quando as ramas secam.", "en": "Plant after the cold has passed; the plant stops growing in winter and is harvested when the vines die back." } },
+    "temperate": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não indicado: precisa de 8–10 meses de calor e não tolera geada.", "en": "Not recommended: needs 8–10 months of warmth and does not tolerate frost." } },
+    "semiarid": { "directSowing": [1, 2, 3], "seedbed": [], "transplant": [], "harvest": [9, 10, 11], "notes": { "pt": "Plante no início da estação chuvosa local e irrigue nos meses secos. Use túbera-semente sadia (sem nematoide).", "en": "Plant at the start of the local rainy season and irrigate in dry months. Use healthy seed tubers (nematode-free)." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não se cultiva: não tolera frio nem geada.", "en": "Not grown: does not tolerate cold or frost." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Na cova ou no camalhão, coloque esterco curtido ou composto (cerca de 2–3 kg por cova) e corrija o solo ácido com calcário. Faça cobertura com nitrogênio e potássio (NPK ou esterco) cerca de 1 e 3 meses depois que brotar.", "en": "In each hole or ridge, add well-aged manure or compost (about 2–3 kg per hole) and lime acidic soil. Side-dress with nitrogen and potassium (NPK or manure) about 1 and 3 months after sprouting." },
+    "pruning": null,
+    "watering": { "pt": "Precisa de solo úmido na fase de crescimento das ramas; no fim do ciclo, menos água. Não deixe a água empoçar, porque a túbera apodrece.", "en": "Needs moist soil while vines grow; less water near the end of the cycle. Avoid standing water, which rots tubers." },
+    "other": { "pt": "Plante em leirões ou montículos de solo fofo e fundo, a cerca de 1 m entre plantas, e dê tutor (estaca ou espaldeira) para a rama subir. Principal problema: nematoides que vêm na túbera-semente — use semente sadia.", "en": "Plant on ridges or mounds of loose, deep soil about 1 m apart and give the vine a stake or trellis to climb. Main problem: nematodes carried in seed tubers — use clean seed." }
+  },
+  "sources": [
+    { "title": "Embrapa — Circular técnica 18: cultivo do inhame (sistemas de plantio e preparo do solo)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/49731/1/Cir18.pdf" },
+    { "title": "Embrapa — Circular técnica 150: manejo de nematoides na cultura do inhame", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1017729/1/Cot150.pdf" },
+    { "title": "TNAU Agritech Portal — Dioscorea (yam) cultivation", "url": "https://agritech.tnau.ac.in/horticulture/horti_vegetables_Dioscorea.html" }
+  ]
+}

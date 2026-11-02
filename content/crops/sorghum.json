@@ -1,0 +1,64 @@
+{
+  "id": "sorghum",
+  "summary": {
+    "pt": "O sorgo é parecido com o milho, mas aguenta muito mais seca e calor. Dá grão para ração, silagem e pasto, e é ótimo para regiões de chuva incerta.",
+    "en": "Sorghum is like corn but handles far more drought and heat. It gives grain for feed, silage and pasture, and is ideal where rain is unreliable."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [10, 11, 12, 1, 2, 3],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3, 4, 5, 6, 7],
+      "notes": { "pt": "Muito usado na safrinha (jan–mar), depois da soja; quanto mais cedo dentro dessa janela, melhor.", "en": "Widely used as a second crop (Jan–Mar) after soybeans; the earlier within that window, the better." }
+    },
+    "subtropical": {
+      "directSowing": [9, 10, 11, 12],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3, 4, 5]
+    },
+    "temperate": {
+      "directSowing": [11, 12],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [3, 4],
+      "notes": { "pt": "Semeie só com o solo acima de 18 °C, um pouco depois do milho.", "en": "Sow only once the soil is above 18 °C (65 °F), a little after corn." }
+    },
+    "semiarid": {
+      "directSowing": [12, 1, 2, 3],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [4, 5, 6, 7],
+      "notes": { "pt": "Plante com as primeiras chuvas; é das melhores culturas de grão para o semiárido.", "en": "Sow with the first rains; one of the best grain crops for semi-arid land." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não indicado: precisa de solo quente e verão longo.", "en": "Not suitable: needs warm soil and a long summer." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo e corrija a acidez com calcário. No plantio, NPK ou esterco curtido no sulco. Nitrogênio em cobertura quando a planta tiver umas 5–6 folhas; em solo argiloso precisa de mais que em solo arenoso. Depois de feijão ou soja, dá para usar menos nitrogênio.",
+      "en": "Test the soil and lime acid soils. At sowing, put NPK or aged manure in the furrow. Side-dress nitrogen at about the 5–6 leaf stage; clay soils need more than sandy ones. After beans or soybeans you can use less nitrogen."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Aguenta seca: a planta 'para' e volta a crescer quando chove. Água ajuda mais na floração e no enchimento dos grãos.",
+      "en": "Drought tolerant: the plant pauses and resumes growing when rain returns. Water matters most at flowering and grain fill."
+    },
+    "other": {
+      "pt": "Pleno sol. Semente pequena: plante raso (2–4 cm) em solo úmido. Passarinhos comem o grão maduro; colha logo. Não dê sorgo verde ou rebrota jovem e murcha a animais com fome: pode intoxicar.",
+      "en": "Full sun. Small seed: sow shallow (2–4 cm) in moist soil. Birds eat ripe grain; harvest promptly. Don't let hungry livestock graze young or wilted regrowth: it can poison them."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Milho e Sorgo — Exigências nutricionais e adubação do sorgo", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1015600/1/Exigenciasnutricionaisadubacao.pdf" },
+    { "title": "Embrapa Milho e Sorgo — Manejo cultural do sorgo", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1015606/1/Manejocultural.pdf" },
+    { "title": "Mississippi State University Extension — Grain sorghum planting and management recommendations", "url": "https://www.mississippi-crops.com/2020/04/16/grain-sorghum-planting-and-management-recommendations/" },
+    { "title": "University of Arizona Cooperative Extension — Grain sorghum production (AZ1489)", "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1489-2016_0.pdf" }
+  ]
+}

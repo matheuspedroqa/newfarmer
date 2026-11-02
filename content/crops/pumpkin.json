@@ -1,0 +1,25 @@
+{
+  "id": "pumpkin",
+  "summary": {
+    "pt": "Abóbora (moranga, cabotiá, menina): planta rasteira e resistente, que guarda bem depois de colhida. Ocupa bastante espaço e leva de 3 a 5 meses até a colheita.",
+    "en": "Pumpkin and winter squash: a hardy vining plant whose fruit stores well after harvest. It needs plenty of room and takes 3 to 5 months to harvest."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [10, 11, 12, 1, 2, 3], "seedbed": [], "transplant": [], "harvest": [2, 3, 4, 5, 6, 7], "notes": { "pt": "Semeie no meio ou no fim da época das chuvas.", "en": "Sow in the middle or late part of the rainy season." } },
+    "subtropical": { "directSowing": [9, 10, 11, 12], "seedbed": [8, 9], "transplant": [9, 10], "harvest": [1, 2, 3, 4] },
+    "temperate": { "directSowing": [10, 11, 12], "seedbed": [9, 10], "transplant": [10, 11], "harvest": [2, 3, 4], "notes": { "pt": "Só depois da última geada; colha antes das geadas de outono.", "en": "Only after the last frost; harvest before autumn frosts." } },
+    "semiarid": { "directSowing": [11, 12, 1, 2], "seedbed": [], "transplant": [], "harvest": [3, 4, 5, 6], "notes": { "pt": "Plante com as primeiras chuvas ou com irrigação. Gosta de calor e sol forte.", "en": "Plant with the first rains or with irrigation. Loves heat and strong sun." } },
+    "cold": { "directSowing": [11], "seedbed": [10], "transplant": [11, 12], "harvest": [3, 4], "notes": { "pt": "Verão curto: faça mudas em local protegido e escolha variedades de ciclo curto.", "en": "Short summer: start seedlings indoors and choose short-season varieties." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Faça covas grandes com bastante esterco curtido ou composto e calcário se o solo for ácido. Quando as ramas começarem a se espalhar, faça uma cobertura com nitrogênio (ureia ou esterco). Não exagere no adubo, senão sobra rama e falta fruto.", "en": "Dig large planting holes with plenty of aged manure or compost, and lime acidic soil. When vines start running, side-dress with nitrogen (urea or manure). Don't overfeed, or you'll get vines instead of fruit." },
+    "pruning": null,
+    "watering": { "pt": "Regue bem no início e durante a floração e o crescimento dos frutos. Perto da colheita, reduza a água para a casca endurecer.", "en": "Water well at the start and during flowering and fruit growth. Near harvest, cut back water so the rind hardens." },
+    "other": { "pt": "Sol pleno e muito espaço: 2 a 3 m entre plantas. Colha quando a casca estiver dura e o talo seco, deixando um pedaço de talo. Atenção ao oídio e à broca.", "en": "Full sun and lots of room: 2 to 3 m between plants. Harvest when the rind is hard and the stem dry, leaving a piece of stem. Watch for powdery mildew and vine borers." }
+  },
+  "sources": [
+    { "title": "University of Maryland Extension — Growing pumpkins in the home garden", "url": "https://www.extension.umd.edu/resource/growing-pumpkins-home-garden" },
+    { "title": "UGA Extension — Pumpkins (C 1206)", "url": "https://fieldreport.caes.uga.edu/publications/C1206" },
+    { "title": "Utah State University Extension — Pumpkins in the garden", "url": "https://extension.usu.edu/yardandgarden/research/pumpkins-in-the-garden.php" }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "marjoram",
+  "summary": {
+    "pt": "A manjerona é uma erva de folhas pequenas e aroma doce, parente do orégano, ótima para carnes, molhos e sopas. É perene em clima sem geada e anual onde o inverno é frio.",
+    "en": "Sweet marjoram is a small-leaved herb with a sweet aroma, related to oregano, great for meats, sauces and soups. It is perennial in frost-free climates and annual where winters are cold."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [], "seedbed": [3, 4], "transplant": [4, 5, 6], "harvest": [6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Prefira a estação mais seca; em chuva intensa a planta apodrece. Primeiro corte 60–90 dias após o plantio.", "en": "Prefer the drier season; heavy rain rots the plant. First cut 60–90 days after planting." } },
+    "subtropical": { "directSowing": [], "seedbed": [7, 8], "transplant": [3, 4, 9, 10], "harvest": [11, 12, 1, 2, 3, 4, 5, 6] },
+    "temperate": { "directSowing": [], "seedbed": [8, 9], "transplant": [10, 11], "harvest": [12, 1, 2, 3, 4], "notes": { "pt": "Sensível à geada: plante depois das geadas; no inverno proteja ou leve o vaso para dentro.", "en": "Frost-tender: plant after frosts; protect it in winter or bring the pot indoors." } },
+    "semiarid": { "directSowing": [], "seedbed": [3, 4], "transplant": [4, 5, 6], "harvest": [6, 7, 8, 9, 10, 11], "notes": { "pt": "Com irrigação leve; tolera bem o tempo seco.", "en": "With light irrigation; tolerates dry weather well." } },
+    "cold": { "directSowing": [], "seedbed": [9, 10], "transplant": [11, 12], "harvest": [1, 2, 3], "notes": { "pt": "Cultive como anual de verão: faça as mudas em ambiente protegido e plante após a última geada.", "en": "Grow as a summer annual: start plants indoors and set out after the last frost." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Adubação leve e orgânica: esterco de gado ou de galinha bem curtido ou composto no plantio e, se necessário, uma camada fina de composto a cada 2–3 meses. Corrija o solo ácido com calcário (gosta de solo neutro a levemente alcalino).",
+      "en": "Light organic feeding: well-aged cattle or poultry manure or compost at planting and, if needed, a thin layer of compost every 2–3 months. Lime acid soil (it likes neutral to slightly alkaline soil)."
+    },
+    "pruning": {
+      "pt": "Quando a planta tiver 15–20 cm, corte as pontas para ela ficar cheia. Colha sempre as pontas dos ramos, preservando a base, para não ficar lenhosa.",
+      "en": "When the plant reaches 15–20 cm, pinch the tips so it bushes out. Always harvest stem tips, keeping the base, so it doesn't get woody."
+    },
+    "watering": {
+      "pt": "Regue quando o solo estiver seco na superfície. Não tolera encharcamento.",
+      "en": "Water when the soil surface is dry. Does not tolerate waterlogging."
+    },
+    "other": {
+      "pt": "Sol pleno, solo leve e bem drenado, protegido de vento forte; 20–30 cm entre plantas. A semente é muito pequena e germina em 1–2 semanas — deixe de molho na véspera. Colha quando aparecerem os botõezinhos nas pontas (mais aroma).",
+      "en": "Full sun, light well-drained soil, sheltered from strong wind; 20–30 cm apart. Seed is tiny and sprouts in 1–2 weeks — soak overnight first. Harvest when small buds appear at the tips (most aroma)."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Infoteca — Folder Manjerona", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/785186/1/FOL99.pdf" },
+    { "title": "Pesquisa Agropecuária Brasileira (UFSM) — Marjoram phytomass at harvest intervals in summer and winter transplants", "url": "https://www.scielo.br/j/pab/a/hPnnssDYydPWDfzDhQvF6LL/abstract/?lang=en" },
+    { "title": "University of Illinois Extension — Marjoram: Sweet", "url": "https://extension.illinois.edu/herbs/marjoram-sweet" },
+    { "title": "UF/IFAS Pasco County Extension — A beginner's guide to growing marjoram", "url": "https://blogs.ifas.ufl.edu/pascoco/2024/06/13/spice-up-your-life-a-beginners-guide-to-growing-marjoram/" }
+  ]
+}

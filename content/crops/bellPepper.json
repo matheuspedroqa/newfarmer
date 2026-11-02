@@ -1,0 +1,25 @@
+{
+  "id": "bellPepper",
+  "summary": {
+    "pt": "Pimentão: hortaliça de clima quente, plantada por mudas e que produz por vários meses. Dá frutos verdes, que amadurecem vermelhos, amarelos ou laranjas.",
+    "en": "Bell pepper: a warm-season vegetable grown from transplants that bears for several months. Fruits start green and ripen red, yellow or orange."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [], "seedbed": [3, 4, 5, 6, 7, 8], "transplant": [4, 5, 6, 7, 8, 9], "harvest": [6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Pode plantar o ano todo com água; a época seca tem menos pragas e doenças.", "en": "Can be planted year-round with water; the dry season has fewer pests and diseases." } },
+    "subtropical": { "directSowing": [], "seedbed": [7, 8, 9, 10], "transplant": [9, 10, 11, 12], "harvest": [12, 1, 2, 3, 4, 5] },
+    "temperate": { "directSowing": [], "seedbed": [7, 8], "transplant": [10, 11], "harvest": [1, 2, 3, 4], "notes": { "pt": "Transplante só quando as noites passarem de 10 °C, depois das geadas.", "en": "Transplant only when nights stay above 10 °C, after frosts." } },
+    "semiarid": { "directSowing": [], "seedbed": [3, 4, 5, 6], "transplant": [4, 5, 6, 7], "harvest": [6, 7, 8, 9, 10, 11], "notes": { "pt": "Com irrigação; evite os meses de calor extremo, que derrubam as flores.", "en": "With irrigation; avoid the hottest months, which make flowers drop." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Precisa de calor por muito tempo; só em estufa.", "en": "Needs a long warm season; greenhouse only." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Corrija o solo com calcário antes do plantio (com base na análise de solo) e coloque esterco curtido ou composto na cova. Depois do transplante, faça adubação de cobertura (NPK ou orgânica) dividida em 3 vezes: aos 15, 45 e 65 dias. Excesso de nitrogênio dá muita folha e pouco fruto.", "en": "Lime the soil before planting (based on a soil test) and add aged manure or compost to the hole. After transplanting, side-dress (NPK or organic) in 3 splits: at about 15, 45 and 65 days. Too much nitrogen gives lots of leaves and few fruits." },
+    "pruning": { "pt": "Retire os brotos e folhas abaixo da primeira bifurcação do caule para arejar a planta.", "en": "Remove shoots and leaves below the first fork of the stem to improve airflow." },
+    "watering": { "pt": "Rega constante, sem deixar secar nem encharcar. Falta ou excesso de água faz as flores caírem e causa podridão no fundo do fruto.", "en": "Steady watering, never letting soil dry out or get soggy. Too little or too much water causes flower drop and blossom-end rot." },
+    "other": { "pt": "Sol pleno, 40–50 cm entre plantas, e um tutor (estaca) para a planta não tombar com o peso dos frutos. Não repita pimentão, tomate ou berinjela no mesmo canteiro em seguida.", "en": "Full sun, 40–50 cm between plants, and a stake so the plant doesn't fall over under the fruit. Don't follow peppers, tomatoes or eggplants in the same bed." }
+  },
+  "sources": [
+    { "title": "Embrapa — Sistemas de produção para a cultura do pimentão (Documentos 155)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/904778/1/SIDDOCUMENTOS155SISTEMASDEPRODUCAOPARAACULTURADOPIMENTAOCDU633831.pdf" },
+    { "title": "Utah State University Extension — Peppers in the garden", "url": "https://extension.usu.edu/yardandgarden/research/peppers-in-the-garden.php" },
+    { "title": "UGA Extension — Home Garden Peppers (C 1005)", "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2025/05/C-1005_3-1.pdf" }
+  ]
+}

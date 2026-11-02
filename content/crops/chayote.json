@@ -1,0 +1,37 @@
+{
+  "id": "chayote",
+  "summary": {
+    "pt": "O chuchu é uma trepadeira vigorosa e muito produtiva: um só pé, numa latada, dá frutos por meses e pode durar alguns anos. Planta-se o próprio fruto brotado.",
+    "en": "Chayote is a vigorous, very productive climbing vine: one plant on a trellis bears fruit for months and can last a few years. You plant the whole sprouted fruit."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [8, 9, 10, 11], "seedbed": [], "transplant": [], "harvest": [12, 1, 2, 3, 4, 5, 6, 7], "notes": { "pt": "Plante no início das chuvas; em altitude produz melhor.", "en": "Plant at the start of the rainy season; yields best at altitude." } },
+    "subtropical": { "directSowing": [8, 9, 10], "seedbed": [], "transplant": [], "harvest": [12, 1, 2, 3, 4, 5, 6] },
+    "temperate": { "directSowing": [9, 10, 11], "seedbed": [], "transplant": [], "harvest": [2, 3, 4, 5], "notes": { "pt": "Geada mata a parte aérea; cubra o pé com palha grossa no inverno para rebrotar.", "en": "Frost kills the vine; cover the base with thick mulch in winter so it resprouts." } },
+    "semiarid": { "directSowing": [3, 4, 5, 6], "seedbed": [], "transplant": [], "harvest": [7, 8, 9, 10, 11, 12], "notes": { "pt": "Só com irrigação constante e alguma sombra; calor seco derruba as flores.", "en": "Only with steady irrigation and some shade; dry heat makes flowers drop." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Precisa de cerca de 5 meses sem geada; não indicado, só em estufa.", "en": "Needs about 5 frost-free months; not recommended, greenhouse only." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo e corrija com calcário se preciso. Na cova, misture bastante esterco de curral curtido (ou esterco de galinha, em menor quantidade) e um pouco de NPK como 4-14-8. Como a planta fica no lugar por mais de um ano, repita esterco e uma cobertura com nitrogênio durante a produção.",
+      "en": "Test the soil and lime if needed. In the planting hole, mix plenty of aged cattle manure (or less chicken manure) and a little NPK such as 4-14-8. Since the plant stays more than a year, repeat manure and a nitrogen side-dressing during production."
+    },
+    "pruning": {
+      "pt": "Leve a rama principal até a latada e tire os brotos baixos. Depois de um ciclo, faça uma poda de limpeza retirando ramos velhos e secos para renovar a planta.",
+      "en": "Train the main vine up to the trellis and remove low shoots. After a cycle, prune out old and dry branches to renew the plant."
+    },
+    "watering": {
+      "pt": "Gosta de solo úmido, principalmente na floração e frutificação. Regue com frequência na seca, sem encharcar.",
+      "en": "Likes moist soil, especially while flowering and fruiting. Water often in dry spells, without waterlogging."
+    },
+    "other": {
+      "pt": "Monte uma latada firme (cerca de 2 m de altura) antes de plantar. Plante o chuchu inteiro já brotado, deitado e meio enterrado, com o broto para cima. Sol pleno e 4–5 m entre pés.",
+      "en": "Build a sturdy overhead trellis (about 2 m high) before planting. Plant the whole sprouted fruit on its side, half buried, sprout up. Full sun, 4–5 m between plants."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Infoteca — A cultura do chuchu (Coleção Plantar)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/114140/1/Aculturadochuchu.pdf" },
+    { "title": "Emater-DF — A cultura do chuchu", "url": "https://www.emater.df.gov.br/wp-content/uploads/2018/06/A-cultura-do-chuchu-versao-final.pdf" },
+    { "title": "UF/IFAS EDIS — Chayote (HS1454)", "url": "https://edis.ifas.ufl.edu/publication/HS1454" }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "sunflower",
+  "summary": {
+    "pt": "Planta anual de ciclo curto (90–130 dias) que dá grãos para óleo, ração e alimentação de pássaros. Aguenta bem a seca e as abelhas adoram as flores.",
+    "en": "A short-cycle annual (90–130 days) grown for oil seed, feed and birdseed. It handles drought well and bees love the flowers."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [2, 3],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [6, 7],
+      "notes": { "pt": "Plantio de safrinha, logo após a soja ou o milho, no fim das chuvas.", "en": "Second-crop sowing right after soybean or corn, at the end of the rains." }
+    },
+    "subtropical": {
+      "directSowing": [8, 9, 10],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [12, 1, 2],
+      "notes": { "pt": "Semeie depois do risco de geada, no início da primavera.", "en": "Sow after the frost risk, in early spring." }
+    },
+    "temperate": {
+      "directSowing": [10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3, 4],
+      "notes": { "pt": "Semeie quando o solo passar de 10 °C.", "en": "Sow once soil is above 10 °C." }
+    },
+    "semiarid": {
+      "directSowing": [1, 2, 3],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [5, 6, 7],
+      "notes": { "pt": "Semeie no início das chuvas; raiz funda tolera seca.", "en": "Sow at the start of the rains; deep roots tolerate drought." }
+    },
+    "cold": {
+      "directSowing": [11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [3, 4],
+      "notes": { "pt": "Só variedades precoces, depois da última geada.", "en": "Early varieties only, after the last frost." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Corrija a acidez com calcário. No plantio, use NPK conforme análise de solo (ou esterco curtido) e, principalmente, boro: falta de boro derruba a produção. Nitrogênio em cobertura cerca de 30 dias após a emergência.",
+      "en": "Correct acidity with lime. At sowing, apply NPK by soil test (or well-rotted manure) and especially boron: boron shortage cuts yield. Side-dress nitrogen about 30 days after emergence."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Tolera seca, mas precisa de água na germinação, no botão floral e no enchimento dos grãos. Evite encharcar.",
+      "en": "Drought tolerant, but needs water at germination, bud stage and seed fill. Avoid waterlogging."
+    },
+    "other": {
+      "pt": "Sol pleno, linhas a 70–90 cm. Pássaros comem os grãos maduros; colha logo que o verso da flor ficar marrom.",
+      "en": "Full sun, rows 70–90 cm apart. Birds eat ripe seeds; harvest as soon as the back of the head turns brown."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Cerrados — Girassol no Cerrado (Circular Técnica 20)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/559946/1/cirtec20.pdf" },
+    { "title": "Embrapa — Comunicado Técnico 78: Girassol", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/470731/1/comtec78girassol.pdf" },
+    { "title": "Revista Cultivar — A flor do Cerrado", "url": "https://revistacultivar.com.br/artigos/a-flor-do-cerrado" }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "acerola",
+  "summary": {
+    "pt": "Arbusto tropical rústico, campeão de vitamina C, que começa a produzir no 2º ano e floresce várias vezes por ano. Com água à vontade, colhe-se em quase todos os meses quentes.",
+    "en": "A hardy tropical shrub, a vitamin C champion, that starts bearing in year 2 and flowers several times a year. With enough water you can pick in almost every warm month."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [11, 12, 1, 2, 3],
+      "harvest": [10, 11, 12, 1, 2, 3, 4, 5],
+      "notes": { "pt": "Plante no início das chuvas. Dá várias floradas por ano, e cada uma vira fruto em cerca de 3–4 semanas; com irrigação produz quase o ano todo.", "en": "Plant at the start of the rains. It flowers several times a year, each turning into fruit in about 3–4 weeks; with irrigation it bears almost all year." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10, 11],
+      "harvest": [11, 12, 1, 2, 3, 4],
+      "notes": { "pt": "Produz nos meses quentes e para no inverno. Geada queima a planta nova; proteja nos primeiros invernos.", "en": "Bears in the warm months and stops in winter. Frost burns young plants; protect them in the first winters." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não tolera geada. Só em vaso, abrigado no inverno.", "en": "Does not tolerate frost. Only in a pot sheltered in winter." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [1, 2, 3, 4],
+      "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Muito cultivada no Nordeste irrigado: com irrigação colhe-se o ano todo. Sem água, só produz no período das chuvas.", "en": "Widely grown in irrigated semi-arid areas: with irrigation you harvest all year. Without water it only bears in the rainy season." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não sobrevive ao frio. Só em estufa.", "en": "Does not survive cold. Greenhouse only." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Abra a cova 1–2 meses antes e faça a calagem conforme análise de solo. Na cova, cerca de 20 L de esterco curtido e fosfato natural. Na adulta, nitrogênio e potássio (ou esterco e composto) em 3 doses durante as chuvas.",
+      "en": "Dig the hole 1–2 months ahead and lime by soil test. In the hole, about 20 L of rotted manure plus rock phosphate. For mature plants, nitrogen and potassium (or manure and compost) in 3 doses during the rains."
+    },
+    "pruning": {
+      "pt": "Quando o caule chegar a ~60 cm, corte a ponta para formar 3–4 ramos. Depois da colheita, faça poda de limpeza tirando ramos secos, velhos e os que tocam o chão.",
+      "en": "When the stem reaches ~60 cm, cut the tip to form 3–4 branches. After harvest, clean up by removing dead, old branches and those touching the ground."
+    },
+    "watering": {
+      "pt": "Aguenta seca, mas sem água para de florescer. Regue na seca para ter várias safras por ano. Não encharque.",
+      "en": "Tolerates drought, but without water it stops flowering. Water in dry spells to get several crops a year. Don't waterlog."
+    },
+    "other": {
+      "pt": "Sol pleno, espaço de cerca de 4 × 3 m. Plante mais de uma variedade juntas para melhorar a polinização. A fruta madura estraga em 1–2 dias: colha e use ou congele logo.",
+      "en": "Full sun, about 4 × 3 m spacing. Plant more than one variety together for better pollination. Ripe fruit spoils in 1–2 days: pick and use or freeze right away."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — A cultura da acerola (Coleção Plantar)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/114145/1/Aculturadaacerola.pdf" },
+    { "title": "Embrapa Mandioca e Fruticultura — Boas práticas na produção orgânica de acerola (Documentos 253)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1144495/1/Documento253-AnaLucia-2022-AINFO-1-1.pdf" },
+    { "title": "Embrapa Amapá — Recomendações técnicas para o cultivo da aceroleira", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/346288/1/AP2000recomendacoestecnicascultivoaceroleira.pdf" },
+    { "title": "UF/IFAS Extension — Growing Barbados Cherry in Florida", "url": "https://blogs.ifas.ufl.edu/stlucieco/2025/08/20/growing-barbados-cherry-in-florida" }
+  ]
+}

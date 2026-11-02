@@ -1,0 +1,37 @@
+{
+  "id": "asparagus",
+  "summary": {
+    "pt": "O aspargo é uma hortaliça perene: o mesmo canteiro produz brotos (turiões) por 10–15 anos. Exige paciência, pois a colheita de verdade começa só no 2º–3º ano.",
+    "en": "Asparagus is a perennial vegetable: one bed produces spears for 10–15 years. It takes patience, since real harvests start only in year 2–3."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [], "seedbed": [], "transplant": [9, 10, 11], "harvest": [8, 9, 10, 11], "notes": { "pt": "Adapta-se ao calor, mas precisa de um período de descanso por ano (seca ou corte da irrigação) antes de brotar.", "en": "Adapts to heat but needs a yearly rest period (dry spell or withholding irrigation) before spears emerge." } },
+    "subtropical": { "directSowing": [], "seedbed": [], "transplant": [7, 8, 9], "harvest": [8, 9, 10, 11] },
+    "temperate": { "directSowing": [], "seedbed": [], "transplant": [8, 9, 10], "harvest": [9, 10, 11, 12] },
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [6, 7, 8, 9, 10, 11], "notes": { "pt": "Com irrigação; no Vale do São Francisco o ciclo é controlado pela água e dá para colher mais de uma vez por ano.", "en": "With irrigation; in Brazil's São Francisco Valley the cycle is driven by water and spears can be harvested more than once a year." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [10, 11], "harvest": [10, 11, 12], "notes": { "pt": "Muito resistente ao frio; plante as coroas depois que o solo descongelar.", "en": "Very cold-hardy; plant crowns once the soil has thawed." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Corrija o solo com calcário (pH 6,5–7,5). No plantio, ponha bastante composto ou esterco curtido no fundo da vala e um pouco de NPK (ex.: 10-10-10). Todo ano, adube de novo com esterco ou NPK no início da brotação e depois de terminar a colheita. Nunca use adubo com herbicida.",
+      "en": "Lime the soil to pH 6.5–7.5. At planting, put plenty of compost or aged manure in the trench bottom plus a little NPK (e.g., 10-10-10). Every year, feed again with manure or NPK at the start of spear growth and after the harvest ends. Never use fertilizer mixed with weed killer."
+    },
+    "pruning": {
+      "pt": "Depois da colheita, deixe as ramas (samambaias) crescerem para fortalecer as raízes. Corte as ramas secas rente ao chão no fim da estação.",
+      "en": "After harvest, let the ferns grow to feed the roots. Cut dead ferns at ground level at the end of the season."
+    },
+    "watering": {
+      "pt": "Nos 2 primeiros anos, regue bem (o solo não deve secar). Depois, a planta tolera mais a seca, mas rende mais com água regular na brotação.",
+      "en": "Water well in the first 2 years (don't let soil dry out). Later it tolerates drought better but yields more with regular water during spear growth."
+    },
+    "other": {
+      "pt": "Plante coroas a 15–20 cm de profundidade, 30 cm entre plantas, em local de sol pleno e solo bem drenado. Não colha no 1º ano; no 2º colha só 2 semanas e depois aumente. Pare quando os brotos ficarem finos como um lápis.",
+      "en": "Plant crowns 15–20 cm deep, 30 cm apart, in full sun and well-drained soil. Don't harvest in year 1; harvest only 2 weeks in year 2, then more. Stop when spears get pencil-thin."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Infoteca — A cultura do aspargo (Coleção Plantar)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/100671/1/Aculturadoaspargo.pdf" },
+    { "title": "Penn State Extension — Growing Asparagus in the Home Garden", "url": "https://extension.psu.edu/growing-asparagus-in-the-home-garden" },
+    { "title": "University of Minnesota Extension — Growing asparagus in home gardens", "url": "https://extension.umn.edu/vegetables/growing-asparagus-home-gardens" }
+  ]
+}

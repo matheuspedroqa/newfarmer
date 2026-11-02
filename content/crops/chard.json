@@ -1,0 +1,36 @@
+{
+  "id": "chard",
+  "summary": {
+    "pt": "A acelga é uma folhosa fácil e resistente, parente da beterraba. Você colhe as folhas de fora e a planta continua produzindo por meses.",
+    "en": "Chard is an easy, tough leafy green related to beets. You pick the outer leaves and the plant keeps producing for months."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [3, 4, 5, 6], "seedbed": [3, 4, 5, 6, 7], "transplant": [4, 5, 6, 7, 8], "harvest": [5, 6, 7, 8, 9, 10], "notes": { "pt": "Prefira a época mais fresca e seca; em altitude dá o ano todo.", "en": "Prefer the cooler, drier season; at altitude it grows year-round." } },
+    "subtropical": { "directSowing": [2, 3, 4, 5, 8, 9], "seedbed": [2, 3, 4, 5, 6, 7, 8, 9], "transplant": [3, 4, 5, 6, 7, 8, 9, 10], "harvest": [4, 5, 6, 7, 8, 9, 10, 11, 12] },
+    "temperate": { "directSowing": [8, 9, 10, 2, 3], "seedbed": [8, 9, 2], "transplant": [9, 10, 3], "harvest": [10, 11, 12, 1, 4, 5, 6] },
+    "semiarid": { "directSowing": [4, 5, 6], "seedbed": [4, 5, 6], "transplant": [5, 6, 7], "harvest": [6, 7, 8, 9], "notes": { "pt": "Com irrigação, na época mais amena do ano.", "en": "With irrigation, in the mildest season of the year." } },
+    "cold": { "directSowing": [10, 11, 12], "seedbed": [9, 10], "transplant": [10, 11], "harvest": [12, 1, 2, 3], "notes": { "pt": "Plante após as geadas fortes; aguenta geada leve.", "en": "Plant after hard frosts; tolerates light frost." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Antes de plantar, misture bastante composto ou esterco curtido; corrija com calcário se o pH estiver abaixo de 6,2. Se não tiver análise de solo, use pouco NPK (ex.: 10-10-10). Se as folhas ficarem pequenas, faça uma cobertura leve com nitrogênio (ou esterco) cerca de 4 semanas após o plantio.",
+      "en": "Before planting, mix in plenty of compost or aged manure; lime if pH is below 6.2. Without a soil test, use a little NPK (e.g., 10-10-10). If leaves stay small, side-dress lightly with nitrogen (or manure) about 4 weeks after planting."
+    },
+    "pruning": {
+      "pt": "Não precisa de poda. Colha as folhas de fora e retire as velhas ou amareladas; deixe o miolo para continuar brotando.",
+      "en": "No pruning needed. Harvest the outer leaves and remove old or yellow ones; leave the center to keep growing."
+    },
+    "watering": {
+      "pt": "Mantenha o solo sempre úmido, sem encharcar. Falta de água deixa as folhas duras e amargas.",
+      "en": "Keep the soil evenly moist, not soggy. Lack of water makes leaves tough and bitter."
+    },
+    "other": {
+      "pt": "Sol pleno ou meia-sombra no calor. Deixe 20–30 cm entre plantas. Fique de olho em lagartas e pulgões no verso das folhas.",
+      "en": "Full sun, or partial shade in hot weather. Space plants 20–30 cm apart. Watch for caterpillars and aphids under the leaves."
+    }
+  },
+  "sources": [
+    { "title": "Alabama Cooperative Extension System — Grow More Swiss Chard", "url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-swiss-chard/" },
+    { "title": "Utah State University Extension — Swiss Chard in the Garden", "url": "https://extension.usu.edu/yardandgarden/research/swiss-chard-in-the-garden.php" }
+  ]
+}

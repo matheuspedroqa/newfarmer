@@ -1,0 +1,63 @@
+{
+  "id": "corn",
+  "summary": {
+    "pt": "O milho é um cereal de verão, fácil de plantar, que serve para comer verde, fazer fubá e alimentar galinhas, porcos e vacas.",
+    "en": "Corn (maize) is an easy summer cereal you can eat fresh, grind into meal, or feed to chickens, pigs and cattle."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [10, 11, 12, 1, 2],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3, 4, 5, 6, 7],
+      "notes": { "pt": "Plante com o início das chuvas. O plantio de janeiro–fevereiro (safrinha) corre mais risco de faltar chuva no fim.", "en": "Sow when the rains start. A January–February sowing (second crop) risks running out of rain at the end." }
+    },
+    "subtropical": {
+      "directSowing": [8, 9, 10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [1, 2, 3, 4]
+    },
+    "temperate": {
+      "directSowing": [10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3, 4],
+      "notes": { "pt": "Semeie quando o solo passar de 10 °C e o risco de geada acabar.", "en": "Sow once the soil is above 10 °C (50 °F) and frost risk is over." }
+    },
+    "semiarid": {
+      "directSowing": [11, 12, 1, 2],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [3, 4, 5, 6],
+      "notes": { "pt": "Plante logo nas primeiras chuvas fortes, com variedade precoce, ou use irrigação.", "en": "Sow right after the first heavy rains with an early variety, or irrigate." }
+    },
+    "cold": {
+      "directSowing": [11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [3, 4],
+      "notes": { "pt": "Só com híbridos de ciclo curto, depois da última geada.", "en": "Only with short-season hybrids, after the last frost." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo e corrija a acidez com calcário 2–3 meses antes. No plantio, use esterco curtido ou NPK (ex.: 4-14-8) no sulco. Quando o milho tiver 4–6 folhas, jogue ureia ou esterco em cobertura ao lado da linha: o milho gasta muito nitrogênio.",
+      "en": "Test the soil and lime acid soils 2–3 months ahead. At sowing, put aged manure or an NPK starter in the furrow. When plants have 4–6 leaves, side-dress with urea or manure beside the row: corn needs a lot of nitrogen."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Precisa de água regular, principalmente no pendoamento e no enchimento dos grãos. Falta de água nessa fase dá espiga falhada.",
+      "en": "Needs steady water, above all at tasseling and grain fill. Drought at that stage leaves gaps in the ear."
+    },
+    "other": {
+      "pt": "Pleno sol. Plante em blocos de várias linhas (não uma linha só) para a polinização encher as espigas. Fique de olho na lagarta-do-cartucho no miolo da planta.",
+      "en": "Full sun. Plant in blocks of several rows, not a single row, so pollination fills the ears. Watch for fall armyworm in the plant's whorl."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Milho e Sorgo — Épocas de aplicação de nitrogênio na cultura do milho (Rev. Bras. Milho e Sorgo)", "url": "https://rbms.sede.embrapa.br/ojs/article/view/487" },
+    { "title": "University of Illinois Extension — Illinois Corn Management (2025)", "url": "https://extension.illinois.edu/sites/default/files/2025-03/illinois-corn-management.pdf" },
+    { "title": "Ohio State University Extension — Corn planting date fact sheet AGF-0147", "url": "https://webarchive.library.unt.edu/eot2008/20090116014750/http://ohioline.osu.edu/agf-fact/pdf/0147.pdf" }
+  ]
+}

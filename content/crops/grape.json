@@ -1,0 +1,68 @@
+{
+  "id": "grape",
+  "summary": {
+    "pt": "Trepadeira perene que produz do 2º–3º ano e dura décadas. Precisa de latada ou espaldeira e de poda todo ano; em clima quente, a poda define quando você colhe.",
+    "en": "A long-lived perennial vine that bears from year 2–3. It needs a trellis or arbour and yearly pruning; in hot climates, pruning decides when you harvest."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11, 12],
+      "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Sem inverno, a videira não para: cada poda dá uma safra uns 4–5 meses depois, até 2 por ano. Plante no início das chuvas. Clima úmido traz muito míldio; prefira Niágara e variedades rústicas.", "en": "With no winter the vine never rests: each pruning gives a crop about 4–5 months later, up to 2 a year. Plant at the start of the rains. Humid weather brings lots of downy mildew; prefer hardy varieties." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [7, 8],
+      "harvest": [12, 1, 2],
+      "notes": { "pt": "Plante a muda e pode no fim do inverno (jul–ago). Uma segunda poda em fev–mar pode dar safra fora de época em jun–jul.", "en": "Plant and prune in late winter (Jul–Aug). A second pruning in Feb–Mar can give an off-season crop in Jun–Jul." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [7, 8, 9],
+      "harvest": [1, 2, 3],
+      "notes": { "pt": "Clima clássico da uva (como a Serra Gaúcha). Plante a muda dormente no fim do inverno. Uma safra por ano.", "en": "Classic grape climate. Plant dormant vines in late winter. One crop a year." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Com irrigação, ótimo: pouca chuva quer dizer pouca doença. Planta-se o ano todo e, escalonando as podas, colhe-se o ano todo (como no Vale do São Francisco).", "en": "With irrigation it does very well: little rain means little disease. Plant any month and, by staggering prunings, harvest year-round (as in Brazil's São Francisco Valley)." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11],
+      "harvest": [3, 4],
+      "notes": { "pt": "Use uvas americanas ou híbridas resistentes ao frio. Plante na primavera, com o solo descongelado. Verão curto pode não amadurecer a uva.", "en": "Use cold-hardy American or hybrid grapes. Plant in spring once the soil thaws. A short summer may not ripen the fruit." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo e calagem antes de plantar. Na cova, esterco curtido ou composto. Depois, adube conforme a análise, em doses na brotação e na formação dos cachos. Nitrogênio demais faz folha e atrai doença.",
+      "en": "Soil test and lime before planting. Put rotted manure or compost in the hole. Later, fertilize by soil test in doses at budbreak and bunch set. Too much nitrogen makes leaves and invites disease."
+    },
+    "pruning": {
+      "pt": "Essencial. Nos primeiros anos, forme um tronco e os braços no arame. Depois, na poda de inverno, tire 85–90% dos ramos do ano e deixe esporões com 1–3 gemas, conforme a grossura do ramo.",
+      "en": "Essential. In the first years, train one trunk and arms along the wire. After that, at winter pruning remove 85–90% of last year's canes and leave spurs with 1–3 buds, depending on cane thickness."
+    },
+    "watering": {
+      "pt": "Regue a muda nova com frequência até pegar. Videira adulta aguenta seca; regue na brotação e no crescimento dos cachos e corte a água perto da colheita para a uva ficar doce.",
+      "en": "Water young vines often until established. Mature vines handle drought; water at budbreak and while bunches grow, and cut back near harvest so grapes get sweeter."
+    },
+    "other": {
+      "pt": "Sol pleno, solo bem drenado e ventilação. Principais doenças: míldio e oídio, piores com chuva; tire folhas em volta dos cachos para arejar.",
+      "en": "Full sun, well-drained soil and airflow. Main diseases: downy and powdery mildew, worse with rain; strip leaves around bunches to let air in."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Uva e Vinho — Aspectos culturais em viticultura tropical: uvas de mesa", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/133464/1/Aspectos-culturais-em-viticultura-tropical-uvas-de-mesa..pdf" },
+    { "title": "Embrapa — Nutrição e adubação da videira em regiões tropicais", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/132081/1/Nutricao-e-adubacao-da-videira-em-regioes-tropicais..pdf" },
+    { "title": "Ohio State University Extension — Growing Grapes in the Home Garden (HYG-1428)", "url": "https://ohioline.osu.edu/factsheet/HYG-1428" },
+    { "title": "UC IPM — Cultural tips for growing grape", "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-grape/" }
+  ]
+}

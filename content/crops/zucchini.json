@@ -1,0 +1,25 @@
+{
+  "id": "zucchini",
+  "summary": {
+    "pt": "Abobrinha italiana: planta rápida e muito produtiva, que começa a dar frutos cerca de 45–60 dias após a semeadura. Ótima para quem está começando.",
+    "en": "Zucchini is a fast, very productive plant that starts bearing about 45–60 days after sowing. Great for beginners."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [3, 4, 5, 6, 7, 8], "seedbed": [3, 4, 5, 6, 7], "transplant": [4, 5, 6, 7, 8], "harvest": [5, 6, 7, 8, 9, 10], "notes": { "pt": "Dá o ano todo; na época seca e mais amena há menos doenças.", "en": "Grows year-round; the drier, milder season has fewer diseases." } },
+    "subtropical": { "directSowing": [8, 9, 10, 11, 12, 1, 2], "seedbed": [8, 9, 10, 11, 12, 1], "transplant": [9, 10, 11, 12, 1, 2], "harvest": [10, 11, 12, 1, 2, 3, 4] },
+    "temperate": { "directSowing": [10, 11, 12], "seedbed": [9, 10], "transplant": [10, 11], "harvest": [12, 1, 2, 3], "notes": { "pt": "Plante só depois da última geada, com o solo já quente.", "en": "Plant only after the last frost, once the soil is warm." } },
+    "semiarid": { "directSowing": [3, 4, 5, 6, 7, 8], "seedbed": [3, 4, 5, 6, 7], "transplant": [4, 5, 6, 7, 8], "harvest": [5, 6, 7, 8, 9, 10], "notes": { "pt": "Com irrigação; prefira os meses menos quentes.", "en": "With irrigation; prefer the less hot months." } },
+    "cold": { "directSowing": [11, 12], "seedbed": [10, 11], "transplant": [11, 12], "harvest": [1, 2, 3], "notes": { "pt": "Verão curto: faça mudas em local protegido e plante após as geadas.", "en": "Short summer: start seedlings indoors and plant out after frosts." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Antes de plantar, misture composto ou esterco curtido na cova e corrija o solo com calcário se for ácido. Quando aparecerem as primeiras flores femininas, faça uma adubação de cobertura com nitrogênio (ureia ou esterco). Se as folhas estão grandes e bem verdes, não precisa exagerar.", "en": "Before planting, mix compost or aged manure into the hole and lime acidic soil. When the first female flowers appear, side-dress with nitrogen (urea or manure). If leaves are large and dark green, don't overdo it." },
+    "pruning": { "pt": "Retire folhas velhas, amareladas ou doentes da base para arejar a planta.", "en": "Remove old, yellow or diseased leaves at the base to improve airflow." },
+    "watering": { "pt": "Rega regular e profunda, mantendo o solo úmido mas sem encharcar. Molhe o solo, não as folhas, para evitar oídio.", "en": "Regular, deep watering, keeping soil moist but not soggy. Water the soil, not the leaves, to avoid powdery mildew." },
+    "other": { "pt": "Sol pleno e cerca de 1 m entre plantas. Colha os frutos novos (15–20 cm) a cada 2–3 dias: assim a planta produz mais. Fique de olho no oídio (pó branco nas folhas).", "en": "Full sun and about 1 m between plants. Pick young fruits (15–20 cm) every 2–3 days so the plant keeps producing. Watch for powdery mildew (white powder on leaves)." }
+  },
+  "sources": [
+    { "title": "University of Minnesota Extension — Growing summer squash and zucchini", "url": "https://extension.umn.edu/vegetables/growing-summer-squash-and-zucchini" },
+    { "title": "Utah State University Extension — Summer and winter squash in the garden", "url": "https://extension.usu.edu/yardandgarden/research/summer-and-winter-squash-in-the-garden.php" },
+    { "title": "University of Maryland Extension — Growing summer squash and zucchini in the home garden", "url": "https://www.extension.umd.edu/resource/growing-summer-squash-zucchini-home-garden" }
+  ]
+}

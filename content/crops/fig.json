@@ -1,0 +1,68 @@
+{
+  "id": "fig",
+  "summary": {
+    "pt": "Árvore rústica que perde as folhas no inverno e produz já no 1º–2º ano depois da poda. Dá figo verde (para doce) e figo maduro; no Brasil a variedade principal é a Roxo de Valinhos.",
+    "en": "A hardy tree that drops its leaves in winter and bears from year 1–2 after pruning. Gives green figs (for preserves) and ripe figs; in Brazil the main variety is Roxo de Valinhos."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [6, 7, 8],
+      "harvest": [11, 12, 1, 2, 3],
+      "notes": { "pt": "Produz, mas fica sem descanso de inverno: a poda é que marca o ciclo. Excesso de chuva no fim da safra racha e azeda os frutos.", "en": "It bears, but without a winter rest: pruning sets the cycle. Too much rain late in the season splits and sours the fruit." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [6, 7, 8],
+      "harvest": [11, 12, 1, 2, 3, 4],
+      "notes": { "pt": "Clima ideal. Plante a muda de raiz nua no inverno (jun–ago); muda com torrão pode ir em qualquer mês com solo úmido. Figo verde nov–jan, maduro jan–abr.", "en": "Ideal climate. Plant bare-root trees in winter (Jun–Aug); potted trees can go in any month with moist soil. Green figs Nov–Jan, ripe figs Jan–Apr." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [8, 9, 10],
+      "harvest": [1, 2, 3, 4],
+      "notes": { "pt": "Planta adulta e dormente aguenta cerca de −7 a −10 °C. Plante no fim do inverno/início da primavera, em lugar ensolarado e abrigado do vento.", "en": "Mature dormant trees survive about −7 to −10 °C. Plant in late winter/early spring in a sunny spot sheltered from wind." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [5, 6, 7],
+      "harvest": [10, 11, 12, 1],
+      "notes": { "pt": "Aguenta calor e seca, mas só produz bem com irrigação. Faça a poda no período seco para colher antes das chuvas.", "en": "Handles heat and drought but only bears well with irrigation. Prune in the dry period to harvest before the rains." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11],
+      "harvest": [2, 3],
+      "notes": { "pt": "Arriscado: o frio forte mata a parte de cima (a raiz costuma rebrotar), e os frutos dos brotos novos às vezes não amadurecem. Use variedades resistentes ao frio, proteja no inverno ou cultive em vaso e guarde em lugar fresco sem congelar.", "en": "Risky: hard cold kills the top (roots usually resprout), and fruit on new shoots may not ripen. Use cold-hardy varieties, wrap in winter, or grow in a pot and store somewhere cool but frost-free." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Corrija o solo com calcário antes do plantio (gosta de pH perto de 6–6,5). Esterco curtido ou composto na cova e depois de cada poda. Na brotação, adubo NPK em 2–3 doses, conforme análise de solo.",
+      "en": "Lime the soil before planting (likes pH around 6–6.5). Rotted manure or compost in the hole and after each pruning. During new growth, NPK fertilizer in 2–3 doses, by soil test."
+    },
+    "pruning": {
+      "pt": "Poda é essencial. No inverno (no Brasil, jul–ago), corte os ramos do ano deixando 2–3 gemas: os figos nascem nos ramos novos. Depois, deixe só os brotos mais fortes (desbrota).",
+      "en": "Pruning is essential. In winter, cut back the year's shoots leaving 2–3 buds: figs grow on new shoots. Then keep only the strongest new shoots."
+    },
+    "watering": {
+      "pt": "Regue a muda nova com frequência. Na planta adulta, regue no período seco da brotação e da formação dos frutos. Não encharque.",
+      "en": "Water young trees often. For mature trees, water in dry spells during new growth and fruit set. Don't waterlog."
+    },
+    "other": {
+      "pt": "Sol pleno e solo bem drenado. Cubra o solo com palha. A ferrugem (pó alaranjado nas folhas) é a principal doença: tire as folhas doentes e mantenha a copa arejada.",
+      "en": "Full sun and well-drained soil. Mulch the soil with straw. Fig rust (orange powder on leaves) is the main disease: remove sick leaves and keep the canopy airy."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Cultivo orgânico da figueira", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/746759/1/figueira.pdf" },
+    { "title": "Embrapa — Épocas de poda na produção de figos verdes", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/691533/1/EPOCAS-DE-PODA-NA-PRODUCAO-DE-FIGOS-VERDES.pdf" },
+    { "title": "University of Illinois Extension — Figs are a great addition to home gardens", "url": "https://extension.illinois.edu/news-releases/go-figure-figs-are-great-addition-home-gardens" },
+    { "title": "University of Tennessee Extension — Figs (SP307-I)", "url": "https://uthort.tennessee.edu/wp-content/uploads/sites/228/2023/11/SP307-I.pdf" }
+  ]
+}

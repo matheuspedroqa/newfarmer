@@ -1,0 +1,65 @@
+{
+  "id": "chickpea",
+  "summary": {
+    "pt": "Leguminosa de grão rica em proteína, que gosta de clima seco e ameno. Fixa nitrogênio no solo e é ótima para rotação de culturas.",
+    "en": "A protein-rich grain legume that likes dry, mild weather. It fixes nitrogen in the soil and is great for crop rotation."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [4, 5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [7, 8, 9],
+      "notes": { "pt": "Plante na estação seca e fresca (outono/inverno), de preferência com irrigação; chuva na colheita estraga o grão.", "en": "Sow in the cool dry season (autumn/winter), ideally with irrigation; rain at harvest spoils the grain." }
+    },
+    "subtropical": {
+      "directSowing": [4, 5],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [9, 10],
+      "notes": { "pt": "Cultivo de inverno, em solo bem drenado.", "en": "Winter crop, in well-drained soil." }
+    },
+    "temperate": {
+      "directSowing": [9, 10],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [1, 2],
+      "notes": { "pt": "Semeie no início da primavera, quando o solo passar de uns 7 °C.", "en": "Sow in early spring, once soil is above about 7 °C." }
+    },
+    "semiarid": {
+      "directSowing": [4, 5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [8, 9, 10],
+      "notes": { "pt": "Aproveita a umidade que fica no solo depois das chuvas; tolera bem a seca.", "en": "Uses soil moisture left after the rains; tolerates drought well." }
+    },
+    "cold": {
+      "directSowing": [10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3],
+      "notes": { "pt": "Só em verões com 100+ dias sem geada; escolha variedades precoces.", "en": "Only where summers give 100+ frost-free days; choose early varieties." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça calagem se o solo for ácido. No plantio, use fósforo e potássio (ou composto/esterco curtido). Inocule a semente com rizóbio próprio do grão-de-bico; assim quase não precisa de nitrogênio.",
+      "en": "Lime acidic soil. At sowing, apply phosphorus and potassium (or compost/well-rotted manure). Inoculate seed with chickpea-specific rhizobium; then it needs little or no nitrogen."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Pouca água: regue na germinação e na floração/enchimento dos grãos. Pare de regar quando as vagens começarem a secar. Excesso de água causa doença de raiz.",
+      "en": "Low water needs: water at germination and at flowering/pod fill. Stop when pods start drying. Too much water causes root rot."
+    },
+    "other": {
+      "pt": "Sol pleno, linhas a 40–50 cm, semente a 3–5 cm de fundo. Fuja de solo encharcado e de chuva na colheita (mancha e brota o grão).",
+      "en": "Full sun, rows 40–50 cm apart, seed 3–5 cm deep. Avoid waterlogged soil and rain at harvest (stains and sprouts the grain)."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Cultivo do grão-de-bico como alternativa de diversificação", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1126704/1/Cultivo-do-grao-de-bico-como-alternativa-de.pdf" },
+    { "title": "Embrapa CPAC — Grão-de-bico no Cerrado (Circular Técnica 18)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/982812/1/cirtec18.pdf" },
+    { "title": "Oregon State University Extension — Chickpea Production Guide (EM 8791)", "url": "https://extension.oregonstate.edu/catalog/pub/em-8791-dryland-cropping-systems-chickpea-production-guide" },
+    { "title": "Terres Inovia — Chickpea growing guide", "url": "https://www.terresinovia.fr/en/guides/chickpea-growing-guide-2023" }
+  ]
+}

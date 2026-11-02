@@ -1,0 +1,65 @@
+{
+  "id": "sweetPotato",
+  "summary": {
+    "pt": "Planta rasteira de clima quente plantada por pedaços de rama, que forma raízes doces em 4–5 meses. É rústica, aguenta seca e solo pobre, e as folhas também servem de alimento.",
+    "en": "A warm-climate vining plant grown from vine cuttings (slips) that forms sweet roots in 4–5 months. Hardy, drought- and poor-soil tolerant, and the leaves are edible too."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11, 12, 1],
+      "harvest": [2, 3, 4, 5],
+      "notes": { "pt": "Plante as ramas na estação das chuvas. Com irrigação, dá para plantar quase o ano todo.", "en": "Plant cuttings in the rainy season. With irrigation you can plant almost year-round." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [11, 12, 1],
+      "harvest": [3, 4, 5, 6],
+      "notes": { "pt": "Melhor época é o meio do período chuvoso (nov–jan). Colha antes das geadas.", "en": "Best time is mid rainy season (Nov–Jan). Harvest before frost." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [11, 12],
+      "harvest": [3, 4],
+      "notes": { "pt": "Plante só quando o solo passar de ~18 °C e não houver mais geada. Colha antes da primeira geada do outono.", "en": "Plant only once soil is above ~18 °C and frost is over. Harvest before the first autumn frost." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [1, 2, 3],
+      "harvest": [5, 6, 7],
+      "notes": { "pt": "Plante no início das chuvas; depois de pegar aguenta bem a seca. Com irrigação, pode plantar em outras épocas.", "en": "Plant at the start of the rains; once established it tolerates drought well. With irrigation you can plant at other times." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Verão curto e frio demais para formar raízes. Só com estufa ou plástico preto aquecendo o solo, e variedades precoces.", "en": "Summer is too short and cool to form roots. Only with a greenhouse or black plastic warming the soil, and early varieties." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça análise de solo. Um pouco de esterco curtido ou composto e NPK com pouco nitrogênio e mais potássio (ex.: 5-10-10) no plantio. Uns 30–40 dias depois, cobertura leve com potássio. Nitrogênio demais dá muita rama e pouca batata.",
+      "en": "Soil test first. A little rotted manure or compost and a low-nitrogen, higher-potassium NPK (e.g. 5-10-10) at planting. About 30–40 days later, a light potassium side-dressing. Too much nitrogen gives lots of vine and few roots."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Regue bem nas primeiras 2–3 semanas para as ramas pegarem. Depois aguenta seca; regue só em estiagem longa. Evite encharcar, principalmente perto da colheita.",
+      "en": "Water well for the first 2–3 weeks so cuttings root. After that it tolerates drought; water only in long dry spells. Avoid waterlogging, especially near harvest."
+    },
+    "other": {
+      "pt": "Sol pleno e solo solto e arenoso, em leiras ou camalhões. Use ramas de 8–10 folhas, enterrando metade, a 30–40 cm uma da outra. Mantenha sem mato no início e colha de 110 a 160 dias, sem ferir as raízes.",
+      "en": "Full sun and loose, sandy soil, on ridges. Use cuttings with 8–10 leaves, burying half, 30–40 cm apart. Keep weed-free early on and harvest at 110–160 days without bruising the roots."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Hortaliças — A cultura da batata-doce", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/100650/1/Aculturadabatatadoce.pdf" },
+    { "title": "Embrapa Hortaliças — Instruções técnicas 7: Cultivo da batata-doce", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/753382/1/CNPHInstrucoestecnicas7.pdf" },
+    { "title": "Clemson Cooperative Extension HGIC — Sweet Potato", "url": "https://hgic.clemson.edu/factsheet/sweet-potato/" },
+    { "title": "Mississippi State University Extension — Sweet Potatoes", "url": "https://extension.msstate.edu/lawn-and-garden/vegetable-gardens/sweet-potatoes" }
+  ]
+}

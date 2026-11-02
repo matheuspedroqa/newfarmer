@@ -1,0 +1,34 @@
+{
+  "id": "okra",
+  "summary": {
+    "pt": "O quiabo é uma hortaliça de calor, muito rústica e produtiva. Começa a dar frutos cerca de 2 meses após a semeadura e segue produzindo por meses.",
+    "en": "Okra is a hardy, productive warm-season vegetable. It starts bearing about 2 months after sowing and keeps producing for months."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [8, 9, 10, 11, 12, 1, 2, 3], "seedbed": [], "transplant": [], "harvest": [10, 11, 12, 1, 2, 3, 4, 5, 6] },
+    "subtropical": { "directSowing": [9, 10, 11, 12, 1], "seedbed": [], "transplant": [], "harvest": [11, 12, 1, 2, 3, 4] },
+    "temperate": { "directSowing": [10, 11, 12], "seedbed": [], "transplant": [], "harvest": [1, 2, 3, 4] },
+    "semiarid": { "directSowing": [8, 9, 10, 11, 12, 1, 2], "seedbed": [], "transplant": [], "harvest": [10, 11, 12, 1, 2, 3, 4, 5], "notes": { "pt": "Com irrigação; tolera bem o calor.", "en": "With irrigation; handles heat well." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Precisa de solo acima de 20 °C e não tolera frio; só em estufa.", "en": "Needs soil above 20 °C and does not tolerate cold; greenhouse only." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Corrija o solo com calcário (pH 5,8–6,5). No plantio, misture esterco curtido ou composto e um pouco de NPK (ex.: 10-10-10). Faça uma adubação de cobertura com nitrogênio após a primeira colheita. Excesso de nitrogênio dá muita folha e poucos frutos.",
+      "en": "Lime the soil to pH 5.8–6.5. At planting, mix in aged manure or compost plus a little NPK (e.g., 10-10-10). Side-dress with nitrogen after the first harvest. Too much nitrogen gives lots of leaves and few pods."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Regue com regularidade, principalmente na floração e frutificação. Tolera alguma seca, mas produz menos.",
+      "en": "Water regularly, especially during flowering and fruiting. It tolerates some drought but yields less."
+    },
+    "other": {
+      "pt": "Deixe as sementes de molho de um dia para o outro para germinar mais rápido. Desbaste deixando cerca de 30 cm entre plantas e colha os frutos novos a cada 2–3 dias, antes de ficarem fibrosos.",
+      "en": "Soak seeds overnight for faster germination. Thin to about 30 cm between plants and pick young pods every 2–3 days, before they turn woody."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Infoteca — Sistemas de produção para a cultura do quiabo no Estado do Rio de Janeiro", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/904654/1/SIDDOCUMENTOS59SISTEMASDEPRODUCAOPARAACULTURADOQUIABONOESTADODORIODEJANEIRO.pdf" },
+    { "title": "Texas A&M AgriLife Extension — Okra", "url": "https://agrilifeextension.tamu.edu/library/gardening/okra" },
+    { "title": "Oklahoma State University Extension — Okra Production", "url": "https://extension.okstate.edu/fact-sheets/okra-production" }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "lemongrass",
+  "summary": {
+    "pt": "O capim-santo (capim-limão) é uma touceira perene de folhas com cheiro de limão, usada em chás e na cozinha. É rústico, cresce fácil no calor e dá cortes o ano todo.",
+    "en": "Lemongrass is a perennial clumping grass with lemon-scented leaves, used for tea and cooking. It is hardy, grows easily in heat and can be cut all year."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [], "seedbed": [], "transplant": [10, 11, 12, 1], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Plante as mudas (perfilhos) no início das chuvas; primeiro corte cerca de 4 meses depois, e então a cada 45–60 dias.", "en": "Plant divisions at the start of the rainy season; first cut about 4 months later, then every 45–60 days." } },
+    "subtropical": { "directSowing": [], "seedbed": [], "transplant": [9, 10, 11], "harvest": [12, 1, 2, 3, 4, 5], "notes": { "pt": "Cresce pouco no inverno e geada queima as folhas; corte e espere rebrotar na primavera.", "en": "Grows little in winter and frost burns the leaves; cut back and wait for regrowth in spring." } },
+    "temperate": { "directSowing": [], "seedbed": [], "transplant": [10, 11], "harvest": [1, 2, 3, 4], "notes": { "pt": "Não tolera geada forte: cultive em vaso e recolha no inverno, ou trate como planta de verão.", "en": "Does not tolerate hard frost: grow in a pot and bring it indoors in winter, or treat it as a summer crop." } },
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [1, 2, 3], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Com irrigação produz o ano todo; plante no início das chuvas.", "en": "With irrigation it yields year-round; plant at the start of the rains." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não sobrevive ao inverno rigoroso; só em vaso dentro de casa ou estufa.", "en": "Does not survive harsh winters; only in a pot indoors or in a greenhouse." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "No plantio, coloque esterco curtido ou composto na cova. Depois de cada 2–3 cortes, adube de novo com esterco ou um pouco de NPK (ex.: 10-10-10). Esterco junto com NPK rende mais folha.",
+      "en": "At planting, put aged manure or compost in the hole. After every 2–3 cuts, feed again with manure or a little NPK (e.g., 10-10-10). Manure plus NPK gives the most leaf."
+    },
+    "pruning": {
+      "pt": "A colheita já é a poda: corte as folhas a uns 20 cm do chão. Quando a touceira ficar grande ou seca no meio, divida e replante.",
+      "en": "Harvesting is the pruning: cut leaves about 20 cm above ground. When the clump gets large or dies in the center, divide and replant."
+    },
+    "watering": {
+      "pt": "Gosta de água regular, principalmente na seca, mas não de solo encharcado.",
+      "en": "Likes regular water, especially in dry spells, but not waterlogged soil."
+    },
+    "other": {
+      "pt": "Sol pleno, espaçamento de 60–80 cm. Plante perfilhos (pedaços da touceira com raiz) — é mais fácil que semente. As folhas são cortantes: use luvas.",
+      "en": "Full sun, 60–80 cm spacing. Plant divisions (rooted pieces of the clump) — easier than seed. Leaves have sharp edges: wear gloves."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Agroindústria Tropical — Comunicado Técnico 185: cultivo de capim-santo no Litoral Cearense", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/812817/1/FOL77.pdf" },
+    { "title": "UFS — Adubação e biomassa de Cymbopogon citratus", "url": "https://ri.ufs.br/bitstream/riufs/1627/1/AdubacaoBiomassaCymbopogon.pdf" },
+    { "title": "UF/IFAS Nassau County Extension — Fact sheet: Lemongrass", "url": "https://blogs.ifas.ufl.edu/nassauco/2017/05/28/fact-sheet-lemongrass/" },
+    { "title": "Utah State University Extension — Lemongrass in the garden", "url": "https://extension.usu.edu/yardandgarden/research/lemongrass-in-the-garden.php" }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "banana",
+  "summary": {
+    "pt": "Planta perene de clima quente que dá cachos o ano todo. Cada touceira produz por muitos anos se você manter só a planta mãe, um filho e um neto.",
+    "en": "A warm-climate perennial that bears bunches all year. Each mat keeps producing for many years if you keep just the mother, one daughter and one granddaughter."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11, 12],
+      "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Plante as mudas no início das chuvas; o primeiro cacho sai em 12–15 meses e depois há colheita o ano todo.", "en": "Plant at the start of the rains; the first bunch comes in 12–15 months, then harvest is year-round." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10, 11],
+      "harvest": [11, 12, 1, 2, 3, 4, 5],
+      "notes": { "pt": "Plante depois do frio; geada queima as folhas e o inverno atrasa os cachos. Prefira locais abrigados e sem geada.", "en": "Plant after the cold; frost burns leaves and winter delays bunches. Choose sheltered, frost-free spots." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não tolera geada; só em estufa.", "en": "Does not tolerate frost; greenhouse only." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [3, 4, 5, 6, 7, 8],
+      "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Só com irrigação (ex.: vales irrigados do Nordeste); proteja do vento forte.", "en": "Irrigation only (e.g. irrigated valleys of NE Brazil); shelter from strong wind." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não se cultiva fora de estufa aquecida.", "en": "Not grown outside a heated greenhouse." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça calagem e coloque esterco curtido ou composto na cova. A banana pede muito potássio e nitrogênio: adube em várias doses no ano, conforme análise de solo, sempre ao redor do filho, logo após desbaste e capina.",
+      "en": "Lime and put well-rotted manure or compost in the planting hole. Banana needs lots of potassium and nitrogen: fertilize in several doses a year by soil test, always around the daughter, right after thinning and weeding."
+    },
+    "pruning": {
+      "pt": "Desbaste: deixe só o rebento mais forte (escolha o filho por volta do 4º–6º mês e o neto por volta do 8º). Tire folhas secas e o coração (ponta do cacho) depois que saírem as últimas pencas. Corte a planta mãe depois da colheita.",
+      "en": "Thinning: keep only the strongest sucker (pick the daughter around months 4–6 and the granddaughter around month 8). Remove dry leaves and the male bud once the last hands form. Cut the mother plant after harvest."
+    },
+    "watering": {
+      "pt": "Precisa de bastante água e solo sempre úmido, mas nunca encharcado. Em seca, irrigue; cubra o solo com as folhas cortadas.",
+      "en": "Needs plenty of water and constantly moist, never waterlogged, soil. Irrigate in dry spells; mulch with cut leaves."
+    },
+    "other": {
+      "pt": "Use mudas sadias de viveiro registrado e cultivares resistentes onde há sigatoka ou mal-do-Panamá (BRS Platina, BRS Prata Garantida). Escore o cacho em locais com vento.",
+      "en": "Use healthy plantlets from a registered nursery and resistant cultivars where Sigatoka or Panama disease occur (BRS Platina, BRS Prata Garantida). Prop the bunch in windy spots."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — Sistema de Produção 29: Banana", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/698838/1/sp29banana.pdf" },
+    { "title": "Embrapa — Folder BRS Prata Garantida", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/674145/1/FolderPrataGarantida.pdf" },
+    { "title": "Embrapa Amapá — A cultura da banana (1999)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/344128/1/CPAFAP1999CULTURADABANANA.pdf" },
+    { "title": "Embrapa — Manejo de mudas (folder)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1058934/1/folderManejoMudas1.pdf" }
+  ]
+}

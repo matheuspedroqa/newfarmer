@@ -1,0 +1,68 @@
+{
+  "id": "lemon",
+  "summary": {
+    "pt": "Árvore cítrica perene que produz do 2º–3º ano e floresce várias vezes por ano, então dá limão quase o ano todo. No Brasil o mais plantado é o Tahiti; em clima mais fresco, o Siciliano.",
+    "en": "An evergreen citrus tree that bears from year 2–3 and blooms several times a year, so it gives fruit almost year-round. Tahiti (Persian) lime is common in the tropics; true lemons like Eureka suit cooler areas."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11, 12, 1, 2],
+      "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Plante no início das chuvas. O Tahiti colhe o ano todo, com mais fruta no 1º semestre.", "en": "Plant at the start of the rains. Tahiti lime is picked year-round, with most fruit in the first half of the year." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10, 11],
+      "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Plante na primavera, depois das geadas. Frio alonga o tempo até o fruto ficar pronto; a safra se concentra no verão e outono.", "en": "Plant in spring, after frosts. Cold lengthens the time until fruit is ready; most of the crop comes in summer and autumn." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [9, 10],
+      "harvest": [5, 6, 7, 8, 9, 10],
+      "notes": { "pt": "É o cítrico mais sensível ao frio: só onde a geada é rara e leve (até cerca de −2 °C), como no litoral mediterrâneo. Com geada forte, cultive em vaso e abrigue no inverno.", "en": "The most frost-tender citrus: only where frost is rare and light (to about −2 °C), as on the Mediterranean coast. With hard frost, grow in a pot and shelter it in winter." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [11, 12, 1, 2],
+      "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "notes": { "pt": "Só com irrigação.", "en": "Irrigation only." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Não aguenta inverno rigoroso; só em vaso dentro de casa ou estufa.", "en": "Can't survive harsh winters; only in a pot indoors or in a greenhouse." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Prepare e adube a cova (calcário e esterco curtido) uns 30 dias antes de plantar. Comece o nitrogênio uns 30 dias depois do plantio. Depois, NPK ou esterco em 3–4 doses na estação de crescimento, com solo úmido. Não adube no inverno.",
+      "en": "Prepare and feed the hole (lime and rotted manure) about 30 days before planting. Start nitrogen about 30 days after planting. Then NPK or manure in 3–4 doses during the growing season, on moist soil. Don't feed in winter."
+    },
+    "pruning": {
+      "pt": "Poda leve: tire ramos secos, doentes e os brotos que saem abaixo do enxerto. Em plantio mais apertado, pode para controlar o tamanho da copa.",
+      "en": "Light pruning: remove dead or diseased branches and shoots below the graft. In close plantings, prune to keep the canopy size in check."
+    },
+    "watering": {
+      "pt": "Regas fundas e espaçadas, deixando o solo secar um pouco entre elas. Cobertura morta ajuda a segurar umidade (afastada do tronco). Encharcamento causa gomose.",
+      "en": "Deep, spaced watering, letting the soil dry slightly in between. Mulch helps hold moisture (kept off the trunk). Waterlogging causes gummosis."
+    },
+    "other": {
+      "pt": "Sol pleno e solo bem drenado. Compre muda certificada de viveiro registrado. Gomose (casca soltando goma perto do chão) é a principal doença: evite ferir e molhar o tronco.",
+      "en": "Full sun and well-drained soil. Buy certified trees from a registered nursery. Gummosis (gum oozing from bark near the ground) is the main disease: avoid wounding or wetting the trunk."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa — A cultura do limão Tahiti", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/119233/1/Aculturadolimaotaiti.pdf" },
+    { "title": "Embrapa — Sistema orgânico de produção de lima ácida Tahiti (Chapada Diamantina)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1155793/1/Sistema-Organico-de-Producao-de-Lima-Acida-Tahiti-para-a-Regiao-da-Chapada-Diamantina-Bahia-1.pdf" },
+    { "title": "UC ANR — Citrus in the home garden", "url": "https://www.ccfruitandnuts.ucanr.edu/sites/default/files/2013-07/72239.pdf" },
+    { "title": "UF/IFAS Extension — Citrus Care Basics", "url": "https://blogs.ifas.ufl.edu/bakerco/2021/05/10/citrus-care-basics/" }
+  ]
+}

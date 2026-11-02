@@ -1,0 +1,34 @@
+{
+  "id": "arugula",
+  "summary": {
+    "pt": "A rúcula é uma folhosa de sabor picante que cresce muito rápido: dá para colher em 30–40 dias. Ótima para quem está começando e para canteiros pequenos.",
+    "en": "Arugula is a peppery leafy green that grows very fast: you can harvest in 30–40 days. Great for beginners and small beds."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [3, 4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [4, 5, 6, 7, 8, 9], "notes": { "pt": "No calor forte as folhas ficam duras e a planta floresce cedo; prefira a época mais fresca ou meia-sombra.", "en": "In strong heat leaves get tough and plants bolt early; prefer the cooler season or partial shade." } },
+    "subtropical": { "directSowing": [2, 3, 4, 5, 6, 7, 8, 9], "seedbed": [], "transplant": [], "harvest": [3, 4, 5, 6, 7, 8, 9, 10] },
+    "temperate": { "directSowing": [2, 3, 4, 8, 9, 10], "seedbed": [], "transplant": [], "harvest": [3, 4, 5, 6, 9, 10, 11] },
+    "semiarid": { "directSowing": [4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8], "notes": { "pt": "Com irrigação e, se possível, sombrite à tarde.", "en": "With irrigation and, if possible, afternoon shade cloth." } },
+    "cold": { "directSowing": [10, 11, 12, 1, 2], "seedbed": [], "transplant": [], "harvest": [11, 12, 1, 2, 3], "notes": { "pt": "Semeie depois das geadas fortes; aguenta frio leve.", "en": "Sow after hard frosts; tolerates light cold." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Planta de pouca exigência. Antes de semear, misture composto ou esterco curtido (ou cama de frango bem curtida) no canteiro. Se crescer devagar, faça uma cobertura leve com nitrogênio (ou esterco) 2–3 semanas após a germinação. Excesso de adubo deixa as folhas amargas.",
+      "en": "A light feeder. Before sowing, mix compost or aged manure (or well-aged poultry litter) into the bed. If growth is slow, side-dress lightly with nitrogen (or manure) 2–3 weeks after germination. Too much fertilizer makes leaves bitter."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Regue com frequência para o solo ficar sempre úmido, mas não encharque o canteiro (favorece doenças). Falta de água deixa a folha mais picante e faz florescer cedo.",
+      "en": "Water often to keep the soil evenly moist, but don't waterlog the bed (it invites disease). Lack of water makes leaves hotter and causes early bolting."
+    },
+    "other": {
+      "pt": "Semeie um pouco a cada 2–3 semanas para ter folhas sempre. Desbaste deixando 5–10 cm entre plantas. Pulgões e pulga-das-crucíferas (furinhos nas folhas) são as pragas mais comuns.",
+      "en": "Sow a little every 2–3 weeks for a steady supply. Thin to 5–10 cm between plants. Aphids and flea beetles (tiny holes in leaves) are the most common pests."
+    }
+  },
+  "sources": [
+    { "title": "Pesagro-Rio — Efeito do biofertilizante Agrobio na cultura da rúcula", "url": "https://www.rj.gov.br/pesagro/sites/default/files/arquivos_paginas/49%20Efeito%20do%20biofertilizante%20Agrobio%20na%20cultura%20da%20r%C3%BAcula.pdf" },
+    { "title": "UF/IFAS Extension Leon County — Arugula: Planting and Care", "url": "https://blogs.ifas.ufl.edu/leonco/2023/11/09/arugula-planting-and-care/" },
+    { "title": "SARE — Northeast Crop Production & Harvest Manual: Arugula", "url": "https://www.sare.org/publications/northeast-crop-production-harvest-manual/arugula/" }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "apple",
+  "summary": {
+    "pt": "Árvore frutífera de clima frio que começa a produzir do 3º–4º ano e dura décadas. Precisa de inverno frio para florescer e, em geral, de outra variedade por perto para polinizar.",
+    "en": "A cold-climate fruit tree that starts bearing from year 3–4 and lasts decades. It needs a cold winter to bloom and usually another variety nearby for pollination."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Sem frio no inverno a macieira não floresce direito e quase não produz. Só em serras altas e com variedades de pouco frio (Eva, Anna, Princesa).", "en": "Without winter cold the tree barely blooms or fruits. Only in high mountains with low-chill varieties (Eva, Anna, Princesa)." }
+    },
+    "subtropical": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [6, 7, 8],
+      "harvest": [12, 1, 2],
+      "notes": { "pt": "Use variedades de pouco frio (Eva, Anna, Condessa, Princesa: cerca de 350–450 horas abaixo de 7 °C). Plante a muda dormente no inverno.", "en": "Use low-chill varieties (Eva, Anna, Condessa, Princesa: about 350–450 hours below 7 °C). Plant dormant trees in winter." }
+    },
+    "temperate": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [6, 7, 8],
+      "harvest": [1, 2, 3, 4],
+      "notes": { "pt": "Clima ideal. Gala colhe fev–mar e Fuji mar–abr. Variedades comuns pedem 500–1.000 horas de frio.", "en": "Ideal climate. Gala is picked Feb–Mar and Fuji Mar–Apr. Common varieties need 500–1,000 chill hours." }
+    },
+    "semiarid": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [],
+      "notes": { "pt": "Sem frio, não produz no manejo comum. Só em pomar técnico irrigado, com variedades de pouco frio e desfolha forçada (experiências no Vale do São Francisco).", "en": "Without cold it doesn't fruit under normal care. Only in technical irrigated orchards with low-chill varieties and forced leaf drop (trials in Brazil's São Francisco Valley)." }
+    },
+    "cold": {
+      "directSowing": [],
+      "seedbed": [],
+      "transplant": [10, 11],
+      "harvest": [3, 4],
+      "notes": { "pt": "Aguenta inverno rigoroso. Plante na primavera, quando o solo descongelar, e escolha variedades resistentes ao frio.", "en": "Survives harsh winters. Plant in spring once the soil thaws, and choose cold-hardy varieties." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Faça calagem e corrija o fósforo antes de plantar, conforme análise de solo. Depois, adube com esterco curtido ou composto no fim do inverno e um pouco de NPK na primavera. Adubo demais faz muita folha e pouca fruta.",
+      "en": "Lime and correct phosphorus before planting, by soil test. Then apply rotted manure or compost in late winter and a little NPK in spring. Too much fertilizer gives lots of leaves and little fruit."
+    },
+    "pruning": {
+      "pt": "Poda de formação nos primeiros anos (líder central). Depois, poda de inverno com a planta dormente: tire ramos secos, cruzados e os que crescem para dentro. Poda verde no verão segura o tamanho.",
+      "en": "Training pruning in the first years (central leader). Later, winter pruning while dormant: remove dead, crossing and inward-growing branches. Summer pruning keeps size in check."
+    },
+    "watering": {
+      "pt": "Regue a muda nova toda semana no primeiro ano. Árvore adulta: regas fundas na seca, principalmente da florada até a colheita. Não deixe o solo encharcado.",
+      "en": "Water young trees weekly in the first year. Mature trees: deep watering in dry spells, especially from bloom to harvest. Don't let the soil stay soggy."
+    },
+    "other": {
+      "pt": "Sol pleno e solo fundo e bem drenado. Plante duas variedades que floresçam juntas para polinizar. Fique de olho na sarna-da-macieira e na mosca-das-frutas.",
+      "en": "Full sun and deep, well-drained soil. Plant two varieties that bloom together for pollination. Watch for apple scab and fruit flies."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Semiárido — Cultivo da macieira (cultivares de baixa exigência em frio)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1078736/1/CTE117.pdf" },
+    { "title": "Univasf — A cultura da maçã", "url": "https://frutvasf.univasf.edu.br/wp-content/uploads/2022/06/culturamaca.pdf" },
+    { "title": "University of Arizona Extension — Home Orchard Care", "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/attachment/homeorchardcare.pdf" },
+    { "title": "UC Marin Master Gardeners — Fruit Trees", "url": "https://marinmg.ucanr.edu/EDIBLES/FRUITTREES" }
+  ]
+}

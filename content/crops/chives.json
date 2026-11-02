@@ -1,0 +1,25 @@
+{
+  "id": "chives",
+  "summary": {
+    "pt": "Cebolinha: tempero perene de folhas finas e ocas, que rebrota depois de cada corte. Uma touceira bem cuidada dá folhas por anos, em canteiro ou vaso.",
+    "en": "Chives: a perennial herb with thin, hollow leaves that regrow after every cut. A well-kept clump yields leaves for years, in a bed or a pot."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [], "seedbed": [3, 4, 5, 6], "transplant": [3, 4, 5, 6, 7], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Plante mudas ou pedaços de touceira de preferência nos meses mais frescos e secos. Primeiro corte cerca de 2–3 meses depois; depois, colheita contínua.", "en": "Plant seedlings or clump divisions preferably in the cooler, drier months. First cut about 2–3 months later; then harvest continuously." } },
+    "subtropical": { "directSowing": [], "seedbed": [2, 3, 8, 9], "transplant": [3, 4, 9, 10], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Plante mudas no outono ou na primavera. Colheita contínua o ano todo.", "en": "Plant seedlings in autumn or spring. Continuous harvest all year." } },
+    "temperate": { "directSowing": [], "seedbed": [8], "transplant": [9, 10, 11], "harvest": [10, 11, 12, 1, 2, 3, 4], "notes": { "pt": "Plante touceiras depois das geadas. No inverno as folhas somem e a planta rebrota na primavera.", "en": "Plant clumps after frosts. Leaves die back in winter and regrow in spring." } },
+    "semiarid": { "directSowing": [], "seedbed": [3, 4, 5], "transplant": [4, 5, 6], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Com irrigação e um pouco de sombra nas horas mais quentes.", "en": "With irrigation and a little shade in the hottest hours." } },
+    "cold": { "directSowing": [], "seedbed": [9], "transplant": [10, 11], "harvest": [11, 12, 1, 2, 3], "notes": { "pt": "Muito resistente ao frio: a touceira dorme no inverno e volta na primavera.", "en": "Very cold-hardy: the clump goes dormant in winter and returns in spring." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Antes de plantar, misture composto ou esterco curtido no canteiro. Depois, adube pouco: uma cobertura leve com esterco, húmus ou um pouco de NPK a cada 2–3 meses, ou depois de cortes fortes. Em vaso, adubo líquido fraco a cada 4–6 semanas.", "en": "Before planting, mix compost or aged manure into the bed. After that, feed lightly: a light side-dressing of manure, worm castings or a little NPK every 2–3 months or after heavy cuts. In pots, use half-strength liquid fertilizer every 4–6 weeks." },
+    "pruning": { "pt": "Corte as folhas a 3–5 cm do chão; a planta rebrota. Corte as flores se quiser mais folhas. A cada 3–4 anos, divida a touceira para renovar.", "en": "Cut leaves 3–5 cm above the soil; the plant regrows. Remove flowers if you want more leaves. Every 3–4 years, divide the clump to renew it." },
+    "watering": { "pt": "Mantenha o solo levemente úmido, sem encharcar. No calor, regue todo dia ou em dias alternados.", "en": "Keep soil lightly moist, not soggy. In hot weather, water daily or every other day." },
+    "other": { "pt": "Sol pleno (ou meia-sombra no calor forte) e solo bem drenado, rico em matéria orgânica. Espaçamento de 10–15 cm entre mudas. Mantenha o canteiro sem mato.", "en": "Full sun (or partial shade in strong heat) and well-drained soil rich in organic matter. Space plants 10–15 cm apart. Keep the bed weed-free." }
+  },
+  "sources": [
+    { "title": "Embrapa Hortaliças — Catálogo de hortaliças", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/887213/1/Catalogohortalicas.pdf" },
+    { "title": "University of Minnesota Extension — Growing chives in home gardens", "url": "https://extension.umn.edu/vegetables/growing-chives-home-gardens" },
+    { "title": "Utah State University Extension — Chives in the garden", "url": "https://extension.usu.edu/yardandgarden/research/chives-in-the-garden" }
+  ]
+}

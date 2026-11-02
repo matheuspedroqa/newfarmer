@@ -1,0 +1,64 @@
+{
+  "id": "barley",
+  "summary": {
+    "pt": "A cevada é um cereal de inverno de ciclo curto, usado para cerveja (malte), ração e pasto. Aguenta seca e solo pobre melhor que o trigo.",
+    "en": "Barley is a short-cycle cool-season cereal used for beer (malt), feed and pasture. It handles drought and poor soil better than wheat."
+  },
+  "calendar": {
+    "tropical": {
+      "directSowing": [5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [9, 10],
+      "notes": { "pt": "Só em regiões altas, na seca, com irrigação (como no Cerrado com pivô).", "en": "Only in highlands, in the dry season, with irrigation (e.g. center-pivot in the Brazilian savanna)." }
+    },
+    "subtropical": {
+      "directSowing": [6, 7],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [10, 11, 12]
+    },
+    "temperate": {
+      "directSowing": [3, 4, 9],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [12, 1, 2],
+      "notes": { "pt": "Cevada de inverno: semeie no outono (mar–abr). Cevada de primavera: semeie cedo, assim que der para trabalhar o solo (set).", "en": "Winter barley: sow in autumn (Mar–Apr). Spring barley: sow early, as soon as the soil can be worked (Sep)." }
+    },
+    "semiarid": {
+      "directSowing": [5, 6],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [9, 10],
+      "notes": { "pt": "Semeie com as chuvas da estação fresca; é dos cereais que mais aguentam seca.", "en": "Sow with the cool-season rains; it is one of the most drought-tolerant cereals." }
+    },
+    "cold": {
+      "directSowing": [10, 11],
+      "seedbed": [],
+      "transplant": [],
+      "harvest": [2, 3],
+      "notes": { "pt": "Cevada de primavera, semeada cedo; o ciclo curto cabe no verão curto.", "en": "Spring barley sown early; its short cycle fits a short summer." }
+    }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "Corrija a acidez com calcário: a cevada sofre muito em solo ácido. No plantio, NPK com fósforo e potássio. Nitrogênio com moderação (no máximo uns 60 kg/ha de N para cerveja): demais deixa o grão com muita proteína, ruim para malte, e faz a planta tombar.",
+      "en": "Lime acid soils: barley suffers badly in acidity. At sowing, use an NPK with phosphorus and potassium. Go easy on nitrogen (about 60 kg/ha N at most for malting): too much raises grain protein, which maltsters reject, and makes plants lodge."
+    },
+    "pruning": null,
+    "watering": {
+      "pt": "Normalmente basta a chuva. A fase mais sensível à falta de água é o espigamento. Chuva na colheita faz o grão germinar na espiga.",
+      "en": "Rain is usually enough. Heading is the stage most sensitive to drought. Rain at harvest makes grain sprout in the head."
+    },
+    "other": {
+      "pt": "Pleno sol e solo bem drenado. Colha logo que o grão secar. Para cerveja, combine a venda com a maltaria antes de plantar. Fique de olho em manchas nas folhas e giberela.",
+      "en": "Full sun and well-drained soil. Harvest as soon as the grain dries. For malting, arrange a contract with the maltster before sowing. Watch for leaf spots and head blight."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Cerrados — Circular técnica 26: cevada cervejeira irrigada no Cerrado", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/569238/1/cirtec26.pdf" },
+    { "title": "Embrapa Trigo — Indicações técnicas para a produção de cevada cervejeira, safras 2019 e 2020", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1115411/1/ID447872019SP10RNPC32indicacoes.pdf" },
+    { "title": "North Dakota State University Extension — Fertilizing malting and feed barley (SF723)", "url": "https://www.ndsu.edu/agriculture/sites/default/files/2023-07/sf723.pdf" },
+    { "title": "Washington State University Extension — Malting barley production (FS356E)", "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2056/2023/06/FS356E.pdf" }
+  ]
+}

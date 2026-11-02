@@ -1,0 +1,37 @@
+{
+  "id": "stevia",
+  "summary": {
+    "pt": "A estévia é uma planta perene nativa do Paraguai e do sul do Brasil cujas folhas são muito doces e servem como adoçante natural. Produz bem por cerca de 3 anos, com vários cortes por ano.",
+    "en": "Stevia is a perennial native to Paraguay and southern Brazil whose very sweet leaves are used as a natural sweetener. It yields well for about 3 years, with several cuts per year."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [], "seedbed": [], "transplant": [10, 11, 12, 1], "harvest": [1, 2, 3, 4, 5, 6, 7], "notes": { "pt": "Plante as mudas no início das chuvas; corte a cada 2–3 meses, sempre antes da floração.", "en": "Plant at the start of the rains; cut every 2–3 months, always before flowering." } },
+    "subtropical": { "directSowing": [], "seedbed": [], "transplant": [9, 10, 11], "harvest": [12, 1, 2, 3, 4], "notes": { "pt": "No inverno a planta para de crescer; corte rente e ela rebrota na primavera.", "en": "Growth stops in winter; cut back low and it regrows in spring." } },
+    "temperate": { "directSowing": [], "seedbed": [], "transplant": [10, 11], "harvest": [1, 2, 3, 4], "notes": { "pt": "Sensível a geada: cubra a base com palha ou mantenha em vaso abrigado no inverno.", "en": "Frost-tender: mulch the base or keep it in a sheltered pot over winter." } },
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [1, 2, 3], "harvest": [4, 5, 6, 7, 8, 9], "notes": { "pt": "Só com irrigação regular: não tolera falta d'água.", "en": "Only with regular irrigation: it does not tolerate drought." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [11, 12], "harvest": [2, 3], "notes": { "pt": "Cultive como anual de verão ou em vaso, levando para dentro antes da primeira geada.", "en": "Grow as a summer annual or in a pot, bringing it indoors before the first frost." } }
+  },
+  "care": {
+    "fertilizing": {
+      "pt": "No plantio, coloque composto ou esterco curtido no sulco. Depois de cada corte, uma cobertura leve com composto ou um pouco de nitrogênio ajuda a rebrotar. Não exagere: planta adubada demais adoece mais.",
+      "en": "At planting, put compost or aged manure in the furrow. After each cut, a light side-dress of compost or a little nitrogen helps regrowth. Don't overdo it: overfed plants get more diseases."
+    },
+    "pruning": {
+      "pt": "Corte as pontas quando a planta tiver uns 20 cm para ficar mais cheia. Na colheita, corte os ramos a 10 cm do chão, antes de abrirem as flores (as folhas ficam menos doces depois).",
+      "en": "Pinch tips when plants are about 20 cm tall so they bush out. At harvest, cut stems 10 cm above ground before flowers open (leaves get less sweet afterwards)."
+    },
+    "watering": {
+      "pt": "Mantenha o solo sempre levemente úmido, sem encharcar. Use cobertura morta (palha) para segurar a umidade.",
+      "en": "Keep soil evenly moist but not waterlogged. Use mulch (straw) to hold moisture."
+    },
+    "other": {
+      "pt": "Plante mudas (estacas), pois a semente germina mal. Sol pleno, solo bem drenado, cerca de 20–30 cm entre plantas e 50 cm entre linhas. Seque as folhas à sombra logo após o corte. Renove o plantio a cada 3 anos.",
+      "en": "Plant cuttings, since seed germinates poorly. Full sun, well-drained soil, about 20–30 cm between plants and 50 cm between rows. Dry leaves in the shade right after cutting. Replant every 3 years."
+    }
+  },
+  "sources": [
+    { "title": "Embrapa Agropecuária Oeste — Estévia (Sistemas de Produção 5)", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/247888/1/SP52004.pdf" },
+    { "title": "University of Kentucky CCD — Stevia (Crop Profile)", "url": "https://ccd.uky.edu/sites/default/files/2024-11/ccd-cp-055_stevia.pdf" },
+    { "title": "Kansas State University — Stevia herb (MF2630)", "url": "https://bookstore.ksre.ksu.edu/download/stevia-herb_MF2630" }
+  ]
+}

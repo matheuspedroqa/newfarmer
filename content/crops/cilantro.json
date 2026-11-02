@@ -1,0 +1,26 @@
+{
+  "id": "cilantro",
+  "summary": {
+    "pt": "Coentro: tempero de ciclo curto, semeado direto no canteiro e colhido em 40–60 dias. Fácil e barato de plantar, ótimo para semeaduras escalonadas.",
+    "en": "Cilantro (coriander): a short-cycle herb sown directly in the bed and harvested in 40–60 days. Easy and cheap to grow, great for staggered sowings."
+  },
+  "calendar": {
+    "tropical": { "directSowing": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "seedbed": [], "transplant": [], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Pode semear o ano todo. No calor forte floresce cedo: use variedades adaptadas ao calor e semeie a cada 2–3 semanas.", "en": "Can be sown year-round. In strong heat it bolts early: use heat-tolerant varieties and sow every 2–3 weeks." } },
+    "subtropical": { "directSowing": [2, 3, 4, 5, 8, 9, 10], "seedbed": [], "transplant": [], "harvest": [4, 5, 6, 7, 10, 11, 12], "notes": { "pt": "Melhor no outono e na primavera; no verão quente floresce rápido.", "en": "Best in autumn and spring; in hot summers it bolts fast." } },
+    "temperate": { "directSowing": [3, 9, 10, 11], "seedbed": [], "transplant": [], "harvest": [5, 10, 11, 12, 1], "notes": { "pt": "Semeie na primavera depois das geadas e de novo no fim do verão. Tolera frio leve.", "en": "Sow in spring after frosts and again in late summer. Tolerates light frost." } },
+    "semiarid": { "directSowing": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "seedbed": [], "transplant": [], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Muito plantado no Nordeste com irrigação o ano todo; meia-sombra ajuda no calor.", "en": "Widely grown in Brazil's semi-arid Northeast with year-round irrigation; partial shade helps in the heat." } },
+    "cold": { "directSowing": [10, 11, 12], "seedbed": [], "transplant": [], "harvest": [12, 1, 2], "notes": { "pt": "Só no verão curto, depois das geadas.", "en": "Only in the short summer, after frosts." } }
+  },
+  "care": {
+    "fertilizing": { "pt": "Antes de semear, misture composto ou esterco curtido no canteiro e corrija a acidez com calcário. Se precisar, faça coberturas leves (esterco, húmus ou um pouco de nitrogênio) aos 10, 20 e 30 dias. Excesso de nitrogênio tira o sabor.", "en": "Before sowing, mix compost or aged manure into the bed and lime acidic soil. If needed, side-dress lightly (manure, worm castings or a little nitrogen) at 10, 20 and 30 days. Too much nitrogen reduces flavor." },
+    "pruning": null,
+    "watering": { "pt": "Regue com frequência para o solo ficar sempre úmido, principalmente na germinação. Falta de água faz a planta florescer antes da hora.", "en": "Water often to keep soil moist, especially during germination. Drought makes it bolt early." },
+    "other": { "pt": "Semeie em sulcos a 1 cm de profundidade, 20 cm entre linhas, e afine as plantas. Sol pleno no clima ameno, meia-sombra no calor. Colha cortando as folhas antes de a planta florescer.", "en": "Sow in rows 1 cm deep, 20 cm apart, and thin seedlings. Full sun in mild weather, partial shade in heat. Harvest by cutting leaves before the plant flowers." }
+  },
+  "sources": [
+    { "title": "Embrapa — Recomendação de calagem e adubação: coentro, salsa e cebolinha", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1127293/1/LV-RecomendacaoSolo-2020-299-301.pdf" },
+    { "title": "Embrapa Hortaliças — Catálogo de hortaliças", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/887213/1/Catalogohortalicas.pdf" },
+    { "title": "Utah State University Extension — Cilantro/Coriander in the garden", "url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden.php" },
+    { "title": "Texas A&M AgriLife Extension — Easy Gardening: Cilantro", "url": "https://agrilifeextension.tamu.edu/asset-external/easy-gardening-cilantro" }
+  ]
+}
