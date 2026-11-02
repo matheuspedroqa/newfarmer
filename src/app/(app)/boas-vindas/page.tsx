@@ -2,12 +2,12 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { saveFarmAndContinueAction } from "@/app/actions/farm";
 import { FarmForm } from "@/components/FarmForm";
-import { getCurrentUser } from "@/server/current-user";
+import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getFarm } from "@/server/farm";
 
 export default async function WelcomeFarmPage() {
-  const user = (await getCurrentUser())!;
+  const user = await requireUser();
   const t = await getTranslations("farm");
   return (
     <section className="max-w-4xl">

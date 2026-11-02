@@ -1,14 +1,12 @@
 import { getTranslations } from "next-intl/server";
-import { redirect } from "next/navigation";
 import { logoutAction } from "@/app/actions/auth";
 import { NavRail } from "@/components/NavRail";
 import { TopControls } from "@/components/TopControls";
 import { UserMenu } from "@/components/UserMenu";
-import { getCurrentUser } from "@/server/current-user";
+import { requireUser } from "@/server/current-user";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
-  const user = await getCurrentUser();
-  if (!user) redirect("/login");
+  const user = await requireUser();
   const t = await getTranslations();
 
   // Trilho de ícones da variante D. MyFarm e Perfil ficam no menu da conta.

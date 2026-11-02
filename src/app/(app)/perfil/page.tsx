@@ -1,10 +1,10 @@
 import { getTranslations } from "next-intl/server";
-import { getCurrentUser } from "@/server/current-user";
+import { requireUser } from "@/server/current-user";
 import { LanguageForm } from "./LanguageForm";
 import { PasswordForm } from "./PasswordForm";
 
 export default async function ProfilePage() {
-  const user = (await getCurrentUser())!;
+  const user = await requireUser();
   const t = await getTranslations();
   const info: [string, string][] = [
     [t("profile.name"), user.name],

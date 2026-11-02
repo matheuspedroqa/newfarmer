@@ -15,8 +15,8 @@ Usuário do MVP: o próprio dono do projeto, rodando no computador local. A arqu
 - Login estilizado (tema rural), cadastro em 2 etapas, logout.
 - Recuperação de senha por e-mail, usando uma caixa de e-mail de teste local (`/dev/inbox`).
 - Perfil "Minha fazenda" no cadastro (etapa 2, pulável) e editável no menu **MyFarm**: animais possuídos com quantidade, plantações cultivadas, troca de cidade.
-- Painel (Dashboard), Animais (6), Plantações (4 grupos × 5), Clima (5 dias, API real).
-- Idiomas: português (padrão) e inglês, toggle no canto superior direito.
+- Painel (Dashboard), Animais (6), Plantações (100 culturas em 4 grupos — ficha simples), Clima (5 dias, API real).
+- Idiomas: inglês (padrão) e português, toggle no canto superior direito e escolha no Perfil.
 - Modo claro e noturno, toggle no canto superior direito.
 - Conteúdo pesquisado na internet, em PT e EN, com fontes citadas em cada ficha.
 
@@ -82,7 +82,7 @@ Todas as telas têm no canto superior direito: toggle de idioma **PT / EN** e to
 ### Animais
 Galinhas, Porcos, Vacas, Ovelhas, Cabras, Patos.
 
-### Plantações (20)
+### Plantações (lista original de 20 — ampliada para 100, ver seção 12)
 - Hortaliças: alface, tomate, couve, cenoura, cebola
 - Grãos: milho, feijão, arroz, trigo, soja
 - Frutas: banana, laranja, maracujá, morango, mamão
@@ -154,3 +154,13 @@ Todas as mensagens existem em PT e EN.
 - **Teste real do clima** (comando separado `npm run test:live`): chama a Open-Meteo de verdade para uma cidade conhecida e confere o formato da resposta. Não roda junto com os demais.
 
 Uma tarefa só está pronta quando os testes dela passam (TDD: teste antes, código depois).
+
+## 12. Mudanças pedidas pelo usuário depois da aprovação (2026-10-29 a 2026-11-02)
+
+Estas decisões valem sobre o texto acima quando houver conflito.
+
+- **Menu da conta** no cabeçalho, à esquerda do "Sair": **MyFarm** (animais, quantidades, plantações e cidade do clima) e **Perfil** (informações pessoais, troca de senha com a senha atual, escolha do idioma). MyFarm saiu do trilho de ícones.
+- **Idioma padrão: inglês** (sem cookie nem preferência salva). Contas novas herdam o idioma da tela de cadastro.
+- **Animais:** "melhor manual" de cada um feito a partir de uma base de conhecimento de 9 países (BR, US, CA, DE, ES, FR, PT, IT, MX) em `knowledge/`, com bloco **"No seu país"** mostrado conforme o país da cidade do cadastro.
+- **Plantações:** as **100 culturas** mais conhecidas (30 hortaliças, 15 grãos e leguminosas, 30 frutas e árvores frutíferas, 25 raízes, ervas e temperos) com ficha **simples**: épocas de plantio por tipo de clima e hemisfério, adubação e cuidados básicos (`content/crops/GUIDE.md`). Sem bloco por país.
+- "Conforme a localidade" = tipo de clima e hemisfério da cidade do cadastro (não há calendário país a país).

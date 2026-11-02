@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { LOCALE_COOKIE, SESSION_COOKIE, THEME_COOKIE } from "@/lib/cookies";
 import type { User } from "./accounts";
 import { getDb } from "./db";
@@ -9,6 +10,13 @@ const ONE_YEAR_S = 365 * 24 * 60 * 60;
 export async function getCurrentUser(): Promise<User | null> {
   const token = (await cookies()).get(SESSION_COOKIE)?.value;
   return token ? getSessionUser(getDb(), token) : null;
+}
+
+/** Usuário logado ou redireciona para /login (sessão vencida não quebra a página). */
+export async function requireUser(): Promise<User> {
+  const user = await getCurrentUser();
+  if (!user) redirect("/login");
+  return user;
 }
 
 export async function startSession(user: User): Promise<void> {

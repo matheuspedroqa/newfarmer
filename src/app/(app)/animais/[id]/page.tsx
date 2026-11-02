@@ -8,14 +8,14 @@ import { resolveLocale } from "@/i18n/locales";
 import { ANIMALS, ANIMAL_IDS, type AnimalId } from "@/lib/catalog";
 import { seasonFor, type Season } from "@/lib/seasons";
 import { getAnimalContent } from "@/server/content";
-import { getCurrentUser } from "@/server/current-user";
+import { requireUser } from "@/server/current-user";
 
 const SEASONS: Season[] = ["summer", "autumn", "winter", "spring"];
 
 export default async function AnimalPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   if (!(ANIMAL_IDS as readonly string[]).includes(id)) notFound();
-  const user = (await getCurrentUser())!;
+  const user = await requireUser();
   const t = await getTranslations();
   const locale = resolveLocale(await getLocale());
   const content = getAnimalContent(id as AnimalId);

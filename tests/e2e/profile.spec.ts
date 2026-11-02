@@ -86,3 +86,12 @@ test("Perfil exige login", async ({ page }) => {
   await page.goto("/perfil");
   await expect(page).toHaveURL(/\/login$/);
 });
+
+test("sessão vencida ou falsa volta para a entrada em vez de dar erro", async ({ page, context }) => {
+  await context.addCookies([{ name: "nf_session", value: "sessao-que-nao-existe", domain: "localhost", path: "/" }]);
+  for (const path of ["/painel", "/perfil", "/plantacoes/tomato", "/animais/chickens"]) {
+    const response = await page.goto(path);
+    await expect(page).toHaveURL(/\/login$/);
+    expect(response?.status()).toBeLessThan(500);
+  }
+});

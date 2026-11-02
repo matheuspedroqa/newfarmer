@@ -5,7 +5,7 @@ import { resolveLocale } from "@/i18n/locales";
 import { ANIMALS, CROPS } from "@/lib/catalog";
 import { monthlyTasks, seasonFor } from "@/lib/seasons";
 import { getAllCropContent, getAnimalContent } from "@/server/content";
-import { getCurrentUser } from "@/server/current-user";
+import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getFarm } from "@/server/farm";
 import { getForecast } from "@/server/forecast";
@@ -18,7 +18,7 @@ const TILE_COLORS = [
 ];
 
 export default async function DashboardPage() {
-  const user = (await getCurrentUser())!;
+  const user = await requireUser();
   const t = await getTranslations();
   const db = getDb();
   const farm = getFarm(db, user.id);
@@ -36,7 +36,6 @@ export default async function DashboardPage() {
   const tips = farm.animals
     .map((a) => ({ id: a.id, content: getAnimalContent(a.id) }))
     .filter((a) => a.content)
-    .slice(0, 3)
     .map((a) => ({ id: a.id, text: a.content!.seasonalCare[user.climateZone][season][locale] }));
 
   return (

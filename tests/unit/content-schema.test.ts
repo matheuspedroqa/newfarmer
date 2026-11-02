@@ -49,7 +49,6 @@ describe("countryNotes (bloco 'No seu país')", () => {
 
   it("aceita notas por país da base de conhecimento", () => {
     expect(animalContentSchema.safeParse({ ...animal, countryNotes: { BR: note, PT: note } }).success).toBe(true);
-    expect(cropContentSchema.safeParse({ ...crop, countryNotes: { US: note } }).success).toBe(true);
   });
 
   it("recusa país fora da base, nota com menos de 2 destaques ou sem fonte", () => {

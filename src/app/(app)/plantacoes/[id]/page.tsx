@@ -1,19 +1,18 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CountryNotes } from "@/components/CountryNotes";
 import { MonthCalendar } from "@/components/MonthCalendar";
 import { SourcesList } from "@/components/SourcesList";
 import { resolveLocale } from "@/i18n/locales";
 import { CROPS, CROP_IDS, type CropId } from "@/lib/catalog";
 import { ACTIVITIES, userCalendar } from "@/lib/seasons";
 import { getCropContent } from "@/server/content";
-import { getCurrentUser } from "@/server/current-user";
+import { requireUser } from "@/server/current-user";
 
 export default async function CropPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   if (!(CROP_IDS as readonly string[]).includes(id)) notFound();
-  const user = (await getCurrentUser())!;
+  const user = await requireUser();
   const t = await getTranslations();
   const locale = resolveLocale(await getLocale());
   const content = getCropContent(id as CropId);
@@ -59,8 +58,6 @@ export default async function CropPage({ params }: { params: Promise<{ id: strin
         )}
         {zoneCal.notes && <p className="mt-3 text-sm text-muted">{tx(zoneCal.notes)}</p>}
       </section>
-
-      <CountryNotes notes={content.countryNotes} countryCode={user.countryCode} />
 
       <div className="grid grid-cols-2 gap-4">
         {(["fertilizing", "watering", "other"] as const).map((k) => (

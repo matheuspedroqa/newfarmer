@@ -45,6 +45,5 @@ export const cropContentSchema = z.object({
   calendar: zones(calendarSchema),
   care: z.object({ fertilizing: textSchema, pruning: textSchema.nullable(), watering: textSchema, other: textSchema }),
   sources: z.array(sourceSchema).min(2),
-  countryNotes: countryNotesSchema,
 });
 export type CropContent = z.infer<typeof cropContentSchema>;
