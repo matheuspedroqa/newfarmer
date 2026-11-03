@@ -22,8 +22,8 @@ const TILE_COLORS = [
 export default async function DashboardPage() {
   const user = await requireUser();
   const t = await getTranslations();
-  const db = getDb();
-  const farm = getFarm(db, user.id);
+  const db = await getDb();
+  const farm = await getFarm(db, user.id);
   const forecast = await getForecast(db, getWeatherProvider(), user.latitude, user.longitude);
   const icon = (id: string) => ANIMALS.find((a) => a.id === id)!.icon;
   const locale = resolveLocale(await getLocale());
@@ -35,7 +35,7 @@ export default async function DashboardPage() {
     user.hemisphere,
     month,
   );
-  const recentNotes = listDiary(db, user.id, { limit: 3 });
+  const recentNotes = await listDiary(db, user.id, { limit: 3 });
   const tips = farm.animals
     .map((a) => ({ id: a.id, content: getAnimalContent(a.id) }))
     .filter((a) => a.content)

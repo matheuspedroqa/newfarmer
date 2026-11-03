@@ -19,7 +19,7 @@ export async function changePasswordAction(_prev: FormState, formData: FormData)
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error) };
 
   const result = await changePassword(
-    getDb(),
+    (await getDb()),
     user.id,
     parsed.data.currentPassword,
     parsed.data.password,

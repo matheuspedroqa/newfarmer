@@ -22,7 +22,7 @@ const base = { baseUrl: "http://localhost:3000", locale: "pt" as const };
 
 describe("requestPasswordReset", () => {
   it("envia um e-mail com link para quem tem conta", async () => {
-    const db = testDb();
+    const db = await testDb();
     await makeUser(db);
     const { sent, mailer } = captureMailer();
     await requestPasswordReset(db, mailer, { ...base, email: "ANA@exemplo.com" });
@@ -33,7 +33,7 @@ describe("requestPasswordReset", () => {
   });
 
   it("usa o idioma pedido", async () => {
-    const db = testDb();
+    const db = await testDb();
     await makeUser(db);
     const { sent, mailer } = captureMailer();
     await requestPasswordReset(db, mailer, { ...base, email: "ana@exemplo.com", locale: "en" });
@@ -41,14 +41,14 @@ describe("requestPasswordReset", () => {
   });
 
   it("não envia nada nem dá erro para e-mail sem conta", async () => {
-    const db = testDb();
+    const db = await testDb();
     const { sent, mailer } = captureMailer();
     await expect(requestPasswordReset(db, mailer, { ...base, email: "nao@existe.com" })).resolves.toBeUndefined();
     expect(sent).toHaveLength(0);
   });
 
   it("protege o e-mail contra nomes com código", async () => {
-    const db = testDb();
+    const db = await testDb();
     await makeUser(db, { name: "<script>alert(1)</script>" });
     const { sent, mailer } = captureMailer();
     await requestPasswordReset(db, mailer, { ...base, email: "ana@exemplo.com" });
@@ -59,7 +59,7 @@ describe("requestPasswordReset", () => {
 
 describe("resetPassword", () => {
   async function setup() {
-    const db = testDb();
+    const db = await testDb();
     const userId = await makeUser(db);
     const { sent, mailer } = captureMailer();
     await requestPasswordReset(db, mailer, { ...base, email: "ana@exemplo.com" }, 0);
@@ -91,18 +91,18 @@ describe("resetPassword", () => {
 
   it("trocar a senha desconecta as sessões abertas", async () => {
     const { db, userId, token } = await setup();
-    const session = createSession(db, userId);
+    const session = await createSession(db, userId);
     await resetPassword(db, { token, password: "nova-senha-1" }, 1000);
-    expect(getSessionUser(db, session)).toBeNull();
+    expect(await getSessionUser(db, session)).toBeNull();
   });
 });
 
 describe("caixa de e-mail de teste", () => {
   it("guarda os e-mails e lista do mais novo para o mais antigo", async () => {
-    const db = testDb();
+    const db = await testDb();
     const mailer = createDevInboxMailer(db);
     await mailer.send({ to: "a@x.com", subject: "primeiro", html: "<p>1</p>" });
     await mailer.send({ to: "b@x.com", subject: "segundo", html: "<p>2</p>" });
-    expect(listDevEmails(db).map((e) => e.subject)).toEqual(["segundo", "primeiro"]);
+    expect((await listDevEmails(db)).map((e) => e.subject)).toEqual(["segundo", "primeiro"]);
   });
 });

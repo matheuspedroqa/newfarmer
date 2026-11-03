@@ -7,12 +7,12 @@ import { makeUser } from "../helpers/users";
 
 describe("changeCity", () => {
   it("troca a cidade e recalcula clima e hemisfério", async () => {
-    const db = testDb();
+    const db = await testDb();
     const id = await makeUser(db);
     const provider = createFakeWeatherProvider();
     const [lisboa] = await provider.searchCities("Lisboa", "pt");
     await changeCity(db, provider, id, lisboa);
-    expect(getUserById(db, id)).toMatchObject({
+    expect(await getUserById(db, id)).toMatchObject({
       cityLabel: "Lisboa, Lisboa, Portugal",
       latitude: 38.72,
       countryCode: "PT",
@@ -23,10 +23,10 @@ describe("changeCity", () => {
   });
 
   it("serviço de clima fora: estima pela latitude", async () => {
-    const db = testDb();
+    const db = await testDb();
     const id = await makeUser(db);
     const [campinas] = await createFakeWeatherProvider().searchCities("Campinas", "pt");
     await changeCity(db, createFakeWeatherProvider({ failNormals: true }), id, campinas);
-    expect(getUserById(db, id)).toMatchObject({ climateZone: "tropical", climateEstimated: true });
+    expect(await getUserById(db, id)).toMatchObject({ climateZone: "tropical", climateEstimated: true });
   });
 });

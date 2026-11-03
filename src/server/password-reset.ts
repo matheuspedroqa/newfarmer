@@ -27,17 +27,15 @@ export async function requestPasswordReset(
   now = Date.now(),
 ): Promise<void> {
   const email = input.email.trim().toLowerCase();
-  const user = db.prepare("SELECT id, name FROM users WHERE email = ?").get(email) as
-    | { id: number; name: string }
-    | undefined;
+  const [user] = await db.query<{ id: number; name: string }>("SELECT id, name FROM users WHERE email = $1", [email]);
   if (!user) return;
 
   const token = newToken();
-  db.prepare("INSERT INTO password_reset_tokens (user_id, token_hash, expires_at) VALUES (?, ?, ?)").run(
+  await db.run("INSERT INTO password_reset_tokens (user_id, token_hash, expires_at) VALUES ($1, $2, $3)", [
     user.id,
     hashToken(token),
     now + RESET_TTL_MS,
-  );
+  ]);
 
   const texts = EMAIL_TEXTS[input.locale];
   const link = `${input.baseUrl}/recuperar/${token}`;
@@ -53,15 +51,15 @@ export async function resetPassword(
   input: { token: string; password: string },
   now = Date.now(),
 ): Promise<"ok" | "expired"> {
-  const row = db
-    .prepare("SELECT id, user_id, expires_at, used_at FROM password_reset_tokens WHERE token_hash = ?")
-    .get(hashToken(input.token)) as
-    | { id: number; user_id: number; expires_at: number; used_at: number | null }
-    | undefined;
-  if (!row || row.used_at !== null || row.expires_at <= now) return "expired";
+  // Confere e marca como usado num só comando: dois envios ao mesmo tempo não usam o link duas vezes.
+  const [row] = await db.query<{ user_id: number }>(
+    `UPDATE password_reset_tokens SET used_at = $1
+     WHERE token_hash = $2 AND used_at IS NULL AND expires_at > $1 RETURNING user_id`,
+    [now, hashToken(input.token)],
+  );
+  if (!row) return "expired";
 
-  db.prepare("UPDATE password_reset_tokens SET used_at = ? WHERE id = ?").run(now, row.id);
   await setPassword(db, row.user_id, input.password);
-  deleteUserSessions(db, row.user_id);
+  await deleteUserSessions(db, row.user_id);
   return "ok";
 }

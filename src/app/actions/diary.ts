@@ -17,13 +17,13 @@ export async function addDiaryAction(_prev: FormState, formData: FormData): Prom
     note: formData.get("note"),
   });
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error) };
-  addDiaryEntry(getDb(), user.id, parsed.data);
+  await addDiaryEntry((await getDb()), user.id, parsed.data);
   revalidatePath("/", "layout");
   return { done: true };
 }
 
 export async function deleteDiaryAction(formData: FormData): Promise<void> {
   const user = await requireUser();
-  deleteDiaryEntry(getDb(), user.id, Number(formData.get("id")));
+  await deleteDiaryEntry((await getDb()), user.id, Number(formData.get("id")));
   revalidatePath("/", "layout");
 }

@@ -11,46 +11,46 @@ import { makeUser } from "../helpers/users";
 
 describe("sessões", () => {
   it("cria uma sessão e encontra o usuário pelo token", async () => {
-    const db = testDb();
+    const db = await testDb();
     const id = await makeUser(db);
-    const token = createSession(db, id, 0);
-    expect(getSessionUser(db, token, 1)?.id).toBe(id);
+    const token = await createSession(db, id, 0);
+    expect((await getSessionUser(db, token, 1))?.id).toBe(id);
   });
 
   it("não guarda o token em texto no banco", async () => {
-    const db = testDb();
-    const token = createSession(db, await makeUser(db));
-    const row = db.prepare("SELECT token_hash FROM sessions").get() as { token_hash: string };
+    const db = await testDb();
+    const token = await createSession(db, await makeUser(db));
+    const [row] = await db.query<{ token_hash: string }>("SELECT token_hash FROM sessions");
     expect(row.token_hash).not.toBe(token);
   });
 
   it("sessão vencida não vale e é apagada", async () => {
-    const db = testDb();
-    const token = createSession(db, await makeUser(db), 0);
-    expect(getSessionUser(db, token, SESSION_TTL_MS + 1)).toBeNull();
-    expect(db.prepare("SELECT COUNT(*) AS n FROM sessions").get()).toEqual({ n: 0 });
+    const db = await testDb();
+    const token = await createSession(db, await makeUser(db), 0);
+    expect(await getSessionUser(db, token, SESSION_TTL_MS + 1)).toBeNull();
+    expect(await db.query("SELECT COUNT(*)::int AS n FROM sessions")).toEqual([{ n: 0 }]);
   });
 
-  it("token desconhecido ou vazio não vale", () => {
-    const db = testDb();
-    expect(getSessionUser(db, "inventado")).toBeNull();
-    expect(getSessionUser(db, "")).toBeNull();
+  it("token desconhecido ou vazio não vale", async () => {
+    const db = await testDb();
+    expect(await getSessionUser(db, "inventado")).toBeNull();
+    expect(await getSessionUser(db, "")).toBeNull();
   });
 
   it("sair apaga a sessão", async () => {
-    const db = testDb();
-    const token = createSession(db, await makeUser(db));
-    deleteSession(db, token);
-    expect(getSessionUser(db, token)).toBeNull();
+    const db = await testDb();
+    const token = await createSession(db, await makeUser(db));
+    await deleteSession(db, token);
+    expect(await getSessionUser(db, token)).toBeNull();
   });
 
   it("deleteUserSessions apaga todas as sessões do usuário", async () => {
-    const db = testDb();
+    const db = await testDb();
     const id = await makeUser(db);
-    const a = createSession(db, id);
-    const b = createSession(db, id);
-    deleteUserSessions(db, id);
-    expect(getSessionUser(db, a)).toBeNull();
-    expect(getSessionUser(db, b)).toBeNull();
+    const a = await createSession(db, id);
+    const b = await createSession(db, id);
+    await deleteUserSessions(db, id);
+    expect(await getSessionUser(db, a)).toBeNull();
+    expect(await getSessionUser(db, b)).toBeNull();
   });
 });

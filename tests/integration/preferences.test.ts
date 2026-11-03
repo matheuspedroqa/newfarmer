@@ -6,16 +6,16 @@ import { makeUser } from "../helpers/users";
 
 describe("setPreferences", () => {
   it("salva idioma e tema na conta", async () => {
-    const db = testDb();
+    const db = await testDb();
     const id = await makeUser(db);
-    setPreferences(db, id, { locale: "en", theme: "dark" });
-    expect(getUserById(db, id)).toMatchObject({ locale: "en", theme: "dark" });
+    await setPreferences(db, id, { locale: "en", theme: "dark" });
+    expect(await getUserById(db, id)).toMatchObject({ locale: "en", theme: "dark" });
   });
 
   it("muda só o que foi pedido", async () => {
-    const db = testDb();
+    const db = await testDb();
     const id = await makeUser(db);
-    setPreferences(db, id, { theme: "dark" });
-    expect(getUserById(db, id)).toMatchObject({ locale: "en", theme: "dark" });
+    await setPreferences(db, id, { theme: "dark" });
+    expect(await getUserById(db, id)).toMatchObject({ locale: "en", theme: "dark" });
   });
 });

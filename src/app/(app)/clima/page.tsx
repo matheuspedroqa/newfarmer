@@ -11,7 +11,7 @@ export default async function WeatherPage() {
   const user = await requireUser();
   const t = await getTranslations("weather");
   const locale = resolveLocale(await getLocale());
-  const result = await getForecast(getDb(), getWeatherProvider(), user.latitude, user.longitude);
+  const result = await getForecast((await getDb()), getWeatherProvider(), user.latitude, user.longitude);
 
   return (
     <section className="space-y-6">

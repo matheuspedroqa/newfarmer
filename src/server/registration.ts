@@ -43,26 +43,27 @@ export async function changeCity(
   city: CityChoice,
 ): Promise<ResolvedClimate> {
   const climate = await resolveClimate(provider, city.latitude, city.longitude);
-  db.prepare(
-    `UPDATE users SET city_label = ?, latitude = ?, longitude = ?, country_code = ?,
-      climate_zone = ?, climate_estimated = ?, hemisphere = ? WHERE id = ?`,
-  ).run(
-    city.label,
-    city.latitude,
-    city.longitude,
-    city.countryCode,
-    climate.zone,
-    climate.estimated ? 1 : 0,
-    climate.hemisphere,
-    userId,
+  await db.run(
+    `UPDATE users SET city_label = $1, latitude = $2, longitude = $3, country_code = $4,
+      climate_zone = $5, climate_estimated = $6, hemisphere = $7 WHERE id = $8`,
+    [
+      city.label,
+      city.latitude,
+      city.longitude,
+      city.countryCode,
+      climate.zone,
+      climate.estimated ? 1 : 0,
+      climate.hemisphere,
+      userId,
+    ],
   );
   return climate;
 }
 
 export async function refreshEstimatedClimate(db: Db, provider: WeatherProvider, userId: number): Promise<void> {
-  const user = getUserById(db, userId);
+  const user = await getUserById(db, userId);
   if (!user?.climateEstimated) return;
   const climate = await resolveClimate(provider, user.latitude, user.longitude);
   if (climate.estimated) return;
-  db.prepare("UPDATE users SET climate_zone = ?, climate_estimated = 0 WHERE id = ?").run(climate.zone, userId);
+  await db.run("UPDATE users SET climate_zone = $1, climate_estimated = 0 WHERE id = $2", [climate.zone, userId]);
 }

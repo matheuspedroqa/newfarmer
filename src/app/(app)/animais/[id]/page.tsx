@@ -33,7 +33,7 @@ export default async function AnimalPage({
   const content = getAnimalContent(id as AnimalId);
   const current = seasonFor(new Date().getMonth() + 1, user.hemisphere);
   const tx = (v: { pt: string; en: string }) => v[locale];
-  const diary = showDiary ? listDiary(getDb(), user.id, { animalId: id as AnimalId }) : [];
+  const diary = showDiary ? await listDiary((await getDb()), user.id, { animalId: id as AnimalId }) : [];
 
   return (
     <section className="space-y-8">

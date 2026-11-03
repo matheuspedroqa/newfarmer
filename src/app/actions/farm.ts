@@ -14,7 +14,7 @@ async function validateAndSave(formData: FormData): Promise<FormState | null> {
   const user = await requireUser();
   const parsed = farmSchema.safeParse(parseFarmForm(formData));
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error) };
-  saveFarm(getDb(), user.id, parsed.data);
+  await saveFarm((await getDb()), user.id, parsed.data);
   return null;
 }
 
@@ -35,7 +35,7 @@ export async function changeCityAction(_prev: FormState, formData: FormData): Pr
   const user = await requireUser();
   const parsed = citySchema.safeParse(parseCityField(formData.get("city")));
   if (!parsed.success) return { fieldErrors: { city: "cityRequired" } };
-  await changeCity(getDb(), getWeatherProvider(), user.id, parsed.data);
+  await changeCity((await getDb()), getWeatherProvider(), user.id, parsed.data);
   revalidatePath("/", "layout");
   return { done: true };
 }

@@ -9,7 +9,7 @@ const ONE_YEAR_S = 365 * 24 * 60 * 60;
 
 export async function getCurrentUser(): Promise<User | null> {
   const token = (await cookies()).get(SESSION_COOKIE)?.value;
-  return token ? getSessionUser(getDb(), token) : null;
+  return token ? getSessionUser((await getDb()), token) : null;
 }
 
 /** Usuário logado ou redireciona para /login (sessão vencida não quebra a página). */
@@ -21,7 +21,7 @@ export async function requireUser(): Promise<User> {
 
 export async function startSession(user: User): Promise<void> {
   const store = await cookies();
-  const token = createSession(getDb(), user.id);
+  const token = await createSession((await getDb()), user.id);
   store.set(SESSION_COOKIE, token, {
     httpOnly: true,
     sameSite: "lax",
@@ -36,7 +36,7 @@ export async function startSession(user: User): Promise<void> {
 export async function endSession(): Promise<void> {
   const store = await cookies();
   const token = store.get(SESSION_COOKIE)?.value;
-  if (token) deleteSession(getDb(), token);
+  if (token) await deleteSession((await getDb()), token);
   store.delete(SESSION_COOKIE);
 }
 

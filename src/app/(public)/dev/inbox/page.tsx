@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 export default async function DevInboxPage() {
   if (process.env.NODE_ENV === "production") notFound();
   const t = await getTranslations("devInbox");
-  const emails = listDevEmails(getDb());
+  const emails = await listDevEmails((await getDb()));
 
   return (
     <div className="w-full max-w-xl space-y-4">

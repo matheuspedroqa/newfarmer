@@ -19,7 +19,7 @@ export default async function MyFarmPage() {
         </p>
         <CityForm />
       </div>
-      <FarmForm initial={getFarm(getDb(), user.id)} action={saveFarmAction} submitLabel={t("farm.save")} />
+      <FarmForm initial={await getFarm((await getDb()), user.id)} action={saveFarmAction} submitLabel={t("farm.save")} />
     </section>
   );
 }

@@ -10,6 +10,7 @@ import { SubmitButton } from "@/components/SubmitButton";
 
 export function ForgotForm() {
   const t = useTranslations("auth");
+  const tErrors = useTranslations("errors");
   const [state, action, pending] = useActionState<FormState, FormData>(forgotAction, {});
 
   return (
@@ -26,6 +27,9 @@ export function ForgotForm() {
               className="w-full rounded-xl border border-border bg-surface px-4 py-3" />
             <FieldError id="email-error" code={state.fieldErrors?.email} />
           </div>
+          {state.formError && (
+            <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{tErrors(state.formError)}</p>
+          )}
           <SubmitButton pending={pending}>{t("sendLink")}</SubmitButton>
         </form>
       )}

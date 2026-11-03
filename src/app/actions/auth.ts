@@ -14,7 +14,7 @@ import {
 import { getUserById, verifyCredentials } from "@/server/accounts";
 import { endSession, startSession } from "@/server/current-user";
 import { getDb } from "@/server/db";
-import { createDevInboxMailer } from "@/server/mailer";
+import { getMailer } from "@/server/mailer";
 import { requestPasswordReset, resetPassword } from "@/server/password-reset";
 import { setPreferences } from "@/server/preferences";
 import { refreshEstimatedClimate, registerUser } from "@/server/registration";
@@ -42,12 +42,12 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
   });
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
 
-  const db = getDb();
+  const db = await getDb();
   const result = await registerUser(db, getWeatherProvider(), parsed.data);
   if (!result.ok) return { fieldErrors: { email: "emailTaken" }, values };
 
-  setPreferences(db, result.userId, { locale: resolveLocale(await getLocale()) });
-  await startSession(getUserById(db, result.userId)!);
+  await setPreferences(db, result.userId, { locale: resolveLocale(await getLocale()) });
+  await startSession((await getUserById(db, result.userId))!);
   redirect("/boas-vindas");
 }
 
@@ -56,12 +56,12 @@ export async function loginAction(_prev: FormState, formData: FormData): Promise
   const parsed = loginSchema.safeParse({ email: formData.get("email"), password: formData.get("password") });
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
 
-  const db = getDb();
+  const db = await getDb();
   const result = await verifyCredentials(db, parsed.data.email, parsed.data.password);
   if (!result.ok) return { formError: result.reason === "locked" ? "locked" : "invalidCredentials", values };
 
   await refreshEstimatedClimate(db, getWeatherProvider(), result.userId).catch(() => undefined);
-  await startSession(getUserById(db, result.userId)!);
+  await startSession((await getUserById(db, result.userId))!);
   redirect("/painel");
 }
 
@@ -74,12 +74,17 @@ export async function forgotAction(_prev: FormState, formData: FormData): Promis
   const parsed = forgotSchema.safeParse({ email: formData.get("email") });
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values: typed(formData, "email") };
 
-  const db = getDb();
-  await requestPasswordReset(db, createDevInboxMailer(db), {
-    email: parsed.data.email,
-    baseUrl: process.env.APP_URL ?? "http://localhost:3000",
-    locale: resolveLocale(await getLocale()),
-  });
+  const db = await getDb();
+  try {
+    await requestPasswordReset(db, getMailer(db), {
+      email: parsed.data.email,
+      baseUrl: process.env.APP_URL ?? "http://localhost:3000",
+      locale: resolveLocale(await getLocale()),
+    });
+  } catch (error) {
+    console.error("Falha ao enviar e-mail de recuperação", error);
+    return { formError: "generic", values: typed(formData, "email") };
+  }
   return { done: true };
 }
 
@@ -91,6 +96,6 @@ export async function resetAction(_prev: FormState, formData: FormData): Promise
   });
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error) };
 
-  const result = await resetPassword(getDb(), parsed.data);
+  const result = await resetPassword((await getDb()), parsed.data);
   return result === "ok" ? { done: true } : { formError: "linkExpired" };
 }

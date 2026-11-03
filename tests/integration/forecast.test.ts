@@ -13,7 +13,7 @@ function spyProvider(options: { failForecast?: boolean } = {}) {
 
 describe("getForecast", () => {
   it("busca, guarda e usa a guardada por 1 hora", async () => {
-    const db = testDb();
+    const db = await testDb();
     const { provider, getForecastSpy } = spyProvider();
     const first = await getForecast(db, provider, -25.43, -49.27, 0);
     expect(first).toMatchObject({ stale: false, fetchedAt: 0 });
@@ -27,7 +27,7 @@ describe("getForecast", () => {
   });
 
   it("coordenadas quase iguais usam a mesma previsão guardada", async () => {
-    const db = testDb();
+    const db = await testDb();
     const { provider, getForecastSpy } = spyProvider();
     await getForecast(db, provider, -25.4278, -49.2731, 0);
     await getForecast(db, provider, -25.4301, -49.2699, 10);
@@ -35,14 +35,14 @@ describe("getForecast", () => {
   });
 
   it("serviço fora: devolve a guardada marcada como antiga", async () => {
-    const db = testDb();
+    const db = await testDb();
     await getForecast(db, spyProvider().provider, -25.43, -49.27, 0);
     const result = await getForecast(db, spyProvider({ failForecast: true }).provider, -25.43, -49.27, FORECAST_TTL_MS * 3);
     expect(result).toMatchObject({ stale: true, fetchedAt: 0 });
   });
 
   it("serviço fora e nada guardado: devolve null", async () => {
-    const db = testDb();
+    const db = await testDb();
     expect(await getForecast(db, spyProvider({ failForecast: true }).provider, -25.43, -49.27, 0)).toBeNull();
   });
 });

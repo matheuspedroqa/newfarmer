@@ -59,13 +59,11 @@ interface UserRow {
 export async function createUser(db: Db, user: NewUser, now = Date.now()): Promise<number> {
   const passwordHash = await bcrypt.hash(user.password, BCRYPT_COST);
   try {
-    const result = db
-      .prepare(
-        `INSERT INTO users (name, email, password_hash, city_label, latitude, longitude, country_code,
-          climate_zone, climate_estimated, hemisphere, created_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      )
-      .run(
+    const [row] = await db.query<{ id: number }>(
+      `INSERT INTO users (name, email, password_hash, city_label, latitude, longitude, country_code,
+        climate_zone, climate_estimated, hemisphere, created_at)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING id`,
+      [
         user.name.trim(),
         user.email.trim().toLowerCase(),
         passwordHash,
@@ -77,16 +75,17 @@ export async function createUser(db: Db, user: NewUser, now = Date.now()): Promi
         user.climate.estimated ? 1 : 0,
         user.climate.hemisphere,
         now,
-      );
-    return Number(result.lastInsertRowid);
+      ],
+    );
+    return row.id;
   } catch (error) {
-    if ((error as { code?: string }).code === "SQLITE_CONSTRAINT_UNIQUE") throw new EmailTakenError();
+    if ((error as { code?: string }).code === "23505") throw new EmailTakenError(); // unique_violation
     throw error;
   }
 }
 
-export function getUserById(db: Db, id: number): User | null {
-  const row = db.prepare("SELECT * FROM users WHERE id = ?").get(id) as UserRow | undefined;
+export async function getUserById(db: Db, id: number): Promise<User | null> {
+  const [row] = await db.query<UserRow>("SELECT * FROM users WHERE id = $1", [id]);
   if (!row) return null;
   return {
     id: row.id,
@@ -113,36 +112,39 @@ export async function verifyCredentials(
   now = Date.now(),
 ): Promise<LoginResult> {
   const normalized = email.trim().toLowerCase();
-  if (isLocked(db, normalized, now)) return { ok: false, reason: "locked" };
+  if (await isLocked(db, normalized, now)) return { ok: false, reason: "locked" };
 
-  const row = db.prepare("SELECT id, password_hash FROM users WHERE email = ?").get(normalized) as
-    | { id: number; password_hash: string }
-    | undefined;
+  const [row] = await db.query<{ id: number; password_hash: string }>(
+    "SELECT id, password_hash FROM users WHERE email = $1",
+    [normalized],
+  );
   const matches = await bcrypt.compare(password, row?.password_hash ?? DUMMY_HASH);
   const ok = Boolean(row) && matches;
 
-  db.prepare("INSERT INTO login_attempts (email, attempted_at, success) VALUES (?, ?, ?)").run(
+  await db.run("INSERT INTO login_attempts (email, attempted_at, success) VALUES ($1, $2, $3)", [
     normalized,
     now,
     ok ? 1 : 0,
-  );
+  ]);
   return ok ? { ok: true, userId: row!.id } : { ok: false, reason: "invalid" };
 }
 
-function isLocked(db: Db, email: string, now: number): boolean {
-  const lastSuccess = db
-    .prepare("SELECT MAX(attempted_at) AS t FROM login_attempts WHERE email = ? AND success = 1")
-    .get(email) as { t: number | null };
+async function isLocked(db: Db, email: string, now: number): Promise<boolean> {
+  const [lastSuccess] = await db.query<{ t: number | null }>(
+    "SELECT MAX(attempted_at) AS t FROM login_attempts WHERE email = $1 AND success = 1",
+    [email],
+  );
   const since = Math.max(now - LOCK_WINDOW_MS, lastSuccess.t ?? 0);
-  const { n } = db
-    .prepare("SELECT COUNT(*) AS n FROM login_attempts WHERE email = ? AND success = 0 AND attempted_at > ?")
-    .get(email, since) as { n: number };
+  const [{ n }] = await db.query<{ n: number }>(
+    "SELECT COUNT(*)::int AS n FROM login_attempts WHERE email = $1 AND success = 0 AND attempted_at > $2",
+    [email, since],
+  );
   return n >= MAX_FAILED_LOGINS;
 }
 
 export async function setPassword(db: Db, userId: number, password: string): Promise<void> {
   const passwordHash = await bcrypt.hash(password, BCRYPT_COST);
-  db.prepare("UPDATE users SET password_hash = ? WHERE id = ?").run(passwordHash, userId);
+  await db.run("UPDATE users SET password_hash = $1 WHERE id = $2", [passwordHash, userId]);
 }
 
 export async function changePassword(
@@ -152,15 +154,13 @@ export async function changePassword(
   newPassword: string,
   keepSessionToken?: string,
 ): Promise<"ok" | "wrongPassword"> {
-  const row = db.prepare("SELECT password_hash FROM users WHERE id = ?").get(userId) as
-    | { password_hash: string }
-    | undefined;
+  const [row] = await db.query<{ password_hash: string }>("SELECT password_hash FROM users WHERE id = $1", [userId]);
   if (!row || !(await bcrypt.compare(currentPassword, row.password_hash))) return "wrongPassword";
   await setPassword(db, userId, newPassword);
   // Encerra as sessões abertas em outros lugares; a sessão de quem trocou a senha continua.
-  db.prepare("DELETE FROM sessions WHERE user_id = ? AND token_hash != ?").run(
+  await db.run("DELETE FROM sessions WHERE user_id = $1 AND token_hash != $2", [
     userId,
     keepSessionToken ? hashToken(keepSessionToken) : "",
-  );
+  ]);
   return "ok";
 }

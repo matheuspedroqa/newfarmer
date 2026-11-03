@@ -21,6 +21,6 @@ export default defineConfig({
     url: "http://localhost:3100/login",
     reuseExistingServer: false,
     timeout: 180_000,
-    env: { DATABASE_PATH: "data/e2e.db", WEATHER_FAKE: "1", APP_URL: "http://localhost:3100" },
+    env: { DATABASE_PATH: "data/e2e-pglite", WEATHER_FAKE: "1", APP_URL: "http://localhost:3100" },
   },
 });

@@ -11,12 +11,12 @@ import { DEFAULT_PASSWORD, makeUser } from "../helpers/users";
 
 describe("createUser", () => {
   it("guarda o usuário com a senha embaralhada", async () => {
-    const db = testDb();
+    const db = await testDb();
     const id = await makeUser(db);
-    const row = db.prepare("SELECT password_hash FROM users WHERE id = ?").get(id) as { password_hash: string };
+    const [row] = await db.query<{ password_hash: string }>("SELECT password_hash FROM users WHERE id = $1", [id]);
     expect(row.password_hash).not.toContain(DEFAULT_PASSWORD);
     expect(row.password_hash).toMatch(/^\$2[aby]\$/);
-    expect(getUserById(db, id)).toMatchObject({
+    expect(await getUserById(db, id)).toMatchObject({
       name: "Ana",
       email: "ana@exemplo.com",
       cityLabel: "Campinas, São Paulo, Brasil",
@@ -29,7 +29,7 @@ describe("createUser", () => {
   });
 
   it("e-mail repetido gera EmailTakenError, mesmo com letras maiúsculas", async () => {
-    const db = testDb();
+    const db = await testDb();
     await makeUser(db);
     await expect(makeUser(db, { email: "ANA@exemplo.com" })).rejects.toBeInstanceOf(EmailTakenError);
   });
@@ -37,20 +37,20 @@ describe("createUser", () => {
 
 describe("verifyCredentials", () => {
   it("senha certa entra", async () => {
-    const db = testDb();
+    const db = await testDb();
     const id = await makeUser(db);
     expect(await verifyCredentials(db, "Ana@Exemplo.com", DEFAULT_PASSWORD)).toEqual({ ok: true, userId: id });
   });
 
   it("senha errada ou e-mail desconhecido dão o mesmo resultado", async () => {
-    const db = testDb();
+    const db = await testDb();
     await makeUser(db);
     expect(await verifyCredentials(db, "ana@exemplo.com", "errada123")).toEqual({ ok: false, reason: "invalid" });
     expect(await verifyCredentials(db, "nao@existe.com", DEFAULT_PASSWORD)).toEqual({ ok: false, reason: "invalid" });
   });
 
   it("5 erros seguidos bloqueiam por 15 minutos, mesmo com a senha certa", async () => {
-    const db = testDb();
+    const db = await testDb();
     await makeUser(db);
     const t0 = 1_000_000;
     for (let i = 0; i < 5; i++) await verifyCredentials(db, "ana@exemplo.com", "errada", t0 + i);
@@ -63,7 +63,7 @@ describe("verifyCredentials", () => {
   });
 
   it("um login certo zera a contagem de erros", async () => {
-    const db = testDb();
+    const db = await testDb();
     await makeUser(db);
     const t0 = 1_000_000;
     for (let i = 0; i < 4; i++) await verifyCredentials(db, "ana@exemplo.com", "errada", t0 + i);
@@ -75,7 +75,7 @@ describe("verifyCredentials", () => {
 
 describe("setPassword", () => {
   it("troca a senha", async () => {
-    const db = testDb();
+    const db = await testDb();
     const id = await makeUser(db);
     await setPassword(db, id, "nova-senha-1");
     expect((await verifyCredentials(db, "ana@exemplo.com", "nova-senha-1")).ok).toBe(true);

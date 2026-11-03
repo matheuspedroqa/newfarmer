@@ -7,15 +7,17 @@ export interface Farm {
   crops: CropId[];
 }
 
-export function getFarm(db: Db, userId: number): Farm {
+export async function getFarm(db: Db, userId: number): Promise<Farm> {
   const counts = new Map(
-    (db.prepare("SELECT animal_id, count FROM farm_animals WHERE user_id = ?").all(userId) as {
-      animal_id: string;
-      count: number;
-    }[]).map((r) => [r.animal_id, r.count]),
+    (
+      await db.query<{ animal_id: string; count: number }>(
+        "SELECT animal_id, count FROM farm_animals WHERE user_id = $1",
+        [userId],
+      )
+    ).map((r) => [r.animal_id, r.count]),
   );
   const crops = new Set(
-    (db.prepare("SELECT crop_id FROM farm_crops WHERE user_id = ?").all(userId) as { crop_id: string }[]).map(
+    (await db.query<{ crop_id: string }>("SELECT crop_id FROM farm_crops WHERE user_id = $1", [userId])).map(
       (r) => r.crop_id,
     ),
   );
@@ -25,13 +27,15 @@ export function getFarm(db: Db, userId: number): Farm {
   };
 }
 
-export function saveFarm(db: Db, userId: number, farm: FarmInput): void {
-  db.transaction(() => {
-    db.prepare("DELETE FROM farm_animals WHERE user_id = ?").run(userId);
-    db.prepare("DELETE FROM farm_crops WHERE user_id = ?").run(userId);
-    const insertAnimal = db.prepare("INSERT INTO farm_animals (user_id, animal_id, count) VALUES (?, ?, ?)");
-    for (const [id, count] of Object.entries(farm.animals)) insertAnimal.run(userId, id, count);
-    const insertCrop = db.prepare("INSERT OR IGNORE INTO farm_crops (user_id, crop_id) VALUES (?, ?)");
-    for (const id of farm.crops) insertCrop.run(userId, id);
-  })();
+export async function saveFarm(db: Db, userId: number, farm: FarmInput): Promise<void> {
+  await db.transaction(async (tx) => {
+    await tx.run("DELETE FROM farm_animals WHERE user_id = $1", [userId]);
+    await tx.run("DELETE FROM farm_crops WHERE user_id = $1", [userId]);
+    for (const [id, count] of Object.entries(farm.animals)) {
+      await tx.run("INSERT INTO farm_animals (user_id, animal_id, count) VALUES ($1, $2, $3)", [userId, id, count]);
+    }
+    for (const id of farm.crops) {
+      await tx.run("INSERT INTO farm_crops (user_id, crop_id) VALUES ($1, $2) ON CONFLICT DO NOTHING", [userId, id]);
+    }
+  });
 }

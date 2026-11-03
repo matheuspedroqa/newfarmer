@@ -16,7 +16,7 @@ export default async function WelcomeFarmPage() {
       <p className="mt-2 text-muted">{t("help")}</p>
       <div className="mt-8">
         <FarmForm
-          initial={getFarm(getDb(), user.id)}
+          initial={await getFarm((await getDb()), user.id)}
           action={saveFarmAndContinueAction}
           submitLabel={t("continue")}
           footer={<Link href="/painel" className="text-accent hover:underline">{t("skip")}</Link>}
