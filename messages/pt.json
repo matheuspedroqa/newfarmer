@@ -43,7 +43,9 @@
     "forgotUsernameHelp": "Informe seu e-mail e enviaremos o seu username.",
     "sendUsername": "Enviar username",
     "usernameReminderSent": "Se houver uma conta com esse e-mail, enviamos o seu username.",
-    "backToLoginShort": "Voltar para entrar"
+    "backToLoginShort": "Voltar para entrar",
+    "acceptTerms": "Li e aceito os <terms>Termos de Uso</terms> e a <privacy>Política de Privacidade</privacy>",
+    "ageConfirm": "Tenho 13 anos ou mais"
   },
   "errors": {
     "required": "Preencha este campo",
@@ -69,7 +71,9 @@
     "dateInFuture": "A data não pode ser no futuro",
     "usernameInvalid": "Use 3 a 30 letras minúsculas, números, ponto, hífen ou _ (não só números)",
     "usernameReserved": "Este username é reservado. Escolha outro",
-    "usernameTaken": "Este username já está em uso"
+    "usernameTaken": "Este username já está em uso",
+    "termsRequired": "Para criar a conta, aceite os Termos e a Política de Privacidade",
+    "ageRequired": "O NewFarmer é para maiores de 13 anos"
   },
   "climate": {
     "tropical": "Tropical",
@@ -423,7 +427,9 @@
     "recover": "Recuperar",
     "confirm": "Confirmar e-mail",
     "notFound": "Página não encontrada",
-    "devInbox": "Caixa de e-mails (dev)"
+    "devInbox": "Caixa de e-mails (dev)",
+    "privacy": "Privacidade",
+    "terms": "Termos"
   },
   "home": {
     "cta": "Criar conta grátis",

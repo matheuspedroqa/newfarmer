@@ -56,6 +56,27 @@ export function SignupForm() {
           <FieldError id="confirmPassword-error" code={errors.confirmPassword} />
         </div>
         <CityPicker error={errors.city} />
+        <div>
+          <label className="flex items-start gap-2 text-sm">
+            <input type="checkbox" name="terms" defaultChecked={state.values?.terms === "on"} key={`t-${state.values?.terms}`}
+              aria-describedby="terms-error" className="mt-1 size-4" />
+            <span>
+              {t.rich("acceptTerms", {
+                terms: (chunks) => <a href="/termos" target="_blank" rel="noopener" className="text-primary underline">{chunks}</a>,
+                privacy: (chunks) => <a href="/privacidade" target="_blank" rel="noopener" className="text-primary underline">{chunks}</a>,
+              })}
+            </span>
+          </label>
+          <FieldError id="terms-error" code={errors.terms} />
+        </div>
+        <div>
+          <label className="flex items-start gap-2 text-sm">
+            <input type="checkbox" name="age" defaultChecked={state.values?.age === "on"} key={`a-${state.values?.age}`}
+              aria-describedby="age-error" className="mt-1 size-4" />
+            <span>{t("ageConfirm")}</span>
+          </label>
+          <FieldError id="age-error" code={errors.age} />
+        </div>
         {state.formError && <p role="alert" className="text-sm text-danger">{tErrors(state.formError)}</p>}
         <SubmitButton pending={pending}>{t("createAccount")}</SubmitButton>
       </form>

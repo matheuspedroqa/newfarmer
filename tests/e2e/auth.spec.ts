@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { PASSWORD, clearSession, signup, uniqueEmail, uniqueUsername } from "./helpers";
+import { PASSWORD, acceptTerms, clearSession, signup, uniqueEmail, uniqueUsername } from "./helpers";
 
 test("cadastro passa pela etapa 2 e chega ao painel com o tipo de clima da cidade", async ({ page }) => {
   await signup(page, uniqueEmail());
@@ -21,6 +21,32 @@ test("cadastro mostra os erros dos campos", async ({ page }) => {
   await expect(page.getByText("Escolha uma cidade da lista")).toBeVisible();
 });
 
+test("cadastro sem aceitar os Termos ou sem ter 13 anos mostra o erro e mantém o que foi digitado", async ({ page }) => {
+  await page.goto("/cadastro");
+  await page.getByLabel("Nome").fill("Ana");
+  await page.getByLabel("Tenho 13 anos ou mais").check();
+  await page.getByRole("button", { name: "Criar conta" }).click();
+  await expect(page.getByText("Para criar a conta, aceite os Termos e a Política de Privacidade")).toBeVisible();
+  await expect(page.getByText("O NewFarmer é para maiores de 13 anos")).toHaveCount(0);
+  await expect(page.getByLabel("Nome")).toHaveValue("Ana");
+  await expect(page.getByLabel("Tenho 13 anos ou mais")).toBeChecked();
+
+  await page.getByLabel("Tenho 13 anos ou mais").uncheck();
+  await page.getByLabel(/Li e aceito/).check();
+  await page.getByRole("button", { name: "Criar conta" }).click();
+  await expect(page.getByText("O NewFarmer é para maiores de 13 anos")).toBeVisible();
+  await expect(page.getByText("Para criar a conta, aceite os Termos e a Política de Privacidade")).toHaveCount(0);
+});
+
+test("os links do aceite abrem os Termos e a Política em outra aba", async ({ page }) => {
+  await page.goto("/cadastro");
+  const form = page.locator("form");
+  await expect(form.getByRole("link", { name: "Termos de Uso" })).toHaveAttribute("href", "/termos");
+  await expect(form.getByRole("link", { name: "Termos de Uso" })).toHaveAttribute("target", "_blank");
+  await expect(form.getByRole("link", { name: "Política de Privacidade" })).toHaveAttribute("href", "/privacidade");
+  await expect(form.getByRole("link", { name: "Política de Privacidade" })).toHaveAttribute("target", "_blank");
+});
+
 test("cidade inexistente mostra aviso", async ({ page }) => {
   await page.goto("/cadastro");
   await page.getByTestId("city-input").fill("Xyzlândia");
@@ -39,6 +65,7 @@ test("e-mail repetido avisa que já existe conta", async ({ page, context }) => 
   await page.getByLabel("Confirmar senha").fill(PASSWORD);
   await page.getByTestId("city-input").fill("Curitiba");
   await page.getByTestId("city-option").first().click();
+  await acceptTerms(page);
   await page.getByRole("button", { name: "Criar conta" }).click();
   await expect(page.getByText("Este e-mail já tem uma conta. Quer entrar?")).toBeVisible();
 });
@@ -55,6 +82,7 @@ test("username repetido avisa que já está em uso e mantém o que foi digitado"
   await page.getByLabel("Confirmar senha").fill(PASSWORD);
   await page.getByTestId("city-input").fill("Curitiba");
   await page.getByTestId("city-option").first().click();
+  await acceptTerms(page);
   await page.getByRole("button", { name: "Criar conta" }).click();
   await expect(page.getByText("Este username já está em uso")).toBeVisible();
   await expect(page.getByLabel("E-mail")).toHaveValue(email);

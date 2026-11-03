@@ -43,7 +43,9 @@
     "forgotUsernameHelp": "Enter your e-mail and we will send you your username.",
     "sendUsername": "Send username",
     "usernameReminderSent": "If there is an account with that e-mail, we sent your username.",
-    "backToLoginShort": "Back to sign in"
+    "backToLoginShort": "Back to sign in",
+    "acceptTerms": "I have read and accept the <terms>Terms of Use</terms> and the <privacy>Privacy Policy</privacy>",
+    "ageConfirm": "I am 13 or older"
   },
   "errors": {
     "required": "Please fill in this field",
@@ -69,7 +71,9 @@
     "dateInFuture": "The date can't be in the future",
     "usernameInvalid": "Use 3 to 30 lowercase letters, numbers, dot, hyphen or _ (not only numbers)",
     "usernameReserved": "This username is reserved. Choose another one",
-    "usernameTaken": "This username is already taken"
+    "usernameTaken": "This username is already taken",
+    "termsRequired": "To create your account, accept the Terms and the Privacy Policy",
+    "ageRequired": "NewFarmer is for people aged 13 or older"
   },
   "climate": {
     "tropical": "Tropical",
@@ -423,7 +427,9 @@
     "recover": "Recover",
     "confirm": "Confirm e-mail",
     "notFound": "Page not found",
-    "devInbox": "E-mail inbox (dev)"
+    "devInbox": "E-mail inbox (dev)",
+    "privacy": "Privacy",
+    "terms": "Terms"
   },
   "home": {
     "cta": "Create free account",

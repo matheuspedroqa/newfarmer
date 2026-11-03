@@ -12,6 +12,8 @@ const input = (city: SignupInput["city"]): SignupInput => ({
   password: "segredo123",
   confirmPassword: "segredo123",
   city,
+  terms: "on",
+  age: "on",
 });
 
 describe("registerUser", () => {

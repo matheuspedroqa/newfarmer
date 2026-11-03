@@ -11,6 +11,12 @@ export function uniqueUsername() {
   return `ana${Date.now()}${Math.floor(Math.random() * 1000)}`;
 }
 
+/** Marca as duas caixas obrigatórias do cadastro. */
+export async function acceptTerms(page: Page) {
+  await page.getByLabel(/Li e aceito/).check();
+  await page.getByLabel("Tenho 13 anos ou mais").check();
+}
+
 /** Faz a etapa 1 do cadastro e para na etapa 2 (/boas-vindas). */
 export async function createAccount(page: Page, email: string, city = "Curitiba", username = uniqueUsername()) {
   await page.goto("/cadastro");
@@ -21,6 +27,7 @@ export async function createAccount(page: Page, email: string, city = "Curitiba"
   await page.getByLabel("Confirmar senha").fill(PASSWORD);
   await page.getByTestId("city-input").fill(city);
   await page.getByTestId("city-option").first().click();
+  await acceptTerms(page);
   await page.getByRole("button", { name: "Criar conta" }).click();
   await expect(page).toHaveURL(/\/boas-vindas$/);
   return { username };

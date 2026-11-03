@@ -20,13 +20,32 @@ test("endereço que não existe mostra a 404 da casa", async ({ page }) => {
   await expect(page).toHaveTitle("Página não encontrada · NewFarmer");
 });
 
-// A Tarefa 13 acrescenta /privacidade ("Privacidade") e /termos ("Termos") a esta lista.
-for (const [path, title] of [["/login", "Entrar"], ["/recuperar", "Recuperar"]]) {
+for (const [path, title] of [["/login", "Entrar"], ["/recuperar", "Recuperar"], ["/privacidade", "Privacidade"], ["/termos", "Termos"]]) {
   test(`${path} tem título próprio`, async ({ page }) => {
     await page.goto(path);
     await expect(page).toHaveTitle(`${title} · NewFarmer`);
   });
 }
+
+for (const [path, title, heading] of [
+  ["/privacidade", "Privacy", "Privacy Policy"],
+  ["/termos", "Terms", "Terms of Use"],
+]) {
+  test(`${path} em inglês tem título e texto em inglês`, async ({ page, context }) => {
+    await context.addCookies([{ name: "nf_locale", value: "en", domain: "localhost", path: "/" }]);
+    await page.goto(path);
+    await expect(page).toHaveTitle(`${title} · NewFarmer`);
+    await expect(page.getByRole("heading", { level: 1, name: heading })).toBeVisible();
+  });
+}
+
+test("as páginas legais em português mostram o texto e o contato", async ({ page }) => {
+  await page.goto("/privacidade");
+  await expect(page.getByRole("heading", { level: 1, name: "Política de Privacidade" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "matheusps70@hotmail.com" }).first()).toHaveAttribute("href", "mailto:matheusps70@hotmail.com");
+  await page.goto("/termos");
+  await expect(page.getByRole("heading", { level: 1, name: "Termos de Uso" })).toBeVisible();
+});
 
 test("quem está logado vai da inicial ao painel, que tem título próprio", async ({ page }) => {
   await signup(page, uniqueEmail());

@@ -31,6 +31,8 @@ export const signupSchema = z
     password: newPassword,
     confirmPassword: z.string(),
     city: citySchema,
+    terms: z.literal("on", { errorMap: () => ({ message: "termsRequired" }) }),
+    age: z.literal("on", { errorMap: () => ({ message: "ageRequired" }) }),
   })
   .refine((d) => d.password === d.confirmPassword, { path: ["confirmPassword"], message: "passwordsDontMatch" });
 export type SignupInput = z.infer<typeof signupSchema>;

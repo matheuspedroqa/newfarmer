@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { loginSchema, resetSchema, signupSchema, toFieldErrors } from "@/lib/validation";
 
 const city = { label: "Campinas, São Paulo, Brasil", latitude: -22.9, longitude: -47.06, countryCode: "BR" };
-const valid = { name: "Ana", email: "ana@exemplo.com", username: "ana", password: "segredo123", confirmPassword: "segredo123", city };
+const valid = { name: "Ana", email: "ana@exemplo.com", username: "ana", password: "segredo123", confirmPassword: "segredo123", city, terms: "on", age: "on" };
 
 function errorsOf(schema: typeof signupSchema | typeof loginSchema | typeof resetSchema, data: unknown) {
   const r = schema.safeParse(data);
@@ -56,6 +56,12 @@ describe("signupSchema", () => {
 
   it("nome com mais de 80 letras → tooLong", () => {
     expect(errorsOf(signupSchema, { ...valid, name: "a".repeat(81) }).name).toBe("tooLong");
+  });
+
+  it("sem aceitar os Termos → termsRequired; sem confirmar 13 anos → ageRequired", () => {
+    expect(errorsOf(signupSchema, { ...valid, terms: null }).terms).toBe("termsRequired");
+    expect(errorsOf(signupSchema, { ...valid, terms: "off" }).terms).toBe("termsRequired");
+    expect(errorsOf(signupSchema, { ...valid, age: null }).age).toBe("ageRequired");
   });
 });
 
