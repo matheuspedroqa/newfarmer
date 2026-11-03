@@ -9,7 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function NotFound() {
   const t = await getTranslations("notFound");
-  const user = await getCurrentUser();
+  const user = await getCurrentUser().catch(() => null);
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-bg px-8 text-center">
       <p className="text-7xl" aria-hidden>🌾</p>
