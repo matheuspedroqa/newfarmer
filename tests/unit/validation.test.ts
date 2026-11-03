@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { loginSchema, resetSchema, signupSchema, toFieldErrors } from "@/lib/validation";
 
 const city = { label: "Campinas, São Paulo, Brasil", latitude: -22.9, longitude: -47.06, countryCode: "BR" };
-const valid = { name: "Ana", email: "ana@exemplo.com", password: "segredo123", confirmPassword: "segredo123", city };
+const valid = { name: "Ana", email: "ana@exemplo.com", username: "ana", password: "segredo123", confirmPassword: "segredo123", city };
 
 function errorsOf(schema: typeof signupSchema | typeof loginSchema | typeof resetSchema, data: unknown) {
   const r = schema.safeParse(data);
@@ -44,6 +44,14 @@ describe("signupSchema", () => {
 
   it("cidade não escolhida → cityRequired", () => {
     expect(errorsOf(signupSchema, { ...valid, city: null }).city).toBe("cityRequired");
+  });
+
+  it("username: normaliza, recusa inválido e reservado", () => {
+    expect(signupSchema.parse({ ...valid, username: "  AnaSilva " }).username).toBe("anasilva");
+    expect(errorsOf(signupSchema, { ...valid, username: "ab" }).username).toBe("usernameInvalid");
+    expect(errorsOf(signupSchema, { ...valid, username: "12345" }).username).toBe("usernameInvalid");
+    expect(errorsOf(signupSchema, { ...valid, username: "Admin" }).username).toBe("usernameReserved");
+    expect(errorsOf(signupSchema, { ...valid, username: undefined }).username).toBe("usernameInvalid");
   });
 
   it("nome com mais de 80 letras → tooLong", () => {

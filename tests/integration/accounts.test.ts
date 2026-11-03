@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   EmailTakenError,
+  UsernameTakenError,
   LOCK_WINDOW_MS,
   getUserById,
   setPassword,
@@ -19,6 +20,8 @@ describe("createUser", () => {
     expect(await getUserById(db, id)).toMatchObject({
       name: "Ana",
       email: "ana@exemplo.com",
+      username: "ana",
+      isPlatformAdmin: false,
       cityLabel: "Campinas, São Paulo, Brasil",
       climateZone: "subtropical",
       climateEstimated: false,
@@ -31,7 +34,13 @@ describe("createUser", () => {
   it("e-mail repetido gera EmailTakenError, mesmo com letras maiúsculas", async () => {
     const db = await testDb();
     await makeUser(db);
-    await expect(makeUser(db, { email: "ANA@exemplo.com" })).rejects.toBeInstanceOf(EmailTakenError);
+    await expect(makeUser(db, { email: "ANA@exemplo.com", username: "outra" })).rejects.toBeInstanceOf(EmailTakenError);
+  });
+
+  it("username repetido (qualquer caixa) gera UsernameTakenError", async () => {
+    const db = await testDb();
+    await makeUser(db, { username: "ana" });
+    await expect(makeUser(db, { username: "ANA", email: "outra@exemplo.com" })).rejects.toBeInstanceOf(UsernameTakenError);
   });
 });
 

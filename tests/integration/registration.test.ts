@@ -8,6 +8,7 @@ import { testDb } from "../helpers/db";
 const input = (city: SignupInput["city"]): SignupInput => ({
   name: "Ana",
   email: "ana@exemplo.com",
+  username: "ana",
   password: "segredo123",
   confirmPassword: "segredo123",
   city,

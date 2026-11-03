@@ -36,6 +36,14 @@ export function SignupForm() {
           )}
         </div>
         <div>
+          <label htmlFor="username" className="mb-1 block text-sm font-semibold">{t("username")}</label>
+          <input id="username" name="username" autoComplete="username" autoCapitalize="none" spellCheck={false}
+            defaultValue={state.values?.username} key={`u-${state.values?.username}`}
+            aria-describedby="username-help username-error" className={inputClass} />
+          <p id="username-help" className="mt-1 text-sm text-muted">{t("usernameHelp")}</p>
+          <FieldError id="username-error" code={errors.username} />
+        </div>
+        <div>
           <label htmlFor="password" className="mb-1 block text-sm font-semibold">{t("password")}</label>
           <input id="password" name="password" type="password" autoComplete="new-password"
             aria-describedby="password-error" className={inputClass} />

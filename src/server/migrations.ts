@@ -133,6 +133,40 @@ CREATE INDEX idx_activity_user ON activity_logs (user_id, created_at DESC);
 ALTER TABLE activity_logs ENABLE ROW LEVEL SECURITY;
 `,
   },
+  {
+    id: 5,
+    name: "username",
+    // Contas antigas ganham username a partir do e-mail. A lista de reservados repete RESERVED_USERNAMES (src/lib/username.ts).
+    sql: `
+ALTER TABLE users ADD COLUMN username TEXT;
+ALTER TABLE users ADD COLUMN is_platform_admin BOOLEAN NOT NULL DEFAULT FALSE;
+-- base: parte do e-mail antes do @, só caracteres permitidos, minúsculas, no máximo 30
+UPDATE users SET username = left(lower(regexp_replace(split_part(email, '@', 1), '[^a-zA-Z0-9._-]', '', 'g')), 30);
+-- curto, só números ou reservado: acrescenta "_user" (corta antes para caber em 30)
+UPDATE users SET username = left(username, 25) || '_user'
+  WHERE length(username) < 3 OR username ~ '^[0-9]+$'
+     OR username IN ('admin','root','newfarmer','suporte','support','api','login');
+-- repetidos: o mais antigo fica com o nome; os seguintes ganham o menor número livre (2, 3…),
+-- conferido contra todos os usernames, para não colidir com um "ana2" que já existia.
+DO $$
+DECLARE r RECORD; k INT; candidate TEXT;
+BEGIN
+  FOR r IN SELECT id, username FROM (
+    SELECT id, username, row_number() OVER (PARTITION BY username ORDER BY id) AS n FROM users
+  ) d WHERE d.n > 1 ORDER BY id LOOP
+    k := 2;
+    LOOP
+      candidate := left(r.username, 30 - length(k::text)) || k;
+      EXIT WHEN NOT EXISTS (SELECT 1 FROM users WHERE username = candidate);
+      k := k + 1;
+    END LOOP;
+    UPDATE users SET username = candidate WHERE id = r.id;
+  END LOOP;
+END $$;
+ALTER TABLE users ALTER COLUMN username SET NOT NULL;
+CREATE UNIQUE INDEX users_username_unique ON users (username);
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.
@@ -161,3 +195,6 @@ export async function applyMigrations(db: Db, list: readonly Migration[]): Promi
 }
 
 export const migrate = (db: Db) => applyMigrations(db, MIGRATIONS);
+
+/** Só para testes: aplica as migrações até a de número `n`. */
+export const migrateUpTo = (db: Db, n: number) => applyMigrations(db, MIGRATIONS.filter((m) => m.id <= n));

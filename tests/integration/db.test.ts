@@ -28,10 +28,10 @@ describe("banco", () => {
 
   it("recusa dois usuários com o mesmo e-mail", async () => {
     const db = await testDb();
-    const insert = `INSERT INTO users (name, email, password_hash, city_label, latitude, longitude, country_code,
-      climate_zone, hemisphere, created_at) VALUES ('A', 'a@x.com', 'h', 'C', 0, 0, 'BR', 'tropical', 'south', 0)`;
-    await db.run(insert);
-    (await expect(db.run(insert))).rejects.toMatchObject({ code: "23505" });
+    const insert = `INSERT INTO users (name, email, username, password_hash, city_label, latitude, longitude, country_code,
+      climate_zone, hemisphere, created_at) VALUES ('A', 'a@x.com', $1, 'h', 'C', 0, 0, 'BR', 'tropical', 'south', 0)`;
+    await db.run(insert, ["a1"]);
+    (await expect(db.run(insert, ["a2"]))).rejects.toMatchObject({ code: "23505", constraint: "users_email_key" });
   });
 
   it("transação desfaz tudo se algo falha no meio", async () => {

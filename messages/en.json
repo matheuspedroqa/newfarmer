@@ -34,7 +34,9 @@
     "resetDone": "Password changed. You can sign in now.",
     "backToLogin": "Back to sign in",
     "logout": "Sign out",
-    "sending": "Sending..."
+    "sending": "Sending...",
+    "username": "Username",
+    "usernameHelp": "3 to 30 lowercase letters, numbers, dot, hyphen or _. You'll use it to sign in."
   },
   "errors": {
     "required": "Please fill in this field",
@@ -57,7 +59,9 @@
     "countTooLarge": "At most 100,000",
     "wrongPassword": "Current password is incorrect",
     "dateInvalid": "Choose a valid date",
-    "dateInFuture": "The date can't be in the future"
+    "dateInFuture": "The date can't be in the future",
+    "usernameInvalid": "Use 3 to 30 lowercase letters, numbers, dot, hyphen or _ (not only numbers)",
+    "usernameReserved": "This username is reserved. Choose another one"
   },
   "climate": {
     "tropical": "Tropical",

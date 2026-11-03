@@ -1,5 +1,6 @@
 import "server-only";
 import bcrypt from "bcryptjs";
+import { normalizeUsername } from "@/lib/username";
 import type { CityChoice } from "@/lib/validation";
 import { resolveLocale, resolveTheme, type Locale, type Theme } from "@/i18n/locales";
 import type { ClimateZone, Hemisphere, ResolvedClimate } from "./climate";
@@ -19,9 +20,16 @@ export class EmailTakenError extends Error {
   }
 }
 
+export class UsernameTakenError extends Error {
+  constructor() {
+    super("Username already registered");
+  }
+}
+
 export interface NewUser {
   name: string;
   email: string;
+  username: string;
   password: string;
   city: CityChoice;
   climate: ResolvedClimate;
@@ -31,6 +39,8 @@ export interface User {
   id: number;
   name: string;
   email: string;
+  username: string;
+  isPlatformAdmin: boolean;
   cityLabel: string;
   latitude: number;
   longitude: number;
@@ -47,6 +57,8 @@ interface UserRow {
   id: number;
   name: string;
   email: string;
+  username: string;
+  is_platform_admin: boolean;
   city_label: string;
   latitude: number;
   longitude: number;
@@ -63,12 +75,13 @@ export async function createUser(db: Db, user: NewUser, now = Date.now()): Promi
   const passwordHash = await bcrypt.hash(user.password, BCRYPT_COST);
   try {
     const [row] = await db.query<{ id: number }>(
-      `INSERT INTO users (name, email, password_hash, city_label, latitude, longitude, country_code,
+      `INSERT INTO users (name, email, username, password_hash, city_label, latitude, longitude, country_code,
         climate_zone, climate_estimated, hemisphere, created_at)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING id`,
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING id`,
       [
         user.name.trim(),
         user.email.trim().toLowerCase(),
+        normalizeUsername(user.username),
         passwordHash,
         user.city.label,
         user.city.latitude,
@@ -82,7 +95,8 @@ export async function createUser(db: Db, user: NewUser, now = Date.now()): Promi
     );
     return row.id;
   } catch (error) {
-    if ((error as { code?: string }).code === "23505") throw new EmailTakenError(); // unique_violation
+    const { code, constraint } = error as { code?: string; constraint?: string };
+    if (code === "23505") throw constraint === "users_username_unique" ? new UsernameTakenError() : new EmailTakenError();
     throw error;
   }
 }
@@ -94,6 +108,8 @@ export async function getUserById(db: Db, id: number): Promise<User | null> {
     id: row.id,
     name: row.name,
     email: row.email,
+    username: row.username,
+    isPlatformAdmin: row.is_platform_admin,
     cityLabel: row.city_label,
     latitude: row.latitude,
     longitude: row.longitude,

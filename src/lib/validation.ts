@@ -1,7 +1,15 @@
 import { z, type ZodError } from "zod";
 import { ANIMAL_IDS, CROP_IDS } from "./catalog";
+import { normalizeUsername, usernameProblem } from "./username";
 
 const email = z.string().trim().toLowerCase().min(1, "required").email("emailInvalid");
+const username = z
+  .string({ required_error: "usernameInvalid", invalid_type_error: "usernameInvalid" })
+  .transform(normalizeUsername)
+  .superRefine((value, ctx) => {
+    const problem = usernameProblem(value);
+    if (problem) ctx.addIssue({ code: z.ZodIssueCode.custom, message: problem });
+  });
 const newPassword = z.string().min(1, "required").min(8, "passwordTooShort").max(128, "passwordTooLong");
 
 export const citySchema = z.object(
@@ -19,6 +27,7 @@ export const signupSchema = z
   .object({
     name: z.string().trim().min(1, "required").max(80, "tooLong"),
     email,
+    username,
     password: newPassword,
     confirmPassword: z.string(),
     city: citySchema,

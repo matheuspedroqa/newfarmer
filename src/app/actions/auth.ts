@@ -37,10 +37,11 @@ function typed(formData: FormData, ...fields: string[]): Record<string, string> 
 }
 
 export async function signupAction(_prev: FormState, formData: FormData): Promise<FormState> {
-  const values = typed(formData, "name", "email");
+  const values = typed(formData, "name", "email", "username");
   const parsed = signupSchema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
+    username: formData.get("username"),
     password: formData.get("password"),
     confirmPassword: formData.get("confirmPassword"),
     city: parseCityField(formData.get("city")),

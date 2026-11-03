@@ -34,7 +34,9 @@
     "resetDone": "Senha alterada. Você já pode entrar.",
     "backToLogin": "Voltar para a entrada",
     "logout": "Sair",
-    "sending": "Enviando..."
+    "sending": "Enviando...",
+    "username": "Username",
+    "usernameHelp": "3 a 30 letras minúsculas, números, ponto, hífen ou _. É com ele que você entra."
   },
   "errors": {
     "required": "Preencha este campo",
@@ -57,7 +59,9 @@
     "countTooLarge": "No máximo 100.000",
     "wrongPassword": "Senha atual incorreta",
     "dateInvalid": "Escolha uma data válida",
-    "dateInFuture": "A data não pode ser no futuro"
+    "dateInFuture": "A data não pode ser no futuro",
+    "usernameInvalid": "Use 3 a 30 letras minúsculas, números, ponto, hífen ou _ (não só números)",
+    "usernameReserved": "Este username é reservado. Escolha outro"
   },
   "climate": {
     "tropical": "Tropical",
