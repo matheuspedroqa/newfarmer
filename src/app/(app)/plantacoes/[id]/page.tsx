@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -8,6 +9,12 @@ import { CROPS, CROP_IDS, type CropId } from "@/lib/catalog";
 import { ACTIVITIES, userCalendar } from "@/lib/seasons";
 import { getCropContent } from "@/server/content";
 import { requireUser } from "@/server/current-user";
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  if (!(CROP_IDS as readonly string[]).includes(id)) return {};
+  return { title: (await getTranslations())(`crops.${id}`) };
+}
 
 export default async function CropPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

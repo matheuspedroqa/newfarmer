@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { AuthCard } from "@/components/AuthCard";
 import { getDb } from "@/server/db";
 import { confirmEmail } from "@/server/email-verification";
 import { clientIp } from "@/server/request-context";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return { title: (await getTranslations())("meta.confirm") };
+}
 
 export default async function ConfirmEmailPage({ params }: { params: Promise<{ token: string }> }) {
   const { token } = await params;

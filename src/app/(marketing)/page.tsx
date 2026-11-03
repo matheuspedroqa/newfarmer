@@ -1,0 +1,33 @@
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { getCurrentUser } from "@/server/current-user";
+
+export default async function HomePage() {
+  if (await getCurrentUser()) redirect("/painel");
+  const t = await getTranslations();
+  const cards = [
+    ["🐔", t("nav.animals"), t("home.animalsText")],
+    ["🌱", t("nav.crops"), t("home.cropsText")],
+    ["⛅", t("nav.weather"), t("home.weatherText")],
+  ];
+  return (
+    <>
+      <section className="bg-[url('/landscape.svg')] bg-cover bg-bottom px-8 py-32 text-center dark:brightness-[.55]">
+        <h1 className="font-display text-5xl font-bold text-[#2e2a22]">{t("app.tagline")}</h1>
+        <Link href="/cadastro" className="mt-8 inline-block rounded-full bg-primary px-8 py-3 text-lg font-semibold text-primary-text">
+          {t("home.cta")}
+        </Link>
+      </section>
+      <section className="mx-auto grid max-w-5xl grid-cols-3 gap-6 px-8 py-16">
+        {cards.map(([icon, title, text]) => (
+          <div key={title} className="rounded-3xl bg-surface p-6 ring-1 ring-border">
+            <span className="text-4xl" aria-hidden>{icon}</span>
+            <h2 className="mt-3 font-display text-2xl font-bold">{title}</h2>
+            <p className="mt-2 text-muted">{text}</p>
+          </div>
+        ))}
+      </section>
+    </>
+  );
+}

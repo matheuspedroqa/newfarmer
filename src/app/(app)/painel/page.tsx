@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { WeatherHero } from "@/components/WeatherHero";
@@ -18,6 +19,10 @@ const TILE_COLORS = [
   "bg-[#e3eed8] dark:bg-[#1f2a1b]",
   "bg-[#f3e2c7] dark:bg-[#33281a]",
 ];
+
+export async function generateMetadata(): Promise<Metadata> {
+  return { title: (await getTranslations())("nav.dashboard") };
+}
 
 export default async function DashboardPage() {
   const user = await requireUser();

@@ -415,5 +415,28 @@
     "expiredTitle": "Link vencido ou inválido",
     "expiredText": "Entre na sua conta e use o botão \"Reenviar link\" no topo da página para receber um novo.",
     "continue": "Ir para o NewFarmer"
+  },
+  "meta": {
+    "welcome": "Boas-vindas",
+    "login": "Entrar",
+    "signup": "Criar conta",
+    "recover": "Recuperar",
+    "confirm": "Confirmar e-mail",
+    "notFound": "Página não encontrada",
+    "devInbox": "Caixa de e-mails (dev)"
+  },
+  "home": {
+    "cta": "Criar conta grátis",
+    "login": "Entrar",
+    "animalsText": "Guias de cuidado para galinhas, porcos, vacas e outros animais da sua roça.",
+    "cropsText": "Quando e como plantar cada cultura na sua região.",
+    "weatherText": "Previsão do tempo dos próximos 5 dias para a sua cidade.",
+    "privacy": "Privacidade",
+    "terms": "Termos"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "text": "O endereço que você abriu não existe ou foi movido.",
+    "back": "Voltar ao início"
   }
 }

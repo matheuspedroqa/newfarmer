@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -16,6 +17,12 @@ import { getDb } from "@/server/db";
 import { listDiary } from "@/server/diary";
 
 const SEASONS: Season[] = ["summer", "autumn", "winter", "spring"];
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  if (!(ANIMAL_IDS as readonly string[]).includes(id)) return {};
+  return { title: (await getTranslations())(`animals.${id}`) };
+}
 
 export default async function AnimalPage({
   params,

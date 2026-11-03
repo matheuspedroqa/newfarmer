@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { CROPS, CROP_GROUPS } from "@/lib/catalog";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return { title: (await getTranslations())("nav.crops") };
+}
 
 export default async function CropsIndex() {
   const t = await getTranslations();

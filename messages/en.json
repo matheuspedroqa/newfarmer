@@ -415,5 +415,28 @@
     "expiredTitle": "Link expired or invalid",
     "expiredText": "Sign in and use the \"Resend link\" button at the top of the page to get a new one.",
     "continue": "Go to NewFarmer"
+  },
+  "meta": {
+    "welcome": "Welcome",
+    "login": "Sign in",
+    "signup": "Create account",
+    "recover": "Recover",
+    "confirm": "Confirm e-mail",
+    "notFound": "Page not found",
+    "devInbox": "E-mail inbox (dev)"
+  },
+  "home": {
+    "cta": "Create free account",
+    "login": "Sign in",
+    "animalsText": "Care guides for chickens, pigs, cows and other animals on your farm.",
+    "cropsText": "When and how to plant each crop in your region.",
+    "weatherText": "The 5-day weather forecast for your city.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The address you opened does not exist or was moved.",
+    "back": "Back to home"
   }
 }

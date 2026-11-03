@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { getDb } from "@/server/db";
 import { listDevEmails } from "@/server/mailer";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return { title: (await getTranslations())("meta.devInbox") };
+}
 
 export default async function DevInboxPage() {
   if (process.env.NODE_ENV === "production") notFound();

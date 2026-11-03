@@ -10,7 +10,7 @@ import "./globals.css";
 const fraunces = Fraunces({ subsets: ["latin"], weight: ["500", "700"], variable: "--font-fraunces" });
 const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-nunito" });
 
-export const metadata: Metadata = { title: "NewFarmer" };
+export const metadata: Metadata = { title: { template: "%s · NewFarmer", default: "NewFarmer" } };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();

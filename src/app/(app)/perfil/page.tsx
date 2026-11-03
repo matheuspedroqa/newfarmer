@@ -1,7 +1,12 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { requireUser } from "@/server/current-user";
 import { LanguageForm } from "./LanguageForm";
 import { PasswordForm } from "./PasswordForm";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return { title: (await getTranslations())("profile.title") };
+}
 
 export default async function ProfilePage() {
   const user = await requireUser();

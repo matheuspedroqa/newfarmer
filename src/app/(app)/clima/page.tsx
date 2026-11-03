@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import { resolveLocale } from "@/i18n/locales";
 import { formatDay, formatTime } from "@/lib/format";
@@ -6,6 +7,10 @@ import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getForecast } from "@/server/forecast";
 import { getWeatherProvider } from "@/server/weather";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return { title: (await getTranslations())("nav.weather") };
+}
 
 export default async function WeatherPage() {
   const user = await requireUser();

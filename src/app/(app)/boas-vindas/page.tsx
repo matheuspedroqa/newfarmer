@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { saveFarmAndContinueAction } from "@/app/actions/farm";
@@ -5,6 +6,10 @@ import { FarmForm } from "@/components/FarmForm";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getFarm } from "@/server/farm";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return { title: (await getTranslations())("meta.welcome") };
+}
 
 export default async function WelcomeFarmPage() {
   const user = await requireUser();
