@@ -648,6 +648,10 @@
           "en": "Register at your local DAV/NAV office with form Modelo 1340/DGAV and an IFAP beneficiary number."
         },
         {
+          "pt": "O limite das 350 aves é outra obrigação: só quem tem 350 ou mais galinhas poedeiras faz também a declaração de existências (fevereiro e setembro, no AviDec). Abaixo disso, basta o registo da capoeira.",
+          "en": "The 350-bird threshold is a separate duty: only keepers of 350 or more laying hens must also file the stock declaration (February and September, on AviDec). Below that, registering the coop is enough."
+        },
+        {
           "pt": "No outono/inverno a DGAV costuma mandar confinar as aves por causa da gripe aviária: tenha um galinheiro fechado e coberto.",
           "en": "In autumn/winter DGAV often orders birds kept indoors due to avian flu: have a closed, roofed coop."
         },
@@ -668,6 +672,14 @@
         {
           "title": "Observador — Registo de capoeiras de aves é obrigatório mas nem sempre cumprido",
           "url": "https://observador.pt/2025/01/29/registo-de-capoeiras-de-aves-e-obrigatorio-mas-nem-sempre-cumprido/"
+        },
+        {
+          "title": "gov.pt — Declarar existências de galinhas poedeiras",
+          "url": "https://www.gov.pt/servicos/declarar-existencias-de-galinhas-poedeiras"
+        },
+        {
+          "title": "e-konomista — Galinhas poedeiras: isenção abaixo de 350 aves (DGAV, 2025)",
+          "url": "https://www.e-konomista.pt/mais-100-galinhas-declarar-final-mes"
         },
         {
           "title": "Agroportal — Portugal tem 61 raças autóctones (Catálogo DGAV/CAP)",

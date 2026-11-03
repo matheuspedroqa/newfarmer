@@ -27,6 +27,7 @@ Regime tradicional: pastoreio em quintal com complemento de cereais (milho, trig
 
 ## Leis, registos e programas oficiais
 - **Registo obrigatório mesmo para capoeira caseira.** A "detenção caseira" está isenta de licenciamento no NREAP (DL 81/2013), mas sujeita a registo no SNIRA. Limite: até **100 aves** (e no total ≤3 CN por instalação, ≤2 CN por espécie).
+- **Declaração de existências de galinhas poedeiras (fevereiro e setembro, AviDec) só a partir de 350 aves.** Os avisos da DGAV isentam "os estabelecimentos de galinhas poedeiras com menos de 350 aves" (origem: DL 72-F/2003, registo para rastreabilidade dos ovos). Não confundir com o registo da capoeira no SNIRA, que vale para qualquer número.
 - Como registar: na DAV/NAV (serviços veterinários da DGAV) da área, com o Modelo 1340/DGAV, cartão de cidadão/NIF, número de beneficiário IFAP e dados da parcela (ou caderneta predial/contrato + planta). Taxa indicada em 2021: 4,29 €.
 - Em feiras e mercados as aves têm de vir de exploração registada, com marca de exploração.
 - Raças autóctones: apoios PEPAC à manutenção/conservação de raças autóctones (valores por CN variam com o grau de ameaça).
@@ -44,3 +45,5 @@ Regime tradicional: pastoreio em quintal com complemento de cereais (milho, trig
 - [Agroportal/RTP — Faça Chuva Faça Sol T8 Ep.9 (2024)](https://www.agroportal.pt/?p=1076140) — origem no noroeste, rusticidade, Preta Lusitânica na cabidela.
 - [DNoticias — Criar animais em casa está sujeita a registo (2024)](https://www.dnoticias.pt/2024/4/23/402815-sabia-que-criar-animais-em-casa-mesmo-que-seja-apenas-para-consumo-proprio-apesar-de-isenta-de-licenciamento-esta-sujeita-a-registo/) — isenção de licenciamento mas registo no SNIRA (Madeira tem regime próprio).
 - [Agroportal — Implementação do Regulamento (UE) 2019/6](https://www.agroportal.pt/?p=1006979) — PEMV e receita obrigatória para antimicrobianos.
+- [gov.pt — Declarar existências de galinhas poedeiras](https://www.gov.pt/servicos/declarar-existencias-de-galinhas-poedeiras) — obrigação semestral para quem tem 350 ou mais poedeiras.
+- [e-konomista — isenção abaixo de 350 aves (2025)](https://www.e-konomista.pt/mais-100-galinhas-declarar-final-mes) — cita o aviso da DGAV.
