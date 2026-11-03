@@ -40,7 +40,7 @@ We keep only what the site needs to work. We do not ask for ID documents, phone 
 
 ### Weather forecasts
 
-We keep weather forecasts for a while for each place, identified by coordinates rounded to 2 decimal places. This is not linked to any person.
+We keep weather forecasts for up to 7 days for each place, identified by coordinates rounded to 2 decimal places. This is not linked to any person.
 
 ## 3. Why we use your data and on what legal basis
 
@@ -68,8 +68,9 @@ NewFarmer is run from Brazil, the database is in the European Union and some pro
 ## 6. How long we keep data
 
 - **Account and farm data:** for as long as the account exists. When the account is deleted, this data is deleted too.
-- **Activity log:** 180 days.
+- **Activity log:** 180 days. **Sign-in attempts:** 30 days. These records are not deleted together with the account: they follow their own periods and are deleted after that.
 - **Attempt limits:** about 1 day.
+- **Weather forecasts:** up to 7 days.
 - **Sessions:** until you sign out, after 1 hour without use, or at most 30 days.
 - **Password reset code:** valid for 1 hour. **E-mail confirmation code:** valid for 7 days.
 
@@ -112,4 +113,4 @@ We store passwords and access codes only in scrambled form, use a secure connect
 
 ## 11. Changes to this policy
 
-If this policy changes, the new version will appear on this page with a new update date. If the change is important, we will let you know by e-mail.
+The date at the top shows the last update. Important changes will be announced on the site.

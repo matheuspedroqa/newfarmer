@@ -7,7 +7,7 @@ const INLINE = /\*\*(.+?)\*\*|\[([^\]]+)\]\(((?:[^()\s]|\([^()\s]*\))+)\)/g;
 
 function safeHref(url: string): string | null {
   if (/^(https?:|mailto:)/i.test(url)) return url;
-  if (/^\/(?!\/)/.test(url) || url.startsWith("#")) return url;
+  if (/^\/(?![\/\\])/.test(url) || url.startsWith("#")) return url;
   return null;
 }
 

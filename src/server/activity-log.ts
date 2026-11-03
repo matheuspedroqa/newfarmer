@@ -30,6 +30,8 @@ export type ActivityEntry = {
 };
 
 export const ACTIVITY_RETENTION_MS = 180 * 24 * 60 * 60_000;
+export const LOGIN_ATTEMPTS_RETENTION_MS = 30 * 24 * 60 * 60_000;
+export const WEATHER_CACHE_RETENTION_MS = 7 * 24 * 60 * 60_000;
 const FORBIDDEN_KEY = /pass|token|hash|secret/i;
 
 type LogInput = {
@@ -108,5 +110,7 @@ export function listActivity(
 
 export async function purgeOld(db: Db, now = Date.now()): Promise<void> {
   await db.run("DELETE FROM activity_logs WHERE created_at < $1", [now - ACTIVITY_RETENTION_MS]);
+  await db.run("DELETE FROM login_attempts WHERE attempted_at < $1", [now - LOGIN_ATTEMPTS_RETENTION_MS]);
+  await db.run("DELETE FROM weather_cache WHERE fetched_at < $1", [now - WEATHER_CACHE_RETENTION_MS]);
   await purgeRateLimits(db, now);
 }

@@ -1,5 +1,5 @@
 import { expect, it, vi } from "vitest";
-import { ACTIVITY_RETENTION_MS, listActivity, logActivity, purgeOld } from "@/server/activity-log";
+import { ACTIVITY_RETENTION_MS, LOGIN_ATTEMPTS_RETENTION_MS, WEATHER_CACHE_RETENTION_MS, listActivity, logActivity, purgeOld } from "@/server/activity-log";
 import { testDb } from "../helpers/db";
 import { makeUser } from "../helpers/users";
 
@@ -57,6 +57,22 @@ it("purgeOld apaga logs com mais de 180 dias e rate_limits velhos, e mantém o r
   await purgeOld(db, now);
   expect((await listActivity(db, {})).map((e) => e.target)).toEqual(["novo"]);
   expect((await db.query("SELECT key FROM rate_limits")).map((r) => (r as { key: string }).key)).toEqual(["nova"]);
+});
+
+it("purgeOld apaga tentativas de login com mais de 30 dias e previsões com mais de 7 dias", async () => {
+  const db = await testDb();
+  const now = 1_000 * DIA;
+  await db.run("INSERT INTO login_attempts (identifier, attempted_at, success) VALUES ('velha', $1, 0), ('nova', $2, 0)", [
+    now - LOGIN_ATTEMPTS_RETENTION_MS - 1,
+    now - LOGIN_ATTEMPTS_RETENTION_MS + 1,
+  ]);
+  await db.run("INSERT INTO weather_cache (key, payload, fetched_at) VALUES ('velha', '{}', $1), ('nova', '{}', $2)", [
+    now - WEATHER_CACHE_RETENTION_MS - 1,
+    now - WEATHER_CACHE_RETENTION_MS + 1,
+  ]);
+  await purgeOld(db, now);
+  expect((await db.query<{ identifier: string }>("SELECT identifier FROM login_attempts")).map((r) => r.identifier)).toEqual(["nova"]);
+  expect((await db.query<{ key: string }>("SELECT key FROM weather_cache")).map((r) => r.key)).toEqual(["nova"]);
 });
 
 it("logActivity limpa de vez em quando (sorteio injetável) e falha na limpeza não quebra a gravação", async () => {

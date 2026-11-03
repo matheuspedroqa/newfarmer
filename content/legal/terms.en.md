@@ -41,7 +41,7 @@ We do our best to keep the site working well, but it is provided **as is**, with
 
 ## 6. Changes to these terms
 
-If these terms change, the new version will appear on this page with a new update date. If the change is important, we will let you know by e-mail.
+The date at the top shows the last update. Important changes will be announced on the site.
 
 ## 7. Governing law and jurisdiction
 

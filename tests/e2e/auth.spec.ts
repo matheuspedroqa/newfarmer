@@ -36,6 +36,7 @@ test("cadastro sem aceitar os Termos ou sem ter 13 anos mostra o erro e mantém 
   await page.getByRole("button", { name: "Criar conta" }).click();
   await expect(page.getByText("O NewFarmer é para maiores de 13 anos")).toBeVisible();
   await expect(page.getByText("Para criar a conta, aceite os Termos e a Política de Privacidade")).toHaveCount(0);
+  await expect(page.getByLabel(/Li e aceito/)).toBeChecked();
 });
 
 test("os links do aceite abrem os Termos e a Política em outra aba", async ({ page }) => {

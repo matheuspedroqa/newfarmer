@@ -40,7 +40,7 @@ Guardamos só o que o site precisa para funcionar. Não pedimos documentos, tele
 
 ### Previsão do tempo
 
-Guardamos por um tempo as previsões do tempo de cada lugar, identificado por coordenadas arredondadas (2 casas decimais). Isso não é ligado a nenhuma pessoa.
+Guardamos por até 7 dias as previsões do tempo de cada lugar, identificado por coordenadas arredondadas (2 casas decimais). Isso não é ligado a nenhuma pessoa.
 
 ## 3. Para que usamos e com que base legal
 
@@ -68,8 +68,9 @@ O NewFarmer é mantido no Brasil, o banco de dados fica na União Europeia e alg
 ## 6. Por quanto tempo guardamos
 
 - **Conta e dados da criação:** enquanto a conta existir. Quando a conta é apagada, esses dados também são.
-- **Registro de atividade:** 180 dias.
+- **Registro de atividade:** 180 dias. **Tentativas de entrar:** 30 dias. Esses registros não são apagados junto com a conta: eles seguem esses prazos próprios e depois são apagados.
 - **Limites de tentativas:** cerca de 1 dia.
+- **Previsões do tempo:** até 7 dias.
 - **Sessões:** até você sair, até 1 hora sem uso ou no máximo 30 dias.
 - **Código para trocar a senha:** vale 1 hora. **Código para confirmar o e-mail:** vale 7 dias.
 
@@ -112,4 +113,4 @@ Guardamos senhas e códigos de acesso só embaralhados, usamos conexão segura (
 
 ## 11. Mudanças nesta política
 
-Se esta política mudar, a nova versão aparece nesta página com a data de atualização nova. Se a mudança for importante, avisamos pelo e-mail da sua conta.
+A data no topo mostra a última atualização. Mudanças importantes serão avisadas no site.

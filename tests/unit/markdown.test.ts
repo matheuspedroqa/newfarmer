@@ -27,6 +27,10 @@ describe("renderMarkdown", () => {
     expect(html("[clique](javascript:alert(1))")).toBe("<p>clique</p>");
   });
 
+  it("link que começa com barra invertida ou // vira só texto (o navegador trataria como outro site)", () => {
+    expect(html("[a](/\\evil.com) [b](//evil.com)")).toBe("<p>a b</p>");
+  });
+
   it("<script> aparece como texto, nunca como tag", () => {
     expect(html("<script>alert(1)</script>")).toBe("<p>&lt;script&gt;alert(1)&lt;/script&gt;</p>");
   });

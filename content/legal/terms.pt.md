@@ -41,7 +41,7 @@ Fazemos o possível para o site funcionar bem, mas ele é oferecido **como está
 
 ## 6. Mudanças nestes termos
 
-Se estes termos mudarem, a nova versão aparece nesta página com a data de atualização nova. Se a mudança for importante, avisamos pelo e-mail da sua conta.
+A data no topo mostra a última atualização. Mudanças importantes serão avisadas no site.
 
 ## 7. Lei e foro
 
