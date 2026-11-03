@@ -108,6 +108,16 @@ CREATE TABLE rate_limits (key TEXT PRIMARY KEY, window_start BIGINT NOT NULL, co
 ALTER TABLE rate_limits ENABLE ROW LEVEL SECURITY;
 `,
   },
+  {
+    id: 3,
+    name: "session_last_seen",
+    // 30::bigint evita estouro de INTEGER (2,6 bi). Sessões antigas ganham como "último uso" o momento da criação (expires_at - 30 dias).
+    sql: `
+ALTER TABLE sessions ADD COLUMN last_seen_at BIGINT;
+UPDATE sessions SET last_seen_at = expires_at - 30::bigint * 24 * 3600 * 1000 WHERE last_seen_at IS NULL;
+ALTER TABLE sessions ALTER COLUMN last_seen_at SET NOT NULL;
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

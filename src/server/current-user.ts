@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { LOCALE_COOKIE, SESSION_COOKIE, THEME_COOKIE } from "@/lib/cookies";
 import type { User } from "./accounts";
 import { getDb } from "./db";
-import { SESSION_TTL_MS, createSession, deleteSession, getSessionUser } from "./sessions";
+import { createSession, deleteSession, getSessionUser } from "./sessions";
 
 const ONE_YEAR_S = 365 * 24 * 60 * 60;
 
@@ -28,7 +28,6 @@ export async function startSession(user: User): Promise<void> {
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
     path: "/",
-    maxAge: SESSION_TTL_MS / 1000,
   });
   store.set(LOCALE_COOKIE, user.locale, { path: "/", sameSite: "lax", maxAge: ONE_YEAR_S });
   store.set(THEME_COOKIE, user.theme, { path: "/", sameSite: "lax", maxAge: ONE_YEAR_S });

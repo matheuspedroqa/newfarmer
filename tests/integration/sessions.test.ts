@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
+  SESSION_IDLE_MS,
+  SESSION_TOUCH_MS,
   SESSION_TTL_MS,
   createSession,
   deleteSession,
@@ -29,6 +31,51 @@ describe("sessões", () => {
     const token = await createSession(db, await makeUser(db), 0);
     expect(await getSessionUser(db, token, SESSION_TTL_MS + 1)).toBeNull();
     expect(await db.query("SELECT COUNT(*)::int AS n FROM sessions")).toEqual([{ n: 0 }]);
+  });
+
+  it("o limite de 30 dias vale mesmo para quem usou sem parar", async () => {
+    const db = await testDb();
+    const id = await makeUser(db);
+    const token = await createSession(db, id, 0);
+    const passo = 30 * 60_000;
+    for (let t = passo; t < SESSION_TTL_MS; t += passo) {
+      expect((await getSessionUser(db, token, t))?.id).toBe(id);
+    }
+    expect(await getSessionUser(db, token, SESSION_TTL_MS + 1)).toBeNull();
+  });
+
+  it("1 hora parado: a sessão acaba e é apagada", async () => {
+    const db = await testDb();
+    const token = await createSession(db, await makeUser(db), 0);
+    expect(await getSessionUser(db, token, SESSION_IDLE_MS + 1)).toBeNull();
+    expect(await db.query("SELECT COUNT(*)::int AS n FROM sessions")).toEqual([{ n: 0 }]);
+  });
+
+  it("exatamente 1 hora parado ainda vale; só acima disso acaba", async () => {
+    const db = await testDb();
+    const id = await makeUser(db);
+    const token = await createSession(db, id, 0);
+    expect((await getSessionUser(db, token, SESSION_IDLE_MS))?.id).toBe(id);
+  });
+
+  it("quem continua usando não é desconectado", async () => {
+    const db = await testDb();
+    const id = await makeUser(db);
+    const token = await createSession(db, id, 0);
+    for (let t = 50 * 60_000; t <= 5 * 60 * 60_000; t += 50 * 60_000) {
+      expect((await getSessionUser(db, token, t))?.id).toBe(id);
+    }
+  });
+
+  it("last_seen_at só é regravado depois de 5 minutos", async () => {
+    const db = await testDb();
+    const token = await createSession(db, await makeUser(db), 1000);
+    const visto = async () => (await db.query<{ last_seen_at: string | number }>("SELECT last_seen_at FROM sessions"))[0].last_seen_at;
+    expect(Number(await visto())).toBe(1000);
+    await getSessionUser(db, token, 1000 + SESSION_TOUCH_MS - 1);
+    expect(Number(await visto())).toBe(1000);
+    await getSessionUser(db, token, 1000 + SESSION_TOUCH_MS + 1);
+    expect(Number(await visto())).toBe(1000 + SESSION_TOUCH_MS + 1);
   });
 
   it("token desconhecido ou vazio não vale", async () => {

@@ -3,14 +3,18 @@ import { getUserById, type User } from "./accounts";
 import type { Db } from "./db";
 import { hashToken, newToken } from "./tokens";
 
+// Teto absoluto de 30 dias + 1 hora sem uso. O último uso só é regravado a cada 5 min (evita escrita a cada clique).
 export const SESSION_TTL_MS = 30 * 24 * 60 * 60_000;
+export const SESSION_IDLE_MS = 60 * 60_000;
+export const SESSION_TOUCH_MS = 5 * 60_000;
 
 export async function createSession(db: Db, userId: number, now = Date.now()): Promise<string> {
   const token = newToken();
-  await db.run("INSERT INTO sessions (user_id, token_hash, expires_at) VALUES ($1, $2, $3)", [
+  await db.run("INSERT INTO sessions (user_id, token_hash, expires_at, last_seen_at) VALUES ($1, $2, $3, $4)", [
     userId,
     hashToken(token),
     now + SESSION_TTL_MS,
+    now,
   ]);
   return token;
 }
@@ -18,14 +22,17 @@ export async function createSession(db: Db, userId: number, now = Date.now()): P
 export async function getSessionUser(db: Db, token: string, now = Date.now()): Promise<User | null> {
   if (!token) return null;
   const tokenHash = hashToken(token);
-  const [row] = await db.query<{ user_id: number; expires_at: number }>(
-    "SELECT user_id, expires_at FROM sessions WHERE token_hash = $1",
+  const [row] = await db.query<{ user_id: number; expires_at: number; last_seen_at: number }>(
+    "SELECT user_id, expires_at, last_seen_at FROM sessions WHERE token_hash = $1",
     [tokenHash],
   );
   if (!row) return null;
-  if (row.expires_at <= now) {
+  if (row.expires_at <= now || now - row.last_seen_at > SESSION_IDLE_MS) {
     await db.run("DELETE FROM sessions WHERE token_hash = $1", [tokenHash]);
     return null;
+  }
+  if (now - row.last_seen_at > SESSION_TOUCH_MS) {
+    await db.run("UPDATE sessions SET last_seen_at = $1 WHERE token_hash = $2", [now, tokenHash]);
   }
   return getUserById(db, row.user_id);
 }
