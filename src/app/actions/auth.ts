@@ -13,7 +13,8 @@ import {
   toFieldErrors,
 } from "@/lib/validation";
 import { getUserById, verifyCredentials } from "@/server/accounts";
-import { logLoginAttempt, logSafely } from "@/server/activity-log";
+import { logLoginAttempt, loginTarget, logSafely } from "@/server/activity-log";
+import { signUpLogged } from "@/server/audited";
 import { endSession, getCurrentUser, startSession } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { sendVerificationEmail } from "@/server/email-verification";
@@ -23,7 +24,7 @@ import { limitByIp } from "@/server/rate-limit";
 import { sendUsernameReminder } from "@/server/username-reminder";
 import { clientIp } from "@/server/request-context";
 import { setPreferences } from "@/server/preferences";
-import { refreshEstimatedClimate, registerUser } from "@/server/registration";
+import { refreshEstimatedClimate } from "@/server/registration";
 import { getWeatherProvider } from "@/server/weather";
 
 export type FormState = {
@@ -57,11 +58,10 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
     await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "signup" }, ip });
     return { formError: "rateLimited", values };
   }
-  const result = await registerUser(db, getWeatherProvider(), parsed.data);
+  const result = await signUpLogged(db, getWeatherProvider(), parsed.data, ip);
   if (!result.ok) return { fieldErrors: { [result.error === "emailTaken" ? "email" : "username"]: result.error }, values };
 
   const locale = resolveLocale(await getLocale());
-  await logSafely(db, { userId: result.userId, action: "auth.signup", target: parsed.data.username, ip });
   await setPreferences(db, result.userId, { locale });
   await startSession((await getUserById(db, result.userId))!);
   // Falha no envio não impede o cadastro: a faixa do topo deixa reenviar depois.
@@ -87,7 +87,7 @@ export async function loginAction(_prev: FormState, formData: FormData): Promise
   const result = await verifyCredentials(db, parsed.data.username, parsed.data.password);
   await logLoginAttempt(db, parsed.data.username, result, ip);
   if (!result.ok && result.reason === "locked") {
-    await logSafely(db, { userId: null, action: "security.rateLimited", target: parsed.data.username, details: { limit: "loginLock" }, ip });
+    await logSafely(db, { userId: null, action: "security.rateLimited", target: loginTarget(parsed.data.username), details: { limit: "loginLock" }, ip });
   }
   if (!result.ok) return { formError: result.reason === "locked" ? "locked" : "invalidCredentials", values };
 

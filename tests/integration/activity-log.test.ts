@@ -75,45 +75,131 @@ it("logActivity limpa de vez em quando (sorteio injetável) e falha na limpeza n
   erro.mockRestore();
 });
 
-// --- Task 10: ações gravam o registro ---
-import { changePassword, verifyCredentials } from "@/server/accounts";
-import { logLoginAttempt, logSafely } from "@/server/activity-log";
-import { addDiaryEntry, deleteDiaryEntry } from "@/server/diary";
+// --- Task 10: os caminhos reais gravam o registro ---
+import { verifyCredentials } from "@/server/accounts";
+import { loginTarget, logLoginAttempt, logSafely } from "@/server/activity-log";
+import {
+  addDiaryLogged,
+  changeCityLogged,
+  changePasswordLogged,
+  deleteDiaryLogged,
+  saveFarmLogged,
+  saveLocaleLogged,
+  signUpLogged,
+} from "@/server/audited";
+import { confirmEmail, sendVerificationEmail } from "@/server/email-verification";
+import { requestPasswordReset, resetPassword } from "@/server/password-reset";
+import { createFakeWeatherProvider } from "@/server/weather/fake";
 
-it("login certo e login errado geram cada um uma linha, sem senha nos detalhes", async () => {
+const IP = "1.1.1.1";
+const SEGREDOS = /segredo123|errada-123|nova-senha-1|texto-secreto|Mimosa|token|recuperar|confirmar/i;
+const resumo = (rows: Awaited<ReturnType<typeof listActivity>>) =>
+  rows.map((r) => [r.action, r.userId, r.target, r.details]);
+
+it("login certo, errado e bloqueado geram uma linha cada", async () => {
   const db = await testDb();
   const ana = await makeUser(db);
-  await logLoginAttempt(db, "Ana", await verifyCredentials(db, "Ana", "segredo123"), "1.1.1.1");
-  await logLoginAttempt(db, "Ana", await verifyCredentials(db, "Ana", "errada-123"), "1.1.1.1");
+  await logLoginAttempt(db, "Ana", await verifyCredentials(db, "Ana", "segredo123"), IP);
+  await logLoginAttempt(db, "Ana", await verifyCredentials(db, "Ana", "errada-123"), IP);
+  await logLoginAttempt(db, "ana", { ok: false, reason: "locked" }, IP);
   const rows = await listActivity(db, {});
-  expect(rows.map((r) => [r.action, r.userId, r.target, r.details])).toEqual([
+  expect(resumo(rows)).toEqual([
+    ["auth.loginFailed", null, "ana", { reason: "locked" }],
     ["auth.loginFailed", null, "ana", { reason: "invalid" }],
     ["auth.login", ana, "ana", {}],
   ]);
-  expect(JSON.stringify(rows)).not.toMatch(/segredo123|errada-123/);
+  expect(JSON.stringify(rows)).not.toMatch(SEGREDOS);
 });
 
-it("diário criado e apagado guarda só animal e tipo, nunca o texto", async () => {
+it("senha digitada no campo de username não vai para o registro", async () => {
   const db = await testDb();
-  const ana = await makeUser(db);
-  const id = await addDiaryEntry(db, ana, { animalId: "chickens", date: "2026-01-01", kind: "illness", animalName: "Mimosa", note: "texto-secreto" });
-  await logSafely(db, { userId: ana, action: "diary.created", details: { animal: "chickens", kind: "illness" }, ip: "1.1.1.1" });
-  expect(await deleteDiaryEntry(db, ana, id)).toBe("chickens");
-  await logSafely(db, { userId: ana, action: "diary.deleted", details: { animal: "chickens" }, ip: "1.1.1.1" });
-  const rows = await listActivity(db, { userId: ana });
-  expect(rows.map((r) => r.action)).toEqual(["diary.deleted", "diary.created"]);
-  expect(JSON.stringify(rows)).not.toMatch(/texto-secreto|Mimosa/);
-});
-
-it("senha trocada gera uma linha da própria conta, sem senha", async () => {
-  const db = await testDb();
-  const ana = await makeUser(db);
-  expect(await changePassword(db, ana, "segredo123", "nova-senha-1")).toBe("ok");
-  await logSafely(db, { userId: ana, action: "auth.passwordChanged", target: "ana", ip: "1.1.1.1" });
+  await makeUser(db);
+  const digitado = "Minha Senha Secreta!123";
+  expect(loginTarget(digitado)).toBe("");
+  await logLoginAttempt(db, digitado, await verifyCredentials(db, digitado, "x"), IP);
   const rows = await listActivity(db, {});
-  expect(rows).toHaveLength(1);
-  expect([rows[0].action, rows[0].userId, rows[0].target]).toEqual(["auth.passwordChanged", ana, "ana"]);
-  expect(JSON.stringify(rows)).not.toMatch(/nova-senha-1|segredo123/);
+  expect(resumo(rows)).toEqual([["auth.loginFailed", null, "", { reason: "invalid", input: "invalid" }]]);
+  expect(JSON.stringify(rows)).not.toMatch(/secreta|123/i);
+});
+
+it("cadastro grava auth.signup com o username", async () => {
+  const db = await testDb();
+  const provider = createFakeWeatherProvider();
+  const [city] = await provider.searchCities("Curitiba", "pt");
+  const r = await signUpLogged(db, provider, { name: "Ana", email: "a@e.com", username: "ana", password: "segredo123", confirmPassword: "segredo123", city }, IP);
+  expect(r.ok).toBe(true);
+  const rows = await listActivity(db, {});
+  expect(resumo(rows)).toEqual([["auth.signup", (r as { userId: number }).userId, "ana", {}]]);
+  expect(JSON.stringify(rows)).not.toMatch(SEGREDOS);
+});
+
+it("diário criado e apagado: uma linha cada, só animal e tipo", async () => {
+  const db = await testDb();
+  const ana = await makeUser(db);
+  const id = await addDiaryLogged(db, ana, { animalId: "cows", date: "2026-01-01", kind: "illness", animalName: "Mimosa", note: "texto-secreto" }, IP);
+  expect(await deleteDiaryLogged(db, ana, id, IP)).toBe("cows");
+  expect(await deleteDiaryLogged(db, ana, id, IP)).toBeNull(); // já apagado: não registra de novo
+  const rows = await listActivity(db, { userId: ana });
+  expect(resumo(rows)).toEqual([
+    ["diary.deleted", ana, "", { animal: "cows" }],
+    ["diary.created", ana, "", { animal: "cows", kind: "illness" }],
+  ]);
+  expect(JSON.stringify(rows)).not.toMatch(SEGREDOS);
+});
+
+it("senha trocada grava uma linha só quando dá certo", async () => {
+  const db = await testDb();
+  const ana = await makeUser(db);
+  const user = { id: ana, username: "ana" };
+  expect(await changePasswordLogged(db, user, "errada-123", "nova-senha-1", undefined, IP)).toBe("wrongPassword");
+  expect(await listActivity(db, {})).toHaveLength(0);
+  expect(await changePasswordLogged(db, user, "segredo123", "nova-senha-1", undefined, IP)).toBe("ok");
+  const rows = await listActivity(db, {});
+  expect(resumo(rows)).toEqual([["auth.passwordChanged", ana, "ana", {}]]);
+  expect(JSON.stringify(rows)).not.toMatch(SEGREDOS);
+});
+
+it("fazenda e cidade gravam farm.updated; idioma grava profile.updated", async () => {
+  const db = await testDb();
+  const ana = await makeUser(db);
+  const provider = createFakeWeatherProvider();
+  const [lisboa] = await provider.searchCities("Lisboa", "pt");
+  await saveFarmLogged(db, ana, { animals: { goats: 3, chickens: 12 }, crops: ["tomato"] }, IP);
+  await changeCityLogged(db, provider, ana, lisboa, IP);
+  await saveLocaleLogged(db, ana, "en", IP);
+  expect(resumo(await listActivity(db, {}))).toEqual([
+    ["profile.updated", ana, "", { field: "locale", value: "en" }],
+    ["farm.updated", ana, "", { change: "city" }],
+    ["farm.updated", ana, "", { animals: 2, crops: 1 }],
+  ]);
+});
+
+it("redefinição: pedido e conclusão são linhas distintas, sem token", async () => {
+  const db = await testDb();
+  const ana = await makeUser(db);
+  const sent: { text?: string; html?: string }[] = [];
+  const mailer = { send: async (m: never) => void sent.push(m) };
+  await requestPasswordReset(db, mailer as never, { identifier: "ana", baseUrl: "http://x", locale: "pt", ip: IP });
+  const token = (sent[0] as { html: string }).html.match(/recuperar\/([\w-]+)/)![1];
+  expect(await resetPassword(db, { token, password: "nova-senha-1", ip: IP })).toBe("ok");
+  const rows = await listActivity(db, {});
+  expect(resumo(rows)).toEqual([
+    ["auth.passwordReset", ana, "", { step: "completed" }],
+    ["auth.passwordReset", ana, "ana", { step: "requested" }],
+  ]);
+  expect(JSON.stringify(rows)).not.toContain(token);
+});
+
+it("confirmação de e-mail grava auth.emailConfirmed", async () => {
+  const db = await testDb();
+  const ana = await makeUser(db);
+  const sent: unknown[] = [];
+  await sendVerificationEmail(db, { send: async (m: never) => void sent.push(m) } as never, { userId: ana, baseUrl: "http://x", locale: "pt" });
+  const token = (sent[0] as { html: string }).html.match(/confirmar\/([\w-]+)/)![1];
+  expect(await confirmEmail(db, token, Date.now(), IP)).toEqual({ userId: ana });
+  const rows = await listActivity(db, {});
+  expect(resumo(rows)).toEqual([["auth.emailConfirmed", ana, "", {}]]);
+  expect(JSON.stringify(rows)).not.toContain(token);
 });
 
 it("logSafely engole falha do registro (chave proibida) e não propaga", async () => {

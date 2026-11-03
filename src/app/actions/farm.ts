@@ -3,13 +3,12 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { citySchema, farmSchema, parseCityField, parseFarmForm, toFieldErrors } from "@/lib/validation";
-import { logSafely, logWriteLimited } from "@/server/activity-log";
+import { logWriteLimited } from "@/server/activity-log";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
-import { saveFarm } from "@/server/farm";
+import { changeCityLogged, saveFarmLogged } from "@/server/audited";
 import { limitWrites } from "@/server/rate-limit";
 import { clientIp } from "@/server/request-context";
-import { changeCity } from "@/server/registration";
 import { getWeatherProvider } from "@/server/weather";
 import type { FormState } from "./auth";
 
@@ -22,13 +21,7 @@ async function validateAndSave(formData: FormData): Promise<FormState | null> {
   }
   const parsed = farmSchema.safeParse(parseFarmForm(formData));
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error) };
-  await saveFarm(db, user.id, parsed.data);
-  await logSafely(db, {
-    userId: user.id,
-    action: "farm.updated",
-    details: { animals: Object.keys(parsed.data.animals).length, crops: parsed.data.crops.length },
-    ip: await clientIp(),
-  });
+  await saveFarmLogged(db, user.id, parsed.data, await clientIp());
   return null;
 }
 
@@ -54,8 +47,7 @@ export async function changeCityAction(_prev: FormState, formData: FormData): Pr
   }
   const parsed = citySchema.safeParse(parseCityField(formData.get("city")));
   if (!parsed.success) return { fieldErrors: { city: "cityRequired" } };
-  await changeCity(db, getWeatherProvider(), user.id, parsed.data);
-  await logSafely(db, { userId: user.id, action: "farm.updated", details: { change: "city" }, ip: await clientIp() });
+  await changeCityLogged(db, getWeatherProvider(), user.id, parsed.data, await clientIp());
   revalidatePath("/", "layout");
   return { done: true };
 }

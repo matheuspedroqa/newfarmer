@@ -1,5 +1,5 @@
 import "server-only";
-import { normalizeUsername } from "@/lib/username";
+import { normalizeUsername, usernameProblem } from "@/lib/username";
 import type { LoginResult } from "./accounts";
 import type { Db } from "./db";
 import { purgeRateLimits } from "./rate-limit";
@@ -74,10 +74,22 @@ export const logWriteLimited = (db: Db, userId: number, target: string, ip: stri
 
 /** Login certo vira auth.login; errado vira auth.loginFailed (sem conta, com o username digitado). */
 export function logLoginAttempt(db: Db, typedUsername: string, result: LoginResult, ip: string): Promise<void> {
-  const target = normalizeUsername(typedUsername);
+  const target = loginTarget(typedUsername);
   return result.ok
     ? logSafely(db, { userId: result.userId, action: "auth.login", target, ip })
-    : logSafely(db, { userId: null, action: "auth.loginFailed", target, details: { reason: result.reason }, ip });
+    : logSafely(db, {
+        userId: null,
+        action: "auth.loginFailed",
+        target,
+        details: target ? { reason: result.reason } : { reason: result.reason, input: "invalid" },
+        ip,
+      });
+}
+
+/** Só guarda o que tem cara de username: quem digita a senha no campo errado não a vê no registro. */
+export function loginTarget(typedUsername: string): string {
+  const normalized = normalizeUsername(typedUsername);
+  return usernameProblem(normalized) === null ? normalized : "";
 }
 
 /** Mais novo primeiro. `before` é o createdAt do último item da página anterior. */
