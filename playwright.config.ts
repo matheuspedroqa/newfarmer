@@ -21,6 +21,7 @@ export default defineConfig({
     url: "http://localhost:3100/login",
     reuseExistingServer: false,
     timeout: 180_000,
-    env: { DATABASE_PATH: "data/e2e-pglite", WEATHER_FAKE: "1", APP_URL: "http://localhost:3100" },
+    // DATABASE_URL vazio: o robô nunca usa o Supabase de verdade, mesmo com .env.local no computador.
+    env: { DATABASE_URL: "", DATABASE_PATH: "data/e2e-pglite", WEATHER_FAKE: "1", APP_URL: "http://localhost:3100" },
   },
 });
