@@ -7,9 +7,18 @@ afterEach(() => vi.unstubAllEnvs());
 it("deixa passar até o limite, bloqueia depois e libera quando a janela vira", async () => {
   const db = await testDb();
   for (let i = 0; i < 3; i++) expect((await hit(db, "login:1.2.3.4", 3, 60_000, 1000)).ok).toBe(true);
-  expect(await hit(db, "login:1.2.3.4", 3, 60_000, 2000)).toEqual({ ok: false, retryAfterMs: 59_000 });
+  expect(await hit(db, "login:1.2.3.4", 3, 60_000, 2000)).toEqual({ ok: false, retryAfterMs: 59_000, firstBlock: true });
   expect((await hit(db, "login:5.6.7.8", 3, 60_000, 2000)).ok).toBe(true); // outro IP não é afetado
   expect((await hit(db, "login:1.2.3.4", 3, 60_000, 61_000)).ok).toBe(true);
+});
+
+it("3 bloqueios na mesma janela: só o primeiro é marcado (para registrar uma vez)", async () => {
+  const db = await testDb();
+  await hit(db, "write:1", 1, 60_000, 0);
+  const bloqueios = [];
+  for (let i = 0; i < 3; i++) bloqueios.push((await hit(db, "write:1", 1, 60_000, 10)).firstBlock);
+  expect(bloqueios).toEqual([true, false, false]);
+  expect((await hit(db, "write:1", 1, 60_000, 0)).firstBlock).toBe(false);
 });
 
 it("IP 'local' não é limitado fora de produção", async () => {

@@ -19,14 +19,15 @@ export async function hit(db: Db, key: string, limit: number, windowMs: number, 
      RETURNING window_start, count`,
     [key, now, windowMs],
   );
+  // firstBlock: só o primeiro bloqueio da janela vai para o registro (uma enxurrada não enche activity_logs).
   return row.count <= limit
-    ? { ok: true, retryAfterMs: 0 }
-    : { ok: false, retryAfterMs: row.window_start + windowMs - now };
+    ? { ok: true, retryAfterMs: 0, firstBlock: false }
+    : { ok: false, retryAfterMs: row.window_start + windowMs - now, firstBlock: row.count === limit + 1 };
 }
 
 /** Limite por IP. Sem cabeçalho de IP ("local", só acontece em desenvolvimento/testes) não limita; em produção limita como qualquer IP. */
 export function limitByIp(db: Db, name: "login" | "signup" | "recovery" | "citySearch", ip: string, now?: number) {
-  if (ip === "local" && process.env.NODE_ENV !== "production") return Promise.resolve({ ok: true, retryAfterMs: 0 });
+  if (ip === "local" && process.env.NODE_ENV !== "production") return Promise.resolve({ ok: true, retryAfterMs: 0, firstBlock: false });
   return hit(db, `${name}:${ip}`, RATE_LIMITS[name].limit, RATE_LIMITS[name].windowMs, now);
 }
 

@@ -13,8 +13,9 @@ import type { FormState } from "./auth";
 export async function addDiaryAction(_prev: FormState, formData: FormData): Promise<FormState> {
   const user = await requireUser();
   const db = await getDb();
-  if (!(await limitWrites(db, user.id)).ok) {
-    await logWriteLimited(db, user.id, user.username, await clientIp());
+  const limit = await limitWrites(db, user.id);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logWriteLimited(db, user.id, user.username, await clientIp());
     return { formError: "rateLimited" };
   }
   const parsed = diarySchema.safeParse({
@@ -33,7 +34,11 @@ export async function addDiaryAction(_prev: FormState, formData: FormData): Prom
 export async function deleteDiaryAction(formData: FormData): Promise<void> {
   const user = await requireUser();
   const db = await getDb();
-  if (!(await limitWrites(db, user.id)).ok) return void (await logWriteLimited(db, user.id, user.username, await clientIp()));
+  const limit = await limitWrites(db, user.id);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logWriteLimited(db, user.id, user.username, await clientIp());
+    return;
+  }
   await deleteDiaryLogged(db, user.id, Number(formData.get("id")), await clientIp());
   revalidatePath("/", "layout");
 }

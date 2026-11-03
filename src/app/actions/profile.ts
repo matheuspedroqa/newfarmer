@@ -16,8 +16,9 @@ export async function changePasswordAction(_prev: FormState, formData: FormData)
   const user = await requireUser();
   const db = await getDb();
   const ip = await clientIp();
-  if (!(await limitWrites(db, user.id)).ok) {
-    await logWriteLimited(db, user.id, user.username, ip);
+  const limit = await limitWrites(db, user.id);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logWriteLimited(db, user.id, user.username, ip);
     return { formError: "rateLimited" };
   }
   // Só requireUser().id: nenhum campo do formulário é lido como id de conta.
@@ -43,8 +44,9 @@ export async function saveLanguageAction(_prev: FormState, formData: FormData): 
   const user = await requireUser();
   const db = await getDb();
   const ip = await clientIp();
-  if (!(await limitWrites(db, user.id)).ok) {
-    await logWriteLimited(db, user.id, user.username, ip);
+  const limit = await limitWrites(db, user.id);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logWriteLimited(db, user.id, user.username, ip);
     return { formError: "rateLimited" };
   }
   const locale = resolveLocale(String(formData.get("locale") ?? ""));

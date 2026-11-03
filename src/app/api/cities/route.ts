@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
   const ip = await clientIp();
   const limit = await limitByIp(db, "citySearch", ip);
   if (!limit.ok) {
-    await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "citySearch" }, ip });
+    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "citySearch" }, ip });
     return NextResponse.json(
       { error: "rateLimited" },
       { status: 429, headers: { "Retry-After": String(Math.ceil(limit.retryAfterMs / 1000)) } },

@@ -56,8 +56,9 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
 
   const db = await getDb();
   const ip = await clientIp();
-  if (!(await limitByIp(db, "signup", ip)).ok) {
-    await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "signup" }, ip });
+  const limit = await limitByIp(db, "signup", ip);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "signup" }, ip });
     return { formError: "rateLimited", values };
   }
   const result = await signUpLogged(db, getWeatherProvider(), parsed.data, ip);
@@ -82,8 +83,9 @@ export async function loginAction(_prev: FormState, formData: FormData): Promise
 
   const db = await getDb();
   const ip = await clientIp();
-  if (!(await limitByIp(db, "login", ip)).ok) {
-    await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "login" }, ip });
+  const limit = await limitByIp(db, "login", ip);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "login" }, ip });
     return { formError: "rateLimited", values };
   }
   const result = await verifyCredentials(db, parsed.data.username, parsed.data.password);
@@ -112,8 +114,9 @@ export async function forgotAction(_prev: FormState, formData: FormData): Promis
 
   const db = await getDb();
   const ip = await clientIp();
-  if (!(await limitByIp(db, "recovery", ip)).ok) {
-    await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "recovery" }, ip });
+  const limit = await limitByIp(db, "recovery", ip);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "recovery" }, ip });
     return { formError: "rateLimited", values };
   }
   try {
@@ -137,8 +140,9 @@ export async function usernameReminderAction(_prev: FormState, formData: FormDat
 
   const db = await getDb();
   const ip = await clientIp();
-  if (!(await limitByIp(db, "recovery", ip)).ok) {
-    await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "recovery" }, ip });
+  const limit = await limitByIp(db, "recovery", ip);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "recovery" }, ip });
     return { formError: "rateLimited", values };
   }
   try {

@@ -500,7 +500,7 @@
     "activeSessions": "Active sessions",
     "logins24h": "Logins in 24 h",
     "loginsDetail": "{ok} ok · {failed} failed",
-    "lockedAccounts": "Locked accounts",
+    "lockedAccounts": "Blocked usernames",
     "rateLimited24h": "Rate-limit blocks (24 h)",
     "errors24h": "Errors (24 h)",
     "dbLatency": "Database response time",

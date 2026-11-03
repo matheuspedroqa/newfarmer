@@ -36,6 +36,7 @@ We keep only what the site needs to work. We do not ask for ID documents, phone 
 - **sign-in attempts:** the username typed (only if it has a valid format), the time and whether it worked. We use this to lock the account for a while after 5 wrong passwords in a row;
 - **attempt limits:** counters tied to the IP address or the account, to stop abuse (such as someone trying to guess passwords);
 - **activity log:** who did what, on what, the IP address and when, for account actions (for example: signing in, signing out, changing the password, editing the farm or the diary). This log **never** stores passwords, access codes or the text of your diary;
+- **error log:** when a page of the site fails, we store the page address (without what comes after the "?"), a short error message (up to 300 characters) and the time. We **never** store the content of the request or its headers. We use this for the security and maintenance of the site. The message may, by chance, contain something you typed;
 - **e-mail codes:** the codes in the links to reset your password and to confirm your e-mail, stored scrambled.
 
 ### Weather forecasts
@@ -69,6 +70,7 @@ NewFarmer is run from Brazil, the database is in the European Union and some pro
 
 - **Account and farm data:** for as long as the account exists. When the account is deleted, this data is deleted too.
 - **Activity log:** 180 days. **Sign-in attempts:** 30 days. These records are not deleted together with the account: they follow their own periods and are deleted after that.
+- **Error log:** 180 days.
 - **Attempt limits:** about 1 day.
 - **Weather forecasts:** up to 7 days.
 - **Sessions:** until you sign out, after 1 hour without use, or at most 30 days.

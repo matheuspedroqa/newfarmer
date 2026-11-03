@@ -36,6 +36,7 @@ Guardamos só o que o site precisa para funcionar. Não pedimos documentos, tele
 - **tentativas de entrar:** o username digitado (só se tiver um formato válido), a hora e se deu certo. Usamos isso para bloquear a conta por um tempo depois de 5 senhas erradas seguidas;
 - **limites de tentativas:** contadores ligados ao endereço IP ou à conta, para impedir abusos (como alguém tentando adivinhar senhas);
 - **registro de atividade:** quem fez, o que fez, em quê, o endereço IP e quando, para as ações da conta (por exemplo: entrar, sair, trocar a senha, editar a criação ou o diário). Esse registro **nunca** guarda senhas, códigos de acesso nem o texto do seu diário;
+- **registro de erros:** quando uma página do site dá erro, guardamos o endereço da página (sem o que vem depois do "?"), uma mensagem curta do erro (até 300 caracteres) e a hora. **Nunca** guardamos o conteúdo do pedido nem os cabeçalhos. Usamos isso para a segurança e a manutenção do site. A mensagem pode, por acaso, conter algo que você digitou;
 - **códigos de e-mail:** os códigos dos links para trocar a senha e para confirmar o e-mail, guardados embaralhados.
 
 ### Previsão do tempo
@@ -69,6 +70,7 @@ O NewFarmer é mantido no Brasil, o banco de dados fica na União Europeia e alg
 
 - **Conta e dados da criação:** enquanto a conta existir. Quando a conta é apagada, esses dados também são.
 - **Registro de atividade:** 180 dias. **Tentativas de entrar:** 30 dias. Esses registros não são apagados junto com a conta: eles seguem esses prazos próprios e depois são apagados.
+- **Registro de erros:** 180 dias.
 - **Limites de tentativas:** cerca de 1 dia.
 - **Previsões do tempo:** até 7 dias.
 - **Sessões:** até você sair, até 1 hora sem uso ou no máximo 30 dias.

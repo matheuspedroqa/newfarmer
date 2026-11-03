@@ -500,7 +500,7 @@
     "activeSessions": "Sessões ativas",
     "logins24h": "Logins nas 24 h",
     "loginsDetail": "{ok} certos · {failed} errados",
-    "lockedAccounts": "Contas bloqueadas",
+    "lockedAccounts": "Usernames bloqueados",
     "rateLimited24h": "Bloqueios por excesso (24 h)",
     "errors24h": "Erros (24 h)",
     "dbLatency": "Tempo de resposta do banco",

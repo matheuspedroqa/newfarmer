@@ -15,8 +15,9 @@ import type { FormState } from "./auth";
 async function validateAndSave(formData: FormData): Promise<FormState | null> {
   const user = await requireUser();
   const db = await getDb();
-  if (!(await limitWrites(db, user.id)).ok) {
-    await logWriteLimited(db, user.id, user.username, await clientIp());
+  const limit = await limitWrites(db, user.id);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logWriteLimited(db, user.id, user.username, await clientIp());
     return { formError: "rateLimited" };
   }
   const parsed = farmSchema.safeParse(parseFarmForm(formData));
@@ -41,8 +42,9 @@ export async function saveFarmAndContinueAction(_prev: FormState, formData: Form
 export async function changeCityAction(_prev: FormState, formData: FormData): Promise<FormState> {
   const user = await requireUser();
   const db = await getDb();
-  if (!(await limitWrites(db, user.id)).ok) {
-    await logWriteLimited(db, user.id, user.username, await clientIp());
+  const limit = await limitWrites(db, user.id);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logWriteLimited(db, user.id, user.username, await clientIp());
     return { formError: "rateLimited" };
   }
   const parsed = citySchema.safeParse(parseCityField(formData.get("city")));

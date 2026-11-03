@@ -3,7 +3,7 @@ import { POST } from "@/app/api/dev/make-admin/route";
 import { testDb } from "../helpers/db";
 import { makeUser } from "../helpers/users";
 
-const pedido = () => new Request("http://localhost/api/dev/make-admin", { method: "POST", body: JSON.stringify({ username: "ana" }) });
+const pedido = () => new Request("http://localhost/api/dev/make-admin", { method: "POST", body: JSON.stringify({ username: "ana" }), headers: { "content-type": "application/json" } });
 
 afterEach(() => vi.unstubAllEnvs());
 
@@ -27,4 +27,10 @@ it("com E2E=1 fora de produção liga o dono do site", async () => {
   await makeUser(db);
   expect((await post(pedido())).status).toBe(204);
   expect(await db.query("SELECT is_platform_admin FROM users")).toEqual([{ is_platform_admin: true }]);
+});
+
+it("sem content-type application/json responde 415 (formulário de outro site não passa)", async () => {
+  vi.stubEnv("E2E", "1");
+  const form = new Request("http://localhost/api/dev/make-admin", { method: "POST", body: "username=ana", headers: { "content-type": "application/x-www-form-urlencoded" } });
+  expect((await POST(form)).status).toBe(415);
 });
