@@ -1,24 +1,12 @@
-import en from "../../messages/en.json";
-import pt from "../../messages/pt.json";
 import type { Locale } from "@/i18n/locales";
 import { setPassword } from "./accounts";
 import type { Db } from "./db";
+import { resetEmail } from "./email-templates";
 import type { Mailer } from "./mailer";
 import { deleteUserSessions } from "./sessions";
 import { hashToken, newToken } from "./tokens";
 
 export const RESET_TTL_MS = 60 * 60_000;
-
-const EMAIL_TEXTS = { pt: pt.email, en: en.email };
-
-function escapeHtml(text: string): string {
-  return text
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
 
 export async function requestPasswordReset(
   db: Db,
@@ -37,13 +25,7 @@ export async function requestPasswordReset(
     now + RESET_TTL_MS,
   ]);
 
-  const texts = EMAIL_TEXTS[input.locale];
-  const link = `${input.baseUrl}/recuperar/${token}`;
-  await mailer.send({
-    to: email,
-    subject: texts.resetSubject,
-    html: texts.resetBody.replaceAll("{name}", escapeHtml(user.name)).replaceAll("{link}", link),
-  });
+  await mailer.send({ to: email, ...resetEmail(input.locale, user.name, `${input.baseUrl}/recuperar/${token}`) });
 }
 
 export async function resetPassword(

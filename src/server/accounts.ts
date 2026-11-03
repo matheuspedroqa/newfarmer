@@ -39,6 +39,7 @@ export interface User {
   hemisphere: Hemisphere;
   locale: Locale;
   theme: Theme;
+  emailVerified: boolean;
 }
 
 interface UserRow {
@@ -54,6 +55,7 @@ interface UserRow {
   hemisphere: Hemisphere;
   locale: string;
   theme: string;
+  email_verified_at: number | null;
 }
 
 export async function createUser(db: Db, user: NewUser, now = Date.now()): Promise<number> {
@@ -100,6 +102,7 @@ export async function getUserById(db: Db, id: number): Promise<User | null> {
     hemisphere: row.hemisphere,
     locale: resolveLocale(row.locale),
     theme: resolveTheme(row.theme),
+    emailVerified: row.email_verified_at !== null,
   };
 }
 

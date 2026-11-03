@@ -3,6 +3,7 @@ import { logoutAction } from "@/app/actions/auth";
 import { NavRail } from "@/components/NavRail";
 import { TopControls } from "@/components/TopControls";
 import { UserMenu } from "@/components/UserMenu";
+import { VerifyEmailBanner } from "@/components/VerifyEmailBanner";
 import { requireUser } from "@/server/current-user";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
@@ -36,6 +37,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
             </form>
           </div>
         </header>
+        {!user.emailVerified && <VerifyEmailBanner email={user.email} />}
         <main className="mt-6">{children}</main>
       </div>
     </div>

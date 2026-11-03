@@ -106,7 +106,7 @@ test("recuperar a senha pela caixa de e-mail de teste", async ({ page, context }
   await expect(page.getByText("Se houver uma conta com esse e-mail")).toBeVisible();
 
   await page.goto("/dev/inbox");
-  await page.locator("article", { hasText: email }).first().getByRole("link").click();
+  await page.locator("article", { hasText: "Recupere sua senha" }).filter({ hasText: email }).getByRole("link", { name: "Criar nova senha" }).click();
   await page.getByLabel("Senha", { exact: true }).fill("nova-senha-1");
   await page.getByLabel("Confirmar senha").fill("nova-senha-1");
   await page.getByRole("button", { name: "Salvar nova senha" }).click();

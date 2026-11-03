@@ -90,8 +90,19 @@
     "diaryRecent": "Últimas anotações do diário"
   },
   "email": {
+    "greeting": "Olá, {name}!",
+    "linkFallback": "Se o botão não funcionar, copie e cole este endereço no navegador:",
+    "footer": "NewFarmer · Seu guia para a vida no campo",
+    "verifySubject": "Confirme seu e-mail no NewFarmer",
+    "verifyTitle": "Bem-vindo(a) ao NewFarmer!",
+    "verifyIntro": "Sua conta foi criada. Só falta confirmar que este e-mail é seu: assim garantimos que a recuperação de senha chega até você.",
+    "verifyButton": "Confirmar meu e-mail",
+    "verifyNote": "O link vale por 7 dias. Se você não criou uma conta no NewFarmer, ignore este e-mail.",
     "resetSubject": "Recupere sua senha do NewFarmer",
-    "resetBody": "<p>Olá, {name}!</p><p>Clique no link abaixo para criar uma nova senha. Ele vale por 1 hora.</p><p><a href=\"{link}\">{link}</a></p><p>Se você não pediu isso, ignore este e-mail.</p>"
+    "resetTitle": "Vamos criar uma nova senha",
+    "resetIntro": "Recebemos um pedido para trocar a senha da sua conta. Clique no botão para escolher uma nova.",
+    "resetButton": "Criar nova senha",
+    "resetNote": "O link vale por 1 hora e só pode ser usado uma vez. Se você não pediu isso, ignore este e-mail: sua senha continua a mesma."
   },
   "devInbox": {
     "title": "Caixa de e-mail de teste",
@@ -371,5 +382,19 @@
       "feeding": "Alimentação",
       "other": "Outro"
     }
+  },
+  "verifyBanner": {
+    "text": "Confirme seu e-mail: enviamos um link para {email}.",
+    "resend": "Reenviar link",
+    "sent": "Link enviado. Confira a caixa de entrada e o spam.",
+    "tooSoon": "Espere um minuto antes de pedir outro link.",
+    "failed": "Não foi possível enviar agora. Tente de novo mais tarde."
+  },
+  "confirmPage": {
+    "okTitle": "E-mail confirmado!",
+    "okText": "Tudo certo. Sua conta está confirmada.",
+    "expiredTitle": "Link vencido ou inválido",
+    "expiredText": "Entre na sua conta e use o botão \"Reenviar link\" no topo da página para receber um novo.",
+    "continue": "Ir para o NewFarmer"
   }
 }

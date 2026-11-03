@@ -14,6 +14,7 @@ import {
 import { getUserById, verifyCredentials } from "@/server/accounts";
 import { endSession, startSession } from "@/server/current-user";
 import { getDb } from "@/server/db";
+import { sendVerificationEmail } from "@/server/email-verification";
 import { getMailer } from "@/server/mailer";
 import { requestPasswordReset, resetPassword } from "@/server/password-reset";
 import { setPreferences } from "@/server/preferences";
@@ -26,6 +27,8 @@ export type FormState = {
   done?: boolean;
   values?: Record<string, string>;
 };
+
+const baseUrl = () => process.env.APP_URL ?? "http://localhost:3000";
 
 function typed(formData: FormData, ...fields: string[]): Record<string, string> {
   return Object.fromEntries(fields.map((f) => [f, String(formData.get(f) ?? "")]));
@@ -46,8 +49,15 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
   const result = await registerUser(db, getWeatherProvider(), parsed.data);
   if (!result.ok) return { fieldErrors: { email: "emailTaken" }, values };
 
-  await setPreferences(db, result.userId, { locale: resolveLocale(await getLocale()) });
+  const locale = resolveLocale(await getLocale());
+  await setPreferences(db, result.userId, { locale });
   await startSession((await getUserById(db, result.userId))!);
+  // Falha no envio não impede o cadastro: a faixa do topo deixa reenviar depois.
+  try {
+    await sendVerificationEmail(db, getMailer(db), { userId: result.userId, baseUrl: baseUrl(), locale });
+  } catch (error) {
+    console.error("Falha ao enviar e-mail de confirmação", error);
+  }
   redirect("/boas-vindas");
 }
 
@@ -78,7 +88,7 @@ export async function forgotAction(_prev: FormState, formData: FormData): Promis
   try {
     await requestPasswordReset(db, getMailer(db), {
       email: parsed.data.email,
-      baseUrl: process.env.APP_URL ?? "http://localhost:3000",
+      baseUrl: baseUrl(),
       locale: resolveLocale(await getLocale()),
     });
   } catch (error) {

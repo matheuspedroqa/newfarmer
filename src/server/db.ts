@@ -43,6 +43,15 @@ CREATE TABLE IF NOT EXISTS password_reset_tokens (
   expires_at BIGINT NOT NULL,
   used_at BIGINT
 );
+-- Coluna nova em banco que já existia (Supabase): ADD COLUMN IF NOT EXISTS não mexe nos dados.
+ALTER TABLE users ADD COLUMN IF NOT EXISTS email_verified_at BIGINT;
+CREATE TABLE IF NOT EXISTS email_verification_tokens (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  token_hash TEXT NOT NULL UNIQUE,
+  expires_at BIGINT NOT NULL,
+  created_at BIGINT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS login_attempts (
   id SERIAL PRIMARY KEY,
   email TEXT NOT NULL,
@@ -87,6 +96,7 @@ CREATE TABLE IF NOT EXISTS dev_emails (
 ALTER TABLE users ENABLE ROW LEVEL SECURITY;
 ALTER TABLE sessions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE password_reset_tokens ENABLE ROW LEVEL SECURITY;
+ALTER TABLE email_verification_tokens ENABLE ROW LEVEL SECURITY;
 ALTER TABLE login_attempts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE farm_animals ENABLE ROW LEVEL SECURITY;
 ALTER TABLE farm_crops ENABLE ROW LEVEL SECURITY;

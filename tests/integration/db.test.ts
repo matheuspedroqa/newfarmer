@@ -4,6 +4,7 @@ import { testDb } from "../helpers/db";
 const TABLES = [
   "dev_emails",
   "diary_entries",
+  "email_verification_tokens",
   "farm_animals",
   "farm_crops",
   "login_attempts",
