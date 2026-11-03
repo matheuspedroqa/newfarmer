@@ -118,6 +118,21 @@ UPDATE sessions SET last_seen_at = expires_at - 30::bigint * 24 * 3600 * 1000 WH
 ALTER TABLE sessions ALTER COLUMN last_seen_at SET NOT NULL;
 `,
   },
+  {
+    id: 4,
+    name: "activity_logs",
+    // user_id sem FK: o log sobrevive se a conta for apagada, e login errado não tem conta.
+    sql: `
+CREATE TABLE activity_logs (
+  id SERIAL PRIMARY KEY, user_id INTEGER, action TEXT NOT NULL,
+  target TEXT NOT NULL DEFAULT '', details JSONB NOT NULL DEFAULT '{}', ip TEXT NOT NULL DEFAULT '',
+  created_at BIGINT NOT NULL
+);
+CREATE INDEX idx_activity_created ON activity_logs (created_at DESC);
+CREATE INDEX idx_activity_user ON activity_logs (user_id, created_at DESC);
+ALTER TABLE activity_logs ENABLE ROW LEVEL SECURITY;
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

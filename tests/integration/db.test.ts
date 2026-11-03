@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { testDb } from "../helpers/db";
 
 const TABLES = [
+  "activity_logs",
   "dev_emails",
   "diary_entries",
   "email_verification_tokens",
