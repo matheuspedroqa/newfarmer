@@ -12,6 +12,7 @@ const inputClass = "w-full rounded-xl border border-border bg-surface px-4 py-3"
 
 export function DiaryForm({ animalId, today }: { animalId: string; today: string }) {
   const t = useTranslations("diary");
+  const tErrors = useTranslations("errors");
   const [state, action, pending] = useActionState<FormState, FormData>(addDiaryAction, {});
   const errors = state.fieldErrors ?? {};
 
@@ -41,6 +42,7 @@ export function DiaryForm({ animalId, today }: { animalId: string; today: string
         <textarea id="diary-note" name="note" rows={3} maxLength={1000} aria-describedby="diary-note-error" className={inputClass} />
         <FieldError id="diary-note-error" code={errors.note} />
       </div>
+      {state.formError && <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{tErrors(state.formError)}</p>}
       {state.done && <p role="status" className="font-semibold">{t("saved")}</p>}
       <div className="w-60">
         <SubmitButton pending={pending}>{t("save")}</SubmitButton>

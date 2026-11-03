@@ -120,6 +120,7 @@ export function FarmForm({
         ))}
       </section>
 
+      {state.formError && <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{t(`errors.${state.formError}`)}</p>}
       {state.done && (
         <p role="status" className="rounded-xl bg-soft px-4 py-3 font-semibold">{t("farm.saved")}</p>
       )}

@@ -9,6 +9,7 @@ import { SubmitButton } from "./SubmitButton";
 
 export function CityForm() {
   const t = useTranslations("myfarm");
+  const tErrors = useTranslations("errors");
   const [state, action, pending] = useActionState<FormState, FormData>(changeCityAction, {});
   return (
     <form action={action} noValidate className="mt-4 flex items-start gap-4">
@@ -18,6 +19,7 @@ export function CityForm() {
       <div className="mt-6 w-48">
         <SubmitButton pending={pending}>{t("saveCity")}</SubmitButton>
       </div>
+      {state.formError && <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{tErrors(state.formError)}</p>}
       {state.done && (
         <p role="status" className="mt-7 max-w-xs text-sm font-semibold text-primary">{t("cityChanged")}</p>
       )}

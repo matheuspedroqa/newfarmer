@@ -25,6 +25,7 @@ export function LanguageForm({ current }: { current: Locale }) {
           </label>
         ))}
       </fieldset>
+      {state.formError && <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{t(`errors.${state.formError}`)}</p>}
       {state.done && <p role="status" className="text-sm font-semibold text-primary">{t("profile.languageSaved")}</p>}
       <div className="w-60">
         <SubmitButton pending={pending}>{t("profile.saveLanguage")}</SubmitButton>

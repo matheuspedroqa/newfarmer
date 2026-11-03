@@ -11,6 +11,7 @@ const inputClass = "w-full rounded-xl border border-border bg-surface px-4 py-3"
 
 export function PasswordForm() {
   const t = useTranslations("profile");
+  const tErrors = useTranslations("errors");
   const [state, action, pending] = useActionState<FormState, FormData>(changePasswordAction, {});
   const errors = state.fieldErrors ?? {};
 
@@ -32,6 +33,7 @@ export function PasswordForm() {
           <FieldError id={`pw-${field}-error`} code={errors[field]} />
         </div>
       ))}
+      {state.formError && <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{tErrors(state.formError)}</p>}
       {state.done && <p role="status" className="rounded-xl bg-soft px-4 py-3 font-semibold">{t("passwordChanged")}</p>}
       <div className="w-60">
         <SubmitButton pending={pending}>{t("savePassword")}</SubmitButton>
