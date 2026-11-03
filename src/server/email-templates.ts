@@ -45,8 +45,8 @@ function renderEmail({ locale, name, username, title, intro, introHtml, button, 
     <tr><td style="background:${C.primary};padding:20px 32px;color:#ffffff;font-size:22px;font-weight:700;">🌱 NewFarmer</td></tr>
     <tr><td style="padding:32px;color:${C.text};font-size:16px;line-height:1.6;">
       <h1 style="margin:0 0 16px;font-size:24px;line-height:1.3;color:${C.text};">${escapeHtml(title)}</h1>
-      <p style="margin:0 0 12px;">${escapeHtml(t.greeting.replace("{name}", name))}</p>
-      ${username ? `<p style="margin:0 0 12px;">${escapeHtml(t.verifyUsername.replace("{username}", username))}</p>
+      <p style="margin:0 0 12px;">${escapeHtml(t.greeting.replace("{name}", () => name))}</p>
+      ${username ? `<p style="margin:0 0 12px;">${escapeHtml(t.verifyUsername.replace("{username}", () => username))}</p>
       ` : ""}<p style="margin:0 0 24px;">${introHtml ?? escapeHtml(intro)}</p>
       <table role="presentation" cellpadding="0" cellspacing="0"><tr>
         <td style="background:${C.primary};border-radius:12px;">
@@ -83,9 +83,9 @@ export function resetEmail(locale: Locale, name: string, link: string) {
 
 export function usernameReminderEmail(locale: Locale, name: string, username: string, link: string) {
   const t = TEXTS[locale];
-  const intro = t.usernameIntro.replace("{username}", username);
+  const intro = t.usernameIntro.replace("{username}", () => username);
   // O username vai escapado e em destaque, dentro do próprio elemento.
-  const introHtml = escapeHtml(t.usernameIntro).replace("{username}", `<strong>${escapeHtml(username)}</strong>`);
+  const introHtml = escapeHtml(t.usernameIntro).replace("{username}", () => `<strong>${escapeHtml(username)}</strong>`);
   return {
     subject: t.usernameSubject,
     html: renderEmail({ locale, name, link, title: t.usernameTitle, intro, introHtml, button: t.usernameButton, note: t.usernameNote }),

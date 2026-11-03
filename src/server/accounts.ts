@@ -1,6 +1,6 @@
 import "server-only";
 import bcrypt from "bcryptjs";
-import { normalizeUsername } from "@/lib/username";
+import { normalizeUsername, usernameProblem } from "@/lib/username";
 import type { CityChoice } from "@/lib/validation";
 import { resolveLocale, resolveTheme, type Locale, type Theme } from "@/i18n/locales";
 import type { ClimateZone, Hemisphere, ResolvedClimate } from "./climate";
@@ -132,6 +132,11 @@ export async function verifyCredentials(
   now = Date.now(),
 ): Promise<LoginResult> {
   const normalized = normalizeUsername(username);
+  // Nenhuma conta pode ter esse nome (ex.: senha digitada no campo errado): não bloqueia nem grava a tentativa.
+  if (usernameProblem(normalized) !== null) {
+    await bcrypt.compare(password, DUMMY_HASH); // mesmo tempo de resposta
+    return { ok: false, reason: "invalid" };
+  }
   if (await isLocked(db, normalized, now)) return { ok: false, reason: "locked" };
 
   const [row] = await db.query<{ id: number; password_hash: string }>(

@@ -59,6 +59,9 @@ test("Perfil troca a senha (e recusa senha atual errada)", async ({ page, contex
   await clearSession(context);
   await page.goto("/login");
   await page.getByLabel("Username").fill(username);
+  await page.getByLabel("Senha").fill(PASSWORD);
+  await page.getByRole("button", { name: "Entrar" }).click();
+  await expect(page.getByRole("alert").filter({ hasText: "Username ou senha incorretos" })).toBeVisible();
   await page.getByLabel("Senha").fill("nova-senha-1");
   await page.getByRole("button", { name: "Entrar" }).click();
   await expect(page).toHaveURL(/\/painel$/);

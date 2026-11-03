@@ -16,6 +16,11 @@ describe("modelos de e-mail", () => {
     expect(verifyEmail("en", "Bob", "bob", link).html).toContain("Your username: bob");
   });
 
+  it("nome com $& ou $` aparece literalmente (sem padrões de replace)", () => {
+    const { html } = verifyEmail("pt", "Ana $& Silva $`", "ana", link);
+    expect(html).toContain("Olá, Ana $&amp; Silva $`!");
+  });
+
   it("recuperação de senha em inglês", () => {
     const { subject, html } = resetEmail("en", "Bob", link);
     expect(subject).toBe("Recover your NewFarmer password");

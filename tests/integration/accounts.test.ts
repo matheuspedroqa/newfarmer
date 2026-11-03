@@ -74,6 +74,22 @@ describe("verifyCredentials", () => {
     expect(row.identifier).toBe("ana");
   });
 
+  it("texto que não pode ser username (ex.: senha digitada no campo) não grava tentativa", async () => {
+    const db = await testDb();
+    await makeUser(db);
+    expect(await verifyCredentials(db, "Minha Senha Secreta!123", "x")).toEqual({ ok: false, reason: "invalid" });
+    const [{ n }] = await db.query<{ n: number }>("SELECT COUNT(*)::int AS n FROM login_attempts");
+    expect(n).toBe(0);
+  });
+
+  it("username válido mas desconhecido grava a tentativa e pode bloquear", async () => {
+    const db = await testDb();
+    for (let i = 0; i < 5; i++) await verifyCredentials(db, "fantasma", "errada", 1000 + i);
+    const [{ n }] = await db.query<{ n: number }>("SELECT COUNT(*)::int AS n FROM login_attempts");
+    expect(n).toBe(5);
+    expect(await verifyCredentials(db, "fantasma", "errada", 2000)).toEqual({ ok: false, reason: "locked" });
+  });
+
   it("5 erros seguidos bloqueiam por 15 minutos, mesmo com a senha certa", async () => {
     const db = await testDb();
     await makeUser(db);
