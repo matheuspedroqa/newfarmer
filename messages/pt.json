@@ -367,7 +367,10 @@
     "signs": "Sinais",
     "homeCare": "Cuidado caseiro",
     "vetCare": "Tratamento veterinário",
-    "noContent": "Ficha em preparação."
+    "noContent": "Ficha em preparação.",
+    "emptyTitle": "Você ainda não tem animais",
+    "emptyText": "Escolha seus animais no MyFarm para ver as fichas e o diário.",
+    "addAnimal": "＋ Adicionar animal"
   },
   "cropPage": {
     "groups": "Plantações por tipo",
@@ -377,6 +380,7 @@
     "noPruning": "Não precisa de poda.",
     "watering": "Irrigação",
     "other": "Outros cuidados",
+    "addCrop": "＋ Adicionar plantação",
     "notSuited": "Não recomendado para o seu clima.",
     "noContent": "Ficha em preparação."
   },

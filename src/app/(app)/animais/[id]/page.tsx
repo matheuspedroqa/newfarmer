@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { deleteDiaryAction } from "@/app/actions/diary";
 import { CountryNotes } from "@/components/CountryNotes";
 import { DiaryForm } from "@/components/DiaryForm";
@@ -15,6 +15,7 @@ import { getAnimalContent } from "@/server/content";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { listDiary } from "@/server/diary";
+import { getFarm } from "@/server/farm";
 
 const SEASONS: Season[] = ["summer", "autumn", "winter", "spring"];
 
@@ -35,17 +36,20 @@ export default async function AnimalPage({
   const showDiary = (await searchParams).aba === "diario";
   if (!(ANIMAL_IDS as readonly string[]).includes(id)) notFound();
   const user = await requireUser();
+  const db = await getDb();
+  const farm = await getFarm(db, user.id);
+  if (!farm.animals.some((a) => a.id === id)) redirect("/animais");
   const t = await getTranslations();
   const locale = resolveLocale(await getLocale());
   const content = getAnimalContent(id as AnimalId);
   const current = seasonFor(new Date().getMonth() + 1, user.hemisphere);
   const tx = (v: { pt: string; en: string }) => v[locale];
-  const diary = showDiary ? await listDiary((await getDb()), user.id, { animalId: id as AnimalId }) : [];
+  const diary = showDiary ? await listDiary(db, user.id, { animalId: id as AnimalId }) : [];
 
   return (
     <section className="space-y-8">
       <nav className="flex flex-wrap gap-2" aria-label={t("nav.animals")}>
-        {ANIMALS.map((a) => (
+        {ANIMALS.filter((a) => farm.animals.some((f) => f.id === a.id)).map((a) => (
           <Link
             key={a.id}
             href={`/animais/${a.id}`}

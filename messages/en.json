@@ -367,7 +367,10 @@
     "signs": "Signs",
     "homeCare": "Home care",
     "vetCare": "Veterinary treatment",
-    "noContent": "Guide in preparation."
+    "noContent": "Guide in preparation.",
+    "emptyTitle": "You don't have any animals yet",
+    "emptyText": "Pick your animals in MyFarm to see their guides and diary.",
+    "addAnimal": "＋ Add animal"
   },
   "cropPage": {
     "groups": "Crops by type",
@@ -377,6 +380,7 @@
     "noPruning": "No pruning needed.",
     "watering": "Watering",
     "other": "Other care",
+    "addCrop": "＋ Add crop",
     "notSuited": "Not recommended for your climate.",
     "noContent": "Guide in preparation."
   },

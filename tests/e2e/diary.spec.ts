@@ -1,8 +1,17 @@
-import { expect, test } from "@playwright/test";
-import { signup, uniqueEmail } from "./helpers";
+import { expect, test, type Page } from "@playwright/test";
+import { createAccount, uniqueEmail } from "./helpers";
+
+/** Conta nova que já tem Vacas: só animais da fazenda têm ficha e diário. */
+async function accountWithCows(page: Page) {
+  await createAccount(page, uniqueEmail());
+  await page.getByLabel("Vacas").check();
+  await page.locator("#count-cows").fill("3");
+  await page.getByRole("button", { name: "Continuar" }).click();
+  await expect(page).toHaveURL(/\/painel$/);
+}
 
 test("diário do animal: anotar, ver no painel e apagar", async ({ page }) => {
-  await signup(page, uniqueEmail());
+  await accountWithCows(page);
   await page.goto("/animais/cows");
   await page.getByRole("link", { name: "Diário" }).click();
   await expect(page).toHaveURL(/\/animais\/cows\?aba=diario$/);
@@ -33,7 +42,7 @@ test("diário do animal: anotar, ver no painel e apagar", async ({ page }) => {
 });
 
 test("a ficha continua sendo a aba padrão do animal", async ({ page }) => {
-  await signup(page, uniqueEmail());
+  await accountWithCows(page);
   await page.goto("/animais/cows");
   await expect(page.getByRole("heading", { name: "Raças" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Ficha" })).toHaveAttribute("aria-current", "page");

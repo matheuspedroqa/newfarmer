@@ -1,13 +1,19 @@
 import { expect, test } from "@playwright/test";
 import { createAccount, signup, uniqueEmail } from "./helpers";
 
-test("aba Animais mostra as 6 abas, a ficha completa, o bloco do país e o aviso de veterinário", async ({ page }) => {
-  await signup(page, uniqueEmail());
+test("aba Animais mostra só os animais da fazenda, a ficha completa, o bloco do país e o aviso de veterinário", async ({ page }) => {
+  await createAccount(page, uniqueEmail());
+  await page.getByLabel("Galinhas").check();
+  await page.locator("#count-chickens").fill("5");
+  await page.getByLabel("Vacas").check();
+  await page.locator("#count-cows").fill("2");
+  await page.getByRole("button", { name: "Continuar" }).click();
+  await expect(page).toHaveURL(/\/painel$/);
   await page.getByRole("link", { name: "Animais", exact: true }).click();
   await expect(page).toHaveURL(/\/animais\/chickens$/);
-  for (const id of ["chickens", "pigs", "cows", "sheep", "goats", "ducks"]) {
-    await expect(page.getByTestId(`animal-tab-${id}`)).toBeVisible();
-  }
+  await expect(page.locator('[data-testid^="animal-tab-"]')).toHaveCount(2);
+  await expect(page.getByTestId("animal-tab-chickens")).toBeVisible();
+  await expect(page.getByTestId("animal-tab-cows")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Raças" })).toBeVisible();
   await expect(page.getByTestId("current-season")).toHaveCount(1);
   await expect(page.getByTestId("disease").first()).toBeVisible();
@@ -15,8 +21,28 @@ test("aba Animais mostra as 6 abas, a ficha completa, o bloco do país e o aviso
   await expect(page.getByTestId("country-notes")).toContainText("No seu país: Brasil");
   await expect(page.getByTestId("sources").getByRole("link").first()).toBeVisible();
 
-  await page.getByTestId("animal-tab-goats").click();
-  await expect(page.getByRole("heading", { name: "Cabras", level: 1 })).toBeVisible();
+  await page.getByTestId("animal-tab-cows").click();
+  await expect(page.getByRole("heading", { name: "Vacas", level: 1 })).toBeVisible();
+
+  // animal que a fazenda não tem volta para a primeira aba
+  await page.goto("/animais/goats");
+  await expect(page).toHaveURL(/\/animais\/chickens$/);
+});
+
+test("sem animais, Animais mostra o estado vazio e o botão leva ao MyFarm", async ({ page }) => {
+  await signup(page, uniqueEmail());
+  await page.getByRole("link", { name: "Animais", exact: true }).click();
+  await expect(page).toHaveURL(/\/animais$/);
+  await expect(page.getByRole("heading", { name: "Você ainda não tem animais" })).toBeVisible();
+  await page.getByRole("link", { name: "＋ Adicionar animal" }).click();
+  await expect(page).toHaveURL(/\/myfarm#animais$/);
+});
+
+test("Plantações tem o botão Adicionar plantação que leva ao MyFarm", async ({ page }) => {
+  await signup(page, uniqueEmail());
+  await page.getByRole("link", { name: "Plantações", exact: true }).click();
+  await page.getByRole("link", { name: "＋ Adicionar plantação" }).click();
+  await expect(page).toHaveURL(/\/myfarm#plantacoes$/);
 });
 
 test("ficha de plantação mostra calendário no clima e hemisfério do usuário", async ({ page }) => {

@@ -44,7 +44,7 @@ export function FarmForm({
 
   return (
     <form action={formAction} noValidate className="space-y-10">
-      <section>
+      <section id="animais" className="scroll-mt-6">
         <h2 className="font-display text-2xl font-bold">{t("farm.animalsTitle")}</h2>
         <p className="text-sm text-muted">{t("farm.animalsHelp")}</p>
         <div className="mt-4 grid grid-cols-3 gap-4">
@@ -91,7 +91,7 @@ export function FarmForm({
         </div>
       </section>
 
-      <section>
+      <section id="plantacoes" className="scroll-mt-6">
         <h2 className="font-display text-2xl font-bold">{t("farm.cropsTitle")}</h2>
         <p className="text-sm text-muted">{t("farm.cropsHelp")}</p>
         {CROP_GROUPS.map((group) => (
