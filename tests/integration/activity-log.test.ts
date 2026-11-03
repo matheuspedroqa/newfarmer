@@ -74,3 +74,55 @@ it("logActivity limpa de vez em quando (sorteio injetável) e falha na limpeza n
   expect(erro).toHaveBeenCalled();
   erro.mockRestore();
 });
+
+// --- Task 10: ações gravam o registro ---
+import { changePassword, verifyCredentials } from "@/server/accounts";
+import { logLoginAttempt, logSafely } from "@/server/activity-log";
+import { addDiaryEntry, deleteDiaryEntry } from "@/server/diary";
+
+it("login certo e login errado geram cada um uma linha, sem senha nos detalhes", async () => {
+  const db = await testDb();
+  const ana = await makeUser(db);
+  await logLoginAttempt(db, "Ana", await verifyCredentials(db, "Ana", "segredo123"), "1.1.1.1");
+  await logLoginAttempt(db, "Ana", await verifyCredentials(db, "Ana", "errada-123"), "1.1.1.1");
+  const rows = await listActivity(db, {});
+  expect(rows.map((r) => [r.action, r.userId, r.target, r.details])).toEqual([
+    ["auth.loginFailed", null, "ana", { reason: "invalid" }],
+    ["auth.login", ana, "ana", {}],
+  ]);
+  expect(JSON.stringify(rows)).not.toMatch(/segredo123|errada-123/);
+});
+
+it("diário criado e apagado guarda só animal e tipo, nunca o texto", async () => {
+  const db = await testDb();
+  const ana = await makeUser(db);
+  const id = await addDiaryEntry(db, ana, { animalId: "chickens", date: "2026-01-01", kind: "illness", animalName: "Mimosa", note: "texto-secreto" });
+  await logSafely(db, { userId: ana, action: "diary.created", details: { animal: "chickens", kind: "illness" }, ip: "1.1.1.1" });
+  expect(await deleteDiaryEntry(db, ana, id)).toBe("chickens");
+  await logSafely(db, { userId: ana, action: "diary.deleted", details: { animal: "chickens" }, ip: "1.1.1.1" });
+  const rows = await listActivity(db, { userId: ana });
+  expect(rows.map((r) => r.action)).toEqual(["diary.deleted", "diary.created"]);
+  expect(JSON.stringify(rows)).not.toMatch(/texto-secreto|Mimosa/);
+});
+
+it("senha trocada gera uma linha da própria conta, sem senha", async () => {
+  const db = await testDb();
+  const ana = await makeUser(db);
+  expect(await changePassword(db, ana, "segredo123", "nova-senha-1")).toBe("ok");
+  await logSafely(db, { userId: ana, action: "auth.passwordChanged", target: "ana", ip: "1.1.1.1" });
+  const rows = await listActivity(db, {});
+  expect(rows).toHaveLength(1);
+  expect([rows[0].action, rows[0].userId, rows[0].target]).toEqual(["auth.passwordChanged", ana, "ana"]);
+  expect(JSON.stringify(rows)).not.toMatch(/nova-senha-1|segredo123/);
+});
+
+it("logSafely engole falha do registro (chave proibida) e não propaga", async () => {
+  const db = await testDb();
+  const spy = vi.spyOn(console, "error").mockImplementation(() => undefined);
+  await expect(
+    logSafely(db, { userId: null, action: "auth.login", details: { password: "x" }, ip: "" }),
+  ).resolves.toBeUndefined();
+  expect(spy).toHaveBeenCalled();
+  expect(await listActivity(db, {})).toHaveLength(0);
+  spy.mockRestore();
+});

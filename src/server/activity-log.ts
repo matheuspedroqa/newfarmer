@@ -1,4 +1,6 @@
 import "server-only";
+import { normalizeUsername } from "@/lib/username";
+import type { LoginResult } from "./accounts";
 import type { Db } from "./db";
 import { purgeRateLimits } from "./rate-limit";
 
@@ -30,15 +32,17 @@ export type ActivityEntry = {
 export const ACTIVITY_RETENTION_MS = 180 * 24 * 60 * 60_000;
 const FORBIDDEN_KEY = /pass|token|hash|secret/i;
 
+type LogInput = {
+  userId: number | null;
+  action: ActivityAction;
+  target?: string;
+  details?: Record<string, string | number | boolean>;
+  ip: string;
+};
+
 export async function logActivity(
   db: Db,
-  entry: {
-    userId: number | null;
-    action: ActivityAction;
-    target?: string;
-    details?: Record<string, string | number | boolean>;
-    ip: string;
-  },
+  entry: LogInput,
   now = Date.now(),
   random: () => number = Math.random,
 ): Promise<void> {
@@ -53,6 +57,27 @@ export async function logActivity(
   );
   // shortcut: a limpeza depende do movimento do site; quando houver Vercel Cron, mova para lá.
   if (random() < 0.005) await purgeOld(db, now).catch((e) => console.error("Falha ao limpar registros antigos", e));
+}
+
+/** Registro nunca derruba a ação do usuário: falha vai para o console. */
+export async function logSafely(db: Db, entry: LogInput): Promise<void> {
+  try {
+    await logActivity(db, entry);
+  } catch (error) {
+    console.error("Falha ao gravar registro de atividade", error);
+  }
+}
+
+/** Bloqueio pelo limite de gravações por conta. */
+export const logWriteLimited = (db: Db, userId: number, target: string, ip: string) =>
+  logSafely(db, { userId, action: "security.rateLimited", target, details: { limit: "write" }, ip });
+
+/** Login certo vira auth.login; errado vira auth.loginFailed (sem conta, com o username digitado). */
+export function logLoginAttempt(db: Db, typedUsername: string, result: LoginResult, ip: string): Promise<void> {
+  const target = normalizeUsername(typedUsername);
+  return result.ok
+    ? logSafely(db, { userId: result.userId, action: "auth.login", target, ip })
+    : logSafely(db, { userId: null, action: "auth.loginFailed", target, details: { reason: result.reason }, ip });
 }
 
 /** Mais novo primeiro. `before` é o createdAt do último item da página anterior. */

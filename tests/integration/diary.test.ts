@@ -30,10 +30,10 @@ describe("diário dos animais", () => {
     const ana = await makeUser(db);
     const bia = await makeUser(db, { email: "bia@exemplo.com" });
     const anaEntry = await addDiaryEntry(db, ana, entry);
-    expect(await deleteDiaryEntry(db, bia, anaEntry)).toBe(false);
+    expect(await deleteDiaryEntry(db, bia, anaEntry)).toBeNull();
     expect(await listDiary(db, ana, {})).toHaveLength(1);
     expect(await listDiary(db, bia, {})).toHaveLength(0);
-    expect(await deleteDiaryEntry(db, ana, anaEntry)).toBe(true);
+    expect(await deleteDiaryEntry(db, ana, anaEntry)).toBe("cows");
     expect(await listDiary(db, ana, {})).toHaveLength(0);
   });
 });

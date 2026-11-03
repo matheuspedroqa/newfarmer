@@ -8,6 +8,7 @@ export default async function ProfilePage() {
   const t = await getTranslations();
   const info: [string, string][] = [
     [t("profile.name"), user.name],
+    [t("auth.username"), user.username],
     [t("profile.email"), user.email],
     [t("profile.city"), user.cityLabel],
     [t("profile.climate"), `${t(`climate.${user.climateZone}`)} · ${t(`climate.${user.hemisphere}`)}`],

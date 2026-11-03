@@ -39,12 +39,12 @@ export async function sendVerificationEmail(
 }
 
 /** O link pode ser aberto várias vezes até vencer: antivírus de e-mail costumam abrir antes da pessoa. */
-export async function confirmEmail(db: Db, token: string, now = Date.now()): Promise<"ok" | "expired"> {
+export async function confirmEmail(db: Db, token: string, now = Date.now()): Promise<{ userId: number } | "expired"> {
   const [row] = await db.query<{ id: number }>(
     `UPDATE users SET email_verified_at = COALESCE(email_verified_at, $1)
      FROM email_verification_tokens t
      WHERE t.token_hash = $2 AND t.expires_at > $1 AND users.id = t.user_id RETURNING users.id`,
     [now, hashToken(token)],
   );
-  return row ? "ok" : "expired";
+  return row ? { userId: row.id } : "expired";
 }

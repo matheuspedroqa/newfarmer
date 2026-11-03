@@ -3,10 +3,12 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { citySchema, farmSchema, parseCityField, parseFarmForm, toFieldErrors } from "@/lib/validation";
+import { logSafely, logWriteLimited } from "@/server/activity-log";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { saveFarm } from "@/server/farm";
 import { limitWrites } from "@/server/rate-limit";
+import { clientIp } from "@/server/request-context";
 import { changeCity } from "@/server/registration";
 import { getWeatherProvider } from "@/server/weather";
 import type { FormState } from "./auth";
@@ -14,10 +16,19 @@ import type { FormState } from "./auth";
 async function validateAndSave(formData: FormData): Promise<FormState | null> {
   const user = await requireUser();
   const db = await getDb();
-  if (!(await limitWrites(db, user.id)).ok) return { formError: "rateLimited" };
+  if (!(await limitWrites(db, user.id)).ok) {
+    await logWriteLimited(db, user.id, user.username, await clientIp());
+    return { formError: "rateLimited" };
+  }
   const parsed = farmSchema.safeParse(parseFarmForm(formData));
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error) };
   await saveFarm(db, user.id, parsed.data);
+  await logSafely(db, {
+    userId: user.id,
+    action: "farm.updated",
+    details: { animals: Object.keys(parsed.data.animals).length, crops: parsed.data.crops.length },
+    ip: await clientIp(),
+  });
   return null;
 }
 
@@ -37,10 +48,14 @@ export async function saveFarmAndContinueAction(_prev: FormState, formData: Form
 export async function changeCityAction(_prev: FormState, formData: FormData): Promise<FormState> {
   const user = await requireUser();
   const db = await getDb();
-  if (!(await limitWrites(db, user.id)).ok) return { formError: "rateLimited" };
+  if (!(await limitWrites(db, user.id)).ok) {
+    await logWriteLimited(db, user.id, user.username, await clientIp());
+    return { formError: "rateLimited" };
+  }
   const parsed = citySchema.safeParse(parseCityField(formData.get("city")));
   if (!parsed.success) return { fieldErrors: { city: "cityRequired" } };
   await changeCity(db, getWeatherProvider(), user.id, parsed.data);
+  await logSafely(db, { userId: user.id, action: "farm.updated", details: { change: "city" }, ip: await clientIp() });
   revalidatePath("/", "layout");
   return { done: true };
 }

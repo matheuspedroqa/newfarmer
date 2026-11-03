@@ -24,7 +24,7 @@ describe("confirmação de e-mail", () => {
     expect(await sendVerificationEmail(db, mailer, { ...base, userId: id })).toBe("sent");
     expect(sent[0]).toMatchObject({ to: "ana@exemplo.com", subject: "Confirme seu e-mail no NewFarmer" });
 
-    expect(await confirmEmail(db, tokenFrom(sent[0]))).toBe("ok");
+    expect(await confirmEmail(db, tokenFrom(sent[0]))).toEqual({ userId: expect.any(Number) });
     expect((await getUserById(db, id))!.emailVerified).toBe(true);
   });
 
@@ -34,7 +34,7 @@ describe("confirmação de e-mail", () => {
     const { sent, mailer } = captureMailer();
     await sendVerificationEmail(db, mailer, { ...base, userId: id });
     await confirmEmail(db, tokenFrom(sent[0]));
-    expect(await confirmEmail(db, tokenFrom(sent[0]))).toBe("ok");
+    expect(await confirmEmail(db, tokenFrom(sent[0]))).toEqual({ userId: expect.any(Number) });
   });
 
   it("link vencido ou inventado não confirma", async () => {

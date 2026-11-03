@@ -1,6 +1,6 @@
 import "server-only";
 import type { Locale } from "@/i18n/locales";
-import { logActivity } from "./activity-log";
+import { logSafely } from "./activity-log";
 import type { Db } from "./db";
 import { usernameReminderEmail } from "./email-templates";
 import type { Mailer } from "./mailer";
@@ -19,5 +19,5 @@ export async function sendUsernameReminder(
   if (!user) return;
 
   await mailer.send({ to: email, ...usernameReminderEmail(input.locale, user.name, user.username, `${input.baseUrl}/login`) });
-  await logActivity(db, { userId: user.id, action: "auth.usernameReminder", target: user.username, ip: input.ip ?? "" });
+  await logSafely(db, { userId: user.id, action: "auth.usernameReminder", target: user.username, ip: input.ip ?? "" });
 }

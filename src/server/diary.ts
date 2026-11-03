@@ -28,8 +28,13 @@ export function listDiary(
   );
 }
 
-export async function deleteDiaryEntry(db: Db, userId: number, entryId: number): Promise<boolean> {
+/** Devolve o animal da anotação apagada (ou null se não era da conta). */
+export async function deleteDiaryEntry(db: Db, userId: number, entryId: number): Promise<AnimalId | null> {
   // Postgres recusa id que não é inteiro (formulário adulterado); sem isso daria erro na página.
-  if (!Number.isInteger(entryId)) return false;
-  return (await db.run("DELETE FROM diary_entries WHERE id = $1 AND user_id = $2", [entryId, userId])) > 0;
+  if (!Number.isInteger(entryId)) return null;
+  const [row] = await db.query<{ animal_id: AnimalId }>(
+    "DELETE FROM diary_entries WHERE id = $1 AND user_id = $2 RETURNING animal_id",
+    [entryId, userId],
+  );
+  return row?.animal_id ?? null;
 }

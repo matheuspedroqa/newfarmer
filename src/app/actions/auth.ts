@@ -13,7 +13,8 @@ import {
   toFieldErrors,
 } from "@/lib/validation";
 import { getUserById, verifyCredentials } from "@/server/accounts";
-import { endSession, startSession } from "@/server/current-user";
+import { logLoginAttempt, logSafely } from "@/server/activity-log";
+import { endSession, getCurrentUser, startSession } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { sendVerificationEmail } from "@/server/email-verification";
 import { getMailer } from "@/server/mailer";
@@ -51,11 +52,16 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
 
   const db = await getDb();
-  if (!(await limitByIp(db, "signup", await clientIp())).ok) return { formError: "rateLimited", values };
+  const ip = await clientIp();
+  if (!(await limitByIp(db, "signup", ip)).ok) {
+    await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "signup" }, ip });
+    return { formError: "rateLimited", values };
+  }
   const result = await registerUser(db, getWeatherProvider(), parsed.data);
   if (!result.ok) return { fieldErrors: { [result.error === "emailTaken" ? "email" : "username"]: result.error }, values };
 
   const locale = resolveLocale(await getLocale());
+  await logSafely(db, { userId: result.userId, action: "auth.signup", target: parsed.data.username, ip });
   await setPreferences(db, result.userId, { locale });
   await startSession((await getUserById(db, result.userId))!);
   // Falha no envio não impede o cadastro: a faixa do topo deixa reenviar depois.
@@ -73,8 +79,16 @@ export async function loginAction(_prev: FormState, formData: FormData): Promise
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
 
   const db = await getDb();
-  if (!(await limitByIp(db, "login", await clientIp())).ok) return { formError: "rateLimited", values };
+  const ip = await clientIp();
+  if (!(await limitByIp(db, "login", ip)).ok) {
+    await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "login" }, ip });
+    return { formError: "rateLimited", values };
+  }
   const result = await verifyCredentials(db, parsed.data.username, parsed.data.password);
+  await logLoginAttempt(db, parsed.data.username, result, ip);
+  if (!result.ok && result.reason === "locked") {
+    await logSafely(db, { userId: null, action: "security.rateLimited", target: parsed.data.username, details: { limit: "loginLock" }, ip });
+  }
   if (!result.ok) return { formError: result.reason === "locked" ? "locked" : "invalidCredentials", values };
 
   await refreshEstimatedClimate(db, getWeatherProvider(), result.userId).catch(() => undefined);
@@ -83,6 +97,8 @@ export async function loginAction(_prev: FormState, formData: FormData): Promise
 }
 
 export async function logoutAction(): Promise<void> {
+  const user = await getCurrentUser();
+  if (user) await logSafely(await getDb(), { userId: user.id, action: "auth.logout", target: user.username, ip: await clientIp() });
   await endSession();
   redirect("/login");
 }
@@ -94,7 +110,10 @@ export async function forgotAction(_prev: FormState, formData: FormData): Promis
 
   const db = await getDb();
   const ip = await clientIp();
-  if (!(await limitByIp(db, "recovery", ip)).ok) return { formError: "rateLimited", values };
+  if (!(await limitByIp(db, "recovery", ip)).ok) {
+    await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "recovery" }, ip });
+    return { formError: "rateLimited", values };
+  }
   try {
     await requestPasswordReset(db, getMailer(db), {
       identifier: parsed.data.identifier,
@@ -116,7 +135,10 @@ export async function usernameReminderAction(_prev: FormState, formData: FormDat
 
   const db = await getDb();
   const ip = await clientIp();
-  if (!(await limitByIp(db, "recovery", ip)).ok) return { formError: "rateLimited", values };
+  if (!(await limitByIp(db, "recovery", ip)).ok) {
+    await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "recovery" }, ip });
+    return { formError: "rateLimited", values };
+  }
   try {
     await sendUsernameReminder(db, getMailer(db), {
       email: parsed.data.email,
@@ -139,6 +161,7 @@ export async function resetAction(_prev: FormState, formData: FormData): Promise
   });
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error) };
 
-  const result = await resetPassword((await getDb()), parsed.data);
+  const db = await getDb();
+  const result = await resetPassword(db, { ...parsed.data, ip: await clientIp() });
   return result === "ok" ? { done: true } : { formError: "linkExpired" };
 }

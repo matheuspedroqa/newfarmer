@@ -93,3 +93,47 @@ test("sessão vencida ou falsa volta para a entrada em vez de dar erro", async (
     expect(response?.status()).toBeLessThan(500);
   }
 });
+
+test("formulário de senha adulterado com userId de outra conta só mexe na própria", async ({ page, browser }) => {
+  const vitima = await browser.newContext();
+  const pv = await vitima.newPage();
+  const { username: userB } = await signup(pv, uniqueEmail());
+  await vitima.close();
+
+  const { username: userA } = await signup(page, uniqueEmail());
+  await page.goto("/perfil");
+  const form = page.locator("form", { has: page.getByLabel("Nova senha", { exact: true }) });
+  await form.evaluate((f, alvo) => {
+    for (const name of ["userId", "id", "username"]) {
+      const i = document.createElement("input");
+      i.type = "hidden";
+      i.name = name;
+      i.value = name === "username" ? alvo : "1";
+      f.appendChild(i);
+    }
+  }, userB);
+  await page.getByLabel("Senha atual").fill(PASSWORD);
+  await page.getByLabel("Nova senha", { exact: true }).fill("nova-senha-1");
+  await page.getByLabel("Confirmar nova senha").fill("nova-senha-1");
+  await page.getByRole("button", { name: "Salvar nova senha" }).click();
+  await expect(page.getByText("Senha alterada.", { exact: false })).toBeVisible();
+
+  // B continua com a senha original; A passou a ter a nova
+  for (const [user, senha, entra] of [[userB, PASSWORD, true], [userA, "nova-senha-1", true], [userA, PASSWORD, false]] as const) {
+    const ctx = await browser.newContext();
+    const p = await ctx.newPage();
+    await p.goto("/login");
+    await p.getByLabel("Username").fill(user);
+    await p.getByLabel("Senha").fill(senha);
+    await p.getByRole("button", { name: "Entrar" }).click();
+    if (entra) await expect(p).toHaveURL(/\/painel$/);
+    else await expect(p).toHaveURL(/\/login$/);
+    await ctx.close();
+  }
+});
+
+test("Perfil mostra o username, só leitura", async ({ page }) => {
+  const { username } = await signup(page, uniqueEmail());
+  await page.goto("/perfil");
+  await expect(page.getByTestId("profile-info")).toContainText(username);
+});
