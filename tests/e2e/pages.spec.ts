@@ -126,6 +126,9 @@ for (const tema of ["claro", "escuro"]) {
       await page.locator("body").click({ position: { x: 1, y: 1 } });
       for (let i = 0; i < 40 && !(await alvo.evaluate((e) => e === document.activeElement)); i++) await page.keyboard.press("Tab");
       await expect.poll(() => sombra(alvo)).not.toBe(repouso);
+      // O anel não pode ter a cor do próprio fundo (no idioma selecionado, fundo e anel eram ambos verdes).
+      const fundo = await bg(alvo);
+      if (fundo !== "rgba(0, 0, 0, 0)") expect(await sombra(alvo)).not.toContain(fundo);
     }
   });
 }

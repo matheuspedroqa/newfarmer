@@ -25,7 +25,7 @@ export function UserMenu({ name, isPlatformAdmin }: { name: string; isPlatformAd
     };
   }, [open]);
 
-  const item = "flex items-center gap-2 px-4 py-3 transition-colors duration-150 hover:bg-hover focus-visible:bg-hover motion-reduce:transition-none";
+  const item = "flex items-center gap-2 border-l-2 border-transparent px-4 py-3 transition-colors duration-150 hover:border-primary hover:bg-hover hover:text-primary focus-visible:border-primary focus-visible:bg-hover focus-visible:text-primary motion-reduce:transition-none";
   return (
     <div ref={ref} className="relative">
       <button
