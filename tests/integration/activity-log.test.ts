@@ -1,6 +1,7 @@
 import { expect, it, vi } from "vitest";
 import { ACTIVITY_RETENTION_MS, LOGIN_ATTEMPTS_RETENTION_MS, WEATHER_CACHE_RETENTION_MS, listActivity, logActivity, purgeOld } from "@/server/activity-log";
 import { testDb } from "../helpers/db";
+import { SESSION_IDLE_MS } from "@/server/sessions";
 import { makeUser } from "../helpers/users";
 
 const DIA = 24 * 60 * 60_000;
@@ -73,6 +74,36 @@ it("purgeOld apaga tentativas de login com mais de 30 dias e previsões com mais
   await purgeOld(db, now);
   expect((await db.query<{ identifier: string }>("SELECT identifier FROM login_attempts")).map((r) => r.identifier)).toEqual(["nova"]);
   expect((await db.query<{ key: string }>("SELECT key FROM weather_cache")).map((r) => r.key)).toEqual(["nova"]);
+});
+
+it("purgeOld apaga sessões vencidas ou paradas e tokens vencidos, e mantém o resto", async () => {
+  const db = await testDb();
+  const now = 1_000 * DIA;
+  const ana = await makeUser(db);
+  await db.run(
+    "INSERT INTO sessions (user_id, token_hash, expires_at, last_seen_at) VALUES ($1,'venc',$2,$3), ($1,'parada',$4,$5), ($1,'viva',$4,$6)",
+    [ana, now - 1, now - 10, now + DIA, now - SESSION_IDLE_MS - 1, now - SESSION_IDLE_MS],
+  );
+  await db.run("INSERT INTO password_reset_tokens (user_id, token_hash, expires_at) VALUES ($1,'velho',$2), ($1,'novo',$3)", [ana, now - 1, now]);
+  await db.run(
+    "INSERT INTO email_verification_tokens (user_id, token_hash, expires_at, created_at) VALUES ($1,'velho',$2,1), ($1,'novo',$3,1)",
+    [ana, now - 1, now],
+  );
+  await purgeOld(db, now);
+  expect((await db.query<{ token_hash: string }>("SELECT token_hash FROM sessions")).map((r) => r.token_hash)).toEqual(["viva"]);
+  expect((await db.query<{ token_hash: string }>("SELECT token_hash FROM password_reset_tokens")).map((r) => r.token_hash)).toEqual(["novo"]);
+  expect((await db.query<{ token_hash: string }>("SELECT token_hash FROM email_verification_tokens")).map((r) => r.token_hash)).toEqual(["novo"]);
+});
+
+it("filtro por username pega a conta e também as tentativas contra o nome, mesmo sem conta", async () => {
+  const db = await testDb();
+  const ana = await makeUser(db);
+  await logActivity(db, { userId: ana, action: "diary.created", ip: "" }, 1);
+  await logActivity(db, { userId: null, action: "auth.loginFailed", target: "ana", ip: "" }, 2);
+  await logActivity(db, { userId: null, action: "auth.loginFailed", target: "fantasma", ip: "" }, 3);
+  expect((await listActivity(db, { userId: ana, target: "ana" })).map((e) => e.createdAt)).toEqual([2, 1]);
+  expect((await listActivity(db, { target: "fantasma" })).map((e) => e.createdAt)).toEqual([3]);
+  expect(await listActivity(db, {})).toHaveLength(3);
 });
 
 it("logActivity limpa de vez em quando (sorteio injetável) e falha na limpeza não quebra a gravação", async () => {

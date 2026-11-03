@@ -19,7 +19,7 @@ Guardamos só o que o site precisa para funcionar. Não pedimos documentos, tele
 - nome, username e e-mail;
 - senha: nunca guardamos a senha em si, só uma versão embaralhada (hash bcrypt) que não pode ser desfeita;
 - idioma e tema (claro ou escuro) que você escolheu;
-- a data em que você confirmou o e-mail;
+- a data em que a conta foi criada e a data em que você confirmou o e-mail;
 - se a conta é a do dono do site.
 
 ### Dados da sua criação e da sua região
@@ -46,7 +46,7 @@ Guardamos por até 7 dias as previsões do tempo de cada lugar, identificado por
 ## 3. Para que usamos e com que base legal
 
 - **Para oferecer o serviço** (sua conta, sua criação, o diário, as orientações para a sua região e a previsão do tempo): é a execução do contrato que você aceita ao criar a conta (na LGPD, art. 7º, V; no RGPD, art. 6º, 1, b).
-- **Para a segurança e para evitar fraudes** (sessões, bloqueio depois de senhas erradas, limites de tentativas e registro de atividade): é o nosso interesse legítimo em proteger você e o site (na LGPD, art. 7º, IX; no RGPD, art. 6º, 1, f).
+- **Para a segurança e para evitar fraudes** (sessões, bloqueio depois de senhas erradas, limites de tentativas, registro de atividade e registro de erros): é o nosso interesse legítimo em proteger você e o site (na LGPD, art. 7º, IX; no RGPD, art. 6º, 1, f).
 - **Para enviar e-mails da conta** (confirmar o e-mail, trocar a senha, lembrar o username): execução do contrato.
 
 Não enviamos e-mails de propaganda. Não vendemos seus dados. Não usamos seus dados para anúncios.

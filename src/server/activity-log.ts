@@ -3,6 +3,7 @@ import { normalizeUsername, usernameProblem } from "@/lib/username";
 import type { LoginResult } from "./accounts";
 import type { Db } from "./db";
 import { purgeRateLimits } from "./rate-limit";
+import { SESSION_IDLE_MS } from "./sessions";
 
 export const ACTIVITY_ACTIONS = [
   "auth.login",
@@ -96,10 +97,11 @@ export function loginTarget(typedUsername: string): string {
   return usernameProblem(normalized) === null ? normalized : "";
 }
 
-type ActivityFilter = { userId?: number; action?: ActivityAction; before?: number; limit?: number };
+type ActivityFilter = { userId?: number; target?: string; action?: ActivityAction; before?: number; limit?: number };
 
-const filterParams = ({ userId, action, before, limit = 50 }: ActivityFilter) => [
+const filterParams = ({ userId, target, action, before, limit = 50 }: ActivityFilter) => [
   userId ?? null,
+  target ?? null,
   action ?? null,
   Number.isFinite(before) ? before : null,
   // NaN no limite (ex.: ?limit=abc) quebraria a consulta: volta para 50.
@@ -111,8 +113,8 @@ export function listActivity(db: Db, filter: ActivityFilter): Promise<ActivityEn
   return db.query<ActivityEntry>(
     `SELECT id, user_id AS "userId", action, target, details, ip, created_at AS "createdAt"
      FROM activity_logs
-     WHERE ($1::int IS NULL OR user_id = $1) AND ($2::text IS NULL OR action = $2) AND ($3::bigint IS NULL OR created_at < $3)
-     ORDER BY created_at DESC, id DESC LIMIT $4`,
+     WHERE (($1::int IS NULL AND $2::text IS NULL) OR user_id = $1 OR target = $2) AND ($3::text IS NULL OR action = $3) AND ($4::bigint IS NULL OR created_at < $4)
+     ORDER BY created_at DESC, id DESC LIMIT $5`,
     filterParams(filter),
   );
 }
@@ -122,8 +124,8 @@ export function listActivityWithUsernames(db: Db, filter: ActivityFilter): Promi
   return db.query(
     `SELECT a.id, a.user_id AS "userId", u.username, a.action, a.target, a.details, a.ip, a.created_at AS "createdAt"
      FROM activity_logs a LEFT JOIN users u ON u.id = a.user_id
-     WHERE ($1::int IS NULL OR a.user_id = $1) AND ($2::text IS NULL OR a.action = $2) AND ($3::bigint IS NULL OR a.created_at < $3)
-     ORDER BY a.created_at DESC, a.id DESC LIMIT $4`,
+     WHERE (($1::int IS NULL AND $2::text IS NULL) OR a.user_id = $1 OR a.target = $2) AND ($3::text IS NULL OR a.action = $3) AND ($4::bigint IS NULL OR a.created_at < $4)
+     ORDER BY a.created_at DESC, a.id DESC LIMIT $5`,
     filterParams(filter),
   );
 }
@@ -133,5 +135,9 @@ export async function purgeOld(db: Db, now = Date.now()): Promise<void> {
   await db.run("DELETE FROM login_attempts WHERE attempted_at < $1", [now - LOGIN_ATTEMPTS_RETENTION_MS]);
   await db.run("DELETE FROM weather_cache WHERE fetched_at < $1", [now - WEATHER_CACHE_RETENTION_MS]);
   await db.run("DELETE FROM error_logs WHERE at < $1", [now - ACTIVITY_RETENTION_MS]);
+  // Sessão vencida ou parada além do prazo de inatividade, e tokens vencidos (link vencido continua dando "expirado").
+  await db.run("DELETE FROM sessions WHERE expires_at < $1 OR last_seen_at < $2", [now, now - SESSION_IDLE_MS]);
+  await db.run("DELETE FROM password_reset_tokens WHERE expires_at < $1", [now]);
+  await db.run("DELETE FROM email_verification_tokens WHERE expires_at < $1", [now]);
   await purgeRateLimits(db, now);
 }

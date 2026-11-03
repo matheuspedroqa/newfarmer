@@ -423,8 +423,6 @@
   },
   "meta": {
     "welcome": "Welcome",
-    "login": "Sign in",
-    "signup": "Create account",
     "recover": "Recover",
     "confirm": "Confirm e-mail",
     "notFound": "Page not found",

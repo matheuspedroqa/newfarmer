@@ -6,9 +6,9 @@ export default async function MarketingLayout({ children }: { children: React.Re
   const t = await getTranslations();
   return (
     <div className="flex min-h-screen flex-col bg-bg">
-      <header className="sticky top-0 z-10 flex items-center justify-between bg-bg/90 px-8 py-4 backdrop-blur">
+      <header className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-3 bg-bg/90 px-8 py-4 backdrop-blur">
         <p className="font-display text-2xl font-bold text-primary">🌾 {t("app.name")}</p>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4">
           <TopControls />
           <Link href="/login" className="text-sm text-muted hover:underline">{t("home.login")}</Link>
           <Link href="/cadastro" className="rounded-full bg-primary px-5 py-2 font-semibold text-primary-text">

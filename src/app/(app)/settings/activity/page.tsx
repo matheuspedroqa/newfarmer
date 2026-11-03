@@ -26,8 +26,8 @@ export default async function ActivityPage({ searchParams }: { searchParams: Pro
 
   const db = await getDb();
   const [account] = username ? await db.query<{ id: number }>("SELECT id FROM users WHERE username = $1", [username]) : [];
-  // Username que não existe: lista vazia (e não a lista de todos).
-  const rows = username && !account ? [] : await listActivityWithUsernames(db, { userId: account?.id, action, before, limit: PAGE_SIZE });
+  // Conta da pessoa OU tentativas contra esse username (mesmo sem conta, como login errado).
+  const rows = await listActivityWithUsernames(db, { userId: account?.id, target: username || undefined, action, before, limit: PAGE_SIZE });
 
   const format = new Intl.DateTimeFormat(await getLocale(), { dateStyle: "short", timeStyle: "medium" });
   const more = new URLSearchParams();

@@ -23,7 +23,7 @@ export default async function HomePage() {
           </Link>
         </div>
       </section>
-      <section className="mx-auto grid max-w-5xl grid-cols-3 gap-6 px-8 py-16">
+      <section className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-6 px-8 py-16">
         {cards.map(([icon, title, text]) => (
           <div key={title} className="rounded-3xl bg-surface p-6 ring-1 ring-border">
             <span className="text-4xl" aria-hidden>{icon}</span>

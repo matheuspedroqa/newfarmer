@@ -19,7 +19,7 @@ We keep only what the site needs to work. We do not ask for ID documents, phone 
 - name, username and e-mail address;
 - password: we never store the password itself, only a scrambled version (a bcrypt hash) that cannot be reversed;
 - the language and theme (light or dark) you chose;
-- the date you confirmed your e-mail;
+- the date the account was created and the date you confirmed your e-mail;
 - whether the account belongs to the site owner.
 
 ### Your farm and your region
@@ -46,7 +46,7 @@ We keep weather forecasts for up to 7 days for each place, identified by coordin
 ## 3. Why we use your data and on what legal basis
 
 - **To provide the service** (your account, your farm, the diary, guidance for your region and the weather forecast): this is the performance of the contract you accept when you create your account (LGPD art. 7, V; GDPR art. 6(1)(b)).
-- **For security and fraud prevention** (sessions, locking after wrong passwords, attempt limits and the activity log): this is our legitimate interest in protecting you and the site (LGPD art. 7, IX; GDPR art. 6(1)(f)).
+- **For security and fraud prevention** (sessions, locking after wrong passwords, attempt limits, the activity log and the error log): this is our legitimate interest in protecting you and the site (LGPD art. 7, IX; GDPR art. 6(1)(f)).
 - **To send account e-mails** (confirming your e-mail, resetting your password, reminding you of your username): performance of the contract.
 
 We do not send marketing e-mails. We do not sell your data. We do not use your data for advertising.

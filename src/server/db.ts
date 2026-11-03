@@ -81,6 +81,7 @@ async function openShared(): Promise<Db> {
     const pool = new pg.Pool({
       connectionString: url,
       max: 3,
+      connectionTimeoutMillis: 5000,
       // shortcut: sem DATABASE_CA_CERT o certificado do Supabase não é conferido; cole o certificado do painel do Supabase nessa variável para conferir.
       ssl: ca ? { ca } : { rejectUnauthorized: false },
     });
