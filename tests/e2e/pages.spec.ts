@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Locator } from "@playwright/test";
 import { signup, uniqueEmail } from "./helpers";
 
 test("página inicial: CTA no topo leva ao cadastro; Entrar ao login", async ({ page }) => {
@@ -81,6 +81,7 @@ test.describe("aviso de cookies", () => {
 test("ícone do site: todas as páginas apontam para um SVG que existe", async ({ page, request }) => {
   const conferir = async (path: string) => {
     await page.goto(path);
+    await expect(page.locator('link[rel="icon"]').first()).toHaveAttribute("href", /.+/);
     const href = await page.locator('link[rel="icon"]').first().getAttribute("href");
     expect(href, path).toBeTruthy();
     const res = await request.get(new URL(href!, page.url()).toString());
@@ -94,18 +95,37 @@ test("ícone do site: todas as páginas apontam para um SVG que existe", async (
   await conferir("/painel");
 });
 
-test("botões do topo mudam de cor ao passar o mouse", async ({ page }) => {
-  await signup(page, uniqueEmail());
-  const alvos = [
-    page.getByRole("button", { name: "Sair" }),
-    page.getByTestId("user-menu-button"),
-    page.getByTestId("top-controls").getByRole("button", { name: "EN", exact: true }),
-    page.getByTestId("theme-toggle"),
-  ];
-  for (const alvo of alvos) {
+for (const tema of ["claro", "escuro"]) {
+  test(`botões do topo: hover e foco do teclado são visíveis no tema ${tema}`, async ({ page }) => {
+    await signup(page, uniqueEmail());
+    if (tema === "escuro") {
+      await page.getByTestId("theme-toggle").click();
+      await expect(page.locator("html")).toHaveClass(/dark/);
+    }
+    const topo = page.getByTestId("top-controls");
+    const alvos = [
+      page.getByRole("button", { name: "Sair" }),
+      page.getByTestId("user-menu-button"),
+      topo.getByRole("button", { name: "EN", exact: true }), // o idioma NÃO selecionado
+      page.getByTestId("theme-toggle"),
+    ];
+    const bg = (el: Locator) => el.evaluate((e) => getComputedStyle(e).backgroundColor);
+    const sombra = (el: Locator) => el.evaluate((e) => getComputedStyle(e).boxShadow);
+    for (const alvo of alvos) {
+      await page.mouse.move(0, 0);
+      await page.waitForTimeout(300);
+      const repouso = await bg(alvo);
+      await alvo.hover();
+      await expect.poll(() => bg(alvo)).not.toBe(repouso);
+    }
+    // Foco por teclado: o anel (box-shadow) aparece em cada controle, inclusive no idioma já selecionado.
     await page.mouse.move(0, 0);
-    await expect.poll(() => alvo.evaluate((el) => getComputedStyle(el).backgroundColor)).toBe("rgba(0, 0, 0, 0)");
-    await alvo.hover();
-    await expect.poll(() => alvo.evaluate((el) => getComputedStyle(el).backgroundColor)).not.toBe("rgba(0, 0, 0, 0)");
-  }
-});
+    for (const alvo of [...alvos, topo.getByRole("button", { name: "PT", exact: true })]) {
+      await page.waitForTimeout(300);
+      const repouso = await sombra(alvo);
+      await page.locator("body").click({ position: { x: 1, y: 1 } });
+      for (let i = 0; i < 40 && !(await alvo.evaluate((e) => e === document.activeElement)); i++) await page.keyboard.press("Tab");
+      await expect.poll(() => sombra(alvo)).not.toBe(repouso);
+    }
+  });
+}
