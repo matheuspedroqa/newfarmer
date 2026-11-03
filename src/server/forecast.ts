@@ -1,3 +1,4 @@
+import "server-only";
 import type { Db } from "./db";
 import type { Forecast, WeatherProvider } from "./weather/types";
 

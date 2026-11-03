@@ -1,3 +1,4 @@
+import "server-only";
 import en from "../../messages/en.json";
 import pt from "../../messages/pt.json";
 import type { Locale } from "@/i18n/locales";

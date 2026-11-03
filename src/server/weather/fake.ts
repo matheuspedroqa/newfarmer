@@ -1,3 +1,4 @@
+import "server-only";
 import type { ClimateNormals } from "../climate";
 import type { CityResult, WeatherProvider } from "./types";
 

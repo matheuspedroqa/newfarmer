@@ -1,3 +1,4 @@
+import "server-only";
 import bcrypt from "bcryptjs";
 import type { CityChoice } from "@/lib/validation";
 import { resolveLocale, resolveTheme, type Locale, type Theme } from "@/i18n/locales";

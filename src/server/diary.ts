@@ -1,3 +1,4 @@
+import "server-only";
 import type { AnimalId } from "@/lib/catalog";
 import type { DiaryInput } from "@/lib/validation";
 import type { Db } from "./db";

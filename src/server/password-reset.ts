@@ -1,3 +1,4 @@
+import "server-only";
 import type { Locale } from "@/i18n/locales";
 import { setPassword } from "./accounts";
 import type { Db } from "./db";

@@ -1,3 +1,4 @@
+import "server-only";
 import { getUserById, type User } from "./accounts";
 import type { Db } from "./db";
 import { hashToken, newToken } from "./tokens";

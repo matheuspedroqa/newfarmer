@@ -1,3 +1,4 @@
+import "server-only";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { LOCALE_COOKIE, SESSION_COOKIE, THEME_COOKIE } from "@/lib/cookies";

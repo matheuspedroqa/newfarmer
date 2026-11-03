@@ -1,3 +1,4 @@
+import "server-only";
 import type { Locale } from "@/i18n/locales";
 import { normalsFromDaily } from "../climate";
 import type { CityResult, WeatherProvider } from "./types";

@@ -1,3 +1,4 @@
+import "server-only";
 import type { Locale, Theme } from "@/i18n/locales";
 import type { Db } from "./db";
 

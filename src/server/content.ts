@@ -1,3 +1,4 @@
+import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 import { CROP_IDS, type AnimalId, type CropId } from "@/lib/catalog";

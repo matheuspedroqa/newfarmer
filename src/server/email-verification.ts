@@ -1,3 +1,4 @@
+import "server-only";
 import type { Locale } from "@/i18n/locales";
 import type { Db } from "./db";
 import { verifyEmail } from "./email-templates";

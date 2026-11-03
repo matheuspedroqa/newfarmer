@@ -1,3 +1,4 @@
+import "server-only";
 import type { CityChoice, SignupInput } from "@/lib/validation";
 import { EmailTakenError, createUser, getUserById } from "./accounts";
 import {

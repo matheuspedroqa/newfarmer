@@ -1,3 +1,4 @@
+import "server-only";
 import type { Db } from "./db";
 
 export interface MailMessage {

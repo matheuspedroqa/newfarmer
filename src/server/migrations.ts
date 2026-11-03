@@ -1,3 +1,4 @@
+import "server-only";
 import type { Db } from "./db";
 
 // Horários são guardados em milissegundos (BIGINT). RLS ligado sem regras: a API pública do

@@ -1,3 +1,4 @@
+import "server-only";
 import { ANIMALS, CROPS, type AnimalId, type CropId } from "@/lib/catalog";
 import type { FarmInput } from "@/lib/validation";
 import type { Db } from "./db";
