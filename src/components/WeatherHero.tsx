@@ -1,7 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { resolveLocale } from "@/i18n/locales";
-import { formatDay, formatTime } from "@/lib/format";
+import { formatDay, formatRainMm, formatTime } from "@/lib/format";
 import { describeWeather } from "@/lib/weather-codes";
 import type { ForecastResult } from "@/server/forecast";
 
@@ -43,6 +43,7 @@ export async function WeatherHero({ result }: { result: ForecastResult }) {
             <p className="text-xl" aria-hidden>{describeWeather(day.weatherCode).icon}</p>
             <p className="text-sm">{Math.round(day.max)}°/{Math.round(day.min)}°</p>
             {day.rainChance !== null && <p className="text-[10px] opacity-70">💧 {day.rainChance}%</p>}
+            {formatRainMm(day.rainMm, locale) && <p className="text-[10px] opacity-70">💧 {formatRainMm(day.rainMm, locale)}</p>}
           </div>
         ))}
       </div>

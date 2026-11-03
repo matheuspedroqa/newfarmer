@@ -187,6 +187,19 @@ CREATE INDEX idx_error_logs_at ON error_logs (at DESC);
 ALTER TABLE error_logs ENABLE ROW LEVEL SECURITY;
 `,
   },
+  {
+    id: 8,
+    name: "forecast_snapshots",
+    // Registro diário do tempo do Fundão (cron da Vercel); sem dado pessoal.
+    sql: `
+CREATE TABLE forecast_snapshots (
+  id SERIAL PRIMARY KEY, place TEXT NOT NULL, latitude DOUBLE PRECISION NOT NULL,
+  longitude DOUBLE PRECISION NOT NULL, forecast_date TEXT NOT NULL, payload JSONB NOT NULL,
+  created_at BIGINT NOT NULL, UNIQUE (place, forecast_date)
+);
+ALTER TABLE forecast_snapshots ENABLE ROW LEVEL SECURITY;
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

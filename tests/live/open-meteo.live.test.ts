@@ -21,5 +21,6 @@ describe("Open-Meteo de verdade", () => {
     const forecast = await provider.getForecast(-22.9, -47.06);
     expect(forecast.days).toHaveLength(5);
     expect(typeof forecast.current.temperature).toBe("number");
+    expect(forecast.days.every((d) => d.rainMm === null || d.rainMm >= 0)).toBe(true);
   });
 });

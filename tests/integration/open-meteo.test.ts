@@ -71,6 +71,7 @@ describe("Open-Meteo: getForecast", () => {
           temperature_2m_max: [22, 19],
           temperature_2m_min: [13, 12],
           precipitation_probability_max: [40, null],
+          precipitation_sum: [3.2, null],
           weather_code: [2, 61],
         },
       }),
@@ -80,8 +81,8 @@ describe("Open-Meteo: getForecast", () => {
     expect(forecast).toEqual({
       current: { temperature: 18.4, weatherCode: 2 },
       days: [
-        { date: "2026-10-29", max: 22, min: 13, rainChance: 40, weatherCode: 2 },
-        { date: "2026-10-30", max: 19, min: 12, rainChance: null, weatherCode: 61 },
+        { date: "2026-10-29", max: 22, min: 13, rainChance: 40, rainMm: 3.2, weatherCode: 2 },
+        { date: "2026-10-30", max: 19, min: 12, rainChance: null, rainMm: null, weatherCode: 61 },
       ],
     });
     const url = new URL(String((fetchMock.mock.calls[0] as unknown[])[0]));

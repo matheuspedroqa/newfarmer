@@ -35,16 +35,17 @@ export function createFakeWeatherProvider(
       if (options.failForecast) throw new Error("serviço de previsão fora (falso)");
       const today = Date.now();
       const days = [
-        [22, 13, 40, 2],
-        [19, 12, 85, 61],
-        [20, 11, 55, 80],
-        [25, 12, 5, 0],
-        [27, 14, 0, 0],
-      ].map(([max, min, rainChance, weatherCode], i) => ({
+        [22, 13, 40, 0.4, 2],
+        [19, 12, 85, 3.2, 61],
+        [20, 11, 55, 7.8, 80],
+        [25, 12, 5, 0, 0],
+        [27, 14, 0, 0, 0],
+      ].map(([max, min, rainChance, rainMm, weatherCode], i) => ({
         date: new Date(today + i * 86_400_000).toISOString().slice(0, 10),
         max,
         min,
         rainChance,
+        rainMm,
         weatherCode,
       }));
       return { current: { temperature: 18, weatherCode: 2 }, days };

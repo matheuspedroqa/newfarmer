@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import { resolveLocale } from "@/i18n/locales";
-import { formatDay, formatTime } from "@/lib/format";
+import { formatDay, formatRainMm, formatTime } from "@/lib/format";
 import { describeWeather } from "@/lib/weather-codes";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
@@ -55,6 +55,7 @@ export default async function WeatherPage() {
                     <span className="text-muted">{t("min")} {Math.round(day.min)}°</span>
                   </p>
                   {day.rainChance !== null && <p className="text-sm text-muted">💧 {t("rainChance")} {day.rainChance}%</p>}
+                  {formatRainMm(day.rainMm, locale) && <p className="text-sm text-muted">💧 {formatRainMm(day.rainMm, locale)}</p>}
                 </article>
               );
             })}

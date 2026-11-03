@@ -9,6 +9,7 @@ const TABLES = [
   "error_logs",
   "farm_animals",
   "farm_crops",
+  "forecast_snapshots",
   "login_attempts",
   "password_reset_tokens",
   "rate_limits",

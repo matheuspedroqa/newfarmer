@@ -49,6 +49,17 @@ Para testar contra o Supabase daqui, crie `.env.local` (ignorado pelo Git) com `
 - Depois da migração 3, sessões com mais de 1 hora são encerradas uma vez. Depois da 5, o login passa a ser pelo username
   (contas antigas: a parte do e-mail antes do @; "Esqueci o username" envia por e-mail).
 
+## Registro diário do tempo
+
+Todo dia à meia-noite (UTC) a Vercel chama `/api/cron/forecast`, que guarda a previsão do Fundão para o dia seguinte.
+
+1. Na Vercel, **Settings → Environment Variables**, crie `CRON_SECRET` em **Production** com um valor aleatório longo
+   (por exemplo `openssl rand -hex 32` ou um gerador de senhas).
+2. Faça **Redeploy** para a variável valer.
+3. Confira em **Settings → Cron Jobs** se o job aparece e veja as execuções ali.
+4. Para testar na mão: `curl -H "Authorization: Bearer <CRON_SECRET>" https://newfarmer.vercel.app/api/cron/forecast`
+   (deve responder `{"ok":true,"date":"AAAA-MM-DD"}`).
+
 ## Virar dono do site (Settings)
 
 As telas **Settings → Activity logs** e **Monitoramento** só aparecem para o dono do site; para os demais, dão 404.

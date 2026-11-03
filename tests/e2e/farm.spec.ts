@@ -79,6 +79,9 @@ test("aba Clima mostra a previsão de 5 dias", async ({ page }) => {
   await expect(page).toHaveURL(/\/clima$/);
   await expect(page.getByTestId("day-card")).toHaveCount(5);
   await expect(page.getByText("Próximos 5 dias")).toBeVisible();
+  // provedor falso: o segundo dia tem chuva (3,2 mm), o quarto é seco
+  await expect(page.getByTestId("day-card").nth(1)).toContainText("3,2 mm");
+  await expect(page.getByTestId("day-card").nth(3)).not.toContainText("mm");
 });
 
 test("MyFarm e Clima exigem login", async ({ page }) => {

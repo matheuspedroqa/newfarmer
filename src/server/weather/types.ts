@@ -9,6 +9,7 @@ export interface DayForecast {
   max: number;
   min: number;
   rainChance: number | null;
+  rainMm: number | null;
   weatherCode: number;
 }
 

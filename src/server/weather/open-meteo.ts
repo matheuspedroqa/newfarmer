@@ -60,7 +60,7 @@ export function createOpenMeteoProvider(
       url.searchParams.set("current", "temperature_2m,weather_code");
       url.searchParams.set(
         "daily",
-        "temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code",
+        "temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,weather_code",
       );
       url.searchParams.set("forecast_days", "5");
       url.searchParams.set("timezone", "auto");
@@ -71,6 +71,7 @@ export function createOpenMeteoProvider(
           temperature_2m_max: number[];
           temperature_2m_min: number[];
           precipitation_probability_max: (number | null)[];
+          precipitation_sum: (number | null)[];
           weather_code: number[];
         };
       }>(url);
@@ -81,6 +82,7 @@ export function createOpenMeteoProvider(
           max: body.daily.temperature_2m_max[i],
           min: body.daily.temperature_2m_min[i],
           rainChance: body.daily.precipitation_probability_max[i] ?? null,
+          rainMm: body.daily.precipitation_sum?.[i] ?? null,
           weatherCode: body.daily.weather_code[i],
         })),
       };
