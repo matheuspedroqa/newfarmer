@@ -77,3 +77,35 @@ test.describe("aviso de cookies", () => {
     await expect(page.getByRole("region", { name: "Aviso de cookies" })).toHaveCount(0);
   });
 });
+
+test("ícone do site: todas as páginas apontam para um SVG que existe", async ({ page, request }) => {
+  const conferir = async (path: string) => {
+    await page.goto(path);
+    const href = await page.locator('link[rel="icon"]').first().getAttribute("href");
+    expect(href, path).toBeTruthy();
+    const res = await request.get(new URL(href!, page.url()).toString());
+    expect(res.status(), path).toBe(200);
+    expect(res.headers()["content-type"], path).toContain("svg");
+  };
+  await conferir("/");
+  await conferir("/login");
+  await conferir("/nao-existe");
+  await signup(page, uniqueEmail());
+  await conferir("/painel");
+});
+
+test("botões do topo mudam de cor ao passar o mouse", async ({ page }) => {
+  await signup(page, uniqueEmail());
+  const alvos = [
+    page.getByRole("button", { name: "Sair" }),
+    page.getByTestId("user-menu-button"),
+    page.getByTestId("top-controls").getByRole("button", { name: "EN", exact: true }),
+    page.getByTestId("theme-toggle"),
+  ];
+  for (const alvo of alvos) {
+    await page.mouse.move(0, 0);
+    await expect.poll(() => alvo.evaluate((el) => getComputedStyle(el).backgroundColor)).toBe("rgba(0, 0, 0, 0)");
+    await alvo.hover();
+    await expect.poll(() => alvo.evaluate((el) => getComputedStyle(el).backgroundColor)).not.toBe("rgba(0, 0, 0, 0)");
+  }
+});

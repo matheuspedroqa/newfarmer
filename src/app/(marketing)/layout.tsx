@@ -10,8 +10,8 @@ export default async function MarketingLayout({ children }: { children: React.Re
         <p className="font-display text-2xl font-bold text-primary">🌾 {t("app.name")}</p>
         <div className="flex flex-wrap items-center gap-4">
           <TopControls />
-          <Link href="/login" className="text-sm text-muted hover:underline">{t("home.login")}</Link>
-          <Link href="/cadastro" className="rounded-full bg-primary px-5 py-2 font-semibold text-primary-text">
+          <Link href="/login" className="text-sm text-muted transition-colors duration-150 hover:text-text hover:underline motion-reduce:transition-none">{t("home.login")}</Link>
+          <Link href="/cadastro" className="rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-opacity duration-150 hover:opacity-90 motion-reduce:transition-none">
             {t("home.cta")}
           </Link>
         </div>

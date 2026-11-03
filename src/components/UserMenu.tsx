@@ -25,7 +25,7 @@ export function UserMenu({ name, isPlatformAdmin }: { name: string; isPlatformAd
     };
   }, [open]);
 
-  const item = "flex items-center gap-2 px-4 py-3 hover:bg-soft";
+  const item = "flex items-center gap-2 px-4 py-3 transition-colors duration-150 hover:bg-soft focus-visible:bg-soft motion-reduce:transition-none";
   return (
     <div ref={ref} className="relative">
       <button
@@ -35,7 +35,7 @@ export function UserMenu({ name, isPlatformAdmin }: { name: string; isPlatformAd
         aria-expanded={open}
         title={t("open")}
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-2 rounded-full border border-border px-3 py-1 text-sm font-semibold"
+        className="flex items-center gap-2 rounded-full border border-border px-3 py-1 text-sm font-semibold transition-colors duration-150 hover:bg-soft focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none motion-reduce:transition-none"
       >
         <span aria-hidden>👤</span> {name} <span aria-hidden>▾</span>
       </button>

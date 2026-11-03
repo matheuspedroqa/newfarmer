@@ -33,7 +33,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
             <TopControls />
             <UserMenu name={user.name} isPlatformAdmin={user.isPlatformAdmin} />
             <form action={logoutAction}>
-              <button type="submit" className="rounded-full border border-border px-3 py-1 text-sm">{t("auth.logout")}</button>
+              <button type="submit" className="rounded-full border border-border px-3 py-1 text-sm transition-colors duration-150 hover:bg-soft focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none motion-reduce:transition-none">{t("auth.logout")}</button>
             </form>
           </div>
         </header>
