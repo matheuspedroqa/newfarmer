@@ -49,6 +49,7 @@
     "emailTaken": "This e-mail already has an account. Want to sign in?",
     "invalidCredentials": "Incorrect e-mail or password",
     "locked": "Too many attempts. Try again in 15 minutes.",
+    "rateLimited": "Too many attempts. Try again in a few minutes.",
     "linkExpired": "This link has expired. Request a new one",
     "generic": "Something went wrong. Please try again.",
     "countInvalid": "Use a whole number",

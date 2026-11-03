@@ -100,6 +100,14 @@ ALTER TABLE weather_cache ENABLE ROW LEVEL SECURITY;
 ALTER TABLE dev_emails ENABLE ROW LEVEL SECURITY;
 `,
   },
+  {
+    id: 2,
+    name: "rate_limits",
+    sql: `
+CREATE TABLE rate_limits (key TEXT PRIMARY KEY, window_start BIGINT NOT NULL, count INTEGER NOT NULL);
+ALTER TABLE rate_limits ENABLE ROW LEVEL SECURITY;
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

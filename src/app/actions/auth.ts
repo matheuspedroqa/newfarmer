@@ -17,6 +17,8 @@ import { getDb } from "@/server/db";
 import { sendVerificationEmail } from "@/server/email-verification";
 import { getMailer } from "@/server/mailer";
 import { requestPasswordReset, resetPassword } from "@/server/password-reset";
+import { limitByIp } from "@/server/rate-limit";
+import { clientIp } from "@/server/request-context";
 import { setPreferences } from "@/server/preferences";
 import { refreshEstimatedClimate, registerUser } from "@/server/registration";
 import { getWeatherProvider } from "@/server/weather";
@@ -46,6 +48,7 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
 
   const db = await getDb();
+  if (!(await limitByIp(db, "signup", await clientIp())).ok) return { formError: "rateLimited", values };
   const result = await registerUser(db, getWeatherProvider(), parsed.data);
   if (!result.ok) return { fieldErrors: { email: "emailTaken" }, values };
 
@@ -67,6 +70,7 @@ export async function loginAction(_prev: FormState, formData: FormData): Promise
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
 
   const db = await getDb();
+  if (!(await limitByIp(db, "login", await clientIp())).ok) return { formError: "rateLimited", values };
   const result = await verifyCredentials(db, parsed.data.email, parsed.data.password);
   if (!result.ok) return { formError: result.reason === "locked" ? "locked" : "invalidCredentials", values };
 
@@ -85,6 +89,9 @@ export async function forgotAction(_prev: FormState, formData: FormData): Promis
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values: typed(formData, "email") };
 
   const db = await getDb();
+  if (!(await limitByIp(db, "recovery", await clientIp())).ok) {
+    return { formError: "rateLimited", values: typed(formData, "email") };
+  }
   try {
     await requestPasswordReset(db, getMailer(db), {
       email: parsed.data.email,
