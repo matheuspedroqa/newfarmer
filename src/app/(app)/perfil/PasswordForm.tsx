@@ -35,7 +35,7 @@ export function PasswordForm() {
       ))}
       {state.formError && <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{tErrors(state.formError)}</p>}
       {state.done && <p role="status" className="rounded-xl bg-soft px-4 py-3 font-semibold">{t("passwordChanged")}</p>}
-      <div className="w-60">
+      <div className="w-full sm:w-60">
         <SubmitButton pending={pending}>{t("savePassword")}</SubmitButton>
       </div>
     </form>

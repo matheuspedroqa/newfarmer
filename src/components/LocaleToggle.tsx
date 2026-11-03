@@ -25,7 +25,7 @@ export function LocaleToggle({ current }: { current: Locale }) {
               router.refresh();
             })
           }
-          className="px-3 py-1 text-sm font-semibold transition-colors duration-150 hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary aria-pressed:bg-primary aria-pressed:text-primary-text aria-pressed:hover:bg-primary aria-pressed:focus-visible:ring-primary-text aria-pressed:hover:opacity-90 motion-reduce:transition-none"
+          className="min-h-11 min-w-11 px-3 py-1 text-sm md:min-h-0 md:min-w-0 font-semibold transition-colors duration-150 hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary aria-pressed:bg-primary aria-pressed:text-primary-text aria-pressed:hover:bg-primary aria-pressed:focus-visible:ring-primary-text aria-pressed:hover:opacity-90 motion-reduce:transition-none"
         >
           {locale.toUpperCase()}
         </button>

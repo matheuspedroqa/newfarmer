@@ -48,14 +48,14 @@ export default async function AnimalPage({
 
   return (
     <section className="space-y-8">
-      <nav className="flex flex-wrap gap-2" aria-label={t("nav.animals")}>
+      <nav className="flex gap-2 overflow-x-auto pb-1 md:flex-wrap md:pb-0" aria-label={t("nav.animals")}>
         {ANIMALS.filter((a) => farm.animals.some((f) => f.id === a.id)).map((a) => (
           <Link
             key={a.id}
             href={`/animais/${a.id}`}
             data-testid={`animal-tab-${a.id}`}
             aria-current={a.id === id ? "page" : undefined}
-            className={`rounded-full px-4 py-2 ${a.id === id ? "bg-primary text-primary-text" : "bg-surface ring-1 ring-border hover:bg-soft"}`}
+            className={`flex min-h-11 shrink-0 items-center gap-1 rounded-full px-4 py-2 whitespace-nowrap md:min-h-0 ${a.id === id ? "bg-primary text-primary-text" : "bg-surface ring-1 ring-border hover:bg-soft"}`}
           >
             <span aria-hidden>{a.icon}</span> {t(`animals.${a.id}`)}
           </Link>
@@ -63,7 +63,7 @@ export default async function AnimalPage({
       </nav>
 
       <h1 className="font-display text-4xl font-bold">{t(`animals.${id}`)}</h1>
-      <nav className="flex gap-2 border-b border-border" aria-label={t(`animals.${id}`)}>
+      <nav className="flex gap-2 overflow-x-auto border-b border-border" aria-label={t(`animals.${id}`)}>
         {[
           { href: `/animais/${id}`, label: t("diary.tabManual"), active: !showDiary },
           { href: `/animais/${id}?aba=diario`, label: t("diary.tabDiary"), active: showDiary },
@@ -72,7 +72,7 @@ export default async function AnimalPage({
             key={tab.href}
             href={tab.href}
             aria-current={tab.active ? "page" : undefined}
-            className={`-mb-px border-b-2 px-4 py-2 font-semibold ${tab.active ? "border-primary text-primary" : "border-transparent text-muted hover:text-primary"}`}
+            className={`-mb-px flex min-h-11 shrink-0 items-center border-b-2 px-4 py-2 font-semibold whitespace-nowrap md:min-h-0 ${tab.active ? "border-primary text-primary" : "border-transparent text-muted hover:text-primary"}`}
           >
             {tab.label}
           </Link>
@@ -85,7 +85,7 @@ export default async function AnimalPage({
           {diary.length ? (
             <ul className="space-y-3">
               {diary.map((e) => (
-                <li key={e.id} data-testid="diary-entry" className="flex items-start justify-between gap-4 rounded-2xl bg-surface p-4 ring-1 ring-border">
+                <li key={e.id} data-testid="diary-entry" className="flex items-start justify-between gap-4 rounded-2xl bg-surface p-4 ring-1 ring-border [overflow-wrap:anywhere]">
                   <div>
                     <p className="text-sm text-accent">
                       <b>{formatDay(e.date, locale, "long")}</b> · {t(`diary.kinds.${e.kind}`)}
@@ -95,7 +95,7 @@ export default async function AnimalPage({
                   </div>
                   <form action={deleteDiaryAction}>
                     <input type="hidden" name="id" value={e.id} />
-                    <button type="submit" aria-label={t("diary.delete")} title={t("diary.delete")} className="rounded-full px-3 py-1 text-muted hover:bg-soft hover:text-danger">
+                    <button type="submit" aria-label={t("diary.delete")} title={t("diary.delete")} className="min-h-11 min-w-11 rounded-full px-3 py-1 text-muted hover:bg-soft hover:text-danger md:min-h-0 md:min-w-0">
                       ✕
                     </button>
                   </form>
@@ -114,10 +114,10 @@ export default async function AnimalPage({
 
           <CountryNotes notes={content.countryNotes} countryCode={user.countryCode} />
 
-          <div className="grid grid-cols-3 gap-6">
-            <section className="col-span-2">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <section className="md:col-span-2">
               <h2 className="font-display text-2xl font-bold">{t("animalPage.breeds")}</h2>
-              <div className="mt-3 grid grid-cols-2 gap-3">
+              <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {content.breeds.map((b) => (
                   <article key={b.name} className="rounded-2xl bg-surface p-4 ring-1 ring-border">
                     <p className="font-bold">{b.name}</p>
@@ -140,7 +140,7 @@ export default async function AnimalPage({
             <h2 className="font-display text-2xl font-bold">
               {t("animalPage.seasonalCare", { zone: t(`climate.${user.climateZone}`) })}
             </h2>
-            <div className="mt-3 grid grid-cols-4 gap-3">
+            <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
               {SEASONS.map((s) => (
                 <article
                   key={s}
@@ -157,7 +157,7 @@ export default async function AnimalPage({
             </div>
           </section>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <section>
               <h2 className="font-display text-2xl font-bold">{t("animalPage.feeding")}</h2>
               <ul className="mt-2 list-disc space-y-1 pl-5">
@@ -178,7 +178,7 @@ export default async function AnimalPage({
             {content.diseases.map((d, i) => (
               <article key={i} data-testid="disease" className="rounded-2xl bg-surface p-5 ring-1 ring-border">
                 <h3 className="text-lg font-bold">{tx(d.name)}</h3>
-                <dl className="mt-2 grid grid-cols-3 gap-4 text-sm">
+                <dl className="mt-2 grid grid-cols-1 gap-4 text-sm md:grid-cols-3">
                   <div><dt className="font-semibold text-accent">{t("animalPage.signs")}</dt><dd>{tx(d.signs)}</dd></div>
                   <div><dt className="font-semibold text-accent">{t("animalPage.homeCare")}</dt><dd>{tx(d.homeCare)}</dd></div>
                   <div><dt className="font-semibold text-accent">{t("animalPage.vetCare")}</dt><dd>{tx(d.vetCare)}</dd></div>

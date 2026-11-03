@@ -47,7 +47,7 @@ export function FarmForm({
       <section id="animais" className="scroll-mt-6">
         <h2 className="font-display text-2xl font-bold">{t("farm.animalsTitle")}</h2>
         <p className="text-sm text-muted">{t("farm.animalsHelp")}</p>
-        <div className="mt-4 grid grid-cols-3 gap-4">
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           {ANIMALS.map((animal) => {
             const on = checked[animal.id] ?? false;
             return (
@@ -55,7 +55,7 @@ export function FarmForm({
                 key={animal.id}
                 className={`rounded-3xl p-5 transition ${on ? "bg-soft ring-2 ring-primary" : "bg-surface ring-1 ring-border"}`}
               >
-                <label className="flex cursor-pointer items-center gap-3">
+                <label className="flex min-h-11 cursor-pointer items-center gap-3">
                   <input
                     type="checkbox"
                     name={`animal:${animal.id}`}
@@ -101,7 +101,7 @@ export function FarmForm({
               {CROPS.filter((c) => c.group === group).map((crop) => (
                 <label
                   key={crop.id}
-                  className="flex cursor-pointer items-center gap-2 rounded-full bg-surface px-4 py-2 ring-1 ring-border has-[:checked]:bg-soft has-[:checked]:ring-2 has-[:checked]:ring-primary"
+                  className="flex min-h-11 cursor-pointer items-center gap-2 rounded-full bg-surface px-4 py-2 ring-1 ring-border has-[:checked]:bg-soft has-[:checked]:ring-2 has-[:checked]:ring-primary"
                 >
                   <input
                     type="checkbox"
@@ -124,8 +124,8 @@ export function FarmForm({
       {state.done && (
         <p role="status" className="rounded-xl bg-soft px-4 py-3 font-semibold">{t("farm.saved")}</p>
       )}
-      <div className="flex items-center gap-6">
-        <div className="w-60">
+      <div className="flex flex-wrap items-center gap-6">
+        <div className="w-full sm:w-60">
           <SubmitButton pending={pending}>{submitLabel}</SubmitButton>
         </div>
         {footer}

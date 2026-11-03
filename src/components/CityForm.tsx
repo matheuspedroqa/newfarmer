@@ -12,16 +12,16 @@ export function CityForm() {
   const tErrors = useTranslations("errors");
   const [state, action, pending] = useActionState<FormState, FormData>(changeCityAction, {});
   return (
-    <form action={action} noValidate className="mt-4 flex items-start gap-4">
+    <form action={action} noValidate className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-start">
       <div className="flex-1">
         <CityPicker error={state.fieldErrors?.city} />
       </div>
-      <div className="mt-6 w-48">
+      <div className="w-full sm:mt-6 sm:w-48">
         <SubmitButton pending={pending}>{t("saveCity")}</SubmitButton>
       </div>
       {state.formError && <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{tErrors(state.formError)}</p>}
       {state.done && (
-        <p role="status" className="mt-7 max-w-xs text-sm font-semibold text-primary">{t("cityChanged")}</p>
+        <p role="status" className="max-w-xs text-sm sm:mt-7 font-semibold text-primary">{t("cityChanged")}</p>
       )}
     </form>
   );

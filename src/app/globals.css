@@ -53,3 +53,10 @@ body {
   background: var(--bg);
   color: var(--text);
 }
+
+/* No celular a barra de navegação fica fixa embaixo: rolar até um campo nunca o deixa escondido atrás dela. */
+@media (width < 48rem) {
+  html {
+    scroll-padding-bottom: 5rem;
+  }
+}

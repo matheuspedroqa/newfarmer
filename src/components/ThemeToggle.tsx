@@ -26,7 +26,7 @@ export function ThemeToggle({ initial }: { initial: Theme }) {
       data-testid="theme-toggle"
       aria-label={theme === "dark" ? t("themeLight") : t("themeDark")}
       title={theme === "dark" ? t("themeLight") : t("themeDark")}
-      className="rounded-full border border-border px-3 py-1 text-sm transition-colors duration-150 hover:border-primary hover:bg-hover focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none motion-reduce:transition-none"
+      className="min-h-11 min-w-11 rounded-full border border-border px-3 py-1 text-sm md:min-h-0 md:min-w-0 transition-colors duration-150 hover:border-primary hover:bg-hover focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none motion-reduce:transition-none"
     >
       {theme === "dark" ? "☀️" : "🌙"}
     </button>

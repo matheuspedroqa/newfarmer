@@ -11,7 +11,7 @@ export default async function CropsIndex() {
   const t = await getTranslations();
   return (
     <section className="space-y-8">
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex flex-wrap items-center justify-between gap-4">
         <h1 className="font-display text-4xl font-bold">{t("cropPage.groups")}</h1>
         <Link
           href="/myfarm#plantacoes"
@@ -23,13 +23,13 @@ export default async function CropsIndex() {
       {CROP_GROUPS.map((group) => (
         <div key={group}>
           <h2 className="font-display text-2xl font-bold text-accent">{t(`cropGroups.${group}`)}</h2>
-          <div className="mt-3 grid grid-cols-5 gap-3">
+          <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
             {CROPS.filter((c) => c.group === group).map((c) => (
               <Link
                 key={c.id}
                 href={`/plantacoes/${c.id}`}
                 data-testid={`crop-link-${c.id}`}
-                className="flex flex-col items-center rounded-3xl bg-surface p-5 ring-1 ring-border hover:bg-hover"
+                className="flex flex-col items-center rounded-3xl bg-surface p-5 text-center ring-1 ring-border hover:bg-hover"
               >
                 <span className="text-4xl" aria-hidden>{c.icon}</span>
                 <span className="mt-2 font-semibold">{t(`crops.${c.id}`)}</span>

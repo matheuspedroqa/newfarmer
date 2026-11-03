@@ -10,12 +10,12 @@ export function VerifyEmailBanner({ email }: { email: string }) {
 
   return (
     <div data-testid="verify-banner" className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-soft px-5 py-3 ring-1 ring-accent/40">
-      <p>
+      <p className="min-w-0 [overflow-wrap:anywhere]">
         ✉️ {t("text", { email })}
         {state.result && <span role="status" className="ml-2 font-semibold">{t(state.result)}</span>}
       </p>
       <form action={action}>
-        <button type="submit" disabled={pending} className="rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-primary-text disabled:opacity-60">
+        <button type="submit" disabled={pending} className="min-h-11 rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-primary-text disabled:opacity-60 md:min-h-0">
           {t("resend")}
         </button>
       </form>

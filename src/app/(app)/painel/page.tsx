@@ -49,7 +49,7 @@ export default async function DashboardPage() {
   return (
     <section>
       <h1 className="font-display text-3xl font-bold">{t("dashboard.hello", { name: user.name })}</h1>
-      <div className="mt-6 grid auto-rows-[minmax(150px,auto)] grid-cols-4 gap-4">
+      <div className="mt-6 grid auto-rows-[minmax(150px,auto)] grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
         <WeatherHero result={forecast} />
 
         {farm.animals.map((animal, i) => (
@@ -74,8 +74,8 @@ export default async function DashboardPage() {
           <span className="text-sm">{farm.animals.length ? t("dashboard.addAnimal") : t("dashboard.noAnimals")}</span>
         </Link>
 
-        <section data-testid="crop-chips" className="col-span-4 rounded-3xl bg-surface p-6 shadow-sm">
-          <div className="flex items-baseline justify-between">
+        <section data-testid="crop-chips" className="col-span-2 rounded-3xl bg-surface md:col-span-4 p-6 shadow-sm">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
             <p className="text-sm font-bold uppercase tracking-wide text-accent">{t("dashboard.myCrops")}</p>
             <Link href="/myfarm" className="text-sm text-primary hover:underline">{t("dashboard.editFarm")}</Link>
           </div>
@@ -109,7 +109,7 @@ export default async function DashboardPage() {
           )}
         </section>
 
-        <section data-testid="season-tip" className="col-span-4 rounded-3xl bg-primary p-6 text-primary-text">
+        <section data-testid="season-tip" className="col-span-2 rounded-3xl bg-primary md:col-span-4 p-6 text-primary-text">
           <p className="font-bold">🍂 {t("dashboard.seasonTip", { season: t(`seasons.${season}`) })}</p>
           {tips.length ? (
             <ul className="mt-2 space-y-1">
@@ -125,7 +125,7 @@ export default async function DashboardPage() {
         </section>
 
         {recentNotes.length > 0 && (
-          <section data-testid="diary-recent" className="col-span-4 rounded-3xl bg-surface p-6 shadow-sm">
+          <section data-testid="diary-recent" className="col-span-2 rounded-3xl bg-surface md:col-span-4 p-6 shadow-sm">
             <p className="text-sm font-bold uppercase tracking-wide text-accent">{t("dashboard.diaryRecent")}</p>
             <ul className="mt-2 space-y-1">
               {recentNotes.map((e) => (

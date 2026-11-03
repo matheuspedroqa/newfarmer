@@ -35,9 +35,9 @@ export function UserMenu({ name, isPlatformAdmin }: { name: string; isPlatformAd
         aria-expanded={open}
         title={t("open")}
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-2 rounded-full border border-border px-3 py-1 text-sm font-semibold transition-colors duration-150 hover:border-primary hover:bg-hover focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none motion-reduce:transition-none"
+        className="flex min-h-11 items-center gap-2 rounded-full border border-border px-3 py-1 text-sm font-semibold md:min-h-0 transition-colors duration-150 hover:border-primary hover:bg-hover focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none motion-reduce:transition-none"
       >
-        <span aria-hidden>👤</span> {name} <span aria-hidden>▾</span>
+        <span aria-hidden>👤</span> <span className="max-w-[7rem] truncate md:max-w-none">{name}</span> <span aria-hidden>▾</span>
       </button>
       {open && (
         <div role="menu" className="absolute right-0 z-20 mt-2 w-48 overflow-hidden rounded-2xl bg-surface shadow-xl ring-1 ring-border">

@@ -26,7 +26,7 @@ export default async function CropPage({ params }: { params: Promise<{ id: strin
   const crop = CROPS.find((c) => c.id === id)!;
   const tx = (v: { pt: string; en: string }) => v[locale];
   const back = (
-    <Link href="/plantacoes" className="text-sm text-primary hover:underline">← {t("cropPage.groups")}</Link>
+    <Link href="/plantacoes" className="inline-flex min-h-11 items-center text-sm text-primary hover:underline md:min-h-0">← {t("cropPage.groups")}</Link>
   );
   const title = (
     <h1 className="font-display text-4xl font-bold"><span aria-hidden>{crop.icon}</span> {t(`crops.${id}`)}</h1>
@@ -52,7 +52,7 @@ export default async function CropPage({ params }: { params: Promise<{ id: strin
       {title}
       <p className="max-w-3xl text-lg">{tx(content.summary)}</p>
 
-      <section className="rounded-3xl bg-surface p-6 ring-1 ring-border">
+      <section className="rounded-3xl bg-surface p-4 ring-1 ring-border md:p-6">
         <h2 className="font-display text-2xl font-bold">
           {t("cropPage.calendar", { zone: t(`climate.${user.climateZone}`), hemisphere: t(`climate.${user.hemisphere}`) })}
         </h2>
@@ -66,7 +66,7 @@ export default async function CropPage({ params }: { params: Promise<{ id: strin
         {zoneCal.notes && <p className="mt-3 text-sm text-muted">{tx(zoneCal.notes)}</p>}
       </section>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {(["fertilizing", "watering", "other"] as const).map((k) => (
           <section key={k} className="rounded-2xl bg-soft p-5">
             <h2 className="font-display text-xl font-bold">{t(`cropPage.${k}`)}</h2>

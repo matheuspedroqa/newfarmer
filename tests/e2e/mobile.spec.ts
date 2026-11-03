@@ -1,0 +1,94 @@
+import { expect, test, type Locator, type Page } from "@playwright/test";
+import { createAccount, PASSWORD, uniqueEmail } from "./helpers";
+
+// Três celulares dos Global Constraints: o menor (320 px), o mais comum (375 px) e um grande (412 px).
+const SIZES = [
+  { name: "iPhone SE", width: 375, height: 667 },
+  { name: "Pixel 7", width: 412, height: 915 },
+  { name: "Galaxy S9+", width: 320, height: 658 },
+];
+
+/** A página não rola para o lado. */
+async function expectNoHorizontalScroll(page: Page) {
+  const { scrollWidth, innerWidth } = await page.evaluate(() => ({
+    scrollWidth: document.documentElement.scrollWidth,
+    innerWidth: window.innerWidth,
+  }));
+  expect(scrollWidth, `rolagem horizontal em ${page.url()}`).toBeLessThanOrEqual(innerWidth);
+  // No modo celular o navegador pode afastar o zoom e aumentar innerWidth; a tela de verdade é a do viewport.
+  expect(innerWidth, `zoom afastado em ${page.url()}`).toBeLessThanOrEqual(page.viewportSize()!.width);
+}
+
+/** Visível e com pelo menos 44 px de altura e largura (área mínima de toque). */
+async function expectTouchTarget(target: Locator) {
+  await expect(target).toBeVisible();
+  const box = await target.boundingBox();
+  expect(box, "sem caixa").not.toBeNull();
+  expect(box!.height, "altura do toque").toBeGreaterThanOrEqual(44);
+  expect(box!.width, "largura do toque").toBeGreaterThanOrEqual(44);
+}
+
+async function checkPage(page: Page, path: string, nav: (p: Page) => Locator, main: (p: Page) => Locator, shot?: string) {
+  await test.step(path, async () => {
+    await page.goto(path);
+    await expect(nav(page)).toBeVisible();
+    await expectTouchTarget(main(page));
+    await expectNoHorizontalScroll(page);
+    // Só a tela visível: na foto de página inteira a barra fixa aparece no meio e confunde a revisão.
+    if (shot) await page.screenshot({ path: `test-results/mobile/${shot}.png` });
+  });
+}
+
+const appNav = (p: Page) => p.getByRole("navigation", { name: "NewFarmer" });
+const header = (p: Page) => p.getByTestId("top-controls");
+
+for (const size of SIZES) {
+  test.describe(`celular ${size.name} (${size.width}×${size.height})`, () => {
+    test.use({ viewport: { width: size.width, height: size.height }, isMobile: true, hasTouch: true });
+    const shot = (name: string) => (size.width === 375 ? name : undefined);
+
+    test("páginas públicas cabem na tela", async ({ page }) => {
+      await checkPage(page, "/", header, (p) => p.getByRole("main").getByRole("link", { name: "Criar conta grátis" }));
+      await checkPage(page, "/login", header, (p) => p.getByRole("button", { name: "Entrar" }));
+      await checkPage(page, "/cadastro", header, (p) => p.getByRole("button", { name: "Criar conta" }), shot("cadastro"));
+      await checkPage(page, "/privacidade", header, (p) => p.getByRole("banner").getByRole("link", { name: "Criar conta grátis" }));
+    });
+
+    test("cadastro, páginas da conta e login de novo", async ({ page }) => {
+      const { username } = await createAccount(page, uniqueEmail());
+      await page.getByLabel("Galinhas").check();
+      await page.locator("#count-chickens").fill("8");
+      await page.getByRole("checkbox", { name: "Tomate", exact: true }).check();
+      await expectNoHorizontalScroll(page);
+      await expectTouchTarget(page.getByRole("button", { name: "Continuar" }));
+      await page.getByRole("button", { name: "Continuar" }).click();
+      await expect(page).toHaveURL(/\/painel$/);
+
+      await checkPage(page, "/painel", appNav, (p) => p.getByRole("link", { name: "Adicionar animal" }), shot("painel"));
+      // A barra de baixo e os controles do topo também têm área de toque.
+      for (const name of ["Painel", "Animais", "Plantações", "Clima"]) {
+        await expectTouchTarget(appNav(page).getByRole("link", { name, exact: true }));
+      }
+      await expectTouchTarget(page.getByRole("button", { name: "Sair" }));
+      await expectTouchTarget(page.getByTestId("user-menu-button"));
+      await expectTouchTarget(page.getByTestId("theme-toggle"));
+      await expectTouchTarget(page.getByRole("button", { name: "PT" }));
+
+      await checkPage(page, "/animais/chickens", appNav, (p) => p.getByRole("link", { name: "Diário", exact: true }));
+      await checkPage(page, "/animais/chickens?aba=diario", appNav, (p) => p.getByRole("button", { name: "Salvar anotação" }));
+      await checkPage(page, "/plantacoes", appNav, (p) => p.getByRole("link", { name: "Adicionar plantação" }));
+      await checkPage(page, "/plantacoes/tomato", appNav, (p) => p.getByRole("link", { name: "← Plantações por tipo" }));
+      await checkPage(page, "/clima", appNav, (p) => appNav(p).getByRole("link", { name: "Clima", exact: true }), shot("clima"));
+      await checkPage(page, "/myfarm", appNav, (p) => p.getByRole("button", { name: "Salvar", exact: true }));
+      await checkPage(page, "/perfil", appNav, (p) => p.getByRole("button", { name: "Salvar nova senha" }));
+
+      await page.getByRole("button", { name: "Sair" }).click();
+      await expect(page).toHaveURL(/\/login$/);
+      await page.getByLabel("Username").fill(username);
+      await page.getByLabel("Senha").fill(PASSWORD);
+      await page.getByRole("button", { name: "Entrar" }).click();
+      await expect(page).toHaveURL(/\/painel$/);
+      await expect(appNav(page)).toBeVisible();
+    });
+  });
+}

@@ -21,19 +21,20 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   return (
     <div className="flex min-h-screen">
       <NavRail items={nav} label={t("app.name")} />
-      <div className="flex-1 p-8">
-        <header className="flex items-center justify-between">
+      {/* No celular a barra de navegação fica fixa embaixo: o pb-24 impede que ela cubra o conteúdo. */}
+      <div className="min-w-0 flex-1 px-4 pt-4 pb-24 md:p-8">
+        <header className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-sm text-muted" data-testid="user-climate">
               {user.cityLabel} · {t(`climate.${user.climateZone}`)}
               {user.climateEstimated && ` (${t("climate.estimated")})`} · {t(`climate.${user.hemisphere}`)}
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2 md:gap-3">
             <TopControls />
             <UserMenu name={user.name} isPlatformAdmin={user.isPlatformAdmin} />
             <form action={logoutAction}>
-              <button type="submit" className="rounded-full border border-border px-3 py-1 text-sm transition-colors duration-150 hover:border-primary hover:bg-hover focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none motion-reduce:transition-none">{t("auth.logout")}</button>
+              <button type="submit" className="min-h-11 rounded-full border border-border px-3 py-1 text-sm md:min-h-0 transition-colors duration-150 hover:border-primary hover:bg-hover focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none motion-reduce:transition-none">{t("auth.logout")}</button>
             </form>
           </div>
         </header>

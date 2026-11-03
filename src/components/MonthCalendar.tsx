@@ -12,8 +12,10 @@ const MONTHS = Array.from({ length: 12 }, (_, i) => i + 1);
 
 export async function MonthCalendar({ months, currentMonth }: { months: Record<Activity, number[]>; currentMonth: number }) {
   const t = await getTranslations();
+  // Os 12 meses não cabem num celular: a tabela rola dentro do próprio bloco, nunca a página.
   return (
-    <table className="w-full table-fixed border-separate border-spacing-1 text-center text-xs">
+    <div className="overflow-x-auto">
+    <table className="w-full min-w-[40rem] table-fixed border-separate border-spacing-1 text-center text-xs">
       <thead>
         <tr>
           <th className="w-32" />
@@ -47,5 +49,6 @@ export async function MonthCalendar({ months, currentMonth }: { months: Record<A
         ))}
       </tbody>
     </table>
+    </div>
   );
 }

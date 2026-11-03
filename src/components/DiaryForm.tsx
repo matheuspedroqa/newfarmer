@@ -17,9 +17,9 @@ export function DiaryForm({ animalId, today }: { animalId: string; today: string
   const errors = state.fieldErrors ?? {};
 
   return (
-    <form action={action} noValidate className="space-y-4 rounded-3xl bg-soft p-6">
+    <form action={action} noValidate className="space-y-4 rounded-3xl bg-soft p-4 md:p-6">
       <input type="hidden" name="animalId" value={animalId} />
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         <div>
           <label htmlFor="diary-date" className="mb-1 block text-sm font-semibold">{t("date")}</label>
           <input id="diary-date" name="date" type="date" defaultValue={today} max={today} aria-describedby="diary-date-error" className={inputClass} />
@@ -44,7 +44,7 @@ export function DiaryForm({ animalId, today }: { animalId: string; today: string
       </div>
       {state.formError && <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{tErrors(state.formError)}</p>}
       {state.done && <p role="status" className="font-semibold">{t("saved")}</p>}
-      <div className="w-60">
+      <div className="w-full sm:w-60">
         <SubmitButton pending={pending}>{t("save")}</SubmitButton>
       </div>
     </form>

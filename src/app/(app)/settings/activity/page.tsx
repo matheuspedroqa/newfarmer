@@ -52,7 +52,7 @@ export default async function ActivityPage({ searchParams }: { searchParams: Pro
             ))}
           </select>
         </label>
-        <button type="submit" className="rounded-full bg-primary px-4 py-2 font-semibold text-white">{t("settings.filter")}</button>
+        <button type="submit" className="min-h-11 rounded-full bg-primary px-4 py-2 font-semibold text-white">{t("settings.filter")}</button>
       </form>
 
       {rows.length === 0 ? (

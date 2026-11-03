@@ -21,7 +21,7 @@ export async function WeatherHero({ result }: { result: ForecastResult }) {
   return (
     <section
       data-testid="weather-hero"
-      className="col-span-2 row-span-2 flex flex-col justify-between rounded-3xl bg-gradient-to-br from-[#9cc58a] to-[#fbeedd] p-6 text-[#1f3a1c] dark:from-[#2c4a2a] dark:to-[#2b2316] dark:text-[#ece6d6]"
+      className="col-span-2 row-span-2 flex flex-col justify-between gap-4 rounded-3xl bg-gradient-to-br from-[#9cc58a] to-[#fbeedd] p-4 md:p-6 text-[#1f3a1c] dark:from-[#2c4a2a] dark:to-[#2b2316] dark:text-[#ece6d6]"
     >
       <div className="flex items-start justify-between">
         <div>
@@ -36,12 +36,12 @@ export async function WeatherHero({ result }: { result: ForecastResult }) {
         </div>
         <span className="text-7xl" aria-hidden>{now.icon}</span>
       </div>
-      <div className="grid grid-cols-5 gap-2">
+      <div className="grid grid-cols-5 gap-1 md:gap-2">
         {result.forecast.days.map((day) => (
-          <div key={day.date} className="rounded-2xl bg-white/50 p-2 text-center dark:bg-black/25">
+          <div key={day.date} className="min-w-0 rounded-2xl bg-white/50 px-0.5 py-2 text-center md:p-2 dark:bg-black/25">
             <p className="text-xs font-bold capitalize">{formatDay(day.date, locale, "short")}</p>
             <p className="text-xl" aria-hidden>{describeWeather(day.weatherCode).icon}</p>
-            <p className="text-sm">{Math.round(day.max)}°/{Math.round(day.min)}°</p>
+            <p className="text-xs md:text-sm">{Math.round(day.max)}°/{Math.round(day.min)}°</p>
             {day.rainChance !== null && <p className="text-[10px] opacity-70">💧 {day.rainChance}%</p>}
             {formatRainMm(day.rainMm, locale) && <p className="text-[10px] opacity-70">💧 {formatRainMm(day.rainMm, locale)}</p>}
           </div>

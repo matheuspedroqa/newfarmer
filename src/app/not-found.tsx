@@ -15,7 +15,7 @@ export default async function NotFound() {
       <p className="text-7xl" aria-hidden>🌾</p>
       <h1 className="font-display text-4xl font-bold">{t("title")}</h1>
       <p className="text-muted">{t("text")}</p>
-      <Link href={user ? "/painel" : "/"} className="rounded-full bg-primary px-6 py-2 font-semibold text-primary-text">
+      <Link href={user ? "/painel" : "/"} className="inline-flex min-h-11 items-center rounded-full bg-primary px-6 py-2 font-semibold text-primary-text">
         {t("back")}
       </Link>
     </main>

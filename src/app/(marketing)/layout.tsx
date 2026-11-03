@@ -6,12 +6,12 @@ export default async function MarketingLayout({ children }: { children: React.Re
   const t = await getTranslations();
   return (
     <div className="flex min-h-screen flex-col bg-bg">
-      <header className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-3 bg-bg/90 px-8 py-4 backdrop-blur">
+      <header className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-3 bg-bg/90 px-5 py-4 md:px-8 backdrop-blur">
         <p className="font-display text-2xl font-bold text-primary">🌾 {t("app.name")}</p>
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center gap-2 md:gap-4">
           <TopControls />
-          <Link href="/login" className="text-sm text-muted transition-colors duration-150 hover:text-text hover:underline motion-reduce:transition-none">{t("home.login")}</Link>
-          <Link href="/cadastro" className="rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-opacity duration-150 hover:opacity-90 motion-reduce:transition-none">
+          <Link href="/login" className="inline-flex min-h-11 items-center px-1 text-sm text-muted transition-colors duration-150 hover:text-text hover:underline motion-reduce:transition-none">{t("home.login")}</Link>
+          <Link href="/cadastro" className="inline-flex min-h-11 items-center rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-opacity duration-150 hover:opacity-90 motion-reduce:transition-none">
             {t("home.cta")}
           </Link>
         </div>

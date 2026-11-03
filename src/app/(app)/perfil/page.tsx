@@ -29,7 +29,7 @@ export default async function ProfilePage() {
           {info.map(([label, value]) => (
             <div key={label} className="contents">
               <dt className="font-semibold text-muted">{label}</dt>
-              <dd>{value}</dd>
+              <dd className="min-w-0 [overflow-wrap:anywhere]">{value}</dd>
             </div>
           ))}
         </dl>
