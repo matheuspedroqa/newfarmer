@@ -1,0 +1,118 @@
+import type { Db } from "./db";
+
+// Horários são guardados em milissegundos (BIGINT). RLS ligado sem regras: a API pública do
+// Supabase não lê nem grava nada; só o servidor do site, que entra como dono do banco.
+// Migração 1 = o banco de antes das migrações; só IF NOT EXISTS, então roda também no Supabase que já tem as tabelas.
+export const MIGRATIONS = [
+  {
+    id: 1,
+    name: "base",
+    sql: `
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL UNIQUE,
+  password_hash TEXT NOT NULL,
+  city_label TEXT NOT NULL,
+  latitude DOUBLE PRECISION NOT NULL,
+  longitude DOUBLE PRECISION NOT NULL,
+  country_code TEXT NOT NULL,
+  climate_zone TEXT NOT NULL,
+  climate_estimated INTEGER NOT NULL DEFAULT 0,
+  hemisphere TEXT NOT NULL,
+  locale TEXT NOT NULL DEFAULT 'en',
+  theme TEXT NOT NULL DEFAULT 'light',
+  created_at BIGINT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS sessions (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  token_hash TEXT NOT NULL UNIQUE,
+  expires_at BIGINT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS password_reset_tokens (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  token_hash TEXT NOT NULL UNIQUE,
+  expires_at BIGINT NOT NULL,
+  used_at BIGINT
+);
+-- Coluna nova em banco que já existia (Supabase): ADD COLUMN IF NOT EXISTS não mexe nos dados.
+ALTER TABLE users ADD COLUMN IF NOT EXISTS email_verified_at BIGINT;
+CREATE TABLE IF NOT EXISTS email_verification_tokens (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  token_hash TEXT NOT NULL UNIQUE,
+  expires_at BIGINT NOT NULL,
+  created_at BIGINT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS login_attempts (
+  id SERIAL PRIMARY KEY,
+  email TEXT NOT NULL,
+  attempted_at BIGINT NOT NULL,
+  success INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_login_attempts_email ON login_attempts (email, attempted_at);
+CREATE TABLE IF NOT EXISTS farm_animals (
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  animal_id TEXT NOT NULL,
+  count INTEGER NOT NULL CHECK (count BETWEEN 1 AND 100000),
+  PRIMARY KEY (user_id, animal_id)
+);
+CREATE TABLE IF NOT EXISTS farm_crops (
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  crop_id TEXT NOT NULL,
+  PRIMARY KEY (user_id, crop_id)
+);
+CREATE TABLE IF NOT EXISTS diary_entries (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  animal_id TEXT NOT NULL,
+  entry_date TEXT NOT NULL,
+  kind TEXT NOT NULL,
+  animal_name TEXT NOT NULL DEFAULT '',
+  note TEXT NOT NULL,
+  created_at BIGINT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_diary_user ON diary_entries (user_id, animal_id, entry_date);
+CREATE TABLE IF NOT EXISTS weather_cache (
+  key TEXT PRIMARY KEY,
+  payload TEXT NOT NULL,
+  fetched_at BIGINT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS dev_emails (
+  id SERIAL PRIMARY KEY,
+  to_address TEXT NOT NULL,
+  subject TEXT NOT NULL,
+  body_html TEXT NOT NULL,
+  created_at BIGINT NOT NULL
+);
+ALTER TABLE users ENABLE ROW LEVEL SECURITY;
+ALTER TABLE sessions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE password_reset_tokens ENABLE ROW LEVEL SECURITY;
+ALTER TABLE email_verification_tokens ENABLE ROW LEVEL SECURITY;
+ALTER TABLE login_attempts ENABLE ROW LEVEL SECURITY;
+ALTER TABLE farm_animals ENABLE ROW LEVEL SECURITY;
+ALTER TABLE farm_crops ENABLE ROW LEVEL SECURITY;
+ALTER TABLE diary_entries ENABLE ROW LEVEL SECURITY;
+ALTER TABLE weather_cache ENABLE ROW LEVEL SECURITY;
+ALTER TABLE dev_emails ENABLE ROW LEVEL SECURITY;
+`,
+  },
+] as const satisfies readonly { id: number; name: string; sql: string }[];
+
+export async function migrate(db: Db): Promise<number[]> {
+  await db.run("CREATE TABLE IF NOT EXISTS schema_migrations (id INTEGER PRIMARY KEY, applied_at BIGINT NOT NULL)");
+  await db.run("ALTER TABLE schema_migrations ENABLE ROW LEVEL SECURITY");
+  const done = new Set((await db.query<{ id: number }>("SELECT id FROM schema_migrations")).map((r) => r.id));
+  const applied: number[] = [];
+  for (const m of MIGRATIONS) {
+    if (done.has(m.id)) continue;
+    await db.transaction(async (tx) => {
+      await tx.exec(m.sql);
+      await tx.run("INSERT INTO schema_migrations (id, applied_at) VALUES ($1, $2)", [m.id, Date.now()]);
+    });
+    applied.push(m.id);
+  }
+  return applied;
+}

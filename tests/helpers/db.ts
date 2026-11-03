@@ -6,7 +6,7 @@ let shared: Promise<Db> | undefined;
 export async function testDb(): Promise<Db> {
   const db = await (shared ??= openMemoryDb());
   const tables = await db.query<{ name: string }>(
-    "SELECT relname AS name FROM pg_class WHERE relkind = 'r' AND relnamespace = 'public'::regnamespace",
+    "SELECT relname AS name FROM pg_class WHERE relkind = 'r' AND relnamespace = 'public'::regnamespace AND relname <> 'schema_migrations'",
   );
   await db.run(`TRUNCATE ${tables.map((t) => t.name).join(", ")} RESTART IDENTITY CASCADE`);
   return db;
