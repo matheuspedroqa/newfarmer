@@ -26,9 +26,9 @@
     "haveAccount": "Já tem conta? Entrar",
     "forgot": "Esqueci minha senha",
     "forgotTitle": "Recuperar senha",
-    "forgotHelp": "Informe seu e-mail e enviaremos um link para criar uma nova senha.",
+    "forgotHelp": "Informe seu username ou e-mail e enviaremos um link para criar uma nova senha.",
     "sendLink": "Enviar link",
-    "forgotSent": "Se houver uma conta com esse e-mail, enviamos um link. Ele vale por 1 hora.",
+    "forgotSent": "Se houver uma conta, enviamos um link para o e-mail dela. Ele vale por 1 hora.",
     "resetTitle": "Nova senha",
     "savePassword": "Salvar nova senha",
     "resetDone": "Senha alterada. Você já pode entrar.",
@@ -36,7 +36,14 @@
     "logout": "Sair",
     "sending": "Enviando...",
     "username": "Username",
-    "usernameHelp": "3 a 30 letras minúsculas, números, ponto, hífen ou _. É com ele que você entra."
+    "usernameHelp": "3 a 30 letras minúsculas, números, ponto, hífen ou _. É com ele que você entra.",
+    "identifier": "Username ou e-mail",
+    "forgotUsername": "Esqueci o username",
+    "forgotUsernameTitle": "Recuperar username",
+    "forgotUsernameHelp": "Informe seu e-mail e enviaremos o seu username.",
+    "sendUsername": "Enviar username",
+    "usernameReminderSent": "Se houver uma conta com esse e-mail, enviamos o seu username.",
+    "backToLoginShort": "Voltar para entrar"
   },
   "errors": {
     "required": "Preencha este campo",
@@ -109,7 +116,12 @@
     "resetIntro": "Recebemos um pedido para trocar a senha da sua conta. Clique no botão para escolher uma nova.",
     "resetButton": "Criar nova senha",
     "resetNote": "O link vale por 1 hora e só pode ser usado uma vez. Se você não pediu isso, ignore este e-mail: sua senha continua a mesma.",
-    "verifyUsername": "Seu username: {username}"
+    "verifyUsername": "Seu username: {username}",
+    "usernameSubject": "Seu username no NewFarmer",
+    "usernameTitle": "Aqui está o seu username",
+    "usernameIntro": "Seu username no NewFarmer é {username}.",
+    "usernameButton": "Entrar",
+    "usernameNote": "Se você não pediu isso, ignore este e-mail."
   },
   "devInbox": {
     "title": "Caixa de e-mail de teste",

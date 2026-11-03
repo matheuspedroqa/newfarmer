@@ -26,9 +26,9 @@
     "haveAccount": "Already have an account? Sign in",
     "forgot": "Forgot my password",
     "forgotTitle": "Recover password",
-    "forgotHelp": "Enter your e-mail and we will send you a link to create a new password.",
+    "forgotHelp": "Enter your username or e-mail and we will send you a link to create a new password.",
     "sendLink": "Send link",
-    "forgotSent": "If there is an account with that e-mail, we sent a link. It is valid for 1 hour.",
+    "forgotSent": "If there is an account, we sent a link to its e-mail. It is valid for 1 hour.",
     "resetTitle": "New password",
     "savePassword": "Save new password",
     "resetDone": "Password changed. You can sign in now.",
@@ -36,7 +36,14 @@
     "logout": "Sign out",
     "sending": "Sending...",
     "username": "Username",
-    "usernameHelp": "3 to 30 lowercase letters, numbers, dot, hyphen or _. You'll use it to sign in."
+    "usernameHelp": "3 to 30 lowercase letters, numbers, dot, hyphen or _. You'll use it to sign in.",
+    "identifier": "Username or e-mail",
+    "forgotUsername": "Forgot my username",
+    "forgotUsernameTitle": "Recover username",
+    "forgotUsernameHelp": "Enter your e-mail and we will send you your username.",
+    "sendUsername": "Send username",
+    "usernameReminderSent": "If there is an account with that e-mail, we sent your username.",
+    "backToLoginShort": "Back to sign in"
   },
   "errors": {
     "required": "Please fill in this field",
@@ -109,7 +116,12 @@
     "resetIntro": "We got a request to change your account password. Click the button to choose a new one.",
     "resetButton": "Create a new password",
     "resetNote": "The link is valid for 1 hour and works only once. If you didn't ask for this, ignore this e-mail: your password stays the same.",
-    "verifyUsername": "Your username: {username}"
+    "verifyUsername": "Your username: {username}",
+    "usernameSubject": "Your NewFarmer username",
+    "usernameTitle": "Here is your username",
+    "usernameIntro": "Your NewFarmer username is {username}.",
+    "usernameButton": "Sign in",
+    "usernameNote": "If you did not ask for this, ignore this e-mail."
   },
   "devInbox": {
     "title": "Test inbox",

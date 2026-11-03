@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { resetEmail, verifyEmail } from "@/server/email-templates";
+import { resetEmail, usernameReminderEmail, verifyEmail } from "@/server/email-templates";
 
 const link = "https://newfarmer.app/confirmar/abc123";
 
@@ -22,6 +22,15 @@ describe("modelos de e-mail", () => {
     expect(html).toContain("Hello, Bob!");
     expect(html).toContain("Create a new password");
     expect(html).toContain("1 hour");
+  });
+
+  it("lembrete de username: username em destaque, botão Entrar e valores escapados", () => {
+    const { subject, html } = usernameReminderEmail("pt", "Ana", "ana", "http://x/login");
+    expect(subject).toBe("Seu username no NewFarmer");
+    expect(html).toContain("<strong>ana</strong>");
+    expect(html).toContain("Entrar");
+    expect(usernameReminderEmail("en", "Bob", "bob", "http://x/login").subject).toBe("Your NewFarmer username");
+    expect(usernameReminderEmail("pt", "<i>", "<b>x</b>", "http://x/login").html).not.toContain("<b>x</b>");
   });
 
   it("nome com código não vira código no e-mail", () => {

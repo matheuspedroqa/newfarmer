@@ -1,6 +1,8 @@
 import "server-only";
 import type { Locale } from "@/i18n/locales";
+import { normalizeUsername } from "@/lib/username";
 import { setPassword } from "./accounts";
+import { logActivity } from "./activity-log";
 import type { Db } from "./db";
 import { resetEmail } from "./email-templates";
 import type { Mailer } from "./mailer";
@@ -12,11 +14,17 @@ export const RESET_TTL_MS = 60 * 60_000;
 export async function requestPasswordReset(
   db: Db,
   mailer: Mailer,
-  input: { email: string; baseUrl: string; locale: Locale },
+  input: { identifier: string; baseUrl: string; locale: Locale; ip?: string },
   now = Date.now(),
 ): Promise<void> {
-  const email = input.email.trim().toLowerCase();
-  const [user] = await db.query<{ id: number; name: string }>("SELECT id, name FROM users WHERE email = $1", [email]);
+  const raw = input.identifier.trim();
+  const byEmail = raw.includes("@");
+  const [user] = await db.query<{ id: number; name: string; email: string; username: string }>(
+    byEmail
+      ? "SELECT id, name, email, username FROM users WHERE email = $1"
+      : "SELECT id, name, email, username FROM users WHERE username = $1",
+    [byEmail ? raw.toLowerCase() : normalizeUsername(raw)],
+  );
   if (!user) return;
 
   const token = newToken();
@@ -26,7 +34,8 @@ export async function requestPasswordReset(
     now + RESET_TTL_MS,
   ]);
 
-  await mailer.send({ to: email, ...resetEmail(input.locale, user.name, `${input.baseUrl}/recuperar/${token}`) });
+  await mailer.send({ to: user.email, ...resetEmail(input.locale, user.name, `${input.baseUrl}/recuperar/${token}`) });
+  await logActivity(db, { userId: user.id, action: "auth.passwordReset", target: user.username, ip: input.ip ?? "" });
 }
 
 export async function resetPassword(

@@ -37,7 +37,9 @@ export type SignupInput = z.infer<typeof signupSchema>;
 
 export const loginSchema = z.object({ username: z.string().trim().min(1, "required"), password: z.string().min(1, "required") });
 
-export const forgotSchema = z.object({ email });
+export const forgotSchema = z.object({ identifier: z.string().trim().min(1, "required").max(254, "tooLong") });
+
+export const usernameReminderSchema = z.object({ email });
 
 export const resetSchema = z
   .object({ token: z.string().min(1), password: newPassword, confirmPassword: z.string() })

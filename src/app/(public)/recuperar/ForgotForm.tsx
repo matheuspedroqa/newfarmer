@@ -21,11 +21,11 @@ export function ForgotForm() {
         <form action={action} noValidate className="space-y-4">
           <p className="text-sm text-muted">{t("forgotHelp")}</p>
           <div>
-            <label htmlFor="email" className="mb-1 block text-sm font-semibold">{t("email")}</label>
-            <input id="email" name="email" type="email" autoComplete="email" defaultValue={state.values?.email}
-              key={state.values?.email} aria-describedby="email-error"
+            <label htmlFor="identifier" className="mb-1 block text-sm font-semibold">{t("identifier")}</label>
+            <input id="identifier" name="identifier" type="text" autoComplete="username" defaultValue={state.values?.identifier}
+              key={state.values?.identifier} aria-describedby="identifier-error"
               className="w-full rounded-xl border border-border bg-surface px-4 py-3" />
-            <FieldError id="email-error" code={state.fieldErrors?.email} />
+            <FieldError id="identifier-error" code={state.fieldErrors?.identifier} />
           </div>
           {state.formError && (
             <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{tErrors(state.formError)}</p>

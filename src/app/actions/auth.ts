@@ -8,6 +8,7 @@ import {
   loginSchema,
   parseCityField,
   resetSchema,
+  usernameReminderSchema,
   signupSchema,
   toFieldErrors,
 } from "@/lib/validation";
@@ -18,6 +19,7 @@ import { sendVerificationEmail } from "@/server/email-verification";
 import { getMailer } from "@/server/mailer";
 import { requestPasswordReset, resetPassword } from "@/server/password-reset";
 import { limitByIp } from "@/server/rate-limit";
+import { sendUsernameReminder } from "@/server/username-reminder";
 import { clientIp } from "@/server/request-context";
 import { setPreferences } from "@/server/preferences";
 import { refreshEstimatedClimate, registerUser } from "@/server/registration";
@@ -86,22 +88,45 @@ export async function logoutAction(): Promise<void> {
 }
 
 export async function forgotAction(_prev: FormState, formData: FormData): Promise<FormState> {
-  const parsed = forgotSchema.safeParse({ email: formData.get("email") });
-  if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values: typed(formData, "email") };
+  const values = typed(formData, "identifier");
+  const parsed = forgotSchema.safeParse({ identifier: formData.get("identifier") });
+  if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
 
   const db = await getDb();
-  if (!(await limitByIp(db, "recovery", await clientIp())).ok) {
-    return { formError: "rateLimited", values: typed(formData, "email") };
-  }
+  const ip = await clientIp();
+  if (!(await limitByIp(db, "recovery", ip)).ok) return { formError: "rateLimited", values };
   try {
     await requestPasswordReset(db, getMailer(db), {
-      email: parsed.data.email,
+      identifier: parsed.data.identifier,
       baseUrl: baseUrl(),
       locale: resolveLocale(await getLocale()),
+      ip,
     });
   } catch (error) {
     console.error("Falha ao enviar e-mail de recuperação", error);
-    return { formError: "generic", values: typed(formData, "email") };
+    return { formError: "generic", values };
+  }
+  return { done: true };
+}
+
+export async function usernameReminderAction(_prev: FormState, formData: FormData): Promise<FormState> {
+  const values = typed(formData, "email");
+  const parsed = usernameReminderSchema.safeParse({ email: formData.get("email") });
+  if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
+
+  const db = await getDb();
+  const ip = await clientIp();
+  if (!(await limitByIp(db, "recovery", ip)).ok) return { formError: "rateLimited", values };
+  try {
+    await sendUsernameReminder(db, getMailer(db), {
+      email: parsed.data.email,
+      baseUrl: baseUrl(),
+      locale: resolveLocale(await getLocale()),
+      ip,
+    });
+  } catch (error) {
+    console.error("Falha ao enviar lembrete de username", error);
+    return { formError: "generic", values };
   }
   return { done: true };
 }

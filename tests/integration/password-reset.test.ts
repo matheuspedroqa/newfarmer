@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { listActivity } from "@/server/activity-log";
 import { verifyCredentials } from "@/server/accounts";
 import { createDevInboxMailer, listDevEmails, type MailMessage, type Mailer } from "@/server/mailer";
 import { RESET_TTL_MS, requestPasswordReset, resetPassword } from "@/server/password-reset";
@@ -25,7 +26,7 @@ describe("requestPasswordReset", () => {
     const db = await testDb();
     await makeUser(db);
     const { sent, mailer } = captureMailer();
-    await requestPasswordReset(db, mailer, { ...base, email: "ANA@exemplo.com" });
+    await requestPasswordReset(db, mailer, { ...base, identifier: "ANA@exemplo.com" });
     expect(sent).toHaveLength(1);
     expect(sent[0].to).toBe("ana@exemplo.com");
     expect(sent[0].subject).toBe("Recupere sua senha do NewFarmer");
@@ -36,14 +37,14 @@ describe("requestPasswordReset", () => {
     const db = await testDb();
     await makeUser(db);
     const { sent, mailer } = captureMailer();
-    await requestPasswordReset(db, mailer, { ...base, email: "ana@exemplo.com", locale: "en" });
+    await requestPasswordReset(db, mailer, { ...base, identifier: "ana@exemplo.com", locale: "en" });
     expect(sent[0].subject).toBe("Recover your NewFarmer password");
   });
 
   it("não envia nada nem dá erro para e-mail sem conta", async () => {
     const db = await testDb();
     const { sent, mailer } = captureMailer();
-    await expect(requestPasswordReset(db, mailer, { ...base, email: "nao@existe.com" })).resolves.toBeUndefined();
+    await expect(requestPasswordReset(db, mailer, { ...base, identifier: "nao@existe.com" })).resolves.toBeUndefined();
     expect(sent).toHaveLength(0);
   });
 
@@ -51,7 +52,7 @@ describe("requestPasswordReset", () => {
     const db = await testDb();
     await makeUser(db, { name: "<script>alert(1)</script>" });
     const { sent, mailer } = captureMailer();
-    await requestPasswordReset(db, mailer, { ...base, email: "ana@exemplo.com" });
+    await requestPasswordReset(db, mailer, { ...base, identifier: "ana@exemplo.com" });
     expect(sent[0].html).not.toContain("<script>");
     expect(sent[0].html).toContain("&lt;script&gt;");
   });
@@ -62,7 +63,7 @@ describe("resetPassword", () => {
     const db = await testDb();
     const userId = await makeUser(db);
     const { sent, mailer } = captureMailer();
-    await requestPasswordReset(db, mailer, { ...base, email: "ana@exemplo.com" }, 0);
+    await requestPasswordReset(db, mailer, { ...base, identifier: "ana@exemplo.com" }, 0);
     return { db, userId, token: tokenFrom(sent[0]) };
   }
 
@@ -104,5 +105,33 @@ describe("caixa de e-mail de teste", () => {
     await mailer.send({ to: "a@x.com", subject: "primeiro", html: "<p>1</p>" });
     await mailer.send({ to: "b@x.com", subject: "segundo", html: "<p>2</p>" });
     expect((await listDevEmails(db)).map((e) => e.subject)).toEqual(["segundo", "primeiro"]);
+  });
+});
+
+describe("requestPasswordReset por username ou e-mail", () => {
+  it.each(["ana", "ANA", "ana@exemplo.com"])("recuperar a senha com %j envia o link para o e-mail da conta", async (identifier) => {
+    const db = await testDb();
+    await makeUser(db, { username: "ana", email: "ana@exemplo.com" });
+    const { sent, mailer } = captureMailer();
+    await requestPasswordReset(db, mailer, { ...base, identifier });
+    expect(sent.map((m) => m.to)).toEqual(["ana@exemplo.com"]);
+  });
+
+  it("username sem conta não envia nada", async () => {
+    const db = await testDb();
+    const { sent, mailer } = captureMailer();
+    await requestPasswordReset(db, mailer, { ...base, identifier: "ninguem" });
+    expect(sent).toHaveLength(0);
+  });
+
+  it("registra a atividade só quando o e-mail é enviado", async () => {
+    const db = await testDb();
+    const id = await makeUser(db, { username: "ana", email: "ana@exemplo.com" });
+    const { mailer } = captureMailer();
+    await requestPasswordReset(db, mailer, { ...base, identifier: "ninguem", ip: "1.2.3.4" });
+    await requestPasswordReset(db, mailer, { ...base, identifier: "ana", ip: "1.2.3.4" });
+    const log = await listActivity(db, { action: "auth.passwordReset" });
+    expect(log).toHaveLength(1);
+    expect(log[0]).toMatchObject({ userId: id, target: "ana", ip: "1.2.3.4" });
   });
 });

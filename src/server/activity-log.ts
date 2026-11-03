@@ -9,6 +9,7 @@ export type ActivityAction =
   | "auth.signup"
   | "auth.passwordChanged"
   | "auth.passwordReset"
+  | "auth.usernameReminder"
   | "auth.emailConfirmed"
   | "farm.updated"
   | "diary.created"

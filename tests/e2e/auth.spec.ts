@@ -139,9 +139,9 @@ test("recuperar a senha pela caixa de e-mail de teste", async ({ page, context }
   await clearSession(context);
 
   await page.goto("/recuperar");
-  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("Username ou e-mail").fill(username);
   await page.getByRole("button", { name: "Enviar link" }).click();
-  await expect(page.getByText("Se houver uma conta com esse e-mail")).toBeVisible();
+  await expect(page.getByText("Se houver uma conta, enviamos um link")).toBeVisible();
 
   await page.goto("/dev/inbox");
   await page.locator("article", { hasText: "Recupere sua senha" }).filter({ hasText: email }).getByRole("link", { name: "Criar nova senha" }).click();
@@ -155,4 +155,38 @@ test("recuperar a senha pela caixa de e-mail de teste", async ({ page, context }
   await page.getByLabel("Senha").fill("nova-senha-1");
   await page.getByRole("button", { name: "Entrar" }).click();
   await expect(page).toHaveURL(/\/painel$/);
+});
+
+test("recuperar a senha digitando o e-mail", async ({ page, context }) => {
+  const email = uniqueEmail();
+  await signup(page, email);
+  await clearSession(context);
+
+  await page.goto("/recuperar");
+  await page.getByLabel("Username ou e-mail").fill(email);
+  await page.getByRole("button", { name: "Enviar link" }).click();
+  await expect(page.getByText("Se houver uma conta, enviamos um link")).toBeVisible();
+
+  await page.goto("/dev/inbox");
+  await expect(page.locator("article", { hasText: "Recupere sua senha" }).filter({ hasText: email })).toBeVisible();
+});
+
+test("esqueci o username: a mesma mensagem com e sem conta, e o e-mail chega só para quem tem conta", async ({ page, context }) => {
+  const email = uniqueEmail();
+  const { username } = await signup(page, email);
+  await clearSession(context);
+
+  const unknown = uniqueEmail();
+  for (const typed of [email, unknown]) {
+    await page.goto("/login");
+    await page.getByRole("link", { name: "Esqueci o username" }).click();
+    await page.getByLabel("E-mail").fill(typed);
+    await page.getByRole("button", { name: "Enviar username" }).click();
+    await expect(page.getByText("Se houver uma conta com esse e-mail, enviamos o seu username.")).toBeVisible();
+  }
+
+  await page.goto("/dev/inbox");
+  const article = page.locator("article", { hasText: "Seu username no NewFarmer" }).filter({ hasText: email });
+  await expect(article).toContainText(username);
+  await expect(page.locator("article", { hasText: unknown })).toHaveCount(0);
 });
