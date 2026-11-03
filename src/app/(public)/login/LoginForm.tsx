@@ -19,10 +19,11 @@ export function LoginForm() {
     <AuthCard title={t("loginTitle")} subtitle={t("loginSubtitle")}>
       <form action={action} noValidate className="space-y-4">
         <div>
-          <label htmlFor="email" className="mb-1 block text-sm font-semibold">{t("email")}</label>
-          <input id="email" name="email" type="email" autoComplete="email" aria-describedby="email-error"
-            defaultValue={state.values?.email} key={state.values?.email} className={inputClass} />
-          <FieldError id="email-error" code={state.fieldErrors?.email} />
+          <label htmlFor="username" className="mb-1 block text-sm font-semibold">{t("username")}</label>
+          <input id="username" name="username" autoComplete="username" autoCapitalize="none" spellCheck={false}
+            aria-describedby="username-error" defaultValue={state.values?.username} key={state.values?.username}
+            className={inputClass} />
+          <FieldError id="username-error" code={state.fieldErrors?.username} />
         </div>
         <div>
           <label htmlFor="password" className="mb-1 block text-sm font-semibold">{t("password")}</label>

@@ -49,7 +49,7 @@
     "cityNotFound": "Não encontramos essa cidade. Tente com o nome do estado ou país",
     "citySearchFailed": "Não foi possível buscar cidades agora. Tente de novo.",
     "emailTaken": "Este e-mail já tem uma conta. Quer entrar?",
-    "invalidCredentials": "E-mail ou senha incorretos",
+    "invalidCredentials": "Username ou senha incorretos",
     "locked": "Muitas tentativas. Tente de novo em 15 minutos.",
     "rateLimited": "Muitas tentativas. Tente de novo em alguns minutos.",
     "linkExpired": "Este link expirou. Peça um novo",
@@ -61,7 +61,8 @@
     "dateInvalid": "Escolha uma data válida",
     "dateInFuture": "A data não pode ser no futuro",
     "usernameInvalid": "Use 3 a 30 letras minúsculas, números, ponto, hífen ou _ (não só números)",
-    "usernameReserved": "Este username é reservado. Escolha outro"
+    "usernameReserved": "Este username é reservado. Escolha outro",
+    "usernameTaken": "Este username já está em uso"
   },
   "climate": {
     "tropical": "Tropical",
@@ -107,7 +108,8 @@
     "resetTitle": "Vamos criar uma nova senha",
     "resetIntro": "Recebemos um pedido para trocar a senha da sua conta. Clique no botão para escolher uma nova.",
     "resetButton": "Criar nova senha",
-    "resetNote": "O link vale por 1 hora e só pode ser usado uma vez. Se você não pediu isso, ignore este e-mail: sua senha continua a mesma."
+    "resetNote": "O link vale por 1 hora e só pode ser usado uma vez. Se você não pediu isso, ignore este e-mail: sua senha continua a mesma.",
+    "verifyUsername": "Seu username: {username}"
   },
   "devInbox": {
     "title": "Caixa de e-mail de teste",

@@ -9,15 +9,15 @@ describe("changePassword", () => {
     const db = await testDb();
     const id = await makeUser(db);
     expect(await changePassword(db, id, DEFAULT_PASSWORD, "nova-senha-1")).toBe("ok");
-    expect((await verifyCredentials(db, "ana@exemplo.com", "nova-senha-1")).ok).toBe(true);
-    expect((await verifyCredentials(db, "ana@exemplo.com", DEFAULT_PASSWORD)).ok).toBe(false);
+    expect((await verifyCredentials(db, "ana", "nova-senha-1")).ok).toBe(true);
+    expect((await verifyCredentials(db, "ana", DEFAULT_PASSWORD)).ok).toBe(false);
   });
 
   it("recusa quando a senha atual está errada e não muda nada", async () => {
     const db = await testDb();
     const id = await makeUser(db);
     expect(await changePassword(db, id, "errada123", "nova-senha-1")).toBe("wrongPassword");
-    expect((await verifyCredentials(db, "ana@exemplo.com", DEFAULT_PASSWORD)).ok).toBe(true);
+    expect((await verifyCredentials(db, "ana", DEFAULT_PASSWORD)).ok).toBe(true);
   });
 
   it("encerra as outras sessões e mantém a atual", async () => {

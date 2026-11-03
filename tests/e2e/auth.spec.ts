@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { PASSWORD, clearSession, signup, uniqueEmail } from "./helpers";
+import { PASSWORD, clearSession, signup, uniqueEmail, uniqueUsername } from "./helpers";
 
 test("cadastro passa pela etapa 2 e chega ao painel com o tipo de clima da cidade", async ({ page }) => {
   await signup(page, uniqueEmail());
@@ -34,6 +34,7 @@ test("e-mail repetido avisa que já existe conta", async ({ page, context }) => 
   await page.goto("/cadastro");
   await page.getByLabel("Nome").fill("Ana");
   await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("Username").fill(uniqueUsername());
   await page.getByLabel("Senha", { exact: true }).fill(PASSWORD);
   await page.getByLabel("Confirmar senha").fill(PASSWORD);
   await page.getByTestId("city-input").fill("Curitiba");
@@ -42,18 +43,56 @@ test("e-mail repetido avisa que já existe conta", async ({ page, context }) => 
   await expect(page.getByText("Este e-mail já tem uma conta. Quer entrar?")).toBeVisible();
 });
 
-test("sair, errar a senha e entrar de novo", async ({ page }) => {
+test("username repetido avisa que já está em uso e mantém o que foi digitado", async ({ page, context }) => {
+  const { username } = await signup(page, uniqueEmail());
+  await clearSession(context);
+  await page.goto("/cadastro");
   const email = uniqueEmail();
-  await signup(page, email);
+  await page.getByLabel("Nome").fill("Ana");
+  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("Username").fill(username);
+  await page.getByLabel("Senha", { exact: true }).fill(PASSWORD);
+  await page.getByLabel("Confirmar senha").fill(PASSWORD);
+  await page.getByTestId("city-input").fill("Curitiba");
+  await page.getByTestId("city-option").first().click();
+  await page.getByRole("button", { name: "Criar conta" }).click();
+  await expect(page.getByText("Este username já está em uso")).toBeVisible();
+  await expect(page.getByLabel("E-mail")).toHaveValue(email);
+  await expect(page.getByLabel("Username")).toHaveValue(username);
+});
+
+test("cadastro pede e-mail e username; login pede só username e senha", async ({ page, context }) => {
+  const { username } = await signup(page, uniqueEmail());
+  await clearSession(context);
+  await page.goto("/login");
+  await expect(page.getByLabel("E-mail")).toHaveCount(0);
+  await page.getByLabel("Username").fill(username.toUpperCase());
+  await page.getByLabel("Senha").fill(PASSWORD);
+  await page.getByRole("button", { name: "Entrar" }).click();
+  await expect(page).toHaveURL(/\/painel$/);
+});
+
+test("username inválido e reservado mostram o erro no campo", async ({ page }) => {
+  await page.goto("/cadastro");
+  await page.getByLabel("Username").fill("ab");
+  await page.getByRole("button", { name: "Criar conta" }).click();
+  await expect(page.getByText("Use 3 a 30 letras minúsculas")).toBeVisible();
+  await page.getByLabel("Username").fill("Admin");
+  await page.getByRole("button", { name: "Criar conta" }).click();
+  await expect(page.getByText("Este username é reservado. Escolha outro")).toBeVisible();
+});
+
+test("sair, errar a senha e entrar de novo", async ({ page }) => {
+  const { username } = await signup(page, uniqueEmail());
   await page.getByRole("button", { name: "Sair" }).click();
   await expect(page).toHaveURL(/\/login$/);
 
-  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha").fill("errada123");
   await page.getByRole("button", { name: "Entrar" }).click();
-  await expect(page.getByText("E-mail ou senha incorretos")).toBeVisible();
+  await expect(page.getByText("Username ou senha incorretos")).toBeVisible();
 
-  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha").fill(PASSWORD);
   await page.getByRole("button", { name: "Entrar" }).click();
   await expect(page).toHaveURL(/\/painel$/);
@@ -79,8 +118,7 @@ test("idioma e modo noturno mudam e continuam depois de recarregar", async ({ pa
 });
 
 test("preferências voltam ao entrar de novo", async ({ page, context }) => {
-  const email = uniqueEmail();
-  await signup(page, email);
+  const { username } = await signup(page, uniqueEmail());
   await page.getByRole("button", { name: "EN", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Hello, Ana!" })).toBeVisible();
   await page.getByTestId("theme-toggle").click();
@@ -88,7 +126,7 @@ test("preferências voltam ao entrar de novo", async ({ page, context }) => {
 
   await clearSession(context);
   await page.goto("/login");
-  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha").fill(PASSWORD);
   await page.getByRole("button", { name: "Entrar" }).click();
   await expect(page.getByRole("heading", { name: "Hello, Ana!" })).toBeVisible();
@@ -97,7 +135,7 @@ test("preferências voltam ao entrar de novo", async ({ page, context }) => {
 
 test("recuperar a senha pela caixa de e-mail de teste", async ({ page, context }) => {
   const email = uniqueEmail();
-  await signup(page, email);
+  const { username } = await signup(page, email);
   await clearSession(context);
 
   await page.goto("/recuperar");
@@ -113,7 +151,7 @@ test("recuperar a senha pela caixa de e-mail de teste", async ({ page, context }
   await expect(page.getByText("Senha alterada")).toBeVisible();
 
   await page.goto("/login");
-  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha").fill("nova-senha-1");
   await page.getByRole("button", { name: "Entrar" }).click();
   await expect(page).toHaveURL(/\/painel$/);

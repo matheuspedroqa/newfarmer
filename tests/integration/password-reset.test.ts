@@ -69,8 +69,8 @@ describe("resetPassword", () => {
   it("troca a senha com um link válido", async () => {
     const { db, token } = await setup();
     expect(await resetPassword(db, { token, password: "nova-senha-1" }, 1000)).toBe("ok");
-    expect((await verifyCredentials(db, "ana@exemplo.com", "nova-senha-1")).ok).toBe(true);
-    expect((await verifyCredentials(db, "ana@exemplo.com", DEFAULT_PASSWORD)).ok).toBe(false);
+    expect((await verifyCredentials(db, "ana", "nova-senha-1")).ok).toBe(true);
+    expect((await verifyCredentials(db, "ana", DEFAULT_PASSWORD)).ok).toBe(false);
   });
 
   it("o link só funciona uma vez", async () => {

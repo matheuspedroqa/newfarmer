@@ -53,6 +53,17 @@ describe("registerUser", () => {
   });
 });
 
+it("username repetido (outro e-mail) devolve usernameTaken", async () => {
+  const db = await testDb();
+  const provider = createFakeWeatherProvider();
+  const [campinas] = await provider.searchCities("Campinas", "pt");
+  await registerUser(db, provider, input(campinas));
+  expect(await registerUser(db, provider, { ...input(campinas), email: "outra@exemplo.com" })).toEqual({
+    ok: false,
+    error: "usernameTaken",
+  });
+});
+
 describe("refreshEstimatedClimate", () => {
   it("recalcula quando o clima estava estimado e o serviço voltou", async () => {
     const db = await testDb();

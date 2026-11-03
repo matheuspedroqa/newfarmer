@@ -61,7 +61,12 @@ describe("signupSchema", () => {
 
 describe("loginSchema", () => {
   it("senha vazia → required", () => {
-    expect(errorsOf(loginSchema, { email: "ana@exemplo.com", password: "" }).password).toBe("required");
+    expect(errorsOf(loginSchema, { username: "ana", password: "" }).password).toBe("required");
+  });
+
+  it("pede username, não e-mail", () => {
+    expect(loginSchema.parse({ username: "ana", password: "x" })).toEqual({ username: "ana", password: "x" });
+    expect(errorsOf(loginSchema, { username: "", password: "x" }).username).toBe("required");
   });
 });
 

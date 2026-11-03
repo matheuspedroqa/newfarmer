@@ -16,8 +16,8 @@ export async function sendVerificationEmail(
   input: { userId: number; baseUrl: string; locale: Locale },
   now = Date.now(),
 ): Promise<SendVerificationResult> {
-  const [user] = await db.query<{ name: string; email: string; email_verified_at: number | null }>(
-    "SELECT name, email, email_verified_at FROM users WHERE id = $1",
+  const [user] = await db.query<{ name: string; email: string; username: string; email_verified_at: number | null }>(
+    "SELECT name, email, username, email_verified_at FROM users WHERE id = $1",
     [input.userId],
   );
   if (!user || user.email_verified_at !== null) return "alreadyVerified";
@@ -34,7 +34,7 @@ export async function sendVerificationEmail(
     "INSERT INTO email_verification_tokens (user_id, token_hash, expires_at, created_at) VALUES ($1, $2, $3, $4)",
     [input.userId, hashToken(token), now + VERIFY_TTL_MS, now],
   );
-  await mailer.send({ to: user.email, ...verifyEmail(input.locale, user.name, `${input.baseUrl}/confirmar/${token}`) });
+  await mailer.send({ to: user.email, ...verifyEmail(input.locale, user.name, user.username, `${input.baseUrl}/confirmar/${token}`) });
   return "sent";
 }
 

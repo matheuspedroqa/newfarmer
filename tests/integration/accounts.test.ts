@@ -48,37 +48,53 @@ describe("verifyCredentials", () => {
   it("senha certa entra", async () => {
     const db = await testDb();
     const id = await makeUser(db);
-    expect(await verifyCredentials(db, "Ana@Exemplo.com", DEFAULT_PASSWORD)).toEqual({ ok: true, userId: id });
+    expect(await verifyCredentials(db, "Ana", DEFAULT_PASSWORD)).toEqual({ ok: true, userId: id });
   });
 
-  it("senha errada ou e-mail desconhecido dão o mesmo resultado", async () => {
+  it("senha errada ou username desconhecido dão o mesmo resultado", async () => {
     const db = await testDb();
     await makeUser(db);
-    expect(await verifyCredentials(db, "ana@exemplo.com", "errada123")).toEqual({ ok: false, reason: "invalid" });
-    expect(await verifyCredentials(db, "nao@existe.com", DEFAULT_PASSWORD)).toEqual({ ok: false, reason: "invalid" });
+    expect(await verifyCredentials(db, "ana", "errada123")).toEqual({ ok: false, reason: "invalid" });
+    expect(await verifyCredentials(db, "naoexiste", DEFAULT_PASSWORD)).toEqual({ ok: false, reason: "invalid" });
+  });
+
+  it("entra com username (qualquer caixa) e senha; e-mail não serve mais para entrar", async () => {
+    const db = await testDb();
+    await makeUser(db, { username: "ana", email: "ana@exemplo.com" });
+    expect((await verifyCredentials(db, "ANA", DEFAULT_PASSWORD)).ok).toBe(true);
+    expect((await verifyCredentials(db, "ana@exemplo.com", DEFAULT_PASSWORD)).ok).toBe(false);
+  });
+
+  it("5 erros no mesmo username bloqueiam por 15 minutos, mesmo com a senha certa", async () => {
+    const db = await testDb();
+    await makeUser(db, { username: "ana" });
+    for (let i = 0; i < 5; i++) await verifyCredentials(db, "ana", "errada", 1000 + i);
+    expect(await verifyCredentials(db, "ana", DEFAULT_PASSWORD, 2000)).toEqual({ ok: false, reason: "locked" });
+    const [row] = await db.query<{ identifier: string }>("SELECT identifier FROM login_attempts LIMIT 1");
+    expect(row.identifier).toBe("ana");
   });
 
   it("5 erros seguidos bloqueiam por 15 minutos, mesmo com a senha certa", async () => {
     const db = await testDb();
     await makeUser(db);
     const t0 = 1_000_000;
-    for (let i = 0; i < 5; i++) await verifyCredentials(db, "ana@exemplo.com", "errada", t0 + i);
-    expect(await verifyCredentials(db, "ana@exemplo.com", DEFAULT_PASSWORD, t0 + 10)).toEqual({
+    for (let i = 0; i < 5; i++) await verifyCredentials(db, "ana", "errada", t0 + i);
+    expect(await verifyCredentials(db, "ana", DEFAULT_PASSWORD, t0 + 10)).toEqual({
       ok: false,
       reason: "locked",
     });
     const later = t0 + LOCK_WINDOW_MS + 10;
-    expect((await verifyCredentials(db, "ana@exemplo.com", DEFAULT_PASSWORD, later)).ok).toBe(true);
+    expect((await verifyCredentials(db, "ana", DEFAULT_PASSWORD, later)).ok).toBe(true);
   });
 
   it("um login certo zera a contagem de erros", async () => {
     const db = await testDb();
     await makeUser(db);
     const t0 = 1_000_000;
-    for (let i = 0; i < 4; i++) await verifyCredentials(db, "ana@exemplo.com", "errada", t0 + i);
-    await verifyCredentials(db, "ana@exemplo.com", DEFAULT_PASSWORD, t0 + 5);
-    for (let i = 6; i < 10; i++) await verifyCredentials(db, "ana@exemplo.com", "errada", t0 + i);
-    expect((await verifyCredentials(db, "ana@exemplo.com", DEFAULT_PASSWORD, t0 + 11)).ok).toBe(true);
+    for (let i = 0; i < 4; i++) await verifyCredentials(db, "ana", "errada", t0 + i);
+    await verifyCredentials(db, "ana", DEFAULT_PASSWORD, t0 + 5);
+    for (let i = 6; i < 10; i++) await verifyCredentials(db, "ana", "errada", t0 + i);
+    expect((await verifyCredentials(db, "ana", DEFAULT_PASSWORD, t0 + 11)).ok).toBe(true);
   });
 });
 
@@ -87,7 +103,7 @@ describe("setPassword", () => {
     const db = await testDb();
     const id = await makeUser(db);
     await setPassword(db, id, "nova-senha-1");
-    expect((await verifyCredentials(db, "ana@exemplo.com", "nova-senha-1")).ok).toBe(true);
-    expect((await verifyCredentials(db, "ana@exemplo.com", DEFAULT_PASSWORD)).ok).toBe(false);
+    expect((await verifyCredentials(db, "ana", "nova-senha-1")).ok).toBe(true);
+    expect((await verifyCredentials(db, "ana", DEFAULT_PASSWORD)).ok).toBe(false);
   });
 });

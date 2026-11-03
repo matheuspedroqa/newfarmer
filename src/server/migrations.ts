@@ -167,6 +167,16 @@ ALTER TABLE users ALTER COLUMN username SET NOT NULL;
 CREATE UNIQUE INDEX users_username_unique ON users (username);
 `,
   },
+  {
+    id: 6,
+    name: "login_attempts_identifier",
+    // O login agora é por username: a coluna guarda o que foi digitado, não mais só e-mail.
+    sql: `
+ALTER TABLE login_attempts RENAME COLUMN email TO identifier;
+DROP INDEX IF EXISTS idx_login_attempts_email;
+CREATE INDEX idx_login_attempts_identifier ON login_attempts (identifier, attempted_at);
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

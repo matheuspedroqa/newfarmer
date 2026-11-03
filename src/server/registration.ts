@@ -1,6 +1,6 @@
 import "server-only";
 import type { CityChoice, SignupInput } from "@/lib/validation";
-import { EmailTakenError, createUser, getUserById } from "./accounts";
+import { EmailTakenError, UsernameTakenError, createUser, getUserById } from "./accounts";
 import {
   classifyClimate,
   estimateZoneByLatitude,
@@ -24,7 +24,7 @@ export async function resolveClimate(
   }
 }
 
-export type RegisterResult = { ok: true; userId: number } | { ok: false; error: "emailTaken" };
+export type RegisterResult = { ok: true; userId: number } | { ok: false; error: "emailTaken" | "usernameTaken" };
 
 export async function registerUser(db: Db, provider: WeatherProvider, input: SignupInput): Promise<RegisterResult> {
   const climate = await resolveClimate(provider, input.city.latitude, input.city.longitude);
@@ -33,6 +33,7 @@ export async function registerUser(db: Db, provider: WeatherProvider, input: Sig
     return { ok: true, userId };
   } catch (error) {
     if (error instanceof EmailTakenError) return { ok: false, error: "emailTaken" };
+    if (error instanceof UsernameTakenError) return { ok: false, error: "usernameTaken" };
     throw error;
   }
 }

@@ -41,8 +41,7 @@ test("Perfil mostra as informações da pessoa", async ({ page }) => {
 });
 
 test("Perfil troca a senha (e recusa senha atual errada)", async ({ page, context }) => {
-  const email = uniqueEmail();
-  await signup(page, email);
+  const { username } = await signup(page, uniqueEmail());
   await page.goto("/perfil");
 
   await page.getByLabel("Senha atual").fill("errada123");
@@ -59,15 +58,14 @@ test("Perfil troca a senha (e recusa senha atual errada)", async ({ page, contex
 
   await clearSession(context);
   await page.goto("/login");
-  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha").fill("nova-senha-1");
   await page.getByRole("button", { name: "Entrar" }).click();
   await expect(page).toHaveURL(/\/painel$/);
 });
 
 test("Perfil troca o idioma e a escolha fica salva na conta", async ({ page, context }) => {
-  const email = uniqueEmail();
-  await signup(page, email);
+  const { username } = await signup(page, uniqueEmail());
   await page.goto("/perfil");
   await page.getByLabel("English").check();
   await page.getByRole("button", { name: "Salvar idioma" }).click();
@@ -75,7 +73,7 @@ test("Perfil troca o idioma e a escolha fica salva na conta", async ({ page, con
 
   await clearSession(context); // cookie volta para português...
   await page.goto("/login");
-  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha").fill(PASSWORD);
   await page.getByRole("button", { name: "Entrar" }).click();
   // ...mas ao entrar vale o idioma salvo na conta

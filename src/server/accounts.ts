@@ -8,7 +8,7 @@ import type { Db } from "./db";
 import { hashToken } from "./tokens";
 
 const BCRYPT_COST = process.env.NODE_ENV === "test" ? 4 : 12;
-// Compared against when the e-mail does not exist, so both paths take the same time.
+// Compared against when the username does not exist, so both paths take the same time.
 const DUMMY_HASH = bcrypt.hashSync("dummy-password-for-timing", BCRYPT_COST);
 
 export const MAX_FAILED_LOGINS = 5;
@@ -127,21 +127,21 @@ export type LoginResult = { ok: true; userId: number } | { ok: false; reason: "i
 
 export async function verifyCredentials(
   db: Db,
-  email: string,
+  username: string,
   password: string,
   now = Date.now(),
 ): Promise<LoginResult> {
-  const normalized = email.trim().toLowerCase();
+  const normalized = normalizeUsername(username);
   if (await isLocked(db, normalized, now)) return { ok: false, reason: "locked" };
 
   const [row] = await db.query<{ id: number; password_hash: string }>(
-    "SELECT id, password_hash FROM users WHERE email = $1",
+    "SELECT id, password_hash FROM users WHERE username = $1",
     [normalized],
   );
   const matches = await bcrypt.compare(password, row?.password_hash ?? DUMMY_HASH);
   const ok = Boolean(row) && matches;
 
-  await db.run("INSERT INTO login_attempts (email, attempted_at, success) VALUES ($1, $2, $3)", [
+  await db.run("INSERT INTO login_attempts (identifier, attempted_at, success) VALUES ($1, $2, $3)", [
     normalized,
     now,
     ok ? 1 : 0,
@@ -149,15 +149,15 @@ export async function verifyCredentials(
   return ok ? { ok: true, userId: row!.id } : { ok: false, reason: "invalid" };
 }
 
-async function isLocked(db: Db, email: string, now: number): Promise<boolean> {
+async function isLocked(db: Db, identifier: string, now: number): Promise<boolean> {
   const [lastSuccess] = await db.query<{ t: number | null }>(
-    "SELECT MAX(attempted_at) AS t FROM login_attempts WHERE email = $1 AND success = 1",
-    [email],
+    "SELECT MAX(attempted_at) AS t FROM login_attempts WHERE identifier = $1 AND success = 1",
+    [identifier],
   );
   const since = Math.max(now - LOCK_WINDOW_MS, lastSuccess.t ?? 0);
   const [{ n }] = await db.query<{ n: number }>(
-    "SELECT COUNT(*)::int AS n FROM login_attempts WHERE email = $1 AND success = 0 AND attempted_at > $2",
-    [email, since],
+    "SELECT COUNT(*)::int AS n FROM login_attempts WHERE identifier = $1 AND success = 0 AND attempted_at > $2",
+    [identifier, since],
   );
   return n >= MAX_FAILED_LOGINS;
 }

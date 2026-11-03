@@ -22,6 +22,7 @@ export function escapeHtml(text: string): string {
 interface EmailContent {
   locale: Locale;
   name: string;
+  username?: string;
   title: string;
   intro: string;
   button: string;
@@ -29,7 +30,7 @@ interface EmailContent {
   note: string;
 }
 
-function renderEmail({ locale, name, title, intro, button, link, note }: EmailContent): string {
+function renderEmail({ locale, name, username, title, intro, button, link, note }: EmailContent): string {
   const t = TEXTS[locale];
   const href = escapeHtml(link);
   return `<!doctype html>
@@ -44,7 +45,8 @@ function renderEmail({ locale, name, title, intro, button, link, note }: EmailCo
     <tr><td style="padding:32px;color:${C.text};font-size:16px;line-height:1.6;">
       <h1 style="margin:0 0 16px;font-size:24px;line-height:1.3;color:${C.text};">${escapeHtml(title)}</h1>
       <p style="margin:0 0 12px;">${escapeHtml(t.greeting.replace("{name}", name))}</p>
-      <p style="margin:0 0 24px;">${escapeHtml(intro)}</p>
+      ${username ? `<p style="margin:0 0 12px;">${escapeHtml(t.verifyUsername.replace("{username}", username))}</p>
+      ` : ""}<p style="margin:0 0 24px;">${escapeHtml(intro)}</p>
       <table role="presentation" cellpadding="0" cellspacing="0"><tr>
         <td style="background:${C.primary};border-radius:12px;">
           <a href="${href}" style="display:inline-block;padding:14px 28px;color:#ffffff;font-weight:700;text-decoration:none;font-size:16px;">${escapeHtml(button)}</a>
@@ -62,11 +64,11 @@ function renderEmail({ locale, name, title, intro, button, link, note }: EmailCo
 </html>`;
 }
 
-export function verifyEmail(locale: Locale, name: string, link: string) {
+export function verifyEmail(locale: Locale, name: string, username: string, link: string) {
   const t = TEXTS[locale];
   return {
     subject: t.verifySubject,
-    html: renderEmail({ locale, name, link, title: t.verifyTitle, intro: t.verifyIntro, button: t.verifyButton, note: t.verifyNote }),
+    html: renderEmail({ locale, name, username, link, title: t.verifyTitle, intro: t.verifyIntro, button: t.verifyButton, note: t.verifyNote }),
   };
 }
 

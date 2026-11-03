@@ -49,7 +49,7 @@
     "cityNotFound": "We could not find that city. Try adding the state or country",
     "citySearchFailed": "Could not search cities right now. Please try again.",
     "emailTaken": "This e-mail already has an account. Want to sign in?",
-    "invalidCredentials": "Incorrect e-mail or password",
+    "invalidCredentials": "Wrong username or password",
     "locked": "Too many attempts. Try again in 15 minutes.",
     "rateLimited": "Too many attempts. Try again in a few minutes.",
     "linkExpired": "This link has expired. Request a new one",
@@ -61,7 +61,8 @@
     "dateInvalid": "Choose a valid date",
     "dateInFuture": "The date can't be in the future",
     "usernameInvalid": "Use 3 to 30 lowercase letters, numbers, dot, hyphen or _ (not only numbers)",
-    "usernameReserved": "This username is reserved. Choose another one"
+    "usernameReserved": "This username is reserved. Choose another one",
+    "usernameTaken": "This username is already taken"
   },
   "climate": {
     "tropical": "Tropical",
@@ -107,7 +108,8 @@
     "resetTitle": "Let's create a new password",
     "resetIntro": "We got a request to change your account password. Click the button to choose a new one.",
     "resetButton": "Create a new password",
-    "resetNote": "The link is valid for 1 hour and works only once. If you didn't ask for this, ignore this e-mail: your password stays the same."
+    "resetNote": "The link is valid for 1 hour and works only once. If you didn't ask for this, ignore this e-mail: your password stays the same.",
+    "verifyUsername": "Your username: {username}"
   },
   "devInbox": {
     "title": "Test inbox",

@@ -51,7 +51,7 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
   const db = await getDb();
   if (!(await limitByIp(db, "signup", await clientIp())).ok) return { formError: "rateLimited", values };
   const result = await registerUser(db, getWeatherProvider(), parsed.data);
-  if (!result.ok) return { fieldErrors: { email: "emailTaken" }, values };
+  if (!result.ok) return { fieldErrors: { [result.error === "emailTaken" ? "email" : "username"]: result.error }, values };
 
   const locale = resolveLocale(await getLocale());
   await setPreferences(db, result.userId, { locale });
@@ -66,13 +66,13 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
 }
 
 export async function loginAction(_prev: FormState, formData: FormData): Promise<FormState> {
-  const values = typed(formData, "email");
-  const parsed = loginSchema.safeParse({ email: formData.get("email"), password: formData.get("password") });
+  const values = typed(formData, "username");
+  const parsed = loginSchema.safeParse({ username: formData.get("username"), password: formData.get("password") });
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
 
   const db = await getDb();
   if (!(await limitByIp(db, "login", await clientIp())).ok) return { formError: "rateLimited", values };
-  const result = await verifyCredentials(db, parsed.data.email, parsed.data.password);
+  const result = await verifyCredentials(db, parsed.data.username, parsed.data.password);
   if (!result.ok) return { formError: result.reason === "locked" ? "locked" : "invalidCredentials", values };
 
   await refreshEstimatedClimate(db, getWeatherProvider(), result.userId).catch(() => undefined);
