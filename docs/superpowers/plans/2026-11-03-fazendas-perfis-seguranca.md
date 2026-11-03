@@ -1,21 +1,19 @@
-# NewFarmer Etapa 4 — Fazendas com equipe, papéis, segurança e páginas legais Implementation Plan
+# NewFarmer Etapa 4 — Contas com username, segurança, registro de atividades e páginas legais Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:**
-- Cada cadastro vira uma **fazenda** com **número de registro**, e a fazenda tem várias contas (username + senha) com **papéis e permissões** definidos pelo admin.
-- O login passa a pedir **número de registro + username + senha**.
+- Contas individuais (público: pequenos produtores, sem equipe). O cadastro pede **e-mail + username**; o login pede só **username + senha**.
 - Entram:
   - segurança: limite de tentativas, sessão de 1 h sem uso, dados nunca expostos, debug desligado;
   - **registro de atividades**;
-  - **monitoramento** para o dono do site;
-  - página inicial com CTA, 404, títulos de página, privacidade, termos e aviso de cookies.
+  - **Settings** só para o dono do site, com Activity logs e Monitoramento;
+  - página inicial com CTA, 404, títulos de página, privacidade (LGPD, RGPD e EUA), termos e aviso de cookies.
 
 **Architecture:**
-- Uma tabela `farms` passa a ser dona de tudo o que é da fazenda: local, clima, animais, plantações e diário.
-- `users` vira "conta de uma pessoa dentro de uma fazenda", com `role_id`.
-- As permissões são textos fixos definidos no código (`src/lib/permissions.ts`). O admin monta papéis marcando permissões.
-- Toda leitura e escrita passa por um contexto `{ user, farmId, permissions }` vindo da sessão. Nenhuma consulta aceita `farm_id` vindo do navegador.
+- Cada conta continua dona dos próprios dados (animais, plantações, diário), como hoje.
+- `users` ganha `username` (único no site inteiro) e `is_platform_admin`.
+- Toda leitura e escrita usa o `user.id` da sessão. Nenhuma consulta aceita id de conta vindo do navegador.
 - O banco ganha **migrações numeradas** (tabela `schema_migrations`), porque agora há dados reais no Supabase a converter.
 
 **Tech Stack:** a mesma de hoje.
@@ -27,46 +25,42 @@ Sem dependências novas.
 
 ## Global Constraints
 
-- Decisões do usuário (2026-11-03):
-  - **Monitoramento** é só para o **dono do site**. Admins de fazenda usam Settings → Activity logs.
-  - **Papéis livres:** o admin cria papéis e marca permissões. Toda fazenda nasce com os papéis **Admin** e **Funcionário**.
+- Decisões do usuário (2026-11-03, revistas no mesmo dia):
+  - **Sem fazendas com equipe, sem papéis e permissões.** O público é o pequeno produtor, cada um com a sua conta.
+  - **Cadastro:** nome, e-mail, username, senha, cidade. **Login:** username + senha.
+  - **Settings** e **Monitoramento** são só para o **dono do site** (`users.is_platform_admin`, ligado à mão no SQL Editor do Supabase).
   - **Sessão:** expira após **1 hora sem uso**. Quem está usando continua logado. Teto absoluto de 30 dias.
-  - **CTA:** página inicial pública `/` com "Criar conta da fazenda" no topo e "Entrar" ao lado.
-- **Login:** número de registro + username + senha. Formato do número: `NF-` + 6 dígitos (ex.: `NF-482913`), único e gerado pelo sistema.
-- **Contas por fazenda:** sem limite fixo. "5 ou mais" é o uso esperado, não um teto.
+  - **CTA:** página inicial pública `/` com "Criar conta grátis" no topo e "Entrar" ao lado.
 - **Username:**
   - 3 a 30 caracteres: `a-z`, `0-9`, `.`, `_`, `-`;
-  - único **dentro da fazenda**, sem diferença entre maiúsculas e minúsculas;
-  - o mesmo username pode existir em fazendas diferentes.
-- **E-mail:**
-  - obrigatório só para a conta do admin que criou a fazenda; opcional para funcionários;
-  - quem não tem e-mail recupera a senha **pelo admin**, em Settings → Users → "Redefinir senha".
-- **Menu do topo, à esquerda do Sair:**
-  - todos veem MyFarm (só com permissão `farm.edit`) e Perfil;
-  - o admin vê também **Settings**, com Users, Roles & Permissions e Activity logs;
-  - o dono do site vê **Monitoramento**, logo abaixo do Perfil.
+  - guardado em minúsculas e **único no site inteiro**;
+  - não pode ser só números nem um nome reservado (`admin`, `root`, `newfarmer`, `suporte`, `support`, `api`, `login`).
+- **E-mail:** obrigatório e único, como hoje. Continua sendo o canal de confirmação de conta e de recuperação de senha.
+- **Recuperação:** "Esqueci a senha" aceita username **ou** e-mail e envia o link para o e-mail da conta. "Esqueci o username" envia o username por e-mail. A tela responde sempre do mesmo jeito, para não revelar quem tem conta.
+- **Menu do topo, à esquerda do Sair:** MyFarm e Perfil para todos; **Settings** (Activity logs, Monitoramento) só para o dono do site.
 - **Isolamento:**
-  - toda consulta de dados da fazenda filtra por `farm_id` da sessão;
   - o Perfil mostra e edita **só a própria conta**;
-  - ninguém lê nem altera conta de outra fazenda.
+  - ninguém lê nem altera dados de outra conta;
+  - páginas do dono do site respondem 404 para os outros, sem revelar que existem.
 - **SQL:**
   - só consultas parametrizadas (`$1`, `$2`…);
   - proibido montar SQL com `${}` vindo de dado do usuário;
   - um teste varre `src/` e falha se encontrar isso.
 - **Dados para o navegador:**
   - componentes de cliente recebem só campos mínimos;
-  - nunca hash de senha, hash de token, `farm_id` de outra fazenda ou objeto de linha inteiro do banco;
+  - nunca hash de senha, hash de token ou objeto de linha inteiro do banco;
   - `src/server/*` usa `import "server-only"`.
 - **Limites de tentativas** (`rate_limits` no Postgres, porque a Vercel roda em várias máquinas):
   - login: 10 a cada 15 min por IP, além do bloqueio já existente de 5 erros por conta;
   - cadastro: 5 por hora por IP;
-  - "esqueci senha" e "esqueci o número": 5 por hora por IP;
+  - "esqueci a senha" e "esqueci o username": 5 por hora por IP;
   - busca de cidades: 60 por minuto por IP;
-  - ações de escrita (diário, MyFarm, Settings): 120 por minuto por conta.
+  - ações de escrita (diário, MyFarm, Perfil): 120 por minuto por conta.
 - **Registro de atividades** (`activity_logs`):
-  - o que se registra: login (certo e errado), saída, cadastro, troca e redefinição de senha, confirmação de e-mail, MyFarm, diário (criar e apagar), contas (criar, editar, desativar, redefinir senha), papéis (criar, editar, apagar);
+  - o que se registra: login (certo e errado), saída, cadastro, troca e redefinição de senha, confirmação de e-mail, MyFarm, diário (criar e apagar), Perfil (dados e idioma), bloqueio por excesso de tentativas;
   - cada registro guarda quem, o quê, alvo, IP e quando;
-  - guardado por 180 dias.
+  - guardado por 180 dias;
+  - lido pelo dono do site em Settings → Activity logs.
 - **Debug desligado em produção:**
   - sem cabeçalho `X-Powered-By`, sem mapas de código no navegador;
   - `/dev/inbox` e `WEATHER_FAKE` não valem com `NODE_ENV=production`;
@@ -74,9 +68,9 @@ Sem dependências novas.
 - **Cabeçalhos de segurança** em todas as respostas: `Content-Security-Policy`, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy` (câmera, microfone e geolocalização desligados) e `Strict-Transport-Security` em produção.
 - **Cookies:** o site usa só cookies essenciais (`nf_session`, `nf_locale`, `nf_theme`, `nf_cookie_notice`). O aviso informa e tem "Entendi". Não há rastreamento, então não há "aceitar/recusar".
 - **Privacidade e termos:**
-  - em PT e EN, seguindo o RGPD, porque o titular está em Portugal e o banco no Supabase eu-west-1 (Irlanda);
+  - em PT e EN, cobrindo **LGPD** (Brasil), **RGPD** (UE) e **EUA** (CCPA/CPRA da Califórnia e as leis estaduais parecidas, e a COPPA);
   - fornecedores: Supabase, Vercel, Resend, Open-Meteo;
-  - o cadastro exige marcar "Li e aceito os Termos e a Política de Privacidade".
+  - o cadastro exige marcar "Li e aceito os Termos e a Política de Privacidade" e confirmar ter 13 anos ou mais.
 - **Títulos:** toda página tem um título no formato `<Página> · NewFarmer`, traduzido.
 - Textos para o usuário sempre em PT e EN (`messages/*.json`).
 
@@ -87,8 +81,11 @@ Respondido em 2026-11-03:
 1. Responsável pelo tratamento / controlador: **Matheus Lemes**
 2. Contato de privacidade (encarregado / DPO): **matheusps70@hotmail.com**
 3. Sede do responsável: **Jundiaí, São Paulo, Brasil**.
-   - **Termos:** lei brasileira, foro da comarca de Jundiaí/SP.
-   - **Privacidade:** cobre a **LGPD** (controlador no Brasil; reclamação à ANPD) **e** o **RGPD** (usuários na UE; banco no Supabase eu-west-1; reclamação à autoridade do país, ex.: CNPD em Portugal).
+   - **Termos:** lei brasileira, foro da comarca de Jundiaí/SP. Usuário dos EUA ou da UE mantém os direitos que a lei do seu lugar não deixa afastar.
+   - **Privacidade:** cobre
+     - a **LGPD** (controlador no Brasil; reclamação à ANPD);
+     - o **RGPD** (usuários na UE; banco no Supabase eu-west-1; reclamação à autoridade do país, ex.: CNPD em Portugal);
+     - os **EUA**: CCPA/CPRA e leis estaduais parecidas (direito de saber, apagar, corrigir, não ser discriminado e de optar por não ter dados vendidos ou compartilhados; o NewFarmer **não vende nem compartilha** dados para publicidade) e COPPA (o serviço não é para menores de 13 anos).
 
 ## Estrutura de arquivos
 
@@ -96,16 +93,11 @@ Respondido em 2026-11-03:
 src/server/migrations.ts            migrações numeradas (substitui o SCHEMA único de db.ts)
 src/server/request-context.ts       IP e user-agent da requisição (x-forwarded-for na Vercel)
 src/server/rate-limit.ts            hit(db, key, limit, windowMs) → { ok, retryAfterMs }
-src/server/activity-log.ts          logActivity(), listActivity(), purgeOldActivity()
-src/server/farms.ts                 createFarm(), getFarm…(), número de registro
-src/server/roles.ts                 papéis e permissões (CRUD por fazenda)
-src/server/team.ts                  contas da fazenda (Settings → Users)
-src/server/authz.ts                 requireUser() com farm/permissões; requirePermission()
+src/server/activity-log.ts          logActivity(), listActivity(), purgeOld()
+src/server/username.ts              regras do username e geração para contas antigas
+src/server/authz.ts                 requirePlatformAdmin()
 src/server/monitoring.ts            números do site inteiro (dono do site)
-src/lib/permissions.ts              lista fixa de permissões + rótulos
-src/lib/registration.ts             formato e validação do número NF-000000
-src/app/(app)/settings/...          users, roles, activity
-src/app/(app)/monitoramento/page.tsx
+src/app/(app)/settings/...          activity (logs) e monitoramento — só dono do site
 src/app/(marketing)/page.tsx        página inicial pública com CTA
 src/app/(marketing)/privacidade/page.tsx
 src/app/(marketing)/termos/page.tsx
@@ -119,7 +111,7 @@ tests/unit/sql-safety.test.ts       varredura contra SQL montado com ${}
 
 ## Fase 1: Base de segurança
 
-Não depende das fazendas e pode ir ao ar sozinha.
+Não depende das mudanças de conta e pode ir ao ar sozinha.
 
 ### Task 1: Migrações numeradas
 
@@ -483,26 +475,29 @@ ALTER TABLE sessions ALTER COLUMN last_seen_at SET NOT NULL;
 
 **Interfaces:**
 - Produces:
-  - `type ActivityAction = "auth.login" | "auth.loginFailed" | "auth.logout" | "auth.signup" | "auth.passwordChanged" | "auth.passwordReset" | "auth.emailConfirmed" | "farm.updated" | "diary.created" | "diary.deleted" | "team.userCreated" | "team.userUpdated" | "team.userDisabled" | "team.passwordReset" | "roles.created" | "roles.updated" | "roles.deleted"`;
-  - `logActivity(db, entry: { farmId: number | null; userId: number | null; action: ActivityAction; target?: string; details?: Record<string, string | number | boolean>; ip: string }, now?)`;
-  - `listActivity(db, farmId, { userId?, action?, before?, limit = 50 })`;
+  - `type ActivityAction = "auth.login" | "auth.loginFailed" | "auth.logout" | "auth.signup" | "auth.passwordChanged" | "auth.passwordReset" | "auth.emailConfirmed" | "farm.updated" | "diary.created" | "diary.deleted" | "profile.updated" | "security.rateLimited"`;
+  - `logActivity(db, entry: { userId: number | null; action: ActivityAction; target?: string; details?: Record<string, string | number | boolean>; ip: string }, now?)`;
+  - `listActivity(db, { userId?, action?, before?, limit = 50 })`: o site inteiro, para o dono do site;
   - `purgeOld(db, now)`, que apaga logs com mais de 180 dias e rate_limits com mais de 1 dia.
 
 - [ ] **Step 1: Teste que falha**
 
 ```ts
-it("grava e lista só da própria fazenda, do mais novo para o mais antigo", async () => {
+it("grava e lista do mais novo para o mais antigo, filtrando por conta e por ação", async () => {
   const db = await testDb();
-  await logActivity(db, { farmId: 1, userId: null, action: "auth.loginFailed", target: "ana", ip: "1.1.1.1" }, 1);
-  await logActivity(db, { farmId: 1, userId: null, action: "auth.login", target: "ana", ip: "1.1.1.1" }, 2);
-  await logActivity(db, { farmId: 2, userId: null, action: "auth.login", target: "bia", ip: "2.2.2.2" }, 3);
-  expect((await listActivity(db, 1, {})).map((e) => e.action)).toEqual(["auth.login", "auth.loginFailed"]);
+  const ana = await makeUser(db);
+  await logActivity(db, { userId: null, action: "auth.loginFailed", target: "ana", ip: "1.1.1.1" }, 1);
+  await logActivity(db, { userId: ana, action: "auth.login", target: "ana", ip: "1.1.1.1" }, 2);
+  await logActivity(db, { userId: null, action: "auth.loginFailed", target: "bia", ip: "2.2.2.2" }, 3);
+  expect((await listActivity(db, {})).map((e) => e.target)).toEqual(["bia", "ana", "ana"]);
+  expect((await listActivity(db, { userId: ana })).map((e) => e.action)).toEqual(["auth.login"]);
+  expect(await listActivity(db, { action: "auth.loginFailed" })).toHaveLength(2);
 });
 
 it("detalhes nunca guardam senha nem token", async () => {
   const db = await testDb();
   await expect(
-    logActivity(db, { farmId: 1, userId: null, action: "auth.login", details: { password: "x" }, ip: "" }),
+    logActivity(db, { userId: null, action: "auth.login", details: { password: "x" }, ip: "" }),
   ).rejects.toThrow(/proibido/);
 });
 ```
@@ -511,13 +506,14 @@ it("detalhes nunca guardam senha nem token", async () => {
 - [ ] **Step 3: Implementação**
 
 ```sql
--- migração 4 (farm_id sem FK por enquanto; a Task 7 cria farms e liga)
+-- migração 4 (user_id sem FK: o log sobrevive se a conta for apagada, e login errado não tem conta)
 CREATE TABLE activity_logs (
-  id SERIAL PRIMARY KEY, farm_id INTEGER, user_id INTEGER, action TEXT NOT NULL,
+  id SERIAL PRIMARY KEY, user_id INTEGER, action TEXT NOT NULL,
   target TEXT NOT NULL DEFAULT '', details JSONB NOT NULL DEFAULT '{}', ip TEXT NOT NULL DEFAULT '',
   created_at BIGINT NOT NULL
 );
-CREATE INDEX idx_activity_farm ON activity_logs (farm_id, created_at DESC);
+CREATE INDEX idx_activity_created ON activity_logs (created_at DESC);
+CREATE INDEX idx_activity_user ON activity_logs (user_id, created_at DESC);
 ALTER TABLE activity_logs ENABLE ROW LEVEL SECURITY;
 ```
 
@@ -528,387 +524,235 @@ ALTER TABLE activity_logs ENABLE ROW LEVEL SECURITY;
 
 ---
 
-## Fase 2: Fazendas, contas da equipe, papéis e Settings
+## Fase 2: Contas com username, Perfil e registro das ações
 
-### Task 7: Fazendas e migração dos dados de hoje
+### Task 7: Username nas contas (e migração das contas de hoje)
 
 **Files:**
-- Create: `src/server/farms.ts`, `src/lib/registration.ts`
+- Create: `src/server/username.ts`
 - Modify: `src/server/migrations.ts` (migração 5)
-- Modify: `src/server/accounts.ts`
-  - `User` ganha `farmId`, `username`, `registrationNumber`, `roleId`, `isAdmin`, `isPlatformAdmin` e `permissions: Set<Permission>`;
-  - `cityLabel`, `latitude` e os outros campos de local passam a vir da fazenda, via JOIN.
-- Modify: `src/server/farm.ts`, `src/server/diary.ts` e `src/server/registration.ts` (`changeCity`), que trocam `user_id` por `farm_id` nos dados da fazenda.
-- Test: `tests/integration/farms.test.ts`, `tests/unit/registration.test.ts`. Ajuste todos os testes que usam `makeUser`.
+- Modify: `src/server/accounts.ts`:
+  - `User` ganha `username` e `isPlatformAdmin`;
+  - `createUser` recebe `username`;
+  - a violação de unicidade distingue `EmailTakenError` de `UsernameTakenError` pelo nome do índice.
+- Modify: `tests/helpers/users.ts` (`makeUser` ganha `username`, padrão `"ana"`)
+- Test: `tests/unit/username.test.ts`, `tests/integration/username-migration.test.ts`, `tests/integration/accounts.test.ts`
 
 **Interfaces:**
 - Produces:
-  - `formatRegistration(n: number) → "NF-482913"`;
-  - `parseRegistration(text) → number | null`, que aceita "nf482913", "NF-482913" e " 482913 ";
-  - `createFarm(db, { name, city, climate }) → { farmId, registrationNumber }`;
-  - o número é aleatório de 6 dígitos; em colisão, tenta de novo até 5 vezes.
+  - `normalizeUsername(text) → string` (trim + minúsculas);
+  - `usernameProblem(text) → null | "usernameInvalid" | "usernameReserved"`;
+  - `RESERVED_USERNAMES`;
+  - `class UsernameTakenError`.
 
 - [ ] **Step 1: Testes que falham**
 
 ```ts
-// tests/unit/registration.test.ts
-it.each([["NF-482913", 482913], ["nf482913", 482913], [" 482913 ", 482913], ["NF-12", null], ["abc", null]])(
-  "%j → %j", (text, n) => expect(parseRegistration(text)).toBe(n));
-```
+// tests/unit/username.test.ts
+import { describe, expect, it } from "vitest";
+import { normalizeUsername, usernameProblem } from "@/server/username";
 
-```ts
-// tests/integration/farms.test.ts
-it("migração 5 transforma cada conta antiga numa fazenda com ela como Admin", async () => {
-  const lite = new PGlite();
-  const db = pgliteDb(lite);
-  await migrateUpTo(db, 4);
-  await db.run(`INSERT INTO users (name,email,password_hash,city_label,latitude,longitude,country_code,climate_zone,hemisphere,created_at)
-    VALUES ('Matheus','matheus@x.com','h','Fundão',40.1,-7.5,'PT','temperate','north',0)`);
-  await db.run(`INSERT INTO farm_animals (user_id, animal_id, count) VALUES (1, 'cows', 3)`);
-  await migrate(db);
-  const [u] = await db.query<{ username: string; role: string; reg: number; city: string }>(
-    `SELECT u.username, r.name AS role, f.registration_number AS reg, f.city_label AS city
-     FROM users u JOIN farms f ON f.id = u.farm_id JOIN roles r ON r.id = u.role_id`);
-  expect(u).toMatchObject({ username: "matheus", role: "Admin", city: "Fundão" });
-  expect(u.reg).toBeGreaterThanOrEqual(100000);
-  expect(await db.query("SELECT animal_id, count FROM farm_animals")).toEqual([{ animal_id: "cows", count: 3 }]);
+describe("username", () => {
+  it.each(["ana", "ana.silva", "ana_2", "joao-da-roca"])("%j é válido", (u) => expect(usernameProblem(u)).toBeNull());
+  it.each(["ab", "a".repeat(31), "ana silva", "ána", "ana@x", "12345"])("%j é inválido", (u) =>
+    expect(usernameProblem(u)).toBe("usernameInvalid"));
+  it.each(["admin", "Admin", "newfarmer", "support"])("%j é reservado", (u) =>
+    expect(usernameProblem(normalizeUsername(u))).toBe("usernameReserved"));
+  it("guarda em minúsculas e sem espaços nas pontas", () => expect(normalizeUsername("  AnaSilva ")).toBe("anasilva"));
 });
 ```
 
-`migrateUpTo(db, n)` é um auxiliar de teste exportado por `migrations.ts` só para isso.
+```ts
+// tests/integration/username-migration.test.ts
+it("contas antigas ganham username a partir do e-mail, sem repetir", async () => {
+  const lite = new PGlite();
+  const db = pgliteDb(lite, lite);
+  await migrateUpTo(db, 4);
+  for (const email of ["matheus@x.com", "Matheus@y.com", "ab@z.com", "admin@w.com"]) {
+    await db.run(`INSERT INTO users (name,email,password_hash,city_label,latitude,longitude,country_code,climate_zone,hemisphere,created_at)
+      VALUES ('M',$1,'h','C',0,0,'PT','temperate','north',0)`, [email]);
+  }
+  await migrate(db);
+  expect((await db.query<{ username: string }>("SELECT username FROM users ORDER BY id")).map((r) => r.username))
+    .toEqual(["matheus", "matheus2", "ab_user", "admin_user"]);
+});
+```
+
+`migrateUpTo(db, n)` é um auxiliar exportado por `migrations.ts` só para testes: aplica até a migração `n`.
+
+```ts
+// tests/integration/accounts.test.ts (acréscimo)
+it("username repetido (qualquer caixa) gera UsernameTakenError", async () => {
+  const db = await testDb();
+  await makeUser(db, { username: "ana" });
+  await expect(makeUser(db, { username: "ANA", email: "outra@exemplo.com" })).rejects.toBeInstanceOf(UsernameTakenError);
+});
+```
+
 - [ ] **Step 2:** rode. Esperado: FALHA.
-- [ ] **Step 3: Migração 5**
+- [ ] **Step 3: Implementação**
+
+```ts
+// src/server/username.ts
+import "server-only";
+
+export const RESERVED_USERNAMES = new Set(["admin", "root", "newfarmer", "suporte", "support", "api", "login"]);
+const PATTERN = /^[a-z0-9._-]{3,30}$/;
+
+export function normalizeUsername(text: string): string {
+  return text.trim().toLowerCase();
+}
+
+export function usernameProblem(username: string): null | "usernameInvalid" | "usernameReserved" {
+  if (!PATTERN.test(username) || /^\d+$/.test(username)) return "usernameInvalid";
+  if (RESERVED_USERNAMES.has(username)) return "usernameReserved";
+  return null;
+}
+```
 
 ```sql
-CREATE TABLE farms (
-  id SERIAL PRIMARY KEY,
-  registration_number INTEGER NOT NULL UNIQUE CHECK (registration_number BETWEEN 100000 AND 999999),
-  name TEXT NOT NULL, city_label TEXT NOT NULL, latitude DOUBLE PRECISION NOT NULL, longitude DOUBLE PRECISION NOT NULL,
-  country_code TEXT NOT NULL, climate_zone TEXT NOT NULL, climate_estimated INTEGER NOT NULL DEFAULT 0,
-  hemisphere TEXT NOT NULL, created_at BIGINT NOT NULL
-);
-CREATE TABLE roles (
-  id SERIAL PRIMARY KEY, farm_id INTEGER NOT NULL REFERENCES farms(id) ON DELETE CASCADE,
-  name TEXT NOT NULL, is_admin BOOLEAN NOT NULL DEFAULT FALSE, created_at BIGINT NOT NULL,
-  UNIQUE (farm_id, name)
-);
-CREATE TABLE role_permissions (
-  role_id INTEGER NOT NULL REFERENCES roles(id) ON DELETE CASCADE, permission TEXT NOT NULL,
-  PRIMARY KEY (role_id, permission)
-);
-
--- uma fazenda por conta antiga, com o local da conta
-INSERT INTO farms (registration_number, name, city_label, latitude, longitude, country_code, climate_zone, climate_estimated, hemisphere, created_at)
-SELECT 100000 + ((id * 7919 + 104729) % 900000), name, city_label, latitude, longitude, country_code, climate_zone, climate_estimated, hemisphere, created_at
-FROM users ORDER BY id;
-
-ALTER TABLE users ADD COLUMN farm_id INTEGER REFERENCES farms(id) ON DELETE CASCADE;
+-- migração 5
 ALTER TABLE users ADD COLUMN username TEXT;
-ALTER TABLE users ADD COLUMN role_id INTEGER REFERENCES roles(id);
 ALTER TABLE users ADD COLUMN is_platform_admin BOOLEAN NOT NULL DEFAULT FALSE;
-ALTER TABLE users ADD COLUMN disabled_at BIGINT;
-UPDATE users u SET farm_id = f.id FROM farms f WHERE f.created_at = u.created_at AND f.name = u.name;
-
-INSERT INTO roles (farm_id, name, is_admin, created_at) SELECT id, 'Admin', TRUE, created_at FROM farms;
-INSERT INTO roles (farm_id, name, is_admin, created_at) SELECT id, 'Funcionário', FALSE, created_at FROM farms;
-INSERT INTO role_permissions (role_id, permission)
-  SELECT r.id, p FROM roles r, unnest(ARRAY['animals.view','crops.view','weather.view','diary.write']) p WHERE NOT r.is_admin;
-
-UPDATE users u SET role_id = r.id FROM roles r WHERE r.farm_id = u.farm_id AND r.is_admin;
+-- base: parte do e-mail antes do @, só caracteres permitidos, minúsculas
 UPDATE users SET username = lower(regexp_replace(split_part(email, '@', 1), '[^a-zA-Z0-9._-]', '', 'g'));
-UPDATE users SET username = 'admin' WHERE length(username) < 3;
-
-ALTER TABLE users ALTER COLUMN farm_id SET NOT NULL, ALTER COLUMN username SET NOT NULL, ALTER COLUMN role_id SET NOT NULL;
-ALTER TABLE users ALTER COLUMN email DROP NOT NULL;
-ALTER TABLE users DROP CONSTRAINT users_email_key;
-CREATE UNIQUE INDEX users_farm_username ON users (farm_id, lower(username));
-CREATE UNIQUE INDEX users_email_unique ON users (lower(email)) WHERE email IS NOT NULL;
-ALTER TABLE users DROP COLUMN city_label, DROP COLUMN latitude, DROP COLUMN longitude, DROP COLUMN country_code,
-  DROP COLUMN climate_zone, DROP COLUMN climate_estimated, DROP COLUMN hemisphere;
-
--- dados da fazenda passam de user_id para farm_id
-ALTER TABLE farm_animals ADD COLUMN farm_id INTEGER REFERENCES farms(id) ON DELETE CASCADE;
-UPDATE farm_animals a SET farm_id = u.farm_id FROM users u WHERE u.id = a.user_id;
-ALTER TABLE farm_animals DROP CONSTRAINT farm_animals_pkey, DROP COLUMN user_id, ADD PRIMARY KEY (farm_id, animal_id);
-ALTER TABLE farm_crops ADD COLUMN farm_id INTEGER REFERENCES farms(id) ON DELETE CASCADE;
-UPDATE farm_crops c SET farm_id = u.farm_id FROM users u WHERE u.id = c.user_id;
-ALTER TABLE farm_crops DROP CONSTRAINT farm_crops_pkey, DROP COLUMN user_id, ADD PRIMARY KEY (farm_id, crop_id);
-ALTER TABLE diary_entries ADD COLUMN farm_id INTEGER REFERENCES farms(id) ON DELETE CASCADE;
-UPDATE diary_entries d SET farm_id = u.farm_id FROM users u WHERE u.id = d.user_id;
-ALTER TABLE diary_entries ALTER COLUMN farm_id SET NOT NULL;   -- user_id fica: é quem escreveu
-ALTER TABLE diary_entries ALTER COLUMN user_id DROP NOT NULL;
-ALTER TABLE diary_entries DROP CONSTRAINT diary_entries_user_id_fkey,
-  ADD CONSTRAINT diary_entries_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL;
-CREATE INDEX idx_diary_farm ON diary_entries (farm_id, animal_id, entry_date);
-ALTER TABLE activity_logs ADD CONSTRAINT activity_logs_farm_fk FOREIGN KEY (farm_id) REFERENCES farms(id) ON DELETE CASCADE;
-
-ALTER TABLE farms ENABLE ROW LEVEL SECURITY;
-ALTER TABLE roles ENABLE ROW LEVEL SECURITY;
-ALTER TABLE role_permissions ENABLE ROW LEVEL SECURITY;
+-- curto, só números ou reservado: acrescenta "_user"
+UPDATE users SET username = username || '_user'
+  WHERE length(username) < 3 OR username ~ '^[0-9]+$'
+     OR username IN ('admin','root','newfarmer','suporte','support','api','login');
+UPDATE users SET username = left(username, 30);
+-- repetidos: o mais antigo fica com o nome, os seguintes ganham 2, 3…
+UPDATE users u SET username = left(u.username, 28) || d.n
+  FROM (SELECT id, row_number() OVER (PARTITION BY username ORDER BY id) AS n FROM users) d
+  WHERE d.id = u.id AND d.n > 1;
+ALTER TABLE users ALTER COLUMN username SET NOT NULL;
+CREATE UNIQUE INDEX users_username_unique ON users (username);
 ```
 
-- O número da migração vem de uma conta fixa (`id * 7919 …`) porque migração não pode depender de sorteio. Fazendas novas usam sorteio em `createFarm`.
-- **Antes de rodar no Supabase,** faça backup em Supabase → Database → Backups e teste a migração numa cópia: `pg_dump` local para o PGlite.
-- [ ] **Step 4:** adapte `getUserById` (JOIN `farms`, `roles`, `role_permissions`), `getFarm(db, farmId)`, `saveFarm(db, farmId, …)`, `listDiary(db, farmId, …)`, `addDiaryEntry(db, { farmId, userId }, …)` e `changeCity(db, provider, farmId, city)`.
-  - Em `tests/helpers/users.ts`, `makeUser` passa a criar fazenda + Admin. Ganha também `makeMember(db, farmId, { username, permissions })`.
-  - Rode a suíte inteira até ficar verde.
-- [ ] **Step 5:** commit `feat: fazendas com número de registro; dados passam a ser da fazenda`.
+- `createUser`: em `23505`, olha `error.constraint`. Com `users_username_unique`, lança `UsernameTakenError`; senão, `EmailTakenError`.
+- **Antes de rodar no Supabase,** faça backup em Supabase → Database → Backups.
+- [ ] **Step 4:** suíte inteira verde, ajustando os testes que criam usuário. Commit `feat: username único nas contas`.
 
-### Task 8: Permissões e verificação em todas as páginas e ações
-
-**Files:**
-- Create: `src/lib/permissions.ts`, `src/server/authz.ts`
-- Modify: todas as páginas de `src/app/(app)/` e todas as ações de `src/app/actions/`
-- Modify: `src/app/(app)/layout.tsx` e `src/components/NavRail.tsx` (escondem o que a pessoa não pode ver)
-- Test: `tests/unit/permissions.test.ts`, `tests/integration/authz.test.ts`, `tests/e2e/permissions.spec.ts`
-
-**Interfaces:**
-- Produces:
-
-```ts
-// src/lib/permissions.ts
-import { ANIMAL_IDS } from "./catalog";
-export const PERMISSIONS = [
-  ...ANIMAL_IDS.flatMap((a) => [`animals.${a}.view`, `animals.${a}.diary`] as const),
-  "crops.view", "weather.view", "farm.edit",
-  "settings.users", "settings.roles", "settings.logs",
-] as const;
-export type Permission = (typeof PERMISSIONS)[number];
-export const isPermission = (p: string): p is Permission => (PERMISSIONS as readonly string[]).includes(p);
-```
-
-```ts
-// src/server/authz.ts
-export async function requireUser(): Promise<User>; // como hoje, mais: conta desativada → sai e vai para /login
-export async function requirePermission(p: Permission): Promise<User>; // sem permissão → notFound() (404, não revela que existe)
-export function can(user: User, p: Permission): boolean; // admin (role.is_admin) pode tudo
-```
-
-- A permissão `animals.<id>.view` deixa ver a ficha e o diário daquele animal; `animals.<id>.diary` deixa escrever e apagar no diário dele.
-- No Painel, cada pessoa vê só os blocos que pode: animais permitidos, plantações com `crops.view` e clima com `weather.view`.
-- A migração 5 deu ao "Funcionário" permissões antigas (`animals.view`, `diary.write`). A **migração 6** troca essas pelas novas, por animal.
-
-- [ ] **Step 1: Testes que falham**
-
-```ts
-// tests/integration/authz.test.ts
-it("quem cuida das vacas vê vacas, não vê porcos e não entra em Settings", async () => {
-  const db = await testDb();
-  const { farmId } = await makeUserWithFarm(db);
-  const vaqueiro = await makeMember(db, farmId, { username: "joao", permissions: ["animals.cows.view", "animals.cows.diary"] });
-  const user = (await getUserById(db, vaqueiro))!;
-  expect(can(user, "animals.cows.view")).toBe(true);
-  expect(can(user, "animals.pigs.view")).toBe(false);
-  expect(can(user, "settings.users")).toBe(false);
-});
-
-it("diário de outra fazenda não aparece nem pode ser apagado", async () => {
-  const db = await testDb();
-  const a = await makeUserWithFarm(db, { email: "a@x.com" });
-  const b = await makeUserWithFarm(db, { email: "b@x.com" });
-  const id = await addDiaryEntry(db, { farmId: a.farmId, userId: a.userId }, entry);
-  expect(await listDiary(db, b.farmId, {})).toEqual([]);
-  expect(await deleteDiaryEntry(db, b.farmId, id)).toBe(false);
-});
-```
-
-```ts
-// tests/e2e/permissions.spec.ts
-test("funcionário das vacas: trilho sem Porcos e Settings; abrir /animais/pigs dá 404", async ({ page }) => {
-  // admin cria papel "Vaqueiro" (animals.cows.*) e conta "joao" (Tasks 10 e 11), sai, entra como joao
-  // espera: link Vacas visível; /animais/pigs → 404; /settings/users → 404; menu sem "Settings"
-});
-```
-
-Este E2E é escrito por completo na Task 11, quando as telas existirem. Aqui fica só o integration.
-- [ ] **Step 2:** rode. Esperado: FALHA.
-- [ ] **Step 3:** implemente `permissions.ts` e `authz.ts`. Troque `requireUser()` por `requirePermission(...)` em cada página e ação:
-
-| Página ou ação | Permissão |
-|---|---|
-| `/animais/[id]` | `animals.<id>.view` |
-| `addDiaryAction`, `deleteDiaryAction` | `animals.<animalId>.diary` (o `animalId` do apagar vem do banco, não do formulário) |
-| `/plantacoes*` | `crops.view` |
-| `/clima` | `weather.view` |
-| `/myfarm`, `saveFarmAction`, `changeCityAction` | `farm.edit` |
-| `/settings/*` | `settings.*` |
-
-- Painel e Perfil: só `requireUser()`.
-- [ ] **Step 4:** suíte inteira e robô verdes. Commit `feat: permissões por papel em todas as páginas e ações`.
-
-### Task 9: Cadastro da fazenda e login por número + username
+### Task 8: Cadastro com e-mail + username e login só por username
 
 **Files:**
 - Modify: `src/lib/validation.ts`:
-  - `signupSchema` ganha `farmName`, `username` e `acceptTerms: z.literal("on")`;
-  - `loginSchema` passa a ser `{ registration, username, password }`.
-- Modify: `src/server/accounts.ts` (`verifyCredentials(db, { registration, username, password })`; o bloqueio de 5 erros passa a ser por `registration:username`)
-- Modify: `src/server/registration.ts` (`registerFarm()`: fazenda + papéis padrão + Admin, numa transação)
-- Modify: `src/app/(public)/cadastro/SignupForm.tsx`, `src/app/(public)/login/LoginForm.tsx`
-- Create: `src/app/(public)/cadastro/pronto/page.tsx`, que mostra o número de registro em destaque com botão "Copiar" e o aviso "Guarde este número: ele é pedido no login"
-- Modify: `src/server/email-templates.ts`. O e-mail de confirmação inclui o número de registro e o username.
-- Modify: `messages/*.json`
-- Test: `tests/integration/registration.test.ts`, `tests/integration/accounts.test.ts`, `tests/e2e/auth.spec.ts`, `tests/e2e/helpers.ts`
+  - `signupSchema` ganha `username`, validado com as mesmas regras de `usernameProblem`. Copie o padrão para `src/lib` ou mova `usernameProblem` para `src/lib/username.ts`, porque `src/lib` não pode importar `server-only`.
+  - `loginSchema` passa a ser `{ username, password }`.
+- Modify: `src/server/accounts.ts`: `verifyCredentials(db, username, password)` busca por `username`. O bloqueio de 5 erros conta por username, guardado em `login_attempts.identifier` (a coluna `email` é renomeada na migração 6).
+- Modify: `src/server/registration.ts` (erros `emailTaken` ou `usernameTaken`)
+- Modify: `src/app/actions/auth.ts`, `src/app/(public)/cadastro/SignupForm.tsx`, `src/app/(public)/login/LoginForm.tsx`
+- Modify: `src/server/email-templates.ts`: o e-mail de confirmação mostra "Seu username: ana"
+- Modify: `messages/*.json`:
+  - `auth.username`: "Username";
+  - `auth.usernameHelp`: "3 a 30 letras minúsculas, números, ponto, hífen ou _. É com ele que você entra.";
+  - `errors.usernameInvalid`, `errors.usernameReserved`, `errors.usernameTaken` ("Este username já está em uso");
+  - `errors.invalidCredentials`: "Username ou senha incorretos".
+- Test: `tests/unit/validation.test.ts`, `tests/integration/accounts.test.ts`, `tests/integration/registration.test.ts`, `tests/integration/sql-injection.test.ts`, `tests/e2e/helpers.ts`, `tests/e2e/auth.spec.ts`
 
 - [ ] **Step 1: Testes que falham**
 
 ```ts
-it("cadastro cria fazenda, papéis Admin e Funcionário e a conta admin", async () => {
+it("entra com username (qualquer caixa) e senha; e-mail não serve mais para entrar", async () => {
   const db = await testDb();
-  const r = await registerFarm(db, provider, { name: "Ana", farmName: "Quinta da Ana", username: "ana", email: "ana@x.com", password: "segredo123", city });
-  expect(r.ok && r.registrationNumber).toMatch(/^NF-\d{6}$/);
-  const user = (await getUserById(db, (r as { userId: number }).userId))!;
-  expect(user).toMatchObject({ username: "ana", isAdmin: true });
+  await makeUser(db, { username: "ana", email: "ana@exemplo.com" });
+  expect((await verifyCredentials(db, "ANA", DEFAULT_PASSWORD)).ok).toBe(true);
+  expect((await verifyCredentials(db, "ana@exemplo.com", DEFAULT_PASSWORD)).ok).toBe(false);
 });
 
-it("login: número + username + senha; username vale só dentro da sua fazenda", async () => {
+it("5 erros no mesmo username bloqueiam por 15 minutos, mesmo com a senha certa", async () => {
   const db = await testDb();
-  const a = await registerFarm(db, provider, { ...base, email: "a@x.com", username: "joao" });
-  const b = await registerFarm(db, provider, { ...base, email: "b@x.com", username: "joao" }); // mesmo username, outra fazenda: pode
-  const regA = (a as { registrationNumber: string }).registrationNumber;
-  expect((await verifyCredentials(db, { registration: regA, username: "JOAO", password: "segredo123" })).ok).toBe(true);
-  expect((await verifyCredentials(db, { registration: "NF-000000", username: "joao", password: "segredo123" })).ok).toBe(false);
+  await makeUser(db, { username: "ana" });
+  for (let i = 0; i < 5; i++) await verifyCredentials(db, "ana", "errada", 1000 + i);
+  expect(await verifyCredentials(db, "ana", DEFAULT_PASSWORD, 2000)).toEqual({ ok: false, reason: "locked" });
 });
-
-it("conta desativada não entra", async () => { /* disabled_at preenchido → { ok: false, reason: "invalid" } */ });
 ```
 
+```ts
+// tests/e2e/auth.spec.ts (trecho novo)
+test("cadastro pede e-mail e username; login pede só username e senha", async ({ page, context }) => {
+  const { username } = await signup(page, uniqueEmail());
+  await clearSession(context);
+  await page.goto("/login");
+  await expect(page.getByLabel("E-mail")).toHaveCount(0);
+  await page.getByLabel("Username").fill(username.toUpperCase());
+  await page.getByLabel("Senha").fill(PASSWORD);
+  await page.getByRole("button", { name: "Entrar" }).click();
+  await expect(page).toHaveURL(/\/painel$/);
+});
+```
+
+Acrescente também um E2E de username repetido: um segundo cadastro com o mesmo username mostra "Este username já está em uso".
+
+- Em `tests/e2e/helpers.ts`:
+  - `uniqueUsername()` devolve `ana${Date.now()}${random}`, com no máximo 30 caracteres;
+  - `createAccount` e `signup` passam a preencher Username e devolvem `{ username }`;
+  - todos os specs que fazem login trocam `getByLabel("E-mail")` por `getByLabel("Username")`.
 - [ ] **Step 2:** rode. Esperado: FALHA.
-- [ ] **Step 3:** implemente.
-  - A tela de login tem três campos ("Número de registro", "Username", "Senha") e o link "Esqueci o número de registro".
-  - O número fica guardado num cookie `nf_last_registration` e já vem preenchido na próxima vez. Não é segredo, mas a página de privacidade explica.
-  - O cadastro tem "Nome da fazenda", "Seu nome", "Username", "E-mail", "Senha", "Cidade" e a caixa de aceite dos termos. Depois de criar, vai para `/cadastro/pronto` e de lá para a etapa 2 (`/boas-vindas`).
-  - Em `tests/e2e/helpers.ts`, `signup()` passa a devolver `{ registration, username }` lido da página "pronto", e `login()` usa os três campos.
-- [ ] **Step 4:** suíte inteira e robô verdes. Commit `feat: cadastro da fazenda e login por número de registro`.
+- [ ] **Step 3: Implementação**
+  - Login com dois campos: "Username" e "Senha". Abaixo, os links "Esqueci a senha" e "Esqueci o username".
+  - Cadastro: Nome, E-mail, Username (com a dica), Senha, Confirmar senha, Cidade.
+  - Migração 6: `ALTER TABLE login_attempts RENAME COLUMN email TO identifier;` e recria o índice como `idx_login_attempts_identifier`.
+- [ ] **Step 4:** `npx vitest run`, `npx playwright test`. Commit `feat: cadastro com username e login por username e senha`.
 
-### Task 10: Recuperação de acesso
-
-**Files:**
-- Modify: `src/server/password-reset.ts`. O pedido passa a ser por número + username e só envia se a conta tiver e-mail confirmado. A resposta na tela é sempre a mesma, para não revelar se a conta existe.
-- Create: `src/server/registration-reminder.ts` (`sendRegistrationReminder(db, mailer, email)`: manda por e-mail os números de registro e usernames ligados àquele e-mail)
-- Create: `src/app/(public)/recuperar/numero/page.tsx`
-- Modify: `src/server/email-templates.ts` (modelo `registrationReminderEmail`)
-- Test: `tests/integration/password-reset.test.ts`, `tests/integration/registration-reminder.test.ts`, `tests/e2e/auth.spec.ts`
-
-- [ ] **Step 1: Testes que falham**
-  - Recuperar senha por número + username com e-mail confirmado envia o link.
-  - Sem e-mail ou com e-mail não confirmado, não envia, e a tela diz "Se a conta tiver e-mail confirmado, enviamos um link. Sem e-mail? Peça ao admin da fazenda para redefinir sua senha."
-  - "Esqueci o número" com um e-mail de 2 fazendas envia um único e-mail com os 2 números.
-- [ ] **Step 2–4:** implemente com os limites `RATE_LIMITS.recovery` e registre `auth.passwordReset`. Rode e veja verde.
-- [ ] **Step 5:** commit `feat: recuperar senha por número e username, e lembrete do número por e-mail`.
-
-### Task 11: Settings → Users (contas da equipe)
+### Task 9: Recuperar senha por username ou e-mail, e "Esqueci o username"
 
 **Files:**
-- Create: `src/server/team.ts`
-- Create: `src/app/(app)/settings/layout.tsx` (abas Users | Roles & Permissions | Activity logs, cada uma só aparece com a permissão dela)
-- Create: `src/app/(app)/settings/users/page.tsx`, `UserForm.tsx`
-- Create: `src/app/actions/team.ts`
-- Modify: `src/components/UserMenu.tsx` (item "Settings" se `can(user, "settings.*")`)
-- Modify: `src/middleware.ts` (matcher inclui `/settings/:path*` e `/monitoramento/:path*`)
-- Test: `tests/integration/team.test.ts`, `tests/e2e/settings.spec.ts`, `tests/e2e/permissions.spec.ts`
-
-**Interfaces:**
-- Produces:
-  - `listTeam(db, farmId) → { id, name, username, email: string | null, roleId, roleName, disabled: boolean, lastLoginAt: number | null }[]`;
-  - `createMember(db, farmId, { name, username, email?, password, roleId })`;
-  - `updateMember(db, farmId, userId, { name?, roleId?, disabled? })`;
-  - `resetMemberPassword(db, farmId, userId, newPassword)`, que também encerra as sessões da pessoa.
-- Regras:
-  - a fazenda nunca fica sem nenhum admin ativo: tirar o papel Admin ou desativar o último admin é recusado (`lastAdmin`);
-  - ninguém se desativa sozinho;
-  - todas as funções recebem `farmId` da sessão e nenhuma aceita conta de outra fazenda.
+- Modify: `src/server/password-reset.ts`: `requestPasswordReset(db, mailer, { identifier, baseUrl, locale })`. Um `identifier` com `@` é e-mail; sem `@`, é username.
+- Create: `src/server/username-reminder.ts` (`sendUsernameReminder(db, mailer, { email, baseUrl, locale })`)
+- Modify: `src/server/email-templates.ts`: novo modelo `usernameReminderEmail`, com o mesmo visual dos outros ("Seu username no NewFarmer é ana") e o botão "Entrar", que leva a `/login`
+- Create: `src/app/(public)/recuperar/username/page.tsx` e o formulário
+- Modify: `src/app/(public)/recuperar/ForgotForm.tsx` (rótulo "Username ou e-mail")
+- Modify: `src/app/actions/auth.ts` (as duas ações passam por `hit(recovery)`)
+- Test: `tests/integration/password-reset.test.ts`, `tests/integration/username-reminder.test.ts`, `tests/unit/email-templates.test.ts`, `tests/e2e/auth.spec.ts`
 
 - [ ] **Step 1: Testes que falham**
 
 ```ts
-it("admin cria funcionário; o funcionário entra com o número da fazenda", async () => { /* createMember + verifyCredentials */ });
-it("não deixa a fazenda sem admin", async () => {
-  /* updateMember no único admin com roleId de Funcionário → rejects "lastAdmin" */
+it.each(["ana", "ANA", "ana@exemplo.com"])("recuperar a senha com %j envia o link para o e-mail da conta", async (identifier) => {
+  const db = await testDb();
+  await makeUser(db, { username: "ana", email: "ana@exemplo.com" });
+  const { sent, mailer } = captureMailer();
+  await requestPasswordReset(db, mailer, { ...base, identifier });
+  expect(sent.map((m) => m.to)).toEqual(["ana@exemplo.com"]);
 });
-it("não mexe em conta de outra fazenda", async () => {
-  /* updateMember(db, farmB, userDaFarmA, …) → false; nada muda */
+
+it("esqueci o username: manda o username para o e-mail; e-mail sem conta não manda nada", async () => {
+  const db = await testDb();
+  await makeUser(db, { username: "ana", email: "ana@exemplo.com" });
+  const { sent, mailer } = captureMailer();
+  await sendUsernameReminder(db, mailer, { email: "ANA@exemplo.com", baseUrl: "http://x", locale: "pt" });
+  await sendUsernameReminder(db, mailer, { email: "ninguem@exemplo.com", baseUrl: "http://x", locale: "pt" });
+  expect(sent).toHaveLength(1);
+  expect(sent[0].html).toContain(">ana<");
 });
-it("redefinir senha do funcionário derruba as sessões dele", async () => { /* … */ });
 ```
 
-- [ ] **Step 2:** rode. Esperado: FALHA.
-- [ ] **Step 3: Tela**
-  - Tabela com nome, username, papel, situação (ativa/desativada) e último acesso.
-  - Botão "+ Nova conta" abre um formulário com nome, username, e-mail opcional, senha provisória e papel.
-  - Em cada linha: "Editar", "Redefinir senha" e "Desativar/Reativar".
-  - Toda ação passa por `requirePermission("settings.users")` e `hit(write)`, e registra `team.*`.
-- [ ] **Step 4: E2E** (`settings.spec.ts`)
-  - O admin cria "joao" com papel Funcionário e sai.
-  - Entra como joao com o mesmo número e vê o Painel.
-  - O menu não mostra Settings, e `/settings/users` dá 404.
-- [ ] **Step 5:** commit `feat: Settings → Users para contas da equipe`.
+- **E2E:** "Esqueci o username" → digitar o e-mail → a caixa de teste recebe "Seu username no NewFarmer". A tela mostra a mesma mensagem para e-mail com e sem conta.
+- [ ] **Step 2–4:** implemente, registre `auth.passwordReset` e `auth.usernameReminder` (acrescente esta ação ao tipo `ActivityAction`). Rode e veja verde.
+- [ ] **Step 5:** commit `feat: recuperar senha por username ou e-mail e lembrete de username`.
 
-### Task 12: Settings → Roles & Permissions
+### Task 10: Registro de todas as ações e Perfil só da própria conta
 
 **Files:**
-- Create: `src/server/roles.ts`
-- Create: `src/app/(app)/settings/roles/page.tsx`, `RoleForm.tsx`
-- Create: `src/app/actions/roles.ts`
-- Test: `tests/integration/roles.test.ts`, `tests/e2e/settings.spec.ts`
-
-**Interfaces:**
-- Produces:
-  - `listRoles(db, farmId) → { id, name, isAdmin, permissions: Permission[], memberCount }[]`;
-  - `saveRole(db, farmId, { id?, name, permissions })`;
-  - `deleteRole(db, farmId, roleId)`, recusado se o papel tiver contas (`inUse`) ou for o Admin (`adminRole`).
-- Permissões fora de `PERMISSIONS` são descartadas, conferidas com `isPermission`.
+- Modify: todas as ações listadas em "Registro de atividades" nos Global Constraints, que passam a chamar `logActivity`:
+  - `src/app/actions/auth.ts`, `diary.ts`, `farm.ts`, `profile.ts`, `verification.ts`;
+  - a página `/confirmar/[token]`.
+- Modify: `src/app/(app)/perfil/page.tsx`: mostra também o username, só leitura
+- Modify: `src/app/actions/profile.ts`: edita só a conta de `requireUser().id` e nunca lê id de conta do formulário
+- Test: `tests/integration/activity-log.test.ts`, `tests/e2e/profile.spec.ts`
 
 - [ ] **Step 1: Testes que falham**
-  - Criar "Vaqueiro" com `animals.cows.view` e `animals.cows.diary`.
-  - Permissão inventada ("root.all") é ignorada.
-  - O papel Admin não pode ser editado nem apagado.
-  - Papel com contas não pode ser apagado.
-  - Papel de outra fazenda: nada muda.
-- [ ] **Step 2:** rode. Esperado: FALHA.
-- [ ] **Step 3: Tela.** Lista de papéis com o número de pessoas em cada um. Ao editar, aparece uma grade de caixas de marcar:
-  - linhas por animal (🐄 Vacas: [Ver] [Escrever no diário]);
-  - depois Plantações [Ver], Clima [Ver], MyFarm [Editar];
-  - e Settings [Users] [Roles] [Logs].
-  - Botões "Marcar tudo" e "Limpar" por grupo.
-- [ ] **Step 4: E2E.**
-  - O admin cria "Vaqueiro" (só vacas) e passa joao para esse papel.
-  - joao vê Vacas e não vê Porcos; `/animais/pigs` dá 404.
-  - Esta é a versão completa do `permissions.spec.ts` da Task 8.
-- [ ] **Step 5:** commit `feat: Settings → Roles & Permissions`.
-
-### Task 13: Settings → Activity logs e registro em todas as ações
-
-**Files:**
-- Create: `src/app/(app)/settings/activity/page.tsx`
-- Modify: todas as ações listadas em "Registro de atividades" nos Global Constraints (chamam `logActivity`)
-- Test: `tests/integration/activity-log.test.ts`, `tests/e2e/settings.spec.ts`
-
-- [ ] **Step 1: Testes que falham.** Login certo, login errado, diário criado e conta criada geram, cada um, uma linha com a ação, quem fez e o alvo esperados. Cubra as funções do servidor; as ações ficam cobertas pelo E2E.
-- [ ] **Step 2: Tela**
-  - Tabela com quando, quem (nome e username), o que (texto traduzido de cada `ActivityAction`), alvo e IP.
-  - Filtros por pessoa e por tipo de ação.
-  - Paginação "Carregar mais" (`before` = data do último item).
-  - Mostra só a própria fazenda (`requirePermission("settings.logs")`).
-- [ ] **Step 3: E2E.** O admin cria uma anotação no diário, abre Activity logs e vê "Anotação criada no diário · Vacas". Filtrar pela pessoa mostra só as ações dela.
-- [ ] **Step 4:** commit `feat: Settings → Activity logs e registro das ações`.
-
-### Task 14: Perfil só da própria conta
-
-**Files:**
-- Modify: `src/app/(app)/perfil/page.tsx`, que mostra nome, username, e-mail, fazenda, número de registro e papel (só leitura)
-- Modify: `src/app/actions/profile.ts`, que edita só nome, e-mail, senha e idioma de `requireUser().id`
-- Test: `tests/e2e/profile.spec.ts`
-
-- [ ] **Step 1: E2E que falha.** Funcionário logado manda um formulário de perfil adulterado com `userId` de outra pessoa. O sistema ignora o campo, muda só a própria conta e a outra conta continua igual.
-- [ ] **Step 2:** a ação não lê `userId` do formulário. Só esta linha de defesa e o teste.
-- [ ] **Step 3:** commit `feat: perfil mostra fazenda, número e papel; edita só a própria conta`.
+  - **Integration:** login certo, login errado, diário criado e senha trocada geram cada um uma linha com `action`, `userId` e `target` esperados. Chame as funções do servidor que as ações usam.
+  - **E2E:** o usuário A manda o formulário de perfil adulterado, com um campo extra `userId` de B. Só A muda, e B continua igual.
+- [ ] **Step 2:** acrescente `logActivity` em cada ação, com o IP vindo de `clientIp()`. Nada de senha, token ou texto do diário nos `details`: guarde só o animal e o tipo.
+- [ ] **Step 3:** suíte inteira e robô verdes. Commit `feat: registro das ações e perfil restrito à própria conta`.
 
 ---
 
 ## Fase 3: Páginas públicas e legais
 
-### Task 15: Página inicial com CTA, 404 e títulos de página
+### Task 11: Página inicial com CTA, 404 e títulos de página
 
 **Files:**
 - Create: `src/app/(marketing)/layout.tsx`
@@ -925,7 +769,7 @@ it("redefinir senha do funcionário derruba as sessões dele", async () => { /* 
 | Clima | Clima |
 | MyFarm | MyFarm |
 | Perfil | Perfil |
-| Settings → Users | Settings · Users |
+| Settings → Activity logs | Activity logs |
 | Entrar | Entrar |
 | Criar conta | Criar conta |
 | Recuperar | Recuperar |
@@ -942,7 +786,7 @@ it("redefinir senha do funcionário derruba as sessões dele", async () => { /* 
 test("página inicial: CTA no topo leva ao cadastro; Entrar ao login", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveTitle("NewFarmer");
-  await page.getByRole("banner").getByRole("link", { name: "Criar conta da fazenda" }).click();
+  await page.getByRole("banner").getByRole("link", { name: "Criar conta grátis" }).click();
   await expect(page).toHaveURL(/\/cadastro$/);
   await expect(page).toHaveTitle("Criar conta · NewFarmer");
 });
@@ -963,15 +807,15 @@ test.each([["/login", "Entrar"], ["/recuperar", "Recuperar"], ["/privacidade", "
 
 - [ ] **Step 2:** rode. Esperado: FALHA.
 - [ ] **Step 3: Página inicial**
-  - Topo fixo com logo, "Entrar" (link discreto) e **"Criar conta da fazenda"** (botão primário).
+  - Topo fixo com logo, "Entrar" (link discreto) e **"Criar conta grátis"** (botão primário).
   - Seção principal: "Seu guia para a vida no campo" e o mesmo botão.
-  - 3 cartões: Animais, Plantações, Clima e equipe.
+  - 3 cartões: Animais, Plantações, Clima.
   - Rodapé com Privacidade e Termos.
   - Quem já está logado é levado ao `/painel`.
   - 404: ilustração simples (🌾), título, texto e "Voltar ao início" (`/` ou `/painel` se logado), com idioma e tema da pessoa.
 - [ ] **Step 4:** robô verde. Commit `feat: página inicial com CTA, 404 e títulos de página`.
 
-### Task 16: Aviso de cookies
+### Task 12: Aviso de cookies
 
 **Files:**
 - Create: `src/components/CookieNotice.tsx`
@@ -987,23 +831,23 @@ test.each([["/login", "Entrar"], ["/recuperar", "Recuperar"], ["/privacidade", "
   - Os robôs atuais ganham `nf_cookie_notice=1` no `storageState` do `playwright.config.ts`, para o aviso não cobrir botões.
 - [ ] **Step 3:** commit `feat: aviso de cookies essenciais`.
 
-### Task 17: Política de Privacidade e Termos de Uso
+### Task 13: Política de Privacidade e Termos de Uso
 
 **Depende de:** respostas do bloco "Antes de começar".
 
 **Files:**
 - Create: `src/app/(marketing)/privacidade/page.tsx`, `src/app/(marketing)/termos/page.tsx`
 - Create: `content/legal/privacy.{pt,en}.md` e `content/legal/terms.{pt,en}.md`, mostrados como texto simples com títulos (um conversor mínimo de `#`, `##`, parágrafos e listas)
-- Modify: `src/app/(public)/cadastro/SignupForm.tsx` (caixa de aceite com links)
+- Modify: `src/app/(public)/cadastro/SignupForm.tsx` (caixa de aceite com links e caixa "Tenho 13 anos ou mais")
 - Test: `tests/e2e/pages.spec.ts`
 
-**Conteúdo mínimo da Política (RGPD):**
+**Conteúdo mínimo da Política (LGPD, RGPD e EUA):**
 1. responsável e contato;
 2. dados recolhidos:
    - conta: nome, username, e-mail, senha guardada só embaralhada;
-   - fazenda: nome, cidade e coordenadas, animais, plantações, diário;
+   - da sua criação: cidade e coordenadas, animais, plantações, diário;
    - técnicos: IP e data das ações, cookies essenciais;
-3. finalidades e base legal (execução do contrato, interesse legítimo em segurança);
+3. finalidades e base legal (execução do contrato, interesse legítimo em segurança; na LGPD, art. 7º, V e IX);
 4. fornecedores e onde ficam os dados:
    - Supabase, Irlanda (UE);
    - Vercel, servidores na UE ou nos EUA com cláusulas contratuais-padrão;
@@ -1013,66 +857,80 @@ test.each([["/login", "Entrar"], ["/recuperar", "Recuperar"], ["/privacidade", "
    - conta enquanto ativa;
    - registros de atividade por 180 dias;
    - limites de tentativas por 1 dia;
-6. direitos (acesso, retificação, apagamento, portabilidade, oposição, reclamação à CNPD) e como pedir;
+6. direitos e como pedir, pelo e-mail de contato, com resposta em até 15 dias (LGPD) / 30 dias (RGPD) / 45 dias (CCPA):
+   - **Brasil (LGPD):** confirmação, acesso, correção, anonimização, portabilidade, eliminação, informação sobre compartilhamento, revogação do consentimento; reclamação à **ANPD**;
+   - **UE (RGPD):** acesso, retificação, apagamento, limitação, portabilidade, oposição; reclamação à autoridade do país (ex.: **CNPD** em Portugal);
+   - **EUA (CCPA/CPRA e leis estaduais parecidas):** saber, apagar, corrigir, não ser discriminado por exercer direitos; o NewFarmer **não vende nem compartilha** dados pessoais para publicidade comportamental e não usa dados sensíveis para inferir características, por isso não há link "Do Not Sell or Share";
 7. cookies (lista dos 4 e para que servem);
-8. data da última atualização.
+8. crianças: o serviço não é para menores de 13 anos (COPPA), e conta descoberta de menor de 13 anos é apagada;
+9. transferência internacional: dados podem ser tratados no Brasil, na UE e nos EUA, com as salvaguardas dos fornecedores (cláusulas contratuais-padrão);
+10. data da última atualização.
 
 **Termos:**
 1. o que o serviço é e o que não é: orientação geral, não substitui veterinário nem agrônomo; leis de registro de animais variam e devem ser confirmadas com o órgão oficial;
-2. conta da fazenda: o admin responde pelas contas que cria;
+2. conta: pessoal e intransferível; a pessoa responde pelo que faz com ela e deve ter 13 anos ou mais;
 3. uso proibido;
 4. disponibilidade sem garantia;
 5. encerramento da conta;
-6. lei e foro;
+6. lei e foro: lei brasileira, foro de Jundiaí/SP, sem afastar direitos que a lei do país do usuário (UE, EUA) não deixa afastar;
 7. contato.
 
 - [ ] **Step 1: E2E que falha.**
   - As duas páginas abrem, nos dois idiomas, com o título certo.
   - O cadastro sem marcar o aceite mostra o erro "Para criar a conta, aceite os Termos e a Política de Privacidade".
+  - O cadastro sem marcar "Tenho 13 anos ou mais" mostra "O NewFarmer é para maiores de 13 anos".
 - [ ] **Step 2:** escreva os textos e as páginas. Peça ao usuário para revisar os textos antes do commit.
 - [ ] **Step 3:** commit `feat: política de privacidade, termos de uso e aceite no cadastro`.
 
 ---
 
-## Fase 4: Monitoramento (dono do site)
+## Fase 4: Settings do dono do site
 
-### Task 18: Página de Monitoramento
+### Task 14: Settings do dono do site: Activity logs e Monitoramento
 
 **Files:**
-- Create: `src/server/monitoring.ts`, `src/app/(app)/monitoramento/page.tsx`
+- Create: `src/server/monitoring.ts`, `src/server/authz.ts` (`requirePlatformAdmin()`: quem não é dono do site recebe 404)
+- Create: `src/app/(app)/settings/layout.tsx` (abas Activity logs | Monitoramento)
+- Create: `src/app/(app)/settings/activity/page.tsx`:
+  - tabela com quando, quem (username), o que (texto traduzido de cada `ActivityAction`), alvo e IP;
+  - filtros por username e por tipo de ação;
+  - "Carregar mais", com `before` igual à data do último item;
+- Create: `src/app/(app)/settings/monitoramento/page.tsx`
 - Create: `src/instrumentation.ts` (`onRequestError` grava em `error_logs`: rota, mensagem curta, hora; nunca o corpo do pedido)
 - Modify: `src/server/migrations.ts` (migração 7: `error_logs` com RLS)
-- Modify: `src/components/UserMenu.tsx` (item "Monitoramento" logo abaixo de "Perfil" se `user.isPlatformAdmin`)
+- Modify: `src/components/UserMenu.tsx` (item "Settings" logo abaixo de "Perfil" se `user.isPlatformAdmin`)
+- Modify: `src/middleware.ts` (matcher inclui `/settings/:path*`)
 - Modify: `docs/deploy.md`. Explica como se tornar dono do site, no SQL Editor do Supabase:
   `UPDATE users SET is_platform_admin = TRUE WHERE email = 'seu@email';`
   Não há tela para isso, de propósito.
 - Test: `tests/integration/monitoring.test.ts`, `tests/e2e/monitoring.spec.ts`
 
 **Interfaces:**
-- Produces: `getPlatformStats(db, now) → { farms, users, activeSessions, logins24h: { ok, failed }, lockedAccounts, rateLimited24h, errors24h, recentErrors: { at, route, message }[], dbLatencyMs, weatherCacheEntries }`.
+- Produces: `getPlatformStats(db, now) → { users, newUsers7d, activeSessions, logins24h: { ok, failed }, lockedAccounts, rateLimited24h, errors24h, recentErrors: { at, route, message }[], dbLatencyMs, weatherCacheEntries }`.
 
 - [ ] **Step 1: Testes que falham**
-  - Com 2 fazendas, 3 contas, 1 login certo e 2 errados nas últimas 24 h, `getPlatformStats` devolve esses números.
-  - O E2E confirma que admin de fazenda comum não vê o item no menu e recebe 404 em `/monitoramento`.
-- [ ] **Step 2:** `rateLimited24h` precisa de registro: `hit()` passa a gravar `logActivity(… action: "security.rateLimited")` quando bloqueia, com `farmId: null`. Acrescente essa ação ao tipo `ActivityAction`.
+  - Com 3 contas, 1 login certo e 2 errados nas últimas 24 h, `getPlatformStats` devolve esses números.
+  - O E2E confirma que um usuário comum não vê "Settings" no menu e recebe 404 em `/settings/activity` e `/settings/monitoramento`.
+  - O E2E também liga `is_platform_admin` num usuário de teste (direto no banco PGlite do robô, por um endpoint só de desenvolvimento ou um script) e confirma que ele vê as duas abas.
+- [ ] **Step 2:** `rateLimited24h` precisa de registro: `hit()` passa a gravar `logActivity(… action: "security.rateLimited")` quando bloqueia, com `userId` da conta se houver. A ação já está no tipo `ActivityAction` desde a Task 6.
 - [ ] **Step 3: Tela**
-  - Cartões com fazendas, contas, sessões ativas, logins nas 24 h (certos/errados), contas bloqueadas, bloqueios por excesso, erros nas 24 h e tempo de resposta do banco.
+  - Cartões com contas (total e novas em 7 dias), sessões ativas, logins nas 24 h (certos/errados), contas bloqueadas, bloqueios por excesso, erros nas 24 h e tempo de resposta do banco.
   - Tabela com os últimos 50 erros.
   - Botão "Atualizar".
   - Só leitura, com `requirePlatformAdmin()` (404 para os outros).
-  - Não mostra e-mails, nomes nem dados de fazendas: só números.
-- [ ] **Step 4:** commit `feat: página de monitoramento para o dono do site`.
+  - Monitoramento não mostra e-mails, nomes nem dados das criações: só números. Activity logs mostra o username, que é necessário para investigar.
+- [ ] **Step 4:** commit `feat: Settings do dono do site com Activity logs e Monitoramento`.
 
 ---
 
-## Verificação final (depois da Task 18)
+## Verificação final (depois da Task 14)
 
 - [ ] `npx vitest run`, `npx playwright test` e `npm run build`: tudo verde.
 - [ ] Migração no Supabase:
   - backup;
   - rodar o site uma vez com o `.env.local`, para aplicar as migrações;
-  - conferir que a conta real (matheusps70@hotmail.com) virou Admin de uma fazenda com número `NF-…`, mantendo cidade, animais e diário;
-  - mandar o número e o username ao usuário.
+  - conferir que a conta real (matheusps70@hotmail.com) ganhou username (esperado: `matheusps70`), mantendo cidade, animais e diário;
+  - ligar `is_platform_admin` nela e mandar o username ao usuário.
 - [ ] `curl -I` no site da Vercel: cabeçalhos de segurança presentes e sem `X-Powered-By`.
 - [ ] `/dev/inbox` online dá 404.
 - [ ] RevisionCheck (5 revisores) e mp-code-review contra este plano.
