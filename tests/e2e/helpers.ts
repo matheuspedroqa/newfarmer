@@ -37,7 +37,10 @@ export async function signup(page: Page, email: string, city = "Curitiba", usern
 /** Sai da conta (apaga os cookies) mas mantém o site em português, como nos demais testes. */
 export async function clearSession(context: BrowserContext) {
   await context.clearCookies();
-  await context.addCookies([{ name: "nf_locale", value: "pt", domain: "localhost", path: "/" }]);
+  await context.addCookies([
+    { name: "nf_locale", value: "pt", domain: "localhost", path: "/" },
+    { name: "nf_cookie_notice", value: "1", domain: "localhost", path: "/" },
+  ]);
 }
 
 /** Abre o menu da conta (canto superior direito) e escolhe uma opção. */

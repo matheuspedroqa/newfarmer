@@ -4,7 +4,8 @@ import { getLocale, getMessages } from "next-intl/server";
 import { Fraunces, Nunito } from "next/font/google";
 import { cookies } from "next/headers";
 import { resolveTheme } from "@/i18n/locales";
-import { THEME_COOKIE } from "@/lib/cookies";
+import { CookieNotice } from "@/components/CookieNotice";
+import { COOKIE_NOTICE_COOKIE, THEME_COOKIE } from "@/lib/cookies";
 import "./globals.css";
 
 const fraunces = Fraunces({ subsets: ["latin"], weight: ["500", "700"], variable: "--font-fraunces" });
@@ -15,7 +16,9 @@ export const metadata: Metadata = { title: { template: "%s · NewFarmer", defaul
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
   const messages = await getMessages();
-  const theme = resolveTheme((await cookies()).get(THEME_COOKIE)?.value);
+  const jar = await cookies();
+  const theme = resolveTheme(jar.get(THEME_COOKIE)?.value);
+  const showNotice = !jar.has(COOKIE_NOTICE_COOKIE);
   const classes = [fraunces.variable, nunito.variable, theme === "dark" ? "dark" : ""].join(" ").trim();
 
   return (
@@ -23,6 +26,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="min-h-screen font-sans antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
+          {showNotice && <CookieNotice />}
         </NextIntlClientProvider>
       </body>
     </html>

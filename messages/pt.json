@@ -438,5 +438,11 @@
     "title": "Página não encontrada",
     "text": "O endereço que você abriu não existe ou foi movido.",
     "back": "Voltar ao início"
+  },
+  "cookieNotice": {
+    "text": "Usamos apenas cookies essenciais para manter você conectado e lembrar idioma e tema.",
+    "privacy": "Política de Privacidade",
+    "ok": "Entendi",
+    "label": "Aviso de cookies"
   }
 }

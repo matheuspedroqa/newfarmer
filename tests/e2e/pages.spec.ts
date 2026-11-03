@@ -36,3 +36,25 @@ test("quem está logado vai da inicial ao painel, que tem título próprio", asy
   await page.goto("/plantacoes/tomato");
   await expect(page).toHaveTitle("Tomate · NewFarmer");
 });
+
+test.describe("aviso de cookies", () => {
+  // Começa sem o cookie do aviso (mas em português).
+  test.use({
+    storageState: {
+      cookies: [{ name: "nf_locale", value: "pt", domain: "localhost", path: "/", expires: -1, httpOnly: false, secure: false, sameSite: "Lax" }],
+      origins: [],
+    },
+  });
+
+  test("aparece na primeira visita e some para sempre depois de Entendi", async ({ page }) => {
+    await page.goto("/login");
+    const aviso = page.getByRole("region", { name: "Aviso de cookies" });
+    await expect(aviso).toContainText("Usamos apenas cookies essenciais para manter você conectado e lembrar idioma e tema.");
+    await expect(aviso.getByRole("link", { name: "Política de Privacidade" })).toHaveAttribute("href", "/privacidade");
+    await aviso.getByRole("button", { name: "Entendi" }).click();
+    await expect(aviso).toBeHidden();
+    await page.reload();
+    await expect(page.getByRole("button", { name: "Entrar" }).first()).toBeVisible();
+    await expect(page.getByRole("region", { name: "Aviso de cookies" })).toHaveCount(0);
+  });
+});

@@ -438,5 +438,11 @@
     "title": "Page not found",
     "text": "The address you opened does not exist or was moved.",
     "back": "Back to home"
+  },
+  "cookieNotice": {
+    "text": "We only use essential cookies to keep you signed in and remember your language and theme.",
+    "privacy": "Privacy Policy",
+    "ok": "Got it",
+    "label": "Cookie notice"
   }
 }
