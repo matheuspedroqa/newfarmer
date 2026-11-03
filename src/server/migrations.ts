@@ -101,18 +101,29 @@ ALTER TABLE dev_emails ENABLE ROW LEVEL SECURITY;
   },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
-export async function migrate(db: Db): Promise<number[]> {
-  await db.run("CREATE TABLE IF NOT EXISTS schema_migrations (id INTEGER PRIMARY KEY, applied_at BIGINT NOT NULL)");
-  await db.run("ALTER TABLE schema_migrations ENABLE ROW LEVEL SECURITY");
-  const done = new Set((await db.query<{ id: number }>("SELECT id FROM schema_migrations")).map((r) => r.id));
+// Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.
+const LOCK_ID = 7_410_001;
+
+type Migration = { id: number; name: string; sql: string };
+
+export async function applyMigrations(db: Db, list: readonly Migration[]): Promise<number[]> {
+  await db.transaction(async (tx) => {
+    await tx.run("SELECT pg_advisory_xact_lock($1)", [LOCK_ID]);
+    await tx.run("CREATE TABLE IF NOT EXISTS schema_migrations (id INTEGER PRIMARY KEY, applied_at BIGINT NOT NULL)");
+    await tx.run("ALTER TABLE schema_migrations ENABLE ROW LEVEL SECURITY");
+  });
   const applied: number[] = [];
-  for (const m of MIGRATIONS) {
-    if (done.has(m.id)) continue;
+  for (const m of list) {
     await db.transaction(async (tx) => {
+      await tx.run("SELECT pg_advisory_xact_lock($1)", [LOCK_ID]);
+      // Reconfere já com a trava: outra instância pode ter aplicado enquanto esperávamos.
+      if ((await tx.query("SELECT 1 FROM schema_migrations WHERE id = $1", [m.id])).length) return;
       await tx.exec(m.sql);
       await tx.run("INSERT INTO schema_migrations (id, applied_at) VALUES ($1, $2)", [m.id, Date.now()]);
+      applied.push(m.id);
     });
-    applied.push(m.id);
   }
   return applied;
 }
+
+export const migrate = (db: Db) => applyMigrations(db, MIGRATIONS);

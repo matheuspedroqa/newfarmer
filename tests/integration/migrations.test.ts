@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { PGlite } from "@electric-sql/pglite";
-import { MIGRATIONS, migrate } from "@/server/migrations";
+import { MIGRATIONS, applyMigrations, migrate } from "@/server/migrations";
 import { pgliteDb } from "@/server/db";
 
 describe("migrações", () => {
@@ -15,8 +15,26 @@ describe("migrações", () => {
     await lite.exec(MIGRATIONS[0].sql);
     await lite.exec(`INSERT INTO users (name,email,password_hash,city_label,latitude,longitude,country_code,climate_zone,hemisphere,created_at)
       VALUES ('Ana','a@x.com','h','C',0,0,'PT','temperate','north',0)`);
-    const db = pgliteDb(lite);
-    await migrate(db);
+    const db = pgliteDb(lite, lite);
+    expect(await migrate(db)).toEqual([1]);
     expect(await db.query("SELECT name FROM users")).toEqual([{ name: "Ana" }]);
+    expect(await db.query("SELECT id FROM schema_migrations")).toEqual([{ id: 1 }]);
+    expect(await migrate(db)).toEqual([]);
+  });
+
+  it("duas instâncias migrando ao mesmo tempo aplicam cada migração uma só vez", async () => {
+    const lite = new PGlite();
+    const db = pgliteDb(lite, lite);
+    const [a, b] = await Promise.all([migrate(db), migrate(db)]);
+    expect([...a, ...b].sort()).toEqual(MIGRATIONS.map((m) => m.id));
+  });
+
+  it("migração que falha no meio é desfeita por inteiro", async () => {
+    const lite = new PGlite();
+    const db = pgliteDb(lite, lite);
+    const ruim = { id: 99, name: "ruim", sql: "CREATE TABLE tmp_ruim (a INT); SELECT 1/0;" };
+    await expect(applyMigrations(db, [ruim])).rejects.toThrow();
+    expect(await db.query("SELECT id FROM schema_migrations")).toEqual([]);
+    expect(await db.query("SELECT to_regclass('tmp_ruim') AS t")).toEqual([{ t: null }]);
   });
 });
