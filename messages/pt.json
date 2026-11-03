@@ -293,7 +293,8 @@
   "userMenu": {
     "open": "Abrir menu da conta",
     "myfarm": "MyFarm",
-    "profile": "Perfil"
+    "profile": "Perfil",
+    "settings": "Settings"
   },
   "languages": {
     "pt": "Português",
@@ -429,7 +430,9 @@
     "notFound": "Página não encontrada",
     "devInbox": "Caixa de e-mails (dev)",
     "privacy": "Privacidade",
-    "terms": "Termos"
+    "terms": "Termos",
+    "activityLogs": "Activity logs",
+    "monitoring": "Monitoramento"
   },
   "home": {
     "cta": "Criar conta grátis",
@@ -450,5 +453,61 @@
     "privacy": "Política de Privacidade",
     "ok": "Entendi",
     "label": "Aviso de cookies"
+  },
+  "activity": {
+    "auth": {
+      "login": "Entrou",
+      "loginFailed": "Login errado",
+      "logout": "Saiu",
+      "signup": "Criou a conta",
+      "passwordChanged": "Trocou a senha",
+      "passwordReset": "Redefiniu a senha",
+      "usernameReminder": "Pediu lembrete do username",
+      "emailConfirmed": "Confirmou o e-mail"
+    },
+    "farm": {
+      "updated": "Atualizou a fazenda"
+    },
+    "diary": {
+      "created": "Escreveu no diário",
+      "deleted": "Apagou do diário"
+    },
+    "profile": {
+      "updated": "Atualizou o perfil"
+    },
+    "security": {
+      "rateLimited": "Bloqueado por excesso"
+    }
+  },
+  "settings": {
+    "tabActivity": "Activity logs",
+    "tabMonitoring": "Monitoramento",
+    "tabsLabel": "Seções de Settings",
+    "username": "Username",
+    "action": "Ação",
+    "allActions": "Todas",
+    "filter": "Filtrar",
+    "when": "Quando",
+    "who": "Quem",
+    "what": "O que",
+    "target": "Alvo",
+    "ip": "IP",
+    "empty": "Nada registrado.",
+    "loadMore": "Carregar mais",
+    "refresh": "Atualizar",
+    "users": "Contas",
+    "newUsers7d": "{count} novas em 7 dias",
+    "activeSessions": "Sessões ativas",
+    "logins24h": "Logins nas 24 h",
+    "loginsDetail": "{ok} certos · {failed} errados",
+    "lockedAccounts": "Contas bloqueadas",
+    "rateLimited24h": "Bloqueios por excesso (24 h)",
+    "errors24h": "Erros (24 h)",
+    "dbLatency": "Tempo de resposta do banco",
+    "weatherCache": "Itens no cache do tempo",
+    "recentErrors": "Últimos 50 erros",
+    "route": "Rota",
+    "message": "Mensagem",
+    "noErrors": "Nenhum erro registrado."
   }
 }

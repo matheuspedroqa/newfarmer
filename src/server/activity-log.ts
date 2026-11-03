@@ -4,20 +4,22 @@ import type { LoginResult } from "./accounts";
 import type { Db } from "./db";
 import { purgeRateLimits } from "./rate-limit";
 
-export type ActivityAction =
-  | "auth.login"
-  | "auth.loginFailed"
-  | "auth.logout"
-  | "auth.signup"
-  | "auth.passwordChanged"
-  | "auth.passwordReset"
-  | "auth.usernameReminder"
-  | "auth.emailConfirmed"
-  | "farm.updated"
-  | "diary.created"
-  | "diary.deleted"
-  | "profile.updated"
-  | "security.rateLimited";
+export const ACTIVITY_ACTIONS = [
+  "auth.login",
+  "auth.loginFailed",
+  "auth.logout",
+  "auth.signup",
+  "auth.passwordChanged",
+  "auth.passwordReset",
+  "auth.usernameReminder",
+  "auth.emailConfirmed",
+  "farm.updated",
+  "diary.created",
+  "diary.deleted",
+  "profile.updated",
+  "security.rateLimited",
+] as const;
+export type ActivityAction = (typeof ACTIVITY_ACTIONS)[number];
 
 export type ActivityEntry = {
   id: number;
@@ -94,17 +96,35 @@ export function loginTarget(typedUsername: string): string {
   return usernameProblem(normalized) === null ? normalized : "";
 }
 
+type ActivityFilter = { userId?: number; action?: ActivityAction; before?: number; limit?: number };
+
+const filterParams = ({ userId, action, before, limit = 50 }: ActivityFilter) => [
+  userId ?? null,
+  action ?? null,
+  Number.isFinite(before) ? before : null,
+  // NaN no limite (ex.: ?limit=abc) quebraria a consulta: volta para 50.
+  Number.isFinite(limit) ? Math.min(Math.max(Math.trunc(limit), 1), 200) : 50,
+];
+
 /** Mais novo primeiro. `before` é o createdAt do último item da página anterior. */
-export function listActivity(
-  db: Db,
-  { userId, action, before, limit = 50 }: { userId?: number; action?: ActivityAction; before?: number; limit?: number },
-): Promise<ActivityEntry[]> {
+export function listActivity(db: Db, filter: ActivityFilter): Promise<ActivityEntry[]> {
   return db.query<ActivityEntry>(
     `SELECT id, user_id AS "userId", action, target, details, ip, created_at AS "createdAt"
      FROM activity_logs
      WHERE ($1::int IS NULL OR user_id = $1) AND ($2::text IS NULL OR action = $2) AND ($3::bigint IS NULL OR created_at < $3)
      ORDER BY created_at DESC, id DESC LIMIT $4`,
-    [userId ?? null, action ?? null, before ?? null, Math.min(Math.max(limit, 1), 200)],
+    filterParams(filter),
+  );
+}
+
+/** Igual a listActivity, com o username da conta (null quando não há conta ou ela foi apagada). */
+export function listActivityWithUsernames(db: Db, filter: ActivityFilter): Promise<(ActivityEntry & { username: string | null })[]> {
+  return db.query(
+    `SELECT a.id, a.user_id AS "userId", u.username, a.action, a.target, a.details, a.ip, a.created_at AS "createdAt"
+     FROM activity_logs a LEFT JOIN users u ON u.id = a.user_id
+     WHERE ($1::int IS NULL OR a.user_id = $1) AND ($2::text IS NULL OR a.action = $2) AND ($3::bigint IS NULL OR a.created_at < $3)
+     ORDER BY a.created_at DESC, a.id DESC LIMIT $4`,
+    filterParams(filter),
   );
 }
 
@@ -112,5 +132,6 @@ export async function purgeOld(db: Db, now = Date.now()): Promise<void> {
   await db.run("DELETE FROM activity_logs WHERE created_at < $1", [now - ACTIVITY_RETENTION_MS]);
   await db.run("DELETE FROM login_attempts WHERE attempted_at < $1", [now - LOGIN_ATTEMPTS_RETENTION_MS]);
   await db.run("DELETE FROM weather_cache WHERE fetched_at < $1", [now - WEATHER_CACHE_RETENTION_MS]);
+  await db.run("DELETE FROM error_logs WHERE at < $1", [now - ACTIVITY_RETENTION_MS]);
   await purgeRateLimits(db, now);
 }

@@ -6,6 +6,7 @@ const TABLES = [
   "dev_emails",
   "diary_entries",
   "email_verification_tokens",
+  "error_logs",
   "farm_animals",
   "farm_crops",
   "login_attempts",

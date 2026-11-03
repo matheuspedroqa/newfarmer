@@ -31,7 +31,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           </div>
           <div className="flex items-center gap-3">
             <TopControls />
-            <UserMenu name={user.name} />
+            <UserMenu name={user.name} isPlatformAdmin={user.isPlatformAdmin} />
             <form action={logoutAction}>
               <button type="submit" className="rounded-full border border-border px-3 py-1 text-sm">{t("auth.logout")}</button>
             </form>

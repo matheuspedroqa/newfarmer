@@ -48,3 +48,14 @@ Para testar contra o Supabase daqui, crie `.env.local` (ignorado pelo Git) com `
   renomear `login_attempts.identifier` para `email` e tornar `users.username` opcional. Prefira corrigir para frente.
 - Depois da migração 3, sessões com mais de 1 hora são encerradas uma vez. Depois da 5, o login passa a ser pelo username
   (contas antigas: a parte do e-mail antes do @; "Esqueci o username" envia por e-mail).
+
+## Virar dono do site (Settings)
+
+As telas **Settings → Activity logs** e **Monitoramento** só aparecem para o dono do site; para os demais, dão 404.
+Não há tela para ligar isso, de propósito. No Supabase, abra o **SQL Editor** e rode, trocando pelo seu username:
+
+```sql
+UPDATE users SET is_platform_admin = TRUE WHERE username = 'seu_username';
+```
+
+Saia e entre de novo (ou recarregue a página): o item **Settings** aparece no menu da conta, logo abaixo de **Perfil**.

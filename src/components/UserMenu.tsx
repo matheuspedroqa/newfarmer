@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-export function UserMenu({ name }: { name: string }) {
+export function UserMenu({ name, isPlatformAdmin }: { name: string; isPlatformAdmin: boolean }) {
   const t = useTranslations("userMenu");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -47,6 +47,11 @@ export function UserMenu({ name }: { name: string }) {
           <Link role="menuitem" href="/perfil" onClick={() => setOpen(false)} className={item}>
             <span aria-hidden>👤</span> {t("profile")}
           </Link>
+          {isPlatformAdmin && (
+            <Link role="menuitem" href="/settings/activity" onClick={() => setOpen(false)} className={item}>
+              <span aria-hidden>⚙️</span> {t("settings")}
+            </Link>
+          )}
         </div>
       )}
     </div>

@@ -177,6 +177,16 @@ DROP INDEX IF EXISTS idx_login_attempts_email;
 CREATE INDEX idx_login_attempts_identifier ON login_attempts (identifier, attempted_at);
 `,
   },
+  {
+    id: 7,
+    name: "error_logs",
+    // Só rota, mensagem curta e hora: nunca corpo nem cabeçalhos do pedido.
+    sql: `
+CREATE TABLE error_logs (id SERIAL PRIMARY KEY, at BIGINT NOT NULL, route TEXT NOT NULL, message TEXT NOT NULL);
+CREATE INDEX idx_error_logs_at ON error_logs (at DESC);
+ALTER TABLE error_logs ENABLE ROW LEVEL SECURITY;
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

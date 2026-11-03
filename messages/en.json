@@ -293,7 +293,8 @@
   "userMenu": {
     "open": "Open account menu",
     "myfarm": "MyFarm",
-    "profile": "Profile"
+    "profile": "Profile",
+    "settings": "Settings"
   },
   "languages": {
     "pt": "Português",
@@ -429,7 +430,9 @@
     "notFound": "Page not found",
     "devInbox": "E-mail inbox (dev)",
     "privacy": "Privacy",
-    "terms": "Terms"
+    "terms": "Terms",
+    "activityLogs": "Activity logs",
+    "monitoring": "Monitoring"
   },
   "home": {
     "cta": "Create free account",
@@ -450,5 +453,61 @@
     "privacy": "Privacy Policy",
     "ok": "Got it",
     "label": "Cookie notice"
+  },
+  "activity": {
+    "auth": {
+      "login": "Logged in",
+      "loginFailed": "Failed login",
+      "logout": "Logged out",
+      "signup": "Created account",
+      "passwordChanged": "Changed password",
+      "passwordReset": "Reset password",
+      "usernameReminder": "Asked for username reminder",
+      "emailConfirmed": "Confirmed e-mail"
+    },
+    "farm": {
+      "updated": "Updated farm"
+    },
+    "diary": {
+      "created": "Wrote in diary",
+      "deleted": "Deleted from diary"
+    },
+    "profile": {
+      "updated": "Updated profile"
+    },
+    "security": {
+      "rateLimited": "Blocked for too many requests"
+    }
+  },
+  "settings": {
+    "tabActivity": "Activity logs",
+    "tabMonitoring": "Monitoring",
+    "tabsLabel": "Settings sections",
+    "username": "Username",
+    "action": "Action",
+    "allActions": "All",
+    "filter": "Filter",
+    "when": "When",
+    "who": "Who",
+    "what": "What",
+    "target": "Target",
+    "ip": "IP",
+    "empty": "Nothing logged.",
+    "loadMore": "Load more",
+    "refresh": "Refresh",
+    "users": "Accounts",
+    "newUsers7d": "{count} new in 7 days",
+    "activeSessions": "Active sessions",
+    "logins24h": "Logins in 24 h",
+    "loginsDetail": "{ok} ok · {failed} failed",
+    "lockedAccounts": "Locked accounts",
+    "rateLimited24h": "Rate-limit blocks (24 h)",
+    "errors24h": "Errors (24 h)",
+    "dbLatency": "Database response time",
+    "weatherCache": "Weather cache entries",
+    "recentErrors": "Last 50 errors",
+    "route": "Route",
+    "message": "Message",
+    "noErrors": "No errors logged."
   }
 }
