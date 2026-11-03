@@ -82,11 +82,13 @@ Sem dependências novas.
 
 ## Antes de começar: o que o usuário precisa informar
 
-Estes dados entram nas páginas legais (Task 17). Sem eles a Task 17 não começa; as outras podem seguir.
+Respondido em 2026-11-03:
 
-1. Nome do responsável pelo site, pessoa ou empresa, que aparece como "responsável pelo tratamento".
-2. E-mail de contato para pedidos de privacidade.
-3. País e cidade do responsável, para a lei aplicável nos Termos.
+1. Responsável pelo tratamento / controlador: **Matheus Lemes**
+2. Contato de privacidade (encarregado / DPO): **matheusps70@hotmail.com**
+3. Sede do responsável: **Jundiaí, São Paulo, Brasil**.
+   - **Termos:** lei brasileira, foro da comarca de Jundiaí/SP.
+   - **Privacidade:** cobre a **LGPD** (controlador no Brasil; reclamação à ANPD) **e** o **RGPD** (usuários na UE; banco no Supabase eu-west-1; reclamação à autoridade do país, ex.: CNPD em Portugal).
 
 ## Estrutura de arquivos
 
