@@ -21,6 +21,11 @@ export const ACTIVITY_ACTIONS = [
   "account.exported",
   "account.deleted",
   "security.rateLimited",
+  "billing.checkoutStarted",
+  "billing.subscriptionChanged",
+  "admin.viewedUser",
+  "marketing.optInChanged",
+  "marketing.campaignSent",
 ] as const;
 export type ActivityAction = (typeof ACTIVITY_ACTIONS)[number];
 
@@ -36,6 +41,7 @@ export type ActivityEntry = {
 
 export const ACTIVITY_RETENTION_MS = 180 * 24 * 60 * 60_000;
 export const LOGIN_ATTEMPTS_RETENTION_MS = 30 * 24 * 60 * 60_000;
+export const STRIPE_EVENTS_RETENTION_MS = 30 * 24 * 60 * 60_000;
 export const WEATHER_CACHE_RETENTION_MS = 7 * 24 * 60 * 60_000;
 const FORBIDDEN_KEY = /pass|token|hash|secret/i;
 
@@ -135,6 +141,7 @@ export function listActivityWithUsernames(db: Db, filter: ActivityFilter): Promi
 export async function purgeOld(db: Db, now = Date.now()): Promise<void> {
   await db.run("DELETE FROM activity_logs WHERE created_at < $1", [now - ACTIVITY_RETENTION_MS]);
   await db.run("DELETE FROM login_attempts WHERE attempted_at < $1", [now - LOGIN_ATTEMPTS_RETENTION_MS]);
+  await db.run("DELETE FROM stripe_events WHERE received_at < $1", [now - STRIPE_EVENTS_RETENTION_MS]);
   await db.run("DELETE FROM weather_cache WHERE fetched_at < $1", [now - WEATHER_CACHE_RETENTION_MS]);
   await db.run("DELETE FROM error_logs WHERE at < $1", [now - ACTIVITY_RETENTION_MS]);
   // Sessão vencida ou parada além do prazo de inatividade, e tokens vencidos (link vencido continua dando "expirado").

@@ -61,6 +61,7 @@
     "emailTaken": "Este e-mail já tem uma conta. Quer entrar?",
     "invalidCredentials": "Username ou senha incorretos",
     "locked": "Muitas tentativas. Tente de novo em 15 minutos.",
+    "paymentError": "Não foi possível cancelar a assinatura agora. Tente de novo em alguns minutos.",
     "rateLimited": "Muitas tentativas. Tente de novo em alguns minutos.",
     "linkExpired": "Este link expirou. Peça um novo",
     "generic": "Algo deu errado. Tente de novo.",
@@ -497,6 +498,9 @@
     "security": {
       "rateLimited": "Bloqueado por excesso"
     },
+    "billing": {"checkoutStarted": "Iniciou a assinatura", "subscriptionChanged": "Assinatura alterada"},
+    "admin": {"viewedUser": "Viu dados de uma conta"},
+    "marketing": {"optInChanged": "Mudou o aceite de e-mails", "campaignSent": "Enviou campanha de e-mail"},
     "account": {
       "exported": "Baixou os dados",
       "deleted": "Apagou a conta"

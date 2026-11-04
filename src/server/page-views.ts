@@ -31,10 +31,10 @@ export async function leadFunnel(db: Db, sinceMs: number) {
        COUNT(DISTINCT visitor_id) FILTER (WHERE path IN ('/', '/pt')) AS home,
        COUNT(DISTINCT visitor_id) FILTER (WHERE path = '/register') AS reg,
        COUNT(DISTINCT visitor_id) FILTER (WHERE path = '/welcome') AS welcome,
-       COUNT(DISTINCT visitor_id) FILTER (WHERE path = '/subscribe' OR path LIKE '/subscribe/%') AS sub
+       COUNT(DISTINCT visitor_id) FILTER (WHERE path = '/subscribe' OR path LIKE '/subscribe/%') AS sub,
+       COUNT(DISTINCT visitor_id) FILTER (WHERE user_id IN (SELECT user_id FROM subscriptions WHERE status IN ('active','trialing','past_due'))) AS paid
      FROM page_views WHERE created_at >= $1`,
     [sinceMs],
   );
-  // paid: a Task 3 preenche com os visitantes ligados a contas com assinatura ativa.
-  return { "/": Number(r.home), "/register": Number(r.reg), "/welcome": Number(r.welcome), "/subscribe": Number(r.sub), paid: 0 };
+  return { "/": Number(r.home), "/register": Number(r.reg), "/welcome": Number(r.welcome), "/subscribe": Number(r.sub), paid: Number(r.paid) };
 }

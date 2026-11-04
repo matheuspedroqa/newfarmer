@@ -69,8 +69,8 @@ export async function saveLocaleLogged(db: Db, userId: number, locale: Locale, i
   await logSafely(db, { userId, action: "profile.updated", details: { field: "locale", value: locale }, ip });
 }
 
-export async function deleteAccountLogged(db: Db, user: { id: number; username: string }, password: string, ip: string) {
-  const result = await deleteAccount(db, user.id, password);
+export async function deleteAccountLogged(db: Db, user: { id: number; username: string }, password: string, ip: string, provider?: Parameters<typeof deleteAccount>[3]) {
+  const result = await deleteAccount(db, user.id, password, provider);
   if (result === "ok") await logSafely(db, { userId: user.id, action: "account.deleted", target: user.username, ip });
   return result;
 }

@@ -1,8 +1,10 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { deleteAccount, exportUserData } from "@/server/account-data";
 import { logActivity } from "@/server/activity-log";
 import { addDiaryEntry } from "@/server/diary";
 import { saveFarm } from "@/server/farm";
+import { createFakePaymentProvider } from "@/server/payments/fake";
+import { upsertSubscription } from "@/server/subscriptions";
 import { createSession, getSessionUser } from "@/server/sessions";
 import { testDb } from "../helpers/db";
 import { DEFAULT_PASSWORD, makeUser } from "../helpers/users";
@@ -55,5 +57,50 @@ describe("deleteAccount", () => {
     const ana = await makeUser(db);
     expect(await deleteAccount(db, ana, "errada123")).toBe("wrongPassword");
     expect((await exportUserData(db, ana)).account.username).toBe("ana");
+  });
+
+  const active = { id: "sub_1", customer: "cus_1", status: "active", currency: "brl", amount: 699, currentPeriodEnd: 9000, cancelAtPeriodEnd: false, canceledAt: null };
+
+  it("com assinatura ativa cancela no provedor antes de apagar", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", active);
+    const provider = createFakePaymentProvider();
+    const cancel = vi.spyOn(provider, "cancelNow");
+    expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("ok");
+    expect(cancel).toHaveBeenCalledWith("sub_1");
+    expect(await db.query("SELECT 1 FROM users WHERE id = $1", [ana])).toHaveLength(0);
+  });
+
+  it("se o provedor falhar, devolve paymentError e a conta continua", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", active);
+    const provider = createFakePaymentProvider();
+    vi.spyOn(provider, "cancelNow").mockRejectedValue(new Error("Stripe respondeu 500"));
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("paymentError");
+    expect(await db.query("SELECT 1 FROM users WHERE id = $1", [ana])).toHaveLength(1);
+  });
+
+  it("sem assinatura ou já cancelada, nem constrói o provedor", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", { ...active, status: "canceled" });
+    const get = vi.fn();
+    expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, get)).toBe("ok");
+    expect(get).not.toHaveBeenCalled();
+  });
+});
+
+describe("exportUserData assinatura", () => {
+  it("inclui a assinatura sem ids do Stripe de outros", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    expect((await exportUserData(db, ana)).subscription).toBeNull();
+    await upsertSubscription(db, ana, "cus_1", { id: "sub_1", customer: "cus_1", status: "active", currency: "brl", amount: 699, currentPeriodEnd: 9000, cancelAtPeriodEnd: false, canceledAt: null }, 1000);
+    const data = await exportUserData(db, ana);
+    expect(data.subscription).toMatchObject({ status: "active", currency: "brl", amount: 699 });
+    expect(JSON.stringify(data)).not.toMatch(/password|hash|token/i);
   });
 });

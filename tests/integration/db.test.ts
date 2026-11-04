@@ -16,6 +16,8 @@ const TABLES = [
   "rate_limits",
   "schema_migrations",
   "sessions",
+  "stripe_events",
+  "subscriptions",
   "users",
   "weather_cache",
 ];

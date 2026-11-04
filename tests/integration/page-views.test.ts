@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { purgeOld } from "@/server/activity-log";
 import { exportUserData } from "@/server/account-data";
 import { leadFunnel, linkVisitorToUser, listUserPageViews, recordPageView } from "@/server/page-views";
+import { upsertSubscription } from "@/server/subscriptions";
 import { testDb } from "../helpers/db";
 import { makeUser } from "../helpers/users";
 
@@ -56,5 +57,22 @@ describe("page views", () => {
     await recordPageView(db, view("c", "/subscribe/ok"), 13);
     await recordPageView(db, view("old", "/"), 1);
     expect(await leadFunnel(db, 5)).toEqual({ "/": 3, "/register": 2, "/welcome": 1, "/subscribe": 1, paid: 0 });
+  });
+
+  it("paid conta visitantes distintos de contas com assinatura que libera acesso", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    const bia = await makeUser(db, { email: "bia@exemplo.com" });
+    const cai = await makeUser(db, { email: "cai@exemplo.com" });
+    const s = (status: string) => ({ id: `s_${status}`, customer: "c", status, currency: "usd", amount: 200, currentPeriodEnd: null, cancelAtPeriodEnd: false, canceledAt: null });
+    await upsertSubscription(db, ana, "cus_a", s("active"));
+    await upsertSubscription(db, bia, "cus_b", s("canceled"));
+    await upsertSubscription(db, cai, "cus_c", s("past_due"));
+    await recordPageView(db, view("a1", "/", ana), 10);
+    await recordPageView(db, view("a1", "/x", ana), 11);
+    await recordPageView(db, view("a2", "/", ana), 12);
+    await recordPageView(db, view("b1", "/", bia), 10);
+    await recordPageView(db, view("c1", "/", cai), 1);
+    expect((await leadFunnel(db, 5)).paid).toBe(2);
   });
 });

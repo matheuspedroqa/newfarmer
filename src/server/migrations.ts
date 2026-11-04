@@ -226,6 +226,20 @@ CREATE INDEX idx_page_views_visitor ON page_views (visitor_id, created_at);
 CREATE INDEX idx_page_views_user ON page_views (user_id, created_at);
 CREATE INDEX idx_page_views_created ON page_views (created_at);
 ALTER TABLE page_views ENABLE ROW LEVEL SECURITY;
+CREATE TABLE subscriptions (
+  user_id INTEGER PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+  stripe_customer_id TEXT NOT NULL UNIQUE,
+  stripe_subscription_id TEXT UNIQUE,
+  status TEXT NOT NULL DEFAULT 'none',
+  currency TEXT, amount INTEGER,
+  current_period_end BIGINT,
+  cancel_at_period_end BOOLEAN NOT NULL DEFAULT FALSE,
+  started_at BIGINT, canceled_at BIGINT,
+  updated_at BIGINT NOT NULL
+);
+ALTER TABLE subscriptions ENABLE ROW LEVEL SECURITY;
+CREATE TABLE stripe_events (id TEXT PRIMARY KEY, received_at BIGINT NOT NULL);
+ALTER TABLE stripe_events ENABLE ROW LEVEL SECURITY;
 `,
   },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];

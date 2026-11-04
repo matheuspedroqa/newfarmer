@@ -14,7 +14,7 @@ const csp = [
   "connect-src 'self'",
   "frame-ancestors 'none'",
   "base-uri 'self'",
-  "form-action 'self'",
+  "form-action 'self' https://checkout.stripe.com https://billing.stripe.com",
 ].join("; ");
 
 const securityHeaders = [

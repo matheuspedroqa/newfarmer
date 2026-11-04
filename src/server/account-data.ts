@@ -2,6 +2,9 @@ import "server-only";
 import bcrypt from "bcryptjs";
 import type { Db } from "./db";
 import { listUserPageViews } from "./page-views";
+import { getPaymentProvider } from "./payments";
+import type { PaymentProvider } from "./payments/types";
+import { getSubscription, isAccessStatus } from "./subscriptions";
 
 // Direito de acesso e portabilidade (LGPD art. 18, RGPD art. 15 e 20, CCPA): tudo que é da pessoa,
 // num formato aberto. Ficam de fora senha, tokens e sessões, que só servem para entrar na conta.
@@ -41,6 +44,7 @@ export async function exportUserData(db: Db, userId: number) {
     [userId],
   );
   const pageViews = await listUserPageViews(db, userId, 1000);
+  const subscription = await getSubscription(db, userId);
   const iso = (ms: string | number | null) => (ms === null ? null : new Date(Number(ms)).toISOString());
 
   return {
@@ -64,15 +68,40 @@ export async function exportUserData(db: Db, userId: number) {
     crops: crops.map((c) => c.crop_id),
     diary: diary.map((d) => ({ ...d, created_at: iso(d.created_at) })),
     activity: activity.map((a) => ({ ...a, created_at: iso(a.created_at) })),
+    subscription: subscription && {
+      status: subscription.status,
+      currency: subscription.currency,
+      amount: subscription.amount,
+      startedAt: subscription.startedAt === null ? null : iso(subscription.startedAt),
+      currentPeriodEnd: subscription.currentPeriodEnd === null ? null : iso(subscription.currentPeriodEnd),
+      cancelAtPeriodEnd: subscription.cancelAtPeriodEnd,
+      canceledAt: subscription.canceledAt === null ? null : iso(subscription.canceledAt),
+    },
     pageViews: pageViews.map((v) => ({ path: v.path, referrer: v.referrer, at: iso(v.createdAt) })),
   };
 }
 
-// O banco apaga junto (ON DELETE CASCADE) criação, diário, sessões e links de e-mail.
+// O banco apaga junto (ON DELETE CASCADE) criação, diário, sessões, links de e-mail e a assinatura.
 // O registro de atividade fica e some no prazo da Política (180 dias), como ela explica.
-export async function deleteAccount(db: Db, userId: number, password: string): Promise<"ok" | "wrongPassword"> {
+// Assinatura que libera acesso é cancelada na Stripe antes; se falhar, a conta fica (não cobrar de quem não tem mais conta).
+// O provedor só é construído quando há o que cancelar: apagar conta sem assinatura nunca exige chaves da Stripe.
+export async function deleteAccount(
+  db: Db,
+  userId: number,
+  password: string,
+  provider: PaymentProvider | (() => PaymentProvider) = getPaymentProvider,
+): Promise<"ok" | "wrongPassword" | "paymentError"> {
   const [row] = await db.query<{ password_hash: string }>("SELECT password_hash FROM users WHERE id = $1", [userId]);
   if (!row || !(await bcrypt.compare(password, row.password_hash))) return "wrongPassword";
+  const sub = await getSubscription(db, userId);
+  if (sub?.subscriptionId && isAccessStatus(sub.status)) {
+    try {
+      await (typeof provider === "function" ? provider() : provider).cancelNow(sub.subscriptionId);
+    } catch (error) {
+      console.error("Falha ao cancelar a assinatura ao apagar a conta:", error instanceof Error ? error.message : "erro");
+      return "paymentError";
+    }
+  }
   await db.run("DELETE FROM users WHERE id = $1", [userId]);
   return "ok";
 }

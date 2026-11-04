@@ -61,6 +61,7 @@
     "emailTaken": "This e-mail already has an account. Want to sign in?",
     "invalidCredentials": "Wrong username or password",
     "locked": "Too many attempts. Try again in 15 minutes.",
+    "paymentError": "We could not cancel your subscription right now. Please try again in a few minutes.",
     "rateLimited": "Too many attempts. Try again in a few minutes.",
     "linkExpired": "This link has expired. Request a new one",
     "generic": "Something went wrong. Please try again.",
@@ -497,6 +498,9 @@
     "security": {
       "rateLimited": "Blocked for too many requests"
     },
+    "billing": {"checkoutStarted": "Started checkout", "subscriptionChanged": "Subscription changed"},
+    "admin": {"viewedUser": "Viewed an account"},
+    "marketing": {"optInChanged": "Changed e-mail opt-in", "campaignSent": "Sent e-mail campaign"},
     "account": {
       "exported": "Downloaded data",
       "deleted": "Deleted account"
