@@ -15,7 +15,15 @@ export async function POST(request: Request) {
   const visitorId = jar.get(VISITOR_COOKIE)?.value;
   if (jar.get(CONSENT_COOKIE)?.value !== "all" || !visitorId || !UUID_RE.test(visitorId)) return none();
 
-  const body = (await request.json().catch(() => null)) as { path?: unknown; referrer?: unknown } | null;
+  // Corpo limitado antes de interpretar: este endpoint é público.
+  const raw = await request.text();
+  if (raw.length > 2048) return none();
+  let body: { path?: unknown; referrer?: unknown } | null = null;
+  try {
+    body = JSON.parse(raw);
+  } catch {
+    return none();
+  }
   if (typeof body?.path !== "string") return none();
   const path = body.path.split("?")[0].split("#")[0]; // tokens de e-mail nunca são gravados
   if (!path.startsWith("/") || path.length > 200 || SKIP.some((p) => path.startsWith(p))) return none();

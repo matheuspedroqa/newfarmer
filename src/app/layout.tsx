@@ -32,7 +32,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const messages = await getMessages();
   const jar = await cookies();
   const theme = resolveTheme(jar.get(THEME_COOKIE)?.value);
-  const showNotice = !jar.has(CONSENT_COOKIE) && !jar.has("nf_cookie_notice") // nf_cookie_notice: aviso antigo, vale como "só essenciais";
+  // nf_cookie_notice é o aviso antigo e vale como "só essenciais".
+  const showNotice = !jar.has(CONSENT_COOKIE) && !jar.has("nf_cookie_notice");
   const classes = [fraunces.variable, nunito.variable, theme === "dark" ? "dark" : ""].join(" ").trim();
 
   return (

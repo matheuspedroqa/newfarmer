@@ -21,7 +21,7 @@ export default async function MarketingLayout({ children }: { children: React.Re
       <footer className="flex flex-wrap justify-center gap-6 px-8 py-6 text-sm text-muted">
         <Link href="/privacy" className="hover:underline">{t("home.privacy")}</Link>
         <Link href="/terms" className="hover:underline">{t("home.terms")}</Link>
-        <CookiePreferencesLink className="hover:underline" />
+        <CookiePreferencesLink className="inline-flex min-h-11 items-center hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" />
       </footer>
     </div>
   );

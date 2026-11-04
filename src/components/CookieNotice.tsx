@@ -17,7 +17,7 @@ export function CookieNotice() {
     // O PageTracker só olha o cookie quando a rota muda: recarregar aplica a escolha já na página atual.
     location.reload();
   }
-  const btn = "min-h-11 rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-primary-text md:min-h-0";
+  const btn = "min-h-11 rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-primary-text md:min-h-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text focus-visible:ring-offset-2";
 
   const card = (
     <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-3 rounded-2xl bg-surface p-4 text-text shadow-lg ring-1 ring-border">

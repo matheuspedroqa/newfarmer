@@ -61,7 +61,7 @@ export default async function ProfilePage() {
       </div>
 
       <div className="rounded-3xl bg-surface p-6 ring-1 ring-border">
-        <CookiePreferencesLink className="font-semibold underline" />
+        <CookiePreferencesLink className="inline-flex min-h-11 items-center font-semibold underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" />
       </div>
 
       <div className="rounded-3xl bg-surface p-6 ring-1 ring-danger/40">
