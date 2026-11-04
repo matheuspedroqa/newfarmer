@@ -86,7 +86,7 @@ export default async function HomePage() {
               <Image src={img("dashboard", "desktop")} alt={t("heroAlt")} width={1440} height={900} sizes="(min-width: 1152px) 560px, (min-width: 768px) 45vw, 90vw" className="h-auto w-full" priority />
             </BrowserFrame>
             <FloatingCard {...card("weather")} className="-left-3 top-1/3 md:-left-8" />
-            <FloatingCard {...card("diary")} className="-top-4 right-4 md:right-24" />
+            <FloatingCard {...card("diary")} className="top-12 right-2 md:top-14 md:right-52" />
             <FloatingCard {...card("count")} className="-bottom-3 left-4 md:-left-4 md:bottom-4" />
             <div className="relative mx-auto mt-6 w-40 md:absolute md:bottom-0 md:right-0 md:mt-0 md:w-36 lg:w-40">
               <VerifiedSeal className="-left-5 -top-3 hidden sm:block" />
@@ -111,7 +111,7 @@ export default async function HomePage() {
         </ul>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">
+      <section className="mx-auto max-w-6xl overflow-x-clip px-5 py-16 md:px-8">
         <h2 className="text-center font-display text-3xl font-bold">{t("insideTitle")}</h2>
         <ShowcaseToggle
           labels={{ desktop: t("desktop"), mobile: t("mobile") }}

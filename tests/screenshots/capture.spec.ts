@@ -35,6 +35,8 @@ const MOBILE_TOP = "body{padding-top:38px !important}body::before{content:'';pos
 
 // Os 5 cartões do Clima não cabem inteiros acima da barra de baixo; um pouco menor, cabem.
 const WEATHER_FIT = "main{zoom:.82}";
+// O Painel começa no topo (saudação e clima); um pouco menor e sem o cartão das plantações, o fim cabe inteiro acima da barra de baixo.
+const DASH_FIT = "main{zoom:.8}[data-testid=crop-chips]{display:none !important}";
 
 async function shoot(browser: Browser, errors: string[], state: Awaited<ReturnType<import("@playwright/test").BrowserContext["storageState"]>>, lang: "pt" | "en", device: keyof typeof DEVICES) {
   const cookies = [...state.cookies.filter((c) => c.name !== "nf_locale"), cookie("nf_locale", lang), cookie("nf_consent", "essential")];
@@ -44,10 +46,10 @@ async function shoot(browser: Browser, errors: string[], state: Awaited<ReturnTy
   const pages: [string, string][] = [["dashboard", "/dashboard"], ["animal", "/animals/chickens?tab=diary"], ["weather", "/weather"]];
   for (const [name, path] of pages) {
     await gotoOk(page, path);
-    await page.addStyleTag({ content: HIDE + (device === "mobile" ? MOBILE_TOP : "") + (device === "mobile" && name === "weather" ? WEATHER_FIT : "") });
+    await page.addStyleTag({ content: HIDE + (device === "mobile" ? MOBILE_TOP : "") + (device === "mobile" && name === "weather" ? WEATHER_FIT : "") + (device === "mobile" && name === "dashboard" ? DASH_FIT : "") });
     await page.waitForLoadState("networkidle");
     // Rola até o que importa, para nenhum cartão sair cortado pela barra de baixo.
-    const focus = name === "animal" ? page.getByTestId("diary-entry").first() : device !== "mobile" ? null : name === "dashboard" ? page.getByTestId("animal-tile-chickens") : name === "weather" ? page.locator("h2").first() : null;
+    const focus = name === "animal" ? page.getByTestId("diary-entry").first() : device !== "mobile" ? null : name === "weather" ? page.locator("h2").first() : null;
     await focus?.evaluate((el, dy) => { el.scrollIntoView({ block: "start" }); window.scrollBy(0, dy); }, device === "mobile" ? -46 : -20);
     await page.screenshot({ caret: "initial", path: `public/screenshots/${lang}-${name}-${device}.png` });
   }

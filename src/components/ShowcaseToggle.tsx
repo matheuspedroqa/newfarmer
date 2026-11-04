@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserFrame } from "./BrowserFrame";
 import { FloatingCard, VerifiedSeal } from "./DeviceExtras";
 import { PhoneFrame } from "./PhoneFrame";
@@ -10,6 +10,10 @@ type Shot = { name: string; path: string; card: { icon: string; title: string; t
 /** Alterna os 3 prints entre computador e celular. */
 export function ShowcaseToggle({ shots, labels }: { shots: Shot[]; labels: { desktop: string; mobile: string } }) {
   const [mode, setMode] = useState<"desktop" | "mobile">("desktop");
+  // Em tela pequena o print do computador fica minúsculo: começa no celular (o servidor renderiza "desktop", sem erro de hidratação).
+  useEffect(() => {
+    if (window.matchMedia("(max-width: 767px)").matches) setMode("mobile");
+  }, []);
   const button = (m: "desktop" | "mobile") => (
     <button
       type="button"
@@ -37,7 +41,7 @@ export function ShowcaseToggle({ shots, labels }: { shots: Shot[]; labels: { des
                 <Image src={s.src.mobile} alt={s.alt} width={780} height={1688} sizes="(min-width: 640px) 20vw, 192px" className="h-auto w-full" />
               </PhoneFrame>
             )}
-            <FloatingCard {...s.card} className={mode === "desktop" ? "-right-2 -bottom-3 w-40" : "-right-8 bottom-24 w-36"} />
+            <FloatingCard {...s.card} className={mode === "desktop" ? "-right-2 -bottom-3 w-40" : "right-0 bottom-24 w-36"} />
             {mode === "mobile" && s.name === "dashboard" && <VerifiedSeal className="-left-3 top-2 hidden sm:block" />}
             <p className="mt-10 text-center text-sm font-semibold text-muted">{s.caption}</p>
           </li>
