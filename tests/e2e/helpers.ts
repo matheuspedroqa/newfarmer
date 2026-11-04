@@ -18,7 +18,7 @@ export async function acceptTerms(page: Page) {
 }
 
 /** Faz a etapa 1 do cadastro e para na etapa 2 (/welcome). */
-export async function createAccount(page: Page, email: string, city = "Curitiba", username = uniqueUsername(), name = "Ana") {
+export async function createAccount(page: Page, email: string, city = "Curitiba", username = uniqueUsername(), name = "Ana", marketing = false) {
   await page.goto("/register");
   await page.getByLabel("Nome").fill(name);
   await page.getByLabel("E-mail", { exact: true }).fill(email);
@@ -28,6 +28,7 @@ export async function createAccount(page: Page, email: string, city = "Curitiba"
   await page.getByTestId("city-input").fill(city);
   await page.getByTestId("city-option").first().click();
   await acceptTerms(page);
+  if (marketing) await page.getByLabel("Quero receber novidades e ofertas do NewFarmer por e-mail").check();
   await page.getByRole("button", { name: "Criar conta" }).click();
   await expect(page).toHaveURL(/\/welcome$/);
   return { username };

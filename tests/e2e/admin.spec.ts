@@ -6,7 +6,7 @@ test("usuário comum não vê Admin e recebe 404 nas telas do dono do site", asy
   await page.getByTestId("user-menu-button").click();
   await expect(page.getByRole("menuitem", { name: "Perfil" })).toBeVisible();
   await expect(page.getByRole("menuitem", { name: "Admin" })).toHaveCount(0);
-  for (const path of ["/admin", "/admin/subscribers", "/admin/subscribers/1", "/admin/activity", "/admin/monitoring"]) {
+  for (const path of ["/admin", "/admin/subscribers", "/admin/subscribers/1", "/admin/leads", "/admin/emails", "/admin/activity", "/admin/monitoring"]) {
     expect((await page.goto(path))?.status(), path).toBe(404);
   }
 });
@@ -37,7 +37,7 @@ test("dono do site vê as abas, o próprio login, o Monitoramento e abre o detal
   await expect(page).toHaveURL(/\/admin$/);
   await expect(page).toHaveTitle("Admin · NewFarmer");
   const nav = page.getByRole("navigation", { name: "Seções do Admin" });
-  for (const name of ["Visão geral", "Assinantes", "Activity logs", "Monitoramento"]) await expect(nav.getByRole("link", { name })).toBeVisible();
+  for (const name of ["Visão geral", "Assinantes", "Leads", "E-mails", "Activity logs", "Monitoramento"]) await expect(nav.getByRole("link", { name })).toBeVisible();
   await expect(page.getByTestId("overview-active")).toBeVisible();
   await expect(page.getByTestId("views-chart").locator("li")).toHaveCount(14);
 
@@ -74,10 +74,78 @@ test("Admin no celular não rola a página na horizontal", async ({ page }) => {
   const { username } = await signup(page, uniqueEmail());
   expect((await page.request.post("/api/dev/make-admin", { data: { username } })).status()).toBe(204);
   await page.setViewportSize({ width: 320, height: 700 });
-  for (const path of ["/admin", "/admin/subscribers"]) {
+  for (const path of ["/admin", "/admin/subscribers", "/admin/leads", "/admin/emails"]) {
     await page.goto(path);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth), path).toBe(true);
   }
   await page.goto("/admin/subscribers");
   await expect(page.getByTestId("subscriber-card").first()).toBeVisible();
+});
+
+test("Leads mostra o funil, aceita só 7/30/90 dias e liga o visitante à conta", async ({ page }) => {
+  const { username } = await signup(page, uniqueEmail());
+  expect((await page.request.post("/api/dev/make-admin", { data: { username } })).status()).toBe(204);
+  await page.goto("/admin/leads?days=abc");
+  await expect(page.getByRole("link", { name: "30 dias" })).toHaveAttribute("aria-current", "true");
+  await page.getByRole("link", { name: "7 dias" }).click();
+  await expect(page).toHaveURL(/days=7$/);
+  const funnel = page.getByTestId("funnel");
+  for (const step of ["Landing", "Cadastro", "Sua criação", "Assinatura", "Pagou"]) await expect(funnel).toContainText(step);
+});
+
+test("dono envia Sentimos sua falta para quem cancelou, o descadastro desliga o aceite e não recebe de novo", async ({ page, context }) => {
+  test.setTimeout(120_000);
+  const email = uniqueEmail();
+  const { username: churned } = await createAccount(page, email, "Curitiba", undefined, "Ana", true);
+  expect((await page.request.post("/api/dev/set-subscription", { data: { username: churned, status: "canceled" } })).status()).toBe(204);
+  await clearSession(context);
+
+  const { username } = await signup(page, uniqueEmail());
+  expect((await page.request.post("/api/dev/make-admin", { data: { username } })).status()).toBe(204);
+  await page.goto("/admin/emails");
+  await page.getByLabel("Público").selectOption("churned");
+  await page.getByRole("button", { name: "Ver prévia" }).click();
+  await expect(page.frameLocator("[data-testid=email-preview]").getByText("Sentimos sua falta!")).toBeVisible();
+  expect(await page.getByTestId("email-preview").getAttribute("sandbox")).toBe("");
+
+  page.once("dialog", (d) => {
+    expect(d.message()).toMatch(/^Enviar para \d+ pessoas\?$/);
+    void d.accept();
+  });
+  await page.getByRole("button", { name: "Enviar", exact: true }).click();
+  await expect(page.getByTestId("send-result")).toContainText("Envio concluído");
+  await expect(page.getByTestId("campaign-row").first()).toContainText("Sentimos sua falta");
+
+  await page.goto("/dev/inbox");
+  const mail = page.locator("article", { hasText: "Sentimos sua falta no NewFarmer" }).filter({ hasText: email });
+  await expect(mail).toHaveCount(1);
+  await mail.getByRole("link", { name: "Descadastrar" }).click();
+  await page.getByRole("button", { name: "Confirmar descadastro" }).click();
+  await expect(page.getByText("Você não vai mais receber e-mails de novidades.")).toBeVisible();
+
+  // Reativa a conta só para o Perfil abrir (quem cancelou é levado para a Assinatura).
+  expect((await page.request.post("/api/dev/set-subscription", { data: { username: churned, status: "active" } })).status()).toBe(204);
+  await clearSession(context);
+  await page.goto("/login");
+  await page.getByLabel("Username").fill(churned);
+  await page.getByLabel("Senha").fill(PASSWORD);
+  await page.getByRole("button", { name: "Entrar" }).click();
+  await expect(page).not.toHaveURL(/\/login/);
+  await page.goto("/profile");
+  await expect(page.getByLabel("Receber novidades por e-mail")).not.toBeChecked();
+
+  // Quem saiu não recebe de novo, mesmo numa campanha nova.
+  await clearSession(context);
+  await page.goto("/login");
+  await page.getByLabel("Username").fill(username);
+  await page.getByLabel("Senha").fill(PASSWORD);
+  await page.getByRole("button", { name: "Entrar" }).click();
+  await expect(page).not.toHaveURL(/\/login/);
+  await page.goto("/admin/emails");
+  await page.getByLabel("Público").selectOption("churned");
+  page.once("dialog", (d) => void d.accept());
+  await page.getByRole("button", { name: "Enviar", exact: true }).click();
+  await expect(page.getByTestId("send-result")).toContainText("Envio concluído");
+  await page.goto("/dev/inbox");
+  await expect(page.locator("article", { hasText: "Sentimos sua falta no NewFarmer" }).filter({ hasText: email })).toHaveCount(1);
 });

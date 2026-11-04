@@ -1,0 +1,80 @@
+"use server";
+
+import { revalidatePath } from "next/cache";
+import { z } from "zod";
+import { appUrl } from "@/server/app-url";
+import { logWriteLimited } from "@/server/activity-log";
+import { getDb } from "@/server/db";
+import { requirePlatformAdmin } from "@/server/authz";
+import { getMailer } from "@/server/mailer";
+import { AUDIENCES, campaignExists, createCampaign, sendCampaign } from "@/server/marketing";
+import { MARKETING_TEMPLATES, renderMarketingEmail } from "@/server/marketing-templates";
+import { limitWrites } from "@/server/rate-limit";
+import { clientIp } from "@/server/request-context";
+import { resolveLocale } from "@/i18n/locales";
+import { getLocale } from "next-intl/server";
+
+export type CampaignState = { error?: string; html?: string; campaignId?: number; sent?: number; remaining?: number };
+
+const campaignSchema = z.object({
+  template: z.enum(MARKETING_TEMPLATES),
+  audience: z.enum(AUDIENCES),
+  subject: z.string().trim().max(120),
+  body: z.string().trim().max(5000),
+}).refine((v) => v.template === "weMissYou" || (v.subject.length > 0 && v.body.length > 0));
+
+// weMissYou ignora assunto e texto.
+const parse = (f: FormData) => {
+  const r = campaignSchema.safeParse({ template: f.get("template"), audience: f.get("audience"), subject: f.get("subject") ?? "", body: f.get("body") ?? "" });
+  return r.success ? { ok: true as const, data: r.data.template === "weMissYou" ? { ...r.data, subject: "", body: "" } : r.data } : { ok: false as const };
+};
+
+/** HTML do e-mail para um destinatário de exemplo (o próprio dono); não cria token nem campanha. */
+export async function previewCampaignAction(_prev: CampaignState, formData: FormData): Promise<CampaignState> {
+  const admin = await requirePlatformAdmin();
+  const db = await getDb();
+  const limit = await limitWrites(db, admin.id);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logWriteLimited(db, admin.id, admin.username, await clientIp());
+    return { error: "rateLimited" };
+  }
+  const parsed = parse(formData);
+  if (!parsed.ok) return { error: "required" };
+  const url = appUrl();
+  const { html } = renderMarketingEmail({
+    template: parsed.data.template,
+    locale: resolveLocale(await getLocale()),
+    name: admin.name,
+    subject: parsed.data.subject,
+    body: parsed.data.body,
+    unsubscribeUrl: `${url}/unsubscribe/preview`,
+    appUrl: url,
+  });
+  return { html };
+}
+
+/** Cria a campanha na primeira vez; as próximas chamadas (campaignId) só continuam o envio. sendCampaign já registra marketing.campaignSent. */
+export async function sendCampaignAction(_prev: CampaignState, formData: FormData): Promise<CampaignState> {
+  const admin = await requirePlatformAdmin();
+  const db = await getDb();
+  const limit = await limitWrites(db, admin.id);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logWriteLimited(db, admin.id, admin.username, await clientIp());
+    return { error: "rateLimited" };
+  }
+  let campaignId = Number(formData.get("campaignId"));
+  if (formData.get("campaignId")) {
+    if (!Number.isSafeInteger(campaignId) || !(await campaignExists(db, campaignId))) return { error: "invalidCampaign" };
+  } else {
+    const parsed = parse(formData);
+    if (!parsed.ok) return { error: "required" };
+    campaignId = await createCampaign(db, { ...parsed.data, createdBy: admin.id });
+  }
+  try {
+    const { sent, remaining } = await sendCampaign(db, getMailer(db), { campaignId, appUrl: appUrl(), max: 50 });
+    revalidatePath("/admin/emails");
+    return { campaignId, sent, remaining };
+  } catch {
+    return { error: "sendFailed", campaignId };
+  }
+}

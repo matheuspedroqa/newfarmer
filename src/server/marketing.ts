@@ -117,3 +117,31 @@ export async function sendCampaign(
   );
   return { sent, remaining: n };
 }
+
+export async function createCampaign(
+  db: Db,
+  c: { template: MarketingTemplate; audience: Audience; subject: string; body: string; createdBy: number },
+): Promise<number> {
+  const [row] = await db.query<{ id: number }>(
+    "INSERT INTO email_campaigns (template, audience, subject, body, created_by, created_at) VALUES ($1,$2,$3,$4,$5,$6) RETURNING id",
+    [c.template, c.audience, c.subject, c.body, c.createdBy, Date.now()],
+  );
+  return row.id;
+}
+
+export async function listCampaigns(db: Db) {
+  const rows = await db.query<{ id: number; template: MarketingTemplate; audience: Audience; subject: string; created_at: string; sent: number }>(
+    `SELECT c.id, c.template, c.audience, c.subject, c.created_at, (SELECT COUNT(*)::int FROM email_campaign_recipients r WHERE r.campaign_id = c.id) AS sent
+     FROM email_campaigns c ORDER BY c.id DESC`,
+  );
+  return rows.map((r) => ({ id: r.id, template: r.template, audience: r.audience, subject: r.subject, createdAt: Number(r.created_at), sent: r.sent }));
+}
+
+export async function audienceCount(db: Db, audience: Audience): Promise<number> {
+  const [{ n }] = await db.query<{ n: number }>(SELECT.replace("SELECT u.id, u.name, u.email, u.locale", "SELECT COUNT(*)::int AS n") + FILTER[audience]);
+  return n;
+}
+
+export async function campaignExists(db: Db, id: number): Promise<boolean> {
+  return (await db.query("SELECT 1 FROM email_campaigns WHERE id = $1", [id])).length > 0;
+}
