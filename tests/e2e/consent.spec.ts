@@ -16,7 +16,7 @@ test("o servidor não grava sem consentimento 'all', com corpo grande ou caminho
   expect(await send(`nf_vid=${vid}`, { path: "/sem-consent" })).toBe(204); // consentimento ausente
   expect(await send(`nf_vid=${vid}; nf_consent=essential`, { path: "/essencial" })).toBe(204);
   expect(await send(`nf_vid=nao-e-uuid; nf_consent=all`, { path: "/vid-ruim" })).toBe(204);
-  expect(await send(`nf_vid=${vid}; nf_consent=all`, { path: "/" + "a".repeat(5000) })).toBe(204); // corpo grande
+  expect(await send(`nf_vid=${vid}; nf_consent=all`, { path: "/terms", pad: "x".repeat(3000) })).toBe(204); // só o limite de tamanho rejeita
   expect(await send(`nf_vid=${vid}; nf_consent=all`, { path: "/admin/leads" })).toBe(204);
   expect(await stored(vid)).toEqual([]);
   // Controle: com consentimento e dados certos, grava (prova que o 204 acima não é um endpoint quebrado).
@@ -51,6 +51,10 @@ test("navegador: sem escolha nada é gravado; 'Aceitar todos' grava sem query; '
   await expect(page.getByRole("button", { name: "Só os essenciais" })).toBeVisible();
   await Promise.all([page.waitForEvent("load"), page.getByRole("button", { name: "Só os essenciais" }).click()]);
   expect((await context.cookies()).some((c) => c.name === "nf_vid")).toBe(false);
+  let beacons = 0;
+  page.on("request", (r) => r.url().endsWith("/api/track") && beacons++);
   await page.goto("/privacy");
+  await page.waitForLoadState("networkidle");
+  expect(beacons).toBe(0);
   expect(await stored(vid)).toHaveLength(3);
 });

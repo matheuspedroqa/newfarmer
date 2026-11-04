@@ -7,6 +7,7 @@ import { limitByIp } from "@/server/rate-limit";
 import { clientIp } from "@/server/request-context";
 
 const SKIP = ["/api/", "/admin", "/confirm-email/", "/reset-password/"];
+const MAX_BODY = 2048;
 const none = () => new Response(null, { status: 204 });
 
 export async function POST(request: Request) {
@@ -16,8 +17,9 @@ export async function POST(request: Request) {
   if (jar.get(CONSENT_COOKIE)?.value !== "all" || !visitorId || !UUID_RE.test(visitorId)) return none();
 
   // Corpo limitado antes de interpretar: este endpoint é público.
+  if (Number(request.headers.get("content-length")) > MAX_BODY) return none();
   const raw = await request.text();
-  if (raw.length > 2048) return none();
+  if (new TextEncoder().encode(raw).length > MAX_BODY) return none(); // sem Content-Length (chunked): confere em bytes
   let body: { path?: unknown; referrer?: unknown } | null = null;
   try {
     body = JSON.parse(raw);
