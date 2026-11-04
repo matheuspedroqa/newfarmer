@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Fraunces, Nunito } from "next/font/google";
@@ -12,6 +12,8 @@ const fraunces = Fraunces({ subsets: ["latin"], weight: ["500", "700"], variable
 const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-nunito" });
 
 export const metadata: Metadata = { title: { template: "%s · NewFarmer", default: "NewFarmer" } };
+// viewportFit "cover" faz o env(safe-area-inset-*) funcionar no iPhone; o zoom continua liberado.
+export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();

@@ -1,5 +1,5 @@
 import { expect, test, type Locator, type Page } from "@playwright/test";
-import { createAccount, PASSWORD, uniqueEmail } from "./helpers";
+import { createAccount, PASSWORD, signup, uniqueEmail } from "./helpers";
 
 // Três celulares dos Global Constraints: o menor (320 px), o mais comum (375 px) e um grande (412 px).
 const SIZES = [
@@ -52,6 +52,13 @@ for (const size of SIZES) {
       await checkPage(page, "/login", header, (p) => p.getByRole("button", { name: "Entrar" }));
       await checkPage(page, "/cadastro", header, (p) => p.getByRole("button", { name: "Criar conta" }), shot("cadastro"));
       await checkPage(page, "/privacidade", header, (p) => p.getByRole("banner").getByRole("link", { name: "Criar conta grátis" }));
+      // Idioma e tema no topo das páginas públicas também têm área de toque.
+      for (const path of ["/", "/login"]) {
+        await page.goto(path);
+        await expectTouchTarget(header(page).getByRole("button", { name: "PT", exact: true }));
+        await expectTouchTarget(header(page).getByRole("button", { name: "EN", exact: true }));
+        await expectTouchTarget(page.getByTestId("theme-toggle"));
+      }
     });
 
     test("cadastro, páginas da conta e login de novo", async ({ page }) => {
@@ -79,6 +86,8 @@ for (const size of SIZES) {
       await checkPage(page, "/plantacoes", appNav, (p) => p.getByRole("link", { name: "Adicionar plantação" }));
       await checkPage(page, "/plantacoes/tomato", appNav, (p) => p.getByRole("link", { name: "← Plantações por tipo" }));
       await checkPage(page, "/clima", appNav, (p) => appNav(p).getByRole("link", { name: "Clima", exact: true }), shot("clima"));
+      await expect(page.getByRole("heading", { name: "Próximos 5 dias" })).toBeVisible();
+      await expect(page.getByTestId("day-card")).toHaveCount(5);
       await checkPage(page, "/myfarm", appNav, (p) => p.getByRole("button", { name: "Salvar", exact: true }));
       await checkPage(page, "/perfil", appNav, (p) => p.getByRole("button", { name: "Salvar nova senha" }));
 
@@ -92,3 +101,65 @@ for (const size of SIZES) {
     });
   });
 }
+
+test.describe("celular: aviso de cookies na área logada (375 px)", () => {
+  // Começa sem o cookie do aviso (os demais testes já o trazem aceito), mas mantém o site em português.
+  test.use({
+    viewport: { width: 375, height: 667 },
+    isMobile: true,
+    hasTouch: true,
+    storageState: {
+      cookies: [{ name: "nf_locale", value: "pt", domain: "localhost", path: "/", expires: -1, httpOnly: false, secure: false, sameSite: "Lax" }],
+      origins: [],
+    },
+  });
+
+  test("o aviso fica acima da barra de baixo e os dois continuam clicáveis", async ({ page }) => {
+    await signup(page, uniqueEmail());
+    const notice = page.getByRole("region", { name: "Aviso de cookies" });
+    const ok = notice.getByRole("button", { name: "Entendi" });
+    await expect(notice).toBeVisible();
+    const noticeBox = (await notice.boundingBox())!;
+    const navBox = (await appNav(page).boundingBox())!;
+    expect(noticeBox.y + noticeBox.height, "o aviso cobre a barra").toBeLessThanOrEqual(navBox.y);
+    await expectTouchTarget(ok);
+
+    await appNav(page).getByRole("link", { name: "Clima", exact: true }).click();
+    await expect(page).toHaveURL(/\/clima$/);
+    await ok.click();
+    await expect(notice).toBeHidden();
+  });
+});
+
+test.describe("celular: textos compridos e menu da conta (320 px)", () => {
+  test.use({ viewport: { width: 320, height: 658 }, isMobile: true, hasTouch: true });
+
+  test("nome e anotação sem espaços não alargam a página, e o menu cabe na tela", async ({ page }) => {
+    await createAccount(page, uniqueEmail(), "Curitiba", undefined, "A".repeat(60));
+    await page.getByLabel("Galinhas").check();
+    await page.locator("#count-chickens").fill("3");
+    await page.getByRole("button", { name: "Continuar" }).click();
+    await expect(page).toHaveURL(/\/painel$/);
+
+    await page.goto("/animais/chickens?aba=diario");
+    await page.getByLabel("Anotação").fill("x".repeat(200));
+    await page.getByRole("button", { name: "Salvar anotação" }).click();
+    await expect(page.getByTestId("diary-entry")).toHaveCount(1);
+    await expectNoHorizontalScroll(page);
+
+    await page.goto("/painel");
+    await expect(page.getByTestId("diary-recent")).toBeVisible();
+    await expectNoHorizontalScroll(page);
+
+    await page.getByTestId("user-menu-button").click();
+    const menu = page.getByRole("menu");
+    await expect(menu).toBeVisible();
+    const box = (await menu.boundingBox())!;
+    const innerWidth = await page.evaluate(() => window.innerWidth);
+    expect(box.x, "o menu sai pela esquerda").toBeGreaterThanOrEqual(0);
+    expect(box.x + box.width, "o menu sai pela direita").toBeLessThanOrEqual(innerWidth);
+    for (const item of await menu.getByRole("menuitem").all()) {
+      await expectTouchTarget(item);
+    }
+  });
+});

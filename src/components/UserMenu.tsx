@@ -25,7 +25,7 @@ export function UserMenu({ name, isPlatformAdmin }: { name: string; isPlatformAd
     };
   }, [open]);
 
-  const item = "flex items-center gap-2 border-l-2 border-transparent px-4 py-3 transition-colors duration-150 hover:border-primary hover:bg-hover hover:text-primary focus-visible:border-primary focus-visible:bg-hover focus-visible:text-primary motion-reduce:transition-none";
+  const item = "flex min-h-11 items-center gap-2 border-l-2 border-transparent px-4 py-3 transition-colors duration-150 hover:border-primary hover:bg-hover hover:text-primary focus-visible:border-primary focus-visible:bg-hover focus-visible:text-primary motion-reduce:transition-none";
   return (
     <div ref={ref} className="relative">
       <button
@@ -40,7 +40,8 @@ export function UserMenu({ name, isPlatformAdmin }: { name: string; isPlatformAd
         <span aria-hidden>👤</span> <span className="max-w-[7rem] truncate md:max-w-none">{name}</span> <span aria-hidden>▾</span>
       </button>
       {open && (
-        <div role="menu" className="absolute right-0 z-20 mt-2 w-48 overflow-hidden rounded-2xl bg-surface shadow-xl ring-1 ring-border">
+        // No celular o menu fica preso às margens da tela (fixed), para nunca sair dela quando o topo quebra linha.
+        <div role="menu" className="fixed inset-x-4 z-50 mt-2 overflow-hidden rounded-2xl bg-surface shadow-xl ring-1 ring-border md:absolute md:inset-x-auto md:right-0 md:z-20 md:w-48">
           <Link role="menuitem" href="/myfarm" onClick={() => setOpen(false)} className={item}>
             <span aria-hidden>🏡</span> {t("myfarm")}
           </Link>

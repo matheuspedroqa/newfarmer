@@ -48,7 +48,7 @@ export default async function DashboardPage() {
 
   return (
     <section>
-      <h1 className="font-display text-3xl font-bold">{t("dashboard.hello", { name: user.name })}</h1>
+      <h1 className="font-display text-3xl font-bold [overflow-wrap:anywhere]">{t("dashboard.hello", { name: user.name })}</h1>
       <div className="mt-6 grid auto-rows-[minmax(150px,auto)] grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
         <WeatherHero result={forecast} />
 
@@ -125,7 +125,7 @@ export default async function DashboardPage() {
         </section>
 
         {recentNotes.length > 0 && (
-          <section data-testid="diary-recent" className="col-span-2 rounded-3xl bg-surface md:col-span-4 p-6 shadow-sm">
+          <section data-testid="diary-recent" className="col-span-2 min-w-0 rounded-3xl bg-surface p-6 shadow-sm [overflow-wrap:anywhere] md:col-span-4">
             <p className="text-sm font-bold uppercase tracking-wide text-accent">{t("dashboard.diaryRecent")}</p>
             <ul className="mt-2 space-y-1">
               {recentNotes.map((e) => (
