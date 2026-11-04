@@ -131,6 +131,16 @@ test.describe("celular: aviso de cookies na área logada (375 px)", () => {
   });
 });
 
+test.describe("celular: tela sem animais (375 px)", () => {
+  test.use({ viewport: { width: 375, height: 667 }, isMobile: true, hasTouch: true });
+
+  test("o botão Adicionar animal tem área de toque", async ({ page }) => {
+    await signup(page, uniqueEmail());
+    await page.goto("/animais");
+    await expectTouchTarget(page.getByRole("link", { name: "Adicionar animal" }));
+  });
+});
+
 test.describe("celular: textos compridos e menu da conta (320 px)", () => {
   test.use({ viewport: { width: 320, height: 658 }, isMobile: true, hasTouch: true });
 

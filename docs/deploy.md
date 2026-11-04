@@ -52,6 +52,7 @@ Para testar contra o Supabase daqui, crie `.env.local` (ignorado pelo Git) com `
 ## Registro diário do tempo
 
 Todo dia à meia-noite (UTC) a Vercel chama `/api/cron/forecast`, que guarda a previsão do Fundão para o dia seguinte.
+No plano Hobby da Vercel o job roda em algum minuto entre 00:00 e 00:59 UTC.
 
 1. Na Vercel, **Settings → Environment Variables**, crie `CRON_SECRET` em **Production** com um valor aleatório longo
    (por exemplo `openssl rand -hex 32` ou um gerador de senhas).

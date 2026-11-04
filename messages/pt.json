@@ -368,6 +368,7 @@
     "homeCare": "Cuidado caseiro",
     "vetCare": "Tratamento veterinário",
     "noContent": "Ficha em preparação.",
+    "notInFarm": "Este animal não está no seu MyFarm. Suas anotações continuam aqui.",
     "emptyTitle": "Você ainda não tem animais",
     "emptyText": "Escolha seus animais no MyFarm para ver as fichas e o diário.",
     "addAnimal": "＋ Adicionar animal"

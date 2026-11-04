@@ -9,7 +9,7 @@ export function NavRail({ items, label }: { items: { href: string; icon: string;
   return (
     <nav
       data-bottom-nav
-      className="fixed inset-x-0 bottom-0 z-40 flex justify-around gap-1 bg-rail px-2 pt-1 pb-[max(0.25rem,env(safe-area-inset-bottom))] md:static md:w-20 md:shrink-0 md:flex-col md:items-center md:justify-start md:gap-3 md:px-0 md:py-6"
+      className="fixed inset-x-0 bottom-0 z-40 flex justify-around gap-1 bg-rail px-2 pt-1 pb-[max(0.25rem,env(safe-area-inset-bottom))] md:static md:w-20 md:shrink-0 md:flex-col md:items-center md:justify-start md:gap-3 md:px-0 md:py-6 md:pl-[env(safe-area-inset-left)]"
       aria-label={label}
     >
       <p className="mb-6 hidden text-2xl md:block" aria-hidden>🌾</p>

@@ -35,7 +35,7 @@ export function CookieNotice() {
       {/* Cópia invisível no fim da página: reserva a altura do aviso para ele nunca cobrir o último botão. */}
       <div aria-hidden className="invisible p-4">{card}</div>
       {/* Na área logada do celular, o aviso fica acima da barra de navegação de baixo para não cobri-la. */}
-      <div role="region" aria-label={t("label")} className="fixed inset-x-0 bottom-0 z-50 p-4 max-md:[body:has([data-bottom-nav])_&]:bottom-[calc(4rem+env(safe-area-inset-bottom))]">
+      <div role="region" aria-label={t("label")} className="fixed inset-x-0 bottom-0 z-50 p-4 pb-[max(1rem,env(safe-area-inset-bottom))] max-md:[body:has([data-bottom-nav])_&]:bottom-[calc(4rem+env(safe-area-inset-bottom))]">
         {card}
       </div>
     </>

@@ -47,3 +47,23 @@ test("a ficha continua sendo a aba padrão do animal", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Raças" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Ficha" })).toHaveAttribute("aria-current", "page");
 });
+
+test("anotações de um animal tirado do MyFarm continuam acessíveis pelo Painel", async ({ page }) => {
+  await accountWithCows(page);
+  await page.goto("/animais/cows?aba=diario");
+  await page.getByLabel("Anotação", { exact: true }).fill("Vaca Mimosa vacinada");
+  await page.getByRole("button", { name: "Salvar anotação" }).click();
+  await expect(page.getByTestId("diary-entry")).toHaveCount(1);
+
+  await page.goto("/myfarm");
+  await page.getByLabel("Vacas").uncheck();
+  await page.getByRole("button", { name: "Salvar", exact: true }).click();
+  await expect(page.getByText("Salvo!")).toBeVisible();
+
+  await page.goto("/painel");
+  await page.getByTestId("diary-recent").getByRole("link").first().click();
+  await expect(page).toHaveURL(/\/animais\/cows\?aba=diario$/);
+  await expect(page.getByTestId("diary-entry")).toContainText("Vaca Mimosa vacinada");
+  await expect(page.getByText("Este animal não está no seu MyFarm. Suas anotações continuam aqui.")).toBeVisible();
+  await expect(page.getByTestId("animal-tab-cows")).toHaveCount(0);
+});

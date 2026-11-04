@@ -38,7 +38,9 @@ export default async function AnimalPage({
   const user = await requireUser();
   const db = await getDb();
   const farm = await getFarm(db, user.id);
-  if (!farm.animals.some((a) => a.id === id)) redirect("/animais");
+  const inFarm = farm.animals.some((a) => a.id === id);
+  // Animal fora do MyFarm só abre se ainda houver anotações dele (links do Painel).
+  if (!inFarm && !(await listDiary(db, user.id, { animalId: id as AnimalId, limit: 1 })).length) redirect("/animais");
   const t = await getTranslations();
   const locale = resolveLocale(await getLocale());
   const content = getAnimalContent(id as AnimalId);
@@ -62,6 +64,7 @@ export default async function AnimalPage({
         ))}
       </nav>
 
+      {!inFarm && <p className="rounded-2xl bg-soft p-3 text-sm">{t("animalPage.notInFarm")}</p>}
       <h1 className="font-display text-4xl font-bold">{t(`animals.${id}`)}</h1>
       <nav className="flex gap-2 overflow-x-auto border-b border-border" aria-label={t(`animals.${id}`)}>
         {[

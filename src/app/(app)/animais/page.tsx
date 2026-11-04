@@ -21,7 +21,7 @@ export default async function AnimalsIndex() {
       <p className="text-muted">{t("animalPage.emptyText")}</p>
       <Link
         href="/myfarm#animais"
-        className="inline-block rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-colors duration-150 hover:opacity-90 motion-reduce:transition-none"
+        className="inline-flex min-h-11 items-center rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-colors duration-150 hover:opacity-90 motion-reduce:transition-none"
       >
         {t("animalPage.addAnimal")}
       </Link>

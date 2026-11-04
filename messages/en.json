@@ -368,6 +368,7 @@
     "homeCare": "Home care",
     "vetCare": "Veterinary treatment",
     "noContent": "Guide in preparation.",
+    "notInFarm": "This animal isn't in your MyFarm. Your notes are still here.",
     "emptyTitle": "You don't have any animals yet",
     "emptyText": "Pick your animals in MyFarm to see their guides and diary.",
     "addAnimal": "＋ Add animal"

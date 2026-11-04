@@ -5,5 +5,5 @@ import { getWeatherProvider } from "@/server/weather";
 export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
-  return handleCron(request, { db: await getDb(), provider: getWeatherProvider() });
+  return handleCron(request, { db: getDb, provider: getWeatherProvider() });
 }
