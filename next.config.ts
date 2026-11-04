@@ -28,6 +28,7 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  devIndicators: false, // o selo do modo de desenvolvimento não pode sair nos prints
   productionBrowserSourceMaps: false,
   outputFileTracingIncludes: { "/*": ["./content/legal/**"] },
   serverExternalPackages: ["@electric-sql/pglite", "pg"],

@@ -477,11 +477,110 @@
     "emails": "E-mails"
   },
   "home": {
-    "cta": "Create free account",
+    "title": "NewFarmer · Animals and garden planner for your climate",
+    "description": "Care guides per animal, a planting calendar for your climate, 5-day forecast with rain in mm and a diary. Works offline. Monthly subscription.",
+    "heroTitle": "Your animals and garden, organized for your climate",
+    "heroSub": "Care guides, a planting calendar and a 5-day forecast for your town, on computer and phone.",
+    "ctaPrice": "Subscribe for {price}/month",
+    "headerCta": "Subscribe",
     "login": "Sign in",
-    "animalsText": "Care guides for chickens, pigs, cows and other animals on your farm.",
-    "cropsText": "When and how to plant each crop in your region.",
-    "weatherText": "The 5-day weather forecast for your city.",
+    "heroAlt": "NewFarmer dashboard on a computer, with animals, crops and the week's weather",
+    "heroPhoneAlt": "NewFarmer dashboard on a phone",
+    "featuresTitle": "What NewFarmer does",
+    "features": {
+      "animals": {
+        "icon": "🐔",
+        "title": "Care guides for each animal",
+        "text": "Feeding, vaccines and care for chickens, goats, cows and other animals."
+      },
+      "crops": {
+        "icon": "🌱",
+        "title": "Planting calendar",
+        "text": "What to plant each month, for your climate and hemisphere."
+      },
+      "weather": {
+        "icon": "⛅",
+        "title": "5-day forecast",
+        "text": "Temperature and rain in mm for your town, to plan the work."
+      },
+      "diary": {
+        "icon": "📒",
+        "title": "Diary for each animal",
+        "text": "Log vaccines, medicine and births and see it all on the Dashboard."
+      },
+      "offline": {
+        "icon": "📶",
+        "title": "Works offline",
+        "text": "No signal in the field? Write it down and NewFarmer sends it later."
+      },
+      "rules": {
+        "icon": "📋",
+        "title": "Your country's rules",
+        "text": "Notes on what is required where you live, like declaring your animals."
+      }
+    },
+    "insideTitle": "See it inside",
+    "desktop": "Computer",
+    "mobile": "Phone",
+    "shots": {
+      "dashboard": "Dashboard",
+      "animal": "Chickens diary",
+      "weather": "Weather for the next 5 days"
+    },
+    "alts": {
+      "dashboard": "NewFarmer dashboard with animals, crops and weather",
+      "animal": "Chickens page on the Diary tab, with vaccine and feeding notes",
+      "weather": "5-day weather forecast with temperature and rain in mm"
+    },
+    "stepsTitle": "How it works",
+    "steps": {
+      "one": {
+        "title": "Create your account",
+        "text": "Enter your name and your town."
+      },
+      "two": {
+        "title": "Tell us what you raise",
+        "text": "Pick the animals and crops on your land."
+      },
+      "three": {
+        "title": "Get what to do each month",
+        "text": "Guides, calendar and weather, ready for you."
+      }
+    },
+    "priceTitle": "One simple plan",
+    "priceMonth": "{price}/month",
+    "includes": {
+      "a": "Guides for every animal and crop",
+      "b": "5-day forecast with rain in mm",
+      "c": "Diary for each animal",
+      "d": "Offline mode",
+      "e": "Your country's rules"
+    },
+    "priceCancel": "Cancel anytime",
+    "faqTitle": "Frequently asked questions",
+    "faq": {
+      "card": {
+        "q": "Do I need a card?",
+        "a": "Yes. It is a monthly subscription, paid by card."
+      },
+      "cancel": {
+        "q": "Can I cancel?",
+        "a": "Yes, anytime, on your Profile. You keep access until the end of the month you paid."
+      },
+      "offline": {
+        "q": "Does it work offline?",
+        "a": "Yes. Write notes without signal and NewFarmer sends them when you are back online."
+      },
+      "data": {
+        "q": "Is my data mine?",
+        "a": "Yes. You can download everything or delete your account on your Profile."
+      },
+      "who": {
+        "q": "Who is it for?",
+        "a": "Small farmers and family gardens."
+      }
+    },
+    "finalTitle": "Start organizing your land today",
     "privacy": "Privacy",
     "terms": "Terms"
   },

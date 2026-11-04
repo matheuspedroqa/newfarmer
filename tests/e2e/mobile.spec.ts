@@ -48,10 +48,10 @@ for (const size of SIZES) {
     const shot = (name: string) => (size.width === 375 ? name : undefined);
 
     test("páginas públicas cabem na tela", async ({ page }) => {
-      await checkPage(page, "/", header, (p) => p.getByRole("main").getByRole("link", { name: "Criar conta grátis" }));
+      await checkPage(page, "/", header, (p) => p.getByRole("main").getByRole("link", { name: /^Assinar por/ }).first());
       await checkPage(page, "/login", header, (p) => p.getByRole("button", { name: "Entrar" }));
       await checkPage(page, "/register", header, (p) => p.getByRole("button", { name: "Criar conta" }), shot("cadastro"));
-      await checkPage(page, "/privacy", header, (p) => p.getByRole("banner").getByRole("link", { name: "Criar conta grátis" }));
+      await checkPage(page, "/privacy", header, (p) => p.getByRole("banner").getByRole("link", { name: "Assinar", exact: true }));
       // Idioma e tema no topo das páginas públicas também têm área de toque.
       for (const path of ["/", "/login"]) {
         await page.goto(path);

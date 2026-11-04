@@ -477,11 +477,110 @@
     "emails": "E-mails"
   },
   "home": {
-    "cta": "Criar conta grátis",
+    "title": "NewFarmer · Criação e horta organizadas pelo seu clima",
+    "description": "Guias por animal, calendário de plantio no seu clima, previsão de 5 dias com chuva em mm e diário. Funciona sem internet. Assinatura mensal.",
+    "heroTitle": "Sua criação e sua horta organizadas, do jeito do seu clima",
+    "heroSub": "Guias de cuidado, calendário de plantio e previsão de 5 dias para a sua cidade, no computador e no celular.",
+    "ctaPrice": "Assinar por {price}/mês",
+    "headerCta": "Assinar",
     "login": "Entrar",
-    "animalsText": "Guias de cuidado para galinhas, porcos, vacas e outros animais da sua roça.",
-    "cropsText": "Quando e como plantar cada cultura na sua região.",
-    "weatherText": "Previsão do tempo dos próximos 5 dias para a sua cidade.",
+    "heroAlt": "Painel do NewFarmer no computador, com animais, plantações e o clima da semana",
+    "heroPhoneAlt": "Painel do NewFarmer no celular",
+    "featuresTitle": "O que o NewFarmer faz",
+    "features": {
+      "animals": {
+        "icon": "🐔",
+        "title": "Guias de cuidado por animal",
+        "text": "Alimentação, vacinas e cuidados de galinhas, cabras, vacas e outros animais."
+      },
+      "crops": {
+        "icon": "🌱",
+        "title": "Calendário de plantio",
+        "text": "O que plantar em cada mês, no seu clima e no seu hemisfério."
+      },
+      "weather": {
+        "icon": "⛅",
+        "title": "Previsão de 5 dias",
+        "text": "Temperatura e chuva em mm para a sua cidade, para planejar o trabalho."
+      },
+      "diary": {
+        "icon": "📒",
+        "title": "Diário por animal",
+        "text": "Anote vacinas, remédios e partos e veja tudo no Painel."
+      },
+      "offline": {
+        "icon": "📶",
+        "title": "Funciona sem internet",
+        "text": "Sem sinal na roça? Anote e o NewFarmer envia depois."
+      },
+      "rules": {
+        "icon": "📋",
+        "title": "Regras do seu país",
+        "text": "Avisos do que é exigido onde você mora, como a declaração de animais."
+      }
+    },
+    "insideTitle": "Veja por dentro",
+    "desktop": "Computador",
+    "mobile": "Celular",
+    "shots": {
+      "dashboard": "Painel",
+      "animal": "Diário das galinhas",
+      "weather": "Clima dos próximos 5 dias"
+    },
+    "alts": {
+      "dashboard": "Painel do NewFarmer com os animais, as plantações e o clima",
+      "animal": "Ficha das galinhas na aba Diário, com as anotações de vacina e alimentação",
+      "weather": "Previsão do tempo de 5 dias com temperatura e chuva em mm"
+    },
+    "stepsTitle": "Como funciona",
+    "steps": {
+      "one": {
+        "title": "Crie a conta",
+        "text": "Informe seu nome e sua cidade."
+      },
+      "two": {
+        "title": "Conte o que você cria",
+        "text": "Marque os animais e as plantações da sua propriedade."
+      },
+      "three": {
+        "title": "Receba o que fazer em cada mês",
+        "text": "Guias, calendário e clima prontos para você."
+      }
+    },
+    "priceTitle": "Um plano simples",
+    "priceMonth": "{price}/mês",
+    "includes": {
+      "a": "Guias de todos os animais e plantações",
+      "b": "Previsão de 5 dias com chuva em mm",
+      "c": "Diário por animal",
+      "d": "Modo sem internet",
+      "e": "Regras do seu país"
+    },
+    "priceCancel": "Cancele quando quiser",
+    "faqTitle": "Perguntas frequentes",
+    "faq": {
+      "card": {
+        "q": "Preciso de cartão?",
+        "a": "Sim. É uma assinatura mensal, paga no cartão."
+      },
+      "cancel": {
+        "q": "Posso cancelar?",
+        "a": "Sim, quando quiser, no Perfil. Você usa até o fim do mês já pago."
+      },
+      "offline": {
+        "q": "Funciona sem internet?",
+        "a": "Sim. Você anota sem sinal e o NewFarmer envia quando a internet voltar."
+      },
+      "data": {
+        "q": "Meus dados são meus?",
+        "a": "São. Você pode baixar tudo ou apagar a conta no Perfil."
+      },
+      "who": {
+        "q": "Para quem é?",
+        "a": "Para pequenos criadores e hortas de família."
+      }
+    },
+    "finalTitle": "Comece hoje a organizar a sua roça",
     "privacy": "Privacidade",
     "terms": "Termos"
   },

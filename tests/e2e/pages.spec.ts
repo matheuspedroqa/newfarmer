@@ -3,11 +3,11 @@ import { signup, uniqueEmail } from "./helpers";
 
 test("página inicial: CTA no topo leva ao cadastro; Entrar ao login", async ({ page }) => {
   await page.goto("/");
-  await expect(page).toHaveTitle("NewFarmer");
+  await expect(page).toHaveTitle("NewFarmer · Criação e horta organizadas pelo seu clima");
   await page.getByRole("banner").getByRole("link", { name: "Entrar" }).click();
   await expect(page).toHaveURL(/\/login$/);
   await page.goto("/");
-  await page.getByRole("banner").getByRole("link", { name: "Criar conta grátis" }).click();
+  await page.getByRole("banner").getByRole("link", { name: "Assinar", exact: true }).click();
   await expect(page).toHaveURL(/\/register$/);
   await expect(page).toHaveTitle("Criar conta · NewFarmer");
 });
@@ -142,3 +142,36 @@ for (const tema of ["claro", "escuro"]) {
     }
   });
 }
+
+test.describe("landing: preço, alternância e dados estruturados", () => {
+  // BR em português; Portugal e sem país em inglês (o formato do preço acompanha o idioma).
+  for (const [country, lang, price] of [["BR", "pt", "R$ 6,99"], ["PT", "en", "€1.99"], [undefined, "en", "$2.00"]] as const) {
+    test(`o botão do topo mostra ${price} (${country ?? "sem cabeçalho"})`, async ({ page, context }) => {
+      await context.addCookies([{ name: "nf_locale", value: lang, domain: "localhost", path: "/" }]);
+      await page.setExtraHTTPHeaders(country ? { "x-vercel-ip-country": country } : {});
+      await page.goto("/");
+      await expect(page.getByRole("main").getByRole("link", { name: /^(Assinar por|Subscribe for)/ }).first()).toContainText(price.replace(/\u00a0/g, " "));
+    });
+  }
+
+  test("alternar Computador/Celular troca as imagens", async ({ page }) => {
+    await page.goto("/");
+    const items = page.getByTestId("showcase-item");
+    await expect(items.first().locator("img")).toHaveAttribute("src", /dashboard-desktop/);
+    await page.getByRole("button", { name: "Celular" }).click();
+    await expect(page.getByRole("button", { name: "Celular" })).toHaveAttribute("aria-pressed", "true");
+    await expect(items.first().locator("img")).toHaveAttribute("src", /dashboard-mobile/);
+    await expect(items).toHaveCount(3);
+  });
+
+  test("JSON-LD é válido, com 3 ofertas e 5 perguntas, e há um único h1", async ({ page }) => {
+    await page.goto("/");
+    const blocks = (await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap((s) => [JSON.parse(s)].flat());
+    const app = blocks.find((b) => b["@type"] === "SoftwareApplication");
+    const faq = blocks.find((b) => b["@type"] === "FAQPage");
+    expect(app.offers).toHaveLength(3);
+    expect(app.offers.map((o: { priceCurrency: string }) => o.priceCurrency).sort()).toEqual(["BRL", "EUR", "USD"]);
+    expect(faq.mainEntity).toHaveLength(5);
+    await expect(page.locator("h1")).toHaveCount(1);
+  });
+});

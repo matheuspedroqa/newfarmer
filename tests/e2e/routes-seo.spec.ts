@@ -35,7 +35,7 @@ test.describe("sem cookie de idioma", () => {
 
   test("/pt mostra a landing em português e / em inglês", async ({ page, context }) => {
     await page.goto("/pt");
-    await expect(page.getByRole("link", { name: "Criar conta grátis" }).first()).toBeVisible();
+    await expect(page.getByRole("link", { name: "Assinar", exact: true }).first()).toBeVisible();
     await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");
     expect((await context.cookies()).find((c) => c.name === "nf_locale")?.value).toBe("pt");
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/pt$/);
@@ -48,7 +48,7 @@ test.describe("sem cookie de idioma", () => {
     }
     await context.clearCookies();
     await page.goto("/");
-    await expect(page.getByRole("link", { name: "Create free account" }).first()).toBeVisible();
+    await expect(page.getByRole("link", { name: "Subscribe", exact: true }).first()).toBeVisible();
     await expect(page.locator("html")).toHaveAttribute("lang", "en");
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /^http:\/\/localhost:3100\/?$/);
     await expect(page.locator('link[rel="alternate"][hreflang="pt"]')).toHaveCount(1);

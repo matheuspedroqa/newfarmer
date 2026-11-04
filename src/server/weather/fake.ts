@@ -15,6 +15,10 @@ const CITIES: { city: CityResult; normals: ClimateNormals }[] = [
     city: { label: "Lisboa, Lisboa, Portugal", latitude: 38.72, longitude: -9.14, countryCode: "PT" },
     normals: { monthlyMeanTemp: [11, 12, 14, 15, 18, 21, 23, 23, 22, 18, 14, 12], annualPrecip: 700 },
   },
+  {
+    city: { label: "Fundão, Castelo Branco, Portugal", latitude: 40.14, longitude: -7.5, countryCode: "PT" },
+    normals: { monthlyMeanTemp: [8, 9, 12, 14, 17, 21, 24, 24, 21, 16, 11, 8], annualPrecip: 900 },
+  },
 ];
 
 const plain = (text: string) => text.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();

@@ -13,7 +13,7 @@ export default async function MarketingLayout({ children }: { children: React.Re
           <TopControls />
           <Link href="/login" className="inline-flex min-h-11 items-center px-1 text-sm text-muted transition-colors duration-150 hover:text-text hover:underline motion-reduce:transition-none">{t("home.login")}</Link>
           <Link href="/register" className="inline-flex min-h-11 items-center rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-opacity duration-150 hover:opacity-90 motion-reduce:transition-none">
-            {t("home.cta")}
+            {t("home.headerCta")}
           </Link>
         </div>
       </header>
