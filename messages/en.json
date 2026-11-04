@@ -574,7 +574,10 @@
     "cta": "Subscribe for {price}/month",
     "terms": "Terms",
     "privacy": "Privacy",
-    "processing": "Payment received, unlocking your account…"
+    "processing": "Payment received, unlocking your account…",
+    "successTitle": "Subscription",
+    "notReceived": "We have not received the payment confirmation yet.",
+    "back": "Back to subscription"
   },
   "billing": {
     "title": "Subscription",

@@ -28,12 +28,30 @@ test("sem assinar, o app fica bloqueado mas o perfil abre", async ({ page }) => 
   await expect(page.getByText("Sem assinatura")).toBeVisible();
 });
 
-test("sessão de outra conta não libera o acesso", async ({ page }) => {
-  await createAccount(page, uniqueEmail());
+test("sessão de outra conta não libera o acesso (com cliente já criado)", async ({ page }) => {
+  const { username } = await createAccount(page, uniqueEmail());
   await page.getByRole("link", { name: "Pular por enquanto" }).click();
+  // Cliente existe e sem acesso: só assim a página de retorno chega à comparação do cliente.
+  expect((await page.request.post("/api/dev/ensure-customer", { data: { username } })).status()).toBe(204);
   await page.goto("/subscribe/success?session_id=fake_999999");
   await expect(page).toHaveURL(/\/subscribe$/);
   await page.goto("/dashboard");
+  await expect(page).toHaveURL(/\/subscribe$/);
+});
+
+test("sem assinar, a navegação interna também é bloqueada", async ({ page }) => {
+  await createAccount(page, uniqueEmail());
+  await page.getByRole("link", { name: "Pular por enquanto" }).click();
+  await expect(page).toHaveURL(/\/subscribe$/);
+  await openUserMenu(page, "Perfil");
+  await expect(page).toHaveURL(/\/profile$/);
+  await page.getByRole("link", { name: "Painel", exact: true }).click();
+  await expect(page).toHaveURL(/\/subscribe$/);
+  await openUserMenu(page, "Perfil");
+  await page.getByRole("link", { name: "Plantações", exact: true }).click();
+  await expect(page).toHaveURL(/\/subscribe$/);
+  await expect(page.getByRole("link", { name: "NewFarmer", exact: true })).toBeVisible();
+  await openUserMenu(page, "MyFarm");
   await expect(page).toHaveURL(/\/subscribe$/);
 });
 

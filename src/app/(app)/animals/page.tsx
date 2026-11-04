@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { requireUser } from "@/server/current-user";
+import { requireAccess } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getFarm } from "@/server/farm";
 
@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function AnimalsIndex() {
-  const user = await requireUser();
+  const user = await requireAccess();
   const { animals } = await getFarm(await getDb(), user.id);
   if (animals.length) redirect(`/animals/${animals[0].id}`);
   const t = await getTranslations();

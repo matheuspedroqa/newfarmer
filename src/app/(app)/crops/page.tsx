@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { CROPS, CROP_GROUPS } from "@/lib/catalog";
+import { requireAccess } from "@/server/current-user";
 
 export async function generateMetadata(): Promise<Metadata> {
   return { title: (await getTranslations())("nav.crops") };
 }
 
 export default async function CropsIndex() {
+  await requireAccess();
   const t = await getTranslations();
   return (
     <section className="space-y-8">

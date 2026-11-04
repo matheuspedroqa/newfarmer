@@ -8,7 +8,7 @@ import { resolveLocale } from "@/i18n/locales";
 import { CROPS, CROP_IDS, type CropId } from "@/lib/catalog";
 import { ACTIVITIES, userCalendar } from "@/lib/seasons";
 import { getCropContent } from "@/server/content";
-import { requireUser } from "@/server/current-user";
+import { requireAccess } from "@/server/current-user";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function CropPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   if (!(CROP_IDS as readonly string[]).includes(id)) notFound();
-  const user = await requireUser();
+  const user = await requireAccess();
   const t = await getTranslations();
   const locale = resolveLocale(await getLocale());
   const content = getCropContent(id as CropId);

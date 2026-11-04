@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
-import { getLocale } from "next-intl/server";
 import { openPortalAction } from "@/app/actions/billing";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";

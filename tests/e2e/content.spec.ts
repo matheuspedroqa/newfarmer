@@ -10,7 +10,8 @@ test("aba Animais mostra só os animais da fazenda, a ficha completa, o bloco do
   await page.getByRole("button", { name: "Continuar" }).click();
   await subscribeFake(page);
   await page.getByRole("link", { name: "Animais", exact: true }).click();
-  await expect(page).toHaveURL(/\/animals\/chickens$/);
+  // A primeira visita compila /animals e a ficha no servidor de desenvolvimento: precisa de mais tempo.
+  await expect(page).toHaveURL(/\/animals\/chickens$/, { timeout: 45_000 });
   await expect(page.locator('[data-testid^="animal-tab-"]')).toHaveCount(2);
   await expect(page.getByTestId("animal-tab-chickens")).toBeVisible();
   await expect(page.getByTestId("animal-tab-cows")).toBeVisible();

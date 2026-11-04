@@ -7,7 +7,7 @@ import { formatDay } from "@/lib/format";
 import { ANIMALS, CROPS } from "@/lib/catalog";
 import { monthlyTasks, seasonFor } from "@/lib/seasons";
 import { getAllCropContent, getAnimalContent } from "@/server/content";
-import { requireUser } from "@/server/current-user";
+import { requireAccess } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { listDiary } from "@/server/diary";
 import { getFarm } from "@/server/farm";
@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function DashboardPage() {
-  const user = await requireUser();
+  const user = await requireAccess();
   const t = await getTranslations();
   const db = await getDb();
   const farm = await getFarm(db, user.id);

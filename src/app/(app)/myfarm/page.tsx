@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { saveFarmAction } from "@/app/actions/farm";
 import { CityForm } from "@/components/CityForm";
 import { FarmForm } from "@/components/FarmForm";
-import { requireUser } from "@/server/current-user";
+import { requireAccess } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getFarm } from "@/server/farm";
 
@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function MyFarmPage() {
-  const user = await requireUser();
+  const user = await requireAccess();
   const t = await getTranslations();
   return (
     <section className="max-w-4xl space-y-10">

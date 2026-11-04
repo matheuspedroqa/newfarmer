@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { LOCALE_COOKIE, SESSION_COOKIE, THEME_COOKIE } from "@/lib/cookies";
 import type { User } from "./accounts";
 import { getDb } from "./db";
+import { getSubscription, hasAccess } from "./subscriptions";
 import { createSession, deleteSession, getSessionUser } from "./sessions";
 
 const ONE_YEAR_S = 365 * 24 * 60 * 60;
@@ -17,6 +18,13 @@ export async function getCurrentUser(): Promise<User | null> {
 export async function requireUser(): Promise<User> {
   const user = await getCurrentUser();
   if (!user) redirect("/login");
+  return user;
+}
+
+/** Usuário logado com assinatura (ou dono do site); senão vai para /subscribe. Cada página paga chama isto: o layout não roda de novo na navegação interna. */
+export async function requireAccess(): Promise<User> {
+  const user = await requireUser();
+  if (!hasAccess(user, await getSubscription(await getDb(), user.id))) redirect("/subscribe");
   return user;
 }
 

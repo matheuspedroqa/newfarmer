@@ -3,7 +3,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { resolveLocale } from "@/i18n/locales";
 import { formatDay, formatRainMm, formatTime } from "@/lib/format";
 import { describeWeather } from "@/lib/weather-codes";
-import { requireUser } from "@/server/current-user";
+import { requireAccess } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getForecast } from "@/server/forecast";
 import { getWeatherProvider } from "@/server/weather";
@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function WeatherPage() {
-  const user = await requireUser();
+  const user = await requireAccess();
   const t = await getTranslations("weather");
   const locale = resolveLocale(await getLocale());
   const result = await getForecast((await getDb()), getWeatherProvider(), user.latitude, user.longitude);

@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { citySchema, farmSchema, parseCityField, parseFarmForm, toFieldErrors } from "@/lib/validation";
 import { logWriteLimited } from "@/server/activity-log";
-import { requireUser } from "@/server/current-user";
+import { requireAccess, requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { changeCityLogged, saveFarmLogged } from "@/server/audited";
 import { limitWrites } from "@/server/rate-limit";
@@ -12,8 +12,8 @@ import { clientIp } from "@/server/request-context";
 import { getWeatherProvider } from "@/server/weather";
 import type { FormState } from "./auth";
 
-async function validateAndSave(formData: FormData): Promise<FormState | null> {
-  const user = await requireUser();
+async function validateAndSave(formData: FormData, paid: boolean): Promise<FormState | null> {
+  const user = paid ? await requireAccess() : await requireUser();
   const db = await getDb();
   const limit = await limitWrites(db, user.id);
   if (!limit.ok) {
@@ -27,14 +27,14 @@ async function validateAndSave(formData: FormData): Promise<FormState | null> {
 }
 
 export async function saveFarmAction(_prev: FormState, formData: FormData): Promise<FormState> {
-  const error = await validateAndSave(formData);
+  const error = await validateAndSave(formData, true);
   if (error) return error;
   revalidatePath("/", "layout");
   return { done: true };
 }
 
 export async function saveFarmAndContinueAction(_prev: FormState, formData: FormData): Promise<FormState> {
-  const error = await validateAndSave(formData);
+  const error = await validateAndSave(formData, false);
   if (error) return error;
   redirect("/subscribe");
 }

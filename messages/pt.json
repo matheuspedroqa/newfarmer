@@ -574,7 +574,10 @@
     "cta": "Assinar por {price}/mês",
     "terms": "Termos",
     "privacy": "Política",
-    "processing": "Pagamento recebido, liberando sua conta…"
+    "processing": "Pagamento recebido, liberando sua conta…",
+    "successTitle": "Assinatura",
+    "notReceived": "Ainda não recebemos a confirmação do pagamento.",
+    "back": "Voltar para a assinatura"
   },
   "billing": {
     "title": "Assinatura",

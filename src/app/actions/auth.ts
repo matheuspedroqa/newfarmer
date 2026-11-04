@@ -15,6 +15,7 @@ import {
   toFieldErrors,
 } from "@/lib/validation";
 import { getUserById, verifyCredentials } from "@/server/accounts";
+import { appUrl } from "@/server/app-url";
 import { getSubscription, hasAccess } from "@/server/subscriptions";
 import { logLoginAttempt, loginTarget, logSafely } from "@/server/activity-log";
 import { signUpLogged } from "@/server/audited";
@@ -40,7 +41,6 @@ export type FormState = {
   values?: Record<string, string>;
 };
 
-const baseUrl = () => process.env.APP_URL ?? "http://localhost:3000";
 
 function typed(formData: FormData, ...fields: string[]): Record<string, string> {
   return Object.fromEntries(fields.map((f) => [f, String(formData.get(f) ?? "")]));
@@ -77,7 +77,7 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
   await startSession((await getUserById(db, result.userId))!);
   // Falha no envio não impede o cadastro: a faixa do topo deixa reenviar depois.
   try {
-    await sendVerificationEmail(db, getMailer(db), { userId: result.userId, baseUrl: baseUrl(), locale });
+    await sendVerificationEmail(db, getMailer(db), { userId: result.userId, baseUrl: appUrl(), locale });
   } catch (error) {
     console.error("Falha ao enviar e-mail de confirmação", error);
   }
@@ -131,7 +131,7 @@ export async function forgotAction(_prev: FormState, formData: FormData): Promis
   try {
     await requestPasswordReset(db, getMailer(db), {
       identifier: parsed.data.identifier,
-      baseUrl: baseUrl(),
+      baseUrl: appUrl(),
       locale: resolveLocale(await getLocale()),
       ip,
     });
@@ -157,7 +157,7 @@ export async function usernameReminderAction(_prev: FormState, formData: FormDat
   try {
     await sendUsernameReminder(db, getMailer(db), {
       email: parsed.data.email,
-      baseUrl: baseUrl(),
+      baseUrl: appUrl(),
       locale: resolveLocale(await getLocale()),
       ip,
     });

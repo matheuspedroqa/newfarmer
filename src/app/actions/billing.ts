@@ -3,6 +3,7 @@
 import { getLocale } from "next-intl/server";
 import { redirect } from "next/navigation";
 import { currencyForCountry } from "@/lib/pricing";
+import { appUrl } from "@/server/app-url";
 import { logSafely, logWriteLimited } from "@/server/activity-log";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
@@ -11,8 +12,6 @@ import { limitWrites } from "@/server/rate-limit";
 import { clientIp } from "@/server/request-context";
 import { ensureCustomer, getSubscription, hasOpenSubscription } from "@/server/subscriptions";
 
-const appUrl = () => process.env.APP_URL ?? "http://localhost:3000";
-
 export async function startCheckoutAction(): Promise<void> {
   const user = await requireUser();
   const db = await getDb();
@@ -20,7 +19,7 @@ export async function startCheckoutAction(): Promise<void> {
   const limit = await limitWrites(db, user.id);
   if (!limit.ok) {
     if (limit.firstBlock) await logWriteLimited(db, user.id, user.username, ip);
-    redirect("/subscribe");
+    redirect("/subscribe?error=rateLimited");
   }
   if (await hasOpenSubscription(db, user.id)) redirect("/dashboard");
   const provider = getPaymentProvider();

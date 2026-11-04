@@ -12,7 +12,7 @@ import { ANIMALS, ANIMAL_IDS, type AnimalId } from "@/lib/catalog";
 import { seasonFor, type Season } from "@/lib/seasons";
 import { formatDay } from "@/lib/format";
 import { getAnimalContent } from "@/server/content";
-import { requireUser } from "@/server/current-user";
+import { requireAccess } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { listDiary } from "@/server/diary";
 import { getFarm } from "@/server/farm";
@@ -36,7 +36,7 @@ export default async function AnimalPage({
   const sp = await searchParams;
   const showDiary = sp.tab === "diary" || sp.aba === "diario";
   if (!(ANIMAL_IDS as readonly string[]).includes(id)) notFound();
-  const user = await requireUser();
+  const user = await requireAccess();
   const db = await getDb();
   const farm = await getFarm(db, user.id);
   const inFarm = farm.animals.some((a) => a.id === id);

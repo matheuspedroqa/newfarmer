@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { LogoutButton } from "@/components/LogoutButton";
 import { NavRail } from "@/components/NavRail";
+import { OnboardingLogo } from "@/components/OnboardingLogo";
 import { OfflineSync } from "@/components/OfflineSync";
 import { TopControls } from "@/components/TopControls";
 import { UserMenu } from "@/components/UserMenu";
@@ -47,6 +48,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
       <div className="min-w-0 flex-1 px-4 pt-4 pb-24 md:p-8">
         <header className="flex flex-wrap items-center justify-between gap-3">
           <div>
+            <OnboardingLogo />
             <p className="text-sm text-muted" data-testid="user-climate">
               {user.cityLabel} · {t(`climate.${user.climateZone}`)}
               {user.climateEstimated && ` (${t("climate.estimated")})`} · {t(`climate.${user.hemisphere}`)}
@@ -59,6 +61,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           </div>
         </header>
         {!user.emailVerified && <VerifyEmailBanner email={user.email} />}
+        {/* Sempre montado: o layout não roda de novo na navegação interna, então decidir por assinatura aqui deixaria quem acabou de assinar sem modo offline. */}
         <OfflineSync owner={user.username} paths={offlinePaths} />
         <main className="mt-6">{children}</main>
       </div>

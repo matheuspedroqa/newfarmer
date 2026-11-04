@@ -2,6 +2,7 @@
 
 import { getLocale } from "next-intl/server";
 import { resolveLocale } from "@/i18n/locales";
+import { appUrl } from "@/server/app-url";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { sendVerificationEmail } from "@/server/email-verification";
@@ -15,7 +16,7 @@ export async function resendVerificationAction(): Promise<ResendState> {
   try {
     const result = await sendVerificationEmail(db, getMailer(db), {
       userId: user.id,
-      baseUrl: process.env.APP_URL ?? "http://localhost:3000",
+      baseUrl: appUrl(),
       locale: resolveLocale(await getLocale()),
     });
     return { result: result === "tooSoon" ? "tooSoon" : "sent" };
