@@ -12,7 +12,7 @@ Para qualquer assunto de privacidade, fale com o encarregado (DPO) pelo e-mail [
 
 ## 2. Quais dados guardamos
 
-Guardamos só o que o site precisa para funcionar. Não pedimos documentos, telefone, endereço da propriedade nem dados de pagamento.
+Guardamos só o que o site precisa para funcionar. Não pedimos documentos, telefone nem endereço da propriedade. O número do cartão não passa por nós: quem recebe é o Stripe (veja o item 4).
 
 ### Dados da sua conta
 
@@ -20,7 +20,14 @@ Guardamos só o que o site precisa para funcionar. Não pedimos documentos, tele
 - senha: nunca guardamos a senha em si, só uma versão embaralhada (hash bcrypt) que não pode ser desfeita;
 - idioma e tema (claro ou escuro) que você escolheu;
 - a data em que a conta foi criada e a data em que você confirmou o e-mail;
-- se a conta é a do dono do site.
+- se a conta é a do dono do site;
+- se você aceitou receber e-mails de novidades, e o código do link de descadastro.
+
+### Dados da assinatura
+
+- o identificador de cliente e o da assinatura no Stripe, o status, a moeda, o valor e as datas da assinatura.
+
+O número do cartão **nunca** chega ao NewFarmer e não é guardado por nós.
 
 ### Dados da sua criação e da sua região
 
@@ -37,7 +44,9 @@ Guardamos só o que o site precisa para funcionar. Não pedimos documentos, tele
 - **limites de tentativas:** contadores ligados ao endereço IP ou à conta, para impedir abusos (como alguém tentando adivinhar senhas);
 - **registro de atividade:** quem fez, o que fez, em quê, o endereço IP e quando, para as ações da conta (por exemplo: entrar, sair, trocar a senha, editar a criação ou o diário). Esse registro **nunca** guarda senhas, códigos de acesso nem o texto do seu diário;
 - **registro de erros:** quando uma página do site dá erro, guardamos o endereço da página (sem o que vem depois do "?"), uma mensagem curta do erro (até 300 caracteres) e a hora. **Nunca** guardamos o conteúdo do pedido nem os cabeçalhos. Usamos isso para a segurança e a manutenção do site. A mensagem pode, por acaso, conter algo que você digitou;
-- **códigos de e-mail:** os códigos dos links para trocar a senha e para confirmar o e-mail, guardados embaralhados.
+- **códigos de e-mail:** os códigos dos links para trocar a senha e para confirmar o e-mail, guardados embaralhados;
+- **medição de páginas:** só se você clicar em "Aceitar todos" no aviso de cookies. Guardamos um identificador aleatório do visitante, a sua conta (se estiver logado), a página visitada sem o que vem depois do "?", o site de origem (só o endereço do site) e a data. **Não guardamos o endereço IP** nessa medição;
+- **histórico de e-mails:** quais e-mails de novidades enviamos para você e quando.
 
 ### Previsão do tempo
 
@@ -48,8 +57,11 @@ Guardamos por até 7 dias as previsões do tempo de cada lugar, identificado por
 - **Para oferecer o serviço** (sua conta, sua criação, o diário, as orientações para a sua região e a previsão do tempo): é a execução do contrato que você aceita ao criar a conta (na LGPD, art. 7º, V; no RGPD, art. 6º, 1, b).
 - **Para a segurança e para evitar fraudes** (sessões, bloqueio depois de senhas erradas, limites de tentativas, registro de atividade e registro de erros): é o nosso interesse legítimo em proteger você e o site (na LGPD, art. 7º, IX; no RGPD, art. 6º, 1, f).
 - **Para enviar e-mails da conta** (confirmar o e-mail, trocar a senha, lembrar o username): execução do contrato.
+- **Para cobrar a assinatura** (criar e manter a assinatura, saber se ela está ativa): execução do contrato (LGPD, art. 7º, V; RGPD, art. 6º, 1, b).
+- **Para medir as páginas visitadas** e entender o que o site precisa melhorar: o seu consentimento, dado em "Aceitar todos" (LGPD, art. 7º, I; RGPD, art. 6º, 1, a; e a regra de cookies da ePrivacy). Você pode tirar o consentimento quando quiser.
+- **Para enviar e-mails de novidades (marketing):** só se você aceitou, e a base é o consentimento. Em todo e-mail há um link para sair da lista em um clique, e você também pode mudar isso em **Perfil**.
 
-Não enviamos e-mails de propaganda. Não vendemos seus dados. Não usamos seus dados para anúncios.
+Não vendemos seus dados. Não usamos seus dados para anúncios.
 
 ## 4. Com quem dividimos e onde ficam os dados
 
@@ -57,8 +69,13 @@ Usamos alguns fornecedores para o site funcionar. Eles só tratam os dados para 
 
 - **Supabase** (banco de dados): os dados ficam guardados na Irlanda, na União Europeia.
 - **Vercel** (hospedagem do site): recebe os acessos ao site e guarda registros técnicos com o endereço IP. Pode tratar os dados na União Europeia ou nos Estados Unidos, com cláusulas contratuais-padrão.
-- **Resend** (envio de e-mails): recebe o seu e-mail, nome e username para enviar os e-mails da conta.
+- **Resend** (envio de e-mails): recebe o seu e-mail, nome e username para enviar os e-mails da conta e, se você aceitou, os e-mails de novidades.
 - **Open-Meteo** (previsão do tempo): recebe o texto que você digita ao procurar uma cidade e as coordenadas da cidade, para devolver a previsão. Não recebe nenhum dado da sua conta.
+- **Stripe** (pagamentos): processa o pagamento da assinatura, por conta própria e como nosso operador. Recebe o seu e-mail e os dados do cartão, que você digita no ambiente do Stripe. O Stripe guarda os dados de cobrança pelo prazo que a lei fiscal exige, mesmo depois de a sua conta no NewFarmer ser apagada.
+
+### Quem tem acesso dentro do NewFarmer
+
+O dono do site (administrador) vê o seu nome, e-mail, username, cidade, país, os animais e as plantações, a data de criação, a assinatura e as páginas visitadas. Isso serve para suporte, cobrança e e-mails de novidades. O administrador **não vê o seu diário**. Cada vez que ele abre o detalhe de uma pessoa, isso fica registrado.
 
 Também podemos ter que entregar dados se uma lei ou uma ordem de autoridade obrigar.
 
@@ -71,6 +88,9 @@ O NewFarmer é mantido no Brasil, o banco de dados fica na União Europeia e alg
 - **Conta e dados da criação:** enquanto a conta existir. Quando a conta é apagada, esses dados também são.
 - **Registro de atividade:** 180 dias. **Tentativas de entrar:** 30 dias. Esses registros não são apagados junto com a conta: eles seguem esses prazos próprios e depois são apagados.
 - **Registro de erros:** 180 dias.
+- **Medição de páginas:** 180 dias.
+- **Histórico de e-mails de novidades:** enquanto a conta existir.
+- **Dados de cobrança no Stripe:** pelo prazo que a lei fiscal exige.
 - **Limites de tentativas:** cerca de 1 dia.
 - **Previsões do tempo:** até 7 dias.
 - **Sessões:** até você sair, até 1 hora sem uso ou no máximo 30 dias.
@@ -80,7 +100,7 @@ O NewFarmer é mantido no Brasil, o banco de dados fica na União Europeia e alg
 
 Para usar qualquer direito, mande um e-mail para [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com) a partir do e-mail da sua conta (ou diga qual é o seu username). Podemos pedir uma confirmação de que a conta é sua. Respondemos em até **15 dias** (LGPD), **30 dias** (RGPD) ou **45 dias** (leis dos EUA).
 
-Duas coisas você mesmo faz no site, em **Perfil**, sem precisar pedir: **"Baixar meus dados"** entrega um arquivo (JSON) com a conta, os animais, as plantações, o diário e o seu registro de atividade; **"Apagar minha conta"** apaga na hora a conta e os dados dela, depois de você digitar a senha.
+Duas coisas você mesmo faz no site, em **Perfil**, sem precisar pedir: **"Baixar meus dados"** entrega um arquivo (JSON) com a conta, os animais, as plantações, o diário e o seu registro de atividade; **"Apagar minha conta"** cancela a assinatura e apaga na hora a conta e os dados dela, inclusive as páginas visitadas e o histórico de e-mails, depois de você digitar a senha.
 
 ### No Brasil (LGPD)
 
@@ -98,12 +118,18 @@ O NewFarmer **não vende nem compartilha** dados pessoais para publicidade compo
 
 ## 8. Cookies
 
-Usamos só 4 cookies, todos essenciais para o site funcionar. Não usamos cookies de estatística, propaganda ou rastreamento.
+Usamos 4 cookies essenciais, que o site precisa para funcionar e não pedem consentimento:
 
 - **nf_session:** mantém você conectado.
 - **nf_locale:** lembra o idioma.
 - **nf_theme:** lembra o tema claro ou escuro.
-- **nf_cookie_notice:** lembra que você já viu o aviso de cookies.
+- **nf_consent:** lembra a sua escolha no aviso de cookies.
+
+Usamos 1 cookie só com o seu consentimento, ao clicar em "Aceitar todos":
+
+- **nf_vid:** um identificador aleatório do visitante, por 1 ano, para medir as páginas visitadas (veja o item 2).
+
+Não usamos cookies de propaganda. Para mudar a escolha, apague os cookies do site no navegador: o aviso volta a aparecer. Se você clicar em "Só os essenciais", o `nf_vid` não é criado.
 
 ## 9. Crianças
 

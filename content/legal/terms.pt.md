@@ -6,7 +6,7 @@ Estes termos são as regras para usar o NewFarmer. Ao criar uma conta, você con
 
 ## 1. O que é o NewFarmer
 
-O NewFarmer é um site gratuito que ajuda pequenos produtores rurais a cuidar dos animais e das plantações: guias de cuidado, épocas de plantio para a sua região, previsão do tempo e um diário da criação.
+O NewFarmer é um site por assinatura que ajuda pequenos produtores rurais a cuidar dos animais e das plantações: guias de cuidado, épocas de plantio para a sua região, previsão do tempo e um diário da criação.
 
 ### O que o NewFarmer não é
 
@@ -33,21 +33,39 @@ O NewFarmer é um site gratuito que ajuda pequenos produtores rurais a cuidar do
 
 Fazemos o possível para o site funcionar bem, mas ele é oferecido **como está**, sem garantia de que vai estar sempre no ar, sem erros ou com todas as informações certas. O site pode mudar, parar por um tempo ou deixar de existir. Na medida em que a lei permite, não respondemos por prejuízos causados por decisões tomadas só com base no site.
 
-## 5. Encerramento da conta
+## 5. Assinatura e pagamento
 
-- Você pode apagar a sua conta a qualquer momento em **Perfil → Apagar minha conta**, ou pedir pelo e-mail [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
+- **Preço:** a assinatura custa um valor mensal único: **R$ 6,99** no Brasil, **€ 1,99** na Europa e **US$ 2,00** no resto do mundo. Os impostos estão incluídos quando a lei exigir.
+- **Cobrança:** é recorrente, todo mês, automática, no cartão, feita pelo Stripe. Não há teste grátis.
+- **Acesso:** o acesso ao app depende da assinatura ativa.
+- **Falha de pagamento:** o Stripe tenta cobrar de novo. Se o pagamento não for feito, o acesso é suspenso e os seus dados continuam guardados até você apagar a conta.
+- **Mudança de preço:** avisamos por e-mail com 30 dias de antecedência. Quem não concordar pode cancelar.
+
+## 6. Cancelamento
+
+Você pode cancelar a qualquer momento em **Perfil → Gerenciar ou cancelar**. O acesso continua até o fim do período já pago. Não há multa.
+
+## 7. Arrependimento e reembolso
+
+- Você tem direito a reembolso integral se pedir em até **7 dias** da primeira cobrança no Brasil (Código de Defesa do Consumidor, art. 49) ou em até **14 dias** na União Europeia (direito de retratação). Nos Estados Unidos e nos demais países, o prazo é de **7 dias**.
+- O pedido é feito pelo e-mail [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
+- Fora desse prazo, não devolvemos o mês parcial, salvo se a lei do seu lugar exigir.
+
+## 8. Encerramento da conta
+
+- Você pode apagar a sua conta a qualquer momento em **Perfil → Apagar minha conta**, o que também cancela a assinatura, ou pedir pelo e-mail [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
 - Podemos suspender ou encerrar contas que desrespeitem estes termos, ou contas de menores de 13 anos.
 - Quando a conta é apagada, os dados dela são apagados como explica a [Política de Privacidade](/privacy).
 
-## 6. Mudanças nestes termos
+## 9. Mudanças nestes termos
 
 A data no topo mostra a última atualização. Mudanças importantes serão avisadas no site.
 
-## 7. Lei e foro
+## 10. Lei e foro
 
 Estes termos seguem a lei brasileira. Qualquer disputa será resolvida no foro da comarca de Jundiaí, São Paulo, Brasil. Isso não tira nenhum direito que a lei do seu país (por exemplo, da União Europeia ou dos Estados Unidos) não deixa afastar, inclusive o de recorrer aos tribunais e autoridades do lugar onde você mora.
 
-## 8. Contato
+## 11. Contato
 
 Responsável: **Matheus Lemes**, Jundiaí, São Paulo, Brasil.
 

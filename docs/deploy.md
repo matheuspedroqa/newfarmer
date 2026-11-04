@@ -71,3 +71,43 @@ UPDATE users SET is_platform_admin = TRUE WHERE username = 'seu_username';
 ```
 
 Saia e entre de novo (ou recarregue a página): o item **Settings** aparece no menu da conta, logo abaixo de **Perfil**.
+
+## Stripe (assinatura)
+
+1. Crie a conta em stripe.com e conclua a verificação (CPF ou CNPJ).
+2. Em **Product catalog**, crie o produto com 3 preços **recorrentes mensais**: BRL 6,99, EUR 1,99 e USD 2,00. Copie o id `price_...` de cada um.
+3. Em **Developers → Webhooks**, crie o endpoint `https://<site>/api/stripe/webhook` com os eventos `customer.subscription.created`, `customer.subscription.updated` e `customer.subscription.deleted`. Copie o segredo `whsec_...`.
+4. Em **Settings → Billing → Customer portal**, ligue o portal e permita o cancelamento da assinatura.
+5. Na Vercel, cadastre só em **Production**: `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_BRL`, `STRIPE_PRICE_EUR`, `STRIPE_PRICE_USD`. Depois, **Redeploy**.
+6. Teste primeiro com chaves `sk_test_` e o cartão `4242 4242 4242 4242`. Para vender de verdade, recrie os produtos no modo live (os ids `price_...` mudam), crie o webhook live e troque as variáveis.
+
+Avisos:
+
+- O plano Hobby da Vercel não permite uso comercial: é preciso o plano Pro.
+- IVA da UE (OSS) e tributação no Brasil: fale com um contador antes de vender.
+
+## Quando comprar o domínio
+
+Não precisa mudar código.
+
+1. **Vercel → Domains:** adicione o domínio e aponte o DNS como ela pedir.
+2. **Resend → Domains:** adicione `seudominio.com` (ou `mail.seudominio.com`), crie no DNS os registros que ele mostrar (SPF/MX de retorno e DKIM) e espere ficar "Verified".
+3. Crie também o registro DMARC no DNS: nome `_dmarc`, valor `v=DMARC1; p=none; rua=mailto:<seu e-mail>`.
+4. Na Vercel, troque: `APP_URL=https://seudominio.com`, `MAIL_FROM=NewFarmer <nao-responda@seudominio.com>`, `MAIL_REPLY_TO=<seu e-mail de contato>` e, se quiser, `MAIL_MARKETING_FROM=NewFarmer <novidades@seudominio.com>`.
+5. No Stripe, troque a URL do webhook para `https://seudominio.com/api/stripe/webhook`. O segredo `whsec_` muda: atualize `STRIPE_WEBHOOK_SECRET`.
+6. **Redeploy** e teste: o cadastro recebe o e-mail de confirmação, o "esqueci a senha" chega e um e-mail de campanha de teste chega com o link de descadastro.
+
+Todos os links dos e-mails, do sitemap, do canonical e do retorno do Stripe saem do `APP_URL`. Por isso basta trocá-lo.
+
+## Antes de vender
+
+- [ ] Conta Stripe verificada (CPF/CNPJ).
+- [ ] 3 preços mensais criados (BRL, EUR, USD).
+- [ ] Webhook criado com os 3 eventos.
+- [ ] Customer Portal ligado, com cancelamento.
+- [ ] 5 variáveis do Stripe em Production.
+- [ ] Plano Pro da Vercel (o Hobby não permite uso comercial).
+- [ ] Plano comercial do Open-Meteo.
+- [ ] Domínio próprio verificado no Resend.
+- [ ] IVA/OSS para clientes da UE e tributação no Brasil, com um contador.
+- [ ] Termos e Política revisados por um advogado.

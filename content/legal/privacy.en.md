@@ -12,7 +12,7 @@ For any privacy matter, contact the data protection officer (DPO) at [matheusps7
 
 ## 2. What data we keep
 
-We keep only what the site needs to work. We do not ask for ID documents, phone number, farm address or payment details.
+We keep only what the site needs to work. We do not ask for ID documents, phone number or farm address. Your card number does not pass through us: Stripe receives it (see section 4).
 
 ### Your account
 
@@ -20,7 +20,14 @@ We keep only what the site needs to work. We do not ask for ID documents, phone 
 - password: we never store the password itself, only a scrambled version (a bcrypt hash) that cannot be reversed;
 - the language and theme (light or dark) you chose;
 - the date the account was created and the date you confirmed your e-mail;
-- whether the account belongs to the site owner.
+- whether the account belongs to the site owner;
+- whether you agreed to receive news e-mails, and the code in the unsubscribe link.
+
+### Your subscription
+
+- the customer and subscription identifiers at Stripe, the status, the currency, the amount and the dates of the subscription.
+
+Your card number **never** reaches NewFarmer and is not stored by us.
 
 ### Your farm and your region
 
@@ -37,7 +44,9 @@ We keep only what the site needs to work. We do not ask for ID documents, phone 
 - **attempt limits:** counters tied to the IP address or the account, to stop abuse (such as someone trying to guess passwords);
 - **activity log:** who did what, on what, the IP address and when, for account actions (for example: signing in, signing out, changing the password, editing the farm or the diary). This log **never** stores passwords, access codes or the text of your diary;
 - **error log:** when a page of the site fails, we store the page address (without what comes after the "?"), a short error message (up to 300 characters) and the time. We **never** store the content of the request or its headers. We use this for the security and maintenance of the site. The message may, by chance, contain something you typed;
-- **e-mail codes:** the codes in the links to reset your password and to confirm your e-mail, stored scrambled.
+- **e-mail codes:** the codes in the links to reset your password and to confirm your e-mail, stored scrambled;
+- **page measurement:** only if you click "Accept all" on the cookie notice. We store a random visitor identifier, your account (if signed in), the page visited without what comes after the "?", the referring site (only the site address) and the date. **We do not store the IP address** in this measurement;
+- **e-mail history:** which news e-mails we sent you and when.
 
 ### Weather forecasts
 
@@ -48,8 +57,11 @@ We keep weather forecasts for up to 7 days for each place, identified by coordin
 - **To provide the service** (your account, your farm, the diary, guidance for your region and the weather forecast): this is the performance of the contract you accept when you create your account (LGPD art. 7, V; GDPR art. 6(1)(b)).
 - **For security and fraud prevention** (sessions, locking after wrong passwords, attempt limits, the activity log and the error log): this is our legitimate interest in protecting you and the site (LGPD art. 7, IX; GDPR art. 6(1)(f)).
 - **To send account e-mails** (confirming your e-mail, resetting your password, reminding you of your username): performance of the contract.
+- **To bill the subscription** (creating and keeping the subscription, knowing whether it is active): performance of the contract (LGPD art. 7, V; GDPR art. 6(1)(b)).
+- **To measure the pages visited** and understand what the site needs to improve: your consent, given by "Accept all" (LGPD art. 7, I; GDPR art. 6(1)(a); and the ePrivacy cookie rule). You can withdraw consent at any time.
+- **To send news e-mails (marketing):** only if you agreed, and the basis is consent. Every e-mail has a one-click link to leave the list, and you can also change this under **Profile**.
 
-We do not send marketing e-mails. We do not sell your data. We do not use your data for advertising.
+We do not sell your data. We do not use your data for advertising.
 
 ## 4. Who we share data with and where it is kept
 
@@ -57,8 +69,13 @@ We use a few providers to run the site. They only process data to provide that s
 
 - **Supabase** (database): the data is stored in Ireland, in the European Union.
 - **Vercel** (site hosting): receives the visits to the site and keeps technical logs with the IP address. It may process data in the European Union or the United States, under standard contractual clauses.
-- **Resend** (sending e-mails): receives your e-mail address, name and username to send account e-mails.
+- **Resend** (sending e-mails): receives your e-mail address, name and username to send account e-mails and, if you agreed, news e-mails.
 - **Open-Meteo** (weather forecasts): receives the text you type when searching for a city and the city's coordinates, to return the forecast. It does not receive any of your account data.
+- **Stripe** (payments): processes the subscription payment, on its own account and as our processor. It receives your e-mail address and card details, which you type in Stripe's own page. Stripe keeps billing data for as long as tax law requires, even after your NewFarmer account is deleted.
+
+### Who has access inside NewFarmer
+
+The site owner (administrator) sees your name, e-mail, username, city, country, animals and crops, creation date, subscription and pages visited. This is for support, billing and news e-mails. The administrator **does not see your diary**. Every time the administrator opens a person's details, this is logged.
 
 We may also have to hand over data when a law or an order from an authority requires it.
 
@@ -71,6 +88,9 @@ NewFarmer is run from Brazil, the database is in the European Union and some pro
 - **Account and farm data:** for as long as the account exists. When the account is deleted, this data is deleted too.
 - **Activity log:** 180 days. **Sign-in attempts:** 30 days. These records are not deleted together with the account: they follow their own periods and are deleted after that.
 - **Error log:** 180 days.
+- **Page measurement:** 180 days.
+- **News e-mail history:** for as long as the account exists.
+- **Billing data at Stripe:** for as long as tax law requires.
 - **Attempt limits:** about 1 day.
 - **Weather forecasts:** up to 7 days.
 - **Sessions:** until you sign out, after 1 hour without use, or at most 30 days.
@@ -80,7 +100,7 @@ NewFarmer is run from Brazil, the database is in the European Union and some pro
 
 To use any of your rights, send an e-mail to [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com) from your account's e-mail address (or tell us your username). We may ask you to confirm that the account is yours. We reply within **15 days** (LGPD), **30 days** (GDPR) or **45 days** (US laws).
 
-Two things you can do yourself on the site, under **Profile**, without asking: **"Download my data"** gives you a file (JSON) with your account, animals, crops, diary and your activity log; **"Delete my account"** deletes the account and its data right away, after you type your password.
+Two things you can do yourself on the site, under **Profile**, without asking: **"Download my data"** gives you a file (JSON) with your account, animals, crops, diary and your activity log; **"Delete my account"** cancels the subscription and deletes the account and its data right away, including the pages visited and the e-mail history, after you type your password.
 
 ### In Brazil (LGPD)
 
@@ -98,12 +118,18 @@ NewFarmer **does not sell or share** personal data for cross-context behavioral 
 
 ## 8. Cookies
 
-We use only 4 cookies, all essential for the site to work. We do not use analytics, advertising or tracking cookies.
+We use 4 essential cookies, which the site needs to work and which do not require consent:
 
 - **nf_session:** keeps you signed in.
 - **nf_locale:** remembers your language.
 - **nf_theme:** remembers the light or dark theme.
-- **nf_cookie_notice:** remembers that you have seen the cookie notice.
+- **nf_consent:** remembers your choice on the cookie notice.
+
+We use 1 cookie only with your consent, when you click "Accept all":
+
+- **nf_vid:** a random visitor identifier, for 1 year, to measure the pages visited (see section 2).
+
+We do not use advertising cookies. To change your choice, delete the site's cookies in your browser: the notice will show again. If you click "Essential only", `nf_vid` is not created.
 
 ## 9. Children
 

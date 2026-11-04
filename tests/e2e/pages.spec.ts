@@ -47,6 +47,16 @@ test("as páginas legais em português mostram o texto e o contato", async ({ pa
   await expect(page.getByRole("heading", { level: 1, name: "Termos de Uso" })).toBeVisible();
 });
 
+test("termos e privacidade falam de assinatura, preço, cookies e Stripe", async ({ page, context }) => {
+  await page.goto("/terms");
+  for (const t of ["R$ 6,99", "7 dias", "14 dias"]) await expect(page.getByRole("main")).toContainText(t);
+  await page.goto("/privacy");
+  for (const t of ["Stripe", "nf_vid"]) await expect(page.getByRole("main")).toContainText(t);
+  await context.addCookies([{ name: "nf_locale", value: "en", domain: "localhost", path: "/" }]);
+  await page.goto("/terms");
+  for (const t of ["€1.99", "$2.00"]) await expect(page.getByRole("main")).toContainText(t);
+});
+
 test("quem está logado vai da inicial ao painel, que tem título próprio", async ({ page }) => {
   await signup(page, uniqueEmail());
   await expect(page).toHaveTitle("Painel · NewFarmer");
