@@ -183,7 +183,7 @@ it("cadastro grava auth.signup com o username", async () => {
 it("diário criado e apagado: uma linha cada, só animal e tipo", async () => {
   const db = await testDb();
   const ana = await makeUser(db);
-  const id = await addDiaryLogged(db, ana, { animalId: "cows", date: "2026-01-01", kind: "illness", animalName: "Mimosa", note: "texto-secreto" }, IP);
+  const id = (await addDiaryLogged(db, ana, { animalId: "cows", date: "2026-01-01", kind: "illness", animalName: "Mimosa", note: "texto-secreto" }, IP))!;
   expect(await deleteDiaryLogged(db, ana, id, IP)).toBe("cows");
   expect(await deleteDiaryLogged(db, ana, id, IP)).toBeNull(); // já apagado: não registra de novo
   const rows = await listActivity(db, { userId: ana });

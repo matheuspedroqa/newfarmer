@@ -5,13 +5,14 @@ import type { Db } from "./db";
 
 export type DiaryEntry = DiaryInput & { id: number };
 
-export async function addDiaryEntry(db: Db, userId: number, entry: DiaryInput): Promise<number> {
+/** null quando a mesma etiqueta (clientId) já foi gravada: é a mesma anotação reenviada. */
+export async function addDiaryEntry(db: Db, userId: number, entry: DiaryInput, clientId?: string): Promise<number | null> {
   const [row] = await db.query<{ id: number }>(
-    `INSERT INTO diary_entries (user_id, animal_id, entry_date, kind, animal_name, note, created_at)
-     VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id`,
-    [userId, entry.animalId, entry.date, entry.kind, entry.animalName, entry.note, Date.now()],
+    `INSERT INTO diary_entries (user_id, animal_id, entry_date, kind, animal_name, note, created_at, client_id)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8) ON CONFLICT (user_id, client_id) DO NOTHING RETURNING id`,
+    [userId, entry.animalId, entry.date, entry.kind, entry.animalName, entry.note, Date.now(), clientId ?? null],
   );
-  return row.id;
+  return row?.id ?? null;
 }
 
 /** Mais nova primeiro; no mesmo dia, a última anotada primeiro. */

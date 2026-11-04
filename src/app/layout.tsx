@@ -11,7 +11,11 @@ import "./globals.css";
 const fraunces = Fraunces({ subsets: ["latin"], weight: ["500", "700"], variable: "--font-fraunces" });
 const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-nunito" });
 
-export const metadata: Metadata = { title: { template: "%s · NewFarmer", default: "NewFarmer" } };
+export const metadata: Metadata = {
+  title: { template: "%s · NewFarmer", default: "NewFarmer" },
+  // Instalar na tela inicial do iPhone abre sem a barra do Safari, como um app.
+  appleWebApp: { capable: true, title: "NewFarmer", statusBarStyle: "default" },
+};
 // viewportFit "cover" faz o env(safe-area-inset-*) funcionar no iPhone; o zoom continua liberado.
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
 

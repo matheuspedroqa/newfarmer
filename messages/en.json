@@ -263,7 +263,8 @@
     "save": "Save",
     "saved": "Saved!",
     "continue": "Continue",
-    "skip": "Skip for now"
+    "skip": "Skip for now",
+    "queued": "No internet: changes saved on this device. They will be sent when the internet is back."
   },
   "myfarm": {
     "title": "MyFarm",
@@ -420,7 +421,9 @@
       "illness": "Illness",
       "feeding": "Feeding",
       "other": "Other"
-    }
+    },
+    "queued": "No internet: note saved on this device. It will be sent when the internet is back.",
+    "waitingTitle": "{count, plural, one {# note waiting for internet} other {# notes waiting for internet}}"
   },
   "verifyBanner": {
     "text": "Confirm your e-mail: we sent a link to {email}.",
@@ -526,5 +529,12 @@
     "route": "Route",
     "message": "Message",
     "noErrors": "No errors logged."
+  },
+  "offline": {
+    "offline": "You are offline. Showing the last version saved on this device. Anything you save will be sent when the internet is back.",
+    "offlineWaiting": "You are offline. {count, plural, one {# item saved} other {# items saved}} on this device, waiting to be sent.",
+    "sending": "Sending {count, plural, one {# item} other {# items}} saved offline…",
+    "rejected": "{count, plural, one {# item saved offline could not be stored} other {# items saved offline could not be stored}}. Please check and fill in again.",
+    "logoutConfirm": "Some notes saved offline have not been sent yet. If you sign out now they will be lost. Sign out anyway?"
   }
 }

@@ -31,6 +31,8 @@ export type FormState = {
   fieldErrors?: Record<string, string>;
   formError?: string;
   done?: boolean;
+  /** Sem internet: ficou na fila do aparelho (src/lib/outbox.ts). */
+  queued?: boolean;
   values?: Record<string, string>;
 };
 

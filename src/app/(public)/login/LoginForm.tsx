@@ -2,11 +2,12 @@
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import { loginAction, type FormState } from "@/app/actions/auth";
 import { AuthCard } from "@/components/AuthCard";
 import { FieldError } from "@/components/FieldError";
 import { SubmitButton } from "@/components/SubmitButton";
+import { forgetDevice } from "@/lib/outbox";
 
 const inputClass = "w-full rounded-xl border border-border bg-surface px-4 py-3";
 
@@ -14,6 +15,9 @@ export function LoginForm({ accountDeleted = false }: { accountDeleted?: boolean
   const t = useTranslations("auth");
   const tErrors = useTranslations("errors");
   const [state, action, pending] = useActionState<FormState, FormData>(loginAction, {});
+  useEffect(() => {
+    if (accountDeleted) forgetDevice();
+  }, [accountDeleted]);
 
   return (
     <AuthCard title={t("loginTitle")} subtitle={t("loginSubtitle")}>

@@ -200,6 +200,15 @@ CREATE TABLE forecast_snapshots (
 ALTER TABLE forecast_snapshots ENABLE ROW LEVEL SECURITY;
 `,
   },
+  {
+    id: 9,
+    name: "diary_client_id",
+    // Etiqueta criada no aparelho: a anotação feita sem internet pode chegar duas vezes e só grava uma.
+    sql: `
+ALTER TABLE diary_entries ADD COLUMN client_id TEXT;
+CREATE UNIQUE INDEX idx_diary_client ON diary_entries (user_id, client_id);
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

@@ -1,14 +1,25 @@
 import { getTranslations } from "next-intl/server";
-import { logoutAction } from "@/app/actions/auth";
+import { LogoutButton } from "@/components/LogoutButton";
 import { NavRail } from "@/components/NavRail";
+import { OfflineSync } from "@/components/OfflineSync";
 import { TopControls } from "@/components/TopControls";
 import { UserMenu } from "@/components/UserMenu";
 import { VerifyEmailBanner } from "@/components/VerifyEmailBanner";
 import { requireUser } from "@/server/current-user";
+import { getDb } from "@/server/db";
+import { getFarm } from "@/server/farm";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const user = await requireUser();
   const t = await getTranslations();
+  const farm = await getFarm(await getDb(), user.id);
+  // Páginas guardadas no aparelho para abrir sem internet (cada animal com a ficha e o diário).
+  const offlinePaths = [
+    "/painel", "/animais", "/plantacoes", "/clima", "/myfarm", "/perfil",
+    ...farm.animals.flatMap((a) => [`/animais/${a.id}`, `/animais/${a.id}?aba=diario`]),
+    // shortcut: até 20 plantações, para não pesar no servidor; aumentar se alguém reclamar de faltar ficha offline.
+    ...farm.crops.slice(0, 20).map((c) => `/plantacoes/${c}`),
+  ];
 
   // Trilho de ícones da variante D. MyFarm e Perfil ficam no menu da conta.
   const nav = [
@@ -33,12 +44,11 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           <div className="flex flex-wrap items-center gap-2 md:gap-3">
             <TopControls />
             <UserMenu name={user.name} isPlatformAdmin={user.isPlatformAdmin} />
-            <form action={logoutAction}>
-              <button type="submit" className="min-h-11 rounded-full border border-border px-3 py-1 text-sm md:min-h-0 transition-colors duration-150 hover:border-primary hover:bg-hover focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none motion-reduce:transition-none">{t("auth.logout")}</button>
-            </form>
+            <LogoutButton />
           </div>
         </header>
         {!user.emailVerified && <VerifyEmailBanner email={user.email} />}
+        <OfflineSync owner={user.username} paths={offlinePaths} />
         <main className="mt-6">{children}</main>
       </div>
     </div>

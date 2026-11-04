@@ -1,6 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { z } from "zod";
 import { diarySchema, toFieldErrors } from "@/lib/validation";
 import { logWriteLimited } from "@/server/activity-log";
 import { addDiaryLogged, deleteDiaryLogged } from "@/server/audited";
@@ -26,7 +27,8 @@ export async function addDiaryAction(_prev: FormState, formData: FormData): Prom
     note: formData.get("note"),
   });
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error) };
-  await addDiaryLogged(db, user.id, parsed.data, await clientIp());
+  const clientId = z.string().uuid().safeParse(formData.get("clientId")).data;
+  await addDiaryLogged(db, user.id, parsed.data, await clientIp(), clientId);
   revalidatePath("/", "layout");
   return { done: true };
 }

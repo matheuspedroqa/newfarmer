@@ -29,11 +29,24 @@ describe("diário dos animais", () => {
     const db = await testDb();
     const ana = await makeUser(db);
     const bia = await makeUser(db, { email: "bia@exemplo.com" });
-    const anaEntry = await addDiaryEntry(db, ana, entry);
+    const anaEntry = (await addDiaryEntry(db, ana, entry))!;
     expect(await deleteDiaryEntry(db, bia, anaEntry)).toBeNull();
     expect(await listDiary(db, ana, {})).toHaveLength(1);
     expect(await listDiary(db, bia, {})).toHaveLength(0);
     expect(await deleteDiaryEntry(db, ana, anaEntry)).toBe("cows");
     expect(await listDiary(db, ana, {})).toHaveLength(0);
+  });
+
+  it("a mesma etiqueta enviada de novo (internet caiu no meio) não duplica; etiquetas diferentes gravam", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    const bia = await makeUser(db, { email: "bia@exemplo.com" });
+    const tag = "3f1c2a9e-1b2c-4d5e-8f90-123456789abc";
+    expect(await addDiaryEntry(db, ana, entry, tag)).toEqual(expect.any(Number));
+    expect(await addDiaryEntry(db, ana, entry, tag)).toBeNull();
+    expect(await addDiaryEntry(db, bia, entry, tag)).toEqual(expect.any(Number)); // etiqueta é por conta
+    await addDiaryEntry(db, ana, entry);
+    await addDiaryEntry(db, ana, entry); // sem etiqueta: grava sempre
+    expect(await listDiary(db, ana, {})).toHaveLength(3);
   });
 });

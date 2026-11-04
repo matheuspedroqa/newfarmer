@@ -1,14 +1,21 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useActionState, useState } from "react";
+import { useActionState, useMemo, useState } from "react";
 import type { FormState } from "@/app/actions/auth";
 import { ANIMALS, CROPS, CROP_GROUPS } from "@/lib/catalog";
+import { offlineAware } from "@/lib/outbox";
+import { farmSchema, parseFarmForm, toFieldErrors } from "@/lib/validation";
 import type { Farm } from "@/server/farm";
 import { FieldError } from "./FieldError";
 import { SubmitButton } from "./SubmitButton";
 
 type Action = (prev: FormState, formData: FormData) => Promise<FormState>;
+
+function validateFarm(formData: FormData): FormState | null {
+  const parsed = farmSchema.safeParse(parseFarmForm(formData));
+  return parsed.success ? null : { fieldErrors: toFieldErrors(parsed.error) };
+}
 
 // Campos controlados: o React 19 limpa formulários depois de cada envio, e os controlados mantêm o que foi digitado.
 export function FarmForm({
@@ -16,14 +23,21 @@ export function FarmForm({
   action,
   submitLabel,
   footer,
+  offlineOwner,
 }: {
   initial: Farm;
   action: Action;
   submitLabel: string;
   footer?: React.ReactNode;
+  /** Com o username, salvar sem internet guarda na fila do aparelho (só no MyFarm). */
+  offlineOwner?: string;
 }) {
   const t = useTranslations();
-  const [state, formAction, pending] = useActionState<FormState, FormData>(action, {});
+  const wrapped = useMemo(
+    () => (offlineOwner ? offlineAware(offlineOwner, "farm", action, validateFarm) : action),
+    [offlineOwner, action],
+  );
+  const [state, formAction, pending] = useActionState<FormState, FormData>(wrapped, {});
   const [counts, setCounts] = useState<Record<string, string>>(
     Object.fromEntries(initial.animals.map((a) => [a.id, String(a.count)])),
   );
@@ -124,6 +138,7 @@ export function FarmForm({
       {state.done && (
         <p role="status" className="rounded-xl bg-soft px-4 py-3 font-semibold">{t("farm.saved")}</p>
       )}
+      {state.queued && <p role="status" className="rounded-xl bg-soft px-4 py-3 font-semibold">{t("farm.queued")}</p>}
       <div className="flex flex-wrap items-center gap-6">
         <div className="w-full sm:w-60">
           <SubmitButton pending={pending}>{submitLabel}</SubmitButton>

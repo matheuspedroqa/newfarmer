@@ -84,7 +84,7 @@ export default async function AnimalPage({
       {showDiary ? (
         <section className="space-y-4">
           <h2 className="font-display text-2xl font-bold">{t("diary.title", { animal: t(`animals.${id}`) })}</h2>
-          <DiaryForm animalId={id} today={new Date().toISOString().slice(0, 10)} />
+          <DiaryForm animalId={id} today={new Date().toISOString().slice(0, 10)} owner={user.username} />
           {diary.length ? (
             <ul className="space-y-3">
               {diary.map((e) => (

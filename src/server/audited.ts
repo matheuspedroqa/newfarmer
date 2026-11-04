@@ -18,9 +18,9 @@ export async function signUpLogged(db: Db, provider: Parameters<typeof registerU
   return result;
 }
 
-export async function addDiaryLogged(db: Db, userId: number, entry: Parameters<typeof addDiaryEntry>[2], ip: string) {
-  const id = await addDiaryEntry(db, userId, entry);
-  await logSafely(db, { userId, action: "diary.created", details: { animal: entry.animalId, kind: entry.kind }, ip });
+export async function addDiaryLogged(db: Db, userId: number, entry: Parameters<typeof addDiaryEntry>[2], ip: string, clientId?: string) {
+  const id = await addDiaryEntry(db, userId, entry, clientId);
+  if (id !== null) await logSafely(db, { userId, action: "diary.created", details: { animal: entry.animalId, kind: entry.kind }, ip });
   return id;
 }
 
