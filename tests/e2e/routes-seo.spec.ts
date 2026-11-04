@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { signup, uniqueEmail } from "./helpers";
+import { createAccount, signup, uniqueEmail } from "./helpers";
 
 const OLD_TO_NEW: [string, string][] = [
   ["/cadastro", "/register"],
@@ -33,14 +33,55 @@ for (const [oldPath, newPath] of OLD_TO_NEW) {
 test.describe("sem cookie de idioma", () => {
   test.use({ storageState: { cookies: [], origins: [] } });
 
-  test("/pt mostra a landing em português e / em inglês", async ({ page }) => {
+  test("/pt mostra a landing em português e / em inglês", async ({ page, context }) => {
     await page.goto("/pt");
     await expect(page.getByRole("link", { name: "Criar conta grátis" }).first()).toBeVisible();
-    await page.context().clearCookies();
+    await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");
+    expect((await context.cookies()).find((c) => c.name === "nf_locale")?.value).toBe("pt");
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/pt$/);
+    await expect(page.locator('link[rel="alternate"][hreflang="en"]')).toHaveCount(1);
+    await expect(page.locator('link[rel="alternate"][hreflang="x-default"]')).toHaveCount(1);
+    for (const [path, heading] of [["/pt/privacy", "Política de Privacidade"], ["/pt/terms", "Termos de Uso"]]) {
+      await page.goto(path);
+      await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");
+      await expect(page.getByRole("heading", { name: heading }).first()).toBeVisible();
+    }
+    await context.clearCookies();
     await page.goto("/");
     await expect(page.getByRole("link", { name: "Create free account" }).first()).toBeVisible();
     await expect(page.locator("html")).toHaveAttribute("lang", "en");
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /^http:\/\/localhost:3100\/?$/);
+    await expect(page.locator('link[rel="alternate"][hreflang="pt"]')).toHaveCount(1);
   });
+
+  test("o seletor de idioma troca de URL nas páginas de marketing", async ({ page }) => {
+    await page.goto("/pt/privacy");
+    await page.waitForLoadState("networkidle");
+    await page.getByTestId("top-controls").getByRole("button", { name: "EN", exact: true }).click();
+    await expect(page).toHaveURL(/\/privacy$/);
+    await expect(page.locator("html")).toHaveAttribute("lang", "en");
+    await page.waitForLoadState("networkidle");
+    await page.getByTestId("top-controls").getByRole("button", { name: "PT", exact: true }).click();
+    await expect(page).toHaveURL(/\/pt\/privacy$/);
+    await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");
+    await page.goto("/pt");
+    await page.waitForLoadState("networkidle");
+    await page.getByTestId("top-controls").getByRole("button", { name: "EN", exact: true }).click();
+    await expect(page).toHaveURL(/\/$/);
+    await page.waitForLoadState("networkidle");
+    await page.getByTestId("top-controls").getByRole("button", { name: "PT", exact: true }).click();
+    await expect(page).toHaveURL(/\/pt$/);
+  });
+});
+
+test("?aba=diario antigo ainda abre o diário", async ({ page }) => {
+  await createAccount(page, uniqueEmail());
+  await page.getByLabel("Vacas").check();
+  await page.locator("#count-cows").fill("3");
+  await page.getByRole("button", { name: "Continuar" }).click();
+  await expect(page).toHaveURL(/\/dashboard$/);
+  await page.goto("/animals/cows?aba=diario");
+  await expect(page.getByText("Nenhuma anotação ainda.")).toBeVisible();
 });
 
 test("robots.txt e sitemap.xml", async ({ page }) => {

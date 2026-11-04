@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
 import { setLocaleAction } from "@/app/actions/preferences";
 import { LOCALES, type Locale } from "@/i18n/locales";
@@ -9,6 +9,7 @@ import { LOCALES, type Locale } from "@/i18n/locales";
 export function LocaleToggle({ current }: { current: Locale }) {
   const t = useTranslations("toggles");
   const router = useRouter();
+  const pathname = usePathname();
   const [pending, startTransition] = useTransition();
 
   return (
@@ -22,7 +23,10 @@ export function LocaleToggle({ current }: { current: Locale }) {
           onClick={() =>
             startTransition(async () => {
               await setLocaleAction(locale);
-              router.refresh();
+              // Na landing e nas páginas legais o idioma vem da URL (/pt/...): troca de endereço (navegação completa: o <html lang> vem do layout raiz, que a navegação suave não refaz).
+              const m = /^(?:\/pt)?(\/privacy|\/terms)?\/?$/.exec(pathname);
+              if (m) window.location.assign(`${locale === "pt" ? "/pt" : ""}${m[1] ?? (locale === "pt" ? "" : "/")}`);
+              else router.refresh();
             })
           }
           className="min-h-11 min-w-11 px-3 py-1 text-sm md:min-h-0 md:min-w-0 font-semibold transition-colors duration-150 hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary aria-pressed:bg-primary aria-pressed:text-primary-text aria-pressed:hover:bg-primary aria-pressed:focus-visible:ring-primary-text aria-pressed:hover:opacity-90 motion-reduce:transition-none"
