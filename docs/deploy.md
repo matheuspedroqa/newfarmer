@@ -61,16 +61,24 @@ No plano Hobby da Vercel o job roda em algum minuto entre 00:00 e 00:59 UTC.
 4. Para testar na mão: `curl -H "Authorization: Bearer <CRON_SECRET>" https://newfarmer.vercel.app/api/cron/forecast`
    (deve responder `{"ok":true,"date":"AAAA-MM-DD"}`).
 
-## Virar dono do site (Settings)
+## Virar dono do site (Admin)
 
-As telas **Settings → Activity logs** e **Monitoramento** só aparecem para o dono do site; para os demais, dão 404.
+As telas do **Admin** (Assinantes, Leads, E-mails, Activity logs e Monitoramento) só aparecem para o dono do site; para os demais, dão 404.
 Não há tela para ligar isso, de propósito. No Supabase, abra o **SQL Editor** e rode, trocando pelo seu username:
 
 ```sql
 UPDATE users SET is_platform_admin = TRUE WHERE username = 'seu_username';
 ```
 
-Saia e entre de novo (ou recarregue a página): o item **Settings** aparece no menu da conta, logo abaixo de **Perfil**.
+Saia e entre de novo (ou recarregue a página): o item **Admin** aparece no menu da conta, logo abaixo de **Perfil**.
+
+## Antes de publicar a Etapa 7 (ordem)
+
+1. **Dono como admin.** Confirme no SQL Editor: `SELECT username, is_platform_admin FROM users WHERE username = 'matheusps70';` (deve vir `true`; já está em produção). Se não, rode o `UPDATE` da seção acima.
+2. **Stripe em Production.** Cadastre `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_BRL`, `STRIPE_PRICE_EUR` e `STRIPE_PRICE_USD` e crie o webhook (seção Stripe). Não dá para testar com chaves de teste num Preview: o Preview também roda com `NODE_ENV=production` e usa o banco real. Então ou vá direto com chaves live, ou use chaves de teste sabendo que o checkout fica em modo de teste (ninguém paga de verdade). Sem as variáveis `STRIPE_*`, todo usuário que não é admin é enviado para `/subscribe` e o checkout dá erro. Configure também `APP_URL`: em produção, sem ela, o site falha de propósito em vez de mandar links para localhost.
+3. **Backup do banco** (Supabase → Database → Backups, ou `pg_dump`).
+4. **Merge e deploy** da branch.
+5. **Migração 10** roda no primeiro acesso ao banco. Abra o site (ou o `/login`) e confira no SQL Editor: `SELECT MAX(id) FROM schema_migrations;` deve mostrar 10 e `SELECT to_regclass('page_views');` não pode ser nulo.
 
 ## Stripe (assinatura)
 

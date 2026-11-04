@@ -22,14 +22,19 @@ function handled(request, url) {
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
   if (!handled(event.request, url)) return;
-  if (event.request.mode === "navigate") event.respondWith(page(event.request));
+  if (event.request.mode === "navigate") event.respondWith(page(event));
   else if (url.pathname.startsWith("/_next/static/") || /\.(svg|png|ico|woff2?|css)$/.test(url.pathname)) event.respondWith(asset(event.request));
 });
 
-async function page(request) {
+// Só as páginas do app (as mesmas de offlinePaths no layout) ficam guardadas: nada de /admin nem de links com token.
+const SAVABLE = /^\/(dashboard|animals|crops|weather|myfarm|profile)(\/|$)/;
+const savable = (url) => SAVABLE.test(new URL(url, self.location.origin).pathname);
+
+async function page(event) {
+  const request = event.request;
   try {
     const response = await fetch(request);
-    if (response.ok && response.type === "basic") await savePage(request.url, response.clone());
+    if (response.ok && response.type === "basic" && savable(request.url)) event.waitUntil(savePage(request.url, response.clone()));
     return response;
   } catch {
     const cache = await caches.open(PAGES);
@@ -54,6 +59,7 @@ async function asset(request) {
 
 // Guarda a página e os scripts e estilos que ela usa, para ela funcionar (e salvar) sem internet.
 async function savePage(url, response) {
+  if (!savable(url)) return;
   const html = await response.clone().text();
   await (await caches.open(PAGES)).put(url, response);
   const assets = await caches.open(ASSETS);
@@ -69,7 +75,23 @@ async function savePage(url, response) {
   );
 }
 
+// Tira de nf-assets-v1 o que nenhuma página guardada usa mais.
+async function pruneAssets() {
+  const used = new Set();
+  const pages = await caches.open(PAGES);
+  for (const req of await pages.keys()) {
+    const html = await (await pages.match(req)).text();
+    for (const m of html.matchAll(/(?:src|href)="(\/_next\/static\/[^"]+)"/g)) used.add(m[1].replace(/&amp;/g, "&"));
+  }
+  const assets = await caches.open(ASSETS);
+  for (const req of await assets.keys()) {
+    const u = new URL(req.url);
+    if (u.pathname.startsWith("/_next/static/") && !used.has(u.pathname + u.search)) await assets.delete(req);
+  }
+}
+
 async function warm(path) {
+  if (!savable(path)) return;
   try {
     let response = await fetch(path, { credentials: "same-origin" });
     if (!response.ok) return;
@@ -93,7 +115,7 @@ async function setOwner(owner) {
 self.addEventListener("message", (event) => {
   const data = event.data || {};
   if (data.type === "owner" && typeof data.owner === "string") event.waitUntil(setOwner(data.owner));
-  if (data.type === "warm" && Array.isArray(data.paths)) event.waitUntil(Promise.all(data.paths.filter((p) => typeof p === "string" && p.startsWith("/")).map(warm)));
+  if (data.type === "warm" && Array.isArray(data.paths)) event.waitUntil(Promise.all(data.paths.filter((p) => typeof p === "string" && p.startsWith("/")).map(warm)).then(() => pruneAssets().catch(() => {})));
   if (data.type === "clear") event.waitUntil(Promise.all([caches.delete(PAGES), caches.delete(META)]));
 });
 
@@ -102,6 +124,6 @@ function offlinePage() {
 <title>NewFarmer</title><body style="font-family:system-ui,sans-serif;max-width:32rem;margin:15vh auto;padding:0 16px;text-align:center;color:#24301f;background:#f6f1e7">
 <p style="font-size:3rem;margin:0">🌱</p><h1>Sem internet</h1><p>Esta página ainda não foi guardada no aparelho. Volte para o Painel ou tente de novo quando a internet voltar.</p>
 <p lang="en" style="color:#6b6b5f">No internet. This page has not been saved on this device yet.</p>
-<p><a href="/painel" style="color:#3f6b3a;font-weight:700">Painel</a></p></body></html>`;
+<p><a href="/dashboard" style="color:#3f6b3a;font-weight:700">Painel</a></p></body></html>`;
   return new Response(html, { status: 503, headers: { "Content-Type": "text/html; charset=utf-8" } });
 }

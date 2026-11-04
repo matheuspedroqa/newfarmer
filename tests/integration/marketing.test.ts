@@ -74,7 +74,8 @@ describe("sendCampaign", () => {
     expect(await sendCampaign(db, mailer, args)).toEqual({ sent: 0, remaining: 0 });
     expect(sent).toHaveLength(3);
     expect(sent[0].headers?.["List-Unsubscribe-Post"]).toBe("List-Unsubscribe=One-Click");
-    expect(sent[0].headers?.["List-Unsubscribe"]).toMatch(/^<https:\/\/nf\.app\/unsubscribe\/.+>$/);
+    expect(sent[0].headers?.["List-Unsubscribe"]).toMatch(/^<https:\/\/nf\.app\/api\/unsubscribe\/.+>$/);
+    expect(sent[0].html).toContain("https://nf.app/unsubscribe/"); // o rodapé continua na página
   });
 
   it("falha do mailer no 2º não grava o 2º", async () => {

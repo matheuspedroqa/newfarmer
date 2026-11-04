@@ -45,7 +45,7 @@ export async function exportUserData(db: Db, userId: number) {
     "SELECT action, target, details, ip, created_at FROM activity_logs WHERE user_id = $1 ORDER BY created_at, id",
     [userId],
   );
-  const pageViews = await listUserPageViews(db, userId, 1000);
+  const pageViews = await listUserPageViews(db, userId, null);
   const subscription = await getSubscription(db, userId);
   const iso = (ms: string | number | null) => (ms === null ? null : new Date(Number(ms)).toISOString());
 

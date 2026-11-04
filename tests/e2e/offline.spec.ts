@@ -50,6 +50,23 @@ test("anotação feita sem internet fica no aparelho e é enviada quando a inter
   await expect(page.getByTestId("diary-entry")).toHaveCount(1);
 });
 
+test("falha de rede no envio (online) guarda a anotação na fila e depois envia", async ({ page }) => {
+  await signupWithCows(page);
+  await page.goto("/animals/cows?tab=diary");
+  await page.waitForLoadState("networkidle");
+  let block = true;
+  await page.route("**/animals/cows**", (route) => (block && route.request().method() === "POST" ? route.abort() : route.continue()));
+  await page.getByLabel("Anotação", { exact: true }).fill("Rede caiu no envio");
+  await page.getByRole("button", { name: "Salvar anotação" }).click();
+  await expect(page.getByText("Sem internet: anotação guardada no aparelho.", { exact: false })).toBeVisible();
+  await expect(page.getByTestId("diary-waiting")).toContainText("Rede caiu no envio");
+
+  block = false;
+  await page.evaluate(() => window.dispatchEvent(new Event("online")));
+  await expect(page.getByTestId("diary-entry")).toContainText("Rede caiu no envio", { timeout: 20_000 });
+  await expect(page.getByTestId("diary-waiting")).toHaveCount(0);
+});
+
 test("sem internet dá para trocar de página entre as que ficaram guardadas", async ({ page, context }) => {
   await signupWithCows(page);
   await waitSaved(page, ["/weather", "/animals/cows"]);

@@ -100,7 +100,7 @@ NewFarmer is run from Brazil, the database is in the European Union and some pro
 
 To use any of your rights, send an e-mail to [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com) from your account's e-mail address (or tell us your username). We may ask you to confirm that the account is yours. We reply within **15 days** (LGPD), **30 days** (GDPR) or **45 days** (US laws).
 
-Two things you can do yourself on the site, under **Profile**, without asking: **"Download my data"** gives you a file (JSON) with your account, animals, crops, diary and your activity log; **"Delete my account"** cancels the subscription and deletes the account and its data right away, including the pages visited and the e-mail history, after you type your password.
+Two things you can do yourself on the site, under **Profile**, without asking: **"Download my data"** gives you a file (JSON) with your account, animals, crops, diary, your activity log, your subscription, the pages visited and your marketing e-mail preference; **"Delete my account"** cancels the subscription and deletes the account and its data right away, including the pages visited and the e-mail history, after you type your password.
 
 ### In Brazil (LGPD)
 
@@ -129,7 +129,7 @@ We use 1 cookie only with your consent, when you click "Accept all":
 
 - **nf_vid:** a random visitor identifier, for 1 year, to measure the pages visited (see section 2).
 
-We do not use advertising cookies. To change your choice, delete the site's cookies in your browser: the notice will show again. If you click "Essential only", `nf_vid` is not created.
+We do not use advertising cookies. To change your choice, use the **Cookie preferences** link in the site footer and on your Profile. `nf_cookie_notice` was the cookie of the old notice: it is now only read, counts as "essential only" and is no longer created. If you click "Essential only", `nf_vid` is not created.
 
 ## 9. Children
 
@@ -142,3 +142,5 @@ We store passwords and access codes only in scrambled form, use a secure connect
 ## 11. Changes to this policy
 
 The date at the top shows the last update. Important changes will be announced on the site.
+
+**Offline mode:** so the site can open without internet, your device stores the app pages you visited and the notes made offline until they are sent. This stays only on your device and is erased when you click Sign out and when you delete the account.

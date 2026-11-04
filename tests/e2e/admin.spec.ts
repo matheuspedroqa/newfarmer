@@ -80,6 +80,9 @@ test("Admin no celular não rola a página na horizontal", async ({ page }) => {
   }
   await page.goto("/admin/subscribers");
   await expect(page.getByTestId("subscriber-card").first()).toBeVisible();
+  await page.getByTestId("subscriber-card").first().getByRole("link").first().click();
+  await expect(page).toHaveURL(/\/admin\/subscribers\/\d+$/);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth), "detalhe").toBe(true);
 });
 
 test("Leads mostra o funil, aceita só 7/30/90 dias e liga o visitante à conta", async ({ page }) => {

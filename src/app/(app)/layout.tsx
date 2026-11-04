@@ -23,7 +23,8 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   // Sem assinatura só abrem o onboarding e o perfil (o admin da plataforma sempre tem acesso).
   const path = (await headers()).get("x-nf-path") ?? "";
   const open = ["/welcome", "/subscribe", "/profile"].some((p) => path === p || path.startsWith(`${p}/`));
-  if (!open && !hasAccess(user, await getSubscription(db, user.id))) redirect("/subscribe");
+  const access = hasAccess(user, await getSubscription(db, user.id));
+  if (!open && !access) redirect("/subscribe");
   const farm = await getFarm(db, user.id);
   // Páginas guardadas no aparelho para abrir sem internet (cada animal com a ficha e o diário).
   const offlinePaths = [
@@ -62,7 +63,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         </header>
         {!user.emailVerified && <VerifyEmailBanner email={user.email} />}
         {/* Sempre montado: o layout não roda de novo na navegação interna, então decidir por assinatura aqui deixaria quem acabou de assinar sem modo offline. */}
-        <OfflineSync owner={user.username} paths={offlinePaths} />
+        <OfflineSync owner={user.username} paths={offlinePaths} canSend={access} />
         <main className="mt-6">{children}</main>
       </div>
     </div>

@@ -7,6 +7,7 @@ import { resolveTheme } from "@/i18n/locales";
 import { CookieNotice } from "@/components/CookieNotice";
 import { PageTracker } from "@/components/PageTracker";
 import { CONSENT_COOKIE, THEME_COOKIE } from "@/lib/cookies";
+import { siteUrl } from "@/server/app-url";
 import "./globals.css";
 
 const fraunces = Fraunces({ subsets: ["latin"], weight: ["500", "700"], variable: "--font-fraunces" });
@@ -15,7 +16,7 @@ const nunito = Nunito({ subsets: ["latin"], weight: ["400", "600", "700"], varia
 export async function generateMetadata(): Promise<Metadata> {
   const description = (await getTranslations())("meta.description");
   return {
-    metadataBase: new URL(process.env.APP_URL ?? "https://newfarmer.vercel.app"),
+    metadataBase: new URL(siteUrl()),
     description,
     openGraph: { siteName: "NewFarmer", type: "website", description },
     twitter: { card: "summary_large_image" },

@@ -5,23 +5,29 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { addDiaryAction } from "@/app/actions/diary";
 import { saveFarmAction } from "@/app/actions/farm";
-import { readOutbox, removeFromOutbox, useOnline, useOutbox } from "@/lib/outbox";
+import { readOutbox, type OutboxItem, removeFromOutbox, useOnline, useOutbox } from "@/lib/outbox";
 
 const ACTIONS = { diary: addDiaryAction, farm: saveFarmAction };
 const WARM_EVERY_MS = 60 * 60_000;
 
+// Data e começo do texto, para a pessoa saber qual anotação não foi gravada.
+const describe = (item: OutboxItem) => {
+  const f = Object.fromEntries(item.fields);
+  return item.kind === "diary" ? `${f.date} · ${(f.note ?? "").slice(0, 40)}` : "MyFarm";
+};
+
 /** Registra o modo offline, guarda as páginas principais, envia a fila quando há internet e avisa a pessoa. */
-export function OfflineSync({ owner, paths }: { owner: string; paths: string[] }) {
+export function OfflineSync({ owner, paths, canSend }: { owner: string; paths: string[]; canSend: boolean }) {
   const t = useTranslations("offline");
   const router = useRouter();
   const online = useOnline();
   const waiting = useOutbox().filter((i) => i.owner === owner).length;
   const [sending, setSending] = useState(false);
-  const [rejected, setRejected] = useState(0);
+  const [rejected, setRejected] = useState<string[]>([]);
   const busy = useRef(false);
 
   const flush = useCallback(async () => {
-    if (busy.current || !navigator.onLine) return;
+    if (busy.current || !navigator.onLine || !canSend) return; // sem assinatura a ação redirecionaria: a fila fica guardada
     const items = readOutbox().filter((i) => i.owner === owner); // de outra conta neste aparelho: nunca envia com esta
     if (!items.length) return;
     busy.current = true;
@@ -39,12 +45,12 @@ export function OfflineSync({ owner, paths }: { owner: string; paths: string[] }
       if (result.formError === "rateLimited") break;
       removeFromOutbox(item.id);
       if (result.done) sent++;
-      else setRejected((n) => n + 1);
+      else setRejected((r) => [...r, describe(item)]);
     }
     busy.current = false;
     setSending(false);
     if (sent) router.refresh();
-  }, [owner, router]);
+  }, [owner, router, canSend]);
 
   useEffect(() => {
     if (!("serviceWorker" in navigator)) return;
@@ -82,8 +88,8 @@ export function OfflineSync({ owner, paths }: { owner: string; paths: string[] }
       : t("offline")
     : sending || waiting
       ? t("sending", { count: waiting })
-      : rejected
-        ? t("rejected", { count: rejected })
+      : rejected.length
+        ? t("rejected", { count: rejected.length, items: rejected.join("; ") })
         : null;
   if (!message) return null;
   return (

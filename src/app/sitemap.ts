@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/server/app-url";
 import { MARKETING_PATHS } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.APP_URL ?? "https://newfarmer.vercel.app";
+  const base = siteUrl();
   const marketing = MARKETING_PATHS.flatMap((p) => {
     const en = `${base}${p || "/"}`;
     const pt = `${base}/pt${p}`;

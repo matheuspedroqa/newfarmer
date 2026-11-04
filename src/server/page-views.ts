@@ -17,7 +17,7 @@ export const linkVisitorToUser = (db: Db, visitorId: string, userId: number) =>
   db.run("UPDATE page_views SET user_id = $2 WHERE visitor_id = $1 AND user_id IS NULL", [visitorId, userId]);
 
 /** Padrão: as `limit` mais antigas, em ordem. `latest`: as `limit` mais recentes, da mais nova para a mais velha. */
-export async function listUserPageViews(db: Db, userId: number, limit = 200, opts: { latest?: boolean } = {}) {
+export async function listUserPageViews(db: Db, userId: number, limit: number | null = 200, opts: { latest?: boolean } = {}) {
   const rows = await db.query<{ path: string; referrer: string; created_at: string }>(
     opts.latest
       ? "SELECT path, referrer, created_at FROM page_views WHERE user_id = $1 ORDER BY created_at DESC, id DESC LIMIT $2"

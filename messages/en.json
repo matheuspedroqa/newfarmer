@@ -688,7 +688,7 @@
     "offline": "You are offline. Showing the last version saved on this device. Anything you save will be sent when the internet is back.",
     "offlineWaiting": "You are offline. {count, plural, one {# item saved} other {# items saved}} on this device, waiting to be sent.",
     "sending": "Sending {count, plural, one {# item} other {# items}} saved offline…",
-    "rejected": "{count, plural, one {# item saved offline could not be stored} other {# items saved offline could not be stored}}. Please check and fill in again.",
+    "rejected": "{count, plural, one {# item saved offline could not be stored} other {# items saved offline could not be stored}}. Please check and fill in again: {items}.",
     "logoutConfirm": "Some notes saved offline have not been sent yet. If you sign out now they will be lost. Sign out anyway?"
   },
   "onboarding": {

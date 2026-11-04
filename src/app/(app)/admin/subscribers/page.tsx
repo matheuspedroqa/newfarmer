@@ -88,7 +88,7 @@ export default async function SubscribersPage({ searchParams }: { searchParams: 
           </div>
           <ul className="space-y-3 md:hidden">
             {rows.map((r) => (
-              <li key={r.id} data-testid="subscriber-card" className="rounded-2xl bg-surface p-4 ring-1 ring-border">
+              <li key={r.id} data-testid="subscriber-card" className="min-w-0 [overflow-wrap:anywhere] rounded-2xl bg-surface p-4 ring-1 ring-border">
                 <Link href={`/admin/subscribers/${r.id}`} className={link}>{r.name} (@{r.username})</Link>
                 <p className="text-sm break-all">{r.email}</p>
                 <p className="text-sm text-muted">{r.city}</p>

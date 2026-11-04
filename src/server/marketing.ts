@@ -108,7 +108,7 @@ export async function sendCampaign(
           subject,
           html,
           ...(from && { from }),
-          headers: { "List-Unsubscribe": `<${url}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
+          headers: { "List-Unsubscribe": `<${appUrl}/api/unsubscribe/${url.split("/").pop()}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
         });
       } catch (error) {
         // Falhou: solta a reserva para a próxima chamada tentar esta pessoa de novo.

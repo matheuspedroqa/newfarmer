@@ -100,7 +100,7 @@ O NewFarmer é mantido no Brasil, o banco de dados fica na União Europeia e alg
 
 Para usar qualquer direito, mande um e-mail para [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com) a partir do e-mail da sua conta (ou diga qual é o seu username). Podemos pedir uma confirmação de que a conta é sua. Respondemos em até **15 dias** (LGPD), **30 dias** (RGPD) ou **45 dias** (leis dos EUA).
 
-Duas coisas você mesmo faz no site, em **Perfil**, sem precisar pedir: **"Baixar meus dados"** entrega um arquivo (JSON) com a conta, os animais, as plantações, o diário e o seu registro de atividade; **"Apagar minha conta"** cancela a assinatura e apaga na hora a conta e os dados dela, inclusive as páginas visitadas e o histórico de e-mails, depois de você digitar a senha.
+Duas coisas você mesmo faz no site, em **Perfil**, sem precisar pedir: **"Baixar meus dados"** entrega um arquivo (JSON) com a conta, os animais, as plantações, o diário, o seu registro de atividade, a assinatura, as páginas visitadas e a sua preferência de e-mails de novidades; **"Apagar minha conta"** cancela a assinatura e apaga na hora a conta e os dados dela, inclusive as páginas visitadas e o histórico de e-mails, depois de você digitar a senha.
 
 ### No Brasil (LGPD)
 
@@ -129,7 +129,7 @@ Usamos 1 cookie só com o seu consentimento, ao clicar em "Aceitar todos":
 
 - **nf_vid:** um identificador aleatório do visitante, por 1 ano, para medir as páginas visitadas (veja o item 2).
 
-Não usamos cookies de propaganda. Para mudar a escolha, apague os cookies do site no navegador: o aviso volta a aparecer. Se você clicar em "Só os essenciais", o `nf_vid` não é criado.
+Não usamos cookies de propaganda. Para mudar a escolha, use o link **Preferências de cookies**, no rodapé do site e no Perfil. O `nf_cookie_notice` era o cookie do aviso antigo: hoje só é lido, vale como "só os essenciais" e não é mais criado. Se você clicar em "Só os essenciais", o `nf_vid` não é criado.
 
 ## 9. Crianças
 
@@ -142,3 +142,5 @@ Guardamos senhas e códigos de acesso só embaralhados, usamos conexão segura (
 ## 11. Mudanças nesta política
 
 A data no topo mostra a última atualização. Mudanças importantes serão avisadas no site.
+
+**Modo offline:** para o site abrir sem internet, o aparelho guarda as páginas do app que você visitou e as anotações feitas sem internet, até serem enviadas. Isso fica só no seu aparelho e é apagado ao clicar em Sair e ao apagar a conta.

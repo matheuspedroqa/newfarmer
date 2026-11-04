@@ -688,7 +688,7 @@
     "offline": "Você está sem internet. Mostrando a última versão salva no aparelho. O que você salvar será enviado quando a internet voltar.",
     "offlineWaiting": "Você está sem internet. {count, plural, one {# item guardado} other {# itens guardados}} no aparelho, aguardando para enviar.",
     "sending": "Enviando {count, plural, one {# item salvo} other {# itens salvos}} sem internet…",
-    "rejected": "{count, plural, one {# item salvo sem internet não pôde ser gravado} other {# itens salvos sem internet não puderam ser gravados}}. Confira e preencha de novo.",
+    "rejected": "{count, plural, one {# item salvo sem internet não pôde ser gravado} other {# itens salvos sem internet não puderam ser gravados}}. Confira e preencha de novo: {items}.",
     "logoutConfirm": "Há anotações salvas sem internet que ainda não foram enviadas. Se sair agora, elas serão perdidas. Sair mesmo assim?"
   },
   "onboarding": {
