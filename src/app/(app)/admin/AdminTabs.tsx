@@ -8,7 +8,7 @@ export function AdminTabs({ tabs, label }: { tabs: { href: string; label: string
   return (
     <nav aria-label={label} className="flex gap-2 overflow-x-auto border-b border-border">
       {tabs.map((tab) => {
-        const active = pathname === tab.href;
+        const active = tab.href === "/admin" ? pathname === tab.href : pathname.startsWith(tab.href);
         return (
           <Link
             key={tab.href}

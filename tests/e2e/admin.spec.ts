@@ -14,7 +14,7 @@ test("usuário comum não vê Admin e recebe 404 nas telas do dono do site", asy
 test("dono do site vê as abas, o próprio login, o Monitoramento e abre o detalhe de um assinante", async ({ page, context }) => {
   // Assinante com cidade e animais.
   const email = uniqueEmail();
-  await createAccount(page, email, "Curitiba");
+  const { username: subUsername } = await createAccount(page, email, "Curitiba");
   await page.getByLabel("Galinhas").check();
   await page.locator("#count-chickens").fill("5");
   await page.getByRole("button", { name: "Continuar" }).click();
@@ -55,10 +55,12 @@ test("dono do site vê as abas, o próprio login, o Monitoramento e abre o detal
   const html = await page.content();
   for (const proibido of ["password_hash", "token_hash", "unsubscribe_token", "stripe_events"]) expect(html).not.toContain(proibido);
 
+  for (const path of ["/admin/subscribers/abc", "/admin/subscribers/99999999"]) expect((await page.goto(path))?.status(), path).toBe(404);
+
   await page.goto("/admin/activity");
   await expect(page).toHaveTitle("Activity logs · NewFarmer");
   await expect(page.getByTestId("activity-row").filter({ hasText: "Entrou" }).filter({ hasText: username }).first()).toBeVisible();
-  await expect(page.getByTestId("activity-row").filter({ hasText: "Viu dados de uma conta" }).first()).toBeVisible();
+  await expect(page.getByTestId("activity-row").filter({ hasText: "Viu dados de uma conta" }).filter({ hasText: subUsername }).first()).toBeVisible();
 
   await nav.getByRole("link", { name: "Monitoramento" }).click();
   await expect(page).toHaveURL(/\/admin\/monitoring$/);

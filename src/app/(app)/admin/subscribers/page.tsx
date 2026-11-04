@@ -20,15 +20,17 @@ export default async function SubscribersPage({ searchParams }: { searchParams: 
   const params = await searchParams;
   const q = one(params.q).slice(0, 100);
   const status = (SUBSCRIBER_STATUSES as readonly string[]).includes(one(params.status)) ? (one(params.status) as SubscriberStatus) : undefined;
-  const before = Number(one(params.before)) || undefined;
-  const rows = await listSubscribers(await getDb(), { q, status, before, limit: PAGE_SIZE });
+  const n = Number(one(params.before));
+  const before = Number.isSafeInteger(n) && n > 0 ? n : undefined;
+  const fetched = await listSubscribers(await getDb(), { q, status, before, limit: PAGE_SIZE + 1 });
+  const rows = fetched.slice(0, PAGE_SIZE);
 
   const format = new Intl.DateTimeFormat(await getLocale(), { dateStyle: "short" });
   const date = (ms: number | null) => (ms === null ? t("never") : format.format(ms));
   const more = new URLSearchParams();
   if (q) more.set("q", q);
   if (status) more.set("status", status);
-  if (rows.length === PAGE_SIZE) more.set("before", String(rows[rows.length - 1].createdAt));
+  if (fetched.length > PAGE_SIZE) more.set("before", String(rows[rows.length - 1].createdAt));
   const cell = "px-3 py-2";
   const field = "mt-1 min-h-11 rounded-xl border border-border bg-surface px-3 py-2 font-normal";
   const link = "inline-flex min-h-11 items-center font-semibold text-primary underline";

@@ -539,7 +539,6 @@
   "settings": {
     "tabActivity": "Activity logs",
     "tabMonitoring": "Monitoring",
-    "tabsLabel": "Admin sections",
     "username": "Username",
     "action": "Action",
     "allActions": "All",

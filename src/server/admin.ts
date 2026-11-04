@@ -37,14 +37,14 @@ export async function getAdminOverview(db: Db, now: number) {
     [now - 30 * DIA],
   );
   const [v] = await db.query<Record<string, string>>(
-    "SELECT COUNT(DISTINCT visitor_id) AS visitors, COUNT(*) AS views FROM page_views WHERE created_at >= $1",
+    "SELECT COUNT(DISTINCT visitor_id) AS visitors, COUNT(*) AS views FROM page_views WHERE created_at >= $1 AND (user_id IS NULL OR user_id NOT IN (SELECT id FROM users WHERE is_platform_admin))",
     [now - 7 * DIA],
   );
   const today = Math.floor(now / DIA);
   const perDay = new Map(
     (
       await db.query<{ day: string; n: string }>(
-        "SELECT to_char(to_timestamp(created_at / 1000.0) AT TIME ZONE 'UTC', 'YYYY-MM-DD') AS day, COUNT(*) AS n FROM page_views WHERE created_at >= $1 GROUP BY 1",
+        "SELECT to_char(to_timestamp(created_at / 1000.0) AT TIME ZONE 'UTC', 'YYYY-MM-DD') AS day, COUNT(*) AS n FROM page_views WHERE created_at >= $1 AND (user_id IS NULL OR user_id NOT IN (SELECT id FROM users WHERE is_platform_admin)) GROUP BY 1",
         [(today - 13) * DIA],
       )
     ).map((r) => [r.day, Number(r.n)]),
@@ -93,7 +93,7 @@ export async function listSubscribers(db: Db, opts: { q?: string; status?: Subsc
 /** Sem diário, token de descadastro nem ids da Stripe: o dono vê quem é e o que criou, não o que escreveu. */
 export async function getSubscriberDetail(db: Db, userId: number) {
   const [u] = await db.query<Record<string, unknown>>(
-    `SELECT id, name, username, email, city_label, country_code, climate_zone, locale, created_at, email_verified_at, marketing_opt_in,
+    `SELECT id, name, username, email, city_label, country_code, created_at, email_verified_at, marketing_opt_in,
        (SELECT MAX(last_seen_at) FROM sessions WHERE user_id = users.id) AS last_seen_at
      FROM users WHERE id = $1 AND NOT is_platform_admin`,
     [userId],
@@ -107,12 +107,12 @@ export async function getSubscriberDetail(db: Db, userId: number) {
   const farm = await getFarm(db, userId);
   return {
     id: Number(u.id), name: String(u.name), username: String(u.username), email: String(u.email),
-    city: String(u.city_label), country: String(u.country_code), climateZone: String(u.climate_zone), locale: String(u.locale),
+    city: String(u.city_label), country: String(u.country_code),
     createdAt: Number(u.created_at), emailVerified: u.email_verified_at !== null,
     lastSeenAt: u.last_seen_at === null ? null : Number(u.last_seen_at),
     marketingOptIn: u.marketing_opt_in === true,
     subscription, animals: farm.animals, crops: farm.crops as string[],
-    pageViews: await listUserPageViews(db, userId, 200),
+    pageViews: await listUserPageViews(db, userId, 200, { latest: true }),
   };
 }
 

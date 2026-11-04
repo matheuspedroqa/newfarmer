@@ -32,10 +32,11 @@ async function cenario() {
 }
 
 it("visão geral: contagens, MRR só das ativas por moeda, 30 e 7 dias, sem o dono", async () => {
-  const { db, ana } = await cenario();
+  const { db, ana, dono } = await cenario();
   await recordPageView(db, { visitorId: "v1", userId: ana, path: "/", referrer: "" }, AGORA - DIA);
   await recordPageView(db, { visitorId: "v1", userId: ana, path: "/dashboard", referrer: "" }, AGORA - DIA);
   await recordPageView(db, { visitorId: "v2", userId: null, path: "/", referrer: "" }, AGORA - 20 * DIA);
+  await recordPageView(db, { visitorId: "dono", userId: dono, path: "/admin", referrer: "" }, AGORA - DIA);
   const o = await getAdminOverview(db, AGORA);
   expect(o.users).toBe(3);
   expect(o.newUsers7d).toBe(1);
@@ -79,4 +80,24 @@ it("detalhe: conta, assinatura, criação, páginas e opt-in, sem diário nem id
   const json = JSON.stringify(d);
   for (const proibido of ["segredo-da-anotacao", "password_hash", "cus_", "unsubscribe"]) expect(json).not.toContain(proibido);
   expect(await getSubscriberDetail(db, 9999)).toBeNull();
+});
+
+it("visão geral: trialing conta como ativa e entra no MRR; past_due só na própria faixa, fora do MRR", async () => {
+  const { db } = await cenario();
+  const dua = await makeUser(db, { email: "dua@exemplo.com" });
+  const edu = await makeUser(db, { email: "edu@exemplo.com" });
+  await sub(db, dua, { status: "trialing", currency: "eur", amount: 199 });
+  await sub(db, edu, { status: "past_due", currency: "usd", amount: 200 });
+  const o = await getAdminOverview(db, AGORA);
+  expect(o.subscriptions).toEqual({ active: 2, past_due: 1, canceled: 1, none: 1 });
+  expect(o.mrr).toEqual({ brl: 699, eur: 199, usd: 0 });
+});
+
+it("detalhe: com 205 páginas vistas traz as 200 mais recentes, da mais nova para a mais velha", async () => {
+  const { db, ana } = await cenario();
+  for (let i = 0; i < 205; i++) await recordPageView(db, { visitorId: "v", userId: ana, path: `/p${i}`, referrer: "" }, i + 1);
+  const d = await getSubscriberDetail(db, ana);
+  expect(d!.pageViews).toHaveLength(200);
+  expect(d!.pageViews[0].path).toBe("/p204");
+  expect(d!.pageViews.at(-1)!.path).toBe("/p5");
 });
