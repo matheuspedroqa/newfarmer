@@ -67,6 +67,7 @@ test("MyFarm salvo sem internet é enviado quando a internet volta", async ({ pa
   await signupWithCows(page);
   await waitSaved(page, ["/myfarm"]);
   await page.goto("/myfarm");
+  await page.waitForLoadState("networkidle"); // hidratar antes de ficar offline
 
   await context.setOffline(true);
   await page.getByLabel("Ovelhas").check();
