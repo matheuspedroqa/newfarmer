@@ -23,15 +23,15 @@ export function parseStripeSubscription(raw: Raw): StripeSubscription {
 }
 
 export function createStripeProvider(secretKey: string, fetchFn: typeof fetch = fetch): PaymentProvider {
-  async function call(method: "GET" | "POST" | "DELETE", path: string, form?: Record<string, string>): Promise<Raw> {
+  async function call(method: "GET" | "POST" | "DELETE", path: string, form?: Record<string, string>, okStatus?: number): Promise<Raw> {
     const response = await fetchFn(`https://api.stripe.com/v1/${path}`, {
       method,
       headers: { Authorization: `Bearer ${secretKey}`, ...(form ? { "Content-Type": "application/x-www-form-urlencoded" } : {}) },
       body: form ? new URLSearchParams(form).toString() : undefined,
     });
     // Nunca copie o corpo do erro: pode ter e-mail e nome da pessoa.
-    if (!response.ok) throw new Error(`Stripe respondeu ${response.status}`);
-    return (await response.json()) as Raw;
+    if (!response.ok && response.status !== okStatus) throw new Error(`Stripe respondeu ${response.status}`);
+    return response.ok ? ((await response.json()) as Raw) : {};
   }
 
   return {
@@ -61,7 +61,8 @@ export function createStripeProvider(secretKey: string, fetchFn: typeof fetch = 
       return String((await call("POST", "billing_portal/sessions", { customer: customerId, return_url: returnUrl })).url);
     },
     async deleteCustomer(customerId) {
-      await call("DELETE", `customers/${encodeURIComponent(customerId)}`);
+      // 404: o cliente já não existe (nova tentativa, ou apagado pelo painel); não pode travar a exclusão da conta.
+      await call("DELETE", `customers/${encodeURIComponent(customerId)}`, undefined, 404);
     },
   };
 }

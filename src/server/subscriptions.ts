@@ -74,7 +74,7 @@ export async function upsertSubscription(db: Db, userId: number, customerId: str
        stripe_customer_id = EXCLUDED.stripe_customer_id, stripe_subscription_id = EXCLUDED.stripe_subscription_id, status = EXCLUDED.status,
        currency = EXCLUDED.currency, amount = EXCLUDED.amount, current_period_end = EXCLUDED.current_period_end,
        cancel_at_period_end = EXCLUDED.cancel_at_period_end, canceled_at = EXCLUDED.canceled_at, updated_at = EXCLUDED.updated_at,
-       started_at = COALESCE(subscriptions.started_at, EXCLUDED.started_at), stripe_event_created = EXCLUDED.stripe_event_created
+       started_at = COALESCE(subscriptions.started_at, EXCLUDED.started_at), stripe_event_created = COALESCE(EXCLUDED.stripe_event_created, subscriptions.stripe_event_created)
      WHERE NOT (
        subscriptions.stripe_subscription_id IS NOT DISTINCT FROM EXCLUDED.stripe_subscription_id
        AND (subscriptions.status IN ('canceled', 'incomplete_expired')

@@ -80,6 +80,15 @@ describe("ordem e várias assinaturas", () => {
     expect((await getSubscription(db, ana))?.subscriptionId).toBe("sub_C");
   });
 
+  it("upsert sem eventCreated (retorno do checkout) não apaga a marca de ordem", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "active" }), 100, 200);
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "trialing" }), 150);
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "past_due" }), 160, 100);
+    expect((await getSubscription(db, ana))?.status).toBe("trialing");
+  });
+
   it("depois de cancelada, uma assinatura nova assume a linha", async () => {
     const db = await testDb();
     const ana = await makeUser(db);

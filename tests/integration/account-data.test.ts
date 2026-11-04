@@ -4,6 +4,7 @@ import { logActivity } from "@/server/activity-log";
 import { addDiaryEntry } from "@/server/diary";
 import { saveFarm } from "@/server/farm";
 import { createFakePaymentProvider } from "@/server/payments/fake";
+import { createStripeProvider } from "@/server/payments/stripe";
 import { upsertSubscription } from "@/server/subscriptions";
 import { createSession, getSessionUser } from "@/server/sessions";
 import { testDb } from "../helpers/db";
@@ -91,6 +92,17 @@ describe("deleteAccount", () => {
     vi.spyOn(console, "error").mockImplementation(() => {});
     expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("paymentError");
     expect(await db.query("SELECT 1 FROM users WHERE id = $1", [ana])).toHaveLength(1);
+  });
+
+  it("cliente já apagado na Stripe (404) não impede apagar a conta", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", active);
+    const gone = vi.fn(async () => new Response("{}", { status: 404 }));
+    const provider = createStripeProvider("k", gone as unknown as typeof fetch);
+    expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("ok");
+    expect(gone).toHaveBeenCalledTimes(1);
+    expect(await db.query("SELECT 1 FROM users WHERE id = $1", [ana])).toHaveLength(0);
   });
 
   it("sem cliente na Stripe, nem constrói o provedor", async () => {

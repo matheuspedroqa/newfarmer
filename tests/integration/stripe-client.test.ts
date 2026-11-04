@@ -45,6 +45,17 @@ describe("cliente Stripe", () => {
     expect(s).toMatchObject({ customer: "cus_2", currentPeriodEnd: 5000, canceledAt: 9000, cancelAtPeriodEnd: true, amount: 199 });
   });
 
+  it("deleteCustomer: 404 (cliente já apagado) vale como sucesso; outros erros lançam sem o corpo", async () => {
+    const gone = vi.fn(async () => new Response('{"error":{"message":"No such customer: ana@exemplo.com"}}', { status: 404 }));
+    await expect(createStripeProvider("k", asFetch(gone)).deleteCustomer("cus_1")).resolves.toBeUndefined();
+    const boom = vi.fn(async () => new Response("ana@exemplo.com", { status: 500 }));
+    const err = await createStripeProvider("k", asFetch(boom)).deleteCustomer("cus_1").catch((e) => e as Error);
+    expect((err as Error).message).toBe("Stripe respondeu 500");
+    // só o DELETE de cliente tolera 404
+    const gone2 = vi.fn(async () => new Response("{}", { status: 404 }));
+    await expect(createStripeProvider("k", asFetch(gone2)).createPortal({ customerId: "c", returnUrl: "https://s" })).rejects.toThrow("Stripe respondeu 404");
+  });
+
   it("deleteCustomer usa DELETE no cliente", async () => {
     const fetchFn = vi.fn(async () => ok({}));
     await createStripeProvider("k", asFetch(fetchFn)).deleteCustomer("cus_1");
