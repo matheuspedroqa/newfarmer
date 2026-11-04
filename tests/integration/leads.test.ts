@@ -57,7 +57,8 @@ describe("campanhas", () => {
     await db.run("INSERT INTO email_campaign_recipients (campaign_id, user_id, sent_at) VALUES ($1, $2, 1)", [first, a]);
     const list = await listCampaigns(db);
     expect(list.map((c) => [c.id, c.sent])).toEqual([[second, 0], [first, 1]]);
-    expect(list[0]).toMatchObject({ template: "announcement", audience: "active", subject: "Oi" });
+    expect(list[0]).toMatchObject({ template: "announcement", audience: "active", subject: "Oi", remaining: 0 });
+    expect(list[1].remaining).toBe(0); // o único do público já recebeu
   });
 });
 
@@ -75,6 +76,7 @@ describe("sendOrCreateCampaign (continuar envio)", () => {
     const first = await sendOrCreateCampaign(db, mailer as never, { campaignId: null, campaign, createdBy: dono, appUrl: "http://x", max: 2 });
     expect(first).toMatchObject({ sent: 2, remaining: 1 });
     const id = (first as { campaignId: number }).campaignId;
+    expect((await listCampaigns(db))[0]).toMatchObject({ id, sent: 2, remaining: 1 });
     const second = await sendOrCreateCampaign(db, mailer as never, { campaignId: id, createdBy: dono, appUrl: "http://x", max: 2 });
     expect(second).toEqual({ campaignId: id, sent: 1, remaining: 0 });
     expect(new Set(sentTo).size).toBe(3);
@@ -86,6 +88,7 @@ describe("sendOrCreateCampaign (continuar envio)", () => {
     }
     expect(await listCampaigns(db)).toHaveLength(1);
     expect(sentTo).toHaveLength(3);
+    expect((await listCampaigns(db))[0].remaining).toBe(0);
   });
 
   it("falha do envio devolve o id da campanha criada", async () => {

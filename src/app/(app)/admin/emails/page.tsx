@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getLocale, getTranslations } from "next-intl/server";
 import { requirePlatformAdmin } from "@/server/authz";
 import { getDb } from "@/server/db";
@@ -9,17 +10,19 @@ export async function generateMetadata(): Promise<Metadata> {
   return { title: (await getTranslations())("meta.emails") };
 }
 
-export default async function EmailsPage() {
+export default async function EmailsPage({ searchParams }: { searchParams: Promise<{ continue?: string | string[] }> }) {
   await requirePlatformAdmin();
   const t = await getTranslations("admin");
   const db = await getDb();
   const counts = Object.fromEntries(await Promise.all(AUDIENCES.map(async (a) => [a, await audienceCount(db, a)]))) as Record<Audience, number>;
   const campaigns = await listCampaigns(db);
+  const wanted = Number([(await searchParams).continue].flat()[0]);
+  const resume = campaigns.find((c) => c.id === wanted && c.remaining > 0);
   const format = new Intl.DateTimeFormat(await getLocale(), { dateStyle: "short", timeStyle: "short" });
 
   return (
     <div className="space-y-6">
-      <CampaignForm counts={counts} />
+      <CampaignForm key={resume?.id ?? "new"} counts={counts} resume={resume && { id: resume.id, template: resume.template, audience: resume.audience, subject: resume.subject, body: resume.body, remaining: resume.remaining }} />
       <section className="space-y-3">
         <h2 className="font-display text-xl font-bold">{t("historyTitle")}</h2>
         {campaigns.length === 0 ? (
@@ -31,6 +34,11 @@ export default async function EmailsPage() {
                 <p className="font-semibold break-words">{c.subject || t(`template_${c.template}`)}</p>
                 <p className="text-sm">{t(`template_${c.template}`)} · {t(`audience_${c.audience}`)}</p>
                 <p className="text-sm text-muted">{t("colSent")}: <span data-testid="campaign-sent">{c.sent}</span> · {format.format(c.createdAt)}</p>
+                {c.remaining > 0 && (
+                  <Link href={`/admin/emails?continue=${c.id}`} className="inline-flex min-h-11 items-center font-semibold text-primary underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                    {t("continueThis")} ({c.remaining})
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

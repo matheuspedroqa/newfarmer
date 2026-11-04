@@ -1,6 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { unstable_rethrow } from "next/navigation";
 import { z } from "zod";
 import { appUrl } from "@/server/app-url";
 import { logWriteLimited } from "@/server/activity-log";
@@ -30,7 +31,7 @@ const parse = (f: FormData) => {
 };
 
 /** HTML do e-mail para um destinatário de exemplo (o próprio dono); não cria token nem campanha. */
-export async function previewCampaignAction(_prev: CampaignState, formData: FormData): Promise<CampaignState> {
+async function preview(formData: FormData): Promise<CampaignState> {
   const admin = await requirePlatformAdmin();
   const db = await getDb();
   const limit = await limitWrites(db, admin.id);
@@ -54,7 +55,7 @@ export async function previewCampaignAction(_prev: CampaignState, formData: Form
 }
 
 /** Cria a campanha na primeira vez; com campaignId só continua o envio (nunca cria outra). sendCampaign já registra marketing.campaignSent. */
-export async function sendCampaignAction(_prev: CampaignState, formData: FormData): Promise<CampaignState> {
+async function send(formData: FormData): Promise<CampaignState> {
   const admin = await requirePlatformAdmin();
   const db = await getDb();
   const raw = String(formData.get("campaignId") ?? "");
@@ -80,5 +81,30 @@ export async function sendCampaignAction(_prev: CampaignState, formData: FormDat
     return r;
   } catch {
     return { error: "sendFailed", ...echo };
+  }
+}
+
+// Nenhuma falha pode virar exceção: a React desmonta o formulário e a campanha em andamento se perderia (e o próximo "Enviar" criaria outra).
+// notFound/redirect (dono do site, sessão) continuam passando.
+const echoId = (f: FormData) => {
+  const n = Number(f.get("campaignId"));
+  return Number.isSafeInteger(n) && n > 0 ? { campaignId: n } : {};
+};
+
+export async function previewCampaignAction(_prev: CampaignState, formData: FormData): Promise<CampaignState> {
+  try {
+    return await preview(formData);
+  } catch (error) {
+    unstable_rethrow(error);
+    return { error: "previewFailed" };
+  }
+}
+
+export async function sendCampaignAction(_prev: CampaignState, formData: FormData): Promise<CampaignState> {
+  try {
+    return await send(formData);
+  } catch (error) {
+    unstable_rethrow(error);
+    return { error: "sendFailed", ...echoId(formData) };
   }
 }

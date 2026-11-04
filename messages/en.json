@@ -725,6 +725,9 @@
     "colSent": "Received",
     "colDate": "Date",
     "newCampaign": "New campaign",
-    "campaignDone": "Campaign sent. Total sent: {total}."
+    "campaignDone": "Campaign sent. Total sent: {total}.",
+    "previewFailed": "Could not generate the preview. Try again.",
+    "resuming": "Campaign in progress: {remaining} still to send.",
+    "continueThis": "Continue this send"
   }
 }

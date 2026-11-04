@@ -62,6 +62,15 @@ export async function unsubscribeAttempt(db: Db, token: string, ip: string) {
   return limit.ok ? { result: "invalid" as const, firstBlock: false } : { result: "limited" as const, firstBlock: limit.firstBlock };
 }
 
+/** Quantos do público ainda não receberam esta campanha. */
+async function remainingFor(db: Db, audience: Audience, campaignId: number): Promise<number> {
+  const [{ n }] = await db.query<{ n: number }>(
+    SELECT.replace("SELECT u.id, u.name, u.email, u.locale", "SELECT COUNT(*)::int AS n") + FILTER[audience] + " AND NOT EXISTS (SELECT 1 FROM email_campaign_recipients r WHERE r.campaign_id = $1 AND r.user_id = u.id)",
+    [campaignId],
+  );
+  return n;
+}
+
 export async function sendCampaign(
   db: Db,
   mailer: Mailer,
@@ -111,10 +120,7 @@ export async function sendCampaign(
   } finally {
     if (sent) await logSafely(db, { userId: null, action: "marketing.campaignSent", target: String(campaignId), details: { sent }, ip: "" });
   }
-  const [{ n }] = await db.query<{ n: number }>(
-    SELECT.replace("SELECT u.id, u.name, u.email, u.locale", "SELECT COUNT(*)::int AS n") + FILTER[c.audience] + " AND NOT EXISTS (SELECT 1 FROM email_campaign_recipients r WHERE r.campaign_id = $1 AND r.user_id = u.id)",
-    [campaignId],
-  );
+  const n = await remainingFor(db, c.audience, campaignId);
   return { sent, remaining: n };
 }
 
@@ -130,11 +136,16 @@ export async function createCampaign(
 }
 
 export async function listCampaigns(db: Db) {
-  const rows = await db.query<{ id: number; template: MarketingTemplate; audience: Audience; subject: string; created_at: string; sent: number }>(
-    `SELECT c.id, c.template, c.audience, c.subject, c.created_at, (SELECT COUNT(*)::int FROM email_campaign_recipients r WHERE r.campaign_id = c.id) AS sent
+  const rows = await db.query<{ id: number; template: MarketingTemplate; audience: Audience; subject: string; body: string; created_at: string; sent: number }>(
+    `SELECT c.id, c.template, c.audience, c.subject, c.body, c.created_at, (SELECT COUNT(*)::int FROM email_campaign_recipients r WHERE r.campaign_id = c.id) AS sent
      FROM email_campaigns c ORDER BY c.id DESC`,
   );
-  return rows.map((r) => ({ id: r.id, template: r.template, audience: r.audience, subject: r.subject, createdAt: Number(r.created_at), sent: r.sent }));
+  return Promise.all(
+    rows.map(async (r) => ({
+      id: r.id, template: r.template, audience: r.audience, subject: r.subject, body: r.body, createdAt: Number(r.created_at), sent: r.sent,
+      remaining: r.audience in FILTER ? await remainingFor(db, r.audience, r.id) : 0,
+    })),
+  );
 }
 
 export async function audienceCount(db: Db, audience: Audience): Promise<number> {

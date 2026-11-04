@@ -725,6 +725,9 @@
     "colSent": "Receberam",
     "colDate": "Data",
     "newCampaign": "Nova campanha",
-    "campaignDone": "Campanha enviada. Total de envios: {total}."
+    "campaignDone": "Campanha enviada. Total de envios: {total}.",
+    "previewFailed": "Não foi possível gerar a prévia. Tente de novo.",
+    "resuming": "Campanha em andamento: faltam {remaining} envios.",
+    "continueThis": "Continuar este envio"
   }
 }
