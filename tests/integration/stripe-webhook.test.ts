@@ -8,8 +8,8 @@ import { makeUser } from "../helpers/users";
 const SECRET = "whsec_test";
 const sign = (body: string, t = Math.floor(Date.now() / 1000), secret = SECRET) =>
   `t=${t},v1=${createHmac("sha256", secret).update(`${t}.${body}`).digest("hex")}`;
-const event = (id: string, type: string, status = "active") =>
-  JSON.stringify({ id, type, data: { object: { id: "sub_1", customer: "cus_1", status, cancel_at_period_end: false, canceled_at: null, items: { data: [{ current_period_end: 2000, price: { unit_amount: 699, currency: "brl" } }] } } } });
+const event = (id: string, type: string, status = "active", created = 1000, subId = "sub_1") =>
+  JSON.stringify({ id, type, created, data: { object: { id: subId, customer: "cus_1", status, cancel_at_period_end: false, canceled_at: null, items: { data: [{ current_period_end: 2000, price: { unit_amount: 699, currency: "brl" } }] } } } });
 const req = (body: string, sig: string | null) =>
   new Request("http://localhost/api/stripe/webhook", { method: "POST", body, headers: sig ? { "stripe-signature": sig } : {} });
 
@@ -78,6 +78,32 @@ describe("webhook", () => {
     expect((await handleStripeWebhook(req(a, sign(a)), db)).status).toBe(200);
     expect((await handleStripeWebhook(req(b, sign(b)), db)).status).toBe(200);
     expect(await db.query("SELECT 1 FROM subscriptions")).toHaveLength(0);
+  });
+
+  it("evento velho reenviado depois do cancelamento não reativa; outra assinatura cancelada não derruba a ativa", async () => {
+    vi.stubEnv("STRIPE_WEBHOOK_SECRET", SECRET);
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", null);
+    const send = async (b: string) => handleStripeWebhook(req(b, sign(b)), db);
+    await send(event("e1", "customer.subscription.created", "active", 100));
+    await send(event("e2", "customer.subscription.deleted", "canceled", 300));
+    await send(event("e3", "customer.subscription.updated", "active", 200));
+    expect((await getSubscription(db, ana))?.status).toBe("canceled");
+
+    await send(event("e4", "customer.subscription.updated", "active", 400, "sub_2"));
+    await send(event("e5", "customer.subscription.deleted", "canceled", 500, "sub_1"));
+    expect(await getSubscription(db, ana)).toMatchObject({ status: "active", subscriptionId: "sub_2" });
+  });
+
+  it("corpo grande demais: 413 antes de olhar a assinatura", async () => {
+    vi.stubEnv("STRIPE_WEBHOOK_SECRET", SECRET);
+    const getDb = vi.fn();
+    const big = "x".repeat(1_048_577);
+    expect((await handleStripeWebhook(req(big, sign(big)), getDb)).status).toBe(413);
+    const r = new Request("http://localhost/api/stripe/webhook", { method: "POST", body: "{}", headers: { "content-length": "2000000" } });
+    expect((await handleStripeWebhook(r, getDb)).status).toBe(413);
+    expect(getDb).not.toHaveBeenCalled();
   });
 
   it("corpo que não é JSON com assinatura certa: 400", async () => {

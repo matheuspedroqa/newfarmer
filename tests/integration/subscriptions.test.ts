@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { shouldUseFakePayments } from "@/server/payments";
 import { createFakePaymentProvider } from "@/server/payments/fake";
-import { ensureCustomer, getSubscription, hasAccess, upsertSubscription, userIdForCustomer } from "@/server/subscriptions";
+import { ensureCustomer, getSubscription, hasAccess, hasOpenSubscription, upsertSubscription, userIdForCustomer } from "@/server/subscriptions";
 import { testDb } from "../helpers/db";
 import { makeUser } from "../helpers/users";
 
@@ -46,6 +46,58 @@ describe("assinaturas", () => {
     expect(shouldUseFakePayments({ STRIPE_FAKE: "1", NODE_ENV: "test" })).toBe(true);
     expect(shouldUseFakePayments({ STRIPE_FAKE: "1", NODE_ENV: "production" })).toBe(false);
     expect(shouldUseFakePayments({ NODE_ENV: "test" })).toBe(false);
+  });
+});
+
+describe("ordem e várias assinaturas", () => {
+  it("evento velho não tira a assinatura do estado terminal", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "canceled" }), 100, 50);
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "active" }), 200, 40);
+    expect((await getSubscription(db, ana))?.status).toBe("canceled");
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "active" }), 300);
+    expect((await getSubscription(db, ana))?.status).toBe("canceled");
+  });
+
+  it("evento mais velho depois de um mais novo é ignorado; igual ou mais novo vale", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "active" }), 100, 50);
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "past_due" }), 200, 40);
+    expect((await getSubscription(db, ana))?.status).toBe("active");
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "past_due" }), 300, 60);
+    expect((await getSubscription(db, ana))?.status).toBe("past_due");
+  });
+
+  it("cancelamento de outra assinatura não derruba a que está ativa", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", sub({ id: "sub_A" }), 100, 10);
+    await upsertSubscription(db, ana, "cus_1", sub({ id: "sub_B", status: "canceled" }), 200, 20);
+    expect(await getSubscription(db, ana)).toMatchObject({ status: "active", subscriptionId: "sub_A" });
+    await upsertSubscription(db, ana, "cus_1", sub({ id: "sub_C", status: "active" }), 300, 30);
+    expect((await getSubscription(db, ana))?.subscriptionId).toBe("sub_C");
+  });
+
+  it("depois de cancelada, uma assinatura nova assume a linha", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", sub({ id: "sub_A", status: "canceled" }), 100, 10);
+    await upsertSubscription(db, ana, "cus_1", sub({ id: "sub_B" }), 200, 20);
+    expect(await getSubscription(db, ana)).toMatchObject({ status: "active", subscriptionId: "sub_B" });
+  });
+
+  it("hasOpenSubscription", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    expect(await hasOpenSubscription(db, ana)).toBe(false);
+    await upsertSubscription(db, ana, "cus_1", null);
+    expect(await hasOpenSubscription(db, ana)).toBe(false);
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "trialing" }));
+    expect(await hasOpenSubscription(db, ana)).toBe(true);
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "canceled" }));
+    expect(await hasOpenSubscription(db, ana)).toBe(false);
   });
 });
 

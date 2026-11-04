@@ -60,8 +60,8 @@ export function createStripeProvider(secretKey: string, fetchFn: typeof fetch = 
     async createPortal({ customerId, returnUrl }) {
       return String((await call("POST", "billing_portal/sessions", { customer: customerId, return_url: returnUrl })).url);
     },
-    async cancelNow(subscriptionId) {
-      await call("DELETE", `subscriptions/${encodeURIComponent(subscriptionId)}`);
+    async deleteCustomer(customerId) {
+      await call("DELETE", `customers/${encodeURIComponent(customerId)}`);
     },
   };
 }

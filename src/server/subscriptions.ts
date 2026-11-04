@@ -48,7 +48,18 @@ export function hasAccess(user: { isPlatformAdmin: boolean }, sub: Pick<Subscrip
 }
 
 /** `sub === null`: o cliente existe e ainda não há assinatura (não mexe em linha que já tem uma). */
-export async function upsertSubscription(db: Db, userId: number, customerId: string, sub: StripeSubscription | null, now = Date.now()): Promise<void> {
+export async function hasOpenSubscription(db: Db, userId: number): Promise<boolean> {
+  return isAccessStatus((await getSubscription(db, userId))?.status);
+}
+
+/**
+ * Guardas contra evento fora de ordem (a Stripe reenvia e não garante a ordem), todos no UPDATE:
+ * - assinatura que já terminou (canceled/incomplete_expired) nunca volta;
+ * - evento mais velho (event.created) que o último aplicado à mesma assinatura é ignorado;
+ * - assinatura diferente da que dá acesso, sem dar acesso ela mesma, não derruba a ativa.
+ * `eventCreated` em segundos, como a Stripe manda; sem ele (retorno do checkout) só valem a 1ª e a 3ª regra.
+ */
+export async function upsertSubscription(db: Db, userId: number, customerId: string, sub: StripeSubscription | null, now = Date.now(), eventCreated: number | null = null): Promise<void> {
   if (!sub) {
     await db.run(
       "INSERT INTO subscriptions (user_id, stripe_customer_id, status, updated_at) VALUES ($1, $2, 'none', $3) ON CONFLICT (user_id) DO NOTHING",
@@ -57,14 +68,22 @@ export async function upsertSubscription(db: Db, userId: number, customerId: str
     return;
   }
   await db.run(
-    `INSERT INTO subscriptions (user_id, stripe_customer_id, stripe_subscription_id, status, currency, amount, current_period_end, cancel_at_period_end, started_at, canceled_at, updated_at)
-     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, CASE WHEN $4 = ANY($11::text[]) THEN $10::bigint END, $9, $10)
+    `INSERT INTO subscriptions (user_id, stripe_customer_id, stripe_subscription_id, status, currency, amount, current_period_end, cancel_at_period_end, started_at, canceled_at, updated_at, stripe_event_created)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, CASE WHEN $4 = ANY($11::text[]) THEN $10::bigint END, $9, $10, $12::bigint)
      ON CONFLICT (user_id) DO UPDATE SET
        stripe_customer_id = EXCLUDED.stripe_customer_id, stripe_subscription_id = EXCLUDED.stripe_subscription_id, status = EXCLUDED.status,
        currency = EXCLUDED.currency, amount = EXCLUDED.amount, current_period_end = EXCLUDED.current_period_end,
        cancel_at_period_end = EXCLUDED.cancel_at_period_end, canceled_at = EXCLUDED.canceled_at, updated_at = EXCLUDED.updated_at,
-       started_at = COALESCE(subscriptions.started_at, EXCLUDED.started_at)`,
-    [userId, customerId, sub.id, sub.status, sub.currency, sub.amount, sub.currentPeriodEnd, sub.cancelAtPeriodEnd, sub.canceledAt, now, [...ACCESS_STATUSES]],
+       started_at = COALESCE(subscriptions.started_at, EXCLUDED.started_at), stripe_event_created = EXCLUDED.stripe_event_created
+     WHERE NOT (
+       subscriptions.stripe_subscription_id IS NOT DISTINCT FROM EXCLUDED.stripe_subscription_id
+       AND (subscriptions.status IN ('canceled', 'incomplete_expired')
+            OR COALESCE(subscriptions.stripe_event_created > EXCLUDED.stripe_event_created, FALSE))
+     ) AND NOT (
+       subscriptions.stripe_subscription_id IS DISTINCT FROM EXCLUDED.stripe_subscription_id
+       AND subscriptions.status = ANY($11::text[]) AND NOT (EXCLUDED.status = ANY($11::text[]))
+     )`,
+    [userId, customerId, sub.id, sub.status, sub.currency, sub.amount, sub.currentPeriodEnd, sub.cancelAtPeriodEnd, sub.canceledAt, now, [...ACCESS_STATUSES], eventCreated],
   );
 }
 

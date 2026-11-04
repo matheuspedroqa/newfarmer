@@ -15,5 +15,6 @@ export interface PaymentProvider {
   createCheckout(input: { customerId: string; priceId: string; userId: number; locale: "pt" | "en"; successUrl: string; cancelUrl: string }): Promise<string>;
   getCheckout(sessionId: string): Promise<{ customerId: string; subscription: StripeSubscription | null }>;
   createPortal(input: { customerId: string; returnUrl: string }): Promise<string>;
-  cancelNow(subscriptionId: string): Promise<void>;
+  /** Apaga o cliente: a Stripe cancela na hora todas as assinaturas dele e remove nome e e-mail. */
+  deleteCustomer(customerId: string): Promise<void>;
 }

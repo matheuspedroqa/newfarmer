@@ -235,6 +235,7 @@ CREATE TABLE subscriptions (
   current_period_end BIGINT,
   cancel_at_period_end BOOLEAN NOT NULL DEFAULT FALSE,
   started_at BIGINT, canceled_at BIGINT,
+  stripe_event_created BIGINT,
   updated_at BIGINT NOT NULL
 );
 ALTER TABLE subscriptions ENABLE ROW LEVEL SECURITY;

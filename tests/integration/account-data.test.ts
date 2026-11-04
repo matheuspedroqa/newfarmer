@@ -61,15 +61,25 @@ describe("deleteAccount", () => {
 
   const active = { id: "sub_1", customer: "cus_1", status: "active", currency: "brl", amount: 699, currentPeriodEnd: 9000, cancelAtPeriodEnd: false, canceledAt: null };
 
-  it("com assinatura ativa cancela no provedor antes de apagar", async () => {
+  it("com cliente na Stripe apaga o cliente antes de apagar a conta", async () => {
     const db = await testDb();
     const ana = await makeUser(db);
     await upsertSubscription(db, ana, "cus_1", active);
     const provider = createFakePaymentProvider();
-    const cancel = vi.spyOn(provider, "cancelNow");
+    const del = vi.spyOn(provider, "deleteCustomer");
     expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("ok");
-    expect(cancel).toHaveBeenCalledWith("sub_1");
+    expect(del).toHaveBeenCalledWith("cus_1");
     expect(await db.query("SELECT 1 FROM users WHERE id = $1", [ana])).toHaveLength(0);
+  });
+
+  it("mesmo com status local cancelado, apaga o cliente (o status local pode estar velho)", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", { ...active, status: "canceled" });
+    const provider = createFakePaymentProvider();
+    const del = vi.spyOn(provider, "deleteCustomer");
+    expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("ok");
+    expect(del).toHaveBeenCalledWith("cus_1");
   });
 
   it("se o provedor falhar, devolve paymentError e a conta continua", async () => {
@@ -77,16 +87,15 @@ describe("deleteAccount", () => {
     const ana = await makeUser(db);
     await upsertSubscription(db, ana, "cus_1", active);
     const provider = createFakePaymentProvider();
-    vi.spyOn(provider, "cancelNow").mockRejectedValue(new Error("Stripe respondeu 500"));
+    vi.spyOn(provider, "deleteCustomer").mockRejectedValue(new Error("Stripe respondeu 500"));
     vi.spyOn(console, "error").mockImplementation(() => {});
     expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("paymentError");
     expect(await db.query("SELECT 1 FROM users WHERE id = $1", [ana])).toHaveLength(1);
   });
 
-  it("sem assinatura ou já cancelada, nem constrói o provedor", async () => {
+  it("sem cliente na Stripe, nem constrói o provedor", async () => {
     const db = await testDb();
     const ana = await makeUser(db);
-    await upsertSubscription(db, ana, "cus_1", { ...active, status: "canceled" });
     const get = vi.fn();
     expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, get)).toBe("ok");
     expect(get).not.toHaveBeenCalled();

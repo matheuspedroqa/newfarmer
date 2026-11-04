@@ -25,6 +25,6 @@ export function createFakePaymentProvider(): PaymentProvider {
     async createPortal({ returnUrl }) {
       return returnUrl;
     },
-    async cancelNow() {},
+    async deleteCustomer() {},
   };
 }

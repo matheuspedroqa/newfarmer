@@ -45,11 +45,11 @@ describe("cliente Stripe", () => {
     expect(s).toMatchObject({ customer: "cus_2", currentPeriodEnd: 5000, canceledAt: 9000, cancelAtPeriodEnd: true, amount: 199 });
   });
 
-  it("cancelNow usa DELETE", async () => {
+  it("deleteCustomer usa DELETE no cliente", async () => {
     const fetchFn = vi.fn(async () => ok({}));
-    await createStripeProvider("k", asFetch(fetchFn)).cancelNow("sub_1");
+    await createStripeProvider("k", asFetch(fetchFn)).deleteCustomer("cus_1");
     const [endpoint, init] = fetchFn.mock.calls[0] as unknown as [string, RequestInit];
-    expect(endpoint).toBe("https://api.stripe.com/v1/subscriptions/sub_1");
+    expect(endpoint).toBe("https://api.stripe.com/v1/customers/cus_1");
     expect(init.method).toBe("DELETE");
   });
 });

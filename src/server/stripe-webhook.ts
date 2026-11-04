@@ -24,16 +24,20 @@ export function verifyStripeSignature(payload: string, header: string | null, se
   });
 }
 
+const MAX_BODY = 1_048_576; // 1 MB: a rota é pública
 const SUBSCRIPTION_EVENTS = new Set(["customer.subscription.created", "customer.subscription.updated", "customer.subscription.deleted"]);
 
 /** `db` pode ser uma função: o banco só abre depois que a assinatura passou. */
 export async function handleStripeWebhook(request: Request, db: Db | (() => Promise<Db>)): Promise<Response> {
   const secret = process.env.STRIPE_WEBHOOK_SECRET;
   if (!secret) return new Response("webhook não configurado", { status: 500 });
+  // Corpo limitado antes de ler e antes da assinatura (que precisa do corpo inteiro).
+  if (Number(request.headers.get("content-length")) > MAX_BODY) return new Response("corpo grande demais", { status: 413 });
   const body = await request.text();
+  if (new TextEncoder().encode(body).length > MAX_BODY) return new Response("corpo grande demais", { status: 413 });
   if (!verifyStripeSignature(body, request.headers.get("stripe-signature"), secret)) return new Response("assinatura inválida", { status: 401 });
 
-  let event: { id?: unknown; type?: unknown; data?: { object?: Record<string, unknown> } };
+  let event: { id?: unknown; type?: unknown; created?: unknown; data?: { object?: Record<string, unknown> } };
   try {
     event = JSON.parse(body);
   } catch {
@@ -52,7 +56,7 @@ export async function handleStripeWebhook(request: Request, db: Db | (() => Prom
     if (fresh.length === 0) return;
     const userId = await userIdForCustomer(tx, sub.customer);
     if (userId === null) return;
-    await upsertSubscription(tx, userId, sub.customer, deleted ? { ...sub, status: "canceled", canceledAt: sub.canceledAt ?? Date.now() } : sub);
+    await upsertSubscription(tx, userId, sub.customer, deleted ? { ...sub, status: "canceled", canceledAt: sub.canceledAt ?? Date.now() } : sub, Date.now(), typeof event.created === "number" ? event.created : null);
   });
   return new Response("ok");
 }

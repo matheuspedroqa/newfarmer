@@ -4,7 +4,7 @@ import type { Db } from "./db";
 import { listUserPageViews } from "./page-views";
 import { getPaymentProvider } from "./payments";
 import type { PaymentProvider } from "./payments/types";
-import { getSubscription, isAccessStatus } from "./subscriptions";
+import { getSubscription } from "./subscriptions";
 
 // Direito de acesso e portabilidade (LGPD art. 18, RGPD art. 15 e 20, CCPA): tudo que é da pessoa,
 // num formato aberto. Ficam de fora senha, tokens e sessões, que só servem para entrar na conta.
@@ -83,8 +83,10 @@ export async function exportUserData(db: Db, userId: number) {
 
 // O banco apaga junto (ON DELETE CASCADE) criação, diário, sessões, links de e-mail e a assinatura.
 // O registro de atividade fica e some no prazo da Política (180 dias), como ela explica.
-// Assinatura que libera acesso é cancelada na Stripe antes; se falhar, a conta fica (não cobrar de quem não tem mais conta).
-// O provedor só é construído quando há o que cancelar: apagar conta sem assinatura nunca exige chaves da Stripe.
+// Se a pessoa tem cliente na Stripe, ele é apagado antes: a Stripe cancela na hora todas as assinaturas (inclusive uma segunda
+// que o banco não conheça) e some com nome e e-mail dela. Se falhar, a conta fica (não cobrar de quem não tem mais conta).
+// Vale mesmo com status local "cancelado", que pode estar velho. O provedor só é construído quando há cliente:
+// apagar conta sem cliente nunca exige chaves da Stripe.
 export async function deleteAccount(
   db: Db,
   userId: number,
@@ -94,11 +96,11 @@ export async function deleteAccount(
   const [row] = await db.query<{ password_hash: string }>("SELECT password_hash FROM users WHERE id = $1", [userId]);
   if (!row || !(await bcrypt.compare(password, row.password_hash))) return "wrongPassword";
   const sub = await getSubscription(db, userId);
-  if (sub?.subscriptionId && isAccessStatus(sub.status)) {
+  if (sub) {
     try {
-      await (typeof provider === "function" ? provider() : provider).cancelNow(sub.subscriptionId);
+      await (typeof provider === "function" ? provider() : provider).deleteCustomer(sub.customerId);
     } catch (error) {
-      console.error("Falha ao cancelar a assinatura ao apagar a conta:", error instanceof Error ? error.message : "erro");
+      console.error("Falha ao apagar o cliente na Stripe ao apagar a conta:", error instanceof Error ? error.message : "erro");
       return "paymentError";
     }
   }
