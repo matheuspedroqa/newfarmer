@@ -5,6 +5,9 @@ export interface MailMessage {
   to: string;
   subject: string;
   html: string;
+  /** Remetente próprio (marketing). Sem ele, vale o do mailer. */
+  from?: string;
+  headers?: Record<string, string>;
 }
 
 export interface Mailer {
@@ -13,6 +16,7 @@ export interface Mailer {
 
 export function createDevInboxMailer(db: Db): Mailer {
   return {
+    // Cabeçalhos e remetente não importam na caixa de teste.
     async send({ to, subject, html }) {
       await db.run("INSERT INTO dev_emails (to_address, subject, body_html, created_at) VALUES ($1, $2, $3, $4)", [
         to,
@@ -26,11 +30,12 @@ export function createDevInboxMailer(db: Db): Mailer {
 
 export function createResendMailer(apiKey: string, from: string, fetchFn: typeof fetch = fetch): Mailer {
   return {
-    async send({ to, subject, html }) {
+    async send({ to, subject, html, from: own, headers }) {
+      const replyTo = process.env.MAIL_REPLY_TO;
       const response = await fetchFn("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ from, to, subject, html }),
+        body: JSON.stringify({ from: own ?? from, to, subject, html, ...(headers && { headers }), ...(replyTo && { reply_to: replyTo }) }),
       });
       if (!response.ok) throw new Error(`Resend respondeu ${response.status}`);
     },

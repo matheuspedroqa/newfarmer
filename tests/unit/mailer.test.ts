@@ -28,3 +28,22 @@ describe("e-mail pelo Resend", () => {
     expect(() => getMailer({} as Db)).toThrow("RESEND_API_KEY");
   });
 });
+
+describe("e-mail pelo Resend: remetente, reply_to e cabeçalhos", () => {
+  afterEach(() => vi.unstubAllEnvs());
+  const bodyOf = (fetchFn: ReturnType<typeof vi.fn>) => JSON.parse((fetchFn.mock.calls[0] as unknown as [string, { body: string }])[1].body);
+
+  it("marketing usa o próprio remetente, cabeçalhos e reply_to", async () => {
+    vi.stubEnv("MAIL_REPLY_TO", "suporte@newfarmer.app");
+    const fetchFn = vi.fn(async () => new Response("{}", { status: 200 }));
+    await createResendMailer("k", "Conta <conta@nf.app>", fetchFn).send({ ...message, from: "Novidades <n@nf.app>", headers: { "List-Unsubscribe": "<u>" } });
+    expect(bodyOf(fetchFn)).toMatchObject({ from: "Novidades <n@nf.app>", reply_to: "suporte@newfarmer.app", headers: { "List-Unsubscribe": "<u>" } });
+  });
+
+  it("sem as variáveis nada muda", async () => {
+    vi.stubEnv("MAIL_REPLY_TO", "");
+    const fetchFn = vi.fn(async () => new Response("{}", { status: 200 }));
+    await createResendMailer("k", "Conta <conta@nf.app>", fetchFn).send(message);
+    expect(bodyOf(fetchFn)).toEqual({ from: "Conta <conta@nf.app>", ...message });
+  });
+});

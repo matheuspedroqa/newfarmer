@@ -21,7 +21,7 @@ export async function acceptTerms(page: Page) {
 export async function createAccount(page: Page, email: string, city = "Curitiba", username = uniqueUsername(), name = "Ana") {
   await page.goto("/register");
   await page.getByLabel("Nome").fill(name);
-  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("E-mail", { exact: true }).fill(email);
   await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha", { exact: true }).fill(PASSWORD);
   await page.getByLabel("Confirmar senha").fill(PASSWORD);

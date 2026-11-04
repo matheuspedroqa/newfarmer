@@ -19,7 +19,7 @@ export function escapeHtml(text: string): string {
     .replaceAll("'", "&#39;");
 }
 
-interface EmailContent {
+export interface EmailContent {
   locale: Locale;
   name: string;
   username?: string;
@@ -29,9 +29,11 @@ interface EmailContent {
   button: string;
   link: string;
   note: string;
+  /** HTML já escapado que troca o rodapé padrão. */
+  footerHtml?: string;
 }
 
-function renderEmail({ locale, name, username, title, intro, introHtml, button, link, note }: EmailContent): string {
+export function renderEmail({ locale, name, username, title, intro, introHtml, button, link, note, footerHtml }: EmailContent): string {
   const t = TEXTS[locale];
   const href = escapeHtml(link);
   return `<!doctype html>
@@ -57,7 +59,7 @@ function renderEmail({ locale, name, username, title, intro, introHtml, button, 
       <p style="margin:0 0 24px;font-size:13px;word-break:break-all;"><a href="${href}" style="color:${C.primary};">${href}</a></p>
       <p style="margin:0;font-size:13px;color:${C.muted};">${escapeHtml(note)}</p>
     </td></tr>
-    <tr><td style="border-top:1px solid ${C.border};padding:16px 32px;font-size:12px;color:${C.muted};">${escapeHtml(t.footer)}</td></tr>
+    <tr><td style="border-top:1px solid ${C.border};padding:16px 32px;font-size:12px;color:${C.muted};">${footerHtml ?? escapeHtml(t.footer)}</td></tr>
   </table>
 </td></tr>
 </table>

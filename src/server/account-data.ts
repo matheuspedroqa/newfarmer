@@ -23,9 +23,11 @@ export async function exportUserData(db: Db, userId: number) {
     theme: string;
     created_at: string;
     email_verified_at: string | null;
+    marketing_opt_in: boolean;
+    marketing_opt_in_at: string | null;
   }>(
     `SELECT name, username, email, city_label, latitude, longitude, country_code, climate_zone, hemisphere,
-            locale, theme, created_at, email_verified_at
+            locale, theme, created_at, email_verified_at, marketing_opt_in, marketing_opt_in_at
      FROM users WHERE id = $1`,
     [userId],
   );
@@ -63,6 +65,8 @@ export async function exportUserData(db: Db, userId: number) {
       hemisphere: account.hemisphere,
       language: account.locale,
       theme: account.theme,
+      marketingOptIn: account.marketing_opt_in,
+      marketingOptInAt: account.marketing_opt_in_at === null ? null : iso(account.marketing_opt_in_at),
     },
     animals,
     crops: crops.map((c) => c.crop_id),

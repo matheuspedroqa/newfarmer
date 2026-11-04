@@ -8,6 +8,7 @@ import { getDb } from "@/server/db";
 import { getSubscription } from "@/server/subscriptions";
 import { DeleteAccountForm } from "./DeleteAccountForm";
 import { LanguageForm } from "./LanguageForm";
+import { MarketingForm } from "./MarketingForm";
 import { PasswordForm } from "./PasswordForm";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -71,6 +72,11 @@ export default async function ProfilePage() {
         <h2 className="font-display text-2xl font-bold">{t("profile.languageTitle")}</h2>
         <p className="mb-4 text-sm text-muted">{t("profile.languageHelp")}</p>
         <LanguageForm current={user.locale} />
+      </div>
+
+      <div className="rounded-3xl bg-surface p-6 ring-1 ring-border" data-testid="marketing-card">
+        <h2 className="mb-4 font-display text-2xl font-bold">{t("profile.marketingTitle")}</h2>
+        <MarketingForm current={user.marketingOptIn} />
       </div>
 
       <div className="rounded-3xl bg-surface p-6 ring-1 ring-border">

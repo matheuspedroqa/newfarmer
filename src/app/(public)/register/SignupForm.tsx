@@ -77,6 +77,10 @@ export function SignupForm() {
           </label>
           <FieldError id="age-error" code={errors.age} />
         </div>
+        <label className="flex items-start gap-2 text-sm">
+          <input type="checkbox" name="marketing" defaultChecked={state.values?.marketing === "on"} key={`m-${state.values?.marketing}`} className="mt-1 size-4" />
+          <span>{t("marketingOptIn")}</span>
+        </label>
         {state.formError && <p role="alert" className="text-sm text-danger">{tErrors(state.formError)}</p>}
         <SubmitButton pending={pending}>{t("createAccount")}</SubmitButton>
       </form>

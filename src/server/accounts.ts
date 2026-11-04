@@ -33,6 +33,7 @@ export interface NewUser {
   password: string;
   city: CityChoice;
   climate: ResolvedClimate;
+  marketing?: boolean;
 }
 
 export interface User {
@@ -51,6 +52,7 @@ export interface User {
   locale: Locale;
   theme: Theme;
   emailVerified: boolean;
+  marketingOptIn: boolean;
 }
 
 interface UserRow {
@@ -69,6 +71,7 @@ interface UserRow {
   locale: string;
   theme: string;
   email_verified_at: number | null;
+  marketing_opt_in: boolean;
 }
 
 export async function createUser(db: Db, user: NewUser, now = Date.now()): Promise<number> {
@@ -76,8 +79,8 @@ export async function createUser(db: Db, user: NewUser, now = Date.now()): Promi
   try {
     const [row] = await db.query<{ id: number }>(
       `INSERT INTO users (name, email, username, password_hash, city_label, latitude, longitude, country_code,
-        climate_zone, climate_estimated, hemisphere, created_at)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING id`,
+        climate_zone, climate_estimated, hemisphere, created_at, marketing_opt_in, marketing_opt_in_at)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING id`,
       [
         user.name.trim(),
         user.email.trim().toLowerCase(),
@@ -91,6 +94,8 @@ export async function createUser(db: Db, user: NewUser, now = Date.now()): Promi
         user.climate.estimated ? 1 : 0,
         user.climate.hemisphere,
         now,
+        !!user.marketing,
+        user.marketing ? now : null,
       ],
     );
     return row.id;
@@ -120,6 +125,7 @@ export async function getUserById(db: Db, id: number): Promise<User | null> {
     locale: resolveLocale(row.locale),
     theme: resolveTheme(row.theme),
     emailVerified: row.email_verified_at !== null,
+    marketingOptIn: row.marketing_opt_in,
   };
 }
 

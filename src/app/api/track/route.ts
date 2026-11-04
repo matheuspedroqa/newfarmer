@@ -6,7 +6,7 @@ import { recordPageView } from "@/server/page-views";
 import { limitByIp } from "@/server/rate-limit";
 import { clientIp } from "@/server/request-context";
 
-const SKIP = ["/api/", "/admin", "/confirm-email/", "/reset-password/"];
+const SKIP = ["/api/", "/admin", "/confirm-email/", "/reset-password/", "/unsubscribe/"];
 const MAX_BODY = 2048;
 const none = () => new Response(null, { status: 204 });
 

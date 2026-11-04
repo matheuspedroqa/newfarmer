@@ -183,3 +183,26 @@ test("Apagar conta pede confirmação e senha, apaga e não deixa entrar de novo
   await page.getByRole("button", { name: "Entrar" }).click();
   await expect(page.getByRole("alert")).toBeVisible();
 });
+
+test("Perfil liga e desliga Receber novidades por e-mail", async ({ page }) => {
+  await signup(page, uniqueEmail());
+  await page.goto("/profile");
+  const box = page.getByLabel("Receber novidades por e-mail");
+  await expect(box).not.toBeChecked();
+  await box.check();
+  await page.getByTestId("marketing-card").getByRole("button", { name: "Salvar" }).click();
+  await expect(page.getByText("Preferência salva.")).toBeVisible();
+  await page.reload();
+  await expect(box).toBeChecked();
+  await box.uncheck();
+  await page.getByTestId("marketing-card").getByRole("button", { name: "Salvar" }).click();
+  await expect(page.getByText("Preferência salva.")).toBeVisible();
+  await page.reload();
+  await expect(box).not.toBeChecked();
+});
+
+test("página de descadastro: token inválido mostra mensagem neutra", async ({ page }) => {
+  await page.goto("/unsubscribe/token-que-nao-existe");
+  await page.getByRole("button", { name: "Confirmar descadastro" }).click();
+  await expect(page.getByText("Este link não é válido ou já foi usado.")).toBeVisible();
+});

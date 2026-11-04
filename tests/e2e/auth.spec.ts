@@ -11,7 +11,7 @@ test("cadastro passa pela etapa 2 e chega ao painel com o tipo de clima da cidad
 
 test("cadastro mostra os erros dos campos", async ({ page }) => {
   await page.goto("/register");
-  await page.getByLabel("E-mail").fill("ana@");
+  await page.getByLabel("E-mail", { exact: true }).fill("ana@");
   await page.getByLabel("Senha", { exact: true }).fill("123");
   await page.getByLabel("Confirmar senha").fill("456");
   await page.getByRole("button", { name: "Criar conta" }).click();
@@ -60,7 +60,7 @@ test("e-mail repetido avisa que já existe conta", async ({ page, context }) => 
   await clearSession(context);
   await page.goto("/register");
   await page.getByLabel("Nome").fill("Ana");
-  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("E-mail", { exact: true }).fill(email);
   await page.getByLabel("Username").fill(uniqueUsername());
   await page.getByLabel("Senha", { exact: true }).fill(PASSWORD);
   await page.getByLabel("Confirmar senha").fill(PASSWORD);
@@ -77,7 +77,7 @@ test("username repetido avisa que já está em uso e mantém o que foi digitado"
   await page.goto("/register");
   const email = uniqueEmail();
   await page.getByLabel("Nome").fill("Ana");
-  await page.getByLabel("E-mail").fill(email);
+  await page.getByLabel("E-mail", { exact: true }).fill(email);
   await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha", { exact: true }).fill(PASSWORD);
   await page.getByLabel("Confirmar senha").fill(PASSWORD);
@@ -86,7 +86,7 @@ test("username repetido avisa que já está em uso e mantém o que foi digitado"
   await acceptTerms(page);
   await page.getByRole("button", { name: "Criar conta" }).click();
   await expect(page.getByText("Este username já está em uso")).toBeVisible();
-  await expect(page.getByLabel("E-mail")).toHaveValue(email);
+  await expect(page.getByLabel("E-mail", { exact: true })).toHaveValue(email);
   await expect(page.getByLabel("Username")).toHaveValue(username);
 });
 
@@ -94,7 +94,7 @@ test("cadastro pede e-mail e username; login pede só username e senha", async (
   const { username } = await signup(page, uniqueEmail());
   await clearSession(context);
   await page.goto("/login");
-  await expect(page.getByLabel("E-mail")).toHaveCount(0);
+  await expect(page.getByLabel("E-mail", { exact: true })).toHaveCount(0);
   await page.getByLabel("Username").fill(username.toUpperCase());
   await page.getByLabel("Senha").fill(PASSWORD);
   await page.getByRole("button", { name: "Entrar" }).click();
@@ -209,7 +209,7 @@ test("esqueci o username: a mesma mensagem com e sem conta, e o e-mail chega só
   for (const typed of [email, unknown]) {
     await page.goto("/login");
     await page.getByRole("link", { name: "Esqueci o username" }).click();
-    await page.getByLabel("E-mail").fill(typed);
+    await page.getByLabel("E-mail", { exact: true }).fill(typed);
     await page.getByRole("button", { name: "Enviar username" }).click();
     await expect(page.getByText("Se houver uma conta com esse e-mail, enviamos o seu username.")).toBeVisible();
   }

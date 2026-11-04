@@ -241,6 +241,22 @@ CREATE TABLE subscriptions (
 ALTER TABLE subscriptions ENABLE ROW LEVEL SECURITY;
 CREATE TABLE stripe_events (id TEXT PRIMARY KEY, received_at BIGINT NOT NULL);
 ALTER TABLE stripe_events ENABLE ROW LEVEL SECURITY;
+ALTER TABLE users ADD COLUMN marketing_opt_in BOOLEAN NOT NULL DEFAULT FALSE;
+ALTER TABLE users ADD COLUMN marketing_opt_in_at BIGINT;
+ALTER TABLE users ADD COLUMN unsubscribe_token TEXT UNIQUE;
+CREATE TABLE email_campaigns (
+  id SERIAL PRIMARY KEY, template TEXT NOT NULL, audience TEXT NOT NULL,
+  subject TEXT NOT NULL, body TEXT NOT NULL DEFAULT '',
+  created_by INTEGER, created_at BIGINT NOT NULL
+);
+CREATE TABLE email_campaign_recipients (
+  campaign_id INTEGER NOT NULL REFERENCES email_campaigns(id) ON DELETE CASCADE,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  sent_at BIGINT NOT NULL,
+  PRIMARY KEY (campaign_id, user_id)
+);
+ALTER TABLE email_campaigns ENABLE ROW LEVEL SECURITY;
+ALTER TABLE email_campaign_recipients ENABLE ROW LEVEL SECURITY;
 `,
   },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];

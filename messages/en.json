@@ -46,6 +46,7 @@
     "backToLoginShort": "Back to sign in",
     "acceptTerms": "I have read and accept the <terms>Terms of Use</terms> and the <privacy>Privacy Policy</privacy>",
     "ageConfirm": "I am 13 or older",
+    "marketingOptIn": "I want to receive NewFarmer news and offers by e-mail",
     "accountDeleted": "Your account was deleted. Thank you for using NewFarmer."
   },
   "errors": {
@@ -128,7 +129,21 @@
     "usernameTitle": "Here is your username",
     "usernameIntro": "Your NewFarmer username is {username}.",
     "usernameButton": "Sign in",
-    "usernameNote": "If you did not ask for this, ignore this e-mail."
+    "usernameNote": "If you did not ask for this, ignore this e-mail.",
+    "weMissYouSubject": "We miss you at NewFarmer 🌱",
+    "weMissYouTitle": "We miss you!",
+    "weMissYouIntro": "Your animal diary and planting calendar are still waiting for you, and your data is safe. Whenever you like, subscribe again and pick up where you left off.",
+    "weMissYouButton": "Subscribe again",
+    "announcementButton": "Open NewFarmer",
+    "marketingFooter": "You get this e-mail because you agreed to receive news from NewFarmer.",
+    "unsubscribe": "Unsubscribe"
+  },
+"unsubscribe": {
+    "title": "Unsubscribe",
+    "question": "Do you want to stop receiving news e-mails?",
+    "confirm": "Confirm unsubscribe",
+    "done": "You will no longer receive news e-mails.",
+    "invalid": "This link is not valid or was already used."
   },
   "devInbox": {
     "title": "Test inbox",
@@ -321,6 +336,10 @@
     "languageHelp": "Choose the NewFarmer language.",
     "saveLanguage": "Save language",
     "languageSaved": "Language saved.",
+    "marketingTitle": "News by e-mail",
+    "marketingLabel": "Receive news by e-mail",
+    "marketingSaved": "Preference saved.",
+    "saveMarketing": "Save",
     "dataTitle": "My data",
     "dataHelp": "Download a file with everything NewFarmer keeps about you: account, animals, crops, diary and activity log. Your password is not in the file.",
     "download": "Download my data",

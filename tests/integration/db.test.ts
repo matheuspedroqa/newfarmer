@@ -5,6 +5,8 @@ const TABLES = [
   "activity_logs",
   "dev_emails",
   "diary_entries",
+  "email_campaign_recipients",
+  "email_campaigns",
   "email_verification_tokens",
   "error_logs",
   "farm_animals",

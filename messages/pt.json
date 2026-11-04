@@ -46,6 +46,7 @@
     "backToLoginShort": "Voltar para entrar",
     "acceptTerms": "Li e aceito os <terms>Termos de Uso</terms> e a <privacy>Política de Privacidade</privacy>",
     "ageConfirm": "Tenho 13 anos ou mais",
+    "marketingOptIn": "Quero receber novidades e ofertas do NewFarmer por e-mail",
     "accountDeleted": "Sua conta foi apagada. Obrigado por ter usado o NewFarmer."
   },
   "errors": {
@@ -128,7 +129,21 @@
     "usernameTitle": "Aqui está o seu username",
     "usernameIntro": "Seu username no NewFarmer é {username}.",
     "usernameButton": "Entrar",
-    "usernameNote": "Se você não pediu isso, ignore este e-mail."
+    "usernameNote": "Se você não pediu isso, ignore este e-mail.",
+    "weMissYouSubject": "Sentimos sua falta no NewFarmer 🌱",
+    "weMissYouTitle": "Sentimos sua falta!",
+    "weMissYouIntro": "O diário dos seus animais e o calendário de plantio continuam te esperando, e os seus dados seguem guardados. Quando quiser, é só voltar a assinar e continuar de onde parou.",
+    "weMissYouButton": "Voltar a assinar",
+    "announcementButton": "Abrir o NewFarmer",
+    "marketingFooter": "Você recebe este e-mail porque aceitou novidades do NewFarmer.",
+    "unsubscribe": "Descadastrar"
+  },
+"unsubscribe": {
+    "title": "Descadastrar",
+    "question": "Quer parar de receber e-mails de novidades?",
+    "confirm": "Confirmar descadastro",
+    "done": "Você não vai mais receber e-mails de novidades.",
+    "invalid": "Este link não é válido ou já foi usado."
   },
   "devInbox": {
     "title": "Caixa de e-mail de teste",
@@ -321,6 +336,10 @@
     "languageHelp": "Escolha o idioma do NewFarmer.",
     "saveLanguage": "Salvar idioma",
     "languageSaved": "Idioma salvo.",
+    "marketingTitle": "Novidades por e-mail",
+    "marketingLabel": "Receber novidades por e-mail",
+    "marketingSaved": "Preferência salva.",
+    "saveMarketing": "Salvar",
     "dataTitle": "Meus dados",
     "dataHelp": "Baixe um arquivo com tudo que o NewFarmer guarda sobre você: conta, animais, plantações, diário e registro de atividade. A senha não vai no arquivo.",
     "download": "Baixar meus dados",
