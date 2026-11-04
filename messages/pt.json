@@ -45,7 +45,8 @@
     "usernameReminderSent": "Se houver uma conta com esse e-mail, enviamos o seu username.",
     "backToLoginShort": "Voltar para entrar",
     "acceptTerms": "Li e aceito os <terms>Termos de Uso</terms> e a <privacy>Política de Privacidade</privacy>",
-    "ageConfirm": "Tenho 13 anos ou mais"
+    "ageConfirm": "Tenho 13 anos ou mais",
+    "accountDeleted": "Sua conta foi apagada. Obrigado por ter usado o NewFarmer."
   },
   "errors": {
     "required": "Preencha este campo",
@@ -73,7 +74,8 @@
     "usernameReserved": "Este username é reservado. Escolha outro",
     "usernameTaken": "Este username já está em uso",
     "termsRequired": "Para criar a conta, aceite os Termos e a Política de Privacidade",
-    "ageRequired": "O NewFarmer é para maiores de 13 anos"
+    "ageRequired": "O NewFarmer é para maiores de 13 anos",
+    "confirmRequired": "Marque a caixa para confirmar."
   },
   "climate": {
     "tropical": "Tropical",
@@ -316,7 +318,15 @@
     "languageTitle": "Idioma",
     "languageHelp": "Escolha o idioma do NewFarmer.",
     "saveLanguage": "Salvar idioma",
-    "languageSaved": "Idioma salvo."
+    "languageSaved": "Idioma salvo.",
+    "dataTitle": "Meus dados",
+    "dataHelp": "Baixe um arquivo com tudo que o NewFarmer guarda sobre você: conta, animais, plantações, diário e registro de atividade. A senha não vai no arquivo.",
+    "download": "Baixar meus dados",
+    "deleteTitle": "Apagar conta",
+    "deleteHelp": "Apaga para sempre a sua conta, seus animais, plantações e diário. Não dá para desfazer. Se quiser guardar uma cópia, baixe seus dados antes.",
+    "deleteConfirm": "Entendo que a conta e os dados serão apagados para sempre",
+    "deletePassword": "Sua senha",
+    "deleteButton": "Apagar minha conta"
   },
   "seasons": {
     "summer": "Verão",
@@ -480,6 +490,10 @@
     },
     "security": {
       "rateLimited": "Bloqueado por excesso"
+    },
+    "account": {
+      "exported": "Baixou os dados",
+      "deleted": "Apagou a conta"
     }
   },
   "settings": {

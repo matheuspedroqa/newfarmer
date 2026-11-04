@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: November 3, 2026**
+**Last updated: November 4, 2026**
 
 This policy explains, in plain words, what data NewFarmer keeps about you, what it is used for, who it is shared with and what your rights are. It applies to everyone who uses the site, whether in Brazil, the European Union, the United States or anywhere else.
 
@@ -80,7 +80,7 @@ NewFarmer is run from Brazil, the database is in the European Union and some pro
 
 To use any of your rights, send an e-mail to [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com) from your account's e-mail address (or tell us your username). We may ask you to confirm that the account is yours. We reply within **15 days** (LGPD), **30 days** (GDPR) or **45 days** (US laws).
 
-There is no "delete my account" button on the site yet. If you want your account deleted, ask at the e-mail above and we will delete it.
+Two things you can do yourself on the site, under **Profile**, without asking: **"Download my data"** gives you a file (JSON) with your account, animals, crops, diary and your activity log; **"Delete my account"** deletes the account and its data right away, after you type your password.
 
 ### In Brazil (LGPD)
 

@@ -140,3 +140,46 @@ test("Perfil mostra o username, só leitura", async ({ page }) => {
   await page.goto("/perfil");
   await expect(page.getByTestId("profile-info")).toContainText(username);
 });
+
+test("Perfil baixa os dados da pessoa e não deixa outra pessoa baixar", async ({ page, context }) => {
+  const email = uniqueEmail();
+  const { username } = await signup(page, email);
+  await page.goto("/perfil");
+  const [download] = await Promise.all([page.waitForEvent("download"), page.getByRole("link", { name: "Baixar meus dados" }).click()]);
+  expect(download.suggestedFilename()).toBe(`newfarmer-${username}.json`);
+  const data = JSON.parse(await (await import("node:fs/promises")).readFile((await download.path())!, "utf8"));
+  expect(data.account).toMatchObject({ username, email });
+  expect(JSON.stringify(data)).not.toMatch(/password|token/i);
+
+  await clearSession(context);
+  expect((await page.request.get("/api/conta/dados")).status()).toBe(401);
+});
+
+test("Apagar conta pede confirmação e senha, apaga e não deixa entrar de novo", async ({ page }) => {
+  const { username } = await signup(page, uniqueEmail());
+  await page.goto("/perfil");
+  const apagar = page.getByRole("button", { name: "Apagar minha conta" });
+
+  await page.getByLabel("Sua senha").fill(PASSWORD);
+  await apagar.click();
+  await expect(page.getByText("Marque a caixa para confirmar.")).toBeVisible();
+
+  await page.getByLabel(/Entendo que a conta/).check();
+  await page.getByLabel("Sua senha").fill("senha-errada");
+  await apagar.click();
+  await expect(page.locator("#delete-password-error")).toHaveText("Senha atual incorreta");
+  await expect(page).toHaveURL(/\/perfil$/);
+
+  await page.getByLabel("Sua senha").fill(PASSWORD);
+  await page.getByLabel(/Entendo que a conta/).check();
+  await apagar.click();
+  await expect(page).toHaveURL(/\/login\?conta=apagada$/);
+  await expect(page.getByText("Sua conta foi apagada.", { exact: false })).toBeVisible();
+
+  await page.goto("/painel");
+  await expect(page).toHaveURL(/\/login/);
+  await page.getByLabel("Username").fill(username);
+  await page.getByLabel("Senha").fill(PASSWORD);
+  await page.getByRole("button", { name: "Entrar" }).click();
+  await expect(page.getByRole("alert")).toBeVisible();
+});

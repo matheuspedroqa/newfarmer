@@ -18,6 +18,8 @@ export const ACTIVITY_ACTIONS = [
   "diary.created",
   "diary.deleted",
   "profile.updated",
+  "account.exported",
+  "account.deleted",
   "security.rateLimited",
 ] as const;
 export type ActivityAction = (typeof ACTIVITY_ACTIONS)[number];

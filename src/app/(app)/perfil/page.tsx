@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { requireUser } from "@/server/current-user";
+import { DeleteAccountForm } from "./DeleteAccountForm";
 import { LanguageForm } from "./LanguageForm";
 import { PasswordForm } from "./PasswordForm";
 
@@ -44,6 +45,24 @@ export default async function ProfilePage() {
       <div className="rounded-3xl bg-surface p-6 ring-1 ring-border">
         <h2 className="mb-4 font-display text-2xl font-bold">{t("profile.passwordTitle")}</h2>
         <PasswordForm />
+      </div>
+
+      <div className="rounded-3xl bg-surface p-6 ring-1 ring-border">
+        <h2 className="font-display text-2xl font-bold">{t("profile.dataTitle")}</h2>
+        <p className="mb-4 text-sm text-muted">{t("profile.dataHelp")}</p>
+        <a
+          href="/api/conta/dados"
+          download
+          className="inline-flex min-h-11 w-full items-center justify-center rounded-xl border-2 border-primary px-5 py-3 font-bold transition hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:w-60"
+        >
+          {t("profile.download")}
+        </a>
+      </div>
+
+      <div className="rounded-3xl bg-surface p-6 ring-1 ring-danger/40">
+        <h2 className="font-display text-2xl font-bold text-danger">{t("profile.deleteTitle")}</h2>
+        <p className="mb-4 text-sm text-muted">{t("profile.deleteHelp")}</p>
+        <DeleteAccountForm />
       </div>
     </section>
   );

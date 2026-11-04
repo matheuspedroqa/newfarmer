@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Última atualização: 3 de novembro de 2026**
+**Última atualização: 4 de novembro de 2026**
 
 Estes termos são as regras para usar o NewFarmer. Ao criar uma conta, você concorda com eles e com a [Política de Privacidade](/privacidade).
 
@@ -35,7 +35,7 @@ Fazemos o possível para o site funcionar bem, mas ele é oferecido **como está
 
 ## 5. Encerramento da conta
 
-- Você pode pedir para apagar a sua conta a qualquer momento pelo e-mail [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com). Ainda não existe um botão para isso no site.
+- Você pode apagar a sua conta a qualquer momento em **Perfil → Apagar minha conta**, ou pedir pelo e-mail [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
 - Podemos suspender ou encerrar contas que desrespeitem estes termos, ou contas de menores de 13 anos.
 - Quando a conta é apagada, os dados dela são apagados como explica a [Política de Privacidade](/privacidade).
 

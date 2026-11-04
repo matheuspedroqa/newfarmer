@@ -1,5 +1,6 @@
 import "server-only";
 import type { Locale } from "@/i18n/locales";
+import { deleteAccount } from "./account-data";
 import { changePassword } from "./accounts";
 import { logSafely } from "./activity-log";
 import type { Db } from "./db";
@@ -66,4 +67,10 @@ export async function changeCityLogged(
 export async function saveLocaleLogged(db: Db, userId: number, locale: Locale, ip: string) {
   await setPreferences(db, userId, { locale });
   await logSafely(db, { userId, action: "profile.updated", details: { field: "locale", value: locale }, ip });
+}
+
+export async function deleteAccountLogged(db: Db, user: { id: number; username: string }, password: string, ip: string) {
+  const result = await deleteAccount(db, user.id, password);
+  if (result === "ok") await logSafely(db, { userId: user.id, action: "account.deleted", target: user.username, ip });
+  return result;
 }

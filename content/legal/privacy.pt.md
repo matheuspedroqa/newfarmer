@@ -1,6 +1,6 @@
 # Política de Privacidade
 
-**Última atualização: 3 de novembro de 2026**
+**Última atualização: 4 de novembro de 2026**
 
 Esta política explica, em palavras simples, quais dados o NewFarmer guarda sobre você, para que usa, com quem divide e quais são os seus direitos. Ela vale para quem usa o site no Brasil, na União Europeia, nos Estados Unidos ou em qualquer outro lugar.
 
@@ -80,7 +80,7 @@ O NewFarmer é mantido no Brasil, o banco de dados fica na União Europeia e alg
 
 Para usar qualquer direito, mande um e-mail para [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com) a partir do e-mail da sua conta (ou diga qual é o seu username). Podemos pedir uma confirmação de que a conta é sua. Respondemos em até **15 dias** (LGPD), **30 dias** (RGPD) ou **45 dias** (leis dos EUA).
 
-Ainda não existe um botão "apagar minha conta" no site. Se quiser apagar a conta, peça pelo e-mail acima e nós apagamos.
+Duas coisas você mesmo faz no site, em **Perfil**, sem precisar pedir: **"Baixar meus dados"** entrega um arquivo (JSON) com a conta, os animais, as plantações, o diário e o seu registro de atividade; **"Apagar minha conta"** apaga na hora a conta e os dados dela, depois de você digitar a senha.
 
 ### No Brasil (LGPD)
 

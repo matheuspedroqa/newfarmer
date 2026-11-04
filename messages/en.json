@@ -45,7 +45,8 @@
     "usernameReminderSent": "If there is an account with that e-mail, we sent your username.",
     "backToLoginShort": "Back to sign in",
     "acceptTerms": "I have read and accept the <terms>Terms of Use</terms> and the <privacy>Privacy Policy</privacy>",
-    "ageConfirm": "I am 13 or older"
+    "ageConfirm": "I am 13 or older",
+    "accountDeleted": "Your account was deleted. Thank you for using NewFarmer."
   },
   "errors": {
     "required": "Please fill in this field",
@@ -73,7 +74,8 @@
     "usernameReserved": "This username is reserved. Choose another one",
     "usernameTaken": "This username is already taken",
     "termsRequired": "To create your account, accept the Terms and the Privacy Policy",
-    "ageRequired": "NewFarmer is for people aged 13 or older"
+    "ageRequired": "NewFarmer is for people aged 13 or older",
+    "confirmRequired": "Tick the box to confirm."
   },
   "climate": {
     "tropical": "Tropical",
@@ -316,7 +318,15 @@
     "languageTitle": "Language",
     "languageHelp": "Choose the NewFarmer language.",
     "saveLanguage": "Save language",
-    "languageSaved": "Language saved."
+    "languageSaved": "Language saved.",
+    "dataTitle": "My data",
+    "dataHelp": "Download a file with everything NewFarmer keeps about you: account, animals, crops, diary and activity log. Your password is not in the file.",
+    "download": "Download my data",
+    "deleteTitle": "Delete account",
+    "deleteHelp": "Permanently deletes your account, animals, crops and diary. This cannot be undone. If you want to keep a copy, download your data first.",
+    "deleteConfirm": "I understand my account and data will be deleted forever",
+    "deletePassword": "Your password",
+    "deleteButton": "Delete my account"
   },
   "seasons": {
     "summer": "Summer",
@@ -480,6 +490,10 @@
     },
     "security": {
       "rateLimited": "Blocked for too many requests"
+    },
+    "account": {
+      "exported": "Downloaded data",
+      "deleted": "Deleted account"
     }
   },
   "settings": {

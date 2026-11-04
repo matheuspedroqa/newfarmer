@@ -1,6 +1,6 @@
 # Terms of Use
 
-**Last updated: November 3, 2026**
+**Last updated: November 4, 2026**
 
 These terms are the rules for using NewFarmer. By creating an account, you agree to them and to the [Privacy Policy](/privacidade).
 
@@ -35,7 +35,7 @@ We do our best to keep the site working well, but it is provided **as is**, with
 
 ## 5. Closing your account
 
-- You can ask for your account to be deleted at any time by e-mail at [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com). There is no button for this on the site yet.
+- You can delete your account at any time under **Profile → Delete my account**, or ask by e-mail at [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
 - We may suspend or close accounts that break these terms, or accounts of children under 13.
 - When an account is deleted, its data is deleted as explained in the [Privacy Policy](/privacidade).
 

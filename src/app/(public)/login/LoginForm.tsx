@@ -10,13 +10,14 @@ import { SubmitButton } from "@/components/SubmitButton";
 
 const inputClass = "w-full rounded-xl border border-border bg-surface px-4 py-3";
 
-export function LoginForm() {
+export function LoginForm({ accountDeleted = false }: { accountDeleted?: boolean }) {
   const t = useTranslations("auth");
   const tErrors = useTranslations("errors");
   const [state, action, pending] = useActionState<FormState, FormData>(loginAction, {});
 
   return (
     <AuthCard title={t("loginTitle")} subtitle={t("loginSubtitle")}>
+      {accountDeleted && <p role="status" className="mb-4 rounded-xl bg-soft px-4 py-3 font-semibold">{t("accountDeleted")}</p>}
       <form action={action} noValidate className="space-y-4">
         <div>
           <label htmlFor="username" className="mb-1 block text-sm font-semibold">{t("username")}</label>
