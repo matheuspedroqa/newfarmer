@@ -3,7 +3,7 @@ import { defineConfig } from "@playwright/test";
 // Porta e banco próprios: não colide com a suíte e2e (3100, data/e2e-pglite).
 export default defineConfig({
   testDir: "tests/screenshots",
-  timeout: 240_000,
+  timeout: 540_000,
   workers: 1,
   expect: { timeout: 15_000 },
   use: {

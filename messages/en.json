@@ -582,7 +582,24 @@
     },
     "finalTitle": "Start organizing your land today",
     "privacy": "Privacy",
-    "terms": "Terms"
+    "terms": "Terms",
+    "cards": {
+      "weather": {
+        "icon": "🌧️",
+        "title": "Thu 19°/12°",
+        "text": "💧 3.2 mm"
+      },
+      "diary": {
+        "icon": "🐔",
+        "title": "Vaccine · 11/02",
+        "text": "Newcastle vaccine given"
+      },
+      "count": {
+        "icon": "🐔",
+        "title": "24",
+        "text": "Chickens"
+      }
+    }
   },
   "notFound": {
     "title": "Page not found",

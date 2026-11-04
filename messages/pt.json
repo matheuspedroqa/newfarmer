@@ -582,7 +582,24 @@
     },
     "finalTitle": "Comece hoje a organizar a sua roça",
     "privacy": "Privacidade",
-    "terms": "Termos"
+    "terms": "Termos",
+    "cards": {
+      "weather": {
+        "icon": "🌧️",
+        "title": "Qui. 19°/12°",
+        "text": "💧 3,2 mm"
+      },
+      "diary": {
+        "icon": "🐔",
+        "title": "Vacina · 02/11",
+        "text": "Vacina de Newcastle aplicada"
+      },
+      "count": {
+        "icon": "🐔",
+        "title": "24",
+        "text": "Galinhas"
+      }
+    }
   },
   "notFound": {
     "title": "Página não encontrada",

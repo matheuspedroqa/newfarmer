@@ -5,6 +5,7 @@ import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { getLocale, getTranslations } from "next-intl/server";
 import { BrowserFrame } from "@/components/BrowserFrame";
+import { FloatingCard, VerifiedSeal } from "@/components/DeviceExtras";
 import { PhoneFrame } from "@/components/PhoneFrame";
 import { ShowcaseToggle } from "@/components/ShowcaseToggle";
 import { resolveLocale } from "@/i18n/locales";
@@ -34,6 +35,7 @@ export default async function HomePage() {
   const currency = currencyForCountry((await headers()).get("x-vercel-ip-country"));
   const price = formatPrice(currency, locale);
   const img = (name: string, device: "desktop" | "mobile") => `/screenshots/${locale}-${name}-${device}.png`;
+  const card = (k: "weather" | "diary" | "count") => ({ icon: t(`cards.${k}.icon`), title: t(`cards.${k}.title`), text: t(`cards.${k}.text`) });
   const cta = (
     <Link href="/register" className={`${btn} bg-primary text-primary-text transition-opacity hover:opacity-90 motion-reduce:transition-none`}>
       {t("ctaPrice", { price })}
@@ -71,7 +73,7 @@ export default async function HomePage() {
       <section className="relative overflow-hidden px-5 py-12 md:px-8 md:py-20">
         <div aria-hidden className="absolute inset-0 bg-[url('/landscape.svg')] bg-cover bg-bottom dark:brightness-[.55]" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
-          <div className="rounded-3xl bg-bg/85 p-6 backdrop-blur md:p-8">
+          <div className="min-w-0 rounded-3xl bg-bg/85 p-6 backdrop-blur md:p-8">
             <h1 className="font-display text-4xl font-bold text-primary md:text-5xl">{t("heroTitle")}</h1>
             <p className="mt-4 text-lg text-muted">{t("heroSub")}</p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -79,13 +81,19 @@ export default async function HomePage() {
               <Link href="/login" className={`${btn} text-text ring-1 ring-border hover:bg-soft`}>{t("login")}</Link>
             </div>
           </div>
-          <div className="relative md:pb-10">
+          <div className="relative min-w-0 md:pb-10 md:pr-6">
             <BrowserFrame>
               <Image src={img("dashboard", "desktop")} alt={t("heroAlt")} width={1440} height={900} sizes="(min-width: 1152px) 560px, (min-width: 768px) 45vw, 90vw" className="h-auto w-full" priority />
             </BrowserFrame>
-            <PhoneFrame className="mx-auto mt-6 w-36 md:absolute md:-right-4 md:bottom-0 md:mt-0 md:w-32 lg:w-36">
-              <Image src={img("dashboard", "mobile")} alt={t("heroPhoneAlt")} width={780} height={1688} sizes="144px" className="h-auto w-full" />
-            </PhoneFrame>
+            <FloatingCard {...card("weather")} className="-left-3 top-1/3 md:-left-8" />
+            <FloatingCard {...card("diary")} className="-top-4 right-4 md:right-24" />
+            <FloatingCard {...card("count")} className="-bottom-3 left-4 md:-left-4 md:bottom-4" />
+            <div className="relative mx-auto mt-6 w-40 md:absolute md:bottom-0 md:right-0 md:mt-0 md:w-36 lg:w-40">
+              <VerifiedSeal className="-left-5 -top-3 hidden sm:block" />
+              <PhoneFrame tilt>
+                <Image src={img("dashboard", "mobile")} alt={t("heroPhoneAlt")} width={780} height={1688} sizes="160px" className="h-auto w-full" />
+              </PhoneFrame>
+            </div>
           </div>
         </div>
       </section>
@@ -107,7 +115,7 @@ export default async function HomePage() {
         <h2 className="text-center font-display text-3xl font-bold">{t("insideTitle")}</h2>
         <ShowcaseToggle
           labels={{ desktop: t("desktop"), mobile: t("mobile") }}
-          shots={SHOTS.map((k) => ({ name: k, src: { desktop: img(k, "desktop"), mobile: img(k, "mobile") }, alt: t(`alts.${k}`), caption: t(`shots.${k}`) }))}
+          shots={SHOTS.map((k) => ({ name: k, card: card(k === "dashboard" ? "count" : k === "animal" ? "diary" : "weather"), path: k === "dashboard" ? "/dashboard" : k === "animal" ? "/animals/chickens" : "/weather", src: { desktop: img(k, "desktop"), mobile: img(k, "mobile") }, alt: t(`alts.${k}`), caption: t(`shots.${k}`) }))}
         />
       </section>
 
