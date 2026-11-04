@@ -2,6 +2,7 @@ import "server-only";
 import { randomBytes } from "node:crypto";
 import { resolveLocale, type Locale } from "@/i18n/locales";
 import { logSafely } from "./activity-log";
+import { limitByIp } from "./rate-limit";
 import type { Db } from "./db";
 import type { Mailer } from "./mailer";
 import { renderMarketingEmail, type MarketingTemplate } from "./marketing-templates";
@@ -45,13 +46,20 @@ export async function unsubscribeUrl(db: Db, userId: number, appUrl: string): Pr
 
 export async function unsubscribeByToken(db: Db, token: string, ip = ""): Promise<boolean> {
   if (!token || token.length > 100) return false;
-  const [row] = await db.query<{ id: number }>(
-    "UPDATE users SET marketing_opt_in = FALSE WHERE unsubscribe_token = $1 RETURNING id",
+  const [row] = await db.query<{ id: number; was: boolean }>(
+    "UPDATE users SET marketing_opt_in = FALSE WHERE unsubscribe_token = $1 RETURNING id, (SELECT marketing_opt_in FROM users WHERE unsubscribe_token = $1) AS was",
     [token],
   );
   if (!row) return false;
-  await logSafely(db, { userId: row.id, action: "marketing.optInChanged", details: { value: false, via: "unsubscribe" }, ip });
+  if (row.was) await logSafely(db, { userId: row.id, action: "marketing.optInChanged", details: { value: false, via: "unsubscribe" }, ip });
   return true;
+}
+
+/** Token válido sempre descadastra (Gmail/Yahoo postam de poucos IPs); só tentativa inválida gasta o limite do IP. */
+export async function unsubscribeAttempt(db: Db, token: string, ip: string) {
+  if (await unsubscribeByToken(db, token, ip)) return { result: "ok" as const, firstBlock: false };
+  const limit = await limitByIp(db, "unsubscribe", ip);
+  return limit.ok ? { result: "invalid" as const, firstBlock: false } : { result: "limited" as const, firstBlock: limit.firstBlock };
 }
 
 export async function sendCampaign(
@@ -73,20 +81,39 @@ export async function sendCampaign(
   ).map(toUser);
   const from = process.env.MAIL_MARKETING_FROM;
   let sent = 0;
-  for (const user of pending.slice(0, max)) {
-    const url = await unsubscribeUrl(db, user.id, appUrl);
-    const { subject, html } = renderMarketingEmail({ template: c.template, locale: user.locale, name: user.name, subject: c.subject, body: c.body, unsubscribeUrl: url, appUrl });
-    await mailer.send({
-      to: user.email,
-      subject,
-      html,
-      ...(from && { from }),
-      headers: { "List-Unsubscribe": `<${url}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
-    });
-    // Grava só depois do envio: se falhar, a próxima chamada tenta de novo esta pessoa.
-    await db.run("INSERT INTO email_campaign_recipients (campaign_id, user_id, sent_at) VALUES ($1, $2, $3) ON CONFLICT DO NOTHING", [campaignId, user.id, Date.now()]);
-    sent++;
+  try {
+    for (const user of pending.slice(0, max)) {
+      // Reserva atômica (uma só instrução, vale com várias máquinas): só quem a insere envia, e só se ainda tem opt-in.
+      const claimed = await db.query(
+        `INSERT INTO email_campaign_recipients (campaign_id, user_id, sent_at)
+         SELECT $1, id, $3 FROM users WHERE id = $2 AND marketing_opt_in = TRUE
+         ON CONFLICT DO NOTHING RETURNING user_id`,
+        [campaignId, user.id, Date.now()],
+      );
+      if (!claimed.length) continue;
+      try {
+        const url = await unsubscribeUrl(db, user.id, appUrl);
+        const { subject, html } = renderMarketingEmail({ template: c.template, locale: user.locale, name: user.name, subject: c.subject, body: c.body, unsubscribeUrl: url, appUrl });
+        await mailer.send({
+          to: user.email,
+          subject,
+          html,
+          ...(from && { from }),
+          headers: { "List-Unsubscribe": `<${url}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
+        });
+      } catch (error) {
+        // Falhou: solta a reserva para a próxima chamada tentar esta pessoa de novo.
+        await db.run("DELETE FROM email_campaign_recipients WHERE campaign_id = $1 AND user_id = $2", [campaignId, user.id]);
+        throw error;
+      }
+      sent++;
+    }
+  } finally {
+    if (sent) await logSafely(db, { userId: null, action: "marketing.campaignSent", target: String(campaignId), details: { sent }, ip: "" });
   }
-  if (sent) await logSafely(db, { userId: null, action: "marketing.campaignSent", target: String(campaignId), details: { sent }, ip: "" });
-  return { sent, remaining: pending.length - sent };
+  const [{ n }] = await db.query<{ n: number }>(
+    SELECT.replace("SELECT u.id, u.name, u.email, u.locale", "SELECT COUNT(*)::int AS n") + FILTER[c.audience] + " AND NOT EXISTS (SELECT 1 FROM email_campaign_recipients r WHERE r.campaign_id = $1 AND r.user_id = u.id)",
+    [campaignId],
+  );
+  return { sent, remaining: n };
 }

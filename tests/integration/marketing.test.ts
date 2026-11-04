@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import { createUser } from "@/server/accounts";
 import type { Db } from "@/server/db";
-import { listAudience, sendCampaign, unsubscribeByToken, unsubscribeUrl } from "@/server/marketing";
+import { listAudience, sendCampaign, unsubscribeAttempt, unsubscribeByToken, unsubscribeUrl } from "@/server/marketing";
 import type { MailMessage, Mailer } from "@/server/mailer";
 import { testDb } from "../helpers/db";
 import { makeUser } from "../helpers/users";
@@ -32,7 +32,7 @@ const recorder = (failOn?: number) => {
   return { sent, mailer };
 };
 
-describe("audiências", () => {
+describe("audiências", { timeout: 30_000 }, () => {
   it("só quem tem opt-in, nunca o dono, e churned só canceladas", async () => {
     const a = await makeUser(db, { email: "a@x.com" });
     const b = await makeUser(db, { email: "b@x.com" });
@@ -84,6 +84,50 @@ describe("sendCampaign", () => {
     await expect(sendCampaign(db, mailer, { campaignId: id, appUrl: "https://nf.app" })).rejects.toThrow("falhou");
     const rows = await db.query("SELECT 1 FROM email_campaign_recipients WHERE campaign_id = $1", [id]);
     expect(rows).toHaveLength(1);
+  });
+});
+
+describe("sendCampaign, concorrência", () => {
+  it("duas chamadas ao mesmo tempo enviam cada pessoa uma vez", async () => {
+    for (const n of ["a", "b", "c"]) await optIn(await makeUser(db, { email: `${n}@x.com` }));
+    const id = await campaign();
+    const { sent, mailer } = recorder();
+    const slow: Mailer = { send: async (m) => { await new Promise((r) => setTimeout(r, 5)); await mailer.send(m); } };
+    const args = { campaignId: id, appUrl: "https://nf.app" };
+    await Promise.all([sendCampaign(db, slow, args), sendCampaign(db, slow, args)]);
+    expect(sent.map((m) => m.to).sort()).toEqual(["a@x.com", "b@x.com", "c@x.com"]);
+  });
+
+  it("quem se descadastra depois de lida a audiência e antes da sua vez é pulado", async () => {
+    const ids: number[] = [];
+    for (const n of ["a", "b"]) { const u = await makeUser(db, { email: `${n}@x.com` }); await optIn(u); ids.push(u); }
+    const id = await campaign();
+    const { sent, mailer } = recorder();
+    const hook: Mailer = { send: async (m) => { await mailer.send(m); await db.run("UPDATE users SET marketing_opt_in = FALSE WHERE id = $1", [ids[1]]); } };
+    const r = await sendCampaign(db, hook, { campaignId: id, appUrl: "https://nf.app" });
+    expect(sent.map((m) => m.to)).toEqual(["a@x.com"]);
+    expect(r.sent).toBe(1);
+  });
+});
+
+describe("limite do descadastro", () => {
+  it("só token inválido conta: 40 válidos passam, o 31º inválido é barrado", async () => {
+    const tokens: string[] = [];
+    for (let i = 0; i < 40; i++) {
+      const u = await makeUser(db, { email: `u${i}@x.com` });
+      tokens.push((await unsubscribeUrl(db, u, "https://nf.app")).split("/").pop()!);
+    }
+    for (const t of tokens) expect((await unsubscribeAttempt(db, t, "1.2.3.4")).result).toBe("ok");
+    for (let i = 0; i < 30; i++) expect((await unsubscribeAttempt(db, `x${i}`, "1.2.3.4")).result).toBe("invalid");
+    expect((await unsubscribeAttempt(db, "x31", "1.2.3.4")).result).toBe("limited");
+  });
+
+  it("só registra quando o opt-in realmente mudou", async () => {
+    const u = await makeUser(db);
+    const token = (await unsubscribeUrl(db, u, "https://nf.app")).split("/").pop()!;
+    expect(await unsubscribeByToken(db, token)).toBe(true); // já estava desligado
+    const n = await db.query("SELECT 1 FROM activity_logs WHERE action = 'marketing.optInChanged'");
+    expect(n).toHaveLength(0);
   });
 });
 

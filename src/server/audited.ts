@@ -14,7 +14,10 @@ import { changeCity, registerUser } from "./registration";
 
 export async function signUpLogged(db: Db, provider: Parameters<typeof registerUser>[1], input: Parameters<typeof registerUser>[2], ip: string) {
   const result = await registerUser(db, provider, input);
-  if (result.ok) await logSafely(db, { userId: result.userId, action: "auth.signup", target: input.username, ip });
+  if (result.ok) {
+    await logSafely(db, { userId: result.userId, action: "auth.signup", target: input.username, ip });
+    if (input.marketing) await logSafely(db, { userId: result.userId, action: "marketing.optInChanged", details: { value: true, via: "signup" }, ip });
+  }
   return result;
 }
 
