@@ -138,7 +138,7 @@
     "marketingFooter": "Você recebe este e-mail porque aceitou novidades do NewFarmer.",
     "unsubscribe": "Descadastrar"
   },
-"unsubscribe": {
+  "unsubscribe": {
     "title": "Descadastrar",
     "question": "Quer parar de receber e-mails de novidades?",
     "confirm": "Confirmar descadastro",
@@ -313,7 +313,7 @@
     "open": "Abrir menu da conta",
     "myfarm": "MyFarm",
     "profile": "Perfil",
-    "settings": "Settings"
+    "admin": "Admin"
   },
   "languages": {
     "pt": "Português",
@@ -469,7 +469,10 @@
     "privacy": "Privacidade",
     "terms": "Termos",
     "activityLogs": "Activity logs",
-    "monitoring": "Monitoramento"
+    "monitoring": "Monitoramento",
+    "admin": "Admin",
+    "subscribers": "Assinantes",
+    "subscriber": "Assinante"
   },
   "home": {
     "cta": "Criar conta grátis",
@@ -536,7 +539,7 @@
   "settings": {
     "tabActivity": "Activity logs",
     "tabMonitoring": "Monitoramento",
-    "tabsLabel": "Seções de Settings",
+    "tabsLabel": "Seções do Admin",
     "username": "Username",
     "action": "Ação",
     "allActions": "Todas",
@@ -610,5 +613,63 @@
     "manage": "Gerenciar ou cancelar",
     "subscribe": "Assinar",
     "owner": "Conta do dono: sem cobrança"
+  },
+  "admin": {
+    "title": "Admin",
+    "tabsLabel": "Seções do Admin",
+    "tabOverview": "Visão geral",
+    "tabSubscribers": "Assinantes",
+    "activeSubscribers": "Assinantes ativos",
+    "mrr": "Receita mensal (MRR)",
+    "new30": "Novas assinaturas (30 dias)",
+    "canceled30": "Cancelamentos (30 dias)",
+    "visitors7d": "Visitantes (7 dias)",
+    "pageViews7d": "Páginas vistas (7 dias)",
+    "chartTitle": "Páginas vistas por dia (14 dias)",
+    "chartBar": "{day}: {count} páginas vistas",
+    "search": "Buscar por nome, e-mail ou username",
+    "status": "Status",
+    "allStatuses": "Todos",
+    "filter": "Filtrar",
+    "empty": "Nenhuma conta encontrada.",
+    "loadMore": "Carregar mais",
+    "status_active": "Ativa",
+    "status_past_due": "Pagamento atrasado",
+    "status_canceled": "Cancelada",
+    "status_none": "Sem assinatura",
+    "colName": "Nome",
+    "colEmail": "E-mail",
+    "colCity": "Cidade",
+    "colStatus": "Status",
+    "colCreated": "Criada em",
+    "colLastSeen": "Visto por último",
+    "colAnimals": "Animais",
+    "colCrops": "Plantações",
+    "never": "—",
+    "back": "Voltar aos assinantes",
+    "account": "Conta",
+    "subscription": "Assinatura",
+    "creation": "Criação",
+    "pagesVisited": "Páginas visitadas",
+    "marketing": "E-mail marketing",
+    "marketingYes": "Aceita",
+    "marketingNo": "Não aceita",
+    "username": "Username",
+    "city": "Cidade",
+    "country": "País",
+    "verified": "E-mail confirmado",
+    "yes": "Sim",
+    "no": "Não",
+    "amount": "Valor",
+    "periodEnd": "Período até",
+    "cancelsAtEnd": "Cancela no fim do período",
+    "startedAt": "Início",
+    "canceledAt": "Cancelada em",
+    "noSubscription": "Sem assinatura.",
+    "noAnimals": "Nenhum animal.",
+    "noCrops": "Nenhuma plantação.",
+    "noPages": "Nenhuma página registrada.",
+    "path": "Caminho",
+    "when": "Quando"
   }
 }

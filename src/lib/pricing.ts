@@ -8,6 +8,8 @@ export function currencyForCountry(country: string | null | undefined): Currency
   return c === "BR" ? "brl" : EUROPE.has(c) ? "eur" : "usd";
 }
 
-export function formatPrice(currency: Currency, locale: "pt" | "en"): string {
-  return new Intl.NumberFormat(locale === "pt" ? "pt-BR" : "en-US", { style: "currency", currency: currency.toUpperCase() }).format(PRICES[currency] / 100);
+export function formatMoney(currency: Currency, cents: number, locale: "pt" | "en"): string {
+  return new Intl.NumberFormat(locale === "pt" ? "pt-BR" : "en-US", { style: "currency", currency: currency.toUpperCase() }).format(cents / 100);
 }
+
+export const formatPrice = (currency: Currency, locale: "pt" | "en"): string => formatMoney(currency, PRICES[currency], locale);

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function SettingsTabs({ tabs, label }: { tabs: { href: string; label: string }[]; label: string }) {
+export function AdminTabs({ tabs, label }: { tabs: { href: string; label: string }[]; label: string }) {
   const pathname = usePathname();
   return (
     <nav aria-label={label} className="flex gap-2 overflow-x-auto border-b border-border">

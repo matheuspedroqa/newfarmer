@@ -138,7 +138,7 @@
     "marketingFooter": "You get this e-mail because you agreed to receive news from NewFarmer.",
     "unsubscribe": "Unsubscribe"
   },
-"unsubscribe": {
+  "unsubscribe": {
     "title": "Unsubscribe",
     "question": "Do you want to stop receiving news e-mails?",
     "confirm": "Confirm unsubscribe",
@@ -313,7 +313,7 @@
     "open": "Open account menu",
     "myfarm": "MyFarm",
     "profile": "Profile",
-    "settings": "Settings"
+    "admin": "Admin"
   },
   "languages": {
     "pt": "Português",
@@ -469,7 +469,10 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "activityLogs": "Activity logs",
-    "monitoring": "Monitoring"
+    "monitoring": "Monitoring",
+    "admin": "Admin",
+    "subscribers": "Subscribers",
+    "subscriber": "Subscriber"
   },
   "home": {
     "cta": "Create free account",
@@ -536,7 +539,7 @@
   "settings": {
     "tabActivity": "Activity logs",
     "tabMonitoring": "Monitoring",
-    "tabsLabel": "Settings sections",
+    "tabsLabel": "Admin sections",
     "username": "Username",
     "action": "Action",
     "allActions": "All",
@@ -610,5 +613,63 @@
     "manage": "Manage or cancel",
     "subscribe": "Subscribe",
     "owner": "Owner account: no billing"
+  },
+  "admin": {
+    "title": "Admin",
+    "tabsLabel": "Admin sections",
+    "tabOverview": "Overview",
+    "tabSubscribers": "Subscribers",
+    "activeSubscribers": "Active subscribers",
+    "mrr": "Monthly revenue (MRR)",
+    "new30": "New subscriptions (30 days)",
+    "canceled30": "Cancellations (30 days)",
+    "visitors7d": "Visitors (7 days)",
+    "pageViews7d": "Page views (7 days)",
+    "chartTitle": "Page views per day (14 days)",
+    "chartBar": "{day}: {count} page views",
+    "search": "Search by name, e-mail or username",
+    "status": "Status",
+    "allStatuses": "All",
+    "filter": "Filter",
+    "empty": "No accounts found.",
+    "loadMore": "Load more",
+    "status_active": "Active",
+    "status_past_due": "Past due",
+    "status_canceled": "Canceled",
+    "status_none": "No subscription",
+    "colName": "Name",
+    "colEmail": "E-mail",
+    "colCity": "City",
+    "colStatus": "Status",
+    "colCreated": "Created",
+    "colLastSeen": "Last seen",
+    "colAnimals": "Animals",
+    "colCrops": "Crops",
+    "never": "—",
+    "back": "Back to subscribers",
+    "account": "Account",
+    "subscription": "Subscription",
+    "creation": "Farm",
+    "pagesVisited": "Pages visited",
+    "marketing": "Marketing e-mail",
+    "marketingYes": "Accepts",
+    "marketingNo": "Does not accept",
+    "username": "Username",
+    "city": "City",
+    "country": "Country",
+    "verified": "E-mail confirmed",
+    "yes": "Yes",
+    "no": "No",
+    "amount": "Amount",
+    "periodEnd": "Period until",
+    "cancelsAtEnd": "Cancels at period end",
+    "startedAt": "Started",
+    "canceledAt": "Canceled on",
+    "noSubscription": "No subscription.",
+    "noAnimals": "No animals.",
+    "noCrops": "No crops.",
+    "noPages": "No pages recorded.",
+    "path": "Path",
+    "when": "When"
   }
 }

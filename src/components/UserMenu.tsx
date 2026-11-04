@@ -49,8 +49,8 @@ export function UserMenu({ name, isPlatformAdmin }: { name: string; isPlatformAd
             <span aria-hidden>👤</span> {t("profile")}
           </Link>
           {isPlatformAdmin && (
-            <Link role="menuitem" href="/admin/activity" onClick={() => setOpen(false)} className={item}>
-              <span aria-hidden>⚙️</span> {t("settings")}
+            <Link role="menuitem" href="/admin" onClick={() => setOpen(false)} className={item}>
+              <span aria-hidden>⚙️</span> {t("admin")}
             </Link>
           )}
         </div>
