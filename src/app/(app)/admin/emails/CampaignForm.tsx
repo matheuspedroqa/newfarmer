@@ -6,8 +6,9 @@ import { previewCampaignAction, sendCampaignAction, type CampaignState } from "@
 
 // Os mesmos valores de AUDIENCES e MARKETING_TEMPLATES (server-only); o servidor valida de novo.
 const TEMPLATES = ["weMissYou", "announcement"] as const;
-const field = "mt-1 min-h-11 w-full rounded-xl border border-border bg-surface px-3 py-2 font-normal";
-const button = "min-h-11 rounded-full px-5 py-2 font-semibold disabled:cursor-wait disabled:opacity-60";
+const focus = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+const field = `mt-1 min-h-11 w-full rounded-xl border border-border bg-surface px-3 py-2 font-normal ${focus}`;
+const button = `min-h-11 rounded-full px-5 py-2 font-semibold disabled:cursor-wait disabled:opacity-60 ${focus}`;
 
 export function CampaignForm({ counts }: { counts: Record<string, number> }) {
   const t = useTranslations("admin");
@@ -17,8 +18,21 @@ export function CampaignForm({ counts }: { counts: Record<string, number> }) {
   const [audience, setAudience] = useState(audiences[0]);
   const [preview, previewAction, previewing] = useActionState<CampaignState, FormData>(previewCampaignAction, {});
   const [send, sendAction, sending] = useActionState<CampaignState, FormData>(sendCampaignAction, {});
-  // Com a campanha criada e ainda faltando gente, o formulário trava: só vale o id.
-  const started = !!send.campaignId && (send.error ? true : (send.remaining ?? 0) > 0);
+  // O id da campanha em andamento fica guardado aqui: nenhum resultado (erro, falha de rede) solta o formulário; só "Nova campanha".
+  const [held, setHeld] = useState<number | null>(null);
+  const [total, setTotal] = useState(0);
+  const [seen, setSeen] = useState(send);
+  if (send !== seen) {
+    setSeen(send);
+    if (send.campaignId) setHeld(send.campaignId);
+    if (send.sent) setTotal((n) => n + (send.sent ?? 0));
+  }
+  const started = held !== null;
+  const finished = started && send.remaining === 0 && !send.error;
+  const newCampaign = () => {
+    setHeld(null);
+    setTotal(0);
+  };
   const error = send.error ?? preview.error;
 
   return (
@@ -51,12 +65,12 @@ export function CampaignForm({ counts }: { counts: Record<string, number> }) {
           </>
         )}
       </fieldset>
-      {started && <input type="hidden" name="campaignId" value={send.campaignId} />}
+      {started && <input type="hidden" name="campaignId" value={held} />}
 
       {error && <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{error === "sendFailed" || error === "invalidCampaign" ? t(error) : te(error)}</p>}
-      {send.sent !== undefined && (
+      {started && send.sent !== undefined && (
         <p role="status" data-testid="send-result" className="text-sm font-semibold text-primary">
-          {send.remaining ? t("sendResult", { sent: send.sent, remaining: send.remaining }) : t("sendDone", { sent: send.sent })}
+          {finished ? t("campaignDone", { total }) : t("sendResult", { sent: send.sent, remaining: send.remaining ?? 0 })}
         </p>
       )}
 
@@ -64,17 +78,22 @@ export function CampaignForm({ counts }: { counts: Record<string, number> }) {
         {!started && (
           <button type="submit" formAction={previewAction} disabled={previewing} className={`${button} border border-border`}>{t("preview")}</button>
         )}
-        <button
-          type="submit"
-          formAction={sendAction}
-          disabled={sending}
-          onClick={(e) => {
-            if (!started && !window.confirm(t("confirmSend", { count: counts[audience] }))) e.preventDefault();
-          }}
-          className={`${button} bg-primary text-white`}
-        >
-          {started ? t("continueSend") : t("send")}
-        </button>
+        {!finished && (
+          <button
+            type="submit"
+            formAction={sendAction}
+            disabled={sending}
+            onClick={(e) => {
+              if (!started && !window.confirm(t("confirmSend", { count: counts[audience] }))) e.preventDefault();
+            }}
+            className={`${button} bg-primary text-white`}
+          >
+            {started ? t("continueSend") : t("send")}
+          </button>
+        )}
+        {started && (
+          <button type="button" onClick={newCampaign} className={`${button} border border-border`}>{t("newCampaign")}</button>
+        )}
       </div>
 
       {preview.html && !started && (

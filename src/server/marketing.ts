@@ -145,3 +145,23 @@ export async function audienceCount(db: Db, audience: Audience): Promise<number>
 export async function campaignExists(db: Db, id: number): Promise<boolean> {
   return (await db.query("SELECT 1 FROM email_campaigns WHERE id = $1", [id])).length > 0;
 }
+
+/** Com `campaignId` só continua aquela campanha (id que não existe é erro, nunca cria outra); sem ele cria a campanha e envia o primeiro lote. */
+export async function sendOrCreateCampaign(
+  db: Db,
+  mailer: Mailer,
+  p: { campaignId: number | null; campaign?: { template: MarketingTemplate; audience: Audience; subject: string; body: string }; createdBy: number; appUrl: string; max?: number },
+): Promise<{ error: "invalidCampaign" | "required" } | { error: "sendFailed"; campaignId: number } | { campaignId: number; sent: number; remaining: number }> {
+  let campaignId = p.campaignId;
+  if (campaignId !== null) {
+    if (!Number.isSafeInteger(campaignId) || !(await campaignExists(db, campaignId))) return { error: "invalidCampaign" };
+  } else {
+    if (!p.campaign) return { error: "required" };
+    campaignId = await createCampaign(db, { ...p.campaign, createdBy: p.createdBy });
+  }
+  try {
+    return { campaignId, ...(await sendCampaign(db, mailer, { campaignId, appUrl: p.appUrl, max: p.max ?? 50 })) };
+  } catch {
+    return { error: "sendFailed", campaignId }; // a campanha já existe: o formulário continua nela
+  }
+}

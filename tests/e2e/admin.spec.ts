@@ -113,7 +113,7 @@ test("dono envia Sentimos sua falta para quem cancelou, o descadastro desliga o 
     void d.accept();
   });
   await page.getByRole("button", { name: "Enviar", exact: true }).click();
-  await expect(page.getByTestId("send-result")).toContainText("Envio concluído");
+  await expect(page.getByTestId("send-result")).toContainText("Campanha enviada");
   await expect(page.getByTestId("campaign-row").first()).toContainText("Sentimos sua falta");
 
   await page.goto("/dev/inbox");
@@ -145,7 +145,7 @@ test("dono envia Sentimos sua falta para quem cancelou, o descadastro desliga o 
   await page.getByLabel("Público").selectOption("churned");
   page.once("dialog", (d) => void d.accept());
   await page.getByRole("button", { name: "Enviar", exact: true }).click();
-  await expect(page.getByTestId("send-result")).toContainText("Envio concluído");
+  await expect(page.getByTestId("send-result")).toContainText("Campanha enviada");
   await page.goto("/dev/inbox");
   await expect(page.locator("article", { hasText: "Sentimos sua falta no NewFarmer" }).filter({ hasText: email })).toHaveCount(1);
 });

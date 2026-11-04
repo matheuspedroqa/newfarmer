@@ -51,7 +51,7 @@ export interface Lead {
   lastSeen: number;
   pages: number;
   lastPath: string;
-  furthestStep: (typeof FUNNEL_STEPS)[number];
+  furthestStep: (typeof FUNNEL_STEPS)[number] | null;
   user: { id: number; username: string; email: string } | null;
   subscribed: boolean;
 }
@@ -66,7 +66,7 @@ export async function listLeads(db: Db, { since, before, limit = 50 }: { since: 
        SELECT visitor_id, MIN(created_at) AS first_seen, MAX(created_at) AS last_seen, COUNT(*) AS pages,
          (array_agg(path ORDER BY created_at DESC, id DESC))[1] AS last_path, MAX(user_id) AS uid,
          MAX(CASE WHEN path IN ('/', '/pt') THEN 0 WHEN path = '/register' THEN 1 WHEN path = '/welcome' THEN 2
-                  WHEN path = '/subscribe' OR path LIKE '/subscribe/%' THEN 3 ELSE 0 END) AS step
+                  WHEN path = '/subscribe' OR path LIKE '/subscribe/%' THEN 3 ELSE -1 END) AS step
        FROM page_views WHERE created_at >= $1 AND ${NOT_ADMIN} GROUP BY visitor_id ${having}
      )
      SELECT v.*, u.username, u.email, COALESCE(s.status IN ('active','trialing','past_due'), FALSE) AS subscribed
@@ -81,7 +81,7 @@ export async function listLeads(db: Db, { since, before, limit = 50 }: { since: 
       lastSeen: Number(r.last_seen),
       pages: Number(r.pages),
       lastPath: String(r.last_path),
-      furthestStep: subscribed ? "paid" : FUNNEL_STEPS[Number(r.step)],
+      furthestStep: subscribed ? "paid" : FUNNEL_STEPS[Number(r.step)] ?? null,
       user: r.uid === null ? null : { id: Number(r.uid), username: String(r.username), email: String(r.email) },
       subscribed,
     };

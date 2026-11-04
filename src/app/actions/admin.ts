@@ -7,7 +7,7 @@ import { logWriteLimited } from "@/server/activity-log";
 import { getDb } from "@/server/db";
 import { requirePlatformAdmin } from "@/server/authz";
 import { getMailer } from "@/server/mailer";
-import { AUDIENCES, campaignExists, createCampaign, sendCampaign } from "@/server/marketing";
+import { AUDIENCES, sendOrCreateCampaign } from "@/server/marketing";
 import { MARKETING_TEMPLATES, renderMarketingEmail } from "@/server/marketing-templates";
 import { limitWrites } from "@/server/rate-limit";
 import { clientIp } from "@/server/request-context";
@@ -53,28 +53,32 @@ export async function previewCampaignAction(_prev: CampaignState, formData: Form
   return { html };
 }
 
-/** Cria a campanha na primeira vez; as próximas chamadas (campaignId) só continuam o envio. sendCampaign já registra marketing.campaignSent. */
+/** Cria a campanha na primeira vez; com campaignId só continua o envio (nunca cria outra). sendCampaign já registra marketing.campaignSent. */
 export async function sendCampaignAction(_prev: CampaignState, formData: FormData): Promise<CampaignState> {
   const admin = await requirePlatformAdmin();
   const db = await getDb();
+  const raw = String(formData.get("campaignId") ?? "");
+  const held = raw ? Number(raw) : null;
+  // Todo retorno de erro repete o id enviado: o formulário nunca perde a campanha em andamento.
+  const echo = held !== null && Number.isSafeInteger(held) ? { campaignId: held } : {};
   const limit = await limitWrites(db, admin.id);
   if (!limit.ok) {
     if (limit.firstBlock) await logWriteLimited(db, admin.id, admin.username, await clientIp());
-    return { error: "rateLimited" };
+    return { error: "rateLimited", ...echo };
   }
-  let campaignId = Number(formData.get("campaignId"));
-  if (formData.get("campaignId")) {
-    if (!Number.isSafeInteger(campaignId) || !(await campaignExists(db, campaignId))) return { error: "invalidCampaign" };
-  } else {
-    const parsed = parse(formData);
-    if (!parsed.ok) return { error: "required" };
-    campaignId = await createCampaign(db, { ...parsed.data, createdBy: admin.id });
-  }
+  const parsed = held === null ? parse(formData) : null;
+  if (parsed && !parsed.ok) return { error: "required" };
   try {
-    const { sent, remaining } = await sendCampaign(db, getMailer(db), { campaignId, appUrl: appUrl(), max: 50 });
+    const r = await sendOrCreateCampaign(db, getMailer(db), {
+      campaignId: held,
+      campaign: parsed?.ok ? parsed.data : undefined,
+      createdBy: admin.id,
+      appUrl: appUrl(),
+    });
+    if ("error" in r) return { error: r.error, ...("campaignId" in r ? { campaignId: r.campaignId } : echo) };
     revalidatePath("/admin/emails");
-    return { campaignId, sent, remaining };
+    return r;
   } catch {
-    return { error: "sendFailed", campaignId };
+    return { error: "sendFailed", ...echo };
   }
 }

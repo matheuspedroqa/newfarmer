@@ -31,8 +31,9 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
 
   const format = new Intl.DateTimeFormat(await getLocale(), { dateStyle: "short", timeStyle: "short" });
   const max = Math.max(1, ...FUNNEL_STEPS.map((s) => funnel[s]));
-  const stepName = (s: (typeof FUNNEL_STEPS)[number]) => t(`step_${STEP_KEY[s]}`);
-  const link = "inline-flex min-h-11 items-center font-semibold text-primary underline";
+  const stepName = (s: (typeof FUNNEL_STEPS)[number] | null) => (s ? t(`step_${STEP_KEY[s]}`) : "—");
+  const focus = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+  const link = `inline-flex min-h-11 items-center font-semibold text-primary underline ${focus}`;
   const cell = "px-3 py-2";
   const account = (u: (typeof rows)[number]["user"]) =>
     u ? <Link href={`/admin/subscribers/${u.id}`} className={link}>@{u.username}</Link> : <span className="text-muted">{t("noAccount")}</span>;
@@ -45,7 +46,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
             key={d}
             href={`/admin/leads?days=${d}`}
             aria-current={d === days ? "true" : undefined}
-            className={`inline-flex min-h-11 items-center rounded-full px-4 py-2 font-semibold ring-1 ring-border ${d === days ? "bg-primary text-white" : "bg-surface"}`}
+            className={`inline-flex min-h-11 items-center rounded-full px-4 py-2 font-semibold ring-1 ring-border ${focus} ${d === days ? "bg-primary text-white" : "bg-surface"}`}
           >
             {t(`days${d}`)}
           </Link>
@@ -108,7 +109,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
           </>
         )}
         {fetched.length > PAGE_SIZE && (
-          <Link href={`/admin/leads?days=${days}&before=${rows[rows.length - 1].lastSeen}`} className="inline-flex min-h-11 items-center rounded-full border border-border px-4 py-2 font-semibold">
+          <Link href={`/admin/leads?days=${days}&before=${rows[rows.length - 1].lastSeen}`} className={`inline-flex min-h-11 items-center rounded-full border border-border px-4 py-2 font-semibold ${focus}`}>
             {t("loadMore")}
           </Link>
         )}

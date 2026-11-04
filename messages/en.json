@@ -713,7 +713,7 @@
     "send": "Send",
     "continueSend": "Continue sending",
     "confirmSend": "Send to {count} people?",
-    "sendResult": "Sent: {sent}. Remaining: {remaining}.",
+    "sendResult": "Sent in this batch: {sent}. Remaining: {remaining}.",
     "sendDone": "Sending finished. Sent now: {sent}.",
     "sendFailed": "Could not send. Try to continue sending.",
     "invalidCampaign": "Campaign not found.",
@@ -723,6 +723,8 @@
     "colAudience": "Audience",
     "colSubject": "Subject",
     "colSent": "Received",
-    "colDate": "Date"
+    "colDate": "Date",
+    "newCampaign": "New campaign",
+    "campaignDone": "Campaign sent. Total sent: {total}."
   }
 }

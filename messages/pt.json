@@ -713,7 +713,7 @@
     "send": "Enviar",
     "continueSend": "Continuar envio",
     "confirmSend": "Enviar para {count} pessoas?",
-    "sendResult": "Enviados: {sent}. Faltam: {remaining}.",
+    "sendResult": "Enviados neste lote: {sent}. Faltam: {remaining}.",
     "sendDone": "Envio concluído. Enviados agora: {sent}.",
     "sendFailed": "Não foi possível enviar. Tente continuar o envio.",
     "invalidCampaign": "Campanha não encontrada.",
@@ -723,6 +723,8 @@
     "colAudience": "Público",
     "colSubject": "Assunto",
     "colSent": "Receberam",
-    "colDate": "Data"
+    "colDate": "Data",
+    "newCampaign": "Nova campanha",
+    "campaignDone": "Campanha enviada. Total de envios: {total}."
   }
 }
