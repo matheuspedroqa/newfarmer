@@ -440,6 +440,7 @@
     "continue": "Go to NewFarmer"
   },
   "meta": {
+    "description": "NewFarmer helps small farmers care for animals, plan crops for their climate and follow the 5-day weather — on computer and phone.",
     "welcome": "Welcome",
     "recover": "Recover",
     "confirm": "Confirm e-mail",

@@ -17,9 +17,9 @@ export async function acceptTerms(page: Page) {
   await page.getByLabel("Tenho 13 anos ou mais").check();
 }
 
-/** Faz a etapa 1 do cadastro e para na etapa 2 (/boas-vindas). */
+/** Faz a etapa 1 do cadastro e para na etapa 2 (/welcome). */
 export async function createAccount(page: Page, email: string, city = "Curitiba", username = uniqueUsername(), name = "Ana") {
-  await page.goto("/cadastro");
+  await page.goto("/register");
   await page.getByLabel("Nome").fill(name);
   await page.getByLabel("E-mail").fill(email);
   await page.getByLabel("Username").fill(username);
@@ -29,7 +29,7 @@ export async function createAccount(page: Page, email: string, city = "Curitiba"
   await page.getByTestId("city-option").first().click();
   await acceptTerms(page);
   await page.getByRole("button", { name: "Criar conta" }).click();
-  await expect(page).toHaveURL(/\/boas-vindas$/);
+  await expect(page).toHaveURL(/\/welcome$/);
   return { username };
 }
 
@@ -37,7 +37,7 @@ export async function createAccount(page: Page, email: string, city = "Curitiba"
 export async function signup(page: Page, email: string, city = "Curitiba", username = uniqueUsername()) {
   await createAccount(page, email, city, username);
   await page.getByRole("link", { name: "Pular por enquanto" }).click();
-  await expect(page).toHaveURL(/\/painel$/);
+  await expect(page).toHaveURL(/\/dashboard$/);
   return { username };
 }
 

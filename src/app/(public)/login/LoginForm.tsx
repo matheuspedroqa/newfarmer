@@ -43,10 +43,10 @@ export function LoginForm({ accountDeleted = false }: { accountDeleted?: boolean
       </form>
       <div className="mt-6 flex flex-wrap justify-between gap-2 text-sm">
         <span className="flex gap-4">
-          <Link href="/recuperar" className="text-accent hover:underline">{t("forgot")}</Link>
-          <Link href="/recuperar/username" className="text-accent hover:underline">{t("forgotUsername")}</Link>
+          <Link href="/forgot-password" className="text-accent hover:underline">{t("forgot")}</Link>
+          <Link href="/forgot-username" className="text-accent hover:underline">{t("forgotUsername")}</Link>
         </span>
-        <Link href="/cadastro" className="font-bold text-primary hover:underline">{t("createAccount")}</Link>
+        <Link href="/register" className="font-bold text-primary hover:underline">{t("createAccount")}</Link>
       </div>
     </AuthCard>
   );

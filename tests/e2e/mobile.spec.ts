@@ -50,8 +50,8 @@ for (const size of SIZES) {
     test("páginas públicas cabem na tela", async ({ page }) => {
       await checkPage(page, "/", header, (p) => p.getByRole("main").getByRole("link", { name: "Criar conta grátis" }));
       await checkPage(page, "/login", header, (p) => p.getByRole("button", { name: "Entrar" }));
-      await checkPage(page, "/cadastro", header, (p) => p.getByRole("button", { name: "Criar conta" }), shot("cadastro"));
-      await checkPage(page, "/privacidade", header, (p) => p.getByRole("banner").getByRole("link", { name: "Criar conta grátis" }));
+      await checkPage(page, "/register", header, (p) => p.getByRole("button", { name: "Criar conta" }), shot("cadastro"));
+      await checkPage(page, "/privacy", header, (p) => p.getByRole("banner").getByRole("link", { name: "Criar conta grátis" }));
       // Idioma e tema no topo das páginas públicas também têm área de toque.
       for (const path of ["/", "/login"]) {
         await page.goto(path);
@@ -69,9 +69,9 @@ for (const size of SIZES) {
       await expectNoHorizontalScroll(page);
       await expectTouchTarget(page.getByRole("button", { name: "Continuar" }));
       await page.getByRole("button", { name: "Continuar" }).click();
-      await expect(page).toHaveURL(/\/painel$/);
+      await expect(page).toHaveURL(/\/dashboard$/);
 
-      await checkPage(page, "/painel", appNav, (p) => p.getByRole("link", { name: "Adicionar animal" }), shot("painel"));
+      await checkPage(page, "/dashboard", appNav, (p) => p.getByRole("link", { name: "Adicionar animal" }), shot("painel"));
       // A barra de baixo e os controles do topo também têm área de toque.
       for (const name of ["Painel", "Animais", "Plantações", "Clima"]) {
         await expectTouchTarget(appNav(page).getByRole("link", { name, exact: true }));
@@ -81,22 +81,22 @@ for (const size of SIZES) {
       await expectTouchTarget(page.getByTestId("theme-toggle"));
       await expectTouchTarget(page.getByRole("button", { name: "PT" }));
 
-      await checkPage(page, "/animais/chickens", appNav, (p) => p.getByRole("link", { name: "Diário", exact: true }));
-      await checkPage(page, "/animais/chickens?aba=diario", appNav, (p) => p.getByRole("button", { name: "Salvar anotação" }));
-      await checkPage(page, "/plantacoes", appNav, (p) => p.getByRole("link", { name: "Adicionar plantação" }));
-      await checkPage(page, "/plantacoes/tomato", appNav, (p) => p.getByRole("link", { name: "← Plantações por tipo" }));
-      await checkPage(page, "/clima", appNav, (p) => appNav(p).getByRole("link", { name: "Clima", exact: true }), shot("clima"));
+      await checkPage(page, "/animals/chickens", appNav, (p) => p.getByRole("link", { name: "Diário", exact: true }));
+      await checkPage(page, "/animals/chickens?tab=diary", appNav, (p) => p.getByRole("button", { name: "Salvar anotação" }));
+      await checkPage(page, "/crops", appNav, (p) => p.getByRole("link", { name: "Adicionar plantação" }));
+      await checkPage(page, "/crops/tomato", appNav, (p) => p.getByRole("link", { name: "← Plantações por tipo" }));
+      await checkPage(page, "/weather", appNav, (p) => appNav(p).getByRole("link", { name: "Clima", exact: true }), shot("clima"));
       await expect(page.getByRole("heading", { name: "Próximos 5 dias" })).toBeVisible();
       await expect(page.getByTestId("day-card")).toHaveCount(5);
       await checkPage(page, "/myfarm", appNav, (p) => p.getByRole("button", { name: "Salvar", exact: true }));
-      await checkPage(page, "/perfil", appNav, (p) => p.getByRole("button", { name: "Salvar nova senha" }));
+      await checkPage(page, "/profile", appNav, (p) => p.getByRole("button", { name: "Salvar nova senha" }));
 
       await page.getByRole("button", { name: "Sair" }).click();
       await expect(page).toHaveURL(/\/login$/);
       await page.getByLabel("Username").fill(username);
       await page.getByLabel("Senha").fill(PASSWORD);
       await page.getByRole("button", { name: "Entrar" }).click();
-      await expect(page).toHaveURL(/\/painel$/);
+      await expect(page).toHaveURL(/\/dashboard$/);
       await expect(appNav(page)).toBeVisible();
     });
   });
@@ -125,7 +125,7 @@ test.describe("celular: aviso de cookies na área logada (375 px)", () => {
     await expectTouchTarget(ok);
 
     await appNav(page).getByRole("link", { name: "Clima", exact: true }).click();
-    await expect(page).toHaveURL(/\/clima$/);
+    await expect(page).toHaveURL(/\/weather$/);
     await ok.click();
     await expect(notice).toBeHidden();
   });
@@ -136,7 +136,7 @@ test.describe("celular: tela sem animais (375 px)", () => {
 
   test("o botão Adicionar animal tem área de toque", async ({ page }) => {
     await signup(page, uniqueEmail());
-    await page.goto("/animais");
+    await page.goto("/animals");
     await expectTouchTarget(page.getByRole("link", { name: "Adicionar animal" }));
   });
 });
@@ -149,15 +149,15 @@ test.describe("celular: textos compridos e menu da conta (320 px)", () => {
     await page.getByLabel("Galinhas").check();
     await page.locator("#count-chickens").fill("3");
     await page.getByRole("button", { name: "Continuar" }).click();
-    await expect(page).toHaveURL(/\/painel$/);
+    await expect(page).toHaveURL(/\/dashboard$/);
 
-    await page.goto("/animais/chickens?aba=diario");
+    await page.goto("/animals/chickens?tab=diary");
     await page.getByLabel("Anotação").fill("x".repeat(200));
     await page.getByRole("button", { name: "Salvar anotação" }).click();
     await expect(page.getByTestId("diary-entry")).toHaveCount(1);
     await expectNoHorizontalScroll(page);
 
-    await page.goto("/painel");
+    await page.goto("/dashboard");
     await expect(page.getByTestId("diary-recent")).toBeVisible();
     await expectNoHorizontalScroll(page);
 

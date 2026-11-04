@@ -2,7 +2,7 @@
 
 **Last updated: November 4, 2026**
 
-These terms are the rules for using NewFarmer. By creating an account, you agree to them and to the [Privacy Policy](/privacidade).
+These terms are the rules for using NewFarmer. By creating an account, you agree to them and to the [Privacy Policy](/privacy).
 
 ## 1. What NewFarmer is
 
@@ -37,7 +37,7 @@ We do our best to keep the site working well, but it is provided **as is**, with
 
 - You can delete your account at any time under **Profile → Delete my account**, or ask by e-mail at [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
 - We may suspend or close accounts that break these terms, or accounts of children under 13.
-- When an account is deleted, its data is deleted as explained in the [Privacy Policy](/privacidade).
+- When an account is deleted, its data is deleted as explained in the [Privacy Policy](/privacy).
 
 ## 6. Changes to these terms
 

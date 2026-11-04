@@ -35,7 +35,7 @@ export async function sendVerificationEmail(
     "INSERT INTO email_verification_tokens (user_id, token_hash, expires_at, created_at) VALUES ($1, $2, $3, $4)",
     [input.userId, hashToken(token), now + VERIFY_TTL_MS, now],
   );
-  await mailer.send({ to: user.email, ...verifyEmail(input.locale, user.name, user.username, `${input.baseUrl}/confirmar/${token}`) });
+  await mailer.send({ to: user.email, ...verifyEmail(input.locale, user.name, user.username, `${input.baseUrl}/confirm-email/${token}`) });
   return "sent";
 }
 

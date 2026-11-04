@@ -1,11 +1,17 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
+import { marketingAlternates } from "@/lib/seo";
 import { getCurrentUser } from "@/server/current-user";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return { alternates: marketingAlternates("", "en") };
+}
 
 export default async function HomePage() {
   // Queda do banco não derruba a página pública
-  if (await getCurrentUser().catch(() => null)) redirect("/painel");
+  if (await getCurrentUser().catch(() => null)) redirect("/dashboard");
   const t = await getTranslations();
   const cards = [
     ["🐔", t("nav.animals"), t("home.animalsText")],
@@ -18,7 +24,7 @@ export default async function HomePage() {
         <div aria-hidden className="absolute inset-0 bg-[url('/landscape.svg')] bg-cover bg-bottom dark:brightness-[.55]" />
         <div className="relative mx-auto max-w-2xl rounded-3xl bg-bg/80 p-6 md:p-10 backdrop-blur">
           <h1 className="font-display text-4xl font-bold md:text-5xl text-primary">{t("app.tagline")}</h1>
-          <Link href="/cadastro" className="mt-8 inline-block rounded-full bg-primary px-8 py-3 text-lg font-semibold text-primary-text">
+          <Link href="/register" className="mt-8 inline-block rounded-full bg-primary px-8 py-3 text-lg font-semibold text-primary-text">
             {t("home.cta")}
           </Link>
         </div>

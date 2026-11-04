@@ -11,15 +11,15 @@ export default async function MarketingLayout({ children }: { children: React.Re
         <div className="flex flex-wrap items-center gap-2 md:gap-4">
           <TopControls />
           <Link href="/login" className="inline-flex min-h-11 items-center px-1 text-sm text-muted transition-colors duration-150 hover:text-text hover:underline motion-reduce:transition-none">{t("home.login")}</Link>
-          <Link href="/cadastro" className="inline-flex min-h-11 items-center rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-opacity duration-150 hover:opacity-90 motion-reduce:transition-none">
+          <Link href="/register" className="inline-flex min-h-11 items-center rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-opacity duration-150 hover:opacity-90 motion-reduce:transition-none">
             {t("home.cta")}
           </Link>
         </div>
       </header>
       <main className="flex-1">{children}</main>
       <footer className="flex justify-center gap-6 px-8 py-6 text-sm text-muted">
-        <Link href="/privacidade" className="hover:underline">{t("home.privacy")}</Link>
-        <Link href="/termos" className="hover:underline">{t("home.terms")}</Link>
+        <Link href="/privacy" className="hover:underline">{t("home.privacy")}</Link>
+        <Link href="/terms" className="hover:underline">{t("home.terms")}</Link>
       </footer>
     </div>
   );

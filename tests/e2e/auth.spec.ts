@@ -10,7 +10,7 @@ test("cadastro passa pela etapa 2 e chega ao painel com o tipo de clima da cidad
 });
 
 test("cadastro mostra os erros dos campos", async ({ page }) => {
-  await page.goto("/cadastro");
+  await page.goto("/register");
   await page.getByLabel("E-mail").fill("ana@");
   await page.getByLabel("Senha", { exact: true }).fill("123");
   await page.getByLabel("Confirmar senha").fill("456");
@@ -22,7 +22,7 @@ test("cadastro mostra os erros dos campos", async ({ page }) => {
 });
 
 test("cadastro sem aceitar os Termos ou sem ter 13 anos mostra o erro e mantém o que foi digitado", async ({ page }) => {
-  await page.goto("/cadastro");
+  await page.goto("/register");
   await page.getByLabel("Nome").fill("Ana");
   await page.getByLabel("Tenho 13 anos ou mais").check();
   await page.getByRole("button", { name: "Criar conta" }).click();
@@ -40,16 +40,16 @@ test("cadastro sem aceitar os Termos ou sem ter 13 anos mostra o erro e mantém 
 });
 
 test("os links do aceite abrem os Termos e a Política em outra aba", async ({ page }) => {
-  await page.goto("/cadastro");
+  await page.goto("/register");
   const form = page.locator("form");
-  await expect(form.getByRole("link", { name: "Termos de Uso" })).toHaveAttribute("href", "/termos");
+  await expect(form.getByRole("link", { name: "Termos de Uso" })).toHaveAttribute("href", "/terms");
   await expect(form.getByRole("link", { name: "Termos de Uso" })).toHaveAttribute("target", "_blank");
-  await expect(form.getByRole("link", { name: "Política de Privacidade" })).toHaveAttribute("href", "/privacidade");
+  await expect(form.getByRole("link", { name: "Política de Privacidade" })).toHaveAttribute("href", "/privacy");
   await expect(form.getByRole("link", { name: "Política de Privacidade" })).toHaveAttribute("target", "_blank");
 });
 
 test("cidade inexistente mostra aviso", async ({ page }) => {
-  await page.goto("/cadastro");
+  await page.goto("/register");
   await page.getByTestId("city-input").fill("Xyzlândia");
   await expect(page.getByText("Não encontramos essa cidade")).toBeVisible();
 });
@@ -58,7 +58,7 @@ test("e-mail repetido avisa que já existe conta", async ({ page, context }) => 
   const email = uniqueEmail();
   await signup(page, email);
   await clearSession(context);
-  await page.goto("/cadastro");
+  await page.goto("/register");
   await page.getByLabel("Nome").fill("Ana");
   await page.getByLabel("E-mail").fill(email);
   await page.getByLabel("Username").fill(uniqueUsername());
@@ -74,7 +74,7 @@ test("e-mail repetido avisa que já existe conta", async ({ page, context }) => 
 test("username repetido avisa que já está em uso e mantém o que foi digitado", async ({ page, context }) => {
   const { username } = await signup(page, uniqueEmail());
   await clearSession(context);
-  await page.goto("/cadastro");
+  await page.goto("/register");
   const email = uniqueEmail();
   await page.getByLabel("Nome").fill("Ana");
   await page.getByLabel("E-mail").fill(email);
@@ -98,11 +98,11 @@ test("cadastro pede e-mail e username; login pede só username e senha", async (
   await page.getByLabel("Username").fill(username.toUpperCase());
   await page.getByLabel("Senha").fill(PASSWORD);
   await page.getByRole("button", { name: "Entrar" }).click();
-  await expect(page).toHaveURL(/\/painel$/);
+  await expect(page).toHaveURL(/\/dashboard$/);
 });
 
 test("username inválido e reservado mostram o erro no campo", async ({ page }) => {
-  await page.goto("/cadastro");
+  await page.goto("/register");
   await page.getByLabel("Username").fill("ab");
   await page.getByRole("button", { name: "Criar conta" }).click();
   await expect(page.getByText("Use 3 a 30 letras minúsculas")).toBeVisible();
@@ -124,11 +124,11 @@ test("sair, errar a senha e entrar de novo", async ({ page }) => {
   await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha").fill(PASSWORD);
   await page.getByRole("button", { name: "Entrar" }).click();
-  await expect(page).toHaveURL(/\/painel$/);
+  await expect(page).toHaveURL(/\/dashboard$/);
 });
 
 test("painel sem login volta para a entrada", async ({ page }) => {
-  await page.goto("/painel");
+  await page.goto("/dashboard");
   await expect(page).toHaveURL(/\/login$/);
 });
 
@@ -167,7 +167,7 @@ test("recuperar a senha pela caixa de e-mail de teste", async ({ page, context }
   const { username } = await signup(page, email);
   await clearSession(context);
 
-  await page.goto("/recuperar");
+  await page.goto("/forgot-password");
   await page.getByLabel("Username ou e-mail").fill(username);
   await page.getByRole("button", { name: "Enviar link" }).click();
   await expect(page.getByText("Se houver uma conta, enviamos um link")).toBeVisible();
@@ -183,7 +183,7 @@ test("recuperar a senha pela caixa de e-mail de teste", async ({ page, context }
   await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha").fill("nova-senha-1");
   await page.getByRole("button", { name: "Entrar" }).click();
-  await expect(page).toHaveURL(/\/painel$/);
+  await expect(page).toHaveURL(/\/dashboard$/);
 });
 
 test("recuperar a senha digitando o e-mail", async ({ page, context }) => {
@@ -191,7 +191,7 @@ test("recuperar a senha digitando o e-mail", async ({ page, context }) => {
   await signup(page, email);
   await clearSession(context);
 
-  await page.goto("/recuperar");
+  await page.goto("/forgot-password");
   await page.getByLabel("Username ou e-mail").fill(email);
   await page.getByRole("button", { name: "Enviar link" }).click();
   await expect(page.getByText("Se houver uma conta, enviamos um link")).toBeVisible();

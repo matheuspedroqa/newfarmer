@@ -26,7 +26,7 @@ test("menu da conta fica à esquerda do Sair e abre MyFarm e Perfil", async ({ p
   await openUserMenu(page, "MyFarm");
   await expect(page).toHaveURL(/\/myfarm$/);
   await openUserMenu(page, "Perfil");
-  await expect(page).toHaveURL(/\/perfil$/);
+  await expect(page).toHaveURL(/\/profile$/);
 });
 
 test("Perfil mostra as informações da pessoa", async ({ page }) => {
@@ -42,7 +42,7 @@ test("Perfil mostra as informações da pessoa", async ({ page }) => {
 
 test("Perfil troca a senha (e recusa senha atual errada)", async ({ page, context }) => {
   const { username } = await signup(page, uniqueEmail());
-  await page.goto("/perfil");
+  await page.goto("/profile");
 
   await page.getByLabel("Senha atual").fill("errada123");
   await page.getByLabel("Nova senha", { exact: true }).fill("nova-senha-1");
@@ -64,12 +64,12 @@ test("Perfil troca a senha (e recusa senha atual errada)", async ({ page, contex
   await expect(page.getByRole("alert").filter({ hasText: "Username ou senha incorretos" })).toBeVisible();
   await page.getByLabel("Senha").fill("nova-senha-1");
   await page.getByRole("button", { name: "Entrar" }).click();
-  await expect(page).toHaveURL(/\/painel$/);
+  await expect(page).toHaveURL(/\/dashboard$/);
 });
 
 test("Perfil troca o idioma e a escolha fica salva na conta", async ({ page, context }) => {
   const { username } = await signup(page, uniqueEmail());
-  await page.goto("/perfil");
+  await page.goto("/profile");
   await page.getByLabel("English").check();
   await page.getByRole("button", { name: "Salvar idioma" }).click();
   await expect(page.getByRole("heading", { name: "Profile", level: 1 })).toBeVisible();
@@ -84,13 +84,13 @@ test("Perfil troca o idioma e a escolha fica salva na conta", async ({ page, con
 });
 
 test("Perfil exige login", async ({ page }) => {
-  await page.goto("/perfil");
+  await page.goto("/profile");
   await expect(page).toHaveURL(/\/login$/);
 });
 
 test("sessão vencida ou falsa volta para a entrada em vez de dar erro", async ({ page, context }) => {
   await context.addCookies([{ name: "nf_session", value: "sessao-que-nao-existe", domain: "localhost", path: "/" }]);
-  for (const path of ["/painel", "/perfil", "/plantacoes/tomato", "/animais/chickens"]) {
+  for (const path of ["/dashboard", "/profile", "/crops/tomato", "/animals/chickens"]) {
     const response = await page.goto(path);
     await expect(page).toHaveURL(/\/login$/);
     expect(response?.status()).toBeLessThan(500);
@@ -104,7 +104,7 @@ test("formulário de senha adulterado com userId de outra conta só mexe na pró
   await vitima.close();
 
   const { username: userA } = await signup(page, uniqueEmail());
-  await page.goto("/perfil");
+  await page.goto("/profile");
   const form = page.locator("form", { has: page.getByLabel("Nova senha", { exact: true }) });
   await form.evaluate((f, alvo) => {
     for (const name of ["userId", "id", "username"]) {
@@ -129,7 +129,7 @@ test("formulário de senha adulterado com userId de outra conta só mexe na pró
     await p.getByLabel("Username").fill(user);
     await p.getByLabel("Senha").fill(senha);
     await p.getByRole("button", { name: "Entrar" }).click();
-    if (entra) await expect(p).toHaveURL(/\/painel$/);
+    if (entra) await expect(p).toHaveURL(/\/dashboard$/);
     else await expect(p).toHaveURL(/\/login$/);
     await ctx.close();
   }
@@ -137,14 +137,14 @@ test("formulário de senha adulterado com userId de outra conta só mexe na pró
 
 test("Perfil mostra o username, só leitura", async ({ page }) => {
   const { username } = await signup(page, uniqueEmail());
-  await page.goto("/perfil");
+  await page.goto("/profile");
   await expect(page.getByTestId("profile-info")).toContainText(username);
 });
 
 test("Perfil baixa os dados da pessoa e não deixa outra pessoa baixar", async ({ page, context }) => {
   const email = uniqueEmail();
   const { username } = await signup(page, email);
-  await page.goto("/perfil");
+  await page.goto("/profile");
   const [download] = await Promise.all([page.waitForEvent("download"), page.getByRole("link", { name: "Baixar meus dados" }).click()]);
   expect(download.suggestedFilename()).toBe(`newfarmer-${username}.json`);
   const data = JSON.parse(await (await import("node:fs/promises")).readFile((await download.path())!, "utf8"));
@@ -152,12 +152,12 @@ test("Perfil baixa os dados da pessoa e não deixa outra pessoa baixar", async (
   expect(JSON.stringify(data)).not.toMatch(/password|token/i);
 
   await clearSession(context);
-  expect((await page.request.get("/api/conta/dados")).status()).toBe(401);
+  expect((await page.request.get("/api/account/data")).status()).toBe(401);
 });
 
 test("Apagar conta pede confirmação e senha, apaga e não deixa entrar de novo", async ({ page }) => {
   const { username } = await signup(page, uniqueEmail());
-  await page.goto("/perfil");
+  await page.goto("/profile");
   const apagar = page.getByRole("button", { name: "Apagar minha conta" });
 
   await page.getByLabel("Sua senha").fill(PASSWORD);
@@ -168,15 +168,15 @@ test("Apagar conta pede confirmação e senha, apaga e não deixa entrar de novo
   await page.getByLabel("Sua senha").fill("senha-errada");
   await apagar.click();
   await expect(page.locator("#delete-password-error")).toHaveText("Senha atual incorreta");
-  await expect(page).toHaveURL(/\/perfil$/);
+  await expect(page).toHaveURL(/\/profile$/);
 
   await page.getByLabel("Sua senha").fill(PASSWORD);
   await page.getByLabel(/Entendo que a conta/).check();
   await apagar.click();
-  await expect(page).toHaveURL(/\/login\?conta=apagada$/);
+  await expect(page).toHaveURL(/\/login\?account=deleted$/);
   await expect(page.getByText("Sua conta foi apagada.", { exact: false })).toBeVisible();
 
-  await page.goto("/painel");
+  await page.goto("/dashboard");
   await expect(page).toHaveURL(/\/login/);
   await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha").fill(PASSWORD);

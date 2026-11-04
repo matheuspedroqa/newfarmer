@@ -18,8 +18,8 @@ describe("renderMarkdown", () => {
   });
 
   it("negrito e links http(s), mailto e relativos", () => {
-    expect(html("**x** [site](https://a.com) [mail](mailto:a@b.com) [termos](/termos)")).toBe(
-      '<p><strong>x</strong> <a href="https://a.com">site</a> <a href="mailto:a@b.com">mail</a> <a href="/termos">termos</a></p>',
+    expect(html("**x** [site](https://a.com) [mail](mailto:a@b.com) [termos](/terms)")).toBe(
+      '<p><strong>x</strong> <a href="https://a.com">site</a> <a href="mailto:a@b.com">mail</a> <a href="/terms">termos</a></p>',
     );
   });
 

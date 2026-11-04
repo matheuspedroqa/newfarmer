@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "NewFarmer",
     short_name: "NewFarmer",
-    start_url: "/painel",
+    start_url: "/dashboard",
     display: "standalone",
     background_color: "#f6f1e7",
     theme_color: "#3f6b3a",

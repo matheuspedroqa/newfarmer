@@ -12,7 +12,7 @@ test("etapa 2 do cadastro salva animais e plantações e mostra no painel", asyn
   await page.getByRole("checkbox", { name: "Tomate", exact: true }).check();
   await page.getByRole("button", { name: "Continuar" }).click();
 
-  await expect(page).toHaveURL(/\/painel$/);
+  await expect(page).toHaveURL(/\/dashboard$/);
   await expect(page.getByTestId("animal-tile-chickens")).toContainText("12");
   await expect(page.getByTestId("animal-tile-goats")).toContainText("3");
   await expect(page.getByTestId("crop-chips")).toContainText("Tomate");
@@ -25,7 +25,7 @@ test("quantidade inválida mostra erro e não sai da etapa 2", async ({ page }) 
   await page.locator("#count-pigs").fill("0");
   await page.getByRole("button", { name: "Continuar" }).click();
   await expect(page.getByText("Informe pelo menos 1")).toBeVisible();
-  await expect(page).toHaveURL(/\/boas-vindas$/);
+  await expect(page).toHaveURL(/\/welcome$/);
   await expect(page.locator("#count-pigs")).toHaveValue("0");
 });
 
@@ -41,7 +41,7 @@ test("MyFarm edita animais e plantações", async ({ page }) => {
   await page.locator("#count-chickens").fill("12");
   await page.getByRole("checkbox", { name: "Tomate", exact: true }).check();
   await page.getByRole("button", { name: "Continuar" }).click();
-  await expect(page).toHaveURL(/\/painel$/);
+  await expect(page).toHaveURL(/\/dashboard$/);
 
   await openUserMenu(page, "MyFarm");
   await expect(page.locator("#count-chickens")).toHaveValue("12");
@@ -76,7 +76,7 @@ test("MyFarm troca a cidade e o clima acompanha", async ({ page }) => {
 test("aba Clima mostra a previsão de 5 dias", async ({ page }) => {
   await signup(page, uniqueEmail());
   await page.getByRole("link", { name: "Clima", exact: true }).click();
-  await expect(page).toHaveURL(/\/clima$/);
+  await expect(page).toHaveURL(/\/weather$/);
   await expect(page.getByTestId("day-card")).toHaveCount(5);
   await expect(page.getByText("Próximos 5 dias")).toBeVisible();
   // provedor falso: o segundo dia tem chuva (3,2 mm), o quarto é seco
@@ -85,7 +85,7 @@ test("aba Clima mostra a previsão de 5 dias", async ({ page }) => {
 });
 
 test("MyFarm e Clima exigem login", async ({ page }) => {
-  for (const path of ["/myfarm", "/clima", "/boas-vindas"]) {
+  for (const path of ["/myfarm", "/weather", "/welcome"]) {
     await page.goto(path);
     await expect(page).toHaveURL(/\/login$/);
   }

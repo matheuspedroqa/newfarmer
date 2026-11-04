@@ -9,7 +9,7 @@ export const onRequestError: Instrumentation.onRequestError = async (error, _req
       const { getDb } = await import("@/server/db");
       const { logRequestError } = await import("@/server/monitoring");
       const message = error instanceof Error ? error.message : String(error);
-      // Só o padrão da rota: o caminho real pode ter token (/recuperar/<token>).
+      // Só o padrão da rota: o caminho real pode ter token (/reset-password/<token>).
       await logRequestError(await getDb(), errorRoute(context), message);
     } catch {
       // Banco fora do ar: não há onde gravar, e o registro nunca pode derrubar o site.

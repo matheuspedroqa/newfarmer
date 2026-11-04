@@ -227,7 +227,7 @@ it("redefinição: pedido e conclusão são linhas distintas, sem token", async 
   const sent: { text?: string; html?: string }[] = [];
   const mailer = { send: async (m: never) => void sent.push(m) };
   await requestPasswordReset(db, mailer as never, { identifier: "ana", baseUrl: "http://x", locale: "pt", ip: IP });
-  const token = (sent[0] as { html: string }).html.match(/recuperar\/([\w-]+)/)![1];
+  const token = (sent[0] as { html: string }).html.match(/reset-password\/([\w-]+)/)![1];
   expect(await resetPassword(db, { token, password: "nova-senha-1", ip: IP })).toBe("ok");
   const rows = await listActivity(db, {});
   expect(resumo(rows)).toEqual([
@@ -242,7 +242,7 @@ it("confirmação de e-mail grava auth.emailConfirmed", async () => {
   const ana = await makeUser(db);
   const sent: unknown[] = [];
   await sendVerificationEmail(db, { send: async (m: never) => void sent.push(m) } as never, { userId: ana, baseUrl: "http://x", locale: "pt" });
-  const token = (sent[0] as { html: string }).html.match(/confirmar\/([\w-]+)/)![1];
+  const token = (sent[0] as { html: string }).html.match(/confirm-email\/([\w-]+)/)![1];
   expect(await confirmEmail(db, token, Date.now(), IP)).toEqual({ userId: ana });
   const rows = await listActivity(db, {});
   expect(resumo(rows)).toEqual([["auth.emailConfirmed", ana, "", {}]]);

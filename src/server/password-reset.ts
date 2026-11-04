@@ -34,7 +34,7 @@ export async function requestPasswordReset(
     now + RESET_TTL_MS,
   ]);
 
-  await mailer.send({ to: user.email, ...resetEmail(input.locale, user.name, `${input.baseUrl}/recuperar/${token}`) });
+  await mailer.send({ to: user.email, ...resetEmail(input.locale, user.name, `${input.baseUrl}/reset-password/${token}`) });
   await logSafely(db, {
     userId: user.id,
     action: "auth.passwordReset",

@@ -20,7 +20,7 @@ export function CookieNotice() {
     <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-3 rounded-2xl bg-surface p-4 text-text shadow-lg ring-1 ring-border">
       <p className="text-sm">
         {t("text")}{" "}
-        <Link href="/privacidade" className="underline">
+        <Link href="/privacy" className="underline">
           {t("privacy")}
         </Link>
       </p>

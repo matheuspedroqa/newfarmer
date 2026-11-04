@@ -6,8 +6,8 @@ test("usuário comum não vê Settings e recebe 404 nas telas do dono do site", 
   await page.getByTestId("user-menu-button").click();
   await expect(page.getByRole("menuitem", { name: "Perfil" })).toBeVisible();
   await expect(page.getByRole("menuitem", { name: "Settings" })).toHaveCount(0);
-  expect((await page.goto("/settings/activity"))?.status()).toBe(404);
-  expect((await page.goto("/settings/monitoramento"))?.status()).toBe(404);
+  expect((await page.goto("/admin/activity"))?.status()).toBe(404);
+  expect((await page.goto("/admin/monitoring"))?.status()).toBe(404);
 });
 
 test("dono do site vê Settings, o próprio login no Activity logs e os números do Monitoramento", async ({ page, context }) => {
@@ -20,17 +20,17 @@ test("dono do site vê Settings, o próprio login no Activity logs e os números
   await page.getByLabel("Username").fill(username);
   await page.getByLabel("Senha").fill(PASSWORD);
   await page.getByRole("button", { name: "Entrar" }).click();
-  await expect(page).toHaveURL(/\/painel$/);
+  await expect(page).toHaveURL(/\/dashboard$/);
 
   await page.getByTestId("user-menu-button").click();
   await page.getByRole("menuitem", { name: "Settings" }).click();
-  await expect(page).toHaveURL(/\/settings\/activity$/);
+  await expect(page).toHaveURL(/\/admin\/activity$/);
   await expect(page).toHaveTitle("Activity logs · NewFarmer");
   const row = page.getByTestId("activity-row").filter({ hasText: "Entrou" }).filter({ hasText: username });
   await expect(row.first()).toBeVisible();
 
   await page.getByRole("link", { name: "Monitoramento" }).click();
-  await expect(page).toHaveURL(/\/settings\/monitoramento$/);
+  await expect(page).toHaveURL(/\/admin\/monitoring$/);
   await expect(page).toHaveTitle("Monitoramento · NewFarmer");
   await expect(page.getByTestId("stat-users")).toHaveText(/^\D*\d+/);
   await expect(page.getByTestId("stat-logins")).toContainText(/\d+/);

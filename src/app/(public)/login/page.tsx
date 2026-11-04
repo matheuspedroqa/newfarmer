@@ -6,6 +6,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return { title: (await getTranslations())("auth.login") };
 }
 
-export default async function LoginPage({ searchParams }: { searchParams: Promise<{ conta?: string }> }) {
-  return <LoginForm accountDeleted={(await searchParams).conta === "apagada"} />;
+export default async function LoginPage({ searchParams }: { searchParams: Promise<{ account?: string }> }) {
+  return <LoginForm accountDeleted={(await searchParams).account === "deleted"} />;
 }

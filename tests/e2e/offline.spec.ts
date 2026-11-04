@@ -6,7 +6,7 @@ async function signupWithCows(page: Page) {
   await page.getByLabel("Vacas").check();
   await page.locator("#count-cows").fill("3");
   await page.getByRole("button", { name: "Continuar" }).click();
-  await expect(page).toHaveURL(/\/painel$/);
+  await expect(page).toHaveURL(/\/dashboard$/);
 }
 
 /** Espera o modo offline assumir a página e guardar as páginas principais no aparelho. */
@@ -25,8 +25,8 @@ async function waitSaved(page: Page, paths: string[]) {
 
 test("anotação feita sem internet fica no aparelho e é enviada quando a internet volta", async ({ page, context }) => {
   await signupWithCows(page);
-  await waitSaved(page, ["/animais/cows?aba=diario"]);
-  await page.goto("/animais/cows?aba=diario");
+  await waitSaved(page, ["/animals/cows?tab=diary"]);
+  await page.goto("/animals/cows?tab=diary");
 
   await context.setOffline(true);
   await page.getByLabel("Anotação", { exact: true }).fill("Feito sem internet");
@@ -52,13 +52,13 @@ test("anotação feita sem internet fica no aparelho e é enviada quando a inter
 
 test("sem internet dá para trocar de página entre as que ficaram guardadas", async ({ page, context }) => {
   await signupWithCows(page);
-  await waitSaved(page, ["/clima", "/animais/cows"]);
+  await waitSaved(page, ["/weather", "/animals/cows"]);
 
   await context.setOffline(true);
   await page.getByRole("link", { name: "Clima" }).first().click();
-  await expect(page).toHaveURL(/\/clima$/);
+  await expect(page).toHaveURL(/\/weather$/);
   await expect(page.getByTestId("offline-status")).toBeVisible();
-  await page.goto("/animais/cows");
+  await page.goto("/animals/cows");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await context.setOffline(false);
 });

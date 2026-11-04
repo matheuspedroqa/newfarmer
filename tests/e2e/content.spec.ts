@@ -8,9 +8,9 @@ test("aba Animais mostra só os animais da fazenda, a ficha completa, o bloco do
   await page.getByLabel("Vacas").check();
   await page.locator("#count-cows").fill("2");
   await page.getByRole("button", { name: "Continuar" }).click();
-  await expect(page).toHaveURL(/\/painel$/);
+  await expect(page).toHaveURL(/\/dashboard$/);
   await page.getByRole("link", { name: "Animais", exact: true }).click();
-  await expect(page).toHaveURL(/\/animais\/chickens$/);
+  await expect(page).toHaveURL(/\/animals\/chickens$/);
   await expect(page.locator('[data-testid^="animal-tab-"]')).toHaveCount(2);
   await expect(page.getByTestId("animal-tab-chickens")).toBeVisible();
   await expect(page.getByTestId("animal-tab-cows")).toBeVisible();
@@ -25,24 +25,24 @@ test("aba Animais mostra só os animais da fazenda, a ficha completa, o bloco do
   await expect(page.getByRole("heading", { name: "Vacas", level: 1 })).toBeVisible();
 
   // animal que a fazenda não tem volta para a primeira aba
-  await page.goto("/animais/goats");
-  await expect(page).toHaveURL(/\/animais\/chickens$/);
+  await page.goto("/animals/goats");
+  await expect(page).toHaveURL(/\/animals\/chickens$/);
 });
 
 test("sem animais, Animais mostra o estado vazio e o botão leva ao MyFarm", async ({ page }) => {
   await signup(page, uniqueEmail());
   await page.getByRole("link", { name: "Animais", exact: true }).click();
-  await expect(page).toHaveURL(/\/animais$/);
+  await expect(page).toHaveURL(/\/animals$/);
   await expect(page.getByRole("heading", { name: "Você ainda não tem animais" })).toBeVisible();
   await page.getByRole("link", { name: "＋ Adicionar animal" }).click();
-  await expect(page).toHaveURL(/\/myfarm#animais$/);
+  await expect(page).toHaveURL(/\/myfarm#animals$/);
 });
 
 test("Plantações tem o botão Adicionar plantação que leva ao MyFarm", async ({ page }) => {
   await signup(page, uniqueEmail());
   await page.getByRole("link", { name: "Plantações", exact: true }).click();
   await page.getByRole("link", { name: "＋ Adicionar plantação" }).click();
-  await expect(page).toHaveURL(/\/myfarm#plantacoes$/);
+  await expect(page).toHaveURL(/\/myfarm#crops$/);
 });
 
 test("ficha de plantação mostra calendário no clima e hemisfério do usuário", async ({ page }) => {
@@ -57,7 +57,7 @@ test("ficha de plantação mostra calendário no clima e hemisfério do usuário
 
 test("hemisfério norte desloca o calendário em 6 meses", async ({ page }) => {
   await signup(page, uniqueEmail());
-  await page.goto("/plantacoes/tomato");
+  await page.goto("/crops/tomato");
   const cells = () =>
     page.locator('[data-testid^="month-cell-"]').evaluateAll((els) => els.map((e) => e.getAttribute("data-testid")!));
   const south = await cells();
@@ -68,7 +68,7 @@ test("hemisfério norte desloca o calendário em 6 meses", async ({ page }) => {
   await page.getByRole("button", { name: "Trocar cidade" }).click();
   await expect(page.getByText("Cidade atualizada.", { exact: false }).first()).toBeVisible();
 
-  await page.goto("/plantacoes/tomato");
+  await page.goto("/crops/tomato");
   await expect(page.getByText("Hemisfério norte").first()).toBeVisible();
   const shift = (id: string) => id.replace(/-(\d+)$/, (_, m) => `-${((Number(m) + 5) % 12) + 1}`);
   expect(new Set(await cells())).toEqual(new Set(south.map(shift)));
@@ -86,6 +86,6 @@ test("painel mostra o que fazer este mês e a dica da estação", async ({ page 
 
 test("animal ou plantação inexistente mostra página não encontrada", async ({ page }) => {
   await signup(page, uniqueEmail());
-  expect((await page.goto("/animais/dragons"))?.status()).toBe(404);
-  expect((await page.goto("/plantacoes/pizza"))?.status()).toBe(404);
+  expect((await page.goto("/animals/dragons"))?.status()).toBe(404);
+  expect((await page.goto("/crops/pizza"))?.status()).toBe(404);
 });

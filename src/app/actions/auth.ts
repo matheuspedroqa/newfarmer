@@ -75,7 +75,7 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
   } catch (error) {
     console.error("Falha ao enviar e-mail de confirmação", error);
   }
-  redirect("/boas-vindas");
+  redirect("/welcome");
 }
 
 export async function loginAction(_prev: FormState, formData: FormData): Promise<FormState> {
@@ -99,7 +99,7 @@ export async function loginAction(_prev: FormState, formData: FormData): Promise
 
   await refreshEstimatedClimate(db, getWeatherProvider(), result.userId).catch(() => undefined);
   await startSession((await getUserById(db, result.userId))!);
-  redirect("/painel");
+  redirect("/dashboard");
 }
 
 export async function logoutAction(): Promise<void> {

@@ -48,8 +48,8 @@ it("conta contas novas em 7 dias, sessões ativas, bloqueios, erros e cache do t
 
   await logActivity(db, { userId: null, action: "security.rateLimited", ip: "" }, AGORA - HORA);
   await logActivity(db, { userId: null, action: "security.rateLimited", ip: "" }, AGORA - 2 * DIA);
-  await logRequestError(db, "/painel", "x".repeat(500), AGORA - HORA);
-  await logRequestError(db, "/clima", "falhou", AGORA - 2 * DIA);
+  await logRequestError(db, "/dashboard", "x".repeat(500), AGORA - HORA);
+  await logRequestError(db, "/weather", "falhou", AGORA - 2 * DIA);
   await db.run("INSERT INTO weather_cache (key, payload, fetched_at) VALUES ('k', '{}', 0)");
 
   const stats = await getPlatformStats(db, AGORA);
@@ -59,8 +59,8 @@ it("conta contas novas em 7 dias, sessões ativas, bloqueios, erros e cache do t
   expect(stats.rateLimited24h).toBe(1);
   expect(stats.errors24h).toBe(1);
   expect(stats.recentErrors).toEqual([
-    { at: AGORA - HORA, route: "/painel", message: "x".repeat(300) },
-    { at: AGORA - 2 * DIA, route: "/clima", message: "falhou" },
+    { at: AGORA - HORA, route: "/dashboard", message: "x".repeat(300) },
+    { at: AGORA - 2 * DIA, route: "/weather", message: "falhou" },
   ]);
   expect(stats.weatherCacheEntries).toBe(1);
   expect(stats.dbLatencyMs).toBeGreaterThanOrEqual(0);

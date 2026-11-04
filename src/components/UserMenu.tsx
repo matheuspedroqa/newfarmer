@@ -45,11 +45,11 @@ export function UserMenu({ name, isPlatformAdmin }: { name: string; isPlatformAd
           <Link role="menuitem" href="/myfarm" onClick={() => setOpen(false)} className={item}>
             <span aria-hidden>🏡</span> {t("myfarm")}
           </Link>
-          <Link role="menuitem" href="/perfil" onClick={() => setOpen(false)} className={item}>
+          <Link role="menuitem" href="/profile" onClick={() => setOpen(false)} className={item}>
             <span aria-hidden>👤</span> {t("profile")}
           </Link>
           {isPlatformAdmin && (
-            <Link role="menuitem" href="/settings/activity" onClick={() => setOpen(false)} className={item}>
+            <Link role="menuitem" href="/admin/activity" onClick={() => setOpen(false)} className={item}>
               <span aria-hidden>⚙️</span> {t("settings")}
             </Link>
           )}

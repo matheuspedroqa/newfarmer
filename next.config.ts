@@ -31,6 +31,25 @@ const nextConfig: NextConfig = {
   productionBrowserSourceMaps: false,
   outputFileTracingIncludes: { "/*": ["./content/legal/**"] },
   serverExternalPackages: ["@electric-sql/pglite", "pg"],
+  async redirects() {
+    return [
+      { source: "/cadastro", destination: "/register", permanent: true },
+      { source: "/painel", destination: "/dashboard", permanent: true },
+      { source: "/animais/:path*", destination: "/animals/:path*", permanent: true },
+      { source: "/plantacoes/:path*", destination: "/crops/:path*", permanent: true },
+      { source: "/clima", destination: "/weather", permanent: true },
+      { source: "/perfil", destination: "/profile", permanent: true },
+      { source: "/boas-vindas", destination: "/welcome", permanent: true },
+      { source: "/recuperar/username", destination: "/forgot-username", permanent: true },
+      { source: "/recuperar/:token", destination: "/reset-password/:token", permanent: true },
+      { source: "/recuperar", destination: "/forgot-password", permanent: true },
+      { source: "/confirmar/:token", destination: "/confirm-email/:token", permanent: true },
+      { source: "/privacidade", destination: "/privacy", permanent: true },
+      { source: "/termos", destination: "/terms", permanent: true },
+      { source: "/settings/monitoramento", destination: "/admin/monitoring", permanent: true },
+      { source: "/settings/:path*", destination: "/admin/:path*", permanent: true },
+    ];
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

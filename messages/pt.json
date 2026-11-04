@@ -440,6 +440,7 @@
     "continue": "Ir para o NewFarmer"
   },
   "meta": {
+    "description": "O NewFarmer ajuda pequenos criadores a cuidar dos animais, planejar a horta para o seu clima e acompanhar a previsão de 5 dias — no computador e no celular.",
     "welcome": "Boas-vindas",
     "recover": "Recuperar",
     "confirm": "Confirmar e-mail",

@@ -8,7 +8,7 @@ test("página inicial: CTA no topo leva ao cadastro; Entrar ao login", async ({ 
   await expect(page).toHaveURL(/\/login$/);
   await page.goto("/");
   await page.getByRole("banner").getByRole("link", { name: "Criar conta grátis" }).click();
-  await expect(page).toHaveURL(/\/cadastro$/);
+  await expect(page).toHaveURL(/\/register$/);
   await expect(page).toHaveTitle("Criar conta · NewFarmer");
 });
 
@@ -20,7 +20,7 @@ test("endereço que não existe mostra a 404 da casa", async ({ page }) => {
   await expect(page).toHaveTitle("Página não encontrada · NewFarmer");
 });
 
-for (const [path, title] of [["/login", "Entrar"], ["/recuperar", "Recuperar"], ["/privacidade", "Privacidade"], ["/termos", "Termos"]]) {
+for (const [path, title] of [["/login", "Entrar"], ["/forgot-password", "Recuperar"], ["/privacy", "Privacidade"], ["/terms", "Termos"]]) {
   test(`${path} tem título próprio`, async ({ page }) => {
     await page.goto(path);
     await expect(page).toHaveTitle(`${title} · NewFarmer`);
@@ -28,8 +28,8 @@ for (const [path, title] of [["/login", "Entrar"], ["/recuperar", "Recuperar"], 
 }
 
 for (const [path, title, heading] of [
-  ["/privacidade", "Privacy", "Privacy Policy"],
-  ["/termos", "Terms", "Terms of Use"],
+  ["/privacy", "Privacy", "Privacy Policy"],
+  ["/terms", "Terms", "Terms of Use"],
 ]) {
   test(`${path} em inglês tem título e texto em inglês`, async ({ page, context }) => {
     await context.addCookies([{ name: "nf_locale", value: "en", domain: "localhost", path: "/" }]);
@@ -40,10 +40,10 @@ for (const [path, title, heading] of [
 }
 
 test("as páginas legais em português mostram o texto e o contato", async ({ page }) => {
-  await page.goto("/privacidade");
+  await page.goto("/privacy");
   await expect(page.getByRole("heading", { level: 1, name: "Política de Privacidade" })).toBeVisible();
   await expect(page.getByRole("link", { name: "matheusps70@hotmail.com" }).first()).toHaveAttribute("href", "mailto:matheusps70@hotmail.com");
-  await page.goto("/termos");
+  await page.goto("/terms");
   await expect(page.getByRole("heading", { level: 1, name: "Termos de Uso" })).toBeVisible();
 });
 
@@ -51,8 +51,8 @@ test("quem está logado vai da inicial ao painel, que tem título próprio", asy
   await signup(page, uniqueEmail());
   await expect(page).toHaveTitle("Painel · NewFarmer");
   await page.goto("/");
-  await expect(page).toHaveURL(/\/painel$/);
-  await page.goto("/plantacoes/tomato");
+  await expect(page).toHaveURL(/\/dashboard$/);
+  await page.goto("/crops/tomato");
   await expect(page).toHaveTitle("Tomate · NewFarmer");
 });
 
@@ -69,7 +69,7 @@ test.describe("aviso de cookies", () => {
     await page.goto("/login");
     const aviso = page.getByRole("region", { name: "Aviso de cookies" });
     await expect(aviso).toContainText("Usamos apenas cookies essenciais para manter você conectado e lembrar idioma e tema.");
-    await expect(aviso.getByRole("link", { name: "Política de Privacidade" })).toHaveAttribute("href", "/privacidade");
+    await expect(aviso.getByRole("link", { name: "Política de Privacidade" })).toHaveAttribute("href", "/privacy");
     await aviso.getByRole("button", { name: "Entendi" }).click();
     await expect(aviso).toBeHidden();
     await page.reload();
@@ -92,7 +92,7 @@ test("ícone do site: todas as páginas apontam para um SVG que existe", async (
   await conferir("/login");
   await conferir("/nao-existe");
   await signup(page, uniqueEmail());
-  await conferir("/painel");
+  await conferir("/dashboard");
 });
 
 for (const tema of ["claro", "escuro"]) {

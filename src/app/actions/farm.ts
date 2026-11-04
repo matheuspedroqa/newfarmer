@@ -36,7 +36,7 @@ export async function saveFarmAction(_prev: FormState, formData: FormData): Prom
 export async function saveFarmAndContinueAction(_prev: FormState, formData: FormData): Promise<FormState> {
   const error = await validateAndSave(formData);
   if (error) return error;
-  redirect("/painel");
+  redirect("/dashboard");
 }
 
 export async function changeCityAction(_prev: FormState, formData: FormData): Promise<FormState> {

@@ -14,7 +14,7 @@ function captureMailer() {
 }
 
 function tokenFrom(message: MailMessage): string {
-  const match = message.html.match(/\/recuperar\/([A-Za-z0-9_-]+)/);
+  const match = message.html.match(/\/reset-password\/([A-Za-z0-9_-]+)/);
   if (!match) throw new Error("link não encontrado no e-mail");
   return match[1];
 }
@@ -30,7 +30,7 @@ describe("requestPasswordReset", () => {
     expect(sent).toHaveLength(1);
     expect(sent[0].to).toBe("ana@exemplo.com");
     expect(sent[0].subject).toBe("Recupere sua senha do NewFarmer");
-    expect(sent[0].html).toContain("http://localhost:3000/recuperar/");
+    expect(sent[0].html).toContain("http://localhost:3000/reset-password/");
   });
 
   it("usa o idioma pedido", async () => {

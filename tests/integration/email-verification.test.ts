@@ -11,7 +11,7 @@ function captureMailer() {
   return { sent, mailer };
 }
 
-const tokenFrom = (m: MailMessage) => m.html.match(/\/confirmar\/([A-Za-z0-9_-]+)/)![1];
+const tokenFrom = (m: MailMessage) => m.html.match(/\/confirm-email\/([A-Za-z0-9_-]+)/)![1];
 const base = { baseUrl: "http://localhost:3000", locale: "pt" as const };
 
 describe("confirmação de e-mail", () => {

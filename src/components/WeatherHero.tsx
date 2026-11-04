@@ -47,7 +47,7 @@ export async function WeatherHero({ result }: { result: ForecastResult }) {
           </div>
         ))}
       </div>
-      <Link href="/clima" className="text-right text-xs font-semibold underline-offset-2 hover:underline">{t("seeAll")} →</Link>
+      <Link href="/weather" className="text-right text-xs font-semibold underline-offset-2 hover:underline">{t("seeAll")} →</Link>
     </section>
   );
 }

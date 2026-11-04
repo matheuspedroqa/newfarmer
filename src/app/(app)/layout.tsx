@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { LogoutButton } from "@/components/LogoutButton";
 import { NavRail } from "@/components/NavRail";
@@ -9,24 +10,26 @@ import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getFarm } from "@/server/farm";
 
+export const metadata: Metadata = { robots: { index: false, follow: false } };
+
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const user = await requireUser();
   const t = await getTranslations();
   const farm = await getFarm(await getDb(), user.id);
   // Páginas guardadas no aparelho para abrir sem internet (cada animal com a ficha e o diário).
   const offlinePaths = [
-    "/painel", "/animais", "/plantacoes", "/clima", "/myfarm", "/perfil",
-    ...farm.animals.flatMap((a) => [`/animais/${a.id}`, `/animais/${a.id}?aba=diario`]),
+    "/dashboard", "/animals", "/crops", "/weather", "/myfarm", "/profile",
+    ...farm.animals.flatMap((a) => [`/animals/${a.id}`, `/animals/${a.id}?tab=diary`]),
     // shortcut: até 20 plantações, para não pesar no servidor; aumentar se alguém reclamar de faltar ficha offline.
-    ...farm.crops.slice(0, 20).map((c) => `/plantacoes/${c}`),
+    ...farm.crops.slice(0, 20).map((c) => `/crops/${c}`),
   ];
 
   // Trilho de ícones da variante D. MyFarm e Perfil ficam no menu da conta.
   const nav = [
-    { href: "/painel", icon: "📊", label: t("nav.dashboard") },
-    { href: "/animais", icon: "🐔", label: t("nav.animals") },
-    { href: "/plantacoes", icon: "🌱", label: t("nav.crops") },
-    { href: "/clima", icon: "☀️", label: t("nav.weather") },
+    { href: "/dashboard", icon: "📊", label: t("nav.dashboard") },
+    { href: "/animals", icon: "🐔", label: t("nav.animals") },
+    { href: "/crops", icon: "🌱", label: t("nav.crops") },
+    { href: "/weather", icon: "☀️", label: t("nav.weather") },
   ];
 
   return (

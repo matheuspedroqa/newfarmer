@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { resetEmail, usernameReminderEmail, verifyEmail } from "@/server/email-templates";
 
-const link = "https://newfarmer.app/confirmar/abc123";
+const link = "https://newfarmer.app/confirm-email/abc123";
 
 describe("modelos de e-mail", () => {
   it("confirmação de conta: assunto, saudação, botão e link escrito por extenso", () => {

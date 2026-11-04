@@ -72,5 +72,5 @@ export async function deleteAccountAction(_prev: FormState, formData: FormData):
   if (result !== "ok") return { fieldErrors: { password: "wrongPassword" } };
   // As sessões já saíram do banco junto com a conta; falta só o cookie neste navegador.
   (await cookies()).delete(SESSION_COOKIE);
-  redirect("/login?conta=apagada");
+  redirect("/login?account=deleted");
 }
