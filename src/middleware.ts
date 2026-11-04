@@ -13,8 +13,12 @@ export function middleware(request: NextRequest) {
   if (!request.cookies.get(SESSION_COOKIE)) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
+  // O layout do app lê o caminho daqui para decidir o bloqueio sem assinatura.
+  const headers = new Headers(request.headers);
+  headers.set("x-nf-path", pathname);
+  return NextResponse.next({ request: { headers } });
 }
 
 export const config = {
-  matcher: ["/pt", "/pt/:path*", "/dashboard/:path*", "/welcome/:path*", "/profile/:path*", "/myfarm/:path*", "/animals/:path*", "/crops/:path*", "/weather/:path*", "/admin/:path*"],
+  matcher: ["/pt", "/pt/:path*", "/dashboard/:path*", "/welcome/:path*", "/subscribe/:path*", "/profile/:path*", "/myfarm/:path*", "/animals/:path*", "/crops/:path*", "/weather/:path*", "/admin/:path*"],
 };

@@ -1,5 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
-import { createAccount, uniqueEmail } from "./helpers";
+import { createAccount, uniqueEmail, subscribeFake } from "./helpers";
 
 /** Conta nova que já tem Vacas: só animais da fazenda têm ficha e diário. */
 async function accountWithCows(page: Page) {
@@ -7,7 +7,7 @@ async function accountWithCows(page: Page) {
   await page.getByLabel("Vacas").check();
   await page.locator("#count-cows").fill("3");
   await page.getByRole("button", { name: "Continuar" }).click();
-  await expect(page).toHaveURL(/\/dashboard$/);
+  await subscribeFake(page);
 }
 
 test("diário do animal: anotar, ver no painel e apagar", async ({ page }) => {

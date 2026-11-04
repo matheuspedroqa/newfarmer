@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { LogoutButton } from "@/components/LogoutButton";
 import { NavRail } from "@/components/NavRail";
@@ -9,13 +11,19 @@ import { VerifyEmailBanner } from "@/components/VerifyEmailBanner";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getFarm } from "@/server/farm";
+import { getSubscription, hasAccess } from "@/server/subscriptions";
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const user = await requireUser();
   const t = await getTranslations();
-  const farm = await getFarm(await getDb(), user.id);
+  const db = await getDb();
+  // Sem assinatura só abrem o onboarding e o perfil (o admin da plataforma sempre tem acesso).
+  const path = (await headers()).get("x-nf-path") ?? "";
+  const open = ["/welcome", "/subscribe", "/profile"].some((p) => path === p || path.startsWith(`${p}/`));
+  if (!open && !hasAccess(user, await getSubscription(db, user.id))) redirect("/subscribe");
+  const farm = await getFarm(db, user.id);
   // Páginas guardadas no aparelho para abrir sem internet (cada animal com a ficha e o diário).
   const offlinePaths = [
     "/dashboard", "/animals", "/crops", "/weather", "/myfarm", "/profile",

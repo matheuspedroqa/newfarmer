@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
+import { getLocale } from "next-intl/server";
+import { openPortalAction } from "@/app/actions/billing";
 import { requireUser } from "@/server/current-user";
+import { getDb } from "@/server/db";
+import { getSubscription } from "@/server/subscriptions";
 import { DeleteAccountForm } from "./DeleteAccountForm";
 import { LanguageForm } from "./LanguageForm";
 import { PasswordForm } from "./PasswordForm";
@@ -13,6 +18,11 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function ProfilePage() {
   const user = await requireUser();
   const t = await getTranslations();
+  const sub = await getSubscription(await getDb(), user.id);
+  const locale = await getLocale();
+  const status = sub?.status === "active" || sub?.status === "trialing" ? "active" : sub?.status === "past_due" ? "past_due" : sub?.status === "canceled" ? "canceled" : "none";
+  const date = sub?.currentPeriodEnd ? new Intl.DateTimeFormat(locale === "pt" ? "pt-BR" : "en-US", { dateStyle: "long" }).format(sub.currentPeriodEnd) : null;
+  const btn = "inline-flex min-h-11 w-full items-center justify-center rounded-xl border-2 border-primary px-5 py-3 font-bold transition hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:w-60";
   const info: [string, string][] = [
     [t("profile.name"), user.name],
     [t("auth.username"), user.username],
@@ -35,6 +45,27 @@ export default async function ProfilePage() {
             </div>
           ))}
         </dl>
+      </div>
+
+      <div className="rounded-3xl bg-surface p-6 ring-1 ring-border" data-testid="billing-card">
+        <h2 className="font-display text-2xl font-bold">{t("billing.title")}</h2>
+        {user.isPlatformAdmin ? (
+          <p className="mt-2">{t("billing.owner")}</p>
+        ) : (
+          <>
+            <p className="mt-2"><span className="font-semibold text-muted">{t("billing.status")}:</span> {t(`billing.${status}`)}</p>
+            {date && status !== "none" && status !== "canceled" && (
+              <p className="text-sm text-muted">{sub?.cancelAtPeriodEnd ? t("billing.accessUntil", { date }) : t("billing.nextCharge", { date })}</p>
+            )}
+            <div className="mt-4">
+              {sub && status !== "none" ? (
+                <form action={openPortalAction}><button type="submit" className={btn}>{t("billing.manage")}</button></form>
+              ) : (
+                <Link href="/subscribe" className={btn}>{t("billing.subscribe")}</Link>
+              )}
+            </div>
+          </>
+        )}
       </div>
 
       <div className="rounded-3xl bg-surface p-6 ring-1 ring-border">

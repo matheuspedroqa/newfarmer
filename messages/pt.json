@@ -498,9 +498,17 @@
     "security": {
       "rateLimited": "Bloqueado por excesso"
     },
-    "billing": {"checkoutStarted": "Iniciou a assinatura", "subscriptionChanged": "Assinatura alterada"},
-    "admin": {"viewedUser": "Viu dados de uma conta"},
-    "marketing": {"optInChanged": "Mudou o aceite de e-mails", "campaignSent": "Enviou campanha de e-mail"},
+    "billing": {
+      "checkoutStarted": "Iniciou a assinatura",
+      "subscriptionChanged": "Assinatura alterada"
+    },
+    "admin": {
+      "viewedUser": "Viu dados de uma conta"
+    },
+    "marketing": {
+      "optInChanged": "Mudou o aceite de e-mails",
+      "campaignSent": "Enviou campanha de e-mail"
+    },
     "account": {
       "exported": "Baixou os dados",
       "deleted": "Apagou a conta"
@@ -543,5 +551,42 @@
     "sending": "Enviando {count, plural, one {# item salvo} other {# itens salvos}} sem internet…",
     "rejected": "{count, plural, one {# item salvo sem internet não pôde ser gravado} other {# itens salvos sem internet não puderam ser gravados}}. Confira e preencha de novo.",
     "logoutConfirm": "Há anotações salvas sem internet que ainda não foram enviadas. Se sair agora, elas serão perdidas. Sair mesmo assim?"
+  },
+  "onboarding": {
+    "stepOf": "Passo {current} de 3",
+    "account": "Conta",
+    "farm": "Sua criação",
+    "subscription": "Assinatura"
+  },
+  "subscribe": {
+    "metaTitle": "Assinatura",
+    "title": "Assine o NewFarmer",
+    "perMonth": "/mês",
+    "features": {
+      "animals": "Guias dos animais",
+      "calendar": "Calendário de plantio do seu clima",
+      "weather": "Previsão de 5 dias com chuva em mm",
+      "diary": "Diário por animal",
+      "offline": "Funciona sem internet"
+    },
+    "billingNote": "Cobrança mensal recorrente. Cancele quando quiser no Perfil.",
+    "refund": "Reembolso integral se pedir em até 7 dias (Brasil) ou 14 dias (União Europeia) depois da primeira cobrança.",
+    "cta": "Assinar por {price}/mês",
+    "terms": "Termos",
+    "privacy": "Política",
+    "processing": "Pagamento recebido, liberando sua conta…"
+  },
+  "billing": {
+    "title": "Assinatura",
+    "status": "Situação",
+    "active": "Ativa",
+    "past_due": "Pagamento pendente",
+    "canceled": "Cancelada",
+    "none": "Sem assinatura",
+    "nextCharge": "Próxima cobrança: {date}",
+    "accessUntil": "Acesso até {date}",
+    "manage": "Gerenciar ou cancelar",
+    "subscribe": "Assinar",
+    "owner": "Conta do dono: sem cobrança"
   }
 }

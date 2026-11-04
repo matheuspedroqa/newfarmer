@@ -498,9 +498,17 @@
     "security": {
       "rateLimited": "Blocked for too many requests"
     },
-    "billing": {"checkoutStarted": "Started checkout", "subscriptionChanged": "Subscription changed"},
-    "admin": {"viewedUser": "Viewed an account"},
-    "marketing": {"optInChanged": "Changed e-mail opt-in", "campaignSent": "Sent e-mail campaign"},
+    "billing": {
+      "checkoutStarted": "Started checkout",
+      "subscriptionChanged": "Subscription changed"
+    },
+    "admin": {
+      "viewedUser": "Viewed an account"
+    },
+    "marketing": {
+      "optInChanged": "Changed e-mail opt-in",
+      "campaignSent": "Sent e-mail campaign"
+    },
     "account": {
       "exported": "Downloaded data",
       "deleted": "Deleted account"
@@ -543,5 +551,42 @@
     "sending": "Sending {count, plural, one {# item} other {# items}} saved offline…",
     "rejected": "{count, plural, one {# item saved offline could not be stored} other {# items saved offline could not be stored}}. Please check and fill in again.",
     "logoutConfirm": "Some notes saved offline have not been sent yet. If you sign out now they will be lost. Sign out anyway?"
+  },
+  "onboarding": {
+    "stepOf": "Step {current} of 3",
+    "account": "Account",
+    "farm": "Your farm",
+    "subscription": "Subscription"
+  },
+  "subscribe": {
+    "metaTitle": "Subscription",
+    "title": "Subscribe to NewFarmer",
+    "perMonth": "/month",
+    "features": {
+      "animals": "Animal care guides",
+      "calendar": "Planting calendar for your climate",
+      "weather": "5-day forecast with rain in mm",
+      "diary": "Diary for each animal",
+      "offline": "Works offline"
+    },
+    "billingNote": "Recurring monthly billing. Cancel anytime in Profile.",
+    "refund": "Full refund if you ask within 7 days (Brazil) or 14 days (European Union) after the first charge.",
+    "cta": "Subscribe for {price}/month",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "processing": "Payment received, unlocking your account…"
+  },
+  "billing": {
+    "title": "Subscription",
+    "status": "Status",
+    "active": "Active",
+    "past_due": "Payment pending",
+    "canceled": "Canceled",
+    "none": "No subscription",
+    "nextCharge": "Next charge: {date}",
+    "accessUntil": "Access until {date}",
+    "manage": "Manage or cancel",
+    "subscribe": "Subscribe",
+    "owner": "Owner account: no billing"
   }
 }

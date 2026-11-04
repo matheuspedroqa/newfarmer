@@ -1,5 +1,5 @@
 import { expect, test, type Locator, type Page } from "@playwright/test";
-import { createAccount, PASSWORD, signup, uniqueEmail } from "./helpers";
+import { createAccount, PASSWORD, signup, uniqueEmail, subscribeFake } from "./helpers";
 
 // Três celulares dos Global Constraints: o menor (320 px), o mais comum (375 px) e um grande (412 px).
 const SIZES = [
@@ -69,7 +69,7 @@ for (const size of SIZES) {
       await expectNoHorizontalScroll(page);
       await expectTouchTarget(page.getByRole("button", { name: "Continuar" }));
       await page.getByRole("button", { name: "Continuar" }).click();
-      await expect(page).toHaveURL(/\/dashboard$/);
+      await subscribeFake(page);
 
       await checkPage(page, "/dashboard", appNav, (p) => p.getByRole("link", { name: "Adicionar animal" }), shot("painel"));
       // A barra de baixo e os controles do topo também têm área de toque.
@@ -149,7 +149,7 @@ test.describe("celular: textos compridos e menu da conta (320 px)", () => {
     await page.getByLabel("Galinhas").check();
     await page.locator("#count-chickens").fill("3");
     await page.getByRole("button", { name: "Continuar" }).click();
-    await expect(page).toHaveURL(/\/dashboard$/);
+    await subscribeFake(page);
 
     await page.goto("/animals/chickens?tab=diary");
     await page.getByLabel("Anotação").fill("x".repeat(200));

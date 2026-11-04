@@ -15,6 +15,7 @@ import {
   toFieldErrors,
 } from "@/lib/validation";
 import { getUserById, verifyCredentials } from "@/server/accounts";
+import { getSubscription, hasAccess } from "@/server/subscriptions";
 import { logLoginAttempt, loginTarget, logSafely } from "@/server/activity-log";
 import { signUpLogged } from "@/server/audited";
 import { endSession, getCurrentUser, startSession } from "@/server/current-user";
@@ -103,8 +104,9 @@ export async function loginAction(_prev: FormState, formData: FormData): Promise
   if (!result.ok) return { formError: result.reason === "locked" ? "locked" : "invalidCredentials", values };
 
   await refreshEstimatedClimate(db, getWeatherProvider(), result.userId).catch(() => undefined);
-  await startSession((await getUserById(db, result.userId))!);
-  redirect("/dashboard");
+  const user = (await getUserById(db, result.userId))!;
+  await startSession(user);
+  redirect(hasAccess(user, await getSubscription(db, user.id)) ? "/dashboard" : "/subscribe");
 }
 
 export async function logoutAction(): Promise<void> {

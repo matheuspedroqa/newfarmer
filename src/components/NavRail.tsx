@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 // No celular (< md) vira uma barra fixa embaixo, com ícone e rótulo curto; no computador, o trilho à esquerda.
 export function NavRail({ items, label }: { items: { href: string; icon: string; label: string }[]; label: string }) {
   const pathname = usePathname();
+  if (/^\/(welcome|subscribe)(\/|$)/.test(pathname)) return null;
   return (
     <nav
       data-bottom-nav

@@ -33,11 +33,18 @@ export async function createAccount(page: Page, email: string, city = "Curitiba"
   return { username };
 }
 
-/** Cadastro completo pulando a etapa 2: termina no Painel. */
+/** Na tela /subscribe: assina (pagamento falso) e termina no Painel. */
+export async function subscribeFake(page: Page) {
+  await expect(page).toHaveURL(/\/subscribe$/);
+  await page.getByRole("button", { name: /^Assinar por/ }).click();
+  await expect(page).toHaveURL(/\/dashboard$/);
+}
+
+/** Cadastro completo pulando a etapa 2 e assinando: termina no Painel. */
 export async function signup(page: Page, email: string, city = "Curitiba", username = uniqueUsername()) {
   await createAccount(page, email, city, username);
   await page.getByRole("link", { name: "Pular por enquanto" }).click();
-  await expect(page).toHaveURL(/\/dashboard$/);
+  await subscribeFake(page);
   return { username };
 }
 

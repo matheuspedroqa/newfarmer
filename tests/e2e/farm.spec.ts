@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { createAccount, openUserMenu, signup, uniqueEmail } from "./helpers";
+import { createAccount, openUserMenu, signup, uniqueEmail, subscribeFake } from "./helpers";
 
 test("etapa 2 do cadastro salva animais e plantações e mostra no painel", async ({ page }) => {
   await createAccount(page, uniqueEmail());
@@ -12,7 +12,7 @@ test("etapa 2 do cadastro salva animais e plantações e mostra no painel", asyn
   await page.getByRole("checkbox", { name: "Tomate", exact: true }).check();
   await page.getByRole("button", { name: "Continuar" }).click();
 
-  await expect(page).toHaveURL(/\/dashboard$/);
+  await subscribeFake(page);
   await expect(page.getByTestId("animal-tile-chickens")).toContainText("12");
   await expect(page.getByTestId("animal-tile-goats")).toContainText("3");
   await expect(page.getByTestId("crop-chips")).toContainText("Tomate");
@@ -41,7 +41,7 @@ test("MyFarm edita animais e plantações", async ({ page }) => {
   await page.locator("#count-chickens").fill("12");
   await page.getByRole("checkbox", { name: "Tomate", exact: true }).check();
   await page.getByRole("button", { name: "Continuar" }).click();
-  await expect(page).toHaveURL(/\/dashboard$/);
+  await subscribeFake(page);
 
   await openUserMenu(page, "MyFarm");
   await expect(page.locator("#count-chickens")).toHaveValue("12");

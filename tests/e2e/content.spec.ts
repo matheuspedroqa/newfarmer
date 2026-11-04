@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { createAccount, signup, uniqueEmail } from "./helpers";
+import { createAccount, signup, uniqueEmail, subscribeFake } from "./helpers";
 
 test("aba Animais mostra só os animais da fazenda, a ficha completa, o bloco do país e o aviso de veterinário", async ({ page }) => {
   await createAccount(page, uniqueEmail());
@@ -8,7 +8,7 @@ test("aba Animais mostra só os animais da fazenda, a ficha completa, o bloco do
   await page.getByLabel("Vacas").check();
   await page.locator("#count-cows").fill("2");
   await page.getByRole("button", { name: "Continuar" }).click();
-  await expect(page).toHaveURL(/\/dashboard$/);
+  await subscribeFake(page);
   await page.getByRole("link", { name: "Animais", exact: true }).click();
   await expect(page).toHaveURL(/\/animals\/chickens$/);
   await expect(page.locator('[data-testid^="animal-tab-"]')).toHaveCount(2);
@@ -80,6 +80,7 @@ test("painel mostra o que fazer este mês e a dica da estação", async ({ page 
   await page.locator("#count-chickens").fill("10");
   for (const crop of ["Alface", "Tomate", "Milho", "Feijão", "Cebola", "Cenoura"]) await page.getByRole("checkbox", { name: crop, exact: true }).check();
   await page.getByRole("button", { name: "Continuar" }).click();
+  await subscribeFake(page);
   await expect(page.getByTestId("monthly-tasks")).toBeVisible();
   await expect(page.getByTestId("season-tip")).toContainText("Galinhas");
 });

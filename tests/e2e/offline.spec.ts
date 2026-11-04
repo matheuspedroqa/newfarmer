@@ -1,12 +1,12 @@
 import { expect, test, type Page } from "@playwright/test";
-import { createAccount, uniqueEmail } from "./helpers";
+import { createAccount, uniqueEmail, subscribeFake } from "./helpers";
 
 async function signupWithCows(page: Page) {
   await createAccount(page, uniqueEmail());
   await page.getByLabel("Vacas").check();
   await page.locator("#count-cows").fill("3");
   await page.getByRole("button", { name: "Continuar" }).click();
-  await expect(page).toHaveURL(/\/dashboard$/);
+  await subscribeFake(page);
 }
 
 /** Espera o modo offline assumir a página e guardar as páginas principais no aparelho. */

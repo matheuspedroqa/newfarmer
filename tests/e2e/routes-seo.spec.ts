@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { createAccount, signup, uniqueEmail } from "./helpers";
+import { createAccount, signup, uniqueEmail, subscribeFake } from "./helpers";
 
 const OLD_TO_NEW: [string, string][] = [
   ["/cadastro", "/register"],
@@ -79,7 +79,7 @@ test("?aba=diario antigo ainda abre o diário", async ({ page }) => {
   await page.getByLabel("Vacas").check();
   await page.locator("#count-cows").fill("3");
   await page.getByRole("button", { name: "Continuar" }).click();
-  await expect(page).toHaveURL(/\/dashboard$/);
+  await subscribeFake(page);
   await page.goto("/animals/cows?aba=diario");
   await expect(page.getByText("Nenhuma anotação ainda.")).toBeVisible();
 });

@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { createAccount, uniqueEmail } from "./helpers";
+import { createAccount, uniqueEmail, subscribeFake } from "./helpers";
 
 test("respostas trazem cabeçalhos de segurança e não dizem a tecnologia", async ({ request }) => {
   const res = await request.get("/login");
@@ -16,7 +16,7 @@ test("nada de dado interno do banco chega ao navegador", async ({ page }) => {
   await page.getByLabel("Vacas").check();
   await page.locator("#count-cows").fill("3");
   await page.getByRole("button", { name: "Continuar" }).click();
-  await expect(page).toHaveURL(/\/dashboard$/);
+  await subscribeFake(page);
   await page.goto("/animals/cows?tab=diary");
   await page.getByLabel("Anotação", { exact: true }).fill("Vacina de teste");
   await page.getByRole("button", { name: "Salvar anotação" }).click();
