@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
-import { COOKIE_NOTICE_COOKIE } from "@/lib/cookies";
+import { CONSENT_COOKIE } from "@/lib/cookies";
 
 export function CookieNotice() {
   const t = useTranslations("cookieNotice");
@@ -11,10 +11,13 @@ export function CookieNotice() {
 
   if (!visible) return null;
 
-  function accept() {
-    document.cookie = `${COOKIE_NOTICE_COOKIE}=1; path=/; max-age=31536000; samesite=lax`;
+  function choose(value: "all" | "essential") {
+    document.cookie = `${CONSENT_COOKIE}=${value}; path=/; max-age=31536000; samesite=lax`;
     setVisible(false);
+    // O PageTracker só olha o cookie quando a rota muda: recarregar aplica a escolha já na página atual.
+    location.reload();
   }
+  const btn = "min-h-11 rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-primary-text md:min-h-0";
 
   const card = (
     <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-3 rounded-2xl bg-surface p-4 text-text shadow-lg ring-1 ring-border">
@@ -24,9 +27,10 @@ export function CookieNotice() {
           {t("privacy")}
         </Link>
       </p>
-      <button type="button" onClick={accept} className="min-h-11 rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-primary-text md:min-h-0">
-        {t("ok")}
-      </button>
+      <div className="flex flex-wrap gap-2">
+        <button type="button" onClick={() => choose("all")} className={btn}>{t("acceptAll")}</button>
+        <button type="button" onClick={() => choose("essential")} className={btn}>{t("essentialOnly")}</button>
+      </div>
     </div>
   );
 

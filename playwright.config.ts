@@ -14,7 +14,7 @@ export default defineConfig({
     storageState: {
       cookies: [
         { name: "nf_locale", value: "pt", domain: "localhost", path: "/", expires: -1, httpOnly: false, secure: false, sameSite: "Lax" },
-        { name: "nf_cookie_notice", value: "1", domain: "localhost", path: "/", expires: -1, httpOnly: false, secure: false, sameSite: "Lax" },
+        { name: "nf_consent", value: "essential", domain: "localhost", path: "/", expires: -1, httpOnly: false, secure: false, sameSite: "Lax" },
       ],
       origins: [],
     },

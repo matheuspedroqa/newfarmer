@@ -1,7 +1,9 @@
 "use server";
 
 import { getLocale } from "next-intl/server";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { UUID_RE, VISITOR_COOKIE } from "@/lib/cookies";
 import { resolveLocale } from "@/i18n/locales";
 import {
   forgotSchema,
@@ -17,6 +19,7 @@ import { logLoginAttempt, loginTarget, logSafely } from "@/server/activity-log";
 import { signUpLogged } from "@/server/audited";
 import { endSession, getCurrentUser, startSession } from "@/server/current-user";
 import { getDb } from "@/server/db";
+import { linkVisitorToUser } from "@/server/page-views";
 import { sendVerificationEmail } from "@/server/email-verification";
 import { getMailer } from "@/server/mailer";
 import { requestPasswordReset, resetPassword } from "@/server/password-reset";
@@ -66,6 +69,8 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
   const result = await signUpLogged(db, getWeatherProvider(), parsed.data, ip);
   if (!result.ok) return { fieldErrors: { [result.error === "emailTaken" ? "email" : "username"]: result.error }, values };
 
+  const visitorId = (await cookies()).get(VISITOR_COOKIE)?.value;
+  if (visitorId && UUID_RE.test(visitorId)) await linkVisitorToUser(db, visitorId, result.userId);
   const locale = resolveLocale(await getLocale());
   await setPreferences(db, result.userId, { locale });
   await startSession((await getUserById(db, result.userId))!);

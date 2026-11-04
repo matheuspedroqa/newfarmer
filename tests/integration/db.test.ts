@@ -11,6 +11,7 @@ const TABLES = [
   "farm_crops",
   "forecast_snapshots",
   "login_attempts",
+  "page_views",
   "password_reset_tokens",
   "rate_limits",
   "schema_migrations",

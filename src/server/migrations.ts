@@ -209,6 +209,25 @@ ALTER TABLE diary_entries ADD COLUMN client_id TEXT;
 CREATE UNIQUE INDEX idx_diary_client ON diary_entries (user_id, client_id);
 `,
   },
+  {
+    id: 10,
+    name: "etapa7",
+    // Etapa 7: cada task acrescenta o seu pedaço aqui (ainda não foi para produção).
+    sql: `
+CREATE TABLE page_views (
+  id SERIAL PRIMARY KEY,
+  visitor_id TEXT NOT NULL,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  path TEXT NOT NULL,
+  referrer TEXT NOT NULL DEFAULT '',
+  created_at BIGINT NOT NULL
+);
+CREATE INDEX idx_page_views_visitor ON page_views (visitor_id, created_at);
+CREATE INDEX idx_page_views_user ON page_views (user_id, created_at);
+CREATE INDEX idx_page_views_created ON page_views (created_at);
+ALTER TABLE page_views ENABLE ROW LEVEL SECURITY;
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

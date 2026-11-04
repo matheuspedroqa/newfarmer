@@ -75,12 +75,12 @@ test.describe("aviso de cookies", () => {
     },
   });
 
-  test("aparece na primeira visita e some para sempre depois de Entendi", async ({ page }) => {
+  test("aparece na primeira visita e some para sempre depois de escolher", async ({ page }) => {
     await page.goto("/login");
     const aviso = page.getByRole("region", { name: "Aviso de cookies" });
-    await expect(aviso).toContainText("Usamos apenas cookies essenciais para manter você conectado e lembrar idioma e tema.");
+    await expect(aviso).toContainText("Usamos cookies essenciais para manter você conectado e lembrar idioma e tema.");
     await expect(aviso.getByRole("link", { name: "Política de Privacidade" })).toHaveAttribute("href", "/privacy");
-    await aviso.getByRole("button", { name: "Entendi" }).click();
+    await aviso.getByRole("button", { name: "Só os essenciais" }).click();
     await expect(aviso).toBeHidden();
     await page.reload();
     await expect(page.getByRole("button", { name: "Entrar" }).first()).toBeVisible();

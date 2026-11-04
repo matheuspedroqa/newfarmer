@@ -466,9 +466,11 @@
     "back": "Voltar ao início"
   },
   "cookieNotice": {
-    "text": "Usamos apenas cookies essenciais para manter você conectado e lembrar idioma e tema.",
+    "text": "Usamos cookies essenciais para manter você conectado e lembrar idioma e tema. Com o seu consentimento, também registramos as páginas que você visita, para melhorar o NewFarmer.",
     "privacy": "Política de Privacidade",
-    "ok": "Entendi",
+    "acceptAll": "Aceitar todos",
+    "essentialOnly": "Só os essenciais",
+    "preferences": "Preferências de cookies",
     "label": "Aviso de cookies"
   },
   "activity": {

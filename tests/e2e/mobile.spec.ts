@@ -117,7 +117,7 @@ test.describe("celular: aviso de cookies na área logada (375 px)", () => {
   test("o aviso fica acima da barra de baixo e os dois continuam clicáveis", async ({ page }) => {
     await signup(page, uniqueEmail());
     const notice = page.getByRole("region", { name: "Aviso de cookies" });
-    const ok = notice.getByRole("button", { name: "Entendi" });
+    const ok = notice.getByRole("button", { name: "Só os essenciais" });
     await expect(notice).toBeVisible();
     const noticeBox = (await notice.boundingBox())!;
     const navBox = (await appNav(page).boundingBox())!;

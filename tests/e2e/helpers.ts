@@ -46,7 +46,7 @@ export async function clearSession(context: BrowserContext) {
   await context.clearCookies();
   await context.addCookies([
     { name: "nf_locale", value: "pt", domain: "localhost", path: "/" },
-    { name: "nf_cookie_notice", value: "1", domain: "localhost", path: "/" },
+    { name: "nf_consent", value: "essential", domain: "localhost", path: "/" },
   ]);
 }
 

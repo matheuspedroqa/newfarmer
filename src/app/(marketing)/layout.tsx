@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
 import { TopControls } from "@/components/TopControls";
 
 export default async function MarketingLayout({ children }: { children: React.ReactNode }) {
@@ -17,9 +18,10 @@ export default async function MarketingLayout({ children }: { children: React.Re
         </div>
       </header>
       <main className="flex-1">{children}</main>
-      <footer className="flex justify-center gap-6 px-8 py-6 text-sm text-muted">
+      <footer className="flex flex-wrap justify-center gap-6 px-8 py-6 text-sm text-muted">
         <Link href="/privacy" className="hover:underline">{t("home.privacy")}</Link>
         <Link href="/terms" className="hover:underline">{t("home.terms")}</Link>
+        <CookiePreferencesLink className="hover:underline" />
       </footer>
     </div>
   );

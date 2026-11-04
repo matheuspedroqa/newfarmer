@@ -1,6 +1,7 @@
 import "server-only";
 import bcrypt from "bcryptjs";
 import type { Db } from "./db";
+import { listUserPageViews } from "./page-views";
 
 // Direito de acesso e portabilidade (LGPD art. 18, RGPD art. 15 e 20, CCPA): tudo que é da pessoa,
 // num formato aberto. Ficam de fora senha, tokens e sessões, que só servem para entrar na conta.
@@ -39,6 +40,7 @@ export async function exportUserData(db: Db, userId: number) {
     "SELECT action, target, details, ip, created_at FROM activity_logs WHERE user_id = $1 ORDER BY created_at, id",
     [userId],
   );
+  const pageViews = await listUserPageViews(db, userId, 1000);
   const iso = (ms: string | number | null) => (ms === null ? null : new Date(Number(ms)).toISOString());
 
   return {
@@ -62,6 +64,7 @@ export async function exportUserData(db: Db, userId: number) {
     crops: crops.map((c) => c.crop_id),
     diary: diary.map((d) => ({ ...d, created_at: iso(d.created_at) })),
     activity: activity.map((a) => ({ ...a, created_at: iso(a.created_at) })),
+    pageViews: pageViews.map((v) => ({ path: v.path, referrer: v.referrer, at: iso(v.createdAt) })),
   };
 }
 

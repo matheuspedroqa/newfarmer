@@ -141,5 +141,6 @@ export async function purgeOld(db: Db, now = Date.now()): Promise<void> {
   await db.run("DELETE FROM sessions WHERE expires_at < $1 OR last_seen_at < $2", [now, now - SESSION_IDLE_MS]);
   await db.run("DELETE FROM password_reset_tokens WHERE expires_at < $1", [now]);
   await db.run("DELETE FROM email_verification_tokens WHERE expires_at < $1", [now]);
+  await db.run("DELETE FROM page_views WHERE created_at < $1", [now - ACTIVITY_RETENTION_MS]);
   await purgeRateLimits(db, now);
 }

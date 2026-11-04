@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
 import { requireUser } from "@/server/current-user";
 import { DeleteAccountForm } from "./DeleteAccountForm";
 import { LanguageForm } from "./LanguageForm";
@@ -57,6 +58,10 @@ export default async function ProfilePage() {
         >
           {t("profile.download")}
         </a>
+      </div>
+
+      <div className="rounded-3xl bg-surface p-6 ring-1 ring-border">
+        <CookiePreferencesLink className="font-semibold underline" />
       </div>
 
       <div className="rounded-3xl bg-surface p-6 ring-1 ring-danger/40">

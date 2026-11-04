@@ -5,7 +5,8 @@ import { Fraunces, Nunito } from "next/font/google";
 import { cookies } from "next/headers";
 import { resolveTheme } from "@/i18n/locales";
 import { CookieNotice } from "@/components/CookieNotice";
-import { COOKIE_NOTICE_COOKIE, THEME_COOKIE } from "@/lib/cookies";
+import { PageTracker } from "@/components/PageTracker";
+import { CONSENT_COOKIE, THEME_COOKIE } from "@/lib/cookies";
 import "./globals.css";
 
 const fraunces = Fraunces({ subsets: ["latin"], weight: ["500", "700"], variable: "--font-fraunces" });
@@ -31,7 +32,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const messages = await getMessages();
   const jar = await cookies();
   const theme = resolveTheme(jar.get(THEME_COOKIE)?.value);
-  const showNotice = !jar.has(COOKIE_NOTICE_COOKIE);
+  const showNotice = !jar.has(CONSENT_COOKIE) && !jar.has("nf_cookie_notice") // nf_cookie_notice: aviso antigo, vale como "só essenciais";
   const classes = [fraunces.variable, nunito.variable, theme === "dark" ? "dark" : ""].join(" ").trim();
 
   return (
@@ -39,6 +40,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="min-h-screen font-sans antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
+          <PageTracker />
           {showNotice && <CookieNotice />}
         </NextIntlClientProvider>
       </body>
