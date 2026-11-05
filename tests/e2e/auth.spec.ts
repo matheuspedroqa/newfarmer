@@ -7,6 +7,11 @@ test("cadastro passa pela etapa 2 e chega ao painel com o tipo de clima da cidad
   await expect(page.getByTestId("user-climate")).toContainText("Curitiba");
   await expect(page.getByTestId("user-climate")).toContainText("Subtropical");
   await expect(page.getByTestId("user-climate")).toContainText("Hemisfério sul");
+  // Lista do mês pelo clima da cidade, mesmo sem plantações marcadas; árvores frutíferas ficam de fora.
+  const plant = page.getByTestId("plant-this-month");
+  await expect(plant.getByText("Este mês você pode plantar")).toBeVisible();
+  expect(await plant.getByRole("link").count()).toBeGreaterThan(0);
+  await expect(plant.getByRole("link", { name: /Laranja/ })).toHaveCount(0);
 });
 
 test("cadastro mostra os erros dos campos", async ({ page }) => {

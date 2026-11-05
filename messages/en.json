@@ -107,7 +107,10 @@
     "nothingThisMonth": "None of your crops has planting or harvest this month.",
     "seasonTip": "Seasonal tip ({season})",
     "seasonTipEmpty": "Add your animals in MyFarm to get seasonal tips.",
-    "diaryRecent": "Latest diary notes"
+    "diaryRecent": "Latest diary notes",
+    "plantThisMonth": "You can plant this month",
+    "plantThisMonthHelp": "For {city}, {climate} climate. Sowing or transplanting; fruit trees are left out.",
+    "plantNothing": "Nothing to sow or transplant this month in your climate."
   },
   "email": {
     "greeting": "Hello, {name}!",

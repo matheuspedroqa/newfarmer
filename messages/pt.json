@@ -107,7 +107,10 @@
     "nothingThisMonth": "Nenhuma das suas plantações tem plantio ou colheita este mês.",
     "seasonTip": "Dica da estação ({season})",
     "seasonTipEmpty": "Marque seus animais no MyFarm para receber dicas da estação.",
-    "diaryRecent": "Últimas anotações do diário"
+    "diaryRecent": "Últimas anotações do diário",
+    "plantThisMonth": "Este mês você pode plantar",
+    "plantThisMonthHelp": "Para {city}, clima {climate}. Semear ou transplantar; árvores frutíferas ficam de fora.",
+    "plantNothing": "Nada para semear ou transplantar neste mês no seu clima."
   },
   "email": {
     "greeting": "Olá, {name}!",

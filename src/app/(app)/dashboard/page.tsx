@@ -5,7 +5,7 @@ import { WeatherHero } from "@/components/WeatherHero";
 import { resolveLocale } from "@/i18n/locales";
 import { formatDay } from "@/lib/format";
 import { ANIMALS, CROPS } from "@/lib/catalog";
-import { monthlyTasks, seasonFor } from "@/lib/seasons";
+import { monthlyTasks, plantableThisMonth, seasonFor } from "@/lib/seasons";
 import { getAllCropContent, getAnimalContent } from "@/server/content";
 import { requireAccess } from "@/server/current-user";
 import { getDb } from "@/server/db";
@@ -34,8 +34,11 @@ export default async function DashboardPage() {
   const locale = resolveLocale(await getLocale());
   const month = new Date().getMonth() + 1;
   const season = seasonFor(month, user.hemisphere);
+  // O mês sai do relógio a cada abertura do Painel: vira sozinho no dia 1, sem tarefa agendada.
+  const allCrops = getAllCropContent();
+  const plantable = plantableThisMonth(allCrops, user.climateZone, user.hemisphere, month);
   const tasks = monthlyTasks(
-    getAllCropContent().filter((c) => farm.crops.includes(c.id)),
+    allCrops.filter((c) => farm.crops.includes(c.id)),
     user.climateZone,
     user.hemisphere,
     month,
@@ -106,6 +109,26 @@ export default async function DashboardPage() {
             </>
           ) : (
             <p className="mt-3 text-muted">{t("dashboard.noCrops")}</p>
+          )}
+        </section>
+
+        <section data-testid="plant-this-month" className="col-span-2 rounded-3xl bg-surface p-6 shadow-sm md:col-span-4">
+          <p className="text-sm font-bold uppercase tracking-wide text-accent">{t("dashboard.plantThisMonth")}</p>
+          <p className="mt-1 text-sm text-muted">
+            {t("dashboard.plantThisMonthHelp", { city: user.cityLabel, climate: t(`climate.${user.climateZone}`) })}
+          </p>
+          {plantable.length ? (
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {plantable.map((id) => (
+                <li key={id}>
+                  <Link href={`/crops/${id}`} className="inline-flex min-h-11 items-center gap-1 rounded-full bg-bg px-4 py-2 ring-1 ring-border hover:ring-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                    <span aria-hidden>{CROPS.find((c) => c.id === id)!.icon}</span> {t(`crops.${id}`)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-2 text-muted">{t("dashboard.plantNothing")}</p>
           )}
         </section>
 

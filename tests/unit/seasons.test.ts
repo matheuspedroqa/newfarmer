@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { monthlyTasks, seasonFor, toUserMonth, userCalendar, type CropCalendar } from "@/lib/seasons";
+import { monthlyTasks, plantableThisMonth, seasonFor, toUserMonth, userCalendar, type CropCalendar } from "@/lib/seasons";
 
 const empty: CropCalendar = { directSowing: [], seedbed: [], transplant: [], harvest: [] };
 
@@ -77,5 +77,22 @@ describe("monthlyTasks", () => {
     // sementeira do tomate em agosto (sul) = fevereiro (norte)
     expect(monthlyTasks(crops, "subtropical", "north", 2)).toEqual([{ cropId: "tomato", activities: ["seedbed"] }]);
     expect(monthlyTasks(crops, "tropical", "south", 10)).toEqual([]);
+  });
+});
+
+describe("plantableThisMonth", () => {
+  const cal = (c: Partial<CropCalendar>) => ({ tropical: { ...empty, ...c }, subtropical: { ...empty, ...c }, temperate: { ...empty, ...c }, semiarid: { ...empty, ...c }, cold: { ...empty, ...c } }) as never;
+  const crops = [
+    { id: "lettuce", calendar: cal({ seedbed: [3] }) },
+    { id: "tomato", calendar: cal({ harvest: [3] }) }, // só colheita: não entra
+    { id: "watermelon", calendar: cal({ directSowing: [3] }) }, // fruta rasteira: entra
+    { id: "orange", calendar: cal({ transplant: [3] }) }, // árvore: fica de fora
+    { id: "carrot", calendar: cal({ directSowing: [9] }) },
+  ] as Parameters<typeof plantableThisMonth>[0];
+  it("lista o que se semeia ou transplanta no mês, sem árvores frutíferas", () => {
+    expect(plantableThisMonth(crops, "subtropical", "south", 3)).toEqual(["lettuce", "watermelon"]);
+  });
+  it("no hemisfério norte o calendário anda 6 meses", () => {
+    expect(plantableThisMonth(crops, "subtropical", "north", 3)).toEqual(["carrot"]);
   });
 });
