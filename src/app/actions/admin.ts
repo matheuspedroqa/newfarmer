@@ -82,7 +82,9 @@ async function send(formData: FormData): Promise<CampaignState> {
     if ("error" in r) return { error: r.error, ...("campaignId" in r ? { campaignId: r.campaignId } : echo) };
     revalidatePath("/admin/emails");
     return r;
-  } catch {
+  } catch (error) {
+    // O motivo (ex.: "Resend respondeu 403 validation_error") vai para Admin > Monitoramento.
+    await logRequestError(db, "action:sendCampaign", error instanceof Error ? error.message : String(error)).catch(() => undefined);
     return { error: "sendFailed", ...echo };
   }
 }

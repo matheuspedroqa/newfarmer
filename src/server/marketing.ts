@@ -88,7 +88,7 @@ export async function sendCampaign(
       [campaignId],
     )
   ).map(toUser);
-  const from = process.env.MAIL_MARKETING_FROM;
+  const from = process.env.MAIL_MARKETING_FROM ?? "NewFarmer <novidades@newfarmer.app>";
   let sent = 0;
   try {
     for (const user of pending.slice(0, max)) {
@@ -107,7 +107,7 @@ export async function sendCampaign(
           to: user.email,
           subject,
           html,
-          ...(from && { from }),
+          from,
           headers: { "List-Unsubscribe": `<${appUrl}/api/unsubscribe/${url.split("/").pop()}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" },
         });
       } catch (error) {

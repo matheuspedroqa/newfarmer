@@ -42,7 +42,7 @@ for (const [path, title, heading] of [
 test("as páginas legais em português mostram o texto e o contato", async ({ page }) => {
   await page.goto("/privacy");
   await expect(page.getByRole("heading", { level: 1, name: "Política de Privacidade" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "matheusps70@hotmail.com" }).first()).toHaveAttribute("href", "mailto:matheusps70@hotmail.com");
+  await expect(page.getByRole("link", { name: "contact@newfarmer.app" }).first()).toHaveAttribute("href", "mailto:contact@newfarmer.app");
   await page.goto("/terms");
   await expect(page.getByRole("heading", { level: 1, name: "Termos de Uso" })).toBeVisible();
 });

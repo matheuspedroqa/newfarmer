@@ -837,7 +837,7 @@
     "confirmSend": "Send to {count} people?",
     "sendResult": "Sent in this batch: {sent}. Remaining: {remaining}.",
     "sendDone": "Sending finished. Sent now: {sent}.",
-    "sendFailed": "Could not send. Try to continue sending.",
+    "sendFailed": "Could not send. The reason is in Admin → Monitoring. Try continuing the send.",
     "invalidCampaign": "Campaign not found.",
     "historyTitle": "Campaign history",
     "historyEmpty": "No campaigns sent yet.",

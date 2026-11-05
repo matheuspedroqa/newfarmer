@@ -27,7 +27,7 @@ As tabelas são criadas sozinhas na primeira visita ao site, com RLS ligado (a A
 | `DATABASE_URL` | endereço do passo 1 |
 | `APP_URL` | endereço do site, ex. `https://newfarmer.vercel.app` (usado no link de recuperar senha) |
 | `RESEND_API_KEY` | chave do passo 2 |
-| `MAIL_FROM` | ex. `NewFarmer <nao-responda@seudominio.com>` (opcional; padrão `onboarding@resend.dev`) |
+| `MAIL_FROM` | ex. `NewFarmer <nao-responda@seudominio.com>` (opcional; padrão `NewFarmer <nao-responda@newfarmer.app>`) |
 | `DATABASE_CA_CERT` | opcional: conteúdo do certificado do Supabase (Project Settings → Database → SSL) para conferir a conexão |
 
 3. **Deploy**. Cada envio para a `main` no GitHub publica uma versão nova sozinho.

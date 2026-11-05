@@ -8,7 +8,7 @@ Esta política explica, em palavras simples, quais dados o NewFarmer guarda sobr
 
 O responsável pelos seus dados (o "controlador") é **Matheus Lemes**, com sede em Jundiaí, São Paulo, Brasil.
 
-Para qualquer assunto de privacidade, fale com o encarregado (DPO) pelo e-mail [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
+Para qualquer assunto de privacidade, fale com o encarregado (DPO) pelo e-mail [contact@newfarmer.app](mailto:contact@newfarmer.app).
 
 ## 2. Quais dados guardamos
 
@@ -99,7 +99,7 @@ O NewFarmer é mantido no Brasil, o banco de dados fica na União Europeia e alg
 
 ## 7. Seus direitos
 
-Para usar qualquer direito, mande um e-mail para [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com) a partir do e-mail da sua conta (ou diga qual é o seu username). Podemos pedir uma confirmação de que a conta é sua. Respondemos em até **15 dias** (LGPD), **30 dias** (RGPD) ou **45 dias** (leis dos EUA).
+Para usar qualquer direito, mande um e-mail para [contact@newfarmer.app](mailto:contact@newfarmer.app) a partir do e-mail da sua conta (ou diga qual é o seu username). Podemos pedir uma confirmação de que a conta é sua. Respondemos em até **15 dias** (LGPD), **30 dias** (RGPD) ou **45 dias** (leis dos EUA).
 
 Duas coisas você mesmo faz no site, em **Perfil**, sem precisar pedir: **"Baixar meus dados"** entrega um arquivo (JSON) com a conta, os animais, as plantações, o diário, o seu registro de atividade, a assinatura, as páginas visitadas e a sua preferência de e-mails de novidades; **"Apagar minha conta"** cancela a assinatura e apaga na hora a conta e os dados dela, inclusive as páginas visitadas e o histórico de e-mails, depois de você digitar a senha.
 

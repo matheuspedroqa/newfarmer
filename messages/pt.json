@@ -837,7 +837,7 @@
     "confirmSend": "Enviar para {count} pessoas?",
     "sendResult": "Enviados neste lote: {sent}. Faltam: {remaining}.",
     "sendDone": "Envio concluído. Enviados agora: {sent}.",
-    "sendFailed": "Não foi possível enviar. Tente continuar o envio.",
+    "sendFailed": "Não foi possível enviar. O motivo está em Admin → Monitoramento. Tente continuar o envio.",
     "invalidCampaign": "Campanha não encontrada.",
     "historyTitle": "Histórico de campanhas",
     "historyEmpty": "Nenhuma campanha enviada ainda.",

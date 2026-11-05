@@ -48,12 +48,12 @@ You can cancel at any time under **Profile → Manage or cancel**. Access contin
 ## 7. Right of withdrawal and refunds
 
 - You have the right to a full refund if you ask within **7 days** of the first charge in Brazil (Consumer Defense Code, art. 49) or within **14 days** in the European Union (right of withdrawal). In the United States and all other countries, the period is **7 days**.
-- Ask by e-mail at [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
+- Ask by e-mail at [contact@newfarmer.app](mailto:contact@newfarmer.app).
 - After that period, we do not refund a partial month, unless the law where you live requires it.
 
 ## 8. Closing your account
 
-- You can delete your account at any time under **Profile → Delete my account**, which also cancels the subscription, or ask by e-mail at [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
+- You can delete your account at any time under **Profile → Delete my account**, which also cancels the subscription, or ask by e-mail at [contact@newfarmer.app](mailto:contact@newfarmer.app).
 - We may suspend or close accounts that break these terms, or accounts of children under 13.
 - When an account is deleted, its data is deleted as explained in the [Privacy Policy](/privacy).
 
@@ -69,4 +69,4 @@ These terms are governed by Brazilian law. Any dispute will be settled in the co
 
 Responsible party: **Matheus Lemes**, Jundiaí, São Paulo, Brazil.
 
-E-mail: [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com)
+E-mail: [contact@newfarmer.app](mailto:contact@newfarmer.app)

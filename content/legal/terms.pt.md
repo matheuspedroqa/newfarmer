@@ -48,12 +48,12 @@ Você pode cancelar a qualquer momento em **Perfil → Gerenciar ou cancelar**. 
 ## 7. Arrependimento e reembolso
 
 - Você tem direito a reembolso integral se pedir em até **7 dias** da primeira cobrança no Brasil (Código de Defesa do Consumidor, art. 49) ou em até **14 dias** na União Europeia (direito de retratação). Nos Estados Unidos e nos demais países, o prazo é de **7 dias**.
-- O pedido é feito pelo e-mail [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
+- O pedido é feito pelo e-mail [contact@newfarmer.app](mailto:contact@newfarmer.app).
 - Fora desse prazo, não devolvemos o mês parcial, salvo se a lei do seu lugar exigir.
 
 ## 8. Encerramento da conta
 
-- Você pode apagar a sua conta a qualquer momento em **Perfil → Apagar minha conta**, o que também cancela a assinatura, ou pedir pelo e-mail [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
+- Você pode apagar a sua conta a qualquer momento em **Perfil → Apagar minha conta**, o que também cancela a assinatura, ou pedir pelo e-mail [contact@newfarmer.app](mailto:contact@newfarmer.app).
 - Podemos suspender ou encerrar contas que desrespeitem estes termos, ou contas de menores de 13 anos.
 - Quando a conta é apagada, os dados dela são apagados como explica a [Política de Privacidade](/privacy).
 
@@ -69,4 +69,4 @@ Estes termos seguem a lei brasileira. Qualquer disputa será resolvida no foro d
 
 Responsável: **Matheus Lemes**, Jundiaí, São Paulo, Brasil.
 
-E-mail: [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com)
+E-mail: [contact@newfarmer.app](mailto:contact@newfarmer.app)

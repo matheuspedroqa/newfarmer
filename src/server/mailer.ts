@@ -33,13 +33,14 @@ export function createDevInboxMailer(db: Db): Mailer {
 export function createResendMailer(apiKey: string, from: string, fetchFn: typeof fetch = fetch): Mailer {
   return {
     async send({ to, subject, html, from: own, headers, replyTo: ownReplyTo }) {
-      const replyTo = ownReplyTo ?? process.env.MAIL_REPLY_TO;
+      const replyTo = ownReplyTo || process.env.MAIL_REPLY_TO || "contact@newfarmer.app";
       const response = await fetchFn("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
         body: JSON.stringify({ from: own ?? from, to, subject, html, ...(headers && { headers }), ...(replyTo && { reply_to: replyTo }) }),
       });
-      if (!response.ok) throw new Error(`Resend respondeu ${response.status}`);
+      // Só o código do erro (ex.: validation_error): a mensagem do Resend pode trazer o e-mail da pessoa.
+      if (!response.ok) throw new Error(`Resend respondeu ${response.status} ${await response.json().then((r: { name?: unknown }) => String(r.name ?? "")).catch(() => "")}`.trim());
     },
   };
 }
@@ -47,7 +48,7 @@ export function createResendMailer(apiKey: string, from: string, fetchFn: typeof
 /** Online usa o Resend; no computador, a caixa de teste (/dev/inbox). */
 export function getMailer(db: Db): Mailer {
   const apiKey = process.env.RESEND_API_KEY;
-  if (apiKey) return createResendMailer(apiKey, process.env.MAIL_FROM ?? "NewFarmer <onboarding@resend.dev>");
+  if (apiKey) return createResendMailer(apiKey, process.env.MAIL_FROM ?? "NewFarmer <nao-responda@newfarmer.app>");
   if (process.env.NODE_ENV === "production") throw new Error("RESEND_API_KEY não configurada");
   return createDevInboxMailer(db);
 }

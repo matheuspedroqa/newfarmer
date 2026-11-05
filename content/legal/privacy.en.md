@@ -8,7 +8,7 @@ This policy explains, in plain words, what data NewFarmer keeps about you, what 
 
 The party responsible for your data (the "controller") is **Matheus Lemes**, based in Jundiaí, São Paulo, Brazil.
 
-For any privacy matter, contact the data protection officer (DPO) at [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com).
+For any privacy matter, contact the data protection officer (DPO) at [contact@newfarmer.app](mailto:contact@newfarmer.app).
 
 ## 2. What data we keep
 
@@ -99,7 +99,7 @@ NewFarmer is run from Brazil, the database is in the European Union and some pro
 
 ## 7. Your rights
 
-To use any of your rights, send an e-mail to [matheusps70@hotmail.com](mailto:matheusps70@hotmail.com) from your account's e-mail address (or tell us your username). We may ask you to confirm that the account is yours. We reply within **15 days** (LGPD), **30 days** (GDPR) or **45 days** (US laws).
+To use any of your rights, send an e-mail to [contact@newfarmer.app](mailto:contact@newfarmer.app) from your account's e-mail address (or tell us your username). We may ask you to confirm that the account is yours. We reply within **15 days** (LGPD), **30 days** (GDPR) or **45 days** (US laws).
 
 Two things you can do yourself on the site, under **Profile**, without asking: **"Download my data"** gives you a file (JSON) with your account, animals, crops, diary, your activity log, your subscription, the pages visited and your marketing e-mail preference; **"Delete my account"** cancels the subscription and deletes the account and its data right away, including the pages visited and the e-mail history, after you type your password.
 

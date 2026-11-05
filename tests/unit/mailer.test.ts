@@ -13,13 +13,14 @@ describe("e-mail pelo Resend", () => {
     expect(fetchFn).toHaveBeenCalledWith("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: "Bearer re_chave", "Content-Type": "application/json" },
-      body: JSON.stringify({ from: "NewFarmer <oi@newfarmer.app>", ...message }),
+      body: JSON.stringify({ from: "NewFarmer <oi@newfarmer.app>", ...message, reply_to: "contact@newfarmer.app" }),
     });
   });
 
   it("avisa quando o Resend recusa", async () => {
-    const fetchFn = vi.fn(async () => new Response("{}", { status: 403 }));
-    await expect(createResendMailer("re_x", "a@b.c", fetchFn).send(message)).rejects.toThrow("403");
+    // Só o código do erro vai junto; a mensagem (que pode ter o e-mail da pessoa) não.
+    const fetchFn = vi.fn(async () => new Response('{"name":"validation_error","message":"ana@exemplo.com"}', { status: 403 }));
+    await expect(createResendMailer("re_x", "a@b.c", fetchFn).send(message)).rejects.toThrow(/^Resend respondeu 403 validation_error$/);
   });
 
   it("online sem chave do Resend falha em vez de fingir que enviou", () => {
@@ -40,10 +41,10 @@ describe("e-mail pelo Resend: remetente, reply_to e cabeçalhos", () => {
     expect(bodyOf(fetchFn)).toMatchObject({ from: "Novidades <n@nf.app>", reply_to: "suporte@newfarmer.app", headers: { "List-Unsubscribe": "<u>" } });
   });
 
-  it("sem as variáveis nada muda", async () => {
+  it("sem as variáveis, as respostas vão para contact@newfarmer.app", async () => {
     vi.stubEnv("MAIL_REPLY_TO", "");
     const fetchFn = vi.fn(async () => new Response("{}", { status: 200 }));
     await createResendMailer("k", "Conta <conta@nf.app>", fetchFn).send(message);
-    expect(bodyOf(fetchFn)).toEqual({ from: "Conta <conta@nf.app>", ...message });
+    expect(bodyOf(fetchFn)).toEqual({ from: "Conta <conta@nf.app>", ...message, reply_to: "contact@newfarmer.app" });
   });
 });
