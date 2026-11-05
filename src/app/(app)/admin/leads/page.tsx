@@ -84,11 +84,11 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
                 </thead>
                 <tbody>
                   {rows.map((r) => (
-                    <tr key={r.visitorId} data-testid="lead-row" className="border-t border-border">
+                    <tr key={r.id} data-testid="lead-row" className="border-t border-border">
                       <td className={`${cell} whitespace-nowrap`}>{format.format(r.firstSeen)}</td>
                       <td className={`${cell} whitespace-nowrap`}>{format.format(r.lastSeen)}</td>
-                      <td className={cell}>{r.pages}</td>
-                      <td className={`${cell} break-all`}>{r.lastPath}</td>
+                      <td className={cell}>{r.pages || "—"}</td>
+                      <td className={`${cell} break-all`}>{r.lastPath ?? "—"}</td>
                       <td className={cell}>{stepName(r.furthestStep)}</td>
                       <td className={cell}>{account(r.user)}</td>
                     </tr>
@@ -98,9 +98,9 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
             </div>
             <ul className="space-y-3 md:hidden">
               {rows.map((r) => (
-                <li key={r.visitorId} data-testid="lead-card" className="rounded-2xl bg-surface p-4 ring-1 ring-border">
-                  <p className="font-semibold">{stepName(r.furthestStep)} · {r.pages} {t("colPages").toLowerCase()}</p>
-                  <p className="text-sm break-all">{t("colLastPage")}: {r.lastPath}</p>
+                <li key={r.id} data-testid="lead-card" className="rounded-2xl bg-surface p-4 ring-1 ring-border">
+                  <p className="font-semibold">{stepName(r.furthestStep)}{r.pages > 0 && ` · ${r.pages} ${t("colPages").toLowerCase()}`}</p>
+                  <p className="text-sm break-all">{t("colLastPage")}: {r.lastPath ?? "—"}</p>
                   <p className="text-xs text-muted">{format.format(r.firstSeen)} → {format.format(r.lastSeen)}</p>
                   {account(r.user)}
                 </li>

@@ -32,7 +32,6 @@ export const signupSchema = z
     confirmPassword: z.string(),
     city: citySchema,
     terms: z.literal("on", { errorMap: () => ({ message: "termsRequired" }) }),
-    age: z.literal("on", { errorMap: () => ({ message: "ageRequired" }) }),
     marketing: z.literal("on").nullish().transform((v) => v === "on").optional(),
   })
   .refine((d) => d.password === d.confirmPassword, { path: ["confirmPassword"], message: "passwordsDontMatch" });

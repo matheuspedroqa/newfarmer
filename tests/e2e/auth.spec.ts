@@ -21,20 +21,16 @@ test("cadastro mostra os erros dos campos", async ({ page }) => {
   await expect(page.getByText("Escolha uma cidade da lista")).toBeVisible();
 });
 
-test("cadastro sem aceitar os Termos ou sem ter 13 anos mostra o erro e mantém o que foi digitado", async ({ page }) => {
+test("cadastro sem aceitar os Termos mostra o erro e mantém o que foi digitado", async ({ page }) => {
   await page.goto("/register");
   await page.getByLabel("Nome").fill("Ana");
-  await page.getByLabel("Tenho 13 anos ou mais").check();
   await page.getByRole("button", { name: "Criar conta" }).click();
   await expect(page.getByText("Para criar a conta, aceite os Termos e a Política de Privacidade")).toBeVisible();
-  await expect(page.getByText("O NewFarmer é para maiores de 13 anos")).toHaveCount(0);
   await expect(page.getByLabel("Nome")).toHaveValue("Ana");
-  await expect(page.getByLabel("Tenho 13 anos ou mais")).toBeChecked();
+  await expect(page.getByLabel("Tenho 13 anos ou mais")).toHaveCount(0);
 
-  await page.getByLabel("Tenho 13 anos ou mais").uncheck();
   await page.getByLabel(/Li e aceito/).check();
   await page.getByRole("button", { name: "Criar conta" }).click();
-  await expect(page.getByText("O NewFarmer é para maiores de 13 anos")).toBeVisible();
   await expect(page.getByText("Para criar a conta, aceite os Termos e a Política de Privacidade")).toHaveCount(0);
   await expect(page.getByLabel(/Li e aceito/)).toBeChecked();
 });

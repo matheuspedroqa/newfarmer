@@ -173,7 +173,7 @@ it("cadastro grava auth.signup com o username", async () => {
   const db = await testDb();
   const provider = createFakeWeatherProvider();
   const [city] = await provider.searchCities("Curitiba", "pt");
-  const r = await signUpLogged(db, provider, { name: "Ana", email: "a@e.com", username: "ana", password: "segredo123", confirmPassword: "segredo123", city, terms: "on", age: "on" }, IP);
+  const r = await signUpLogged(db, provider, { name: "Ana", email: "a@e.com", username: "ana", password: "segredo123", confirmPassword: "segredo123", city, terms: "on" }, IP);
   expect(r.ok).toBe(true);
   const rows = await listActivity(db, {});
   expect(resumo(rows)).toEqual([["auth.signup", (r as { userId: number }).userId, "ana", {}]]);

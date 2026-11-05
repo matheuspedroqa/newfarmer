@@ -11,10 +11,9 @@ export function uniqueUsername() {
   return `ana${Date.now()}${Math.floor(Math.random() * 1000)}`;
 }
 
-/** Marca as duas caixas obrigatórias do cadastro. */
+/** Marca a caixa obrigatória do cadastro (a idade mínima está nos Termos). */
 export async function acceptTerms(page: Page) {
   await page.getByLabel(/Li e aceito/).check();
-  await page.getByLabel("Tenho 13 anos ou mais").check();
 }
 
 /** Faz a etapa 1 do cadastro e para na etapa 2 (/welcome). */

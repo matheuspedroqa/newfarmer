@@ -6,11 +6,16 @@ import { makeUser } from "../helpers/users";
 
 const view = (visitorId: string, path: string, userId: number | null = null) => ({ visitorId, userId, path, referrer: "" });
 
-describe("listLeads", () => {
-  it("agrupa por visitante, acha o passo mais avançado, a última página e ordena pela última visita", async () => {
+describe("listLeads e leadFunnel", () => {
+  it("junta contas (mesmo sem estatística) e visitantes sem conta, com o passo mais avançado de cada um", async () => {
     const db = await testDb();
     const ana = await makeUser(db, { email: "ana@x.com" });
+    const bia = await makeUser(db, { email: "bia@x.com" });
+    const carla = await makeUser(db, { email: "carla@x.com" });
+    for (const [id, at] of [[ana, 90], [bia, 150], [carla, 160]]) await db.run("UPDATE users SET created_at = $2 WHERE id = $1", [id, at]);
     await db.run("INSERT INTO subscriptions (user_id, stripe_customer_id, status, updated_at) VALUES ($1, 'cus_a', 'active', 1)", [ana]);
+    await db.run("INSERT INTO farm_animals (user_id, animal_id, count) VALUES ($1, 'cows', 3)", [bia]); // escolheu a criação, sem estatística
+    await db.run("INSERT INTO subscriptions (user_id, stripe_customer_id, updated_at) VALUES ($1, 'cus_c', 1)", [carla]); // abriu o pagamento e não pagou
     await recordPageView(db, view("pago", "/"), 100);
     await recordPageView(db, view("pago", "/register"), 110);
     await recordPageView(db, view("pago", "/dashboard", ana), 120);
@@ -22,17 +27,21 @@ describe("listLeads", () => {
     await recordPageView(db, view("fora", "/termos"), 400);
 
     const leads = await listLeads(db, { since: 50 });
-    expect(leads.map((l) => l.visitorId)).toEqual(["fora", "novo", "meio", "pago"]);
+    expect(leads.map((l) => l.id)).toEqual(["v:fora", "v:novo", "v:meio", `u:${carla}`, `u:${bia}`, `u:${ana}`]);
     expect(leads[0]).toMatchObject({ furthestStep: null, lastPath: "/termos" });
     expect(leads[1]).toMatchObject({ furthestStep: "/", lastPath: "/pt", pages: 1, firstSeen: 300, lastSeen: 300, user: null, subscribed: false });
     expect(leads[2]).toMatchObject({ furthestStep: "/subscribe", lastPath: "/termos", pages: 3 });
-    expect(leads[3]).toMatchObject({ furthestStep: "paid", lastPath: "/dashboard", subscribed: true, user: { id: ana, username: "ana", email: "ana@x.com" } });
+    expect(leads[3]).toMatchObject({ furthestStep: "/subscribe", pages: 0, lastPath: null, subscribed: false });
+    expect(leads[4]).toMatchObject({ furthestStep: "/welcome", pages: 0, lastPath: null, firstSeen: 150, lastSeen: 150, user: { id: bia, username: "bia", email: "bia@x.com" } });
+    expect(leads[5]).toMatchObject({ furthestStep: "paid", lastPath: "/dashboard", pages: 3, firstSeen: 90, lastSeen: 120, subscribed: true });
 
-    expect((await listLeads(db, { since: 50, before: 220 })).map((l) => l.visitorId)).toEqual(["pago"]);
+    expect((await listLeads(db, { since: 50, before: 220 })).map((l) => l.id)).toEqual([`u:${carla}`, `u:${bia}`, `u:${ana}`]);
     expect(await listLeads(db, { since: 50, limit: 1 })).toHaveLength(1);
+    // Cada passo conta quem chegou pelo menos até ele: nunca passa do anterior.
+    expect(await leadFunnel(db, 50)).toEqual({ "/": 5, "/register": 4, "/welcome": 4, "/subscribe": 3, paid: 1 });
   });
 
-  it("não mostra o dono do site, nem o funil", async () => {
+  it("não mostra o dono do site, nem no funil", async () => {
     const db = await testDb();
     const dono = await makeUser(db, { email: "dono@x.com" });
     await db.run("UPDATE users SET is_platform_admin = TRUE WHERE id = $1", [dono]);

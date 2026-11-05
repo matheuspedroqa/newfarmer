@@ -1,10 +1,10 @@
-/** Celular realista só com CSS: moldura escura, ilha, botões laterais e barra de status. A tela é o `children` (o print). */
+/** Celular realista só com CSS (cantos no estilo iPhone 17, proporcionais à largura para não cortar o print): moldura escura, ilha, botões laterais e barra de status. A tela é o `children` (o print). */
 export function PhoneFrame({ children, className = "", tilt = false }: { children: React.ReactNode; className?: string; tilt?: boolean }) {
   return (
-    <div className={`relative ${tilt ? "md:[transform:perspective(1600px)_rotateY(-12deg)_rotateX(4deg)]" : ""} ${className}`}>
-      <div className="rounded-[2.75rem] bg-gradient-to-br from-zinc-500 via-zinc-900 to-zinc-700 p-[3px] shadow-2xl shadow-black/40">
-        <div className="rounded-[2.65rem] bg-zinc-950 p-[7px]">
-          <div className="relative overflow-hidden rounded-[2.2rem] bg-black [container-type:inline-size]">
+    <div className={`relative [container-type:inline-size] ${tilt ? "md:[transform:perspective(1600px)_rotateY(-12deg)_rotateX(4deg)]" : ""} ${className}`}>
+      <div className="rounded-[12cqw] bg-gradient-to-br from-zinc-500 via-zinc-900 to-zinc-700 p-[0.8cqw] shadow-2xl shadow-black/40">
+        <div className="rounded-[11.2cqw] bg-zinc-950 p-[2.2cqw]">
+          <div className="relative overflow-hidden rounded-[9cqw] bg-black [container-type:inline-size]">
             {children}
             <div aria-hidden>
               <div className="absolute left-1/2 top-[2.5cqw] h-[7cqw] w-[26cqw] -translate-x-1/2 rounded-full bg-black" />

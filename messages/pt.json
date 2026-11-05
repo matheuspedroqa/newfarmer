@@ -45,7 +45,6 @@
     "usernameReminderSent": "Se houver uma conta com esse e-mail, enviamos o seu username.",
     "backToLoginShort": "Voltar para entrar",
     "acceptTerms": "Li e aceito os <terms>Termos de Uso</terms> e a <privacy>Política de Privacidade</privacy>",
-    "ageConfirm": "Tenho 13 anos ou mais",
     "marketingOptIn": "Quero receber novidades e ofertas do NewFarmer por e-mail",
     "accountDeleted": "Sua conta foi apagada. Obrigado por ter usado o NewFarmer."
   },
@@ -77,7 +76,6 @@
     "usernameReserved": "Este username é reservado. Escolha outro",
     "usernameTaken": "Este username já está em uso",
     "termsRequired": "Para criar a conta, aceite os Termos e a Política de Privacidade",
-    "ageRequired": "O NewFarmer é para maiores de 13 anos",
     "confirmRequired": "Marque a caixa para confirmar."
   },
   "climate": {
@@ -277,6 +275,11 @@
     "howMany": "Quantos?",
     "cropsTitle": "Plantações",
     "cropsHelp": "Marque o que você planta.",
+    "cropsCount": "{count, plural, =0 {Nenhuma marcada} one {# marcada} other {# marcadas}}",
+    "cropsSearch": "Buscar plantação",
+    "cropsChosen": "Plantações marcadas",
+    "cropsRemove": "Desmarcar {name}",
+    "cropsNone": "Nenhuma plantação com esse nome.",
     "save": "Salvar",
     "saved": "Salvo!",
     "continue": "Continuar",

@@ -50,7 +50,7 @@ test("sem assinar, a navegação interna também é bloqueada", async ({ page })
   await openUserMenu(page, "Perfil");
   await page.getByRole("link", { name: "Plantações", exact: true }).click();
   await expect(page).toHaveURL(/\/subscribe$/);
-  await expect(page.getByRole("link", { name: "NewFarmer", exact: true })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "NewFarmer" })).toBeVisible(); // o menu aparece também sem assinatura, mas leva para cá
   await openUserMenu(page, "MyFarm");
   await expect(page).toHaveURL(/\/subscribe$/);
 });
