@@ -10,11 +10,17 @@ export default async function MarketingLayout({ children }: { children: React.Re
   const footLink = "inline-flex min-h-11 items-center hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
   return (
     <div className="flex min-h-screen flex-col bg-bg">
-      <header className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-3 bg-bg/90 px-5 py-4 md:px-8 backdrop-blur">
+      {/* Computador: logo | Experimente já no centro | controles. Celular: o Experimente já ocupa a linha de baixo inteira. */}
+      <header className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-3 bg-bg/90 px-5 py-4 backdrop-blur md:px-8 lg:grid lg:grid-cols-[1fr_auto_1fr]">
         <Link href={pt || "/"} className="font-display text-2xl font-bold text-primary">🌾 {t("app.name")}</Link>
-        <div className="flex flex-wrap items-center gap-2 md:gap-4">
+        <Link
+          href={`${pt}/try`}
+          className="order-last inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-soft px-6 py-2 font-bold text-primary ring-2 ring-primary transition-colors duration-150 hover:bg-primary hover:text-primary-text focus-visible:outline-none focus-visible:ring-4 motion-reduce:transition-none lg:order-none lg:w-auto"
+        >
+          <span aria-hidden>✨</span> {t("home.tryNav")}
+        </Link>
+        <div className="flex flex-wrap items-center gap-2 md:gap-4 lg:justify-self-end">
           <TopControls />
-          <Link href={`${pt}/try`} className={`${navLink} font-semibold text-text`}>{t("home.tryNav")}</Link>
           <Link href="/login" className={navLink}>{t("home.login")}</Link>
           <Link href="/register" className="inline-flex min-h-11 items-center rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-opacity duration-150 hover:opacity-90 motion-reduce:transition-none">
             {t("home.headerCta")}
