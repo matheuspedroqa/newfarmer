@@ -32,6 +32,8 @@ import { setPreferences } from "@/server/preferences";
 import { refreshEstimatedClimate } from "@/server/registration";
 import { getWeatherProvider } from "@/server/weather";
 
+const SIGNUP_LIMIT_ON = false;
+
 export type FormState = {
   fieldErrors?: Record<string, string>;
   formError?: string;
@@ -63,7 +65,8 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
 
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitByIp(db, "signup", ip);
+  // shortcut: limite de cadastros por IP desligado a pedido (testes em produção, 2026-11-05); religar antes de divulgar o site.
+  const limit = SIGNUP_LIMIT_ON ? await limitByIp(db, "signup", ip) : { ok: true as const, firstBlock: false };
   if (!limit.ok) {
     if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "signup" }, ip });
     return { formError: "rateLimited", values };
