@@ -45,3 +45,7 @@ next-env.d.ts
 /playwright-report/
 /graphify-out/
 /.superpowers/
+
+/tests/prod/.auth/
+/test-results-prod/
+/playwright-report-prod/

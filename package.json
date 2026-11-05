@@ -11,7 +11,9 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "screenshots": "playwright test -c playwright.screenshots.config.ts",
-    "test:live": "vitest run --config vitest.live.config.ts"
+    "test:live": "vitest run --config vitest.live.config.ts",
+    "test:prod": "playwright test -c playwright.prod.config.ts",
+    "test:prod:report": "playwright show-report playwright-report-prod"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.14",
