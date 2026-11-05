@@ -77,6 +77,22 @@ $env:PENTEST_RATELIMIT = "1"; npm run test:prod; Remove-Item Env:PENTEST_RATELIM
 
 Se um teste falhar com "Muitas tentativas", foi um desses limites. Espere e rode de novo.
 
+## Firewall da Vercel ("Vercel Security Checkpoint")
+
+Os testes de pentest parecem um ataque de verdade, e o firewall da Vercel pode bloquear o seu IP por um tempo. Nesse caso, toda página responde 403 ou "Estamos verificando seu navegador", e os testes falham por tempo esgotado. Isso **prova que a proteção funciona**, mas impede o resto da rodada.
+
+Para rodar a suíte inteira sem bloqueio:
+
+1. Na Vercel, abra o projeto, vá em **Firewall** e use **Add Rule** (ou **System Bypass Rules**, se aparecer).
+2. Crie a regra "se o IP for o seu → **Bypass**". Para saber o seu IP, abra https://api.ipify.org.
+3. Rode os testes e **apague a regra no fim**.
+
+Se a rodada for interrompida no meio, quando o bloqueio passar rode só a limpeza:
+
+```powershell
+npm run test:prod -- --project=cleanup
+```
+
 ## O que é coberto
 
 | Pasta | Testes |
