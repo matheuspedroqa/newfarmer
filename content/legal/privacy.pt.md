@@ -46,7 +46,8 @@ O número do cartão **nunca** chega ao NewFarmer e não é guardado por nós.
 - **registro de erros:** quando uma página do site dá erro, guardamos o endereço da página (sem o que vem depois do "?"), uma mensagem curta do erro (até 300 caracteres) e a hora. **Nunca** guardamos o conteúdo do pedido nem os cabeçalhos. Usamos isso para a segurança e a manutenção do site. A mensagem pode, por acaso, conter algo que você digitou;
 - **códigos de e-mail:** os códigos dos links para trocar a senha e para confirmar o e-mail, guardados embaralhados;
 - **medição de páginas:** só se você clicar em "Aceitar todos" no aviso de cookies. Guardamos um identificador aleatório do visitante, a sua conta (se estiver logado), a página visitada sem o que vem depois do "?", o site de origem (só o endereço do site), a data e a cidade e o país aproximados de onde você acessou (a Vercel calcula pelo endereço IP). **Não guardamos o endereço IP** nessa medição;
-- **histórico de e-mails:** quais e-mails de novidades enviamos para você e quando.
+- **histórico de e-mails:** quais e-mails de novidades enviamos para você e quando;
+- **formulário de contato:** o nome, o e-mail e a mensagem que você escreve na página Contato. Isso vai por e-mail (pelo Resend) para a nossa caixa de contato, só para responder você, e **não fica guardado no site**.
 
 ### Previsão do tempo
 
@@ -69,7 +70,7 @@ Usamos alguns fornecedores para o site funcionar. Eles só tratam os dados para 
 
 - **Supabase** (banco de dados): os dados ficam guardados na Irlanda, na União Europeia.
 - **Vercel** (hospedagem do site): recebe os acessos ao site e guarda registros técnicos com o endereço IP. Pode tratar os dados na União Europeia ou nos Estados Unidos, com cláusulas contratuais-padrão.
-- **Resend** (envio de e-mails): recebe o seu e-mail, nome e username para enviar os e-mails da conta e, se você aceitou, os e-mails de novidades.
+- **Resend** (envio de e-mails): recebe o seu e-mail, nome e username para enviar os e-mails da conta e, se você aceitou, os e-mails de novidades; e as mensagens do formulário de contato.
 - **Open-Meteo** (previsão do tempo): recebe o texto que você digita ao procurar uma cidade e as coordenadas da cidade, para devolver a previsão. Não recebe nenhum dado da sua conta.
 - **Stripe** (pagamentos): processa o pagamento da assinatura, por conta própria e como nosso operador. Recebe o seu e-mail e os dados do cartão, que você digita no ambiente do Stripe. O Stripe guarda os dados de cobrança pelo prazo que a lei fiscal exige, mesmo depois de a sua conta no NewFarmer ser apagada.
 

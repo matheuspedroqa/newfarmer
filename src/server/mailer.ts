@@ -8,6 +8,8 @@ export interface MailMessage {
   /** Remetente próprio (marketing). Sem ele, vale o do mailer. */
   from?: string;
   headers?: Record<string, string>;
+  /** Para onde vai o "Responder" (contato: o e-mail de quem escreveu). */
+  replyTo?: string;
 }
 
 export interface Mailer {
@@ -30,8 +32,8 @@ export function createDevInboxMailer(db: Db): Mailer {
 
 export function createResendMailer(apiKey: string, from: string, fetchFn: typeof fetch = fetch): Mailer {
   return {
-    async send({ to, subject, html, from: own, headers }) {
-      const replyTo = process.env.MAIL_REPLY_TO;
+    async send({ to, subject, html, from: own, headers, replyTo: ownReplyTo }) {
+      const replyTo = ownReplyTo ?? process.env.MAIL_REPLY_TO;
       const response = await fetchFn("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },

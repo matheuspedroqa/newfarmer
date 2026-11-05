@@ -187,3 +187,23 @@ test.describe("landing: preço, alternância e dados estruturados", () => {
     await expect(page.locator("h1")).toHaveCount(1);
   });
 });
+
+test("Contato: pelo rodapé, mostra os erros, envia e a mensagem chega na caixa de contato", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("contentinfo").getByRole("link", { name: "Contato" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Fale conosco" })).toBeVisible();
+  await page.getByRole("button", { name: "Enviar mensagem" }).click();
+  await expect(page.getByText("Preencha este campo").first()).toBeVisible();
+
+  const marca = `Teste ${Date.now()}`;
+  await page.getByLabel("Nome").fill("Ana");
+  await page.getByLabel("Seu e-mail").fill("ana@exemplo.com");
+  await page.getByLabel("Mensagem").fill(marca);
+  await page.getByRole("button", { name: "Enviar mensagem" }).click();
+  await expect(page.getByTestId("contact-sent")).toBeVisible();
+
+  await page.goto("/dev/inbox");
+  const mail = page.locator("article", { hasText: marca });
+  await expect(mail).toContainText("contact@newfarmer.app");
+  await expect(mail).toContainText("Contato pelo site: Ana");
+});

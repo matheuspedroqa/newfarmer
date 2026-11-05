@@ -860,5 +860,15 @@
     "pauseLimited": "Muitas alterações seguidas. Espere um pouco e tente de novo.",
     "colLocation": "Local",
     "locationSignup": "cadastro"
+  },
+  "contact": {
+    "footer": "Contato",
+    "title": "Fale conosco",
+    "intro": "Dúvidas, sugestões ou problemas com a conta? Escreva para nós e respondemos no seu e-mail.",
+    "name": "Nome",
+    "email": "Seu e-mail",
+    "message": "Mensagem",
+    "send": "Enviar mensagem",
+    "sent": "Mensagem enviada! Vamos responder no seu e-mail."
   }
 }

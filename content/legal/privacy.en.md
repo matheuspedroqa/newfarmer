@@ -46,7 +46,8 @@ Your card number **never** reaches NewFarmer and is not stored by us.
 - **error log:** when a page of the site fails, we store the page address (without what comes after the "?"), a short error message (up to 300 characters) and the time. We **never** store the content of the request or its headers. We use this for the security and maintenance of the site. The message may, by chance, contain something you typed;
 - **e-mail codes:** the codes in the links to reset your password and to confirm your e-mail, stored scrambled;
 - **page measurement:** only if you click "Accept all" on the cookie notice. We store a random visitor identifier, your account (if signed in), the page visited without what comes after the "?", the referring site (only the site address), the date and the approximate city and country you visited from (Vercel works them out from the IP address). **We do not store the IP address** in this measurement;
-- **e-mail history:** which news e-mails we sent you and when.
+- **e-mail history:** which news e-mails we sent you and when;
+- **contact form:** the name, e-mail and message you write on the Contact page. It goes by e-mail (through Resend) to our contact inbox, only to reply to you, and **is not stored on the site**.
 
 ### Weather forecasts
 
@@ -69,7 +70,7 @@ We use a few providers to run the site. They only process data to provide that s
 
 - **Supabase** (database): the data is stored in Ireland, in the European Union.
 - **Vercel** (site hosting): receives the visits to the site and keeps technical logs with the IP address. It may process data in the European Union or the United States, under standard contractual clauses.
-- **Resend** (sending e-mails): receives your e-mail address, name and username to send account e-mails and, if you agreed, news e-mails.
+- **Resend** (sending e-mails): receives your e-mail address, name and username to send account e-mails and, if you agreed, news e-mails; and the messages from the contact form.
 - **Open-Meteo** (weather forecasts): receives the text you type when searching for a city and the city's coordinates, to return the forecast. It does not receive any of your account data.
 - **Stripe** (payments): processes the subscription payment, on its own account and as our processor. It receives your e-mail address and card details, which you type in Stripe's own page. Stripe keeps billing data for as long as tax law requires, even after your NewFarmer account is deleted.
 

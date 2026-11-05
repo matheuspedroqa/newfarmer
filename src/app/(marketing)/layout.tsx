@@ -32,6 +32,7 @@ export default async function MarketingLayout({ children }: { children: React.Re
       <footer className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 px-8 py-6 text-sm text-muted">
         <Link href="/privacy" className={footLink}>{t("home.privacy")}</Link>
         <Link href="/terms" className={footLink}>{t("home.terms")}</Link>
+        <Link href={`${pt}/contact`} className={footLink}>{t("contact.footer")}</Link>
         <CookiePreferencesLink className={footLink} />
       </footer>
     </div>

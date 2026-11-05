@@ -860,5 +860,15 @@
     "pauseLimited": "Too many changes in a row. Wait a moment and try again.",
     "colLocation": "Location",
     "locationSignup": "sign-up"
+  },
+  "contact": {
+    "footer": "Contact",
+    "title": "Contact us",
+    "intro": "Questions, ideas or trouble with your account? Write to us and we will reply by e-mail.",
+    "name": "Name",
+    "email": "Your e-mail",
+    "message": "Message",
+    "send": "Send message",
+    "sent": "Message sent! We will reply by e-mail."
   }
 }

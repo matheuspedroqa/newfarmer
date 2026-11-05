@@ -43,6 +43,12 @@ export const forgotSchema = z.object({ identifier: z.string().trim().min(1, "req
 
 export const usernameReminderSchema = z.object({ email });
 
+export const contactSchema = z.object({
+  name: z.string().trim().min(1, "required").max(80, "tooLong"),
+  email,
+  message: z.string().trim().min(1, "required").max(5000, "tooLong"),
+});
+
 export const resetSchema = z
   .object({ token: z.string().min(1), password: newPassword, confirmPassword: z.string() })
   .refine((d) => d.password === d.confirmPassword, { path: ["confirmPassword"], message: "passwordsDontMatch" });
