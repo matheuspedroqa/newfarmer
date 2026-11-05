@@ -64,6 +64,7 @@
     "locked": "Muitas tentativas. Tente de novo em 15 minutos.",
     "paymentError": "Não foi possível cancelar a assinatura agora. Tente de novo em alguns minutos.",
     "rateLimited": "Muitas tentativas. Tente de novo em alguns minutos.",
+    "checkoutFailed": "Não foi possível abrir o pagamento agora. Tente de novo em alguns minutos.",
     "linkExpired": "Este link expirou. Peça um novo",
     "generic": "Algo deu errado. Tente de novo.",
     "countInvalid": "Use um número inteiro",

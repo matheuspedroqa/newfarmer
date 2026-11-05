@@ -9,6 +9,7 @@ import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getPaymentProvider, priceIdFor, shouldUseFakePayments } from "@/server/payments";
 import { limitWrites } from "@/server/rate-limit";
+import { logRequestError } from "@/server/monitoring";
 import { clientIp } from "@/server/request-context";
 import { ensureCustomer, getSubscription, hasOpenSubscription } from "@/server/subscriptions";
 
@@ -22,17 +23,24 @@ export async function startCheckoutAction(): Promise<void> {
     redirect("/subscribe?error=rateLimited");
   }
   if (await hasOpenSubscription(db, user.id)) redirect("/dashboard");
-  const provider = getPaymentProvider();
   const currency = currencyForCountry(user.countryCode);
-  const customerId = await ensureCustomer(db, provider, user);
-  const url = await provider.createCheckout({
-    customerId,
-    priceId: shouldUseFakePayments() ? "fake_price" : priceIdFor(currency),
-    userId: user.id,
-    locale: (await getLocale()) === "pt" ? "pt" : "en",
-    successUrl: `${appUrl()}/subscribe/success?session_id={CHECKOUT_SESSION_ID}`,
-    cancelUrl: `${appUrl()}/subscribe`,
-  });
+  let url: string;
+  try {
+    const provider = getPaymentProvider();
+    const customerId = await ensureCustomer(db, provider, user);
+    url = await provider.createCheckout({
+      customerId,
+      priceId: shouldUseFakePayments() ? "fake_price" : priceIdFor(currency),
+      userId: user.id,
+      locale: (await getLocale()) === "pt" ? "pt" : "en",
+      successUrl: `${appUrl()}/subscribe/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancelUrl: `${appUrl()}/subscribe`,
+    });
+  } catch (error) {
+    // Stripe fora do ar ou variável faltando na Vercel: o motivo vai para Admin > Monitoramento e a pessoa vê um aviso.
+    await logRequestError(db, "action:startCheckout", error instanceof Error ? error.message : String(error)).catch(() => undefined);
+    redirect("/subscribe?error=checkout");
+  }
   await logSafely(db, { userId: user.id, action: "billing.checkoutStarted", target: user.username, details: { currency }, ip });
   redirect(url);
 }

@@ -17,7 +17,8 @@ export default async function SubscribePage({ searchParams }: { searchParams: Pr
   const user = await requireUser();
   if (hasAccess(user, await getSubscription(await getDb(), user.id))) redirect("/dashboard");
   const t = await getTranslations("subscribe");
-  const rateLimited = (await searchParams).error === "rateLimited";
+  const { error } = await searchParams;
+  const formError = error === "rateLimited" ? "rateLimited" : error === "checkout" ? "checkoutFailed" : null;
   const price = formatPrice(currencyForCountry(user.countryCode), (await getLocale()) === "pt" ? "pt" : "en");
   const link = "inline-flex min-h-11 items-center text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
   return (
@@ -33,7 +34,7 @@ export default async function SubscribePage({ searchParams }: { searchParams: Pr
       </ul>
       <p className="mt-4 text-sm text-muted">{t("billingNote")}</p>
       <p className="mt-2 text-sm text-muted">{t("refund")}</p>
-      {rateLimited && <p role="alert" className="mt-4 rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{(await getTranslations("errors"))("rateLimited")}</p>}
+      {formError && <p role="alert" className="mt-4 rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{(await getTranslations("errors"))(formError)}</p>}
       <form action={startCheckoutAction} className="mt-6">
         <button type="submit" className="min-h-11 w-full rounded-xl bg-primary py-3 font-bold text-primary-text shadow-lg shadow-primary/30 transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:w-80">
           {t("cta", { price })}
