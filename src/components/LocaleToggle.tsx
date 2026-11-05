@@ -24,7 +24,7 @@ export function LocaleToggle({ current }: { current: Locale }) {
             startTransition(async () => {
               await setLocaleAction(locale);
               // Na landing e nas páginas legais o idioma vem da URL (/pt/...): troca de endereço (navegação completa: o <html lang> vem do layout raiz, que a navegação suave não refaz).
-              const m = /^(?:\/pt)?(\/privacy|\/terms)?\/?$/.exec(pathname);
+              const m = /^(?:\/pt)?(\/try|\/privacy|\/terms)?\/?$/.exec(pathname);
               if (m) window.location.assign(`${locale === "pt" ? "/pt" : ""}${m[1] ?? (locale === "pt" ? "" : "/")}`);
               else router.refresh();
             })

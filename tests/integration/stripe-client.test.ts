@@ -63,4 +63,17 @@ describe("cliente Stripe", () => {
     expect(endpoint).toBe("https://api.stripe.com/v1/customers/cus_1");
     expect(init.method).toBe("DELETE");
   });
+
+  it("setPaused pausa sem cobrar, retoma tirando a pausa, e assinatura pausada vira status paused", async () => {
+    const sub = { id: "sub_1", customer: "cus_1", status: "active", items: { data: [{ price: { unit_amount: 699, currency: "brl" } }] } };
+    const pause = vi.fn(async () => ok({ ...sub, pause_collection: { behavior: "void" } }));
+    expect((await createStripeProvider("k", asFetch(pause)).setPaused("sub_1", true)).status).toBe("paused");
+    const [endpoint, init] = pause.mock.calls[0] as unknown as [string, RequestInit];
+    expect(endpoint).toBe("https://api.stripe.com/v1/subscriptions/sub_1");
+    expect(new URLSearchParams(init.body as string).get("pause_collection[behavior]")).toBe("void");
+
+    const resume = vi.fn(async () => ok({ ...sub, pause_collection: null }));
+    expect((await createStripeProvider("k", asFetch(resume)).setPaused("sub_1", false)).status).toBe("active");
+    expect((resume.mock.calls[0] as unknown as [string, RequestInit])[1].body).toBe("pause_collection=");
+  });
 });

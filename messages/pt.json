@@ -523,7 +523,6 @@
         "text": "Avisos do que é exigido onde você mora, como a declaração de animais."
       }
     },
-    "insideTitle": "Veja por dentro",
     "desktop": "Computador",
     "mobile": "Celular",
     "shots": {
@@ -539,16 +538,28 @@
     "stepsTitle": "Como funciona",
     "steps": {
       "one": {
+        "icon": "👤",
         "title": "Crie a conta",
-        "text": "Informe seu nome e sua cidade."
+        "text": "Informe nome, e-mail e a sua cidade. Pela cidade, o NewFarmer descobre o seu clima e o seu hemisfério.",
+        "note": "Leva cerca de 1 minuto"
       },
       "two": {
+        "icon": "🐔",
         "title": "Conte o que você cria",
-        "text": "Marque os animais e as plantações da sua propriedade."
+        "text": "Marque os animais e quantos tem, e busque as plantações da sua propriedade.",
+        "note": "Dá para mudar depois em MyFarm"
       },
       "three": {
-        "title": "Receba o que fazer em cada mês",
-        "text": "Guias, calendário e clima prontos para você."
+        "icon": "💳",
+        "title": "Assine",
+        "text": "Pague a mensalidade no cartão, num ambiente seguro da Stripe.",
+        "note": "Cancele quando quiser, no Perfil"
+      },
+      "four": {
+        "icon": "📅",
+        "title": "Use todo dia",
+        "text": "O Painel mostra o que fazer neste mês, a previsão de 5 dias e o seu diário, no computador ou no celular.",
+        "note": "Funciona até sem internet"
       }
     },
     "priceTitle": "Um plano simples",
@@ -561,29 +572,6 @@
       "e": "Regras do seu país"
     },
     "priceCancel": "Cancele quando quiser",
-    "faqTitle": "Perguntas frequentes",
-    "faq": {
-      "card": {
-        "q": "Preciso de cartão?",
-        "a": "Sim. É uma assinatura mensal, paga no cartão."
-      },
-      "cancel": {
-        "q": "Posso cancelar?",
-        "a": "Sim, quando quiser, no Perfil. Você usa até o fim do mês já pago."
-      },
-      "offline": {
-        "q": "Funciona sem internet?",
-        "a": "Sim. Você anota sem sinal e o NewFarmer envia quando a internet voltar."
-      },
-      "data": {
-        "q": "Meus dados são meus?",
-        "a": "São. Você pode baixar tudo ou apagar a conta no Perfil."
-      },
-      "who": {
-        "q": "Para quem é?",
-        "a": "Para pequenos criadores e hortas de família."
-      }
-    },
     "finalTitle": "Comece hoje a organizar a sua roça",
     "privacy": "Privacidade",
     "terms": "Termos",
@@ -603,7 +591,13 @@
         "title": "24",
         "text": "Galinhas"
       }
-    }
+    },
+    "tryNav": "Experimente já",
+    "tryMetaTitle": "Experimente já",
+    "tryTitle": "Experimente já",
+    "tryDescription": "Veja o NewFarmer por dentro, no computador e no celular, e como começar em poucos minutos.",
+    "trySub": "Veja como o NewFarmer fica no computador e no celular, e como começar em poucos minutos.",
+    "stepsSub": "Do cadastro ao primeiro dia de uso, sem complicação."
   },
   "notFound": {
     "title": "Página não encontrada",
@@ -647,7 +641,9 @@
       "subscriptionChanged": "Assinatura alterada"
     },
     "admin": {
-      "viewedUser": "Viu dados de uma conta"
+      "viewedUser": "Viu dados de uma conta",
+      "subscriptionPaused": "Pausou uma assinatura",
+      "subscriptionResumed": "Retomou uma assinatura"
     },
     "marketing": {
       "optInChanged": "Mudou o aceite de e-mails",
@@ -720,7 +716,8 @@
     "processing": "Pagamento recebido, liberando sua conta…",
     "successTitle": "Assinatura",
     "notReceived": "Ainda não recebemos a confirmação do pagamento.",
-    "back": "Voltar para a assinatura"
+    "back": "Voltar para a assinatura",
+    "paused": "Sua assinatura está pausada. Fale com o suporte para retomar o acesso."
   },
   "billing": {
     "title": "Assinatura",
@@ -733,7 +730,9 @@
     "accessUntil": "Acesso até {date}",
     "manage": "Gerenciar ou cancelar",
     "subscribe": "Assinar",
-    "owner": "Conta do dono: sem cobrança"
+    "owner": "Conta do dono: sem cobrança",
+    "paused": "Pausada",
+    "pausedNote": "Sua assinatura está pausada e não há cobrança. Fale com o suporte para retomar."
   },
   "admin": {
     "title": "Admin",
@@ -848,6 +847,15 @@
     "campaignDone": "Campanha enviada. Total de envios: {total}.",
     "previewFailed": "Não foi possível gerar a prévia. Tente de novo.",
     "resuming": "Campanha em andamento: faltam {remaining} envios.",
-    "continueThis": "Continuar este envio"
+    "continueThis": "Continuar este envio",
+    "status_paused": "Pausada",
+    "pauseSubscription": "Pausar assinatura",
+    "resumeSubscription": "Retomar assinatura",
+    "pauseHelp": "A Stripe para de cobrar e a pessoa perde o acesso até você retomar.",
+    "resumeHelp": "A cobrança volta no próximo ciclo e o acesso volta na hora.",
+    "pauseFailed": "Não deu para falar com a Stripe. Veja o motivo em Monitoramento e tente de novo.",
+    "pauseLimited": "Muitas alterações seguidas. Espere um pouco e tente de novo.",
+    "colLocation": "Local",
+    "locationSignup": "cadastro"
   }
 }

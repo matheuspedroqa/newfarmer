@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { setSubscriptionPausedAction } from "@/app/actions/admin";
 import { CROPS } from "@/lib/catalog";
 import { formatMoney, type Currency } from "@/lib/pricing";
 import { logSafely } from "@/server/activity-log";
@@ -14,9 +15,10 @@ export async function generateMetadata(): Promise<Metadata> {
   return { title: (await getTranslations())("meta.subscriber") };
 }
 
-export default async function SubscriberDetailPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function SubscriberDetailPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ error?: string }> }) {
   const admin = await requirePlatformAdmin();
   const { id } = await params;
+  const { error } = await searchParams;
   if (!/^\d{1,9}$/.test(id)) notFound();
   const db = await getDb();
   const d = await getSubscriberDetail(db, Number(id));
@@ -29,7 +31,7 @@ export default async function SubscriberDetailPage({ params }: { params: Promise
   const date = (ms: number | null) => (ms === null ? t("never") : new Intl.DateTimeFormat(locale, { dateStyle: "short" }).format(ms));
   const dateTime = new Intl.DateTimeFormat(locale, { dateStyle: "short", timeStyle: "medium" });
   const sub = d.subscription;
-  const status = !sub ? "none" : sub.status === "trialing" ? "active" : ["active", "past_due", "canceled"].includes(sub.status) ? sub.status : "none";
+  const status = !sub ? "none" : sub.status === "trialing" ? "active" : ["active", "past_due", "paused", "canceled"].includes(sub.status) ? sub.status : "none";
   const block = "rounded-3xl bg-surface p-5 ring-1 ring-border";
   const pill = "rounded-full bg-background px-3 py-1 text-sm ring-1 ring-border";
   const rows = (items: [string, React.ReactNode][]) => (
@@ -74,6 +76,19 @@ export default async function SubscriberDetailPage({ params }: { params: Promise
         <section className={block} aria-labelledby="blk-sub">
           <h3 id="blk-sub" className="font-display text-xl font-bold">{t("subscription")}</h3>
           {sub ? rows(subRows) : <p className="mt-3 text-sm text-muted">{t("noSubscription")}</p>}
+          {(error === "pause" || error === "rateLimited") && (
+            <p role="alert" className="mt-3 rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{t(error === "pause" ? "pauseFailed" : "pauseLimited")}</p>
+          )}
+          {(sub?.status === "active" || sub?.status === "paused") && (
+            <form action={setSubscriptionPausedAction} className="mt-4">
+              <input type="hidden" name="userId" value={d.id} />
+              <input type="hidden" name="pause" value={sub.status === "active" ? "1" : "0"} />
+              <button type="submit" className="inline-flex min-h-11 items-center rounded-full border-2 border-primary px-5 py-2 font-semibold transition hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                {t(sub.status === "active" ? "pauseSubscription" : "resumeSubscription")}
+              </button>
+              <p className="mt-2 text-xs text-muted">{t(sub.status === "active" ? "pauseHelp" : "resumeHelp")}</p>
+            </form>
+          )}
         </section>
         <section className={block} aria-labelledby="blk-farm" data-testid="detail-farm">
           <h3 id="blk-farm" className="font-display text-xl font-bold">{t("creation")}</h3>

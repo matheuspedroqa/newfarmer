@@ -1,15 +1,18 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { unstable_rethrow } from "next/navigation";
+import { redirect, unstable_rethrow } from "next/navigation";
 import { z } from "zod";
 import { appUrl } from "@/server/app-url";
-import { logWriteLimited } from "@/server/activity-log";
+import { logSafely, logWriteLimited } from "@/server/activity-log";
 import { getDb } from "@/server/db";
 import { requirePlatformAdmin } from "@/server/authz";
 import { getMailer } from "@/server/mailer";
 import { AUDIENCES, sendOrCreateCampaign } from "@/server/marketing";
 import { MARKETING_TEMPLATES, renderMarketingEmail } from "@/server/marketing-templates";
+import { logRequestError } from "@/server/monitoring";
+import { getPaymentProvider } from "@/server/payments";
+import { getSubscription, upsertSubscription } from "@/server/subscriptions";
 import { limitWrites } from "@/server/rate-limit";
 import { clientIp } from "@/server/request-context";
 import { resolveLocale } from "@/i18n/locales";
@@ -107,4 +110,34 @@ export async function sendCampaignAction(_prev: CampaignState, formData: FormDat
     unstable_rethrow(error);
     return { error: "sendFailed", ...echoId(formData) };
   }
+}
+
+/** Pausa ou retoma a assinatura de alguém pela ficha do assinante. Pausada: a Stripe não cobra e o app fica bloqueado. */
+export async function setSubscriptionPausedAction(formData: FormData): Promise<void> {
+  const admin = await requirePlatformAdmin();
+  const userId = Number(formData.get("userId"));
+  const pause = formData.get("pause") === "1";
+  if (!Number.isSafeInteger(userId) || userId <= 0) redirect("/admin/subscribers");
+  const back = `/admin/subscribers/${userId}`;
+  const db = await getDb();
+  const ip = await clientIp();
+  const limit = await limitWrites(db, admin.id);
+  if (!limit.ok) {
+    if (limit.firstBlock) await logWriteLimited(db, admin.id, admin.username, ip);
+    redirect(`${back}?error=rateLimited`);
+  }
+  const sub = await getSubscription(db, userId);
+  // Só pausa o que está ativo e só retoma o que está pausado (clique duplo ou aba velha não fazem nada).
+  if (!sub?.subscriptionId || sub.status !== (pause ? "active" : "paused")) redirect(back);
+  try {
+    const updated = await getPaymentProvider().setPaused(sub.subscriptionId, pause);
+    // Grava já, sem esperar o aviso da Stripe; eventos mais velhos que agora são ignorados.
+    await upsertSubscription(db, userId, sub.customerId, updated, Date.now(), Math.floor(Date.now() / 1000));
+  } catch (error) {
+    await logRequestError(db, "action:setSubscriptionPaused", error instanceof Error ? error.message : String(error)).catch(() => undefined);
+    redirect(`${back}?error=pause`);
+  }
+  await logSafely(db, { userId: admin.id, action: pause ? "admin.subscriptionPaused" : "admin.subscriptionResumed", target: String(userId), ip });
+  revalidatePath(back);
+  redirect(back);
 }

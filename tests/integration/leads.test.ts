@@ -41,6 +41,19 @@ describe("listLeads e leadFunnel", () => {
     expect(await leadFunnel(db, 50)).toEqual({ "/": 5, "/register": 4, "/welcome": 4, "/subscribe": 3, paid: 1 });
   });
 
+  it("mostra de onde acessou por último; conta sem visita medida mostra a cidade do cadastro", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db, { email: "ana@x.com" });
+    const bia = await makeUser(db, { email: "bia@x.com" });
+    await recordPageView(db, { ...view("v1", "/"), city: "Lisboa", country: "PT" }, 100);
+    await recordPageView(db, view("v1", "/register"), 110); // sem país (fora da Vercel): não apaga o último local
+    await recordPageView(db, { ...view("v2", "/dashboard", ana), city: "São Paulo", country: "BR" }, 120);
+    const byId = new Map((await listLeads(db, { since: 0 })).map((l) => [l.id, l.location]));
+    expect(byId.get("v:v1")).toEqual({ city: "Lisboa", country: "PT", signup: false });
+    expect(byId.get(`u:${ana}`)).toEqual({ city: "São Paulo", country: "BR", signup: false });
+    expect(byId.get(`u:${bia}`)).toMatchObject({ signup: true });
+  });
+
   it("não mostra o dono do site, nem no funil", async () => {
     const db = await testDb();
     const dono = await makeUser(db, { email: "dono@x.com" });

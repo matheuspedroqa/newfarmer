@@ -5,7 +5,7 @@ import { BrowserFrame } from "./BrowserFrame";
 import { FloatingCard, VerifiedSeal } from "./DeviceExtras";
 import { PhoneFrame } from "./PhoneFrame";
 
-type Shot = { name: string; path: string; card: { icon: string; title: string; text: string }; src: { desktop: string; mobile: string }; alt: string; caption: string };
+type Shot = { name: string; card: { icon: string; title: string; text: string }; src: { desktop: string; mobile: string }; alt: string; caption: string };
 
 /** Alterna os 3 prints entre computador e celular. */
 export function ShowcaseToggle({ shots, labels }: { shots: Shot[]; labels: { desktop: string; mobile: string } }) {
@@ -31,9 +31,11 @@ export function ShowcaseToggle({ shots, labels }: { shots: Shot[]; labels: { des
       </div>
       <ul className={`mt-8 grid gap-8 ${mode === "desktop" ? "grid-cols-[minmax(0,1fr)] lg:grid-cols-3" : "grid-cols-[minmax(0,1fr)] sm:grid-cols-3"}`}>
         {shots.map((s) => (
-          <li key={s.name} data-testid="showcase-item" className="relative flex min-w-0 flex-col">
+          <li key={s.name} data-testid="showcase-item" className="flex min-w-0 flex-col">
+            {/* O cartão flutuante fica preso ao print, não ao item: assim não cobre a legenda embaixo. */}
+            <div className="relative">
             {mode === "desktop" ? (
-              <BrowserFrame path={s.path}>
+              <BrowserFrame>
                 <Image src={s.src.desktop} alt={s.alt} width={1440} height={900} sizes="(min-width: 1024px) 380px, 90vw" className="h-auto w-full" />
               </BrowserFrame>
             ) : (
@@ -43,7 +45,8 @@ export function ShowcaseToggle({ shots, labels }: { shots: Shot[]; labels: { des
             )}
             <FloatingCard {...s.card} className={mode === "desktop" ? "-right-2 -bottom-3 w-40" : "right-0 bottom-24 w-36"} />
             {mode === "mobile" && s.name === "dashboard" && <VerifiedSeal className="-left-3 top-2 hidden sm:block" />}
-            <p className="mt-10 text-center text-sm font-semibold text-muted">{s.caption}</p>
+            </div>
+            <p className="mt-8 text-center text-sm font-semibold text-muted">{s.caption}</p>
           </li>
         ))}
       </ul>

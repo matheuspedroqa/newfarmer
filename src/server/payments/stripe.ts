@@ -7,13 +7,16 @@ type Raw = Record<string, any>; // eslint-disable-line @typescript-eslint/no-exp
 const ms = (seconds: unknown) => (typeof seconds === "number" ? seconds * 1000 : null);
 const idOf = (v: unknown) => String(typeof v === "object" && v ? (v as { id: unknown }).id : v);
 
-/** Objeto de assinatura da Stripe (webhook ou expand) -> nosso formato. Versões novas da API movem current_period_end para o item. */
+/**
+ * Objeto de assinatura da Stripe (webhook ou expand) -> nosso formato. Versões novas da API movem current_period_end para o item.
+ * Pausa na Stripe é "active" com pause_collection; aqui vira o status "paused", que não dá acesso.
+ */
 export function parseStripeSubscription(raw: Raw): StripeSubscription {
   const item = raw.items?.data?.[0];
   return {
     id: String(raw.id),
     customer: idOf(raw.customer),
-    status: String(raw.status),
+    status: raw.status === "active" && raw.pause_collection ? "paused" : String(raw.status),
     currency: String(item?.price?.currency ?? raw.currency ?? ""),
     amount: Number(item?.price?.unit_amount ?? 0),
     currentPeriodEnd: ms(raw.current_period_end ?? item?.current_period_end),
@@ -63,6 +66,11 @@ export function createStripeProvider(secretKey: string, fetchFn: typeof fetch = 
     async deleteCustomer(customerId) {
       // 404: o cliente já não existe (nova tentativa, ou apagado pelo painel); não pode travar a exclusão da conta.
       await call("DELETE", `customers/${encodeURIComponent(customerId)}`, undefined, 404);
+    },
+    async setPaused(subscriptionId, paused) {
+      // void: as faturas do tempo pausado não são cobradas; vazio tira a pausa.
+      const form: Record<string, string> = paused ? { "pause_collection[behavior]": "void" } : { pause_collection: "" };
+      return parseStripeSubscription(await call("POST", `subscriptions/${encodeURIComponent(subscriptionId)}`, form));
     },
   };
 }

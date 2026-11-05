@@ -5,11 +5,11 @@ export const FUNNEL_STEPS = ["/", "/register", "/welcome", "/subscribe", "paid"]
 
 export async function recordPageView(
   db: Db,
-  v: { visitorId: string; userId: number | null; path: string; referrer: string },
+  v: { visitorId: string; userId: number | null; path: string; referrer: string; city?: string; country?: string },
   now = Date.now(),
 ) {
-  await db.run("INSERT INTO page_views (visitor_id, user_id, path, referrer, created_at) VALUES ($1,$2,$3,$4,$5)", [
-    v.visitorId, v.userId, v.path, v.referrer, now,
+  await db.run("INSERT INTO page_views (visitor_id, user_id, path, referrer, created_at, city, country) VALUES ($1,$2,$3,$4,$5,$6,$7)", [
+    v.visitorId, v.userId, v.path, v.referrer, now, v.city ?? "", v.country ?? "",
   ]);
 }
 
@@ -36,18 +36,24 @@ const NOT_ADMIN = "visitor_id NOT IN (SELECT visitor_id FROM page_views WHERE us
 const LEADS = `WITH pv AS (
     SELECT visitor_id::text AS visitor_id, MIN(created_at) AS first_seen, MAX(created_at) AS last_seen, COUNT(*) AS pages,
       (array_agg(path ORDER BY created_at DESC, id DESC))[1] AS last_path, MAX(user_id) AS uid,
+      (array_agg(city ORDER BY created_at DESC, id DESC) FILTER (WHERE country <> ''))[1] AS city,
+      (array_agg(country ORDER BY created_at DESC, id DESC) FILTER (WHERE country <> ''))[1] AS country,
       MAX(CASE WHEN path IN ('/', '/pt') THEN 0 WHEN path = '/register' THEN 1 WHEN path = '/welcome' THEN 2
                WHEN path = '/subscribe' OR path LIKE '/subscribe/%' THEN 3 ELSE -1 END) AS step
     FROM page_views WHERE ${NOT_ADMIN} GROUP BY visitor_id
   ),
   acc AS (
     SELECT u.id AS uid, u.username, u.email, u.created_at, MIN(pv.first_seen) AS first_seen, MAX(pv.last_seen) AS last_seen,
-      COALESCE(SUM(pv.pages), 0) AS pages, (array_agg(pv.last_path ORDER BY pv.last_seen DESC NULLS LAST))[1] AS last_path, MAX(pv.step) AS pv_step
+      COALESCE(SUM(pv.pages), 0) AS pages, (array_agg(pv.last_path ORDER BY pv.last_seen DESC NULLS LAST))[1] AS last_path, MAX(pv.step) AS pv_step,
+      (array_agg(pv.city ORDER BY pv.last_seen DESC) FILTER (WHERE pv.country IS NOT NULL))[1] AS city,
+      (array_agg(pv.country ORDER BY pv.last_seen DESC) FILTER (WHERE pv.country IS NOT NULL))[1] AS country,
+      u.city_label, u.country_code
     FROM users u LEFT JOIN pv ON pv.uid = u.id
-    WHERE NOT u.is_platform_admin GROUP BY u.id, u.username, u.email, u.created_at
+    WHERE NOT u.is_platform_admin GROUP BY u.id, u.username, u.email, u.created_at, u.city_label, u.country_code
   ),
   leads AS (
-    SELECT 'v:' || visitor_id AS id, first_seen, last_seen, pages, last_path, NULL::integer AS uid, NULL::text AS username, NULL::text AS email, step
+    SELECT 'v:' || visitor_id AS id, first_seen, last_seen, pages, last_path, NULL::integer AS uid, NULL::text AS username, NULL::text AS email, step,
+      city, country, NULL::text AS signup_city, NULL::text AS signup_country
     FROM pv WHERE uid IS NULL
     UNION ALL
     SELECT 'u:' || a.uid, LEAST(a.created_at, COALESCE(a.first_seen, a.created_at)), GREATEST(a.created_at, COALESCE(a.last_seen, 0)),
@@ -55,7 +61,8 @@ const LEADS = `WITH pv AS (
       CASE WHEN s.status IN ('active','trialing','past_due') THEN 4
            WHEN s.user_id IS NOT NULL THEN 3
            WHEN EXISTS (SELECT 1 FROM farm_animals f WHERE f.user_id = a.uid) OR EXISTS (SELECT 1 FROM farm_crops c WHERE c.user_id = a.uid) THEN GREATEST(2, COALESCE(a.pv_step, 2))
-           ELSE GREATEST(1, COALESCE(a.pv_step, 1)) END
+           ELSE GREATEST(1, COALESCE(a.pv_step, 1)) END,
+      a.city, a.country, a.city_label, a.country_code
     FROM acc a LEFT JOIN subscriptions s ON s.user_id = a.uid
   )`;
 
@@ -79,6 +86,8 @@ export interface Lead {
   furthestStep: (typeof FUNNEL_STEPS)[number] | null;
   user: { id: number; username: string; email: string } | null;
   subscribed: boolean;
+  /** De onde acessou por último (só com estatística ligada); `signup`: a cidade do cadastro, quando não há visita medida. */
+  location: { city: string; country: string; signup: boolean } | null;
 }
 
 // shortcut: `before` é só o lastSeen; leads com a mesma última visita no mesmo milissegundo podem pular uma página.
@@ -100,5 +109,8 @@ export async function listLeads(db: Db, { since, before, limit = 50 }: { since: 
     furthestStep: FUNNEL_STEPS[Number(r.step)] ?? null,
     user: r.uid === null ? null : { id: Number(r.uid), username: String(r.username), email: String(r.email) },
     subscribed: Number(r.step) === 4,
+    location: r.country !== null
+      ? { city: String(r.city ?? ""), country: String(r.country), signup: false }
+      : r.signup_country !== null ? { city: String(r.signup_city ?? ""), country: String(r.signup_country), signup: true } : null,
   }));
 }

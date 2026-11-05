@@ -20,7 +20,7 @@ export default async function ProfilePage() {
   const t = await getTranslations();
   const sub = await getSubscription(await getDb(), user.id);
   const locale = await getLocale();
-  const status = sub?.status === "active" || sub?.status === "trialing" ? "active" : sub?.status === "past_due" ? "past_due" : sub?.status === "canceled" ? "canceled" : "none";
+  const status = sub?.status === "active" || sub?.status === "trialing" ? "active" : sub?.status === "past_due" ? "past_due" : sub?.status === "paused" ? "paused" : sub?.status === "canceled" ? "canceled" : "none";
   const date = sub?.currentPeriodEnd ? new Intl.DateTimeFormat(locale === "pt" ? "pt-BR" : "en-US", { dateStyle: "long" }).format(sub.currentPeriodEnd) : null;
   const btn = "inline-flex min-h-11 w-full items-center justify-center rounded-xl border-2 border-primary px-5 py-3 font-bold transition hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:w-60";
   const info: [string, string][] = [
@@ -54,7 +54,8 @@ export default async function ProfilePage() {
         ) : (
           <>
             <p className="mt-2"><span className="font-semibold text-muted">{t("billing.status")}:</span> {t(`billing.${status}`)}</p>
-            {date && status !== "none" && status !== "canceled" && (
+            {status === "paused" && <p className="text-sm text-muted">{t("billing.pausedNote")}</p>}
+            {date && status !== "none" && status !== "canceled" && status !== "paused" && (
               <p className="text-sm text-muted">{sub?.cancelAtPeriodEnd ? t("billing.accessUntil", { date }) : t("billing.nextCharge", { date })}</p>
             )}
             <div className="mt-4">

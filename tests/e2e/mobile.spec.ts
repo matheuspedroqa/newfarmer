@@ -176,9 +176,11 @@ test.describe("celular: textos compridos e menu da conta (320 px)", () => {
 
 test.describe("landing em larguras médias", () => {
   for (const width of [640, 700]) {
-    test(`não rola na horizontal a ${width} px (nos dois formatos do Veja por dentro)`, async ({ page }) => {
+    test(`não rola na horizontal a ${width} px (nos dois formatos do Experimente já)`, async ({ page }) => {
       await page.setViewportSize({ width, height: 900 });
       await page.goto("/");
+      await expectNoHorizontalScroll(page);
+      await page.goto("/try");
       await expectNoHorizontalScroll(page);
       await page.getByRole("button", { name: "Celular" }).click();
       await expectNoHorizontalScroll(page);

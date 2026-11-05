@@ -1,6 +1,6 @@
 # Política de Privacidade
 
-**Última atualização: 4 de novembro de 2026**
+**Última atualização: 5 de novembro de 2026**
 
 Esta política explica, em palavras simples, quais dados o NewFarmer guarda sobre você, para que usa, com quem divide e quais são os seus direitos. Ela vale para quem usa o site no Brasil, na União Europeia, nos Estados Unidos ou em qualquer outro lugar.
 
@@ -45,7 +45,7 @@ O número do cartão **nunca** chega ao NewFarmer e não é guardado por nós.
 - **registro de atividade:** quem fez, o que fez, em quê, o endereço IP e quando, para as ações da conta (por exemplo: entrar, sair, trocar a senha, editar a criação ou o diário). Esse registro **nunca** guarda senhas, códigos de acesso nem o texto do seu diário;
 - **registro de erros:** quando uma página do site dá erro, guardamos o endereço da página (sem o que vem depois do "?"), uma mensagem curta do erro (até 300 caracteres) e a hora. **Nunca** guardamos o conteúdo do pedido nem os cabeçalhos. Usamos isso para a segurança e a manutenção do site. A mensagem pode, por acaso, conter algo que você digitou;
 - **códigos de e-mail:** os códigos dos links para trocar a senha e para confirmar o e-mail, guardados embaralhados;
-- **medição de páginas:** só se você clicar em "Aceitar todos" no aviso de cookies. Guardamos um identificador aleatório do visitante, a sua conta (se estiver logado), a página visitada sem o que vem depois do "?", o site de origem (só o endereço do site) e a data. **Não guardamos o endereço IP** nessa medição;
+- **medição de páginas:** só se você clicar em "Aceitar todos" no aviso de cookies. Guardamos um identificador aleatório do visitante, a sua conta (se estiver logado), a página visitada sem o que vem depois do "?", o site de origem (só o endereço do site), a data e a cidade e o país aproximados de onde você acessou (a Vercel calcula pelo endereço IP). **Não guardamos o endereço IP** nessa medição;
 - **histórico de e-mails:** quais e-mails de novidades enviamos para você e quando.
 
 ### Previsão do tempo

@@ -23,6 +23,8 @@ export async function startCheckoutAction(): Promise<void> {
     redirect("/subscribe?error=rateLimited");
   }
   if (await hasOpenSubscription(db, user.id)) redirect("/dashboard");
+  // Pausada pelo dono do site: uma nova assinatura cobraria em dobro quando ela voltar.
+  if ((await getSubscription(db, user.id))?.status === "paused") redirect("/subscribe");
   const currency = currencyForCountry(user.countryCode);
   let url: string;
   try {

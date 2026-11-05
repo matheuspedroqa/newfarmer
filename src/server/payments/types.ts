@@ -17,4 +17,6 @@ export interface PaymentProvider {
   createPortal(input: { customerId: string; returnUrl: string }): Promise<string>;
   /** Apaga o cliente: a Stripe cancela na hora todas as assinaturas dele e remove nome e e-mail. */
   deleteCustomer(customerId: string): Promise<void>;
+  /** Pausa (para de cobrar e tira o acesso) ou retoma a assinatura; devolve como ela ficou. */
+  setPaused(subscriptionId: string, paused: boolean): Promise<StripeSubscription>;
 }

@@ -4,11 +4,12 @@ import { getCurrentUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { recordPageView } from "@/server/page-views";
 import { limitByIp } from "@/server/rate-limit";
-import { clientIp } from "@/server/request-context";
+import { clientIp, visitLocation } from "@/server/request-context";
 
 const SKIP = ["/api/", "/admin", "/confirm-email/", "/reset-password/", "/unsubscribe/"];
 const MAX_BODY = 2048;
 const none = () => new Response(null, { status: 204 });
+
 
 export async function POST(request: Request) {
   // O consentimento é conferido aqui no servidor: o navegador só pede, não decide.
@@ -41,6 +42,6 @@ export async function POST(request: Request) {
   const db = await getDb();
   if (!(await limitByIp(db, "track", await clientIp())).ok) return none();
   const user = await getCurrentUser();
-  await recordPageView(db, { visitorId, userId: user?.id ?? null, path, referrer });
+  await recordPageView(db, { visitorId, userId: user?.id ?? null, path, referrer, ...(await visitLocation()) });
   return none();
 }

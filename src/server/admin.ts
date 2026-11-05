@@ -7,12 +7,12 @@ import { listUserPageViews } from "./page-views";
 import { getSubscription } from "./subscriptions";
 
 const DIA = 24 * 60 * 60_000;
-export const SUBSCRIBER_STATUSES = ["active", "past_due", "canceled", "none"] as const;
+export const SUBSCRIBER_STATUSES = ["active", "past_due", "paused", "canceled", "none"] as const;
 export type SubscriberStatus = (typeof SUBSCRIBER_STATUSES)[number];
 
 // Faixa de status da assinatura; quem não tem linha (ou está em none/incomplete/unpaid) cai em "none".
 const BUCKET = `CASE WHEN s.status IN ('active','trialing') THEN 'active' WHEN s.status = 'past_due' THEN 'past_due'
-  WHEN s.status = 'canceled' THEN 'canceled' ELSE 'none' END`;
+  WHEN s.status = 'paused' THEN 'paused' WHEN s.status = 'canceled' THEN 'canceled' ELSE 'none' END`;
 
 /** Tudo exclui o dono do site. */
 export async function getAdminOverview(db: Db, now: number) {
@@ -20,7 +20,7 @@ export async function getAdminOverview(db: Db, now: number) {
     "SELECT COUNT(*) AS users, COUNT(*) FILTER (WHERE created_at >= $1) AS new7 FROM users WHERE NOT is_platform_admin",
     [now - 7 * DIA],
   );
-  const subscriptions: Record<SubscriberStatus, number> = { active: 0, past_due: 0, canceled: 0, none: 0 };
+  const subscriptions: Record<SubscriberStatus, number> = { active: 0, past_due: 0, paused: 0, canceled: 0, none: 0 };
   // sql só junta constantes deste arquivo (BUCKET) e $n: nada que venha de fora entra no texto.
   const bucketSql = `SELECT ${BUCKET} AS bucket, COUNT(*) AS n FROM users u LEFT JOIN subscriptions s ON s.user_id = u.id WHERE NOT u.is_platform_admin GROUP BY 1`;
   for (const r of await db.query<{ bucket: SubscriberStatus; n: string }>(bucketSql)) subscriptions[r.bucket] = Number(r.n);

@@ -154,24 +154,36 @@ test.describe("landing: preço, alternância e dados estruturados", () => {
     });
   }
 
-  test("alternar Computador/Celular troca as imagens", async ({ page }) => {
+  test("Experimente já: no topo, alternar Computador/Celular troca as imagens, a legenda fica fora do print e termina na assinatura", async ({ page }) => {
     await page.goto("/");
+    await expect(page.getByText("Perguntas frequentes")).toHaveCount(0);
+    await expect(page.getByTestId("showcase-item")).toHaveCount(0);
+    await page.getByRole("banner").getByRole("link", { name: "Experimente já" }).click();
+    await expect(page).toHaveURL(/\/pt\/try$|\/try$/);
+    await expect(page.getByRole("heading", { level: 1, name: "Experimente já" })).toBeVisible();
+    await expect(page.getByText("newfarmer.vercel.app")).toHaveCount(0);
     const items = page.getByTestId("showcase-item");
     await expect(items.first().locator("img")).toHaveAttribute("src", /dashboard-desktop/);
     await page.getByRole("button", { name: "Celular" }).click();
     await expect(page.getByRole("button", { name: "Celular" })).toHaveAttribute("aria-pressed", "true");
     await expect(items.first().locator("img")).toHaveAttribute("src", /dashboard-mobile/);
     await expect(items).toHaveCount(3);
+    // O cartão flutuante não pode cobrir a legenda do print.
+    await page.getByRole("button", { name: "Computador" }).click();
+    const caption = await items.first().locator("p").last().boundingBox();
+    const shot = await items.first().locator("img").boundingBox();
+    expect(caption!.y).toBeGreaterThanOrEqual(shot!.y + shot!.height);
+    await expect(page.getByRole("heading", { name: "Como funciona" })).toBeVisible();
+    await expect(page.getByTestId("price")).toBeVisible();
   });
 
-  test("JSON-LD é válido, com 3 ofertas e 5 perguntas, e há um único h1", async ({ page }) => {
+  test("JSON-LD é válido, com 3 ofertas e sem perguntas frequentes, e há um único h1", async ({ page }) => {
     await page.goto("/");
     const blocks = (await page.locator('script[type="application/ld+json"]').allTextContents()).flatMap((s) => [JSON.parse(s)].flat());
     const app = blocks.find((b) => b["@type"] === "SoftwareApplication");
-    const faq = blocks.find((b) => b["@type"] === "FAQPage");
+    expect(blocks.find((b) => b["@type"] === "FAQPage")).toBeUndefined();
     expect(app.offers).toHaveLength(3);
     expect(app.offers.map((o: { priceCurrency: string }) => o.priceCurrency).sort()).toEqual(["BRL", "EUR", "USD"]);
-    expect(faq.mainEntity).toHaveLength(5);
     await expect(page.locator("h1")).toHaveCount(1);
   });
 });

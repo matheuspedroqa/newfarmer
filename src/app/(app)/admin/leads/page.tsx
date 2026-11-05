@@ -29,7 +29,12 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
   const [funnel, fetched] = await Promise.all([leadFunnel(db, since), listLeads(db, { since, before, limit: PAGE_SIZE + 1 })]);
   const rows = fetched.slice(0, PAGE_SIZE);
 
-  const format = new Intl.DateTimeFormat(await getLocale(), { dateStyle: "short", timeStyle: "short" });
+  const locale = await getLocale();
+  const format = new Intl.DateTimeFormat(locale, { dateStyle: "short", timeStyle: "short" });
+  const regions = new Intl.DisplayNames([locale], { type: "region" });
+  const place = (l: (typeof rows)[number]["location"]) =>
+    // A cidade do cadastro já traz o país no nome ("Campinas, São Paulo, Brasil").
+    !l ? "—" : l.signup ? `${l.city} (${t("locationSignup")})` : [l.city, regions.of(l.country) ?? l.country].filter(Boolean).join(", ");
   const max = Math.max(1, ...FUNNEL_STEPS.map((s) => funnel[s]));
   const stepName = (s: (typeof FUNNEL_STEPS)[number] | null) => (s ? t(`step_${STEP_KEY[s]}`) : "—");
   const focus = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
@@ -80,7 +85,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
             <div className="hidden overflow-x-auto rounded-2xl bg-surface ring-1 ring-border md:block">
               <table className="w-full text-left text-sm">
                 <thead className="text-muted">
-                  <tr>{["colFirstSeen", "colLastVisit", "colPages", "colLastPage", "colReached", "colAccount"].map((k) => <th key={k} className={cell}>{t(k)}</th>)}</tr>
+                  <tr>{["colFirstSeen", "colLastVisit", "colPages", "colLastPage", "colLocation", "colReached", "colAccount"].map((k) => <th key={k} className={cell}>{t(k)}</th>)}</tr>
                 </thead>
                 <tbody>
                   {rows.map((r) => (
@@ -89,6 +94,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
                       <td className={`${cell} whitespace-nowrap`}>{format.format(r.lastSeen)}</td>
                       <td className={cell}>{r.pages || "—"}</td>
                       <td className={`${cell} break-all`}>{r.lastPath ?? "—"}</td>
+                      <td className={cell} data-testid="lead-location">{place(r.location)}</td>
                       <td className={cell}>{stepName(r.furthestStep)}</td>
                       <td className={cell}>{account(r.user)}</td>
                     </tr>
@@ -101,6 +107,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
                 <li key={r.id} data-testid="lead-card" className="rounded-2xl bg-surface p-4 ring-1 ring-border">
                   <p className="font-semibold">{stepName(r.furthestStep)}{r.pages > 0 && ` · ${r.pages} ${t("colPages").toLowerCase()}`}</p>
                   <p className="text-sm break-all">{t("colLastPage")}: {r.lastPath ?? "—"}</p>
+                  <p className="text-sm">{t("colLocation")}: {place(r.location)}</p>
                   <p className="text-xs text-muted">{format.format(r.firstSeen)} → {format.format(r.lastSeen)}</p>
                   {account(r.user)}
                 </li>

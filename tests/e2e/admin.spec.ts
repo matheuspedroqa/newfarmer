@@ -152,3 +152,42 @@ test("dono envia Sentimos sua falta para quem cancelou, o descadastro desliga o 
   await page.goto("/dev/inbox");
   await expect(page.locator("article", { hasText: "Sentimos sua falta no NewFarmer" }).filter({ hasText: email })).toHaveCount(1);
 });
+
+test("dono pausa a assinatura: a pessoa fica bloqueada sem poder assinar de novo; ao retomar, o acesso volta", async ({ page, context }) => {
+  test.setTimeout(120_000);
+  const { username: sub } = await signup(page, uniqueEmail());
+  await clearSession(context);
+  const { username: owner } = await signup(page, uniqueEmail());
+  expect((await page.request.post("/api/dev/make-admin", { data: { username: owner } })).status()).toBe(204);
+  const login = async (username: string) => {
+    await clearSession(context);
+    await page.goto("/login");
+    await page.getByLabel("Username").fill(username);
+    await page.getByLabel("Senha").fill(PASSWORD);
+    await page.getByRole("button", { name: "Entrar" }).click();
+    await page.waitForURL(/\/(dashboard|subscribe)$/);
+  };
+  const openDetail = async () => {
+    await page.goto(`/admin/subscribers?q=${sub}`);
+    await page.getByTestId("subscriber-row").getByRole("link").first().click();
+    await expect(page).toHaveURL(/\/admin\/subscribers\/\d+$/);
+  };
+
+  await openDetail();
+  await page.getByRole("button", { name: "Pausar assinatura" }).click();
+  await expect(page.getByRole("button", { name: "Retomar assinatura" })).toBeVisible();
+  await expect(page.locator("section[aria-labelledby=blk-sub]")).toContainText("Pausada");
+
+  await login(sub);
+  await expect(page).toHaveURL(/\/subscribe$/);
+  await expect(page.getByTestId("subscription-paused")).toBeVisible();
+  await expect(page.getByRole("button", { name: /^Assinar por/ })).toHaveCount(0);
+
+  await login(owner);
+  await openDetail();
+  await page.getByRole("button", { name: "Retomar assinatura" }).click();
+  await expect(page.getByRole("button", { name: "Pausar assinatura" })).toBeVisible();
+
+  await login(sub);
+  await expect(page).toHaveURL(/\/dashboard$/);
+});

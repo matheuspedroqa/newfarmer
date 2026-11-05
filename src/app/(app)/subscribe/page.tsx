@@ -15,7 +15,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function SubscribePage({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
   const user = await requireUser();
-  if (hasAccess(user, await getSubscription(await getDb(), user.id))) redirect("/dashboard");
+  const sub = await getSubscription(await getDb(), user.id);
+  if (hasAccess(user, sub)) redirect("/dashboard");
   const t = await getTranslations("subscribe");
   const { error } = await searchParams;
   const formError = error === "rateLimited" ? "rateLimited" : error === "checkout" ? "checkoutFailed" : null;
@@ -35,11 +36,15 @@ export default async function SubscribePage({ searchParams }: { searchParams: Pr
       <p className="mt-4 text-sm text-muted">{t("billingNote")}</p>
       <p className="mt-2 text-sm text-muted">{t("refund")}</p>
       {formError && <p role="alert" className="mt-4 rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{(await getTranslations("errors"))(formError)}</p>}
-      <form action={startCheckoutAction} className="mt-6">
-        <button type="submit" className="min-h-11 w-full rounded-xl bg-primary py-3 font-bold text-primary-text shadow-lg shadow-primary/30 transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:w-80">
-          {t("cta", { price })}
-        </button>
-      </form>
+      {sub?.status === "paused" ? (
+        <p role="status" data-testid="subscription-paused" className="mt-6 rounded-xl bg-soft px-4 py-3 font-semibold">{t("paused")}</p>
+      ) : (
+        <form action={startCheckoutAction} className="mt-6">
+          <button type="submit" className="min-h-11 w-full rounded-xl bg-primary py-3 font-bold text-primary-text shadow-lg shadow-primary/30 transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:w-80">
+            {t("cta", { price })}
+          </button>
+        </form>
+      )}
       <p className="mt-4 flex gap-4 text-sm">
         <Link href="/terms" className={link}>{t("terms")}</Link>
         <Link href="/privacy" className={link}>{t("privacy")}</Link>

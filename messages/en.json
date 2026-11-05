@@ -523,7 +523,6 @@
         "text": "Notes on what is required where you live, like declaring your animals."
       }
     },
-    "insideTitle": "See it inside",
     "desktop": "Computer",
     "mobile": "Phone",
     "shots": {
@@ -539,16 +538,28 @@
     "stepsTitle": "How it works",
     "steps": {
       "one": {
+        "icon": "👤",
         "title": "Create your account",
-        "text": "Enter your name and your town."
+        "text": "Enter your name, e-mail and town. From the town, NewFarmer works out your climate and hemisphere.",
+        "note": "Takes about 1 minute"
       },
       "two": {
+        "icon": "🐔",
         "title": "Tell us what you raise",
-        "text": "Pick the animals and crops on your land."
+        "text": "Pick your animals and how many you have, and search the crops on your land.",
+        "note": "You can change it later in MyFarm"
       },
       "three": {
-        "title": "Get what to do each month",
-        "text": "Guides, calendar and weather, ready for you."
+        "icon": "💳",
+        "title": "Subscribe",
+        "text": "Pay the monthly fee by card, on a secure Stripe page.",
+        "note": "Cancel anytime in your Profile"
+      },
+      "four": {
+        "icon": "📅",
+        "title": "Use it every day",
+        "text": "The Dashboard shows what to do this month, the 5-day forecast and your diary, on computer or phone.",
+        "note": "Works even offline"
       }
     },
     "priceTitle": "One simple plan",
@@ -561,29 +572,6 @@
       "e": "Your country's rules"
     },
     "priceCancel": "Cancel anytime",
-    "faqTitle": "Frequently asked questions",
-    "faq": {
-      "card": {
-        "q": "Do I need a card?",
-        "a": "Yes. It is a monthly subscription, paid by card."
-      },
-      "cancel": {
-        "q": "Can I cancel?",
-        "a": "Yes, anytime, on your Profile. You keep access until the end of the month you paid."
-      },
-      "offline": {
-        "q": "Does it work offline?",
-        "a": "Yes. Write notes without signal and NewFarmer sends them when you are back online."
-      },
-      "data": {
-        "q": "Is my data mine?",
-        "a": "Yes. You can download everything or delete your account on your Profile."
-      },
-      "who": {
-        "q": "Who is it for?",
-        "a": "Small farmers and family gardens."
-      }
-    },
     "finalTitle": "Start organizing your land today",
     "privacy": "Privacy",
     "terms": "Terms",
@@ -603,7 +591,13 @@
         "title": "24",
         "text": "Chickens"
       }
-    }
+    },
+    "tryNav": "Try it now",
+    "tryMetaTitle": "Try it now",
+    "tryTitle": "Try it now",
+    "tryDescription": "See NewFarmer inside, on computer and phone, and how to get started in a few minutes.",
+    "trySub": "See how NewFarmer looks on a computer and on a phone, and how to get started in a few minutes.",
+    "stepsSub": "From sign-up to your first day of use, without hassle."
   },
   "notFound": {
     "title": "Page not found",
@@ -647,7 +641,9 @@
       "subscriptionChanged": "Subscription changed"
     },
     "admin": {
-      "viewedUser": "Viewed an account"
+      "viewedUser": "Viewed an account",
+      "subscriptionPaused": "Paused a subscription",
+      "subscriptionResumed": "Resumed a subscription"
     },
     "marketing": {
       "optInChanged": "Changed e-mail opt-in",
@@ -720,7 +716,8 @@
     "processing": "Payment received, unlocking your account…",
     "successTitle": "Subscription",
     "notReceived": "We have not received the payment confirmation yet.",
-    "back": "Back to subscription"
+    "back": "Back to subscription",
+    "paused": "Your subscription is paused. Contact support to get access back."
   },
   "billing": {
     "title": "Subscription",
@@ -733,7 +730,9 @@
     "accessUntil": "Access until {date}",
     "manage": "Manage or cancel",
     "subscribe": "Subscribe",
-    "owner": "Owner account: no billing"
+    "owner": "Owner account: no billing",
+    "paused": "Paused",
+    "pausedNote": "Your subscription is paused and you are not being charged. Contact support to resume."
   },
   "admin": {
     "title": "Admin",
@@ -848,6 +847,15 @@
     "campaignDone": "Campaign sent. Total sent: {total}.",
     "previewFailed": "Could not generate the preview. Try again.",
     "resuming": "Campaign in progress: {remaining} still to send.",
-    "continueThis": "Continue this send"
+    "continueThis": "Continue this send",
+    "status_paused": "Paused",
+    "pauseSubscription": "Pause subscription",
+    "resumeSubscription": "Resume subscription",
+    "pauseHelp": "Stripe stops charging and the person loses access until you resume.",
+    "resumeHelp": "Billing restarts on the next cycle and access comes back right away.",
+    "pauseFailed": "Could not reach Stripe. See the reason in Monitoring and try again.",
+    "pauseLimited": "Too many changes in a row. Wait a moment and try again.",
+    "colLocation": "Location",
+    "locationSignup": "sign-up"
   }
 }

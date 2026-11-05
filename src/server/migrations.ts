@@ -259,6 +259,15 @@ ALTER TABLE email_campaigns ENABLE ROW LEVEL SECURITY;
 ALTER TABLE email_campaign_recipients ENABLE ROW LEVEL SECURITY;
 `,
   },
+  {
+    id: 11,
+    name: "page_views_location",
+    // Cidade e país aproximados da visita (a Vercel tira do IP; o IP não é guardado).
+    sql: `
+ALTER TABLE page_views ADD COLUMN city TEXT NOT NULL DEFAULT '';
+ALTER TABLE page_views ADD COLUMN country TEXT NOT NULL DEFAULT '';
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

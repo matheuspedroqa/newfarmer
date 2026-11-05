@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: November 4, 2026**
+**Last updated: November 5, 2026**
 
 This policy explains, in plain words, what data NewFarmer keeps about you, what it is used for, who it is shared with and what your rights are. It applies to everyone who uses the site, whether in Brazil, the European Union, the United States or anywhere else.
 
@@ -45,7 +45,7 @@ Your card number **never** reaches NewFarmer and is not stored by us.
 - **activity log:** who did what, on what, the IP address and when, for account actions (for example: signing in, signing out, changing the password, editing the farm or the diary). This log **never** stores passwords, access codes or the text of your diary;
 - **error log:** when a page of the site fails, we store the page address (without what comes after the "?"), a short error message (up to 300 characters) and the time. We **never** store the content of the request or its headers. We use this for the security and maintenance of the site. The message may, by chance, contain something you typed;
 - **e-mail codes:** the codes in the links to reset your password and to confirm your e-mail, stored scrambled;
-- **page measurement:** only if you click "Accept all" on the cookie notice. We store a random visitor identifier, your account (if signed in), the page visited without what comes after the "?", the referring site (only the site address) and the date. **We do not store the IP address** in this measurement;
+- **page measurement:** only if you click "Accept all" on the cookie notice. We store a random visitor identifier, your account (if signed in), the page visited without what comes after the "?", the referring site (only the site address), the date and the approximate city and country you visited from (Vercel works them out from the IP address). **We do not store the IP address** in this measurement;
 - **e-mail history:** which news e-mails we sent you and when.
 
 ### Weather forecasts

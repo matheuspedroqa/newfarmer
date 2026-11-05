@@ -40,7 +40,7 @@ it("visão geral: contagens, MRR só das ativas por moeda, 30 e 7 dias, sem o do
   const o = await getAdminOverview(db, AGORA);
   expect(o.users).toBe(3);
   expect(o.newUsers7d).toBe(1);
-  expect(o.subscriptions).toEqual({ active: 1, past_due: 0, canceled: 1, none: 1 });
+  expect(o.subscriptions).toEqual({ active: 1, past_due: 0, paused: 0, canceled: 1, none: 1 });
   expect(o.mrr).toEqual({ brl: 699, eur: 0, usd: 0 });
   expect(o.newSubscriptions30d).toBe(1);
   expect(o.cancellations30d).toBe(1);
@@ -89,7 +89,7 @@ it("visão geral: trialing conta como ativa e entra no MRR; past_due só na pró
   await sub(db, dua, { status: "trialing", currency: "eur", amount: 199 });
   await sub(db, edu, { status: "past_due", currency: "usd", amount: 200 });
   const o = await getAdminOverview(db, AGORA);
-  expect(o.subscriptions).toEqual({ active: 2, past_due: 1, canceled: 1, none: 1 });
+  expect(o.subscriptions).toEqual({ active: 2, past_due: 1, paused: 0, canceled: 1, none: 1 });
   expect(o.mrr).toEqual({ brl: 699, eur: 199, usd: 0 });
 });
 

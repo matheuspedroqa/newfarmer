@@ -7,7 +7,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { FloatingCard, VerifiedSeal } from "@/components/DeviceExtras";
 import { PhoneFrame } from "@/components/PhoneFrame";
-import { ShowcaseToggle } from "@/components/ShowcaseToggle";
+import { btn, PriceCard } from "@/components/PriceCard";
 import { resolveLocale } from "@/i18n/locales";
 import { currencyForCountry, formatPrice, PRICES, type Currency } from "@/lib/pricing";
 import { marketingAlternates } from "@/lib/seo";
@@ -20,12 +20,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const FEATURES = ["animals", "crops", "weather", "diary", "offline", "rules"] as const;
-const SHOTS = ["dashboard", "animal", "weather"] as const;
-const STEPS = ["one", "two", "three"] as const;
-const INCLUDES = ["a", "b", "c", "d", "e"] as const;
-const FAQ = ["card", "cancel", "offline", "data", "who"] as const;
-
-const btn = "inline-flex min-h-11 items-center justify-center rounded-full px-8 py-3 text-lg font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg";
 
 export default async function HomePage() {
   // Queda do banco não derruba a página pública
@@ -55,16 +49,7 @@ export default async function HomePage() {
         price: (PRICES[c] / 100).toFixed(2),
         priceCurrency: c.toUpperCase(),
       })),
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: FAQ.map((k) => ({
-        "@type": "Question",
-        name: t(`faq.${k}.q`),
-        acceptedAnswer: { "@type": "Answer", text: t(`faq.${k}.a`) },
-      })),
-    },
+    }
   ];
 
   return (
@@ -111,52 +96,7 @@ export default async function HomePage() {
         </ul>
       </section>
 
-      <section className="mx-auto max-w-6xl overflow-x-clip px-5 py-16 md:px-8">
-        <h2 className="text-center font-display text-3xl font-bold">{t("insideTitle")}</h2>
-        <ShowcaseToggle
-          labels={{ desktop: t("desktop"), mobile: t("mobile") }}
-          shots={SHOTS.map((k) => ({ name: k, card: card(k === "dashboard" ? "count" : k === "animal" ? "diary" : "weather"), path: k === "dashboard" ? "/dashboard" : k === "animal" ? "/animals/chickens" : "/weather", src: { desktop: img(k, "desktop"), mobile: img(k, "mobile") }, alt: t(`alts.${k}`), caption: t(`shots.${k}`) }))}
-        />
-      </section>
-
-      <section className="mx-auto max-w-5xl px-5 py-16 md:px-8">
-        <h2 className="text-center font-display text-3xl font-bold">{t("stepsTitle")}</h2>
-        <ol className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {STEPS.map((k, i) => (
-            <li key={k} className="rounded-3xl bg-soft p-6">
-              <span aria-hidden className="flex size-10 items-center justify-center rounded-full bg-primary font-bold text-primary-text">{i + 1}</span>
-              <h3 className="mt-3 font-display text-xl font-bold">{t(`steps.${k}.title`)}</h3>
-              <p className="mt-2 text-muted">{t(`steps.${k}.text`)}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      <section className="mx-auto max-w-md px-5 py-16 md:px-8">
-        <div className="rounded-3xl bg-surface p-8 text-center ring-1 ring-border">
-          <h2 className="font-display text-2xl font-bold">{t("priceTitle")}</h2>
-          <p data-testid="price" className="mt-3 font-display text-4xl font-bold text-primary">{t("priceMonth", { price })}</p>
-          <ul className="mt-6 space-y-2 text-left">
-            {INCLUDES.map((k) => (
-              <li key={k} className="flex gap-2"><span aria-hidden className="text-primary">✓</span>{t(`includes.${k}`)}</li>
-            ))}
-          </ul>
-          <p className="mt-6 text-sm text-muted">{t("priceCancel")}</p>
-          <div className="mt-4 flex justify-center">{cta}</div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-3xl px-5 py-16 md:px-8">
-        <h2 className="text-center font-display text-3xl font-bold">{t("faqTitle")}</h2>
-        <dl className="mt-8 space-y-4">
-          {FAQ.map((k) => (
-            <div key={k} className="rounded-2xl bg-surface p-5 ring-1 ring-border">
-              <dt className="font-bold">{t(`faq.${k}.q`)}</dt>
-              <dd className="mt-1 text-muted">{t(`faq.${k}.a`)}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <PriceCard />
 
       <section className="px-5 py-16 text-center md:px-8">
         <h2 className="font-display text-3xl font-bold">{t("finalTitle")}</h2>

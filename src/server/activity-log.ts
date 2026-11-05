@@ -24,6 +24,8 @@ export const ACTIVITY_ACTIONS = [
   "billing.checkoutStarted",
   "billing.subscriptionChanged",
   "admin.viewedUser",
+  "admin.subscriptionPaused",
+  "admin.subscriptionResumed",
   "marketing.optInChanged",
   "marketing.campaignSent",
 ] as const;
