@@ -52,18 +52,20 @@ Para testar contra o Supabase daqui, crie `.env.local` (ignorado pelo Git) com `
 ## Registro diário do tempo
 
 Todo dia à meia-noite (UTC) a Vercel chama `/api/cron/forecast`, que guarda a previsão do Fundão para o dia seguinte.
-No plano Hobby da Vercel o job roda em algum minuto entre 00:00 e 00:59 UTC.
+Os horários ficam em `schedules` no `vercel.json` (Vercel Schedules, que substituiu os Cron Jobs; o nome deste é `forecast`).
+No plano Hobby cada execução começa em até 15 minutos depois do horário.
 
 1. Na Vercel, **Settings → Environment Variables**, crie `CRON_SECRET` em **Production** com um valor aleatório longo
    (por exemplo `openssl rand -hex 32` ou um gerador de senhas).
 2. Faça **Redeploy** para a variável valer.
-3. Confira em **Settings → Cron Jobs** se o job aparece e veja as execuções ali.
+3. Confira na página **Schedules** do projeto se `forecast` e `guide` aparecem. Ali dá para ver as execuções, rodar na hora
+   (**Run Schedule**) ou pausar (**Disable**) sem publicar de novo.
 4. Para testar na mão: `curl -H "Authorization: Bearer <CRON_SECRET>" https://newfarmer.vercel.app/api/cron/forecast`
    (deve responder `{"ok":true,"date":"AAAA-MM-DD"}`).
 
 ## Calendário mensal por e-mail ("o que plantar")
 
-Todo dia às 08:00 UTC a Vercel chama `/api/cron/guide` (mesmo `CRON_SECRET`). Ele manda o calendário do mês a quem confirmou
+Todo dia às 08:00 UTC a Vercel chama `/api/cron/guide` (schedule `guide`, mesmo `CRON_SECRET`). Ele manda o calendário do mês a quem confirmou
 e ainda não recebeu neste mês: no dia 1 vai quase todo mundo, e quem confirma no meio do mês recebe no dia seguinte.
 Também apaga os pedidos não confirmados há mais de 30 dias.
 
