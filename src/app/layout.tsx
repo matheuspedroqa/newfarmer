@@ -38,7 +38,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const classes = [fraunces.variable, nunito.variable, theme === "dark" ? "dark" : ""].join(" ").trim();
 
   return (
-    <html lang={locale === "pt" ? "pt-BR" : "en"} className={classes}>
+    <html lang={locale === "pt" ? "pt-BR" : locale} className={classes}>
       <body className="min-h-screen font-sans antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

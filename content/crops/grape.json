@@ -2,7 +2,8 @@
   "id": "grape",
   "summary": {
     "pt": "Trepadeira perene que produz do 2º–3º ano e dura décadas. Precisa de latada ou espaldeira e de poda todo ano; em clima quente, a poda define quando você colhe.",
-    "en": "A long-lived perennial vine that bears from year 2–3. It needs a trellis or arbour and yearly pruning; in hot climates, pruning decides when you harvest."
+    "en": "A long-lived perennial vine that bears from year 2–3. It needs a trellis or arbour and yearly pruning; in hot climates, pruning decides when you harvest.",
+    "es": "Vid perenne de larga vida que produce desde el año 2–3. Necesita espaldera o parra y poda anual; en climas cálidos, la poda decide cuándo cosechas."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [10, 11, 12],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Sem inverno, a videira não para: cada poda dá uma safra uns 4–5 meses depois, até 2 por ano. Plante no início das chuvas. Clima úmido traz muito míldio; prefira Niágara e variedades rústicas.", "en": "With no winter the vine never rests: each pruning gives a crop about 4–5 months later, up to 2 a year. Plant at the start of the rains. Humid weather brings lots of downy mildew; prefer hardy varieties." }
+      "notes": { "pt": "Sem inverno, a videira não para: cada poda dá uma safra uns 4–5 meses depois, até 2 por ano. Plante no início das chuvas. Clima úmido traz muito míldio; prefira Niágara e variedades rústicas.", "en": "With no winter the vine never rests: each pruning gives a crop about 4–5 months later, up to 2 a year. Plant at the start of the rains. Humid weather brings lots of downy mildew; prefer hardy varieties.", "es": "Sin invierno la vid nunca descansa: cada poda da una cosecha unos 4–5 meses después, hasta 2 al año. Planta al inicio de las lluvias. El clima húmedo trae mucho mildiu; prefiere variedades resistentes." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [7, 8],
       "harvest": [12, 1, 2],
-      "notes": { "pt": "Plante a muda e pode no fim do inverno (jul–ago). Uma segunda poda em fev–mar pode dar safra fora de época em jun–jul.", "en": "Plant and prune in late winter (Jul–Aug). A second pruning in Feb–Mar can give an off-season crop in Jun–Jul." }
+      "notes": { "pt": "Plante a muda e pode no fim do inverno (jul–ago). Uma segunda poda em fev–mar pode dar safra fora de época em jun–jul.", "en": "Plant and prune in late winter (Jul–Aug). A second pruning in Feb–Mar can give an off-season crop in Jun–Jul.", "es": "Planta y poda a finales del invierno (jul–ago). Una segunda poda en feb–mar puede dar una cosecha fuera de temporada en jun–jul." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [7, 8, 9],
       "harvest": [1, 2, 3],
-      "notes": { "pt": "Clima clássico da uva (como a Serra Gaúcha). Plante a muda dormente no fim do inverno. Uma safra por ano.", "en": "Classic grape climate. Plant dormant vines in late winter. One crop a year." }
+      "notes": { "pt": "Clima clássico da uva (como a Serra Gaúcha). Plante a muda dormente no fim do inverno. Uma safra por ano.", "en": "Classic grape climate. Plant dormant vines in late winter. One crop a year.", "es": "Clima clásico de la vid. Planta vides en reposo a finales del invierno. Una cosecha al año." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Com irrigação, ótimo: pouca chuva quer dizer pouca doença. Planta-se o ano todo e, escalonando as podas, colhe-se o ano todo (como no Vale do São Francisco).", "en": "With irrigation it does very well: little rain means little disease. Plant any month and, by staggering prunings, harvest year-round (as in Brazil's São Francisco Valley)." }
+      "notes": { "pt": "Com irrigação, ótimo: pouca chuva quer dizer pouca doença. Planta-se o ano todo e, escalonando as podas, colhe-se o ano todo (como no Vale do São Francisco).", "en": "With irrigation it does very well: little rain means little disease. Plant any month and, by staggering prunings, harvest year-round (as in Brazil's São Francisco Valley).", "es": "Con riego va muy bien: poca lluvia significa pocas enfermedades. Planta en cualquier mes y, escalonando las podas, cosecha todo el año (como en el Valle del São Francisco, en Brasil)." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [10, 11],
       "harvest": [3, 4],
-      "notes": { "pt": "Use uvas americanas ou híbridas resistentes ao frio. Plante na primavera, com o solo descongelado. Verão curto pode não amadurecer a uva.", "en": "Use cold-hardy American or hybrid grapes. Plant in spring once the soil thaws. A short summer may not ripen the fruit." }
+      "notes": { "pt": "Use uvas americanas ou híbridas resistentes ao frio. Plante na primavera, com o solo descongelado. Verão curto pode não amadurecer a uva.", "en": "Use cold-hardy American or hybrid grapes. Plant in spring once the soil thaws. A short summer may not ripen the fruit.", "es": "Usa uvas americanas o híbridas resistentes al frío. Planta en primavera cuando el suelo se descongele. Un verano corto puede no madurar el fruto." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo e calagem antes de plantar. Na cova, esterco curtido ou composto. Depois, adube conforme a análise, em doses na brotação e na formação dos cachos. Nitrogênio demais faz folha e atrai doença.",
-      "en": "Soil test and lime before planting. Put rotted manure or compost in the hole. Later, fertilize by soil test in doses at budbreak and bunch set. Too much nitrogen makes leaves and invites disease."
+      "en": "Soil test and lime before planting. Put rotted manure or compost in the hole. Later, fertilize by soil test in doses at budbreak and bunch set. Too much nitrogen makes leaves and invites disease.",
+      "es": "Análisis de suelo y encalado antes de plantar. Pon estiércol curado o compost en el hoyo. Después, fertiliza según el análisis de suelo en dosis en la brotación y el cuajado de racimos. Demasiado nitrógeno da hojas e invita a las enfermedades."
     },
     "pruning": {
       "pt": "Essencial. Nos primeiros anos, forme um tronco e os braços no arame. Depois, na poda de inverno, tire 85–90% dos ramos do ano e deixe esporões com 1–3 gemas, conforme a grossura do ramo.",
-      "en": "Essential. In the first years, train one trunk and arms along the wire. After that, at winter pruning remove 85–90% of last year's canes and leave spurs with 1–3 buds, depending on cane thickness."
+      "en": "Essential. In the first years, train one trunk and arms along the wire. After that, at winter pruning remove 85–90% of last year's canes and leave spurs with 1–3 buds, depending on cane thickness.",
+      "es": "Esencial. En los primeros años, forma un tronco y brazos a lo largo del alambre. Después, en la poda de invierno quita el 85–90 % de los sarmientos del año anterior y deja pulgares con 1–3 yemas, según el grosor del sarmiento."
     },
     "watering": {
       "pt": "Regue a muda nova com frequência até pegar. Videira adulta aguenta seca; regue na brotação e no crescimento dos cachos e corte a água perto da colheita para a uva ficar doce.",
-      "en": "Water young vines often until established. Mature vines handle drought; water at budbreak and while bunches grow, and cut back near harvest so grapes get sweeter."
+      "en": "Water young vines often until established. Mature vines handle drought; water at budbreak and while bunches grow, and cut back near harvest so grapes get sweeter.",
+      "es": "Riega a menudo las vides jóvenes hasta que se establezcan. Las vides adultas aguantan la sequía; riega en la brotación y mientras crecen los racimos, y reduce cerca de la cosecha para que las uvas sean más dulces."
     },
     "other": {
       "pt": "Sol pleno, solo bem drenado e ventilação. Principais doenças: míldio e oídio, piores com chuva; tire folhas em volta dos cachos para arejar.",
-      "en": "Full sun, well-drained soil and airflow. Main diseases: downy and powdery mildew, worse with rain; strip leaves around bunches to let air in."
+      "en": "Full sun, well-drained soil and airflow. Main diseases: downy and powdery mildew, worse with rain; strip leaves around bunches to let air in.",
+      "es": "Pleno sol, suelo bien drenado y ventilación. Enfermedades principales: mildiu y oídio, peores con lluvia; quita las hojas alrededor de los racimos para que entre aire."
     }
   },
   "sources": [

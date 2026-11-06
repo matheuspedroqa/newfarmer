@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { animalContentSchema, cropContentSchema } from "@/lib/content-schema";
 
-const t = { pt: "texto", en: "text" };
+const t = { pt: "texto", en: "text", es: "texto" };
 const seasons = { summer: t, autumn: t, winter: t, spring: t };
 const zones = <T,>(v: T) => ({ tropical: v, subtropical: v, temperate: v, semiarid: v, cold: v });
 const sources = [
@@ -27,7 +27,7 @@ const crop = { id: "tomato", summary: t, calendar: zones(cal), care: { fertilizi
 describe("animalContentSchema", () => {
   it("aceita ficha completa", () => expect(animalContentSchema.safeParse(animal).success).toBe(true));
   it("recusa texto sem inglês", () =>
-    expect(animalContentSchema.safeParse({ ...animal, summary: { pt: "x", en: "" } }).success).toBe(false));
+    expect(animalContentSchema.safeParse({ ...animal, summary: { pt: "x", en: "x", es: "" } }).success).toBe(false));
   it("recusa menos de 2 fontes", () =>
     expect(animalContentSchema.safeParse({ ...animal, sources: [sources[0]] }).success).toBe(false));
   it("recusa id fora do catálogo", () =>

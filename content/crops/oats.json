@@ -2,7 +2,8 @@
   "id": "oats",
   "summary": {
     "pt": "A aveia é um cereal de clima fresco, rústico e fácil. Serve para grão, para pasto e feno dos animais e para cobrir e proteger o solo no inverno.",
-    "en": "Oats are a hardy, easy cool-season cereal. They give grain, pasture and hay for livestock, and protect the soil as a winter cover crop."
+    "en": "Oats are a hardy, easy cool-season cereal. They give grain, pasture and hay for livestock, and protect the soil as a winter cover crop.",
+    "es": "La avena es un cereal resistente y fácil de clima fresco. Da grano, pasto y heno para el ganado, y protege el suelo como cultivo de cobertura de invierno."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [7, 8],
-      "notes": { "pt": "Plante no fim das chuvas, mais para pasto ou cobertura de solo. Em regiões baixas e quentes rende pouco grão.", "en": "Sow at the end of the rains, mainly for pasture or cover. In hot lowlands it yields little grain." }
+      "notes": { "pt": "Plante no fim das chuvas, mais para pasto ou cobertura de solo. Em regiões baixas e quentes rende pouco grão.", "en": "Sow at the end of the rains, mainly for pasture or cover. In hot lowlands it yields little grain.", "es": "Siembra al final de las lluvias, sobre todo para pasto o cobertura. En zonas bajas y calurosas rinde poco grano." }
     },
     "subtropical": {
       "directSowing": [3, 4, 5, 6, 7],
       "seedbed": [],
       "transplant": [],
       "harvest": [8, 9, 10, 11],
-      "notes": { "pt": "Para pasto, semeie cedo (mar–abr); para grão, abr–jun.", "en": "For grazing, sow early (Mar–Apr); for grain, Apr–Jun." }
+      "notes": { "pt": "Para pasto, semeie cedo (mar–abr); para grão, abr–jun.", "en": "For grazing, sow early (Mar–Apr); for grain, Apr–Jun.", "es": "Para pastoreo, siembra temprano (mar–abr); para grano, abr–jun." }
     },
     "temperate": {
       "directSowing": [9, 10],
       "seedbed": [],
       "transplant": [],
       "harvest": [1, 2],
-      "notes": { "pt": "Aveia de primavera: semeie assim que der para trabalhar o solo. Onde o inverno é ameno, também se semeia no outono.", "en": "Spring oats: sow as soon as the soil can be worked. Where winters are mild, oats can also be sown in autumn." }
+      "notes": { "pt": "Aveia de primavera: semeie assim que der para trabalhar o solo. Onde o inverno é ameno, também se semeia no outono.", "en": "Spring oats: sow as soon as the soil can be worked. Where winters are mild, oats can also be sown in autumn.", "es": "Avena de primavera: siembra en cuanto se pueda trabajar el suelo. Donde los inviernos son suaves, la avena también se puede sembrar en otoño." }
     },
     "semiarid": {
       "directSowing": [5, 6],
       "seedbed": [],
       "transplant": [],
       "harvest": [9, 10],
-      "notes": { "pt": "Na estação fresca, com irrigação; boa opção de forragem.", "en": "In the cool season, with irrigation; a good forage option." }
+      "notes": { "pt": "Na estação fresca, com irrigação; boa opção de forragem.", "en": "In the cool season, with irrigation; a good forage option.", "es": "En la época fresca, con riego; una buena opción forrajera." }
     },
     "cold": {
       "directSowing": [10, 11],
       "seedbed": [],
       "transplant": [],
       "harvest": [2, 3],
-      "notes": { "pt": "Semeie cedo na primavera; a aveia aguenta geadas leves.", "en": "Sow early in spring; oats handle light frosts." }
+      "notes": { "pt": "Semeie cedo na primavera; a aveia aguenta geadas leves.", "en": "Sow early in spring; oats handle light frosts.", "es": "Siembra temprano en primavera; la avena aguanta heladas ligeras." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Corrija a acidez com calcário (a aveia-preta tolera solo mais ácido que a branca). No plantio, NPK com fósforo e potássio ou esterco curtido. Nitrogênio moderado: um pouco no plantio e outro tanto quando as plantas tiverem 10–15 cm. Excesso de nitrogênio faz a aveia acamar (tombar).",
-      "en": "Lime acid soils (black oats tolerate acidity better than white oats). At sowing, use an NPK with phosphorus and potassium, or aged manure. Moderate nitrogen: a little at sowing and a bit more when plants are 10–15 cm tall. Too much nitrogen makes oats lodge (fall over)."
+      "en": "Lime acid soils (black oats tolerate acidity better than white oats). At sowing, use an NPK with phosphorus and potassium, or aged manure. Moderate nitrogen: a little at sowing and a bit more when plants are 10–15 cm tall. Too much nitrogen makes oats lodge (fall over).",
+      "es": "Encala los suelos ácidos (la avena negra tolera mejor la acidez que la blanca). En la siembra, usa un NPK con fósforo y potasio, o estiércol curado. Nitrógeno moderado: un poco en la siembra y algo más cuando las plantas midan 10–15 cm. Demasiado nitrógeno hace que la avena se encame (se caiga)."
     },
     "pruning": null,
     "watering": {
       "pt": "Normalmente basta a chuva. Precisa de umidade no perfilhamento e no espigamento.",
-      "en": "Rain is usually enough. Needs moisture at tillering and heading."
+      "en": "Rain is usually enough. Needs moisture at tillering and heading.",
+      "es": "Normalmente basta con la lluvia. Necesita humedad en el ahijado y el espigado."
     },
     "other": {
       "pt": "Pleno sol. Semeie a lanço ou em linhas próximas (17–20 cm). Para pasto, deixe crescer uns 25–30 cm antes de soltar os animais. Ferrugem é a doença mais comum: use variedade resistente.",
-      "en": "Full sun. Broadcast or drill in narrow rows (17–20 cm). For grazing, let it reach 25–30 cm before turning animals in. Rust is the most common disease: use resistant varieties."
+      "en": "Full sun. Broadcast or drill in narrow rows (17–20 cm). For grazing, let it reach 25–30 cm before turning animals in. Rust is the most common disease: use resistant varieties.",
+      "es": "Pleno sol. Siembra al voleo o en hileras estrechas (17–20 cm). Para pastoreo, deja que llegue a 25–30 cm antes de meter los animales. La roya es la enfermedad más común: usa variedades resistentes."
     }
   },
   "sources": [

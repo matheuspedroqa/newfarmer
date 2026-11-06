@@ -1,3 +1,4 @@
+import type { Locale } from "@/i18n/locales";
 /** Datas em milissegundos (a Stripe manda segundos; quem traduz é parseStripeSubscription). */
 export type StripeSubscription = {
   id: string;
@@ -12,7 +13,7 @@ export type StripeSubscription = {
 
 export interface PaymentProvider {
   createCustomer(input: { email: string; name: string; userId: number }): Promise<string>;
-  createCheckout(input: { customerId: string; priceId: string; userId: number; locale: "pt" | "en"; successUrl: string; cancelUrl: string }): Promise<string>;
+  createCheckout(input: { customerId: string; priceId: string; userId: number; locale: Locale; successUrl: string; cancelUrl: string }): Promise<string>;
   getCheckout(sessionId: string): Promise<{ customerId: string; subscription: StripeSubscription | null }>;
   createPortal(input: { customerId: string; returnUrl: string }): Promise<string>;
   /** Apaga o cliente: a Stripe cancela na hora todas as assinaturas dele e remove nome e e-mail. */

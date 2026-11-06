@@ -2,7 +2,8 @@
   "id": "coconut",
   "summary": {
     "pt": "Palmeira tropical que dá coco o ano todo. O coqueiro-anão começa a produzir por volta do 3º ano e é o melhor para água de coco; precisa de calor constante e muita água.",
-    "en": "A tropical palm that bears coconuts all year. Dwarf coconut starts bearing around year 3 and is best for coconut water; it needs steady heat and plenty of water."
+    "en": "A tropical palm that bears coconuts all year. Dwarf coconut starts bearing around year 3 and is best for coconut water; it needs steady heat and plenty of water.",
+    "es": "Palmera tropical que da cocos todo el año. El coco enano empieza a producir hacia el año 3 y es el mejor para agua de coco; necesita calor constante y mucha agua."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [11, 12, 1, 2, 3, 4],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Clima ideal (média perto de 27 °C). Plante a muda no início das chuvas; com irrigação, em qualquer mês. Colhe-se o ano todo.", "en": "Ideal climate (average near 27 °C). Plant at the start of the rains; with irrigation, any month. Harvest all year." }
+      "notes": { "pt": "Clima ideal (média perto de 27 °C). Plante a muda no início das chuvas; com irrigação, em qualquer mês. Colhe-se o ano todo.", "en": "Ideal climate (average near 27 °C). Plant at the start of the rains; with irrigation, any month. Harvest all year.", "es": "Clima ideal (media cercana a 27 °C). Planta al inicio de las lluvias; con riego, en cualquier mes. Cosecha todo el año." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [10, 11, 12],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Só no litoral quente e sem geada. Abaixo de ~15 °C ele para de crescer e derruba os cocos pequenos; geada pode matar. Produz bem menos que no tropical.", "en": "Only on a warm, frost-free coast. Below ~15 °C it stops growing and drops young nuts; frost can kill it. Yields much less than in the tropics." }
+      "notes": { "pt": "Só no litoral quente e sem geada. Abaixo de ~15 °C ele para de crescer e derruba os cocos pequenos; geada pode matar. Produz bem menos que no tropical.", "en": "Only on a warm, frost-free coast. Below ~15 °C it stops growing and drops young nuts; frost can kill it. Yields much less than in the tropics.", "es": "Solo en una costa cálida y libre de heladas. Por debajo de ~15 °C deja de crecer y suelta los cocos jóvenes; la helada puede matarla. Rinde mucho menos que en el trópico." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não tolera frio nem geada: não produz. No máximo como planta jovem de vaso dentro de casa.", "en": "Does not tolerate cold or frost: it won't bear. At most as a young potted plant indoors." }
+      "notes": { "pt": "Não tolera frio nem geada: não produz. No máximo como planta jovem de vaso dentro de casa.", "en": "Does not tolerate cold or frost: it won't bear. At most as a young potted plant indoors.", "es": "No tolera el frío ni la helada: no dará fruto. Como mucho, como planta joven en maceta bajo techo." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [1, 2, 3, 4],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "O calor é bom, mas só produz com irrigação constante (cerca de 100–200 L por planta por dia na seca, para o anão adulto).", "en": "The heat is fine, but it only bears with steady irrigation (roughly 100–200 L per adult dwarf palm per day in the dry season)." }
+      "notes": { "pt": "O calor é bom, mas só produz com irrigação constante (cerca de 100–200 L por planta por dia na seca, para o anão adulto).", "en": "The heat is fine, but it only bears with steady irrigation (roughly 100–200 L per adult dwarf palm per day in the dry season).", "es": "El calor está bien, pero solo da fruto con riego constante (unos 100–200 L por palmera enana adulta al día en la época seca)." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não sobrevive ao frio. Não plante.", "en": "Does not survive cold. Don't plant." }
+      "notes": { "pt": "Não sobrevive ao frio. Não plante.", "en": "Does not survive cold. Don't plant.", "es": "No sobrevive al frío. No la plantes." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Na cova, esterco curtido (cerca de 20 L) ou cama de frango e fósforo. Um mês depois, ureia e cloreto de potássio em volta da muda. Na adulta, adube todo ano entre 0,5 e 2 m do tronco, onde estão as raízes. Gosta muito de potássio.",
-      "en": "In the hole, rotted manure (about 20 L) or poultry litter plus phosphorus. A month later, urea and potassium chloride around the plant. For mature palms, fertilize yearly 0.5–2 m from the trunk, where the roots are. It needs lots of potassium."
+      "en": "In the hole, rotted manure (about 20 L) or poultry litter plus phosphorus. A month later, urea and potassium chloride around the plant. For mature palms, fertilize yearly 0.5–2 m from the trunk, where the roots are. It needs lots of potassium.",
+      "es": "En el hoyo, estiércol curado (unos 20 L) o gallinaza más fósforo. Un mes después, urea y cloruro de potasio alrededor de la planta. En palmeras adultas, fertiliza cada año a 0,5–2 m del tronco, donde están las raíces. Necesita mucho potasio."
     },
     "pruning": {
       "pt": "Só tire as folhas secas e os cachos velhos. Nunca corte folhas verdes nem mexa no 'olho' (ponta de crescimento): se ele morrer, a palmeira morre.",
-      "en": "Only remove dead fronds and old bunches. Never cut green fronds or touch the growing tip: if it dies, the palm dies."
+      "en": "Only remove dead fronds and old bunches. Never cut green fronds or touch the growing tip: if it dies, the palm dies.",
+      "es": "Quita solo las hojas muertas y los racimos viejos. Nunca cortes hojas verdes ni toques el punto de crecimiento: si muere, la palmera muere."
     },
     "watering": {
       "pt": "Precisa de bastante água o ano todo. Na seca, irrigue com regularidade; falta de água derruba flores e cocos novos.",
-      "en": "Needs plenty of water all year. In dry periods irrigate regularly; drought makes it drop flowers and young nuts."
+      "en": "Needs plenty of water all year. In dry periods irrigate regularly; drought makes it drop flowers and young nuts.",
+      "es": "Necesita mucha agua todo el año. En periodos secos riega con regularidad; la sequía hace que suelte flores y cocos jóvenes."
     },
     "other": {
       "pt": "Sol pleno e solo profundo (pelo menos 1 m) e leve. Deixe cerca de 7,5 m entre plantas. Fique atento à broca-do-olho (besouro) e ao anel-vermelho.",
-      "en": "Full sun and deep (at least 1 m), light soil. Leave about 7.5 m between palms. Watch for palm weevils and red ring disease."
+      "en": "Full sun and deep (at least 1 m), light soil. Leave about 7.5 m between palms. Watch for palm weevils and red ring disease.",
+      "es": "Pleno sol y suelo profundo (al menos 1 m) y ligero. Deja unos 7,5 m entre palmeras. Vigila los picudos de las palmeras y la enfermedad del anillo rojo."
     }
   },
   "sources": [

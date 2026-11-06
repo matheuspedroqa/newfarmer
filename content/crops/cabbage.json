@@ -2,7 +2,8 @@
   "id": "cabbage",
   "summary": {
     "pt": "Repolho: cabeça de folhas firmes, rende muito por metro e aguenta bem o frio. Guarda por semanas na geladeira.",
-    "en": "Cabbage: a firm head of leaves, high yield per square metre and good cold tolerance. Keeps for weeks in the fridge."
+    "en": "Cabbage: a firm head of leaves, high yield per square metre and good cold tolerance. Keeps for weeks in the fridge.",
+    "es": "Repollo: una cabeza firme de hojas, alto rendimiento por metro cuadrado y buena tolerancia al frío. Se conserva semanas en la nevera."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [4, 5, 6, 7],
       "transplant": [5, 6, 7, 8],
       "harvest": [8, 9, 10, 11],
-      "notes": { "pt": "A época seca tem menos pragas e doenças e rende mais. Use cultivares de verão se plantar no calor.", "en": "The dry season has fewer pests and diseases and yields more. Use summer varieties if planting in the heat." }
+      "notes": { "pt": "A época seca tem menos pragas e doenças e rende mais. Use cultivares de verão se plantar no calor.", "en": "The dry season has fewer pests and diseases and yields more. Use summer varieties if planting in the heat.", "es": "La época seca tiene menos plagas y enfermedades y rinde más. Usa variedades de verano si plantas con calor." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [2, 3, 4, 5, 6, 7],
       "transplant": [3, 4, 5, 6, 7, 8],
       "harvest": [6, 7, 8, 9, 10, 11],
-      "notes": { "pt": "Cresce melhor entre 15 e 21 °C. Com cultivares de verão dá para plantar quase o ano todo.", "en": "Grows best at 15–21 °C. With summer varieties it can be planted almost year-round." }
+      "notes": { "pt": "Cresce melhor entre 15 e 21 °C. Com cultivares de verão dá para plantar quase o ano todo.", "en": "Grows best at 15–21 °C. With summer varieties it can be planted almost year-round.", "es": "Crece mejor a 15–21 °C. Con variedades de verano se puede plantar casi todo el año." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [9, 10, 12],
       "transplant": [10, 11, 1],
       "harvest": [1, 2, 3, 4, 5],
-      "notes": { "pt": "Safra de primavera (mudas no fim do inverno) e de outono (mudas no início do verão).", "en": "Spring crop (seedlings in late winter) and autumn crop (seedlings in early summer)." }
+      "notes": { "pt": "Safra de primavera (mudas no fim do inverno) e de outono (mudas no início do verão).", "en": "Spring crop (seedlings in late winter) and autumn crop (seedlings in early summer).", "es": "Cosecha de primavera (plántulas a finales del invierno) y de otoño (plántulas a principios del verano)." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [4, 5, 6],
       "transplant": [5, 6, 7],
       "harvest": [8, 9, 10],
-      "notes": { "pt": "Com irrigação, nos meses mais frescos.", "en": "With irrigation, in the cooler months." }
+      "notes": { "pt": "Com irrigação, nos meses mais frescos.", "en": "With irrigation, in the cooler months.", "es": "Con riego, en los meses más frescos." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [10],
       "transplant": [11, 12],
       "harvest": [2, 3, 4],
-      "notes": { "pt": "Mudas feitas dentro de casa; aguenta geada leve no fim da safra.", "en": "Start seedlings indoors; tolerates light frost at the end of the season." }
+      "notes": { "pt": "Mudas feitas dentro de casa; aguenta geada leve no fim da safra.", "en": "Start seedlings indoors; tolerates light frost at the end of the season.", "es": "Empieza las plántulas bajo techo; tolera heladas ligeras al final de la temporada." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Calcário conforme análise de solo. Na cova, esterco curtido ou composto e NPK de plantio; cobertura com nitrogênio aos 20 e 40 dias após o transplante. Repolho também precisa de boro.",
-      "en": "Lime per soil test. Put rotted manure or compost and starter NPK in the hole; side-dress nitrogen at 20 and 40 days after transplanting. Cabbage also needs boron."
+      "en": "Lime per soil test. Put rotted manure or compost and starter NPK in the hole; side-dress nitrogen at 20 and 40 days after transplanting. Cabbage also needs boron.",
+      "es": "Encala según el análisis de suelo. Pon estiércol curado o compost y NPK de arranque en el hoyo; abona en cobertura con nitrógeno a los 20 y 40 días tras el trasplante. El repollo también necesita boro."
     },
     "pruning": null,
     "watering": {
       "pt": "Regas regulares para a cabeça crescer; perto da colheita, excesso de água depois de seca racha a cabeça.",
-      "en": "Water regularly so the head grows; near harvest, heavy water after dryness splits heads."
+      "en": "Water regularly so the head grows; near harvest, heavy water after dryness splits heads.",
+      "es": "Riega con regularidad para que crezca la cabeza; cerca de la cosecha, el riego abundante tras la sequedad parte las cabezas."
     },
     "other": {
       "pt": "Sol pleno, espaçamento de cerca de 40–50 cm entre plantas. Principal praga: lagartas (traça-das-crucíferas, curuquerê); use manta, Bt e rotação com não-brássicas.",
-      "en": "Full sun, about 40–50 cm between plants. Main pests: caterpillars (diamondback moth, cabbage worm); use row cover, Bt and rotate with non-brassicas."
+      "en": "Full sun, about 40–50 cm between plants. Main pests: caterpillars (diamondback moth, cabbage worm); use row cover, Bt and rotate with non-brassicas.",
+      "es": "Pleno sol, unos 40–50 cm entre plantas. Plagas principales: orugas (polilla de las crucíferas, oruga de la col); usa cubierta de hilera, Bt y rota con plantas que no sean crucíferas."
     }
   },
   "sources": [

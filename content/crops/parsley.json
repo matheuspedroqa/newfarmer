@@ -2,7 +2,8 @@
   "id": "parsley",
   "summary": {
     "pt": "Erva de tempero (salsinha) fácil de cultivar em canteiro ou vaso. Depois de pegar, dá folhas para cortar por vários meses; vive cerca de 2 anos.",
-    "en": "An easy culinary herb for beds or pots. Once established it gives leaves to cut for many months; lives about 2 years."
+    "en": "An easy culinary herb for beds or pots. Once established it gives leaves to cut for many months; lives about 2 years.",
+    "es": "Hierba culinaria fácil para bancales o macetas. Una vez establecida da hojas para cortar durante muchos meses; vive unos 2 años."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [5, 6, 7, 8, 9, 10, 11],
-      "notes": { "pt": "Prefere a época mais fresca do ano. No calor forte cresce pouco: dê meia-sombra nas horas quentes.", "en": "Prefers the cooler part of the year. In strong heat it grows slowly: give afternoon shade." }
+      "notes": { "pt": "Prefere a época mais fresca do ano. No calor forte cresce pouco: dê meia-sombra nas horas quentes.", "en": "Prefers the cooler part of the year. In strong heat it grows slowly: give afternoon shade.", "es": "Prefiere la parte más fresca del año. Con calor fuerte crece despacio: dale sombra por la tarde." }
     },
     "subtropical": {
       "directSowing": [2, 3, 4, 5, 8, 9, 10],
       "seedbed": [],
       "transplant": [],
       "harvest": [4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Semeie no outono ou no fim do inverno/primavera. Pode semear de novo a cada poucos meses para ter sempre.", "en": "Sow in autumn or late winter/spring. Resow every few months for a steady supply." }
+      "notes": { "pt": "Semeie no outono ou no fim do inverno/primavera. Pode semear de novo a cada poucos meses para ter sempre.", "en": "Sow in autumn or late winter/spring. Resow every few months for a steady supply.", "es": "Siembra en otoño o a finales del invierno/primavera. Vuelve a sembrar cada pocos meses para tener suministro constante." }
     },
     "temperate": {
       "directSowing": [9, 10, 11, 12, 1, 2],
       "seedbed": [8],
       "transplant": [9, 10],
       "harvest": [11, 12, 1, 2, 3, 4, 5],
-      "notes": { "pt": "Semeie da primavera ao fim do verão (ou em bandeja dentro de casa no fim do inverno). Aguenta geadas leves; coberta, dá folhas até a primavera seguinte.", "en": "Sow from spring to late summer (or in trays indoors in late winter). Tolerates light frost; covered, it gives leaves into the next spring." }
+      "notes": { "pt": "Semeie da primavera ao fim do verão (ou em bandeja dentro de casa no fim do inverno). Aguenta geadas leves; coberta, dá folhas até a primavera seguinte.", "en": "Sow from spring to late summer (or in trays indoors in late winter). Tolerates light frost; covered, it gives leaves into the next spring.", "es": "Siembra de primavera a finales del verano (o en bandejas bajo techo a finales del invierno). Tolera heladas ligeras; cubierto, da hojas hasta la primavera siguiente." }
     },
     "semiarid": {
       "directSowing": [4, 5, 6],
       "seedbed": [],
       "transplant": [],
       "harvest": [6, 7, 8, 9, 10],
-      "notes": { "pt": "Só com irrigação, na estação fresca e com meia-sombra.", "en": "Only with irrigation, in the cool season and with partial shade." }
+      "notes": { "pt": "Só com irrigação, na estação fresca e com meia-sombra.", "en": "Only with irrigation, in the cool season and with partial shade.", "es": "Solo con riego, en la época fresca y con sombra parcial." }
     },
     "cold": {
       "directSowing": [10, 11, 12],
       "seedbed": [8, 9],
       "transplant": [10, 11],
       "harvest": [12, 1, 2, 3, 4],
-      "notes": { "pt": "Comece em bandeja dentro de casa e plante fora depois da última geada. No inverno, mantenha um vaso perto da janela.", "en": "Start in trays indoors and plant out after the last frost. In winter, keep a pot by a window." }
+      "notes": { "pt": "Comece em bandeja dentro de casa e plante fora depois da última geada. No inverno, mantenha um vaso perto da janela.", "en": "Start in trays indoors and plant out after the last frost. In winter, keep a pot by a window.", "es": "Empieza en bandejas bajo techo y trasplanta después de la última helada. En invierno, guarda una maceta junto a una ventana." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Prepare o canteiro com esterco curtido de gado ou de galinha, ou composto. Depois do segundo ou terceiro corte, uma cobertura leve de composto ou adubo orgânico líquido ajuda a rebrotar. Em vaso, adube um pouco a cada 3–6 semanas.",
-      "en": "Prepare the bed with rotted cattle or chicken manure, or compost. After the second or third cut, a light top-up of compost or liquid organic fertilizer helps regrowth. In pots, feed lightly every 3–6 weeks."
+      "en": "Prepare the bed with rotted cattle or chicken manure, or compost. After the second or third cut, a light top-up of compost or liquid organic fertilizer helps regrowth. In pots, feed lightly every 3–6 weeks.",
+      "es": "Prepara el bancal con estiércol vacuno o de gallina curado, o compost. Después del segundo o tercer corte, un abonado ligero con compost o fertilizante orgánico líquido ayuda al rebrote. En macetas, abona poco cada 3–6 semanas."
     },
     "pruning": {
       "pt": "Corte sempre os talos de fora, perto da base, e deixe o miolo para continuar brotando. Tire os pendões de flor assim que aparecerem para a planta durar mais.",
-      "en": "Always cut outer stalks near the base and leave the centre to keep growing. Remove flower stalks as soon as they appear so the plant lasts longer."
+      "en": "Always cut outer stalks near the base and leave the centre to keep growing. Remove flower stalks as soon as they appear so the plant lasts longer.",
+      "es": "Corta siempre los tallos exteriores cerca de la base y deja el centro para que siga creciendo. Quita los tallos florales en cuanto aparezcan para que la planta dure más."
     },
     "watering": {
       "pt": "Mantenha a terra úmida, principalmente na germinação, que é lenta (2–4 semanas). Regue com frequência no calor, sem encharcar.",
-      "en": "Keep soil moist, especially during the slow germination (2–4 weeks). Water often in hot weather without waterlogging."
+      "en": "Keep soil moist, especially during the slow germination (2–4 weeks). Water often in hot weather without waterlogging.",
+      "es": "Mantén el suelo húmedo, sobre todo durante la germinación lenta (2–4 semanas). Riega a menudo con calor sin encharcar."
     },
     "other": {
       "pt": "Deixe as sementes de molho em água por uma noite antes de semear para nascer mais rápido. Semeie direto no lugar (não gosta de transplante) e desbaste para ~15–20 cm. Primeiro corte uns 60–90 dias após semear.",
-      "en": "Soak seeds in water overnight before sowing to speed germination. Sow in place (dislikes transplanting) and thin to ~15–20 cm. First cut about 60–90 days after sowing."
+      "en": "Soak seeds in water overnight before sowing to speed germination. Sow in place (dislikes transplanting) and thin to ~15–20 cm. First cut about 60–90 days after sowing.",
+      "es": "Remoja las semillas en agua durante una noche antes de sembrar para acelerar la germinación. Siembra en el lugar definitivo (no tolera el trasplante) y aclara a ~15–20 cm. Primer corte unos 60–90 días después de la siembra."
     }
   },
   "sources": [

@@ -2,31 +2,36 @@
   "id": "lemongrass",
   "summary": {
     "pt": "O capim-santo (capim-limão) é uma touceira perene de folhas com cheiro de limão, usada em chás e na cozinha. É rústico, cresce fácil no calor e dá cortes o ano todo.",
-    "en": "Lemongrass is a perennial clumping grass with lemon-scented leaves, used for tea and cooking. It is hardy, grows easily in heat and can be cut all year."
+    "en": "Lemongrass is a perennial clumping grass with lemon-scented leaves, used for tea and cooking. It is hardy, grows easily in heat and can be cut all year.",
+    "es": "El limoncillo es una gramínea perenne en macolla con hojas de aroma a limón, usada para infusión y cocina. Es resistente, crece fácil con calor y se puede cortar todo el año."
   },
   "calendar": {
-    "tropical": { "directSowing": [], "seedbed": [], "transplant": [10, 11, 12, 1], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Plante as mudas (perfilhos) no início das chuvas; primeiro corte cerca de 4 meses depois, e então a cada 45–60 dias.", "en": "Plant divisions at the start of the rainy season; first cut about 4 months later, then every 45–60 days." } },
-    "subtropical": { "directSowing": [], "seedbed": [], "transplant": [9, 10, 11], "harvest": [12, 1, 2, 3, 4, 5], "notes": { "pt": "Cresce pouco no inverno e geada queima as folhas; corte e espere rebrotar na primavera.", "en": "Grows little in winter and frost burns the leaves; cut back and wait for regrowth in spring." } },
-    "temperate": { "directSowing": [], "seedbed": [], "transplant": [10, 11], "harvest": [1, 2, 3, 4], "notes": { "pt": "Não tolera geada forte: cultive em vaso e recolha no inverno, ou trate como planta de verão.", "en": "Does not tolerate hard frost: grow in a pot and bring it indoors in winter, or treat it as a summer crop." } },
-    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [1, 2, 3], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Com irrigação produz o ano todo; plante no início das chuvas.", "en": "With irrigation it yields year-round; plant at the start of the rains." } },
-    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não sobrevive ao inverno rigoroso; só em vaso dentro de casa ou estufa.", "en": "Does not survive harsh winters; only in a pot indoors or in a greenhouse." } }
+    "tropical": { "directSowing": [], "seedbed": [], "transplant": [10, 11, 12, 1], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Plante as mudas (perfilhos) no início das chuvas; primeiro corte cerca de 4 meses depois, e então a cada 45–60 dias.", "en": "Plant divisions at the start of the rainy season; first cut about 4 months later, then every 45–60 days.", "es": "Planta divisiones al inicio de la época de lluvias; primer corte unos 4 meses después, luego cada 45–60 días." } },
+    "subtropical": { "directSowing": [], "seedbed": [], "transplant": [9, 10, 11], "harvest": [12, 1, 2, 3, 4, 5], "notes": { "pt": "Cresce pouco no inverno e geada queima as folhas; corte e espere rebrotar na primavera.", "en": "Grows little in winter and frost burns the leaves; cut back and wait for regrowth in spring.", "es": "Crece poco en invierno y la helada quema las hojas; corta y espera el rebrote en primavera." } },
+    "temperate": { "directSowing": [], "seedbed": [], "transplant": [10, 11], "harvest": [1, 2, 3, 4], "notes": { "pt": "Não tolera geada forte: cultive em vaso e recolha no inverno, ou trate como planta de verão.", "en": "Does not tolerate hard frost: grow in a pot and bring it indoors in winter, or treat it as a summer crop.", "es": "No tolera la helada fuerte: cultívalo en maceta y entra en casa en invierno, o trátalo como cultivo de verano." } },
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [1, 2, 3], "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "notes": { "pt": "Com irrigação produz o ano todo; plante no início das chuvas.", "en": "With irrigation it yields year-round; plant at the start of the rains.", "es": "Con riego rinde todo el año; planta al inicio de las lluvias." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não sobrevive ao inverno rigoroso; só em vaso dentro de casa ou estufa.", "en": "Does not survive harsh winters; only in a pot indoors or in a greenhouse.", "es": "No sobrevive a inviernos duros; solo en maceta bajo techo o en invernadero." } }
   },
   "care": {
     "fertilizing": {
       "pt": "No plantio, coloque esterco curtido ou composto na cova. Depois de cada 2–3 cortes, adube de novo com esterco ou um pouco de NPK (ex.: 10-10-10). Esterco junto com NPK rende mais folha.",
-      "en": "At planting, put aged manure or compost in the hole. After every 2–3 cuts, feed again with manure or a little NPK (e.g., 10-10-10). Manure plus NPK gives the most leaf."
+      "en": "At planting, put aged manure or compost in the hole. After every 2–3 cuts, feed again with manure or a little NPK (e.g., 10-10-10). Manure plus NPK gives the most leaf.",
+      "es": "Al plantar, pon estiércol curado o compost en el hoyo. Después de cada 2–3 cortes, vuelve a abonar con estiércol o un poco de NPK (p. ej., 10-10-10). Estiércol más NPK da más hoja."
     },
     "pruning": {
       "pt": "A colheita já é a poda: corte as folhas a uns 20 cm do chão. Quando a touceira ficar grande ou seca no meio, divida e replante.",
-      "en": "Harvesting is the pruning: cut leaves about 20 cm above ground. When the clump gets large or dies in the center, divide and replant."
+      "en": "Harvesting is the pruning: cut leaves about 20 cm above ground. When the clump gets large or dies in the center, divide and replant.",
+      "es": "La cosecha es la poda: corta las hojas a unos 20 cm del suelo. Cuando la mata se ponga grande o se muera en el centro, divide y vuelve a plantar."
     },
     "watering": {
       "pt": "Gosta de água regular, principalmente na seca, mas não de solo encharcado.",
-      "en": "Likes regular water, especially in dry spells, but not waterlogged soil."
+      "en": "Likes regular water, especially in dry spells, but not waterlogged soil.",
+      "es": "Le gusta el agua regular, sobre todo en periodos secos, pero no el suelo encharcado."
     },
     "other": {
       "pt": "Sol pleno, espaçamento de 60–80 cm. Plante perfilhos (pedaços da touceira com raiz) — é mais fácil que semente. As folhas são cortantes: use luvas.",
-      "en": "Full sun, 60–80 cm spacing. Plant divisions (rooted pieces of the clump) — easier than seed. Leaves have sharp edges: wear gloves."
+      "en": "Full sun, 60–80 cm spacing. Plant divisions (rooted pieces of the clump) — easier than seed. Leaves have sharp edges: wear gloves.",
+      "es": "Pleno sol, separación de 60–80 cm. Planta divisiones (trozos de la mata con raíces): es más fácil que por semilla. Las hojas tienen bordes cortantes: usa guantes."
     }
   },
   "sources": [

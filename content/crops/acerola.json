@@ -2,7 +2,8 @@
   "id": "acerola",
   "summary": {
     "pt": "Arbusto tropical rústico, campeão de vitamina C, que começa a produzir no 2º ano e floresce várias vezes por ano. Com água à vontade, colhe-se em quase todos os meses quentes.",
-    "en": "A hardy tropical shrub, a vitamin C champion, that starts bearing in year 2 and flowers several times a year. With enough water you can pick in almost every warm month."
+    "en": "A hardy tropical shrub, a vitamin C champion, that starts bearing in year 2 and flowers several times a year. With enough water you can pick in almost every warm month.",
+    "es": "Arbusto tropical rústico, campeón de vitamina C, que empieza a dar fruto en el año 2 y florece varias veces al año. Con agua suficiente puedes cosechar en casi todos los meses cálidos."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [11, 12, 1, 2, 3],
       "harvest": [10, 11, 12, 1, 2, 3, 4, 5],
-      "notes": { "pt": "Plante no início das chuvas. Dá várias floradas por ano, e cada uma vira fruto em cerca de 3–4 semanas; com irrigação produz quase o ano todo.", "en": "Plant at the start of the rains. It flowers several times a year, each turning into fruit in about 3–4 weeks; with irrigation it bears almost all year." }
+      "notes": { "pt": "Plante no início das chuvas. Dá várias floradas por ano, e cada uma vira fruto em cerca de 3–4 semanas; com irrigação produz quase o ano todo.", "en": "Plant at the start of the rains. It flowers several times a year, each turning into fruit in about 3–4 weeks; with irrigation it bears almost all year.", "es": "Planta al inicio de las lluvias. Florece varias veces al año, y cada floración da fruta en unas 3–4 semanas; con riego produce casi todo el año." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10, 11],
       "harvest": [11, 12, 1, 2, 3, 4],
-      "notes": { "pt": "Produz nos meses quentes e para no inverno. Geada queima a planta nova; proteja nos primeiros invernos.", "en": "Bears in the warm months and stops in winter. Frost burns young plants; protect them in the first winters." }
+      "notes": { "pt": "Produz nos meses quentes e para no inverno. Geada queima a planta nova; proteja nos primeiros invernos.", "en": "Bears in the warm months and stops in winter. Frost burns young plants; protect them in the first winters.", "es": "Da fruta en los meses cálidos y para en invierno. Las heladas queman las plantas jóvenes; protégelas en los primeros inviernos." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não tolera geada. Só em vaso, abrigado no inverno.", "en": "Does not tolerate frost. Only in a pot sheltered in winter." }
+      "notes": { "pt": "Não tolera geada. Só em vaso, abrigado no inverno.", "en": "Does not tolerate frost. Only in a pot sheltered in winter.", "es": "No tolera las heladas. Solo en maceta, protegida en invierno." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [1, 2, 3, 4],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Muito cultivada no Nordeste irrigado: com irrigação colhe-se o ano todo. Sem água, só produz no período das chuvas.", "en": "Widely grown in irrigated semi-arid areas: with irrigation you harvest all year. Without water it only bears in the rainy season." }
+      "notes": { "pt": "Muito cultivada no Nordeste irrigado: com irrigação colhe-se o ano todo. Sem água, só produz no período das chuvas.", "en": "Widely grown in irrigated semi-arid areas: with irrigation you harvest all year. Without water it only bears in the rainy season.", "es": "Muy cultivada en zonas semiáridas con riego: con riego se cosecha todo el año. Sin agua solo da fruta en la estación de lluvias." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não sobrevive ao frio. Só em estufa.", "en": "Does not survive cold. Greenhouse only." }
+      "notes": { "pt": "Não sobrevive ao frio. Só em estufa.", "en": "Does not survive cold. Greenhouse only.", "es": "No sobrevive al frío. Solo en invernadero." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Abra a cova 1–2 meses antes e faça a calagem conforme análise de solo. Na cova, cerca de 20 L de esterco curtido e fosfato natural. Na adulta, nitrogênio e potássio (ou esterco e composto) em 3 doses durante as chuvas.",
-      "en": "Dig the hole 1–2 months ahead and lime by soil test. In the hole, about 20 L of rotted manure plus rock phosphate. For mature plants, nitrogen and potassium (or manure and compost) in 3 doses during the rains."
+      "en": "Dig the hole 1–2 months ahead and lime by soil test. In the hole, about 20 L of rotted manure plus rock phosphate. For mature plants, nitrogen and potassium (or manure and compost) in 3 doses during the rains.",
+      "es": "Abre el hoyo 1–2 meses antes y encala según el análisis de suelo. En el hoyo, unos 20 L de estiércol curado y fosfato natural. En plantas adultas, nitrógeno y potasio (o estiércol y compost) en 3 aplicaciones durante las lluvias."
     },
     "pruning": {
       "pt": "Quando o caule chegar a ~60 cm, corte a ponta para formar 3–4 ramos. Depois da colheita, faça poda de limpeza tirando ramos secos, velhos e os que tocam o chão.",
-      "en": "When the stem reaches ~60 cm, cut the tip to form 3–4 branches. After harvest, clean up by removing dead, old branches and those touching the ground."
+      "en": "When the stem reaches ~60 cm, cut the tip to form 3–4 branches. After harvest, clean up by removing dead, old branches and those touching the ground.",
+      "es": "Cuando el tallo llegue a ~60 cm, corta la punta para formar 3–4 ramas. Después de la cosecha, haz una limpieza quitando las ramas secas, viejas y las que tocan el suelo."
     },
     "watering": {
       "pt": "Aguenta seca, mas sem água para de florescer. Regue na seca para ter várias safras por ano. Não encharque.",
-      "en": "Tolerates drought, but without water it stops flowering. Water in dry spells to get several crops a year. Don't waterlog."
+      "en": "Tolerates drought, but without water it stops flowering. Water in dry spells to get several crops a year. Don't waterlog.",
+      "es": "Aguanta la sequía, pero sin agua deja de florecer. Riega en las épocas secas para tener varias cosechas al año. No encharques."
     },
     "other": {
       "pt": "Sol pleno, espaço de cerca de 4 × 3 m. Plante mais de uma variedade juntas para melhorar a polinização. A fruta madura estraga em 1–2 dias: colha e use ou congele logo.",
-      "en": "Full sun, about 4 × 3 m spacing. Plant more than one variety together for better pollination. Ripe fruit spoils in 1–2 days: pick and use or freeze right away."
+      "en": "Full sun, about 4 × 3 m spacing. Plant more than one variety together for better pollination. Ripe fruit spoils in 1–2 days: pick and use or freeze right away.",
+      "es": "Pleno sol, marco de unos 4 × 3 m. Planta más de una variedad juntas para una mejor polinización. La fruta madura se estropea en 1–2 días: cósela y úsala o congélala enseguida."
     }
   },
   "sources": [

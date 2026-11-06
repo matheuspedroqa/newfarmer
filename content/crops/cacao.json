@@ -2,7 +2,8 @@
   "id": "cacao",
   "summary": {
     "pt": "Árvore perene de floresta tropical úmida, cujos frutos dão as sementes do chocolate. Gosta de calor, umidade e meia-sombra; começa a produzir em 3–5 anos (clones, em 2–3).",
-    "en": "A perennial rainforest tree whose pods hold the seeds used for chocolate. Likes heat, humidity and partial shade; starts bearing in 3–5 years (grafted clones in 2–3)."
+    "en": "A perennial rainforest tree whose pods hold the seeds used for chocolate. Likes heat, humidity and partial shade; starts bearing in 3–5 years (grafted clones in 2–3).",
+    "es": "Árbol perenne de selva tropical cuyas mazorcas contienen las semillas usadas para el chocolate. Le gustan el calor, la humedad y la sombra parcial; empieza a producir en 3–5 años (clones injertados en 2–3)."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [11, 12, 1, 2, 3],
       "harvest": [10, 11, 12, 1, 2, 3],
-      "notes": { "pt": "Plante as mudas no início da estação das chuvas, com a sombra já formada (bananeira ou árvores plantadas ~6 meses antes). Há uma safra principal e uma menor (temporão) no resto do ano.", "en": "Plant seedlings at the start of the rainy season, with shade already in place (bananas or trees planted ~6 months earlier). There is a main crop plus a smaller off-season crop the rest of the year." }
+      "notes": { "pt": "Plante as mudas no início da estação das chuvas, com a sombra já formada (bananeira ou árvores plantadas ~6 meses antes). Há uma safra principal e uma menor (temporão) no resto do ano.", "en": "Plant seedlings at the start of the rainy season, with shade already in place (bananas or trees planted ~6 months earlier). There is a main crop plus a smaller off-season crop the rest of the year.", "es": "Planta las plántulas al inicio de la época de lluvias, con la sombra ya lista (bananos o árboles plantados ~6 meses antes). Hay una cosecha principal y otra menor fuera de temporada el resto del año." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Inverno ameno já é frio demais: abaixo de ~10 °C a planta sofre e não produz bem. Só em locais muito protegidos, sem nenhuma geada.", "en": "Even a mild winter is too cold: below ~10 °C the plant suffers and bears poorly. Only in very sheltered, totally frost-free spots." }
+      "notes": { "pt": "Inverno ameno já é frio demais: abaixo de ~10 °C a planta sofre e não produz bem. Só em locais muito protegidos, sem nenhuma geada.", "en": "Even a mild winter is too cold: below ~10 °C the plant suffers and bears poorly. Only in very sheltered, totally frost-free spots.", "es": "Incluso un invierno suave es demasiado frío: por debajo de ~10 °C la planta sufre y produce poco. Solo en lugares muy protegidos y totalmente libres de heladas." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não tolera frio nem geada. Só em estufa aquecida e úmida.", "en": "Can't tolerate cold or frost. Only in a heated, humid greenhouse." }
+      "notes": { "pt": "Não tolera frio nem geada. Só em estufa aquecida e úmida.", "en": "Can't tolerate cold or frost. Only in a heated, humid greenhouse.", "es": "No tolera el frío ni la helada. Solo en invernadero húmedo y calefaccionado." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Ar seco e falta de chuva matam o cacau. Só com irrigação constante, sombra e quebra-vento — pouco viável para iniciantes.", "en": "Dry air and lack of rain kill cacao. Only with constant irrigation, shade and windbreaks — hardly practical for beginners." }
+      "notes": { "pt": "Ar seco e falta de chuva matam o cacau. Só com irrigação constante, sombra e quebra-vento — pouco viável para iniciantes.", "en": "Dry air and lack of rain kill cacao. Only with constant irrigation, shade and windbreaks — hardly practical for beginners.", "es": "El aire seco y la falta de lluvia matan el cacao. Solo con riego constante, sombra y cortavientos: poco práctico para principiantes." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não sobrevive ao frio. Só em estufa aquecida.", "en": "Does not survive the cold. Only in a heated greenhouse." }
+      "notes": { "pt": "Não sobrevive ao frio. Só em estufa aquecida.", "en": "Does not survive the cold. Only in a heated greenhouse.", "es": "No sobrevive al frío. Solo en invernadero calefaccionado." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo antes e corrija com calcário se o solo for ácido. Na cova, esterco curtido ou composto e fósforo. Depois, adube com NPK em 2–3 vezes durante as chuvas, aumentando a dose à medida que a planta cresce. Deixe as folhas caídas no chão: viram adubo.",
-      "en": "Soil test first and lime if the soil is acid. In the hole, rotted manure or compost and phosphorus. Then feed NPK in 2–3 doses during the rains, increasing as the tree grows. Leave fallen leaves on the ground: they become fertilizer."
+      "en": "Soil test first and lime if the soil is acid. In the hole, rotted manure or compost and phosphorus. Then feed NPK in 2–3 doses during the rains, increasing as the tree grows. Leave fallen leaves on the ground: they become fertilizer.",
+      "es": "Primero haz un análisis de suelo y encala si es ácido. En el hoyo, estiércol curado o compost y fósforo. Luego abona con NPK en 2–3 dosis durante las lluvias, aumentando a medida que crece el árbol. Deja las hojas caídas en el suelo: se convierten en abono."
     },
     "pruning": {
       "pt": "Poda de formação nos primeiros anos para deixar um tronco e 3–4 galhos principais. Depois, poda de manutenção todo ano: tire brotos 'ladrões', ramos secos, doentes e frutos podres. A cada 2–3 anos, uma poda mais forte para baixar a copa.",
-      "en": "Formative pruning in the first years to keep one trunk and 3–4 main branches. Then yearly maintenance: remove suckers, dead and diseased branches and rotten pods. Every 2–3 years, a harder cut to lower the canopy."
+      "en": "Formative pruning in the first years to keep one trunk and 3–4 main branches. Then yearly maintenance: remove suckers, dead and diseased branches and rotten pods. Every 2–3 years, a harder cut to lower the canopy.",
+      "es": "Poda de formación en los primeros años para dejar un tronco y 3–4 ramas principales. Después, mantenimiento anual: quita chupones, ramas secas y enfermas y mazorcas podridas. Cada 2–3 años, un corte más fuerte para bajar la copa."
     },
     "watering": {
       "pt": "Precisa de chuva farta e bem distribuída (ou irrigação) e solo sempre úmido, mas sem encharcar. Não aguenta seca longa.",
-      "en": "Needs plentiful, well-spread rain (or irrigation) and soil that stays moist but not waterlogged. Can't take long droughts."
+      "en": "Needs plentiful, well-spread rain (or irrigation) and soil that stays moist but not waterlogged. Can't take long droughts.",
+      "es": "Necesita lluvia abundante y bien repartida (o riego) y un suelo que se mantenga húmedo pero no encharcado. No aguanta sequías largas."
     },
     "other": {
       "pt": "Meia-sombra, principalmente quando jovem; proteja do vento. Espaçamento comum de 3 × 3 m (clones 3 × 2,5 m). Colha os frutos maduros com podão, sem ferir a almofada floral do tronco. Atenção à vassoura-de-bruxa.",
-      "en": "Partial shade, especially when young; protect from wind. Common spacing 3 × 3 m (clones 3 × 2.5 m). Cut ripe pods with a pruning knife without damaging the flower cushion on the trunk. Watch for witches' broom disease."
+      "en": "Partial shade, especially when young; protect from wind. Common spacing 3 × 3 m (clones 3 × 2.5 m). Cut ripe pods with a pruning knife without damaging the flower cushion on the trunk. Watch for witches' broom disease.",
+      "es": "Sombra parcial, sobre todo de joven; protege del viento. Marco común de 3 × 3 m (clones 3 × 2,5 m). Corta las mazorcas maduras con una navaja de podar sin dañar el cojinete floral del tronco. Vigila la enfermedad escoba de bruja."
     }
   },
   "sources": [

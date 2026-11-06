@@ -2,31 +2,36 @@
   "id": "artichoke",
   "summary": {
     "pt": "A alcachofra é uma planta perene, parente do cardo; come-se o botão da flor ainda fechado. Gosta de clima ameno com inverno fresco e produz por vários anos.",
-    "en": "Artichoke is a perennial thistle relative; you eat the flower bud while it is still closed. It likes mild weather with cool winters and produces for several years."
+    "en": "Artichoke is a perennial thistle relative; you eat the flower bud while it is still closed. It likes mild weather with cool winters and produces for several years.",
+    "es": "La alcachofa es una planta perenne pariente del cardo; se come el botón floral todavía cerrado. Le gusta el tiempo suave con inviernos frescos y produce varios años."
   },
   "calendar": {
-    "tropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [8, 9, 10], "notes": { "pt": "Só em regiões de altitude (acima de ~800 m); em baixada quente quase não forma botões.", "en": "Only at altitude (above ~800 m); in hot lowlands it barely forms buds." } },
+    "tropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [8, 9, 10], "notes": { "pt": "Só em regiões de altitude (acima de ~800 m); em baixada quente quase não forma botões.", "en": "Only at altitude (above ~800 m); in hot lowlands it barely forms buds.", "es": "Solo en altura (por encima de ~800 m); en las tierras bajas cálidas apenas forma botones." } },
     "subtropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [8, 9, 10, 11] },
     "temperate": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5, 9], "harvest": [8, 9, 10, 11, 12] },
-    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não indicada: precisa de período fresco para formar botões; calor seco a faz secar.", "en": "Not recommended: needs a cool period to form buds; dry heat makes it wither." } },
-    "cold": { "directSowing": [], "seedbed": [8, 9], "transplant": [10, 11], "harvest": [1, 2, 3], "notes": { "pt": "Proteja a touceira no inverno (corte a 30 cm e cubra com palha) ou cultive como anual a partir de mudas.", "en": "Protect the crown in winter (cut to 30 cm and cover with mulch) or grow as an annual from transplants." } }
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não indicada: precisa de período fresco para formar botões; calor seco a faz secar.", "en": "Not recommended: needs a cool period to form buds; dry heat makes it wither.", "es": "No recomendada: necesita un periodo fresco para formar botones; el calor seco la marchita." } },
+    "cold": { "directSowing": [], "seedbed": [8, 9], "transplant": [10, 11], "harvest": [1, 2, 3], "notes": { "pt": "Proteja a touceira no inverno (corte a 30 cm e cubra com palha) ou cultive como anual a partir de mudas.", "en": "Protect the crown in winter (cut to 30 cm and cover with mulch) or grow as an annual from transplants.", "es": "Protege la cepa en invierno (córtala a 30 cm y cúbrela con acolchado) o cultívala como anual a partir de plantones." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Corrija o solo com calcário (pH 6–7). Na cova, misture bastante esterco curtido ou composto e um adubo completo (NPK). Depois, adube com nitrogênio (ou esterco) a cada 4–6 semanas durante o crescimento. Não adube no período de descanso.",
-      "en": "Lime the soil to pH 6–7. In the planting hole, mix plenty of aged manure or compost and a complete fertilizer (NPK). Then feed with nitrogen (or manure) every 4–6 weeks while growing. Don't feed during the rest period."
+      "en": "Lime the soil to pH 6–7. In the planting hole, mix plenty of aged manure or compost and a complete fertilizer (NPK). Then feed with nitrogen (or manure) every 4–6 weeks while growing. Don't feed during the rest period.",
+      "es": "Encala el suelo hasta pH 6–7. En el hoyo de plantación, mezcla mucho estiércol curado o compost y un abono completo (NPK). Después, abona con nitrógeno (o estiércol) cada 4–6 semanas mientras crece. No abones durante el reposo."
     },
     "pruning": {
       "pt": "Depois da colheita, corte as hastes rente ao chão para a touceira brotar de novo. Deixe só 2–3 brotos (rebentos) por planta; os outros podem virar mudas novas.",
-      "en": "After harvest, cut stalks at ground level so the crown resprouts. Keep only 2–3 shoots per plant; the extras can become new plants."
+      "en": "After harvest, cut stalks at ground level so the crown resprouts. Keep only 2–3 shoots per plant; the extras can become new plants.",
+      "es": "Después de la cosecha, corta los tallos a ras de suelo para que la cepa rebrote. Deja solo 2–3 brotes por planta; los sobrantes pueden ser plantas nuevas."
     },
     "watering": {
       "pt": "Regue com regularidade, mantendo o solo úmido no crescimento e na formação dos botões. Não encharque: a raiz apodrece.",
-      "en": "Water regularly, keeping soil moist while growing and forming buds. Don't waterlog: roots rot."
+      "en": "Water regularly, keeping soil moist while growing and forming buds. Don't waterlog: roots rot.",
+      "es": "Riega con regularidad, con el suelo húmedo durante el crecimiento y la formación de botones. No encharques: las raíces se pudren."
     },
     "other": {
       "pt": "Planta grande: deixe cerca de 1 m entre plantas e 1,5–2 m entre linhas, em sol pleno. Colha os botões firmes e fechados, com um pedaço de haste. Multiplique por rebentos da planta-mãe.",
-      "en": "Big plant: allow about 1 m between plants and 1.5–2 m between rows, in full sun. Harvest firm, closed buds with a piece of stem. Propagate from offshoots of the mother plant."
+      "en": "Big plant: allow about 1 m between plants and 1.5–2 m between rows, in full sun. Harvest firm, closed buds with a piece of stem. Propagate from offshoots of the mother plant.",
+      "es": "Planta grande: deja cerca de 1 m entre plantas y 1,5–2 m entre filas, a pleno sol. Cosecha los botones firmes y cerrados con un trozo de tallo. Se multiplica con los hijuelos de la planta madre."
     }
   },
   "sources": [

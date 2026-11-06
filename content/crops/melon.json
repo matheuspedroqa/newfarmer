@@ -2,7 +2,8 @@
   "id": "melon",
   "summary": {
     "pt": "Fruta rasteira de clima quente e seco, de ciclo curto (cerca de 65–90 dias). Fica mais doce com sol forte e pouca chuva na maturação.",
-    "en": "A sprawling fruit for hot, dry weather with a short cycle (about 65–90 days). Gets sweeter with strong sun and little rain at ripening."
+    "en": "A sprawling fruit for hot, dry weather with a short cycle (about 65–90 days). Gets sweeter with strong sun and little rain at ripening.",
+    "es": "Fruta rastrera para clima cálido y seco, con ciclo corto (unos 65–90 días). Se vuelve más dulce con sol fuerte y poca lluvia en la maduración."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [8, 9, 10, 11, 12],
-      "notes": { "pt": "Plante na estação seca, com irrigação. Chuva na formação e maturação dos frutos traz doenças e fruta sem doçura.", "en": "Plant in the dry season with irrigation. Rain while fruits form and ripen brings disease and bland fruit." }
+      "notes": { "pt": "Plante na estação seca, com irrigação. Chuva na formação e maturação dos frutos traz doenças e fruta sem doçura.", "en": "Plant in the dry season with irrigation. Rain while fruits form and ripen brings disease and bland fruit.", "es": "Planta en la época seca con riego. La lluvia mientras los frutos se forman y maduran trae enfermedades y fruta sosa." }
     },
     "subtropical": {
       "directSowing": [9, 10, 11],
       "seedbed": [8, 9],
       "transplant": [9, 10],
       "harvest": [12, 1, 2],
-      "notes": { "pt": "Semeie depois das geadas, com o solo quente.", "en": "Sow after frosts, once the soil is warm." }
+      "notes": { "pt": "Semeie depois das geadas, com o solo quente.", "en": "Sow after frosts, once the soil is warm.", "es": "Siembra después de las heladas, cuando el suelo esté caliente." }
     },
     "temperate": {
       "directSowing": [11, 12],
       "seedbed": [9, 10],
       "transplant": [11],
       "harvest": [1, 2, 3],
-      "notes": { "pt": "Espere o solo passar de 16–18 °C. Mudas feitas em copinho dentro de casa adiantam a safra.", "en": "Wait until soil is above 16–18 °C. Seedlings started in cups indoors give an earlier harvest." }
+      "notes": { "pt": "Espere o solo passar de 16–18 °C. Mudas feitas em copinho dentro de casa adiantam a safra.", "en": "Wait until soil is above 16–18 °C. Seedlings started in cups indoors give an earlier harvest.", "es": "Espera a que el suelo supere los 16–18 °C. Las plántulas iniciadas en vasos bajo techo dan una cosecha más temprana." }
     },
     "semiarid": {
       "directSowing": [4, 5, 6, 7, 8, 9, 10],
       "seedbed": [],
       "transplant": [],
       "harvest": [7, 8, 9, 10, 11, 12, 1],
-      "notes": { "pt": "É o melhor clima para o melão (como no Vale do São Francisco e no RN/CE). Com irrigação, planta-se quase o ano todo, evitando os meses de chuva.", "en": "The best climate for melon. With irrigation it can be planted almost all year, avoiding the rainy months." }
+      "notes": { "pt": "É o melhor clima para o melão (como no Vale do São Francisco e no RN/CE). Com irrigação, planta-se quase o ano todo, evitando os meses de chuva.", "en": "The best climate for melon. With irrigation it can be planted almost all year, avoiding the rainy months.", "es": "El mejor clima para el melón. Con riego se puede plantar casi todo el año, evitando los meses de lluvia." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [10],
       "transplant": [12],
       "harvest": [2, 3],
-      "notes": { "pt": "Verão curto: só variedades precoces, com mudas feitas dentro de casa e túnel plástico ou estufa.", "en": "Short summer: only early varieties, with seedlings started indoors and a plastic tunnel or greenhouse." }
+      "notes": { "pt": "Verão curto: só variedades precoces, com mudas feitas dentro de casa e túnel plástico ou estufa.", "en": "Short summer: only early varieties, with seedlings started indoors and a plastic tunnel or greenhouse.", "es": "Verano corto: solo variedades tempranas, con plántulas iniciadas bajo techo y túnel de plástico o invernadero." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Muito exigente em adubo: faça análise de solo e calagem antes. No plantio, esterco curtido no sulco e adubo rico em fósforo (ex.: 6-24-12). Cobertura com nitrogênio e potássio aos 20 e 40 dias.",
-      "en": "Needs a lot of fertilizer: test and lime the soil first. At planting, rotted manure in the furrow and a phosphorus-rich fertilizer (e.g. 6-24-12). Side-dress with nitrogen and potassium at 20 and 40 days."
+      "en": "Needs a lot of fertilizer: test and lime the soil first. At planting, rotted manure in the furrow and a phosphorus-rich fertilizer (e.g. 6-24-12). Side-dress with nitrogen and potassium at 20 and 40 days.",
+      "es": "Necesita mucho fertilizante: primero análisis de suelo y encalado. Al plantar, estiércol curado en el surco y un fertilizante rico en fósforo (p. ej. 6-24-12). Abona en cobertura con nitrógeno y potasio a los 20 y 40 días."
     },
     "pruning": {
       "pt": "Opcional: deixe 2–4 frutos por planta e tire os frutos tortos ou doentes para os outros crescerem melhor.",
-      "en": "Optional: keep 2–4 fruits per plant and remove misshapen or diseased ones so the rest grow better."
+      "en": "Optional: keep 2–4 fruits per plant and remove misshapen or diseased ones so the rest grow better.",
+      "es": "Opcional: deja 2–4 frutos por planta y quita los deformes o enfermos para que el resto crezca mejor."
     },
     "watering": {
       "pt": "Regue com regularidade (de preferência gotejamento), sem molhar as folhas. Reduza a água na última semana antes da colheita para a fruta ficar mais doce.",
-      "en": "Water regularly (drip is best) without wetting the leaves. Cut back water in the last week before harvest so the fruit gets sweeter."
+      "en": "Water regularly (drip is best) without wetting the leaves. Cut back water in the last week before harvest so the fruit gets sweeter.",
+      "es": "Riega con regularidad (el goteo es lo mejor) sin mojar las hojas. Reduce el agua en la última semana antes de la cosecha para que el fruto sea más dulce."
     },
     "other": {
       "pt": "Sol pleno e solo leve, bem drenado. Ponha palha ou plástico sob os frutos para não apodrecerem no chão. Fique de olho na mosca-branca e no oídio (pó branco nas folhas).",
-      "en": "Full sun and light, well-drained soil. Put straw or plastic under fruits so they don't rot on the ground. Watch for whitefly and powdery mildew (white dust on leaves)."
+      "en": "Full sun and light, well-drained soil. Put straw or plastic under fruits so they don't rot on the ground. Watch for whitefly and powdery mildew (white dust on leaves).",
+      "es": "Pleno sol y suelo ligero y bien drenado. Pon paja o plástico bajo los frutos para que no se pudran en el suelo. Vigila la mosca blanca y el oídio (polvo blanco en las hojas)."
     }
   },
   "sources": [

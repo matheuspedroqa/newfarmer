@@ -2,10 +2,13 @@ import Link from "next/link";
 import { getLocale, getTranslations } from "next-intl/server";
 import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
 import { TopControls } from "@/components/TopControls";
+import { localePrefix, resolveLocale } from "@/i18n/locales";
+import { guidePath } from "@/lib/plant-guide";
 
 export default async function MarketingLayout({ children }: { children: React.ReactNode }) {
   const t = await getTranslations();
-  const pt = (await getLocale()) === "pt" ? "/pt" : "";
+  const locale = resolveLocale(await getLocale());
+  const pt = localePrefix(locale);
   const navLink = "inline-flex min-h-11 items-center px-1 text-sm text-muted transition-colors duration-150 hover:text-text hover:underline motion-reduce:transition-none";
   const footLink = "inline-flex min-h-11 items-center hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
   return (
@@ -32,6 +35,7 @@ export default async function MarketingLayout({ children }: { children: React.Re
       <footer className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 px-8 py-6 text-sm text-muted">
         <Link href="/privacy" className={footLink}>{t("home.privacy")}</Link>
         <Link href="/terms" className={footLink}>{t("home.terms")}</Link>
+        <Link href={guidePath(locale)} className={footLink}>{t("guide.footer")}</Link>
         <Link href={`${pt}/contact`} className={footLink}>{t("contact.footer")}</Link>
         <CookiePreferencesLink className={footLink} />
       </footer>

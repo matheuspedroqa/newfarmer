@@ -2,28 +2,32 @@
   "id": "chamomile",
   "summary": {
     "pt": "A camomila é uma erva anual de flores pequenas usadas no chá calmante. Gosta de clima fresco e floresce cerca de 10–12 semanas após a semeadura.",
-    "en": "Chamomile is an annual herb with small flowers used for calming tea. It likes cool weather and flowers about 10–12 weeks after sowing."
+    "en": "Chamomile is an annual herb with small flowers used for calming tea. It likes cool weather and flowers about 10–12 weeks after sowing.",
+    "es": "La manzanilla es una hierba anual de flores pequeñas usada para infusión calmante. Le gusta el clima fresco y florece unas 10–12 semanas después de la siembra."
   },
   "calendar": {
-    "tropical": { "directSowing": [4, 5, 6], "seedbed": [], "transplant": [], "harvest": [7, 8, 9], "notes": { "pt": "Planta anual de clima fresco: só vai bem em regiões altas, na estação seca e mais fria.", "en": "Cool-season annual: does well only in highland areas, in the cooler dry season." } },
-    "subtropical": { "directSowing": [4, 5, 6], "seedbed": [], "transplant": [], "harvest": [8, 9, 10, 11], "notes": { "pt": "No Paraná (maior produtor do Brasil) semeia-se no outono, em maio, e colhe-se no fim do inverno e primavera.", "en": "In Paraná (Brazil's top producer) it is sown in autumn, in May, and harvested in late winter and spring." } },
+    "tropical": { "directSowing": [4, 5, 6], "seedbed": [], "transplant": [], "harvest": [7, 8, 9], "notes": { "pt": "Planta anual de clima fresco: só vai bem em regiões altas, na estação seca e mais fria.", "en": "Cool-season annual: does well only in highland areas, in the cooler dry season.", "es": "Anual de temporada fresca: solo se da bien en zonas altas, en la época seca y fresca." } },
+    "subtropical": { "directSowing": [4, 5, 6], "seedbed": [], "transplant": [], "harvest": [8, 9, 10, 11], "notes": { "pt": "No Paraná (maior produtor do Brasil) semeia-se no outono, em maio, e colhe-se no fim do inverno e primavera.", "en": "In Paraná (Brazil's top producer) it is sown in autumn, in May, and harvested in late winter and spring.", "es": "En Paraná (primer productor de Brasil) se siembra en otoño, en mayo, y se cosecha a finales del invierno y en primavera." } },
     "temperate": { "directSowing": [3, 4, 9, 10], "seedbed": [], "transplant": [], "harvest": [11, 12, 1, 2] },
-    "semiarid": { "directSowing": [5, 6], "seedbed": [], "transplant": [], "harvest": [8, 9], "notes": { "pt": "Com irrigação e só no período mais fresco do ano.", "en": "With irrigation and only in the coolest part of the year." } },
-    "cold": { "directSowing": [10, 11], "seedbed": [], "transplant": [], "harvest": [12, 1, 2, 3], "notes": { "pt": "Semeie quando o solo descongelar; aguenta geadas leves.", "en": "Sow once the soil thaws; tolerates light frost." } }
+    "semiarid": { "directSowing": [5, 6], "seedbed": [], "transplant": [], "harvest": [8, 9], "notes": { "pt": "Com irrigação e só no período mais fresco do ano.", "en": "With irrigation and only in the coolest part of the year.", "es": "Con riego y solo en la parte más fría del año." } },
+    "cold": { "directSowing": [10, 11], "seedbed": [], "transplant": [], "harvest": [12, 1, 2, 3], "notes": { "pt": "Semeie quando o solo descongelar; aguenta geadas leves.", "en": "Sow once the soil thaws; tolerates light frost.", "es": "Siembra cuando el suelo se descongele; tolera heladas ligeras." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Prepare o canteiro com composto ou esterco curtido (cama de aviário curtida funciona bem). Se as plantas ficarem amareladas, uma cobertura leve de nitrogênio (ureia ou esterco) no início do crescimento.",
-      "en": "Prepare the bed with compost or aged manure (aged poultry litter works well). If plants look yellow, a light nitrogen side-dress (urea or manure) early in growth."
+      "en": "Prepare the bed with compost or aged manure (aged poultry litter works well). If plants look yellow, a light nitrogen side-dress (urea or manure) early in growth.",
+      "es": "Prepara el bancal con compost o estiércol curado (la gallinaza curada funciona bien). Si las plantas se ven amarillas, un abonado ligero en cobertura con nitrógeno (urea o estiércol) al inicio del crecimiento."
     },
     "pruning": null,
     "watering": {
       "pt": "Mantenha a superfície úmida até germinar (10–14 dias). Depois, regue quando o solo secar; não tolera encharcamento.",
-      "en": "Keep the surface moist until germination (10–14 days). Then water when the soil dries; it does not tolerate waterlogging."
+      "en": "Keep the surface moist until germination (10–14 days). Then water when the soil dries; it does not tolerate waterlogging.",
+      "es": "Mantén húmeda la superficie hasta la germinación (10–14 días). Luego riega cuando el suelo se seque; no tolera el encharcamiento."
     },
     "other": {
       "pt": "Semente muito pequena: espalhe na superfície misturada com areia ou fubá e só aperte, sem cobrir. Sol pleno, desbaste para 10–15 cm. Colha as flores bem abertas, com frequência — isso estimula mais flores. Seque à sombra.",
-      "en": "Seed is tiny: scatter on the surface mixed with sand or cornmeal and press in without covering. Full sun; thin to 10–15 cm. Pick fully open flowers often — this encourages more blooms. Dry in the shade."
+      "en": "Seed is tiny: scatter on the surface mixed with sand or cornmeal and press in without covering. Full sun; thin to 10–15 cm. Pick fully open flowers often — this encourages more blooms. Dry in the shade.",
+      "es": "La semilla es diminuta: esparce en la superficie mezclada con arena o harina de maíz y presiona sin cubrir. Pleno sol; aclara a 10–15 cm. Recoge a menudo las flores bien abiertas: así salen más flores. Seca a la sombra."
     }
   },
   "sources": [

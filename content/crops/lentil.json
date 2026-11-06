@@ -2,7 +2,8 @@
   "id": "lentil",
   "summary": {
     "pt": "Leguminosa de grão pequena, de ciclo curto (3–4 meses), que gosta de tempo fresco e seco. Fixa nitrogênio e melhora o solo para a cultura seguinte.",
-    "en": "A small grain legume with a short cycle (3–4 months) that likes cool, dry weather. It fixes nitrogen and improves soil for the next crop."
+    "en": "A small grain legume with a short cycle (3–4 months) that likes cool, dry weather. It fixes nitrogen and improves soil for the next crop.",
+    "es": "Leguminosa de grano pequeño con ciclo corto (3–4 meses) que prefiere el clima fresco y seco. Fija nitrógeno y mejora el suelo para el siguiente cultivo."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [8, 9],
-      "notes": { "pt": "Só na estação seca e fresca, com irrigação; calor forte e chuva atrapalham.", "en": "Only in the cool dry season, with irrigation; strong heat and rain hurt it." }
+      "notes": { "pt": "Só na estação seca e fresca, com irrigação; calor forte e chuva atrapalham.", "en": "Only in the cool dry season, with irrigation; strong heat and rain hurt it.", "es": "Solo en la época seca y fresca, con riego; el calor fuerte y la lluvia la perjudican." }
     },
     "subtropical": {
       "directSowing": [5, 6],
       "seedbed": [],
       "transplant": [],
       "harvest": [10, 11, 12],
-      "notes": { "pt": "Cultivo de inverno.", "en": "Winter crop." }
+      "notes": { "pt": "Cultivo de inverno.", "en": "Winter crop.", "es": "Cultivo de invierno." }
     },
     "temperate": {
       "directSowing": [9, 10, 11],
       "seedbed": [],
       "transplant": [],
       "harvest": [1, 2],
-      "notes": { "pt": "Semeie cedo na primavera; plantar tarde atrasa a maturação e aumenta perdas.", "en": "Sow early in spring; late sowing delays maturity and raises losses." }
+      "notes": { "pt": "Semeie cedo na primavera; plantar tarde atrasa a maturação e aumenta perdas.", "en": "Sow early in spring; late sowing delays maturity and raises losses.", "es": "Siembra a principios de la primavera; una siembra tardía retrasa la madurez y aumenta las pérdidas." }
     },
     "semiarid": {
       "directSowing": [5, 6],
       "seedbed": [],
       "transplant": [],
       "harvest": [10, 11],
-      "notes": { "pt": "Semeie com a chuva de inverno; tolera seca no fim do ciclo.", "en": "Sow with the winter rains; tolerates drought late in the cycle." }
+      "notes": { "pt": "Semeie com a chuva de inverno; tolera seca no fim do ciclo.", "en": "Sow with the winter rains; tolerates drought late in the cycle.", "es": "Siembra con las lluvias de invierno; tolera la sequía al final del ciclo." }
     },
     "cold": {
       "directSowing": [10, 11],
       "seedbed": [],
       "transplant": [],
       "harvest": [2, 3],
-      "notes": { "pt": "Semeie assim que o solo puder ser trabalhado; a planta jovem aguenta geada leve.", "en": "Sow as soon as the soil can be worked; young plants tolerate light frost." }
+      "notes": { "pt": "Semeie assim que o solo puder ser trabalhado; a planta jovem aguenta geada leve.", "en": "Sow as soon as the soil can be worked; young plants tolerate light frost.", "es": "Siembra en cuanto se pueda trabajar el suelo; las plantas jóvenes toleran heladas ligeras." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Não precisa de adubo nitrogenado: inocule a semente com rizóbio próprio da lentilha. Use fósforo no plantio (ou composto curtido) e calcário se o solo for ácido.",
-      "en": "No nitrogen fertilizer needed: inoculate seed with lentil-specific rhizobium. Apply phosphorus at sowing (or well-rotted compost) and lime if soil is acidic."
+      "en": "No nitrogen fertilizer needed: inoculate seed with lentil-specific rhizobium. Apply phosphorus at sowing (or well-rotted compost) and lime if soil is acidic.",
+      "es": "No necesita fertilizante nitrogenado: inocula la semilla con rizobio específico de lenteja. Aplica fósforo en la siembra (o compost bien curado) y encala si el suelo es ácido."
     },
     "pruning": null,
     "watering": {
       "pt": "Precisa de pouca água. Regue na germinação e na floração; evite encharcar. Pare de regar quando as vagens amarelarem.",
-      "en": "Needs little water. Water at germination and flowering; avoid waterlogging. Stop when pods turn yellow."
+      "en": "Needs little water. Water at germination and flowering; avoid waterlogging. Stop when pods turn yellow.",
+      "es": "Necesita poca agua. Riega en la germinación y la floración; evita el encharcamiento. Para cuando las vainas amarilleen."
     },
     "other": {
       "pt": "Sol pleno e solo bem drenado. Compete mal com mato: capine no começo. Colha quando as vagens estiverem secas e chocalhando.",
-      "en": "Full sun and well-drained soil. Competes poorly with weeds: weed early. Harvest when pods are dry and rattle."
+      "en": "Full sun and well-drained soil. Competes poorly with weeds: weed early. Harvest when pods are dry and rattle.",
+      "es": "Pleno sol y suelo bien drenado. Compite mal con las malezas: desmaleza pronto. Cosecha cuando las vainas estén secas y suenen al agitarlas."
     }
   },
   "sources": [

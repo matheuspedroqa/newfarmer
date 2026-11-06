@@ -1,5 +1,6 @@
 import "server-only";
 import en from "../../messages/en.json";
+import es from "../../messages/es.json";
 import pt from "../../messages/pt.json";
 import type { Locale } from "@/i18n/locales";
 import { escapeHtml, renderEmail } from "./email-templates";
@@ -7,7 +8,7 @@ import { escapeHtml, renderEmail } from "./email-templates";
 export const MARKETING_TEMPLATES = ["weMissYou", "announcement"] as const;
 export type MarketingTemplate = (typeof MARKETING_TEMPLATES)[number];
 
-const TEXTS = { pt: pt.email, en: en.email };
+const TEXTS = { pt: pt.email, en: en.email, es: es.email };
 
 export function renderMarketingEmail(p: {
   template: MarketingTemplate;

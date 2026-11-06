@@ -2,6 +2,7 @@
 
 import { getLocale } from "next-intl/server";
 import { redirect } from "next/navigation";
+import { resolveLocale } from "@/i18n/locales";
 import { currencyForCountry } from "@/lib/pricing";
 import { appUrl } from "@/server/app-url";
 import { logSafely, logWriteLimited } from "@/server/activity-log";
@@ -34,7 +35,7 @@ export async function startCheckoutAction(): Promise<void> {
       customerId,
       priceId: shouldUseFakePayments() ? "fake_price" : priceIdFor(currency),
       userId: user.id,
-      locale: (await getLocale()) === "pt" ? "pt" : "en",
+      locale: resolveLocale(await getLocale()),
       successUrl: `${appUrl()}/subscribe/success?session_id={CHECKOUT_SESSION_ID}`,
       cancelUrl: `${appUrl()}/subscribe`,
     });

@@ -2,31 +2,36 @@
   "id": "brusselsSprouts",
   "summary": {
     "pt": "A couve-de-bruxelas forma pequenos repolhinhos ao longo do caule. É de clima frio, tem ciclo longo (100–130 dias) e fica mais doce depois de uma geada leve.",
-    "en": "Brussels sprouts form small mini-cabbages along the stem. A cold-weather crop with a long cycle (100–130 days), they get sweeter after a light frost."
+    "en": "Brussels sprouts form small mini-cabbages along the stem. A cold-weather crop with a long cycle (100–130 days), they get sweeter after a light frost.",
+    "es": "Las coles de Bruselas forman pequeños repollitos a lo largo del tallo. Cultivo de clima frío con ciclo largo (100–130 días), se vuelven más dulces tras una helada ligera."
   },
   "calendar": {
-    "tropical": { "directSowing": [], "seedbed": [3, 4], "transplant": [4, 5], "harvest": [7, 8, 9], "notes": { "pt": "Só em regiões de altitude e no outono-inverno; acima de 25 °C os repolhinhos não se formam bem.", "en": "Only at altitude and in autumn–winter; above 25 °C sprouts form poorly." } },
+    "tropical": { "directSowing": [], "seedbed": [3, 4], "transplant": [4, 5], "harvest": [7, 8, 9], "notes": { "pt": "Só em regiões de altitude e no outono-inverno; acima de 25 °C os repolhinhos não se formam bem.", "en": "Only at altitude and in autumn–winter; above 25 °C sprouts form poorly.", "es": "Solo en altitud y en otoño–invierno; por encima de 25 °C los repollitos se forman mal." } },
     "subtropical": { "directSowing": [], "seedbed": [2, 3, 4], "transplant": [3, 4, 5], "harvest": [6, 7, 8, 9] },
     "temperate": { "directSowing": [], "seedbed": [12, 1, 2], "transplant": [1, 2, 3], "harvest": [4, 5, 6, 7, 8] },
-    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não indicada: o calor impede a formação dos repolhinhos.", "en": "Not recommended: heat prevents sprouts from forming." } },
-    "cold": { "directSowing": [], "seedbed": [10, 11], "transplant": [11, 12, 1], "harvest": [3, 4, 5, 6], "notes": { "pt": "Plante para que a colheita caia no outono; geadas leves melhoram o sabor, mas abaixo de -6 °C a planta sofre.", "en": "Time planting so harvest falls in autumn; light frosts improve flavor, but below -6 °C plants are damaged." } }
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Não indicada: o calor impede a formação dos repolhinhos.", "en": "Not recommended: heat prevents sprouts from forming.", "es": "No se recomienda: el calor impide que se formen los repollitos." } },
+    "cold": { "directSowing": [], "seedbed": [10, 11], "transplant": [11, 12, 1], "harvest": [3, 4, 5, 6], "notes": { "pt": "Plante para que a colheita caia no outono; geadas leves melhoram o sabor, mas abaixo de -6 °C a planta sofre.", "en": "Time planting so harvest falls in autumn; light frosts improve flavor, but below -6 °C plants are damaged.", "es": "Calcula la siembra para que la cosecha caiga en otoño; las heladas ligeras mejoran el sabor, pero por debajo de -6 °C las plantas sufren daño." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Corrija o solo com calcário (pH 6–7) e misture bastante composto ou esterco curtido e um NPK equilibrado no transplante. Cerca de 3 semanas depois, faça cobertura com nitrogênio ou esterco. Quando os repolhinhos começarem a se formar, pare com o nitrogênio (excesso deixa os brotos manchados e soltos).",
-      "en": "Lime the soil to pH 6–7 and mix in plenty of compost or aged manure plus a balanced NPK at transplanting. About 3 weeks later, side-dress with nitrogen or manure. Once sprouts start forming, stop nitrogen (excess gives spotty, loose sprouts)."
+      "en": "Lime the soil to pH 6–7 and mix in plenty of compost or aged manure plus a balanced NPK at transplanting. About 3 weeks later, side-dress with nitrogen or manure. Once sprouts start forming, stop nitrogen (excess gives spotty, loose sprouts).",
+      "es": "Encala el suelo hasta pH 6–7 y mezcla mucho compost o estiércol curado más un NPK equilibrado al trasplantar. Unas 3 semanas después, abona en cobertura con nitrógeno o estiércol. Cuando empiecen a formarse los repollitos, deja el nitrógeno (el exceso da repollitos irregulares y sueltos)."
     },
     "pruning": {
       "pt": "Retire as folhas de baixo amareladas conforme os repolhinhos crescem. Cerca de 3 semanas antes da colheita, pode cortar a ponta da planta (desponte) para os repolhinhos engrossarem juntos.",
-      "en": "Remove yellowing lower leaves as sprouts grow. About 3 weeks before harvest you can cut off the growing tip (topping) so sprouts size up together."
+      "en": "Remove yellowing lower leaves as sprouts grow. About 3 weeks before harvest you can cut off the growing tip (topping) so sprouts size up together.",
+      "es": "Quita las hojas inferiores amarillas a medida que crecen los repollitos. Unas 3 semanas antes de la cosecha puedes cortar la punta de crecimiento (despunte) para que los repollitos engorden a la vez."
     },
     "watering": {
       "pt": "Mantenha o solo úmido o ciclo todo, sem encharcar. Falta de água deixa os repolhinhos pequenos e amargos.",
-      "en": "Keep soil moist the whole cycle, without waterlogging. Lack of water gives small, bitter sprouts."
+      "en": "Keep soil moist the whole cycle, without waterlogging. Lack of water gives small, bitter sprouts.",
+      "es": "Mantén el suelo húmedo durante todo el ciclo, sin encharcar. La falta de agua da repollitos pequeños y amargos."
     },
     "other": {
       "pt": "Sol pleno, 50–60 cm entre plantas; a planta fica alta e pode precisar de tutor. Colha de baixo para cima os repolhinhos firmes com 2–4 cm. Lagartas e pulgões são as pragas principais.",
-      "en": "Full sun, 50–60 cm between plants; plants get tall and may need staking. Harvest firm 2–4 cm sprouts from the bottom up. Caterpillars and aphids are the main pests."
+      "en": "Full sun, 50–60 cm between plants; plants get tall and may need staking. Harvest firm 2–4 cm sprouts from the bottom up. Caterpillars and aphids are the main pests.",
+      "es": "Pleno sol, 50–60 cm entre plantas; las plantas crecen altas y pueden necesitar tutor. Cosecha los repollitos firmes de 2–4 cm de abajo hacia arriba. Orugas y pulgones son las plagas principales."
     }
   },
   "sources": [

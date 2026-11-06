@@ -3,11 +3,13 @@ import { LOCALE_COOKIE, SESSION_COOKIE } from "@/lib/cookies";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  if (pathname === "/pt" || pathname.startsWith("/pt/")) {
+  // /what-to-plant é a versão em inglês das páginas públicas "o que plantar": o idioma vem do endereço, não do cookie.
+  const prefixed = /^\/(pt|es)(?:\/|$)/.exec(pathname)?.[1] ?? (/^\/what-to-plant(?:\/|$)/.test(pathname) ? "en" : undefined);
+  if (prefixed) {
     const headers = new Headers(request.headers);
-    headers.set("x-nf-locale", "pt");
+    headers.set("x-nf-locale", prefixed);
     const response = NextResponse.next({ request: { headers } });
-    if (!request.cookies.has(LOCALE_COOKIE)) response.cookies.set(LOCALE_COOKIE, "pt", { path: "/", sameSite: "lax", maxAge: 60 * 60 * 24 * 365 });
+    if (!request.cookies.has(LOCALE_COOKIE)) response.cookies.set(LOCALE_COOKIE, prefixed, { path: "/", sameSite: "lax", maxAge: 60 * 60 * 24 * 365 });
     return response;
   }
   if (!request.cookies.get(SESSION_COOKIE)) {
@@ -20,5 +22,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/pt", "/pt/:path*", "/dashboard/:path*", "/welcome/:path*", "/subscribe/:path*", "/profile/:path*", "/myfarm/:path*", "/animals/:path*", "/crops/:path*", "/weather/:path*", "/admin/:path*"],
+  matcher: ["/pt", "/pt/:path*", "/es", "/es/:path*", "/what-to-plant", "/what-to-plant/:path*", "/dashboard/:path*", "/welcome/:path*", "/subscribe/:path*", "/profile/:path*", "/myfarm/:path*", "/animals/:path*", "/crops/:path*", "/weather/:path*", "/admin/:path*"],
 };

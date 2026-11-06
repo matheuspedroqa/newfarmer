@@ -2,7 +2,8 @@
   "id": "cucumber",
   "summary": {
     "pt": "Pepino: trepadeira de clima quente e crescimento rápido; começa a dar frutos uns 45–60 dias após semear. Com tutor, ocupa pouco chão e produz bastante.",
-    "en": "Cucumber: a fast warm-season vine that starts bearing about 45–60 days after sowing. On a trellis it takes little ground and yields a lot."
+    "en": "Cucumber: a fast warm-season vine that starts bearing about 45–60 days after sowing. On a trellis it takes little ground and yields a lot.",
+    "es": "Pepino: una enredadera rápida de temporada cálida que empieza a producir unos 45–60 días después de sembrar. En espaldera ocupa poco terreno y rinde mucho."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Planta-se o ano todo; nas chuvas fortes aumentam as doenças de folha, então prefira a época mais seca com irrigação.", "en": "Can be planted year-round; heavy rains bring leaf diseases, so prefer the drier season with irrigation." }
+      "notes": { "pt": "Planta-se o ano todo; nas chuvas fortes aumentam as doenças de folha, então prefira a época mais seca com irrigação.", "en": "Can be planted year-round; heavy rains bring leaf diseases, so prefer the drier season with irrigation.", "es": "Se puede plantar todo el año; las lluvias fuertes traen enfermedades en las hojas, así que prefiere la época más seca con riego." }
     },
     "subtropical": {
       "directSowing": [8, 9, 10, 11, 12, 1, 2],
       "seedbed": [],
       "transplant": [],
       "harvest": [10, 11, 12, 1, 2, 3, 4],
-      "notes": { "pt": "Primavera e verão. No inverno, só onde não geia.", "en": "Spring and summer. In winter, only where there is no frost." }
+      "notes": { "pt": "Primavera e verão. No inverno, só onde não geia.", "en": "Spring and summer. In winter, only where there is no frost.", "es": "Primavera y verano. En invierno, solo donde no hay helada." }
     },
     "temperate": {
       "directSowing": [11, 12],
       "seedbed": [10],
       "transplant": [11],
       "harvest": [1, 2, 3],
-      "notes": { "pt": "Semeie só depois da última geada, com o solo a uns 20 °C. Mudas podem ser feitas 2–3 semanas antes, em local protegido.", "en": "Sow only after the last frost, with soil around 20 °C. Seedlings can be started indoors 2–3 weeks earlier." }
+      "notes": { "pt": "Semeie só depois da última geada, com o solo a uns 20 °C. Mudas podem ser feitas 2–3 semanas antes, em local protegido.", "en": "Sow only after the last frost, with soil around 20 °C. Seedlings can be started indoors 2–3 weeks earlier.", "es": "Siembra solo después de la última helada, con el suelo a unos 20 °C. Las plántulas se pueden iniciar bajo techo 2–3 semanas antes." }
     },
     "semiarid": {
       "directSowing": [2, 3, 4, 5, 6, 7, 8, 9, 10],
       "seedbed": [],
       "transplant": [],
       "harvest": [4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Com irrigação dá quase o ano todo.", "en": "With irrigation it grows almost year-round." }
+      "notes": { "pt": "Com irrigação dá quase o ano todo.", "en": "With irrigation it grows almost year-round.", "es": "Con riego crece casi todo el año." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [11],
       "transplant": [12],
       "harvest": [1, 2, 3],
-      "notes": { "pt": "Verão curto: prefira estufa ou túnel e mudas feitas dentro de casa.", "en": "Short summer: prefer a greenhouse or tunnel and indoor-raised seedlings." }
+      "notes": { "pt": "Verão curto: prefira estufa ou túnel e mudas feitas dentro de casa.", "en": "Short summer: prefer a greenhouse or tunnel and indoor-raised seedlings.", "es": "Verano corto: prefiere invernadero o túnel y plántulas criadas bajo techo." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Calcário conforme análise. Na cova, 4–5 litros de esterco curtido (ou cama de aviário curtida) e NPK de plantio (ex.: 4-14-8); duas coberturas com nitrogênio e potássio, aos 15 e 30 dias.",
-      "en": "Lime per soil test. Put 4–5 litres of rotted manure (or composted poultry litter) and starter NPK (e.g. 4-14-8) in each hole; side-dress twice with nitrogen and potassium, at 15 and 30 days."
+      "en": "Lime per soil test. Put 4–5 litres of rotted manure (or composted poultry litter) and starter NPK (e.g. 4-14-8) in each hole; side-dress twice with nitrogen and potassium, at 15 and 30 days.",
+      "es": "Encala según el análisis de suelo. Pon 4–5 litros de estiércol curado (o gallinaza compostada) y NPK de arranque (p. ej. 4-14-8) en cada hoyo; abona en cobertura dos veces con nitrógeno y potasio, a los 15 y 30 días."
     },
     "pruning": {
       "pt": "No tutor, tire os brotos laterais até uns 40–50 cm de altura e conduza a haste principal para cima; acima disso, deixe os ramos com 1–2 frutos e corte a ponta.",
-      "en": "On a trellis, remove side shoots up to about 40–50 cm and train the main stem upward; above that, let side branches keep 1–2 fruits and pinch their tips."
+      "en": "On a trellis, remove side shoots up to about 40–50 cm and train the main stem upward; above that, let side branches keep 1–2 fruits and pinch their tips.",
+      "es": "En espaldera, quita los brotes laterales hasta unos 40–50 cm y guía el tallo principal hacia arriba; por encima de eso, deja que las ramas laterales mantengan 1–2 frutos y despunta sus puntas."
     },
     "watering": {
       "pt": "Muita água e regular, principalmente na frutificação; falta d'água deixa o fruto torto e amargo. Regue no pé, sem molhar as folhas.",
-      "en": "Plenty of regular water, especially while fruiting; drought makes fruit crooked and bitter. Water at the base, not on the leaves."
+      "en": "Plenty of regular water, especially while fruiting; drought makes fruit crooked and bitter. Water at the base, not on the leaves.",
+      "es": "Mucha agua y regular, sobre todo durante la fructificación; la sequía hace los frutos torcidos y amargos. Riega en la base, no sobre las hojas."
     },
     "other": {
       "pt": "Sol pleno e tutor (rede ou fios de arame), que deixa o fruto limpo e reto e reduz doenças. Colha a cada 2–3 dias, ainda verde. Pragas: vaquinha e pulgão; doenças: oídio e míldio.",
-      "en": "Full sun and a trellis (net or wires), which keeps fruit clean and straight and cuts disease. Pick every 2–3 days while green. Pests: cucumber beetles and aphids; diseases: powdery and downy mildew."
+      "en": "Full sun and a trellis (net or wires), which keeps fruit clean and straight and cuts disease. Pick every 2–3 days while green. Pests: cucumber beetles and aphids; diseases: powdery and downy mildew.",
+      "es": "Pleno sol y espaldera (red o alambres), que mantiene los frutos limpios y rectos y reduce las enfermedades. Recoge cada 2–3 días mientras estén verdes. Plagas: crisomélidos del pepino y pulgones; enfermedades: oídio y mildiu."
     }
   },
   "sources": [

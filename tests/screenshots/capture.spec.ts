@@ -38,7 +38,7 @@ const WEATHER_FIT = "main{zoom:.82}";
 // O Painel começa no topo (saudação e clima); um pouco menor e sem o cartão das plantações, o fim cabe inteiro acima da barra de baixo.
 const DASH_FIT = "main{zoom:.8}[data-testid=crop-chips]{display:none !important}";
 
-async function shoot(browser: Browser, errors: string[], state: Awaited<ReturnType<import("@playwright/test").BrowserContext["storageState"]>>, lang: "pt" | "en", device: keyof typeof DEVICES) {
+async function shoot(browser: Browser, errors: string[], state: Awaited<ReturnType<import("@playwright/test").BrowserContext["storageState"]>>, lang: "pt" | "en" | "es", device: keyof typeof DEVICES) {
   const cookies = [...state.cookies.filter((c) => c.name !== "nf_locale"), cookie("nf_locale", lang), cookie("nf_consent", "essential")];
   const ctx = await browser.newContext({ ...DEVICES[device], storageState: { cookies, origins: [] } });
   const page = await ctx.newPage();
@@ -65,9 +65,10 @@ async function shoot(browser: Browser, errors: string[], state: Awaited<ReturnTy
 }
 
 type Notes = [string, string][];
-const NOTES: Record<"pt" | "en", Notes> = {
+const NOTES: Record<"pt" | "en" | "es", Notes> = {
   pt: [["Vacina", "Vacinação contra Newcastle de todo o galinheiro"], ["Alimentação", "Ração nova no comedouro e água trocada"], ["Outro", "Recolhi 18 ovos hoje, postura boa"]],
   en: [["Vacina", "Newcastle vaccine for the whole coop"], ["Alimentação", "New feed in the trough and fresh water"], ["Outro", "Collected 18 eggs today, good laying"]],
+  es: [["Vacina", "Vacuna contra Newcastle para todo el gallinero"], ["Alimentação", "Pienso nuevo en el comedero y agua cambiada"], ["Outro", "Recogí 18 huevos hoy, buena puesta"]],
 };
 
 /** Cria a conta de demonstração pela tela (em português, como os helpers) com as anotações no idioma pedido. */
@@ -99,8 +100,11 @@ test("prints do sistema com a conta de demonstração", async ({ page, browser }
   await page.context().clearCookies();
   await page.context().addCookies([cookie("nf_locale", "pt"), cookie("nf_consent", "essential")]);
   const enState = await demoAccount(page, "maria.en@exemplo.com", NOTES.en);
+  await page.context().clearCookies();
+  await page.context().addCookies([cookie("nf_locale", "pt"), cookie("nf_consent", "essential")]);
+  const esState = await demoAccount(page, "maria.es@exemplo.com", NOTES.es);
 
-  for (const [lang, state] of [["pt", ptState], ["en", enState]] as const) {
+  for (const [lang, state] of [["pt", ptState], ["en", enState], ["es", esState]] as const) {
     for (const device of ["desktop", "mobile"] as const) await shoot(browser, errors, state, lang, device);
   }
   expect(errors, "erros no navegador durante os prints").toEqual([]);

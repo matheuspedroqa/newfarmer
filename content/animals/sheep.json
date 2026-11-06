@@ -2,95 +2,112 @@
   "id": "sheep",
   "summary": {
     "pt": "Ovelhas são dóceis, aproveitam bem pastagens pequenas e dão carne, lã ou leite conforme a raça. Escolha a raça pelo clima: deslanadas (sem lã) no calor e lanadas no frio. O maior inimigo é a verminose: o método FAMACHA e o rodízio de pasto fazem toda a diferença, e em quase todos os países cada ovelha precisa de registro e brinco oficial desde o primeiro animal.",
-    "en": "Sheep are docile, make good use of small pastures and give meat, wool or milk depending on the breed. Choose the breed by climate: hair sheep (no wool) in hot areas and wool breeds in cold ones. The main enemy is worms: the FAMACHA method and pasture rotation make all the difference, and in almost every country each sheep needs registration and an official ear tag from the very first animal."
+    "en": "Sheep are docile, make good use of small pastures and give meat, wool or milk depending on the breed. Choose the breed by climate: hair sheep (no wool) in hot areas and wool breeds in cold ones. The main enemy is worms: the FAMACHA method and pasture rotation make all the difference, and in almost every country each sheep needs registration and an official ear tag from the very first animal.",
+    "es": "Las ovejas son dóciles, aprovechan bien los pastos pequeños y dan carne, lana o leche según la raza. Elige la raza según el clima: ovejas de pelo (sin lana) en zonas cálidas y razas de lana en las frías. El principal enemigo son los gusanos: el método FAMACHA y la rotación de pastos marcan la diferencia, y en casi todos los países cada oveja necesita registro y un crotal oficial desde el primer animal."
   },
   "breeds": [
     {
       "name": "Santa Inês",
       "purpose": {
         "pt": "Carne (deslanada)",
-        "en": "Meat (hair sheep)"
+        "en": "Meat (hair sheep)",
+        "es": "Carne (oveja de pelo)"
       },
       "notes": {
         "pt": "Raça brasileira sem lã, adaptada ao calor tropical e mais resistente a vermes. Não precisa de tosquia.",
-        "en": "Brazilian hair breed with no wool, adapted to tropical heat and more worm-resistant. No shearing needed."
+        "en": "Brazilian hair breed with no wool, adapted to tropical heat and more worm-resistant. No shearing needed.",
+        "es": "Raza brasileña de pelo, sin lana, adaptada al calor tropical y más resistente a los gusanos. No necesita esquila."
       }
     },
     {
       "name": "Morada Nova",
       "purpose": {
         "pt": "Carne e pele",
-        "en": "Meat and hide"
+        "en": "Meat and hide",
+        "es": "Carne y piel"
       },
       "notes": {
         "pt": "Nativa do Nordeste do Brasil (sobretudo Ceará), muito rústica e feita para o semiárido quente e seco.",
-        "en": "Native to north-east Brazil (mainly Ceará), very hardy and made for the hot, dry semi-arid."
+        "en": "Native to north-east Brazil (mainly Ceará), very hardy and made for the hot, dry semi-arid.",
+        "es": "Autóctona del noreste de Brasil (sobre todo Ceará), muy rústica y hecha para el semiárido cálido y seco."
       }
     },
     {
       "name": "Dorper",
       "purpose": {
         "pt": "Carne",
-        "en": "Meat"
+        "en": "Meat",
+        "es": "Carne"
       },
       "notes": {
         "pt": "Sul-africana, deslanada, rústica e tolerante ao calor; muito usada em cruzamentos no Brasil, EUA e México.",
-        "en": "South African hair breed, hardy and heat-tolerant; widely used for crossbreeding in Brazil, the US and Mexico."
+        "en": "South African hair breed, hardy and heat-tolerant; widely used for crossbreeding in Brazil, the US and Mexico.",
+        "es": "Raza sudafricana de pelo, rústica y tolerante al calor; muy usada en cruces en Brasil, EE. UU. y México."
       }
     },
     {
       "name": "Katahdin",
       "purpose": {
         "pt": "Carne (deslanada)",
-        "en": "Meat (hair sheep)"
+        "en": "Meat (hair sheep)",
+        "es": "Carne (oveja de pelo)"
       },
       "notes": {
         "pt": "Criada nos EUA, ótima para iniciantes: mansa, parto fácil, resistente a vermes e sem tosquia. Boa no Sul dos EUA e no trópico mexicano.",
-        "en": "Developed in the US, great for beginners: calm, easy lambing, worm-resistant and no shearing. Good in the US South and tropical Mexico."
+        "en": "Developed in the US, great for beginners: calm, easy lambing, worm-resistant and no shearing. Good in the US South and tropical Mexico.",
+        "es": "Creada en EE. UU., ideal para principiantes: tranquila, partos fáciles, resistente a los gusanos y sin esquila. Buena en el sur de EE. UU. y en el México tropical."
       }
     },
     {
       "name": "Suffolk",
       "purpose": {
         "pt": "Carne",
-        "en": "Meat"
+        "en": "Meat",
+        "es": "Carne"
       },
       "notes": {
         "pt": "Lanada de cara preta, popular nos EUA, Canadá, México (altiplano) e Sul do Brasil; indicada para clima ameno ou frio e precisa de tosquia.",
-        "en": "Black-faced wool breed, popular in the US, Canada, the Mexican highlands and southern Brazil; suits mild or cold climates and needs shearing."
+        "en": "Black-faced wool breed, popular in the US, Canada, the Mexican highlands and southern Brazil; suits mild or cold climates and needs shearing.",
+        "es": "Raza de lana de cara negra, popular en EE. UU., Canadá, el altiplano mexicano y el sur de Brasil; adecuada para climas suaves o fríos y necesita esquila."
       }
     },
     {
       "name": "Merino (Merina)",
       "purpose": {
         "pt": "Lã",
-        "en": "Wool"
+        "en": "Wool",
+        "es": "Lana"
       },
       "notes": {
         "pt": "Raça histórica da Espanha, de lã fina e valiosa; prefere clima seco e fresco e precisa de tosquia anual.",
-        "en": "Historic Spanish breed with fine, valuable wool; prefers a dry, cool climate and needs yearly shearing."
+        "en": "Historic Spanish breed with fine, valuable wool; prefers a dry, cool climate and needs yearly shearing.",
+        "es": "Raza española histórica de lana fina y valiosa; prefiere un clima seco y fresco y necesita esquila anual."
       }
     },
     {
       "name": "Lacaune",
       "purpose": {
         "pt": "Leite (e carne)",
-        "en": "Milk (and meat)"
+        "en": "Milk (and meat)",
+        "es": "Leche (y carne)"
       },
       "notes": {
         "pt": "Raça leiteira francesa, base do queijo Roquefort, também usada na Itália; para clima temperado e mediterrâneo.",
-        "en": "French dairy breed behind Roquefort cheese, also used in Italy; suits temperate and Mediterranean climates."
+        "en": "French dairy breed behind Roquefort cheese, also used in Italy; suits temperate and Mediterranean climates.",
+        "es": "Raza lechera francesa del queso Roquefort, también usada en Italia; adecuada para climas templados y mediterráneos."
       }
     },
     {
       "name": "Bentheimer Landschaf",
       "purpose": {
         "pt": "Carne e manejo de paisagem",
-        "en": "Meat and landscape grazing"
+        "en": "Meat and landscape grazing",
+        "es": "Carne y pastoreo del paisaje"
       },
       "notes": {
         "pt": "Raça nativa alemã de charneca, rústica, com cascos duros e resistentes à podridão; boa para clima frio e úmido.",
-        "en": "Native German heathland breed, hardy, with tough hooves resistant to footrot; good for cold, wet climates."
+        "en": "Native German heathland breed, hardy, with tough hooves resistant to footrot; good for cold, wet climates.",
+        "es": "Raza autóctona alemana de los brezales, rústica, con pezuñas duras resistentes al pedero; buena para climas fríos y húmedos."
       }
     }
   ],
@@ -99,256 +116,312 @@
     "maxC": 25,
     "notes": {
       "pt": "Ovelhas lanadas sofrem acima de 25 °C, principalmente sem tosquia; tosquie na primavera, antes do calor. Raças deslanadas (Santa Inês, Morada Nova, Katahdin, Dorper) toleram bem o calor tropical. A lã protege do frio seco, mas chuva prolongada perto de 0 °C e vento forte exigem abrigo. Ovelha tosquiada no frio come bem mais. Cordeiros recém-nascidos são os mais frágeis: precisam de abrigo seco contra frio e chuva. No Canadá, neve só serve como água se houver reserva de água pronta e inspeção diária.",
-      "en": "Wool sheep suffer above 25 °C, especially unshorn; shear in spring, before the heat. Hair breeds (Santa Inês, Morada Nova, Katahdin, Dorper) handle tropical heat well. Wool protects against dry cold, but long rain near 0 °C and strong wind call for shelter. A sheep shorn in cold weather eats noticeably more. Newborn lambs are the most fragile: they need a dry shelter from cold and rain. In Canada, snow only counts as water if backup water is ready and the flock is checked daily."
+      "en": "Wool sheep suffer above 25 °C, especially unshorn; shear in spring, before the heat. Hair breeds (Santa Inês, Morada Nova, Katahdin, Dorper) handle tropical heat well. Wool protects against dry cold, but long rain near 0 °C and strong wind call for shelter. A sheep shorn in cold weather eats noticeably more. Newborn lambs are the most fragile: they need a dry shelter from cold and rain. In Canada, snow only counts as water if backup water is ready and the flock is checked daily.",
+      "es": "Las ovejas de lana sufren por encima de 25 °C, sobre todo sin esquilar; esquila en primavera, antes del calor. Las razas de pelo (Santa Inês, Morada Nova, Katahdin, Dorper) aguantan bien el calor tropical. La lana protege del frío seco, pero la lluvia larga cerca de 0 °C y el viento fuerte piden refugio. Una oveja esquilada con frío come bastante más. Los corderos recién nacidos son los más frágiles: necesitan un refugio seco contra el frío y la lluvia. En Canadá, la nieve solo cuenta como agua si hay agua de reserva preparada y se revisa el rebaño a diario."
     }
   },
   "seasonalCare": {
     "tropical": {
       "summer": {
         "pt": "Chuva e calor favorecem o verme Haemonchus: faça FAMACHA a cada 15 dias e rode os piquetes. Cure feridas e umbigos para evitar bicheira (gusano barrenador).",
-        "en": "Rain and heat favour barber pole worm: check FAMACHA every 15 days and rotate paddocks. Treat wounds and navels to prevent screwworm."
+        "en": "Rain and heat favour barber pole worm: check FAMACHA every 15 days and rotate paddocks. Treat wounds and navels to prevent screwworm.",
+        "es": "La lluvia y el calor favorecen al gusano Haemonchus: revisa con FAMACHA cada 15 días y rota los cercados. Cura heridas y ombligos para prevenir el gusano barrenador."
       },
       "autumn": {
         "pt": "Apare os cascos e revise as vacinas contra clostridioses com o veterinário.",
-        "en": "Trim hooves and review clostridial vaccines with your vet."
+        "en": "Trim hooves and review clostridial vaccines with your vet.",
+        "es": "Recorta las pezuñas y revisa las vacunas de clostridiosis con tu veterinario."
       },
       "winter": {
         "pt": "Seca: suplemente com feno, silagem e sal mineral próprio para ovinos (sem excesso de cobre).",
-        "en": "Dry season: supplement with hay, silage and sheep-specific mineral salt (low copper)."
+        "en": "Dry season: supplement with hay, silage and sheep-specific mineral salt (low copper).",
+        "es": "Estación seca: complementa con heno, ensilado y sal mineral específica para ovejas (con poco cobre)."
       },
       "spring": {
         "pt": "Prepare o aprisco para os partos, cure o umbigo dos cordeiros com iodo e garanta o colostro nas primeiras horas.",
-        "en": "Prepare the pen for lambing, dip lambs' navels in iodine and make sure they get colostrum in the first hours."
+        "en": "Prepare the pen for lambing, dip lambs' navels in iodine and make sure they get colostrum in the first hours.",
+        "es": "Prepara el corral para los partos, moja el ombligo de los corderos en yodo y asegúrate de que tomen calostro en las primeras horas."
       }
     },
     "subtropical": {
       "summer": {
         "pt": "No clima mediterrâneo o pasto seca: use restolho, feno, sombra e água. No Sul do Brasil e dos EUA, calor úmido traz vermes — FAMACHA. Época de maruins que transmitem língua azul.",
-        "en": "In Mediterranean areas pasture dries out: use stubble, hay, shade and water. In southern Brazil and the US South, humid heat brings worms — use FAMACHA. Midges that spread bluetongue are active."
+        "en": "In Mediterranean areas pasture dries out: use stubble, hay, shade and water. In southern Brazil and the US South, humid heat brings worms — use FAMACHA. Midges that spread bluetongue are active.",
+        "es": "En zonas mediterráneas el pasto se seca: usa rastrojos, heno, sombra y agua. En el sur de Brasil y el sur de EE. UU., el calor húmedo trae gusanos: usa FAMACHA. Los mosquitos que transmiten la lengua azul están activos."
       },
       "autumn": {
         "pt": "As chuvas renovam o pasto; época comum de cobertura e, na Península Ibérica e Sul da Itália, de partos. Vacine contra língua azul quando a autoridade exigir.",
-        "en": "Rains renew pasture; a common time for breeding and, in Iberia and southern Italy, for lambing. Vaccinate against bluetongue when the authority requires it."
+        "en": "Rains renew pasture; a common time for breeding and, in Iberia and southern Italy, for lambing. Vaccinate against bluetongue when the authority requires it.",
+        "es": "Las lluvias renuevan el pasto; época habitual de cubrición y, en la península ibérica y el sur de Italia, de partos. Vacuna contra la lengua azul cuando la autoridad lo exija."
       },
       "winter": {
         "pt": "Proteja do vento e da chuva fria, principalmente cordeiros e ovelhas recém-tosquiadas; ofereça pasto de inverno (aveia, azevém) ou feno.",
-        "en": "Protect from wind and cold rain, especially lambs and freshly shorn ewes; offer winter pasture (oats, ryegrass) or hay."
+        "en": "Protect from wind and cold rain, especially lambs and freshly shorn ewes; offer winter pasture (oats, ryegrass) or hay.",
+        "es": "Protege del viento y la lluvia fría, sobre todo a los corderos y a las ovejas recién esquiladas; ofrece pasto de invierno (avena, raigrás) o heno."
       },
       "spring": {
         "pt": "Pasto abundante e pico de leite; tosquie as lanadas antes do calor e controle moscas.",
-        "en": "Plenty of pasture and peak milk; shear wool breeds before the heat and control flies."
+        "en": "Plenty of pasture and peak milk; shear wool breeds before the heat and control flies.",
+        "es": "Mucho pasto y pico de leche; esquila las razas de lana antes del calor y controla las moscas."
       }
     },
     "temperate": {
       "summer": {
         "pt": "Pastoreio (nos Alpes, pasto de montanha); controle moscas e bicheiras. Maruins da língua azul ativos; cerca elétrica contra lobos funcionando.",
-        "en": "Grazing (in the Alps, mountain pasture); control flies and flystrike. Bluetongue midges are active; keep the anti-wolf electric fence working."
+        "en": "Grazing (in the Alps, mountain pasture); control flies and flystrike. Bluetongue midges are active; keep the anti-wolf electric fence working.",
+        "es": "Pastoreo (en los Alpes, pasto de montaña); controla moscas y miasis. Los mosquitos de la lengua azul están activos; mantén funcionando la valla eléctrica contra el lobo."
       },
       "autumn": {
         "pt": "Cobertura das ovelhas, cerca de 6 meses antes da parição desejada; vermifugação seletiva com exame de fezes antes do inverno.",
-        "en": "Breed the ewes about 6 months before the lambing date you want; selective deworming based on faecal tests before winter."
+        "en": "Breed the ewes about 6 months before the lambing date you want; selective deworming based on faecal tests before winter.",
+        "es": "Cubre a las ovejas unos 6 meses antes de la fecha de parto que quieras; desparasitación selectiva según análisis de heces antes del invierno."
       },
       "winter": {
         "pt": "Abrigo seco e sem correntes de ar, feno de qualidade e água sem congelar. Tosquie 30–45 dias antes da parição, se for tosquiar.",
-        "en": "Dry, draught-free shelter, quality hay and unfrozen water. Shear 30–45 days before lambing, if shearing."
+        "en": "Dry, draught-free shelter, quality hay and unfrozen water. Shear 30–45 days before lambing, if shearing.",
+        "es": "Refugio seco y sin corrientes, heno de calidad y agua sin congelar. Esquila 30–45 días antes del parto, si esquilas."
       },
       "spring": {
         "pt": "Parição: baias individuais, iodo no umbigo e colostro logo cedo; vigie pneumonia e diarreia nos cordeiros.",
-        "en": "Lambing: individual pens, iodine on navels and early colostrum; watch lambs for pneumonia and scours."
+        "en": "Lambing: individual pens, iodine on navels and early colostrum; watch lambs for pneumonia and scours.",
+        "es": "Partos: corrales individuales, yodo en los ombligos y calostro pronto; vigila en los corderos la neumonía y la diarrea."
       }
     },
     "semiarid": {
       "summer": {
         "pt": "Calor e seca: raças deslanadas, sombra e água; pastoreio cedo e no fim da tarde.",
-        "en": "Heat and drought: hair breeds, shade and water; graze early and late in the day."
+        "en": "Heat and drought: hair breeds, shade and water; graze early and late in the day.",
+        "es": "Calor y sequía: razas de pelo, sombra y agua; pastorea a primera y última hora del día."
       },
       "autumn": {
         "pt": "Chuvas curtas: os vermes aumentam — faça FAMACHA e rodízio de piquetes.",
-        "en": "Short rains: worms increase — check FAMACHA and rotate paddocks."
+        "en": "Short rains: worms increase — check FAMACHA and rotate paddocks.",
+        "es": "Lluvias cortas: aumentan los gusanos; revisa con FAMACHA y rota los cercados."
       },
       "winter": {
         "pt": "Guarde forragem para a seca (palma forrageira, feno de capim nativo, restolho de cereal).",
-        "en": "Store forage for the dry season (forage cactus, native grass hay, cereal stubble)."
+        "en": "Store forage for the dry season (forage cactus, native grass hay, cereal stubble).",
+        "es": "Guarda forraje para la estación seca (nopal forrajero, heno de pasto nativo, rastrojos de cereal)."
       },
       "spring": {
         "pt": "Seca: ajuste o tamanho do rebanho à comida e água disponíveis para não degradar a vegetação nativa.",
-        "en": "Drought: match flock size to available feed and water so native vegetation is not degraded."
+        "en": "Drought: match flock size to available feed and water so native vegetation is not degraded.",
+        "es": "Sequía: ajusta el tamaño del rebaño al alimento y al agua disponibles para no degradar la vegetación nativa."
       }
     },
     "cold": {
       "summer": {
         "pt": "Pasto à vontade, controle de moscas e produção de feno para o inverno.",
-        "en": "Plenty of pasture, fly control and hay making for winter."
+        "en": "Plenty of pasture, fly control and hay making for winter.",
+        "es": "Mucho pasto, control de moscas y henificación para el invierno."
       },
       "autumn": {
         "pt": "Cobertura e vermifugação seletiva; estoque feno ou silagem e mais energia para ovelhas prenhes, sobretudo raças prolíficas.",
-        "en": "Breeding and selective deworming; stock hay or silage and extra energy for pregnant ewes, especially prolific breeds."
+        "en": "Breeding and selective deworming; stock hay or silage and extra energy for pregnant ewes, especially prolific breeds.",
+        "es": "Cubrición y desparasitación selectiva; guarda heno o ensilado y energía extra para las ovejas preñadas, sobre todo en razas prolíficas."
       },
       "winter": {
         "pt": "Abrigo contra vento e neve, fechado mas ventilado, com estrutura que aguente neve pesada; água sem gelo. A lã protege bem do frio seco.",
-        "en": "Shelter from wind and snow, closed but ventilated, built to bear heavy snow; ice-free water. Wool protects well from dry cold."
+        "en": "Shelter from wind and snow, closed but ventilated, built to bear heavy snow; ice-free water. Wool protects well from dry cold.",
+        "es": "Refugio contra el viento y la nieve, cerrado pero ventilado, hecho para aguantar nevadas fuertes; agua sin hielo. La lana protege bien del frío seco."
       },
       "spring": {
         "pt": "Parição dentro do galpão; solte no pasto quando o tempo firmar.",
-        "en": "Lamb indoors; turn out to pasture once the weather settles."
+        "en": "Lamb indoors; turn out to pasture once the weather settles.",
+        "es": "Partos bajo techo; sácalas al pasto cuando el tiempo se asiente."
       }
     }
   },
   "feeding": [
     {
       "pt": "Pasto é a base; feno ou silagem completam na seca e no inverno, e o restolho de cereal ajuda no verão seco.",
-      "en": "Pasture is the base; hay or silage fill in during drought and winter, and cereal stubble helps in a dry summer."
+      "en": "Pasture is the base; hay or silage fill in during drought and winter, and cereal stubble helps in a dry summer.",
+      "es": "El pasto es la base; el heno o el ensilado cubren la sequía y el invierno, y los rastrojos de cereal ayudan en el verano seco."
     },
     {
       "pt": "Use sal mineral próprio para ovinos. Nunca dê mineral ou ração de cabra ou de gado: o cobre extra acumula no fígado e pode matar de repente.",
-      "en": "Use sheep-specific mineral salt. Never feed goat or cattle mineral or feed: the extra copper builds up in the liver and can kill suddenly."
+      "en": "Use sheep-specific mineral salt. Never feed goat or cattle mineral or feed: the extra copper builds up in the liver and can kill suddenly.",
+      "es": "Usa sal mineral específica para ovejas. Nunca des minerales ni pienso de cabras o vacas: el cobre extra se acumula en el hígado y puede matar de repente."
     },
     {
       "pt": "Reforce a comida (concentrado) no fim da gestação e na lactação: o peso do cordeiro ao nascer depende disso.",
-      "en": "Increase feed (concentrate) in late pregnancy and lactation: lamb birth weight depends on it."
+      "en": "Increase feed (concentrate) in late pregnancy and lactation: lamb birth weight depends on it.",
+      "es": "Aumenta el alimento (concentrado) al final de la gestación y en la lactancia: el peso del cordero al nacer depende de ello."
     },
     {
       "pt": "Mude a alimentação aos poucos, sem excesso de grão de uma vez, para evitar enterotoxemia.",
-      "en": "Change feed gradually, never too much grain at once, to prevent enterotoxaemia."
+      "en": "Change feed gradually, never too much grain at once, to prevent enterotoxaemia.",
+      "es": "Cambia el alimento poco a poco, nunca demasiado grano de golpe, para prevenir la enterotoxemia."
     },
     {
       "pt": "Água limpa sempre disponível, sem gelo no inverno e fresca no verão.",
-      "en": "Clean water always available, ice-free in winter and cool in summer."
+      "en": "Clean water always available, ice-free in winter and cool in summer.",
+      "es": "Agua limpia siempre disponible, sin hielo en invierno y fresca en verano."
     }
   ],
   "healthCare": [
     {
       "pt": "Use o método FAMACHA (cor da mucosa do olho) para vermifugar só quem precisa e confirme com exame de fezes (OPG) se o vermífugo ainda funciona.",
-      "en": "Use the FAMACHA method (eyelid colour) to deworm only animals that need it, and check with a faecal egg count that the dewormer still works."
+      "en": "Use the FAMACHA method (eyelid colour) to deworm only animals that need it, and check with a faecal egg count that the dewormer still works.",
+      "es": "Usa el método FAMACHA (color del párpado) para desparasitar solo a los animales que lo necesitan, y comprueba con un recuento de huevos en heces que el desparasitante sigue funcionando."
     },
     {
       "pt": "Registre a criação e identifique cada ovelha com o brinco oficial (na Europa e no Canadá, com identificação eletrônica). Tire guia de trânsito para mover animais.",
-      "en": "Register your holding and tag each sheep with the official ear tag (electronic ID in Europe and Canada). Get a movement permit to move animals."
+      "en": "Register your holding and tag each sheep with the official ear tag (electronic ID in Europe and Canada). Get a movement permit to move animals.",
+      "es": "Registra tu explotación e identifica cada oveja con el crotal oficial (identificación electrónica en Europa y Canadá). Pide la guía de traslado para mover animales."
     },
     {
       "pt": "Vacine contra clostridioses (enterotoxemia, tétano) e contra língua azul quando a autoridade exigir; remédios e antibióticos só com receita veterinária.",
-      "en": "Vaccinate against clostridial diseases (enterotoxaemia, tetanus) and against bluetongue when the authority requires it; medicines and antibiotics only with a vet prescription."
+      "en": "Vaccinate against clostridial diseases (enterotoxaemia, tetanus) and against bluetongue when the authority requires it; medicines and antibiotics only with a vet prescription.",
+      "es": "Vacuna contra las clostridiosis (enterotoxemia, tétanos) y contra la lengua azul cuando la autoridad lo exija; medicamentos y antibióticos solo con receta veterinaria."
     },
     {
       "pt": "Proteja de lobos, coiotes e cães: cerca elétrica (mínimo 90 cm onde há lobo), recolhimento à noite e animais de guarda (cães, lhamas ou burros).",
-      "en": "Protect against wolves, coyotes and dogs: electric fencing (at least 90 cm in wolf areas), night penning and guardian animals (dogs, llamas or donkeys)."
+      "en": "Protect against wolves, coyotes and dogs: electric fencing (at least 90 cm in wolf areas), night penning and guardian animals (dogs, llamas or donkeys).",
+      "es": "Protege contra lobos, coyotes y perros: valla eléctrica (al menos 90 cm en zonas de lobo), encierro nocturno y animales de guarda (perros, llamas o burros)."
     },
     {
       "pt": "Apare os cascos a cada 3–4 meses, mantenha o aprisco seco e faça rodízio de piquetes para quebrar o ciclo dos vermes.",
-      "en": "Trim hooves every 3–4 months, keep the pen dry and rotate paddocks to break the worm cycle."
+      "en": "Trim hooves every 3–4 months, keep the pen dry and rotate paddocks to break the worm cycle.",
+      "es": "Recorta las pezuñas cada 3–4 meses, mantén seco el corral y rota los cercados para cortar el ciclo de los gusanos."
     },
     {
       "pt": "Ao comprar carneiro, prefira genótipo ARR (resistente à scrapie) e animais sem caroços.",
-      "en": "When buying a ram, prefer the ARR genotype (scrapie-resistant) and animals free of lumps."
+      "en": "When buying a ram, prefer the ARR genotype (scrapie-resistant) and animals free of lumps.",
+      "es": "Al comprar un carnero, prefiere el genotipo ARR (resistente al scrapie) y animales sin bultos."
     }
   ],
   "diseases": [
     {
       "name": {
         "pt": "Verminose (Haemonchus)",
-        "en": "Worm infection (barber pole worm)"
+        "en": "Worm infection (barber pole worm)",
+        "es": "Verminosis (gusano Haemonchus)"
       },
       "signs": {
         "pt": "Mucosa do olho pálida, fraqueza, emagrecimento, papeira (inchaço embaixo do queixo). É a maior causa de perdas no calor úmido.",
-        "en": "Pale eyelid mucosa, weakness, weight loss, bottle jaw (swelling under the jaw). It is the main cause of losses in hot, humid areas."
+        "en": "Pale eyelid mucosa, weakness, weight loss, bottle jaw (swelling under the jaw). It is the main cause of losses in hot, humid areas.",
+        "es": "Mucosa del párpado pálida, debilidad, adelgazamiento, papada (hinchazón bajo la mandíbula). Es la principal causa de pérdidas en zonas cálidas y húmedas."
       },
       "homeCare": {
         "pt": "Tire o animal do pasto contaminado, ofereça boa comida e água e faça o FAMACHA em todo o rebanho.",
-        "en": "Move the animal off contaminated pasture, give good feed and water and FAMACHA-check the whole flock."
+        "en": "Move the animal off contaminated pasture, give good feed and water and FAMACHA-check the whole flock.",
+        "es": "Saca al animal del pasto contaminado, dale buena comida y agua y revisa con FAMACHA a todo el rebaño."
       },
       "vetCare": {
         "pt": "Vermífugo (anti-helmíntico) escolhido pelo veterinário, de preferência após exame de fezes (OPG), porque o verme já resiste a vários produtos.",
-        "en": "Dewormer (anthelmintic) chosen by a vet, ideally after a faecal egg count, because the worm already resists several products."
+        "en": "Dewormer (anthelmintic) chosen by a vet, ideally after a faecal egg count, because the worm already resists several products.",
+        "es": "Desparasitante (antihelmíntico) elegido por el veterinario, idealmente tras un recuento de huevos en heces, porque el gusano ya resiste a varios productos."
       }
     },
     {
       "name": {
         "pt": "Língua azul (febre catarral ovina)",
-        "en": "Bluetongue"
+        "en": "Bluetongue",
+        "es": "Lengua azul"
       },
       "signs": {
         "pt": "Febre, salivação, inchaço da cara, língua arroxeada, manqueira e mortes; aparece no verão e outono, quando há maruins (Culicoides).",
-        "en": "Fever, drooling, swollen face, purplish tongue, lameness and deaths; appears in summer and autumn when biting midges (Culicoides) are active."
+        "en": "Fever, drooling, swollen face, purplish tongue, lameness and deaths; appears in summer and autumn when biting midges (Culicoides) are active.",
+        "es": "Fiebre, babeo, cara hinchada, lengua morada, cojera y muertes; aparece en verano y otoño, cuando los mosquitos culicoides están activos."
       },
       "homeCare": {
         "pt": "Deixe o animal na sombra, com água fresca e comida macia; recolha o rebanho ao entardecer e avise o veterinário logo.",
-        "en": "Keep the animal in shade with fresh water and soft feed; pen the flock at dusk and call your vet promptly."
+        "en": "Keep the animal in shade with fresh water and soft feed; pen the flock at dusk and call your vet promptly.",
+        "es": "Deja al animal a la sombra con agua fresca y alimento blando; encierra al rebaño al anochecer y llama pronto al veterinario."
       },
       "vetCare": {
         "pt": "Não há remédio contra o vírus; o veterinário trata os sintomas (anti-inflamatório, antibiótico contra infecções secundárias). A prevenção é a vacina do sorotipo que circula, conforme a campanha oficial.",
-        "en": "There is no drug against the virus; the vet treats symptoms (anti-inflammatories, antibiotics for secondary infections). Prevention is the vaccine for the circulating serotype, following the official campaign."
+        "en": "There is no drug against the virus; the vet treats symptoms (anti-inflammatories, antibiotics for secondary infections). Prevention is the vaccine for the circulating serotype, following the official campaign.",
+        "es": "No hay medicamento contra el virus; el veterinario trata los síntomas (antiinflamatorios, antibióticos para infecciones secundarias). La prevención es la vacuna del serotipo que circula, según la campaña oficial."
       }
     },
     {
       "name": {
         "pt": "Scrapie (paraplexia enzoótica)",
-        "en": "Scrapie"
+        "en": "Scrapie",
+        "es": "Scrapie (tembladera)"
       },
       "signs": {
         "pt": "Coceira intensa (a ovelha se esfrega e perde lã), tremores, falta de coordenação e emagrecimento, em animais adultos.",
-        "en": "Intense itching (the sheep rubs and loses wool), tremors, poor coordination and weight loss, in adult animals."
+        "en": "Intense itching (the sheep rubs and loses wool), tremors, poor coordination and weight loss, in adult animals.",
+        "es": "Picor intenso (la oveja se frota y pierde lana), temblores, falta de coordinación y adelgazamiento, en animales adultos."
       },
       "homeCare": {
         "pt": "Isole o animal, não venda nem mova ovelhas do rebanho e chame o serviço veterinário oficial.",
-        "en": "Isolate the animal, do not sell or move sheep from the flock and call the official veterinary service."
+        "en": "Isolate the animal, do not sell or move sheep from the flock and call the official veterinary service.",
+        "es": "Aísla al animal, no vendas ni saques ovejas del rebaño y llama al servicio veterinario oficial."
       },
       "vetCare": {
         "pt": "Não tem tratamento. É doença de notificação obrigatória (Brasil, Canadá, Alemanha e outros) e tem programas oficiais de erradicação; a prevenção é usar carneiros ARR.",
-        "en": "There is no treatment. It is a notifiable disease (Brazil, Canada, Germany and others) with official eradication programmes; prevention is using ARR rams."
+        "en": "There is no treatment. It is a notifiable disease (Brazil, Canada, Germany and others) with official eradication programmes; prevention is using ARR rams.",
+        "es": "No hay tratamiento. Es una enfermedad de declaración obligatoria (Brasil, Canadá, Alemania y otros) con programas oficiales de erradicación; la prevención es usar carneros ARR."
       }
     },
     {
       "name": {
         "pt": "Linfadenite caseosa (mal do caroço)",
-        "en": "Caseous lymphadenitis"
+        "en": "Caseous lymphadenitis",
+        "es": "Linfadenitis caseosa"
       },
       "signs": {
         "pt": "Caroços (abscessos) no pescoço, atrás da orelha, na paleta ou virilha.",
-        "en": "Lumps (abscesses) on the neck, behind the ear, shoulder or groin."
+        "en": "Lumps (abscesses) on the neck, behind the ear, shoulder or groin.",
+        "es": "Bultos (abscesos) en el cuello, detrás de la oreja, en el hombro o en la ingle."
       },
       "homeCare": {
         "pt": "Isole o animal; não estoure o caroço no pasto — o pus contamina o ambiente.",
-        "en": "Isolate the animal; never burst the lump in the field — the pus contaminates the area."
+        "en": "Isolate the animal; never burst the lump in the field — the pus contaminates the area.",
+        "es": "Aísla al animal; nunca revientes el bulto en el campo: el pus contamina la zona."
       },
       "vetCare": {
         "pt": "Drenagem e cauterização feitas pelo veterinário em local separado; existe vacina.",
-        "en": "Drainage and cauterisation by a vet in a separate area; a vaccine is available."
+        "en": "Drainage and cauterisation by a vet in a separate area; a vaccine is available.",
+        "es": "Drenaje y cauterización por el veterinario en una zona aparte; existe vacuna."
       }
     },
     {
       "name": {
         "pt": "Pododermatite (podridão do casco)",
-        "en": "Footrot"
+        "en": "Footrot",
+        "es": "Pedero"
       },
       "signs": {
         "pt": "Manqueira, cheiro forte no casco, ovelha pastando ajoelhada; piora em pastos úmidos.",
-        "en": "Lameness, foul smell from the hoof, sheep grazing on its knees; worse on wet pasture."
+        "en": "Lameness, foul smell from the hoof, sheep grazing on its knees; worse on wet pasture.",
+        "es": "Cojera, mal olor en la pezuña, oveja que pasta de rodillas; peor en pastos húmedos."
       },
       "homeCare": {
         "pt": "Apare e limpe o casco, mantenha o animal em local seco e separe os que mancam.",
-        "en": "Trim and clean the hoof, keep the animal on dry ground and separate lame animals."
+        "en": "Trim and clean the hoof, keep the animal on dry ground and separate lame animals.",
+        "es": "Recorta y limpia la pezuña, deja al animal en suelo seco y separa a los cojos."
       },
       "vetCare": {
         "pt": "Pedilúvio com sulfato de zinco ou de cobre e antibiótico nos casos graves, conforme o veterinário.",
-        "en": "Footbath with zinc or copper sulfate and antibiotics in severe cases, as advised by a vet."
+        "en": "Footbath with zinc or copper sulfate and antibiotics in severe cases, as advised by a vet.",
+        "es": "Pediluvio con sulfato de zinc o de cobre y antibióticos en los casos graves, según indique el veterinario."
       }
     },
     {
       "name": {
         "pt": "Enterotoxemia (clostridiose)",
-        "en": "Enterotoxaemia (clostridial disease)"
+        "en": "Enterotoxaemia (clostridial disease)",
+        "es": "Enterotoxemia (clostridiosis)"
       },
       "signs": {
         "pt": "Morte súbita de cordeiros bem nutridos, às vezes com convulsões.",
-        "en": "Sudden death of well-fed lambs, sometimes with convulsions."
+        "en": "Sudden death of well-fed lambs, sometimes with convulsions.",
+        "es": "Muerte repentina de corderos bien alimentados, a veces con convulsiones."
       },
       "homeCare": {
         "pt": "Mude a alimentação aos poucos, sem excesso de grão de uma vez.",
-        "en": "Change feed gradually, never too much grain at once."
+        "en": "Change feed gradually, never too much grain at once.",
+        "es": "Cambia el alimento poco a poco, nunca demasiado grano de golpe."
       },
       "vetCare": {
         "pt": "Tratamento raramente funciona; a prevenção é a vacina contra clostridioses.",
-        "en": "Treatment rarely works; prevention is the clostridial vaccine."
+        "en": "Treatment rarely works; prevention is the clostridial vaccine.",
+        "es": "El tratamiento rara vez funciona; la prevención es la vacuna de clostridiosis."
       }
     }
   ],
@@ -407,23 +480,28 @@
       "highlights": [
         {
           "pt": "No Nordeste e no calor, prefira raças deslanadas nacionais (Santa Inês, Morada Nova, Somalis); no Pampa, lanadas como a Crioula Lanada.",
-          "en": "In the Northeast and hot areas choose Brazilian hair breeds (Santa Inês, Morada Nova, Somalis); in the Pampa, wool breeds such as Crioula Lanada."
+          "en": "In the Northeast and hot areas choose Brazilian hair breeds (Santa Inês, Morada Nova, Somalis); in the Pampa, wool breeds such as Crioula Lanada.",
+          "es": "En el Noreste y en las zonas cálidas elige razas brasileñas de pelo (Santa Inês, Morada Nova, Somalis); en la Pampa, razas de lana como la Crioula Lanada."
         },
         {
           "pt": "O Haemonchus é mais de 80% da verminose: use o FAMACHA e vermifugue só os animais anêmicos.",
-          "en": "Haemonchus makes up over 80% of the worm burden: use FAMACHA and deworm only anaemic animals."
+          "en": "Haemonchus makes up over 80% of the worm burden: use FAMACHA and deworm only anaemic animals.",
+          "es": "El Haemonchus supone más del 80% de la carga de gusanos: usa FAMACHA y desparasita solo a los animales anémicos."
         },
         {
           "pt": "Cadastre a criação no órgão estadual (PNSCO, IN 87/2004) e tire GTA para todo trânsito de ovinos.",
-          "en": "Register your flock with the state agency (PNSCO, IN 87/2004) and get a GTA permit for every sheep movement."
+          "en": "Register your flock with the state agency (PNSCO, IN 87/2004) and get a GTA permit for every sheep movement.",
+          "es": "Registra tu rebaño en el organismo estatal (PNSCO, IN 87/2004) y saca la guía GTA para cada traslado de ovejas."
         },
         {
           "pt": "Scrapie e outras doenças são de notificação obrigatória; no RS a epididimite ovina (B. ovis) também.",
-          "en": "Scrapie and other diseases are notifiable; in Rio Grande do Sul so is ovine epididymitis (B. ovis)."
+          "en": "Scrapie and other diseases are notifiable; in Rio Grande do Sul so is ovine epididymitis (B. ovis).",
+          "es": "El scrapie y otras enfermedades son de declaración obligatoria; en Rio Grande do Sul también la epididimitis ovina (B. ovis)."
         },
         {
           "pt": "Use sal mineral próprio para ovinos: o de bovinos pode ter cobre demais.",
-          "en": "Use sheep-specific mineral salt: cattle mineral may contain too much copper."
+          "en": "Use sheep-specific mineral salt: cattle mineral may contain too much copper.",
+          "es": "Usa sal mineral específica para ovejas: el mineral para bovinos puede llevar demasiado cobre."
         }
       ],
       "sources": [
@@ -449,23 +527,28 @@
       "highlights": [
         {
           "pt": "Programa federal do scrapie: ovelhas precisam de brinco oficial do USDA para sair da propriedade; peça seu flock ID e brincos gratuitos ao APHIS.",
-          "en": "Federal scrapie program: sheep need an official USDA ear tag to leave the farm; request a flock ID and free tags from APHIS."
+          "en": "Federal scrapie program: sheep need an official USDA ear tag to leave the farm; request a flock ID and free tags from APHIS.",
+          "es": "Programa federal de scrapie: las ovejas necesitan un crotal oficial del USDA para salir de la finca; pide a APHIS un número de rebaño y crotales gratuitos."
         },
         {
           "pt": "No Sul e no Sudeste, prefira raças deslanadas como Katahdin e Dorper, que dispensam tosquia e aguentam calor e vermes.",
-          "en": "In the South and Southeast, choose hair breeds like Katahdin and Dorper: no shearing, better heat and worm tolerance."
+          "en": "In the South and Southeast, choose hair breeds like Katahdin and Dorper: no shearing, better heat and worm tolerance.",
+          "es": "En el sur y el sureste, elige razas de pelo como Katahdin y Dorper: sin esquila, mejor tolerancia al calor y a los gusanos."
         },
         {
           "pt": "O verme Haemonchus já resiste a vários vermífugos: use FAMACHA e trate só os animais anêmicos.",
-          "en": "Barber pole worm resists many dewormers: use FAMACHA and treat only anemic animals."
+          "en": "Barber pole worm resists many dewormers: use FAMACHA and treat only anemic animals.",
+          "es": "El gusano Haemonchus resiste a muchos desparasitantes: usa FAMACHA y trata solo a los animales anémicos."
         },
         {
           "pt": "Coiotes são o principal predador: cães de guarda, lhamas ou burros ajudam a proteger o rebanho.",
-          "en": "Coyotes are the main predator: guardian dogs, llamas or donkeys help protect the flock."
+          "en": "Coyotes are the main predator: guardian dogs, llamas or donkeys help protect the flock.",
+          "es": "Los coyotes son el principal depredador: los perros, las llamas o los burros de guarda ayudan a proteger el rebaño."
         },
         {
           "pt": "Nunca dê mineral ou ração de cabra ou de gado para ovelhas: o cobre extra pode matá-las.",
-          "en": "Never feed goat or cattle mineral or feed to sheep: the extra copper can kill them."
+          "en": "Never feed goat or cattle mineral or feed to sheep: the extra copper can kill them.",
+          "es": "Nunca des a las ovejas minerales ni pienso de cabras o vacas: el cobre extra puede matarlas."
         }
       ],
       "sources": [
@@ -491,23 +574,28 @@
       "highlights": [
         {
           "pt": "Ovelhas precisam de brinco RFID aprovado pelo CSIP (Canadian Sheep Identification Program).",
-          "en": "Sheep must carry an approved CSIP RFID ear tag (Canadian Sheep Identification Program)."
+          "en": "Sheep must carry an approved CSIP RFID ear tag (Canadian Sheep Identification Program).",
+          "es": "Las ovejas deben llevar un crotal RFID aprobado por el CSIP (Programa Canadiense de Identificación Ovina)."
         },
         {
           "pt": "A Rideau Arcott, raça canadense muito prolífica, exige nutrição e parição bem planejadas.",
-          "en": "The Canadian Rideau Arcott is highly prolific, so plan nutrition and lambing carefully."
+          "en": "The Canadian Rideau Arcott is highly prolific, so plan nutrition and lambing carefully.",
+          "es": "La canadiense Rideau Arcott es muy prolífica, así que planifica bien la alimentación y los partos."
         },
         {
           "pt": "Neve como água só com reserva de água pronta e inspeção diária (código da NFACC).",
-          "en": "Snow as water only with backup water ready and daily checks (NFACC Code)."
+          "en": "Snow as water only with backup water ready and daily checks (NFACC Code).",
+          "es": "Nieve como agua solo con agua de reserva preparada y revisiones diarias (Código NFACC)."
         },
         {
           "pt": "Scrapie é doença de notificação obrigatória ao CFIA, com programa nacional de erradicação.",
-          "en": "Scrapie is reportable to the CFIA under a national eradication program."
+          "en": "Scrapie is reportable to the CFIA under a national eradication program.",
+          "es": "El scrapie es de declaración obligatoria a la CFIA dentro de un programa nacional de erradicación."
         },
         {
           "pt": "Antibióticos medicamente importantes só com receita veterinária desde 2018.",
-          "en": "Medically important antimicrobials require a veterinary prescription since 2018."
+          "en": "Medically important antimicrobials require a veterinary prescription since 2018.",
+          "es": "Los antimicrobianos de importancia médica exigen receta veterinaria desde 2018."
         }
       ],
       "sources": [
@@ -533,23 +621,28 @@
       "highlights": [
         {
           "pt": "O lobo está em quase todo o país: use cerca elétrica de no mínimo 90 cm e peça subsídio estadual para ela.",
-          "en": "Wolves are present almost nationwide: use an electric fence of at least 90 cm and apply for state funding for it."
+          "en": "Wolves are present almost nationwide: use an electric fence of at least 90 cm and apply for state funding for it.",
+          "es": "Hay lobos en casi todo el país: usa una valla eléctrica de al menos 90 cm y pide la ayuda del estado federado para pagarla."
         },
         {
           "pt": "Mesmo como hobby, registre no Veterinäramt, no banco HIT e na Tierseuchenkasse.",
-          "en": "Even as a hobby, register with the Veterinäramt, the HIT database and the Tierseuchenkasse."
+          "en": "Even as a hobby, register with the Veterinäramt, the HIT database and the Tierseuchenkasse.",
+          "es": "Aunque sea por afición, regístrate en el Veterinäramt, en la base de datos HIT y en la Tierseuchenkasse."
         },
         {
           "pt": "Cada ovelha leva 2 marcas, uma eletrônica, até os 9 meses ou antes de sair do rebanho.",
-          "en": "Each sheep needs 2 identifiers, one electronic, by 9 months of age or before leaving the flock."
+          "en": "Each sheep needs 2 identifiers, one electronic, by 9 months of age or before leaving the flock.",
+          "es": "Cada oveja necesita 2 identificadores, uno electrónico, antes de los 9 meses de edad o antes de salir del rebaño."
         },
         {
           "pt": "Língua azul (BTV-3) é transmitida por maruins no verão; planeje a vacinação com o veterinário.",
-          "en": "Bluetongue (BTV-3) is spread by biting midges in summer; plan vaccination with your vet."
+          "en": "Bluetongue (BTV-3) is spread by biting midges in summer; plan vaccination with your vet.",
+          "es": "La lengua azul (BTV-3) la transmiten los mosquitos en verano; planifica la vacunación con tu veterinario."
         },
         {
           "pt": "Raças nativas rústicas como Skudde, Rhönschaf e Bentheimer Landschaf são boas para iniciantes.",
-          "en": "Hardy native breeds such as Skudde, Rhönschaf and Bentheimer Landschaf suit beginners."
+          "en": "Hardy native breeds such as Skudde, Rhönschaf and Bentheimer Landschaf suit beginners.",
+          "es": "Las razas autóctonas rústicas como Skudde, Rhönschaf y Bentheimer Landschaf van bien para principiantes."
         }
       ],
       "sources": [
@@ -575,19 +668,23 @@
       "highlights": [
         {
           "pt": "Cada ovelha leva um brinco e um identificador eletrônico (em geral um bolo ruminal), e a exploração precisa de registro REGA.",
-          "en": "Each sheep carries an ear tag plus an electronic ID (usually a rumen bolus), and the holding needs REGA registration."
+          "en": "Each sheep carries an ear tag plus an electronic ID (usually a rumen bolus), and the holding needs REGA registration.",
+          "es": "Cada oveja lleva un crotal y una identificación electrónica (normalmente un bolo ruminal), y la explotación necesita registro en el REGA."
         },
         {
           "pt": "A língua azul é endêmica: a vacina é voluntária, mas o MAPA recomenda vacinar as ovelhas antes do verão.",
-          "en": "Bluetongue is endemic: vaccination is voluntary, but the Ministry recommends vaccinating sheep before summer."
+          "en": "Bluetongue is endemic: vaccination is voluntary, but the Ministry recommends vaccinating sheep before summer.",
+          "es": "La lengua azul es endémica: la vacunación es voluntaria, pero el Ministerio recomienda vacunar a las ovejas antes del verano."
         },
         {
           "pt": "Raças leiteiras locais abastecem queijos DO: Manchega (Manchego), Latxa (Idiazabal, Roncal), Churra.",
-          "en": "Local dairy breeds supply PDO cheeses: Manchega (Manchego), Latxa (Idiazabal, Roncal), Churra."
+          "en": "Local dairy breeds supply PDO cheeses: Manchega (Manchego), Latxa (Idiazabal, Roncal), Churra.",
+          "es": "Las razas lecheras locales dan quesos DOP: Manchega (Manchego), Latxa (Idiazabal, Roncal), Churra."
         },
         {
           "pt": "No verão seco, use restolho de cereal, sombra e água fresca; o pasto volta com as chuvas de outono.",
-          "en": "In the dry summer, use cereal stubble, shade and fresh water; pasture returns with autumn rains."
+          "en": "In the dry summer, use cereal stubble, shade and fresh water; pasture returns with autumn rains.",
+          "es": "En el verano seco, usa rastrojos de cereal, sombra y agua fresca; el pasto vuelve con las lluvias de otoño."
         }
       ],
       "sources": [
@@ -613,23 +710,28 @@
       "highlights": [
         {
           "pt": "Mesmo poucas ovelhas de lazer exigem declaração no EDE, dois marcadores (um eletrônico) antes dos 6 meses e recenseamento anual.",
-          "en": "Even a few hobby sheep require EDE registration, two identifiers (one electronic) before 6 months of age, and an annual census."
+          "en": "Even a few hobby sheep require EDE registration, two identifiers (one electronic) before 6 months of age, and an annual census.",
+          "es": "Incluso unas pocas ovejas de afición exigen registro en el EDE, dos identificadores (uno electrónico) antes de los 6 meses de edad y un censo anual."
         },
         {
           "pt": "Movimentos de ovinos são declarados em até 7 dias e você precisa manter um registro de criação.",
-          "en": "Sheep movements must be declared within 7 days and a holding register must be kept."
+          "en": "Sheep movements must be declared within 7 days and a holding register must be kept.",
+          "es": "Los movimientos de ovejas deben declararse en 7 días y hay que llevar un libro de explotación."
         },
         {
           "pt": "Vacine contra a febre catarral (FCO) conforme a campanha oficial, antes da época dos maruins: as ovelhas foram grande parte dos focos recentes.",
-          "en": "Vaccinate against bluetongue following the official campaign, before the midge season: sheep made up a large share of recent outbreaks."
+          "en": "Vaccinate against bluetongue following the official campaign, before the midge season: sheep made up a large share of recent outbreaks.",
+          "es": "Vacuna contra la lengua azul según la campaña oficial, antes de la época de mosquitos: las ovejas fueron gran parte de los brotes recientes."
         },
         {
           "pt": "Onde há lobo, o Estado financia de 80% a 100% de cercas elétricas e cães de proteção, e a indenização depende dessas proteções.",
-          "en": "In wolf areas the State funds 80–100% of electric fencing and guardian dogs, and compensation depends on having them."
+          "en": "In wolf areas the State funds 80–100% of electric fencing and guardian dogs, and compensation depends on having them.",
+          "es": "En zonas de lobo el Estado paga del 80 al 100% de las vallas eléctricas y los perros de guarda, y las indemnizaciones dependen de tenerlos."
         },
         {
           "pt": "A Lacaune, raça leiteira do queijo Roquefort, mostra o peso do leite de ovelha no sul do país.",
-          "en": "The Lacaune, the dairy breed behind Roquefort cheese, shows how important sheep milk is in the south."
+          "en": "The Lacaune, the dairy breed behind Roquefort cheese, shows how important sheep milk is in the south.",
+          "es": "La Lacaune, la raza lechera del queso Roquefort, muestra la importancia de la leche de oveja en el sur."
         }
       ],
       "sources": [
@@ -655,23 +757,28 @@
       "highlights": [
         {
           "pt": "Até 6 ovelhas/cabras é 'detenção caseira', com registo obrigatório no SNIRA (DGAV).",
-          "en": "Up to 6 sheep/goats is 'home keeping', with mandatory SNIRA (DGAV) registration."
+          "en": "Up to 6 sheep/goats is 'home keeping', with mandatory SNIRA (DGAV) registration.",
+          "es": "Hasta 6 ovejas/cabras es 'tenencia doméstica', con registro obligatorio en el SNIRA (DGAV)."
         },
         {
           "pt": "Cada ovelha leva brinco e identificação eletrónica (bolo ou brinco eletrónico) até aos 6 meses (9 em extensivo).",
-          "en": "Each sheep needs an ear tag plus electronic ID (bolus or e-tag) by 6 months (9 if extensive)."
+          "en": "Each sheep needs an ear tag plus electronic ID (bolus or e-tag) by 6 months (9 if extensive).",
+          "es": "Cada oveja necesita un crotal y una identificación electrónica (bolo o crotal electrónico) antes de los 6 meses (9 si es extensiva)."
         },
         {
           "pt": "Siga o edital da DGAV em vigor sobre língua azul: a vacinação contra alguns serótipos é obrigatória e há vacinas gratuitas.",
-          "en": "Follow DGAV's current bluetongue notice: vaccination against some serotypes is mandatory and some vaccines are free."
+          "en": "Follow DGAV's current bluetongue notice: vaccination against some serotypes is mandatory and some vaccines are free.",
+          "es": "Sigue el aviso vigente de la DGAV sobre la lengua azul: la vacunación contra algunos serotipos es obligatoria y algunas vacunas son gratuitas."
         },
         {
           "pt": "Pasto verde de outono a primavera e seca no verão: guarde feno e dê sombra e água.",
-          "en": "Green pasture from autumn to spring, drought in summer: store hay and provide shade and water."
+          "en": "Green pasture from autumn to spring, drought in summer: store hay and provide shade and water.",
+          "es": "Pasto verde de otoño a primavera, sequía en verano: guarda heno y da sombra y agua."
         },
         {
           "pt": "Raças autóctones como a Serra da Estrela dão queijo DOP e podem ter apoio do PEPAC.",
-          "en": "Native breeds like Serra da Estrela produce PDO cheese and may receive CAP (PEPAC) support."
+          "en": "Native breeds like Serra da Estrela produce PDO cheese and may receive CAP (PEPAC) support.",
+          "es": "Las razas autóctonas como la Serra da Estrela dan queso DOP y pueden recibir ayudas de la PAC (PEPAC)."
         }
       ],
       "sources": [
@@ -697,23 +804,28 @@
       "highlights": [
         {
           "pt": "Mesmo poucas ovelhas precisam de registro na BDN e identificação eletrônica (bolo ou brinco eletrônico).",
-          "en": "Even a few sheep need BDN registration and electronic ID (rumen bolus or electronic ear tag)."
+          "en": "Even a few sheep need BDN registration and electronic ID (rumen bolus or electronic ear tag).",
+          "es": "Incluso unas pocas ovejas necesitan registro en la BDN e identificación electrónica (bolo ruminal o crotal electrónico)."
         },
         {
           "pt": "A vacinação contra língua azul é definida pela sua Região: confirme a campanha com a ASL todo ano.",
-          "en": "Bluetongue vaccination is set by your Region: check the campaign with the local ASL every year."
+          "en": "Bluetongue vaccination is set by your Region: check the campaign with the local ASL every year.",
+          "es": "La vacunación contra la lengua azul la fija tu región: consulta la campaña con la ASL local cada año."
         },
         {
           "pt": "Prefira carneiro com genótipo ARR, resistente à scrapie, como no plano nacional de erradicação.",
-          "en": "Choose an ARR-genotype ram, resistant to scrapie, as in the national eradication plan."
+          "en": "Choose an ARR-genotype ram, resistant to scrapie, as in the national eradication plan.",
+          "es": "Elige un carnero de genotipo ARR, resistente al scrapie, como en el plan nacional de erradicación."
         },
         {
           "pt": "Abate em casa para consumo próprio é possível, com limites regionais e registro na BDN em até 7 dias.",
-          "en": "Home slaughter for own use is allowed, with regional limits and BDN recording within 7 days."
+          "en": "Home slaughter for own use is allowed, with regional limits and BDN recording within 7 days.",
+          "es": "Se permite el sacrificio casero para consumo propio, con límites regionales y registro en la BDN en 7 días."
         },
         {
           "pt": "Raças leiteiras locais como Sarda e Comisana são a base do pecorino.",
-          "en": "Local dairy breeds such as Sarda and Comisana are the backbone of pecorino cheese."
+          "en": "Local dairy breeds such as Sarda and Comisana are the backbone of pecorino cheese.",
+          "es": "Las razas lecheras locales como la Sarda y la Comisana son la base del queso pecorino."
         }
       ],
       "sources": [
@@ -739,19 +851,23 @@
       "highlights": [
         {
           "pt": "No México a ovelha é criada para carne: o cordeiro abastece a barbacoa do centro do país (Estado de México, Hidalgo).",
-          "en": "In Mexico sheep are raised for meat: lambs supply the barbacoa trade of central Mexico (State of Mexico, Hidalgo)."
+          "en": "In Mexico sheep are raised for meat: lambs supply the barbacoa trade of central Mexico (State of Mexico, Hidalgo).",
+          "es": "En México las ovejas se crían para carne: los corderos abastecen el comercio de barbacoa del centro del país (Estado de México, Hidalgo)."
         },
         {
           "pt": "No calor do trópico use ovelhas de pelo: Pelibuey, Blackbelly, Katahdin e Dorper; no altiplano, Rambouillet e Suffolk.",
-          "en": "In the hot tropics use hair sheep: Pelibuey, Blackbelly, Katahdin and Dorper; in the highlands, Rambouillet and Suffolk."
+          "en": "In the hot tropics use hair sheep: Pelibuey, Blackbelly, Katahdin and Dorper; in the highlands, Rambouillet and Suffolk.",
+          "es": "En el trópico cálido usa ovejas de pelo: Pelibuey, Blackbelly, Katahdin y Dorper; en el altiplano, Rambouillet y Suffolk."
         },
         {
           "pt": "Cruzar ovelha Pelibuey com carneiro Katahdin ou Dorper aumenta o crescimento dos cordeiros.",
-          "en": "Crossing Pelibuey ewes with Katahdin or Dorper rams improves lamb growth."
+          "en": "Crossing Pelibuey ewes with Katahdin or Dorper rams improves lamb growth.",
+          "es": "Cruzar ovejas Pelibuey con sementales Katahdin o Dorper mejora el crecimiento de los corderos."
         },
         {
           "pt": "Ovinos também levam o brinco SINIIGA e a vacina de brucelose (Rev-1) é aplicada por veterinário aprovado.",
-          "en": "Sheep also carry the SINIIGA ear tag, and brucellosis vaccine (Rev-1) is given by an approved veterinarian."
+          "en": "Sheep also carry the SINIIGA ear tag, and brucellosis vaccine (Rev-1) is given by an approved veterinarian.",
+          "es": "Las ovejas también llevan el arete SINIIGA, y la vacuna de brucelosis (Rev-1) la aplica un médico veterinario aprobado."
         }
       ],
       "sources": [

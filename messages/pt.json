@@ -324,7 +324,8 @@
   },
   "languages": {
     "pt": "Português",
-    "en": "English"
+    "en": "English",
+    "es": "Español"
   },
   "profile": {
     "title": "Perfil",
@@ -870,5 +871,32 @@
     "message": "Mensagem",
     "send": "Enviar mensagem",
     "sent": "Mensagem enviada! Vamos responder no seu e-mail."
+  },
+  "guide": {
+    "footer": "O que plantar",
+    "indexTitle": "O que plantar em cada mês",
+    "indexIntro": "Escolha seu país e o mês para ver quais hortaliças, grãos e ervas você pode semear ou transplantar, conforme o clima. Grátis, do calendário de plantio do NewFarmer.",
+    "title": "O que plantar em {month} {inCountry}",
+    "description": "Hortaliças, grãos e ervas que você pode semear ou transplantar em {month} {inCountry}, conforme o clima. Calendário de plantio grátis do NewFarmer.",
+    "introMany": "Há mais de um clima {inCountry}. Encontre o seu abaixo: cada lista mostra o que você pode semear ou transplantar em {month}. Árvores frutíferas ficam de fora.",
+    "introOne": "Veja abaixo o que você pode semear ou transplantar em {month} {inCountry}. Árvores frutíferas ficam de fora.",
+    "zoneTitle": "Clima {zone}",
+    "zoneEmpty": "Nada para semear ou transplantar neste mês neste clima.",
+    "ctaTitle": "Receba o calendário da sua cidade",
+    "ctaText": "O NewFarmer descobre o seu clima pela cidade e mostra todo mês o que plantar, com guias de cuidado, previsão de 5 dias e um diário para os seus animais.",
+    "ctaButton": "Criar minha conta",
+    "otherMonths": "Outros meses",
+    "otherCountries": "Outros países",
+    "inCountry": {
+      "BR": "no Brasil",
+      "US": "nos Estados Unidos",
+      "CA": "no Canadá",
+      "DE": "na Alemanha",
+      "ES": "na Espanha",
+      "FR": "na França",
+      "PT": "em Portugal",
+      "IT": "na Itália",
+      "MX": "no México"
+    }
   }
 }

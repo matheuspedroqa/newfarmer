@@ -2,7 +2,8 @@
   "id": "rye",
   "summary": {
     "pt": "O centeio é o cereal de inverno mais rústico: aguenta frio forte, solo pobre e ácido. Serve para pão, pasto e cobertura de solo.",
-    "en": "Rye is the hardiest cool-season cereal: it tolerates hard cold and poor, acid soil. It is used for bread, pasture and cover cropping."
+    "en": "Rye is the hardiest cool-season cereal: it tolerates hard cold and poor, acid soil. It is used for bread, pasture and cover cropping.",
+    "es": "El centeno es el cereal de estación fresca más resistente: tolera el frío intenso y el suelo pobre y ácido. Se usa para pan, pasto y cobertura del suelo."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não indicado para grão: o centeio precisa de inverno frio.", "en": "Not suitable for grain: rye needs a cold winter." }
+      "notes": { "pt": "Não indicado para grão: o centeio precisa de inverno frio.", "en": "Not suitable for grain: rye needs a cold winter.", "es": "No es adecuado para grano: el centeno necesita un invierno frío." }
     },
     "subtropical": {
       "directSowing": [3, 4, 5, 6],
       "seedbed": [],
       "transplant": [],
       "harvest": [10, 11],
-      "notes": { "pt": "Para pasto ou adubo verde, semeie cedo (mar–mai, logo após a soja). Para grão, na mesma época do trigo.", "en": "For grazing or green manure, sow early (Mar–May, right after soybeans). For grain, sow at the same time as wheat." }
+      "notes": { "pt": "Para pasto ou adubo verde, semeie cedo (mar–mai, logo após a soja). Para grão, na mesma época do trigo.", "en": "For grazing or green manure, sow early (Mar–May, right after soybeans). For grain, sow at the same time as wheat.", "es": "Para pastoreo o abono verde, siembra temprano (mar–may, justo después de la soja). Para grano, siembra al mismo tiempo que el trigo." }
     },
     "temperate": {
       "directSowing": [3, 4],
       "seedbed": [],
       "transplant": [],
       "harvest": [12, 1],
-      "notes": { "pt": "Semeie no outono; passa o inverno no campo e é colhido no começo do verão.", "en": "Sow in autumn; it overwinters in the field and is harvested in early summer." }
+      "notes": { "pt": "Semeie no outono; passa o inverno no campo e é colhido no começo do verão.", "en": "Sow in autumn; it overwinters in the field and is harvested in early summer.", "es": "Siembra en otoño; pasa el invierno en el campo y se cosecha a principios del verano." }
     },
     "semiarid": {
       "directSowing": [5, 6],
       "seedbed": [],
       "transplant": [],
       "harvest": [10],
-      "notes": { "pt": "Só onde a estação fresca é fria o bastante; mais usado como pasto ou cobertura.", "en": "Only where the cool season gets cold enough; mostly used for grazing or cover." }
+      "notes": { "pt": "Só onde a estação fresca é fria o bastante; mais usado como pasto ou cobertura.", "en": "Only where the cool season gets cold enough; mostly used for grazing or cover.", "es": "Solo donde la estación fresca sea lo bastante fría; se usa sobre todo para pastoreo o cobertura." }
     },
     "cold": {
       "directSowing": [3],
       "seedbed": [],
       "transplant": [],
       "harvest": [1, 2],
-      "notes": { "pt": "Semeie no fim do verão/início do outono, para as plantas firmarem antes da neve.", "en": "Sow in late summer/early autumn so plants establish before snow." }
+      "notes": { "pt": "Semeie no fim do verão/início do outono, para as plantas firmarem antes da neve.", "en": "Sow in late summer/early autumn so plants establish before snow.", "es": "Siembra a finales del verano o principios del otoño para que las plantas se establezcan antes de la nieve." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Pede menos adubo que trigo e cevada. Faça análise de solo; no plantio, NPK ou esterco curtido conforme a análise, e um pouco de nitrogênio em cobertura no perfilhamento. Adubo demais faz o centeio, que é alto, tombar.",
-      "en": "Needs less fertilizer than wheat or barley. Test the soil; at sowing, apply NPK or aged manure as the test says, plus a little nitrogen side-dressed at tillering. Too much fertilizer makes this tall cereal lodge."
+      "en": "Needs less fertilizer than wheat or barley. Test the soil; at sowing, apply NPK or aged manure as the test says, plus a little nitrogen side-dressed at tillering. Too much fertilizer makes this tall cereal lodge.",
+      "es": "Necesita menos abono que el trigo o la cebada. Haz un análisis de suelo; a la siembra, aplica NPK o estiércol curado según el análisis, más un poco de nitrógeno en cobertera en el ahijado. Demasiado abono hace que este cereal alto se tumbe."
     },
     "pruning": null,
     "watering": {
       "pt": "Normalmente basta a chuva; é bem tolerante à seca.",
-      "en": "Rain is usually enough; it is quite drought tolerant."
+      "en": "Rain is usually enough; it is quite drought tolerant.",
+      "es": "La lluvia suele bastar; tolera bastante bien la sequía."
     },
     "other": {
       "pt": "Pleno sol. Não semeie cedo demais (calor atrapalha a germinação) nem tarde demais (rende menos). Fique atento ao esporão (grãos pretos e tóxicos na espiga): descarte esses grãos.",
-      "en": "Full sun. Don't sow too early (heat hurts germination) or too late (lower yield). Watch for ergot (black, toxic kernels in the head): discard them."
+      "en": "Full sun. Don't sow too early (heat hurts germination) or too late (lower yield). Watch for ergot (black, toxic kernels in the head): discard them.",
+      "es": "Pleno sol. No siembres demasiado pronto (el calor perjudica la germinación) ni demasiado tarde (menor rendimiento). Vigila el cornezuelo (granos negros y tóxicos en la espiga): deséchalos."
     }
   },
   "sources": [

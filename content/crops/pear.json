@@ -2,7 +2,8 @@
   "id": "pear",
   "summary": {
     "pt": "Árvore frutífera de clima frio, rústica e longeva. Demora a começar (4–6 anos em pé-franco), mas depois produz por muitos anos com pouca poda.",
-    "en": "A hardy, long-lived cold-climate fruit tree. It's slow to start (4–6 years), but then bears for many years with little pruning."
+    "en": "A hardy, long-lived cold-climate fruit tree. It's slow to start (4–6 years), but then bears for many years with little pruning.",
+    "es": "Un frutal resistente y longevo de clima frío. Tarda en empezar (4–6 años), pero después da fruto muchos años con poca poda."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Sem frio no inverno a pereira não floresce direito. Só em serras altas, com variedades de pouco frio (tipo d'água, Triunfo).", "en": "Without winter cold pears don't bloom well. Only in high mountains, with low-chill varieties (sand pear types, Triunfo)." }
+      "notes": { "pt": "Sem frio no inverno a pereira não floresce direito. Só em serras altas, com variedades de pouco frio (tipo d'água, Triunfo).", "en": "Without winter cold pears don't bloom well. Only in high mountains, with low-chill varieties (sand pear types, Triunfo).", "es": "Sin frío invernal los perales no florecen bien. Solo en montañas altas, con variedades de pocas horas de frío (tipos de pera arenosa, Triunfo)." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [6, 7, 8],
       "harvest": [12, 1, 2],
-      "notes": { "pt": "Use peras asiáticas ou híbridas de pouco frio (200–500 horas abaixo de 7 °C). As europeias (Williams, Packham's) pedem mais de 900 horas e não produzem aqui.", "en": "Use low-chill Asian or hybrid pears (200–500 hours below 7 °C). European pears (Williams/Bartlett, Packham's) need over 900 hours and won't bear here." }
+      "notes": { "pt": "Use peras asiáticas ou híbridas de pouco frio (200–500 horas abaixo de 7 °C). As europeias (Williams, Packham's) pedem mais de 900 horas e não produzem aqui.", "en": "Use low-chill Asian or hybrid pears (200–500 hours below 7 °C). European pears (Williams/Bartlett, Packham's) need over 900 hours and won't bear here.", "es": "Usa perales asiáticos o híbridos de pocas horas de frío (200–500 horas por debajo de 7 °C). Los perales europeos (Williams/Bartlett, Packham's) necesitan más de 900 horas y no darán fruto aquí." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [6, 7, 8],
       "harvest": [1, 2, 3],
-      "notes": { "pt": "Clima ideal, inclusive para peras europeias. Plante a muda dormente no inverno.", "en": "Ideal climate, including for European pears. Plant dormant trees in winter." }
+      "notes": { "pt": "Clima ideal, inclusive para peras europeias. Plante a muda dormente no inverno.", "en": "Ideal climate, including for European pears. Plant dormant trees in winter.", "es": "Clima ideal, también para los perales europeos. Planta los árboles en reposo en invierno." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Sem frio, não produz no manejo comum. A Embrapa Semiárido conseguiu safra com irrigação, poda e indutores de brotação, mas é pomar técnico.", "en": "Without cold it doesn't fruit under normal care. Embrapa Semiárido got crops with irrigation, pruning and bud-break sprays, but it's a technical orchard." }
+      "notes": { "pt": "Sem frio, não produz no manejo comum. A Embrapa Semiárido conseguiu safra com irrigação, poda e indutores de brotação, mas é pomar técnico.", "en": "Without cold it doesn't fruit under normal care. Embrapa Semiárido got crops with irrigation, pruning and bud-break sprays, but it's a technical orchard.", "es": "Sin frío no da fruto con cuidados normales. Embrapa Semiárido obtuvo cosechas con riego, poda y productos para romper la dormancia, pero es un huerto técnico." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [10, 11],
       "harvest": [2, 3, 4],
-      "notes": { "pt": "Aguenta inverno rigoroso. Plante na primavera, com o solo descongelado, e escolha variedades resistentes ao frio.", "en": "Survives harsh winters. Plant in spring once the soil thaws, and choose cold-hardy varieties." }
+      "notes": { "pt": "Aguenta inverno rigoroso. Plante na primavera, com o solo descongelado, e escolha variedades resistentes ao frio.", "en": "Survives harsh winters. Plant in spring once the soil thaws, and choose cold-hardy varieties.", "es": "Sobrevive a inviernos duros. Planta en primavera, cuando el suelo se deshiele, y elige variedades resistentes al frío." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Corrija o solo com calcário antes de plantar (pH 5,9–6,5). Depois, esterco curtido ou composto no fim do inverno. Pouco nitrogênio: crescimento demais facilita a queima-bacteriana.",
-      "en": "Lime the soil before planting (pH 5.9–6.5). Later, rotted manure or compost in late winter. Go easy on nitrogen: too much growth invites fire blight."
+      "en": "Lime the soil before planting (pH 5.9–6.5). Later, rotted manure or compost in late winter. Go easy on nitrogen: too much growth invites fire blight.",
+      "es": "Encala el suelo antes de plantar (pH 5,9–6,5). Después, estiércol curado o compost a finales del invierno. Ve con cuidado con el nitrógeno: demasiado crecimiento invita al fuego bacteriano."
     },
     "pruning": {
       "pt": "Na muda, corte a 60–75 cm do chão para formar a copa. Depois, poda leve no fim do inverno: tire ramos secos, cruzados e doentes. A pereira pede menos poda que outras frutíferas.",
-      "en": "Cut new trees back to 60–75 cm to shape the crown. Later, light pruning in late winter: remove dead, crossing and diseased branches. Pears need less pruning than other fruit trees."
+      "en": "Cut new trees back to 60–75 cm to shape the crown. Later, light pruning in late winter: remove dead, crossing and diseased branches. Pears need less pruning than other fruit trees.",
+      "es": "Corta los árboles nuevos a 60–75 cm para formar la copa. Después, poda ligera a finales del invierno: quita las ramas muertas, cruzadas y enfermas. El peral necesita menos poda que otros frutales."
     },
     "watering": {
       "pt": "Regue a muda nova toda semana no primeiro ano. Árvore adulta: regas fundas na seca, da florada à colheita. Tolera solo mais úmido que a macieira, mas não encharcado.",
-      "en": "Water young trees weekly in the first year. Mature trees: deep watering in dry spells, from bloom to harvest. Tolerates wetter soil than apple, but not waterlogging."
+      "en": "Water young trees weekly in the first year. Mature trees: deep watering in dry spells, from bloom to harvest. Tolerates wetter soil than apple, but not waterlogging.",
+      "es": "Riega los árboles jóvenes cada semana durante el primer año. Árboles adultos: riego profundo en periodos secos, desde la floración hasta la cosecha. Tolera suelo más húmedo que el manzano, pero no el encharcamiento."
     },
     "other": {
       "pt": "Sol pleno. Plante duas variedades que floresçam juntas para polinizar. Na queima-bacteriana (galhos que parecem queimados), corte bem abaixo da parte doente e limpe a ferramenta entre cortes.",
-      "en": "Full sun. Plant two varieties that bloom together for pollination. For fire blight (branches that look scorched), cut well below the sick part and clean tools between cuts."
+      "en": "Full sun. Plant two varieties that bloom together for pollination. For fire blight (branches that look scorched), cut well below the sick part and clean tools between cuts.",
+      "es": "Pleno sol. Planta dos variedades que florezcan a la vez para la polinización. Para el fuego bacteriano (ramas que parecen quemadas), corta bien por debajo de la parte enferma y limpia las herramientas entre cortes."
     }
   },
   "sources": [

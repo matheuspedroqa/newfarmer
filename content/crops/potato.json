@@ -2,7 +2,8 @@
   "id": "potato",
   "summary": {
     "pt": "Planta de clima fresco plantada a partir de batatas-semente, que forma os tubérculos embaixo da terra em 3–4 meses. Rende muito em pouco espaço.",
-    "en": "A cool-season plant grown from seed potatoes that forms tubers underground in 3–4 months. Yields a lot in little space."
+    "en": "A cool-season plant grown from seed potatoes that forms tubers underground in 3–4 months. Yields a lot in little space.",
+    "es": "Una planta de estación fresca que se cultiva a partir de patatas de siembra y forma tubérculos bajo tierra en 3–4 meses. Rinde mucho en poco espacio."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [7, 8, 9],
-      "notes": { "pt": "Plante na época mais fresca e seca (outono/inverno), com irrigação. Em regiões altas vai melhor; no calor forte quase não forma batatas.", "en": "Plant in the cooler, drier season (autumn/winter) with irrigation. Best in highlands; in strong heat it barely forms tubers." }
+      "notes": { "pt": "Plante na época mais fresca e seca (outono/inverno), com irrigação. Em regiões altas vai melhor; no calor forte quase não forma batatas.", "en": "Plant in the cooler, drier season (autumn/winter) with irrigation. Best in highlands; in strong heat it barely forms tubers.", "es": "Planta en la estación más fresca y seca (otoño/invierno) con riego. Mejor en tierras altas; con mucho calor casi no forma tubérculos." }
     },
     "subtropical": {
       "directSowing": [2, 3, 7, 8, 9],
       "seedbed": [],
       "transplant": [],
       "harvest": [5, 6, 11, 12, 1],
-      "notes": { "pt": "Duas épocas: safra das águas (plante jul–set, colha nov–jan) e safra da seca (plante fev–mar, colha mai–jun). Evite que a geada pegue a planta.", "en": "Two seasons: spring crop (plant Jul–Sep, harvest Nov–Jan) and autumn crop (plant Feb–Mar, harvest May–Jun). Keep frost off the plants." }
+      "notes": { "pt": "Duas épocas: safra das águas (plante jul–set, colha nov–jan) e safra da seca (plante fev–mar, colha mai–jun). Evite que a geada pegue a planta.", "en": "Two seasons: spring crop (plant Jul–Sep, harvest Nov–Jan) and autumn crop (plant Feb–Mar, harvest May–Jun). Keep frost off the plants.", "es": "Dos épocas: cosecha de primavera (planta jul–sep, cosecha nov–ene) y cosecha de otoño (planta feb–mar, cosecha may–jun). Protege las plantas de la helada." }
     },
     "temperate": {
       "directSowing": [8, 9, 10],
       "seedbed": [],
       "transplant": [],
       "harvest": [12, 1, 2, 3],
-      "notes": { "pt": "Plante no início da primavera, quando o solo estiver a ~13 °C e passarem as geadas fortes.", "en": "Plant in early spring once soil is about 13 °C and hard frosts are over." }
+      "notes": { "pt": "Plante no início da primavera, quando o solo estiver a ~13 °C e passarem as geadas fortes.", "en": "Plant in early spring once soil is about 13 °C and hard frosts are over.", "es": "Planta a principios de primavera, cuando el suelo esté a unos 13 °C y hayan pasado las heladas fuertes." }
     },
     "semiarid": {
       "directSowing": [4, 5, 6],
       "seedbed": [],
       "transplant": [],
       "harvest": [7, 8, 9],
-      "notes": { "pt": "Só com irrigação e na estação fresca.", "en": "Only with irrigation, in the cool season." }
+      "notes": { "pt": "Só com irrigação e na estação fresca.", "en": "Only with irrigation, in the cool season.", "es": "Solo con riego, en la estación fresca." }
     },
     "cold": {
       "directSowing": [10, 11],
       "seedbed": [],
       "transplant": [],
       "harvest": [1, 2, 3],
-      "notes": { "pt": "Plante na primavera, depois da última geada. Cresce bem em verão curto e fresco.", "en": "Plant in spring after the last frost. Does well in short, cool summers." }
+      "notes": { "pt": "Plante na primavera, depois da última geada. Cresce bem em verão curto e fresco.", "en": "Plant in spring after the last frost. Does well in short, cool summers.", "es": "Planta en primavera, después de la última helada. Se da bien en veranos cortos y frescos." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Gosta de solo solto e levemente ácido (pH 5,0–6,0): pouca calagem. No sulco, esterco bem curtido ou composto, todo o fósforo, ~30% do nitrogênio e metade do potássio (NPK conforme análise). Aos 25–35 dias, na amontoa, o resto do nitrogênio e do potássio.",
-      "en": "Likes loose, slightly acid soil (pH 5.0–6.0): little lime. In the furrow, well-rotted manure or compost, all the phosphorus, ~30% of the nitrogen and half the potassium (NPK by soil test). At 25–35 days, when hilling, the rest of the nitrogen and potassium."
+      "en": "Likes loose, slightly acid soil (pH 5.0–6.0): little lime. In the furrow, well-rotted manure or compost, all the phosphorus, ~30% of the nitrogen and half the potassium (NPK by soil test). At 25–35 days, when hilling, the rest of the nitrogen and potassium.",
+      "es": "Le gusta el suelo suelto y ligeramente ácido (pH 5,0–6,0): poca cal. En el surco, estiércol bien curado o compost, todo el fósforo, ~30 % del nitrógeno y la mitad del potasio (NPK según el análisis de suelo). A los 25–35 días, al aporcar, el resto del nitrógeno y el potasio."
     },
     "pruning": null,
     "watering": {
       "pt": "Mantenha o solo úmido por igual, principalmente quando começam a formar as batatas (na floração). Pare de regar quando as ramas secarem. Encharcar apodrece os tubérculos.",
-      "en": "Keep soil evenly moist, especially as tubers start forming (around flowering). Stop watering when the tops die down. Waterlogging rots tubers."
+      "en": "Keep soil evenly moist, especially as tubers start forming (around flowering). Stop watering when the tops die down. Waterlogging rots tubers.",
+      "es": "Mantén el suelo húmedo de forma uniforme, sobre todo cuando los tubérculos empiezan a formarse (hacia la floración). Deja de regar cuando la parte aérea se seque. El encharcamiento pudre los tubérculos."
     },
     "other": {
       "pt": "Use batata-semente sadia (não a do mercado). Faça a amontoa (puxar terra para o pé) quando as plantas tiverem ~15 cm, para a batata não ficar verde — batata verde é tóxica. Colha 2 semanas depois das ramas secarem. Atenção à requeima em tempo úmido.",
-      "en": "Use healthy certified seed potatoes (not supermarket ones). Hill soil around plants when ~15 cm tall so tubers don't turn green — green potatoes are toxic. Harvest 2 weeks after tops die. Watch for late blight in wet weather."
+      "en": "Use healthy certified seed potatoes (not supermarket ones). Hill soil around plants when ~15 cm tall so tubers don't turn green — green potatoes are toxic. Harvest 2 weeks after tops die. Watch for late blight in wet weather.",
+      "es": "Usa patatas de siembra certificadas y sanas (no las del supermercado). Aporca tierra alrededor de las plantas cuando midan ~15 cm para que los tubérculos no se pongan verdes: las patatas verdes son tóxicas. Cosecha 2 semanas después de que se seque la parte aérea. Vigila el mildiu con tiempo húmedo."
     }
   },
   "sources": [

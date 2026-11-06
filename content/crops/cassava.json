@@ -2,7 +2,8 @@
   "id": "cassava",
   "summary": {
     "pt": "Arbusto tropical plantado por pedaços do caule (manivas), que forma raízes ricas em amido. É rústica, aguenta seca e solo fraco, e pode ser colhida de 8 a 24 meses depois do plantio.",
-    "en": "A tropical shrub grown from stem cuttings that forms starchy roots. It's hardy, tolerates drought and poor soil, and can be harvested 8 to 24 months after planting."
+    "en": "A tropical shrub grown from stem cuttings that forms starchy roots. It's hardy, tolerates drought and poor soil, and can be harvested 8 to 24 months after planting.",
+    "es": "Arbusto tropical que se cultiva con estacas de tallo y forma raíces ricas en almidón. Es resistente, tolera la sequía y el suelo pobre, y se puede cosechar de 8 a 24 meses después de plantar."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [5, 6, 7, 8, 9],
-      "notes": { "pt": "Plante as manivas no início das chuvas. Com irrigação, pode plantar o ano todo. Colha de 8 a 24 meses depois, de preferência na época seca.", "en": "Plant cuttings at the start of the rains. With irrigation you can plant year-round. Harvest 8 to 24 months later, ideally in the dry season." }
+      "notes": { "pt": "Plante as manivas no início das chuvas. Com irrigação, pode plantar o ano todo. Colha de 8 a 24 meses depois, de preferência na época seca.", "en": "Plant cuttings at the start of the rains. With irrigation you can plant year-round. Harvest 8 to 24 months later, ideally in the dry season.", "es": "Planta las estacas al inicio de las lluvias. Con riego puedes plantar todo el año. Cosecha 8 a 24 meses después, idealmente en la época seca." }
     },
     "subtropical": {
       "directSowing": [8, 9, 10, 11],
       "seedbed": [],
       "transplant": [],
       "harvest": [5, 6, 7, 8],
-      "notes": { "pt": "Plante depois do frio, quando o solo esquentar. Colha no outono/inverno seguinte (ou deixe mais um ano). Geada queima a parte de cima.", "en": "Plant after the cold, once the soil warms. Harvest the following autumn/winter (or leave another year). Frost burns the tops." }
+      "notes": { "pt": "Plante depois do frio, quando o solo esquentar. Colha no outono/inverno seguinte (ou deixe mais um ano). Geada queima a parte de cima.", "en": "Plant after the cold, once the soil warms. Harvest the following autumn/winter (or leave another year). Frost burns the tops.", "es": "Planta después del frío, cuando el suelo se caliente. Cosecha en el otoño/invierno siguiente (o déjala otro año). La helada quema la parte aérea." }
     },
     "temperate": {
       "directSowing": [10, 11],
       "seedbed": [],
       "transplant": [],
       "harvest": [4, 5],
-      "notes": { "pt": "Ciclo curto entre as geadas: plante após a última geada e colha antes da primeira. As raízes ficam pequenas.", "en": "Short season between frosts: plant after the last frost and harvest before the first. Roots stay small." }
+      "notes": { "pt": "Ciclo curto entre as geadas: plante após a última geada e colha antes da primeira. As raízes ficam pequenas.", "en": "Short season between frosts: plant after the last frost and harvest before the first. Roots stay small.", "es": "Temporada corta entre heladas: planta después de la última helada y cosecha antes de la primera. Las raíces quedan pequeñas." }
     },
     "semiarid": {
       "directSowing": [12, 1, 2, 3],
       "seedbed": [],
       "transplant": [],
       "harvest": [7, 8, 9, 10, 11],
-      "notes": { "pt": "Plante logo no início das chuvas, que são curtas. Aguenta bem a seca depois de pegar; colha a partir de 10–12 meses.", "en": "Plant right at the start of the short rains. Handles drought well once established; harvest from 10–12 months." }
+      "notes": { "pt": "Plante logo no início das chuvas, que são curtas. Aguenta bem a seca depois de pegar; colha a partir de 10–12 meses.", "en": "Plant right at the start of the short rains. Handles drought well once established; harvest from 10–12 months.", "es": "Planta justo al inicio de las lluvias cortas. Aguanta bien la sequía una vez establecida; cosecha a partir de los 10–12 meses." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Verão curto e frio demais: a mandioca não forma raízes. Não recomendado.", "en": "Summer is too short and cool: cassava won't form roots. Not recommended." }
+      "notes": { "pt": "Verão curto e frio demais: a mandioca não forma raízes. Não recomendado.", "en": "Summer is too short and cool: cassava won't form roots. Not recommended.", "es": "El verano es demasiado corto y fresco: la yuca no formará raíces. No se recomienda." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo e calagem se o solo for muito ácido. Na cova ou sulco, um pouco de esterco curtido (~1 L) ou composto e fósforo. Se usar nitrogênio, ponha 1/3 no plantio e 2/3 em cobertura uns 60 dias depois. Não exagere no nitrogênio: dá muita rama e pouca raiz.",
-      "en": "Soil test and lime if very acid. In the hole or furrow, a little rotted manure (~1 L) or compost and phosphorus. If using nitrogen, put 1/3 at planting and 2/3 as side-dressing about 60 days later. Don't overdo nitrogen: lots of leaves, few roots."
+      "en": "Soil test and lime if very acid. In the hole or furrow, a little rotted manure (~1 L) or compost and phosphorus. If using nitrogen, put 1/3 at planting and 2/3 as side-dressing about 60 days later. Don't overdo nitrogen: lots of leaves, few roots.",
+      "es": "Análisis de suelo y encala si es muy ácido. En el hoyo o surco, un poco de estiércol curado (~1 L) o compost y fósforo. Si usas nitrógeno, pon 1/3 al plantar y 2/3 en cobertura unos 60 días después. No te pases con el nitrógeno: muchas hojas y pocas raíces."
     },
     "pruning": null,
     "watering": {
       "pt": "Precisa de umidade no solo nos primeiros 3–4 meses para pegar. Depois aguenta bem a seca. Não plante em terreno que encharca: a raiz apodrece.",
-      "en": "Needs soil moisture in the first 3–4 months to establish. After that it tolerates drought well. Don't plant where water pools: roots rot."
+      "en": "Needs soil moisture in the first 3–4 months to establish. After that it tolerates drought well. Don't plant where water pools: roots rot.",
+      "es": "Necesita humedad en el suelo los primeros 3–4 meses para establecerse. Después tolera bien la sequía. No plantes donde se acumule agua: las raíces se pudren."
     },
     "other": {
       "pt": "Use manivas de 15–20 cm, com 5–7 gemas, de plantas sadias de 10–14 meses; plante deitadas a 5–10 cm de fundura, ~1 × 0,6 m. Mantenha sem mato nos primeiros meses. Mandioca brava (amarga) é tóxica crua: para comer, use mandioca mansa (aipim/macaxeira).",
-      "en": "Use 15–20 cm cuttings with 5–7 buds from healthy 10–14-month-old plants; lay them 5–10 cm deep, about 1 × 0.6 m apart. Keep weed-free in the first months. Bitter cassava is toxic raw: for eating, grow sweet cassava."
+      "en": "Use 15–20 cm cuttings with 5–7 buds from healthy 10–14-month-old plants; lay them 5–10 cm deep, about 1 × 0.6 m apart. Keep weed-free in the first months. Bitter cassava is toxic raw: for eating, grow sweet cassava.",
+      "es": "Usa estacas de 15–20 cm con 5–7 yemas de plantas sanas de 10–14 meses; colócalas a 5–10 cm de profundidad, a unos 1 × 0,6 m. Mantén libre de malezas los primeros meses. La yuca amarga es tóxica cruda: para comer, cultiva yuca dulce."
     }
   },
   "sources": [

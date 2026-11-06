@@ -2,7 +2,8 @@
   "id": "lettuce",
   "summary": {
     "pt": "Hortaliça de folha de ciclo curto (cerca de 2 meses da semente à colheita). Ótima para começar: ocupa pouco espaço e dá retorno rápido.",
-    "en": "A short-cycle leafy vegetable (about 2 months from seed to harvest). Great for beginners: takes little space and pays back fast."
+    "en": "A short-cycle leafy vegetable (about 2 months from seed to harvest). Great for beginners: takes little space and pays back fast.",
+    "es": "Hortaliza de hoja de ciclo corto (unos 2 meses de la semilla a la cosecha). Ideal para principiantes: ocupa poco espacio y da resultados rápido."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [4, 5, 6, 7, 8],
       "transplant": [5, 6, 7, 8, 9],
       "harvest": [6, 7, 8, 9, 10],
-      "notes": { "pt": "Melhor na estação seca, com irrigação. Nas chuvas use cultivares de verão e cultivo protegido.", "en": "Best in the dry season, with irrigation. In the rainy season use heat-tolerant varieties and protected growing." }
+      "notes": { "pt": "Melhor na estação seca, com irrigação. Nas chuvas use cultivares de verão e cultivo protegido.", "en": "Best in the dry season, with irrigation. In the rainy season use heat-tolerant varieties and protected growing.", "es": "Mejor en la época seca, con riego. En la época de lluvias usa variedades tolerantes al calor y cultivo protegido." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [2, 3, 4, 5, 6, 7, 8],
       "transplant": [3, 4, 5, 6, 7, 8, 9],
       "harvest": [4, 5, 6, 7, 8, 9, 10],
-      "notes": { "pt": "Outono e inverno são a melhor época. Dá para plantar o ano todo com alfaces de verão e sombrite 50%.", "en": "Autumn and winter are best. Can be grown year-round with summer varieties and 50% shade cloth." }
+      "notes": { "pt": "Outono e inverno são a melhor época. Dá para plantar o ano todo com alfaces de verão e sombrite 50%.", "en": "Autumn and winter are best. Can be grown year-round with summer varieties and 50% shade cloth.", "es": "Otoño e invierno son lo mejor. Se puede cultivar todo el año con variedades de verano y malla de sombra del 50 %." }
     },
     "temperate": {
       "directSowing": [9, 10, 2, 3],
       "seedbed": [8, 9, 2],
       "transplant": [9, 10, 3],
       "harvest": [10, 11, 12, 4, 5],
-      "notes": { "pt": "Primavera e outono. No calor forte ela espiga e amarga; evite geada forte em campo aberto.", "en": "Spring and autumn. In strong heat it bolts and turns bitter; avoid hard frost in the open field." }
+      "notes": { "pt": "Primavera e outono. No calor forte ela espiga e amarga; evite geada forte em campo aberto.", "en": "Spring and autumn. In strong heat it bolts and turns bitter; avoid hard frost in the open field.", "es": "Primavera y otoño. Con calor fuerte se espiga y se vuelve amarga; evita la helada fuerte a cielo abierto." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [4, 5, 6, 7, 8],
       "transplant": [5, 6, 7, 8, 9],
       "harvest": [6, 7, 8, 9, 10],
-      "notes": { "pt": "Com irrigação. No verão a produção cai muito.", "en": "With irrigation. Yields drop sharply in summer." }
+      "notes": { "pt": "Com irrigação. No verão a produção cai muito.", "en": "With irrigation. Yields drop sharply in summer.", "es": "Con riego. El rendimiento baja mucho en verano." }
     },
     "cold": {
       "directSowing": [11, 12, 1],
       "seedbed": [10],
       "transplant": [11],
       "harvest": [12, 1, 2],
-      "notes": { "pt": "Só no verão curto, depois das geadas. Semeie a cada 2–3 semanas para colher sempre.", "en": "Only in the short summer, after frosts. Sow every 2–3 weeks for a steady harvest." }
+      "notes": { "pt": "Só no verão curto, depois das geadas. Semeie a cada 2–3 semanas para colher sempre.", "en": "Only in the short summer, after frosts. Sow every 2–3 weeks for a steady harvest.", "es": "Solo en el verano corto, después de las heladas. Siembra cada 2–3 semanas para una cosecha constante." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo. Calcário cerca de 20 dias antes do transplante. No canteiro, esterco curtido ou composto bem misturado na terra; se precisar, NPK conforme a análise e um pouco de nitrogênio em cobertura.",
-      "en": "Test the soil. Apply lime about 20 days before transplanting. Mix well-rotted manure or compost into the bed; if needed, add NPK as the test says and a little nitrogen side-dressing."
+      "en": "Test the soil. Apply lime about 20 days before transplanting. Mix well-rotted manure or compost into the bed; if needed, add NPK as the test says and a little nitrogen side-dressing.",
+      "es": "Haz un análisis de suelo. Aplica cal unos 20 días antes de trasplantar. Mezcla estiércol bien curado o compost en el bancal; si hace falta, añade NPK según el análisis y un poco de nitrógeno en cobertura."
     },
     "pruning": null,
     "watering": {
       "pt": "Regas leves e frequentes (gotejamento ou aspersão), mantendo a terra úmida sem encharcar. Regue de manhã para as folhas secarem.",
-      "en": "Light, frequent watering (drip or sprinkler), keeping soil moist but not soggy. Water in the morning so leaves dry."
+      "en": "Light, frequent watering (drip or sprinkler), keeping soil moist but not soggy. Water in the morning so leaves dry.",
+      "es": "Riego ligero y frecuente (goteo o aspersión), manteniendo el suelo húmedo pero no encharcado. Riega por la mañana para que las hojas se sequen."
     },
     "other": {
       "pt": "Espaçamento de 25–30 cm. Use telas contra pulgão e tripes (transmitem o vira-cabeça) e faça rotação de canteiros.",
-      "en": "Space plants 25–30 cm apart. Use netting against aphids and thrips (they spread tospovirus) and rotate beds."
+      "en": "Space plants 25–30 cm apart. Use netting against aphids and thrips (they spread tospovirus) and rotate beds.",
+      "es": "Separa las plantas 25–30 cm. Usa malla contra pulgones y trips (transmiten el tospovirus) y rota los bancales."
     }
   },
   "sources": [

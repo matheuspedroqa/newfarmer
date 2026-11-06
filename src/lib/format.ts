@@ -1,6 +1,4 @@
-import type { Locale } from "@/i18n/locales";
-
-const intlLocale = (locale: Locale) => (locale === "pt" ? "pt-BR" : "en-US");
+import { intlLocale, type Locale } from "@/i18n/locales";
 
 export function formatDay(date: string, locale: Locale, style: "short" | "long"): string {
   const options: Intl.DateTimeFormatOptions =

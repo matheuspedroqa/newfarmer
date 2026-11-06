@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 import { setLocaleAction } from "@/app/actions/preferences";
 import { LOCALES, type Locale } from "@/i18n/locales";
@@ -9,7 +9,6 @@ import { LOCALES, type Locale } from "@/i18n/locales";
 export function LocaleToggle({ current }: { current: Locale }) {
   const t = useTranslations("toggles");
   const router = useRouter();
-  const pathname = usePathname();
   const [pending, startTransition] = useTransition();
 
   return (
@@ -23,9 +22,9 @@ export function LocaleToggle({ current }: { current: Locale }) {
           onClick={() =>
             startTransition(async () => {
               await setLocaleAction(locale);
-              // Na landing e nas páginas legais o idioma vem da URL (/pt/...): troca de endereço (navegação completa: o <html lang> vem do layout raiz, que a navegação suave não refaz).
-              const m = /^(?:\/pt)?(\/try|\/contact|\/privacy|\/terms)?\/?$/.exec(pathname);
-              if (m) window.location.assign(`${locale === "pt" ? "/pt" : ""}${m[1] ?? (locale === "pt" ? "" : "/")}`);
+              // Páginas públicas têm endereço por idioma (<link rel="alternate" hreflang>): vai para ele com navegação completa, porque o <html lang> vem do layout raiz.
+              const alt = document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${locale}"]`);
+              if (alt) window.location.assign(new URL(alt.href).pathname);
               else router.refresh();
             })
           }

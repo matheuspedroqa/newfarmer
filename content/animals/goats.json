@@ -2,95 +2,112 @@
   "id": "goats",
   "summary": {
     "pt": "Cabras são curiosas, rústicas e preferem folhas e arbustos a capim; dão leite de alto valor e carne e se adaptam muito bem a regiões secas. Odeiam chuva e lama — precisam de abrigo seco com piso elevado — e fogem com facilidade, então cerca firme é obrigatória. Compre animais testados (CAE, linfadenite, brucelose) e registre a criação desde a primeira cabra.",
-    "en": "Goats are curious, hardy browsers that prefer leaves and shrubs to grass; they give valuable milk and meat and adapt very well to dry regions. They hate rain and mud — they need a dry shelter with a raised floor — and escape easily, so solid fencing is a must. Buy tested animals (CAE, CL, brucellosis) and register your herd from the very first goat."
+    "en": "Goats are curious, hardy browsers that prefer leaves and shrubs to grass; they give valuable milk and meat and adapt very well to dry regions. They hate rain and mud — they need a dry shelter with a raised floor — and escape easily, so solid fencing is a must. Buy tested animals (CAE, CL, brucellosis) and register your herd from the very first goat.",
+    "es": "Las cabras son curiosas, rústicas y ramoneadoras: prefieren hojas y arbustos a la hierba; dan leche y carne valiosas y se adaptan muy bien a las regiones secas. Odian la lluvia y el barro (necesitan un refugio seco con el suelo elevado) y se escapan con facilidad, así que una buena valla es imprescindible. Compra animales con pruebas (CAEV, linfadenitis, brucelosis) y registra tu rebaño desde la primera cabra."
   },
   "breeds": [
     {
       "name": "Saanen",
       "purpose": {
         "pt": "Leite",
-        "en": "Milk"
+        "en": "Milk",
+        "es": "Leche"
       },
       "notes": {
         "pt": "Suíça, branca, a mais produtiva em leite e a mais comum no Canadá, França e Itália; sofre com sol forte e prefere clima ameno.",
-        "en": "Swiss, white, the highest milk producer and the most common in Canada, France and Italy; suffers in strong sun and prefers mild climates."
+        "en": "Swiss, white, the highest milk producer and the most common in Canada, France and Italy; suffers in strong sun and prefers mild climates.",
+        "es": "Suiza, blanca, la mayor productora de leche y la más común en Canadá, Francia e Italia; sufre con el sol fuerte y prefiere climas suaves."
       }
     },
     {
       "name": "Parda Alpina (Alpine, Camosciata delle Alpi)",
       "purpose": {
         "pt": "Leite",
-        "en": "Milk"
+        "en": "Milk",
+        "es": "Leche"
       },
       "notes": {
         "pt": "Raça alpina leiteira, principal da França junto com a Saanen; boa produção e mais rústica que a Saanen, para clima temperado.",
-        "en": "Alpine dairy breed, France's main breed along with Saanen; good yield and hardier than Saanen, for temperate climates."
+        "en": "Alpine dairy breed, France's main breed along with Saanen; good yield and hardier than Saanen, for temperate climates.",
+        "es": "Raza lechera alpina, la principal de Francia junto con la Saanen; buena producción y más rústica que la Saanen, para climas templados."
       }
     },
     {
       "name": "Anglo-Nubiana (Nubian)",
       "purpose": {
         "pt": "Leite e carne",
-        "en": "Milk and meat"
+        "en": "Milk and meat",
+        "es": "Leche y carne"
       },
       "notes": {
         "pt": "Orelhas longas e caídas, tolera bem o calor e dá leite mais gorduroso; comum no Brasil, EUA e Canadá.",
-        "en": "Long drooping ears, tolerates heat well and gives richer milk; common in Brazil, the US and Canada."
+        "en": "Long drooping ears, tolerates heat well and gives richer milk; common in Brazil, the US and Canada.",
+        "es": "Orejas largas y caídas, aguanta bien el calor y da una leche más rica; común en Brasil, EE. UU. y Canadá."
       }
     },
     {
       "name": "Boer",
       "purpose": {
         "pt": "Carne",
-        "en": "Meat"
+        "en": "Meat",
+        "es": "Carne"
       },
       "notes": {
         "pt": "Sul-africana de corte, cresce rápido; domina a carne no Canadá e é usada em cruzamento com cabras nativas no Brasil e no México.",
-        "en": "South African meat breed, fast-growing; dominates meat production in Canada and is crossed with native goats in Brazil and Mexico."
+        "en": "South African meat breed, fast-growing; dominates meat production in Canada and is crossed with native goats in Brazil and Mexico.",
+        "es": "Raza de carne sudafricana, de crecimiento rápido; domina la producción de carne en Canadá y se cruza con cabras locales en Brasil y México."
       }
     },
     {
       "name": "Moxotó",
       "purpose": {
         "pt": "Carne e pele",
-        "en": "Meat and hide"
+        "en": "Meat and hide",
+        "es": "Carne y piel"
       },
       "notes": {
         "pt": "Nativa do Nordeste do Brasil, de origem ibérica, extremamente rústica e adaptada ao semiárido da caatinga.",
-        "en": "Native to north-east Brazil, of Iberian origin, extremely hardy and adapted to the semi-arid caatinga."
+        "en": "Native to north-east Brazil, of Iberian origin, extremely hardy and adapted to the semi-arid caatinga.",
+        "es": "Autóctona del noreste de Brasil, de origen ibérico, extremadamente rústica y adaptada a la caatinga semiárida."
       }
     },
     {
       "name": "Murciano-Granadina",
       "purpose": {
         "pt": "Leite",
-        "en": "Milk"
+        "en": "Milk",
+        "es": "Leche"
       },
       "notes": {
         "pt": "A leiteira espanhola mais conhecida (Múrcia e Granada), feita para o clima mediterrâneo quente e seco.",
-        "en": "Spain's best-known dairy goat (Murcia and Granada), made for the hot, dry Mediterranean climate."
+        "en": "Spain's best-known dairy goat (Murcia and Granada), made for the hot, dry Mediterranean climate.",
+        "es": "La cabra lechera más conocida de España (Murcia y Granada), hecha para el clima mediterráneo cálido y seco."
       }
     },
     {
       "name": "Thüringer Wald Ziege",
       "purpose": {
         "pt": "Leite e carne",
-        "en": "Milk and meat"
+        "en": "Milk and meat",
+        "es": "Leche y carne"
       },
       "notes": {
         "pt": "Raça alemã marrom com máscara branca, muito rústica para clima frio e áspero; boa para manejo de paisagem. É ameaçada.",
-        "en": "German chocolate-brown breed with a white face mask, very hardy in harsh, cold climates; good for landscape grazing. It is endangered."
+        "en": "German chocolate-brown breed with a white face mask, very hardy in harsh, cold climates; good for landscape grazing. It is endangered.",
+        "es": "Raza alemana de color marrón chocolate con máscara blanca en la cara, muy rústica en climas duros y fríos; buena para el pastoreo del paisaje. Está en peligro."
       }
     },
     {
       "name": "Nigerian Dwarf",
       "purpose": {
         "pt": "Leite (miniatura)",
-        "en": "Milk (miniature)"
+        "en": "Milk (miniature)",
+        "es": "Leche (miniatura)"
       },
       "notes": {
         "pt": "A menor raça leiteira, criada nos EUA e Canadá; ideal para quintais e terrenos pequenos, onde a prefeitura permitir.",
-        "en": "The smallest dairy breed, kept in the US and Canada; ideal for backyards and small plots where local rules allow."
+        "en": "The smallest dairy breed, kept in the US and Canada; ideal for backyards and small plots where local rules allow.",
+        "es": "La raza lechera más pequeña, criada en EE. UU. y Canadá; ideal para patios y parcelas pequeñas donde lo permitan las normas locales."
       }
     }
   ],
@@ -99,256 +116,312 @@
     "maxC": 28,
     "notes": {
       "pt": "Cabras toleram bem o calor seco, mas sofrem com frio úmido e chuva — mais do que as ovelhas. Raças leiteiras europeias produzem melhor em clima ameno; no calor, queda no leite é sinal de estresse térmico. No frio, abrigo isolado e sem correntes de ar, cama seca, mais energia na dieta e água sem gelo (não conte com neve como água). Cabritos são os mais frágeis: precisam de abrigo quente e seco, principalmente em partos no inverno.",
-      "en": "Goats handle dry heat well but suffer in cold, damp weather and rain — more than sheep. European dairy breeds produce best in mild climates; in the heat, a drop in milk signals heat stress. In the cold, provide an insulated, draught-free shelter, dry bedding, more energy in the diet and ice-free water (do not rely on snow as water). Kids are the most fragile: they need a warm, dry shelter, especially for winter kidding."
+      "en": "Goats handle dry heat well but suffer in cold, damp weather and rain — more than sheep. European dairy breeds produce best in mild climates; in the heat, a drop in milk signals heat stress. In the cold, provide an insulated, draught-free shelter, dry bedding, more energy in the diet and ice-free water (do not rely on snow as water). Kids are the most fragile: they need a warm, dry shelter, especially for winter kidding.",
+      "es": "Las cabras aguantan bien el calor seco, pero sufren con el frío húmedo y la lluvia, más que las ovejas. Las razas lecheras europeas producen mejor en climas suaves; con calor, la bajada de la leche indica estrés por calor. En el frío, da un refugio aislado y sin corrientes, cama seca, más energía en la dieta y agua sin hielo (no cuentes con la nieve como agua). Los cabritos son los más frágiles: necesitan un refugio caliente y seco, sobre todo en los partos de invierno."
     }
   },
   "seasonalCare": {
     "tropical": {
       "summer": {
         "pt": "Chuvas: abrigo seco com piso ripado elevado e FAMACHA frequente contra o Haemonchus. Cure umbigos e feridas para evitar bicheira (gusano barrenador).",
-        "en": "Rainy season: dry shelter with a raised slatted floor and frequent FAMACHA checks against barber pole worm. Treat navels and wounds to prevent screwworm."
+        "en": "Rainy season: dry shelter with a raised slatted floor and frequent FAMACHA checks against barber pole worm. Treat navels and wounds to prevent screwworm.",
+        "es": "Estación de lluvias: refugio seco con suelo elevado de listones y revisiones FAMACHA frecuentes contra el gusano Haemonchus. Cura ombligos y heridas para prevenir el gusano barrenador."
       },
       "autumn": {
         "pt": "Apare os cascos e revise as vacinas com o veterinário.",
-        "en": "Trim hooves and review vaccines with your vet."
+        "en": "Trim hooves and review vaccines with your vet.",
+        "es": "Recorta las pezuñas y revisa las vacunas con tu veterinario."
       },
       "winter": {
         "pt": "Seca: complemente com feno, rama de mandioca, leucena e sal mineral para caprinos.",
-        "en": "Dry season: supplement with hay, cassava foliage, leucaena and goat mineral salt."
+        "en": "Dry season: supplement with hay, cassava foliage, leucaena and goat mineral salt.",
+        "es": "Estación seca: complementa con heno, rama de yuca, leucaena y sal mineral para cabras."
       },
       "spring": {
         "pt": "Partos: cure o umbigo dos cabritos e garanta o colostro (termizado, se houver CAE no rebanho).",
-        "en": "Kidding: dip kids' navels and make sure they get colostrum (heat-treated if CAE is in the herd)."
+        "en": "Kidding: dip kids' navels and make sure they get colostrum (heat-treated if CAE is in the herd).",
+        "es": "Partos: moja el ombligo de los cabritos y asegúrate de que tomen calostro (tratado con calor si hay CAEV en el rebaño)."
       }
     },
     "subtropical": {
       "summer": {
         "pt": "Calor: água fresca à vontade, sombra e ventilação; evite manejar nas horas quentes. No clima mediterrâneo, use mato, folhagem e feno; no Sul do Brasil e dos EUA, cuidado com vermes.",
-        "en": "Heat: unlimited fresh water, shade and ventilation; avoid handling in the hottest hours. In Mediterranean areas use scrub, browse and hay; in southern Brazil and the US South, watch for worms."
+        "en": "Heat: unlimited fresh water, shade and ventilation; avoid handling in the hottest hours. In Mediterranean areas use scrub, browse and hay; in southern Brazil and the US South, watch for worms.",
+        "es": "Calor: agua fresca sin límite, sombra y ventilación; evita manejarlas en las horas de más calor. En zonas mediterráneas usa monte, ramón y heno; en el sur de Brasil y el sur de EE. UU., vigila los gusanos."
       },
       "autumn": {
         "pt": "As chuvas renovam o pasto; época de cobertura e, em Portugal e Espanha, de muitos partos (cabrito de Natal).",
-        "en": "Rains renew pasture; breeding season and, in Portugal and Spain, the time of many kiddings (Christmas kid meat)."
+        "en": "Rains renew pasture; breeding season and, in Portugal and Spain, the time of many kiddings (Christmas kid meat).",
+        "es": "Las lluvias renuevan el pasto; época de cubrición y, en Portugal y España, de muchos partos (cabrito de Navidad)."
       },
       "winter": {
         "pt": "Abrigo fechado contra vento e chuva fria; cabritos são os mais sensíveis.",
-        "en": "Shelter closed against wind and cold rain; kids are the most sensitive."
+        "en": "Shelter closed against wind and cold rain; kids are the most sensitive.",
+        "es": "Refugio cerrado contra el viento y la lluvia fría; los cabritos son los más sensibles."
       },
       "spring": {
         "pt": "Pico de leite e de queijo; reforce a alimentação das cabras em lactação.",
-        "en": "Peak milk and cheese making; increase feed for milking does."
+        "en": "Peak milk and cheese making; increase feed for milking does.",
+        "es": "Pico de leche y elaboración de queso; aumenta el alimento de las cabras en ordeño."
       }
     },
     "temperate": {
       "summer": {
         "pt": "Ramoneio de arbustos e capim (nos Alpes, pasto de montanha); sombra, controle de moscas e vermes. Cerca elétrica contra lobos funcionando.",
-        "en": "Browse shrubs and grass (in the Alps, mountain pasture); shade, fly and worm control. Keep the anti-wolf electric fence working."
+        "en": "Browse shrubs and grass (in the Alps, mountain pasture); shade, fly and worm control. Keep the anti-wolf electric fence working.",
+        "es": "Ramoneo de arbustos y hierba (en los Alpes, pasto de montaña); sombra, control de moscas y de gusanos. Mantén funcionando la valla eléctrica contra el lobo."
       },
       "autumn": {
         "pt": "Cabras são sazonais: cio e cobertura de setembro a novembro. Época de maruins (língua azul): siga a campanha oficial de vacinação. Prepare feno de boa qualidade.",
-        "en": "Goats are seasonal: heat and breeding from September to November. Midge season (bluetongue): follow the official vaccination campaign. Prepare good-quality hay."
+        "en": "Goats are seasonal: heat and breeding from September to November. Midge season (bluetongue): follow the official vaccination campaign. Prepare good-quality hay.",
+        "es": "Las cabras son estacionales: celo y cubrición de septiembre a noviembre. Época de mosquitos (lengua azul): sigue la campaña oficial de vacunación. Prepara heno de buena calidad."
       },
       "winter": {
         "pt": "Abrigo seco, ventilado e sem correntes de ar, com cama seca; água sem congelar.",
-        "en": "Dry, ventilated, draught-free shelter with dry bedding; unfrozen water."
+        "en": "Dry, ventilated, draught-free shelter with dry bedding; unfrozen water.",
+        "es": "Refugio seco, ventilado y sin corrientes, con cama seca; agua sin congelar."
       },
       "spring": {
         "pt": "Partos (fevereiro a abril) dentro do abrigo, com higiene por causa da febre Q; volte ao pasto quando secar.",
-        "en": "Kid indoors (February to April), with good hygiene because of Q fever; return to pasture once it dries out."
+        "en": "Kid indoors (February to April), with good hygiene because of Q fever; return to pasture once it dries out.",
+        "es": "Partos bajo techo (de febrero a abril), con buena higiene por la fiebre Q; vuelve al pasto cuando se seque."
       }
     },
     "semiarid": {
       "summer": {
         "pt": "Calor seco: sombra e água; cabras nativas e criollas aproveitam bem a caatinga e o mato nativo. Recolha ao curral à noite.",
-        "en": "Dry heat: shade and water; native and criollo goats make good use of caatinga and native scrub. Pen them at night."
+        "en": "Dry heat: shade and water; native and criollo goats make good use of caatinga and native scrub. Pen them at night.",
+        "es": "Calor seco: sombra y agua; las cabras autóctonas y criollas aprovechan bien la caatinga y el monte nativo. Enciérralas de noche."
       },
       "autumn": {
         "pt": "Chuvas curtas: cuidado com lama no aprisco e pico de vermes — FAMACHA.",
-        "en": "Short rains: watch for mud in the pen and a worm peak — use FAMACHA."
+        "en": "Short rains: watch for mud in the pen and a worm peak — use FAMACHA.",
+        "es": "Lluvias cortas: vigila el barro en el corral y el pico de gusanos; usa FAMACHA."
       },
       "winter": {
         "pt": "Guarde feno, palma forrageira, silagem e folhas de leguminosas para a seca.",
-        "en": "Store hay, forage cactus, silage and legume leaves for the dry season."
+        "en": "Store hay, forage cactus, silage and legume leaves for the dry season.",
+        "es": "Guarda heno, nopal forrajero, ensilado y hojas de leguminosas para la estación seca."
       },
       "spring": {
         "pt": "Seca: priorize água e comida para cabras prenhes e em lactação e não sobrecarregue o pasto nativo.",
-        "en": "Drought: prioritise water and feed for pregnant and milking does and do not overgraze native rangeland."
+        "en": "Drought: prioritise water and feed for pregnant and milking does and do not overgraze native rangeland.",
+        "es": "Sequía: prioriza el agua y el alimento de las cabras preñadas y en ordeño y no sobrepastorees el monte nativo."
       }
     },
     "cold": {
       "summer": {
         "pt": "Pastoreio e ramoneio à vontade e produção de feno; atenção ao calor dentro dos galpões.",
-        "en": "Free grazing and browsing and hay making; watch for heat inside barns."
+        "en": "Free grazing and browsing and hay making; watch for heat inside barns.",
+        "es": "Pastoreo y ramoneo libres y henificación; vigila el calor dentro de los establos."
       },
       "autumn": {
         "pt": "Cobertura e vermifugação seletiva com exame de fezes; estoque feno.",
-        "en": "Breeding and selective deworming based on faecal tests; stock hay."
+        "en": "Breeding and selective deworming based on faecal tests; stock hay.",
+        "es": "Cubrición y desparasitación selectiva según análisis de heces; guarda heno."
       },
       "winter": {
         "pt": "Abrigo isolado e ventilado, cama seca, água sem gelo e mais energia na dieta. Evite risco de incêndio no galpão e tenha rota de fuga.",
-        "en": "Insulated, ventilated shelter, dry bedding, ice-free water and more energy in the diet. Avoid barn fire risks and keep an escape route."
+        "en": "Insulated, ventilated shelter, dry bedding, ice-free water and more energy in the diet. Avoid barn fire risks and keep an escape route.",
+        "es": "Refugio aislado y ventilado, cama seca, agua sin hielo y más energía en la dieta. Evita riesgos de incendio en el establo y deja una salida de escape."
       },
       "spring": {
         "pt": "Partos protegidos do frio, com cabritos secos e alimentados com colostro logo cedo.",
-        "en": "Kidding protected from the cold, with kids dried and fed colostrum early."
+        "en": "Kidding protected from the cold, with kids dried and fed colostrum early.",
+        "es": "Partos protegidos del frío, con los cabritos secados y alimentados con calostro pronto."
       }
     }
   },
   "feeding": [
     {
       "pt": "Cabras são ramoneadoras: preferem folhas e arbustos. Misture pasto, feno e ramas, e faça rodízio para não esgotar a vegetação.",
-      "en": "Goats are browsers: they prefer leaves and shrubs. Mix pasture, hay and browse, and rotate so the vegetation is not exhausted."
+      "en": "Goats are browsers: they prefer leaves and shrubs. Mix pasture, hay and browse, and rotate so the vegetation is not exhausted.",
+      "es": "Las cabras son ramoneadoras: prefieren hojas y arbustos. Combina pasto, heno y ramón, y rota para no agotar la vegetación."
     },
     {
       "pt": "Sal mineral próprio para caprinos sempre à disposição. Cabras precisam de mais cobre que ovelhas: nunca dê esse mineral a ovinos.",
-      "en": "Goat-specific mineral salt always available. Goats need more copper than sheep: never give this mineral to sheep."
+      "en": "Goat-specific mineral salt always available. Goats need more copper than sheep: never give this mineral to sheep.",
+      "es": "Sal mineral específica para cabras siempre disponible. Las cabras necesitan más cobre que las ovejas: nunca des este mineral a las ovejas."
     },
     {
       "pt": "Cabras em lactação e no fim da gestação precisam de concentrado conforme a produção de leite.",
-      "en": "Milking and late-pregnant does need concentrate according to milk yield."
+      "en": "Milking and late-pregnant does need concentrate according to milk yield.",
+      "es": "Las cabras en ordeño y al final de la gestación necesitan concentrado según la producción de leche."
     },
     {
       "pt": "Mude a alimentação aos poucos para evitar enterotoxemia.",
-      "en": "Change feed gradually to prevent enterotoxaemia."
+      "en": "Change feed gradually to prevent enterotoxaemia.",
+      "es": "Cambia el alimento poco a poco para prevenir la enterotoxemia."
     },
     {
       "pt": "Água limpa e fresca sempre — elas recusam água suja, e no calor bebem muito mais.",
-      "en": "Clean, fresh water at all times — they refuse dirty water and drink far more in the heat."
+      "en": "Clean, fresh water at all times — they refuse dirty water and drink far more in the heat.",
+      "es": "Agua limpia y fresca siempre: rechazan el agua sucia y beben mucho más con calor."
     }
   ],
   "healthCare": [
     {
       "pt": "Controle de vermes pelo método FAMACHA, tratando só quem precisa, e exame de fezes (OPG) para ver se o vermífugo ainda funciona.",
-      "en": "Worm control using FAMACHA, treating only animals that need it, plus faecal egg counts to check the dewormer still works."
+      "en": "Worm control using FAMACHA, treating only animals that need it, plus faecal egg counts to check the dewormer still works.",
+      "es": "Control de gusanos con FAMACHA, tratando solo a los animales que lo necesitan, más recuentos de huevos en heces para comprobar que el desparasitante sigue funcionando."
     },
     {
       "pt": "Compre só cabras testadas para CAE, linfadenite caseosa e brucelose, de preferência de rebanhos certificados, e teste o rebanho periodicamente.",
-      "en": "Buy only goats tested for CAE, caseous lymphadenitis and brucellosis, ideally from certified herds, and retest your herd periodically."
+      "en": "Buy only goats tested for CAE, caseous lymphadenitis and brucellosis, ideally from certified herds, and retest your herd periodically.",
+      "es": "Compra solo cabras con pruebas de CAEV, linfadenitis caseosa y brucelosis, idealmente de rebaños certificados, y repite las pruebas de tu rebaño periódicamente."
     },
     {
       "pt": "Registre a criação e identifique cada cabra com brinco oficial (na Europa, com identificação eletrônica); tire guia para transportar animais.",
-      "en": "Register your holding and tag each goat officially (electronic ID in Europe); get a permit to move animals."
+      "en": "Register your holding and tag each goat officially (electronic ID in Europe); get a permit to move animals.",
+      "es": "Registra tu explotación e identifica oficialmente cada cabra (identificación electrónica en Europa); pide permiso para mover animales."
     },
     {
       "pt": "Cerca firme: arame de alta tensão ou 4–5 fios elétricos (mínimo 90 cm onde há lobo); evite telas onde os chifres se enroscam. Recolha à noite e use cães de guarda contra coiotes e lobos.",
-      "en": "Solid fencing: high-tensile wire or 4–5 electric strands (at least 90 cm in wolf areas); avoid netting that traps horns. Pen at night and use guardian dogs against coyotes and wolves."
+      "en": "Solid fencing: high-tensile wire or 4–5 electric strands (at least 90 cm in wolf areas); avoid netting that traps horns. Pen at night and use guardian dogs against coyotes and wolves.",
+      "es": "Valla firme: alambre de alta tensión o 4–5 hilos eléctricos (al menos 90 cm en zonas de lobo); evita mallas en las que se enganchen los cuernos. Enciérralas de noche y usa perros de guarda contra coyotes y lobos."
     },
     {
       "pt": "Aprisco com piso elevado e ripado, sempre seco; cascos aparados e nunca uma cabra sozinha.",
-      "en": "Pen with a raised, slatted floor, always dry; trimmed hooves and never a goat on its own."
+      "en": "Pen with a raised, slatted floor, always dry; trimmed hooves and never a goat on its own.",
+      "es": "Corral con suelo elevado de listones, siempre seco; pezuñas recortadas y nunca una cabra sola."
     },
     {
       "pt": "Higiene na ordenha e no parto (mastite e febre Q); ferva ou pasteurize o leite. Remédios só com receita veterinária, respeitando a carência do leite.",
-      "en": "Hygiene at milking and kidding (mastitis and Q fever); boil or pasteurise the milk. Medicines only with a vet prescription, respecting milk withdrawal times."
+      "en": "Hygiene at milking and kidding (mastitis and Q fever); boil or pasteurise the milk. Medicines only with a vet prescription, respecting milk withdrawal times.",
+      "es": "Higiene en el ordeño y en los partos (mastitis y fiebre Q); hierve o pasteuriza la leche. Medicamentos solo con receta veterinaria, respetando el plazo de espera de la leche."
     }
   ],
   "diseases": [
     {
       "name": {
         "pt": "Verminose (Haemonchus)",
-        "en": "Worm infection (barber pole worm)"
+        "en": "Worm infection (barber pole worm)",
+        "es": "Verminosis (gusano Haemonchus)"
       },
       "signs": {
         "pt": "Mucosa do olho pálida, pelo arrepiado, emagrecimento, diarreia e papeira (inchaço embaixo do queixo).",
-        "en": "Pale eyelid mucosa, rough coat, weight loss, diarrhoea and bottle jaw (swelling under the jaw)."
+        "en": "Pale eyelid mucosa, rough coat, weight loss, diarrhoea and bottle jaw (swelling under the jaw).",
+        "es": "Mucosa del párpado pálida, pelo áspero, adelgazamiento, diarrea y papada (hinchazón bajo la mandíbula)."
       },
       "homeCare": {
         "pt": "Tire do pasto contaminado, faça rodízio de piquetes, não deixe pastar com orvalho e dê boa comida e água.",
-        "en": "Move off contaminated pasture, rotate paddocks, avoid grazing on dewy grass and give good feed and water."
+        "en": "Move off contaminated pasture, rotate paddocks, avoid grazing on dewy grass and give good feed and water.",
+        "es": "Sácalas del pasto contaminado, rota los cercados, evita el pastoreo con rocío y da buena comida y agua."
       },
       "vetCare": {
         "pt": "Vermífugo (anti-helmíntico) indicado pelo veterinário, de preferência após exame de fezes (OPG), porque há resistência a vários produtos.",
-        "en": "Dewormer (anthelmintic) prescribed by a vet, ideally after a faecal egg count, because resistance to several products is common."
+        "en": "Dewormer (anthelmintic) prescribed by a vet, ideally after a faecal egg count, because resistance to several products is common.",
+        "es": "Desparasitante (antihelmíntico) recetado por el veterinario, idealmente tras un recuento de huevos en heces, porque la resistencia a varios productos es común."
       }
     },
     {
       "name": {
         "pt": "CAE (artrite-encefalite caprina)",
-        "en": "CAE (caprine arthritis encephalitis)"
+        "en": "CAE (caprine arthritis encephalitis)",
+        "es": "CAEV (artritis encefalitis caprina)"
       },
       "signs": {
         "pt": "Juntas inchadas (joelhos), manqueira, úbere duro com pouco leite e emagrecimento; em cabritos, paralisia. Muitas cabras não mostram sinais.",
-        "en": "Swollen joints (knees), lameness, hard udder with little milk and weight loss; paralysis in kids. Many goats show no signs."
+        "en": "Swollen joints (knees), lameness, hard udder with little milk and weight loss; paralysis in kids. Many goats show no signs.",
+        "es": "Articulaciones hinchadas (rodillas), cojera, ubre dura con poca leche y adelgazamiento; parálisis en cabritos. Muchas cabras no muestran señales."
       },
       "homeCare": {
         "pt": "Separe os cabritos da mãe ao nascer e dê colostro e leite termizados (56 °C por 1 hora) ou de vaca; isole as positivas.",
-        "en": "Separate kids from the dam at birth and feed heat-treated colostrum and milk (56 °C for 1 hour) or cow's milk; isolate positive goats."
+        "en": "Separate kids from the dam at birth and feed heat-treated colostrum and milk (56 °C for 1 hour) or cow's milk; isolate positive goats.",
+        "es": "Separa a los cabritos de la madre al nacer y dales calostro y leche tratados con calor (56 °C durante 1 hora) o leche de vaca; aísla a las cabras positivas."
       },
       "vetCare": {
         "pt": "Não tem cura nem vacina. O veterinário faz o teste de sangue (IDGA) do rebanho, em geral a cada 6 meses, e orienta o descarte de positivas.",
-        "en": "There is no cure or vaccine. The vet runs herd blood tests (AGID), usually every 6 months, and advises on culling positives."
+        "en": "There is no cure or vaccine. The vet runs herd blood tests (AGID), usually every 6 months, and advises on culling positives.",
+        "es": "No hay cura ni vacuna. El veterinario hace análisis de sangre del rebaño (AGID), normalmente cada 6 meses, y orienta sobre el descarte de las positivas."
       }
     },
     {
       "name": {
         "pt": "Linfadenite caseosa (mal do caroço)",
-        "en": "Caseous lymphadenitis (CL)"
+        "en": "Caseous lymphadenitis (CL)",
+        "es": "Linfadenitis caseosa"
       },
       "signs": {
         "pt": "Caroços com pus grosso nos gânglios do pescoço, paleta e virilha.",
-        "en": "Lumps with thick pus in lymph nodes of the neck, shoulder and groin."
+        "en": "Lumps with thick pus in lymph nodes of the neck, shoulder and groin.",
+        "es": "Bultos con pus espeso en los ganglios del cuello, el hombro y la ingle."
       },
       "homeCare": {
         "pt": "Isole o animal e nunca estoure o caroço no aprisco — o pus contamina o ambiente.",
-        "en": "Isolate the animal and never burst the lump in the pen — the pus contaminates the area."
+        "en": "Isolate the animal and never burst the lump in the pen — the pus contaminates the area.",
+        "es": "Aísla al animal y nunca revientes el bulto en el corral: el pus contamina la zona."
       },
       "vetCare": {
         "pt": "Drenagem, limpeza e cauterização pelo veterinário em local separado; vacinação preventiva onde houver. Há programas oficiais de certificação (ex.: Alemanha).",
-        "en": "Drainage, cleaning and cauterisation by a vet in a separate area; preventive vaccination where available. Official certification programmes exist (e.g. Germany)."
+        "en": "Drainage, cleaning and cauterisation by a vet in a separate area; preventive vaccination where available. Official certification programmes exist (e.g. Germany).",
+        "es": "Drenaje, limpieza y cauterización por el veterinario en una zona aparte; vacuna preventiva donde la haya. Existen programas oficiales de certificación (p. ej. Alemania)."
       }
     },
     {
       "name": {
         "pt": "Brucelose (febre de Malta)",
-        "en": "Brucellosis (Malta fever)"
+        "en": "Brucellosis (Malta fever)",
+        "es": "Brucelosis (fiebre de Malta)"
       },
       "signs": {
         "pt": "Abortos no fim da gestação, cabritos fracos, queda de fertilidade e testículos inchados nos bodes; muitas vezes sem sinais. Passa para pessoas pelo leite e queijo crus.",
-        "en": "Late-pregnancy abortions, weak kids, lower fertility and swollen testicles in bucks; often no signs. It spreads to people through raw milk and cheese."
+        "en": "Late-pregnancy abortions, weak kids, lower fertility and swollen testicles in bucks; often no signs. It spreads to people through raw milk and cheese.",
+        "es": "Abortos al final de la gestación, cabritos débiles, menor fertilidad y testículos hinchados en los machos; a menudo sin señales. Se transmite a las personas con la leche y el queso crudos."
       },
       "homeCare": {
         "pt": "Isole a cabra que abortou, use luvas e enterre ou queime os restos do parto; ferva ou pasteurize todo o leite.",
-        "en": "Isolate the doe that aborted, wear gloves and bury or burn the birth remains; boil or pasteurise all milk."
+        "en": "Isolate the doe that aborted, wear gloves and bury or burn the birth remains; boil or pasteurise all milk.",
+        "es": "Aísla a la cabra que abortó, usa guantes y entierra o quema los restos del parto; hierve o pasteuriza toda la leche."
       },
       "vetCare": {
         "pt": "Não se trata em animais: o serviço veterinário oficial testa o rebanho em campanhas obrigatórias (México, Espanha, Portugal, Itália, França) e, onde permitido, vacina com a cepa Rev-1.",
-        "en": "It is not treated in animals: the official vet service tests the herd under compulsory campaigns (Mexico, Spain, Portugal, Italy, France) and, where allowed, vaccinates with the Rev-1 strain."
+        "en": "It is not treated in animals: the official vet service tests the herd under compulsory campaigns (Mexico, Spain, Portugal, Italy, France) and, where allowed, vaccinates with the Rev-1 strain.",
+        "es": "No se trata en los animales: el servicio veterinario oficial hace pruebas al rebaño en campañas obligatorias (México, España, Portugal, Italia, Francia) y, donde se permite, vacuna con la cepa Rev-1."
       }
     },
     {
       "name": {
         "pt": "Mastite",
-        "en": "Mastitis"
+        "en": "Mastitis",
+        "es": "Mastitis"
       },
       "signs": {
         "pt": "Úbere quente, duro ou assimétrico; leite com grumos.",
-        "en": "Hot, hard or lopsided udder; milk with clots."
+        "en": "Hot, hard or lopsided udder; milk with clots.",
+        "es": "Ubre caliente, dura o asimétrica; leche con grumos."
       },
       "homeCare": {
         "pt": "Ordenhe a metade afetada por último e descarte o leite; higiene rigorosa na ordenha.",
-        "en": "Milk the affected half last and discard the milk; strict milking hygiene."
+        "en": "Milk the affected half last and discard the milk; strict milking hygiene.",
+        "es": "Ordeña la mitad afectada al final y desecha la leche; higiene estricta en el ordeño."
       },
       "vetCare": {
         "pt": "Antibiótico intramamário ou injetável conforme o veterinário, com receita; respeite o prazo de descarte do leite.",
-        "en": "Intramammary or injectable antibiotic as prescribed by a vet; respect the milk withdrawal period."
+        "en": "Intramammary or injectable antibiotic as prescribed by a vet; respect the milk withdrawal period.",
+        "es": "Antibiótico intramamario o inyectable según la receta del veterinario; respeta el plazo de espera de la leche."
       }
     },
     {
       "name": {
         "pt": "Ceratoconjuntivite",
-        "en": "Pinkeye (keratoconjunctivitis)"
+        "en": "Pinkeye (keratoconjunctivitis)",
+        "es": "Queratoconjuntivitis (ojo rosado)"
       },
       "signs": {
         "pt": "Olho lacrimejando, vermelho, depois branco/opaco; animal evita a luz.",
-        "en": "Watery, red eye that later turns white/cloudy; the animal avoids light."
+        "en": "Watery, red eye that later turns white/cloudy; the animal avoids light.",
+        "es": "Ojo lloroso y rojo que después se vuelve blanco/opaco; el animal evita la luz."
       },
       "homeCare": {
         "pt": "Deixe o animal na sombra, limpe o olho com soro fisiológico e controle moscas.",
-        "en": "Keep the animal in shade, clean the eye with saline and control flies."
+        "en": "Keep the animal in shade, clean the eye with saline and control flies.",
+        "es": "Deja al animal a la sombra, limpia el ojo con suero fisiológico y controla las moscas."
       },
       "vetCare": {
         "pt": "Pomada ou colírio antibiótico indicado pelo veterinário.",
-        "en": "Antibiotic eye ointment or drops prescribed by a vet."
+        "en": "Antibiotic eye ointment or drops prescribed by a vet.",
+        "es": "Pomada o colirio antibiótico recetado por el veterinario."
       }
     }
   ],
@@ -411,23 +484,28 @@
       "highlights": [
         {
           "pt": "No semiárido, raças nativas como Moxotó e Canindé, ou mestiças com Anglo-Nubiana e Boer, aguentam melhor a seca da caatinga.",
-          "en": "In the semi-arid Northeast, native breeds such as Moxotó and Canindé, or crosses with Anglo-Nubian and Boer, cope best with the caatinga drought."
+          "en": "In the semi-arid Northeast, native breeds such as Moxotó and Canindé, or crosses with Anglo-Nubian and Boer, cope best with the caatinga drought.",
+          "es": "En el Noreste semiárido, las razas autóctonas como Moxotó y Canindé, o los cruces con Anglo-Nubia y Boer, son las que mejor aguantan la sequía de la caatinga."
         },
         {
           "pt": "Contra a CAE, separe os cabritos ao nascer e dê colostro termizado (56 °C por 1 hora), com teste IDGA semestral do rebanho.",
-          "en": "Against CAE, separate kids at birth and feed heat-treated colostrum (56 °C for 1 hour), with twice-yearly AGID testing of the herd."
+          "en": "Against CAE, separate kids at birth and feed heat-treated colostrum (56 °C for 1 hour), with twice-yearly AGID testing of the herd.",
+          "es": "Contra la CAEV, separa a los cabritos al nacer y dales calostro tratado con calor (56 °C durante 1 hora), con pruebas AGID del rebaño dos veces al año."
         },
         {
           "pt": "Cadastre a criação no órgão estadual (PNSCO) e tire GTA para todo transporte de caprinos.",
-          "en": "Register your herd with the state agency (PNSCO) and get a GTA permit for every goat movement."
+          "en": "Register your herd with the state agency (PNSCO) and get a GTA permit for every goat movement.",
+          "es": "Registra tu rebaño en el organismo estatal (PNSCO) y saca la guía GTA para cada traslado de cabras."
         },
         {
           "pt": "Planeje a seca com palma forrageira, feno e forrageiras nativas, e use FAMACHA contra o Haemonchus nas chuvas.",
-          "en": "Plan for the dry season with forage cactus, hay and native forages, and use FAMACHA against Haemonchus in the rains."
+          "en": "Plan for the dry season with forage cactus, hay and native forages, and use FAMACHA against Haemonchus in the rains.",
+          "es": "Planifica la estación seca con nopal forrajero, heno y forrajes nativos, y usa FAMACHA contra el Haemonchus en las lluvias."
         },
         {
           "pt": "Vender leite de cabra exige seguir a IN 37/2000 e ter inspeção oficial.",
-          "en": "Selling goat milk requires following IN 37/2000 and official inspection."
+          "en": "Selling goat milk requires following IN 37/2000 and official inspection.",
+          "es": "Vender leche de cabra exige seguir la IN 37/2000 e inspección oficial."
         }
       ],
       "sources": [
@@ -453,23 +531,28 @@
       "highlights": [
         {
           "pt": "Cabras precisam de identificação oficial do programa federal do scrapie para sair da propriedade; o APHIS dá o flock ID e brincos.",
-          "en": "Goats need official federal scrapie-program ID to leave the farm; APHIS issues flock IDs and tags."
+          "en": "Goats need official federal scrapie-program ID to leave the farm; APHIS issues flock IDs and tags.",
+          "es": "Las cabras necesitan la identificación oficial del programa federal de scrapie para salir de la finca; APHIS emite los números de rebaño y los crotales."
         },
         {
           "pt": "Em cidade, onde é permitido, geralmente só raças miniatura (como Nigerian Dwarf), descornadas e com machos castrados.",
-          "en": "In cities that allow them, rules usually require miniature breeds (like Nigerian Dwarf), dehorned, with neutered males."
+          "en": "In cities that allow them, rules usually require miniature breeds (like Nigerian Dwarf), dehorned, with neutered males.",
+          "es": "En las ciudades que las permiten, las normas suelen exigir razas miniatura (como la Nigerian Dwarf), descornadas y con los machos castrados."
         },
         {
           "pt": "Cerca é o maior desafio: use arame de alta tensão ou 4–5 fios elétricos e evite telas onde chifres se enroscam.",
-          "en": "Fencing is the big challenge: use high-tensile wire or 4–5 electric strands and avoid netting that traps horns."
+          "en": "Fencing is the big challenge: use high-tensile wire or 4–5 electric strands and avoid netting that traps horns.",
+          "es": "La valla es el gran reto: usa alambre de alta tensión o 4–5 hilos eléctricos y evita mallas en las que se enganchen los cuernos."
         },
         {
           "pt": "Compre só cabras testadas para CAE e CL e teste o rebanho de tempos em tempos.",
-          "en": "Buy only goats tested for CAE and CL, and retest your herd periodically."
+          "en": "Buy only goats tested for CAE and CL, and retest your herd periodically.",
+          "es": "Compra solo cabras con pruebas de CAEV y linfadenitis, y repite las pruebas de tu rebaño periódicamente."
         },
         {
           "pt": "No Sul quente e úmido, o verme Haemonchus é o maior risco: use FAMACHA e vermífugo só com orientação veterinária.",
-          "en": "In the hot, humid South, barber pole worm is the top risk: use FAMACHA and deworm only with vet guidance."
+          "en": "In the hot, humid South, barber pole worm is the top risk: use FAMACHA and deworm only with vet guidance.",
+          "es": "En el sur cálido y húmedo, el gusano Haemonchus es el mayor riesgo: usa FAMACHA y desparasita solo con orientación veterinaria."
         }
       ],
       "sources": [
@@ -495,23 +578,28 @@
       "highlights": [
         {
           "pt": "Ontário produz a maior parte do leite de cabra do Canadá, com predominância da Saanen; na carne domina a Boer.",
-          "en": "Ontario produces most of Canada's goat milk, mostly from Saanens; Boer dominates meat production."
+          "en": "Ontario produces most of Canada's goat milk, mostly from Saanens; Boer dominates meat production.",
+          "es": "Ontario produce la mayor parte de la leche de cabra de Canadá, sobre todo de Saanen; la Boer domina la producción de carne."
         },
         {
           "pt": "A identificação de cabras ainda é voluntária (brincos da CNGF), mas o CFIA prepara torná-la obrigatória; confira as regras antes de comprar ou vender.",
-          "en": "Goat ID is still voluntary (CNGF tags), but the CFIA is moving to make it mandatory; check the rules before buying or selling."
+          "en": "Goat ID is still voluntary (CNGF tags), but the CFIA is moving to make it mandatory; check the rules before buying or selling.",
+          "es": "La identificación de las cabras aún es voluntaria (crotales CNGF), pero la CFIA está avanzando para hacerla obligatoria; revisa las normas antes de comprar o vender."
         },
         {
           "pt": "Vender leite cru é proibido no Canadá; em Ontário, o leite comercial precisa de registro Grade A.",
-          "en": "Selling raw milk is illegal in Canada; in Ontario commercial goat milk needs Grade A registration."
+          "en": "Selling raw milk is illegal in Canada; in Ontario commercial goat milk needs Grade A registration.",
+          "es": "Vender leche cruda es ilegal en Canadá; en Ontario la leche de cabra comercial necesita el registro de Grado A."
         },
         {
           "pt": "Scrapie é doença de notificação obrigatória e o CFIA testa cabras com mais de 12 meses no abate.",
-          "en": "Scrapie is reportable, and the CFIA tests goats over 12 months at slaughter."
+          "en": "Scrapie is reportable, and the CFIA tests goats over 12 months at slaughter.",
+          "es": "El scrapie es de declaración obligatoria, y la CFIA analiza en el matadero a las cabras de más de 12 meses."
         },
         {
           "pt": "Siga o código de práticas da NFACC para cabras (2022); antibióticos só com receita.",
-          "en": "Follow the 2022 NFACC goat Code of Practice; antibiotics by prescription only."
+          "en": "Follow the 2022 NFACC goat Code of Practice; antibiotics by prescription only.",
+          "es": "Sigue el Código de Prácticas para cabras de NFACC de 2022; antibióticos solo con receta."
         }
       ],
       "sources": [
@@ -537,23 +625,28 @@
       "highlights": [
         {
           "pt": "Mesmo como hobby, registre as cabras no Veterinäramt, no banco HIT e na Tierseuchenkasse.",
-          "en": "Even as a hobby, register goats with the Veterinäramt, the HIT database and the Tierseuchenkasse."
+          "en": "Even as a hobby, register goats with the Veterinäramt, the HIT database and the Tierseuchenkasse.",
+          "es": "Aunque sea por afición, registra las cabras en el Veterinäramt, en la base de datos HIT y en la Tierseuchenkasse."
         },
         {
           "pt": "Cada cabra leva 2 marcas, uma eletrônica, até os 9 meses ou antes de sair do rebanho.",
-          "en": "Each goat needs 2 identifiers, one electronic, by 9 months of age or before leaving the herd."
+          "en": "Each goat needs 2 identifiers, one electronic, by 9 months of age or before leaving the herd.",
+          "es": "Cada cabra necesita 2 identificadores, uno electrónico, antes de los 9 meses de edad o antes de salir del rebaño."
         },
         {
           "pt": "Compre de rebanhos certificados em programas estaduais contra CAE e pseudotuberculose.",
-          "en": "Buy from herds certified under state CAE and pseudotuberculosis programmes."
+          "en": "Buy from herds certified under state CAE and pseudotuberculosis programmes.",
+          "es": "Compra de rebaños certificados en los programas estatales de CAEV y pseudotuberculosis."
         },
         {
           "pt": "Lobo presente em quase todo o país: cerca elétrica de no mínimo 90 cm com proteção contra escalada.",
-          "en": "Wolves are almost everywhere: electric fence of at least 90 cm with anti-climb protection."
+          "en": "Wolves are almost everywhere: electric fence of at least 90 cm with anti-climb protection.",
+          "es": "Hay lobos casi en todas partes: valla eléctrica de al menos 90 cm con protección para que no trepen."
         },
         {
           "pt": "Raças nativas: Bunte Deutsche Edelziege (leite) e a rústica Thüringer Wald Ziege.",
-          "en": "Native breeds: Bunte Deutsche Edelziege (dairy) and the hardy Thüringer Wald Ziege."
+          "en": "Native breeds: Bunte Deutsche Edelziege (dairy) and the hardy Thüringer Wald Ziege.",
+          "es": "Razas autóctonas: Bunte Deutsche Edelziege (lechera) y la rústica Thüringer Wald Ziege."
         }
       ],
       "sources": [
@@ -579,23 +672,28 @@
       "highlights": [
         {
           "pt": "A Espanha tem raças leiteiras autóctones de ponta: Murciano-Granadina, Malagueña, Florida e Payoya.",
-          "en": "Spain has top native dairy breeds: Murciano-Granadina, Malagueña, Florida and Payoya."
+          "en": "Spain has top native dairy breeds: Murciano-Granadina, Malagueña, Florida and Payoya.",
+          "es": "España tiene grandes razas lecheras autóctonas: Murciano-Granadina, Malagueña, Florida y Payoya."
         },
         {
           "pt": "Cada cabra precisa de um brinco e de um identificador eletrônico, e a exploração de registro REGA, mesmo sendo pequena.",
-          "en": "Each goat needs an ear tag plus an electronic ID, and the holding needs REGA registration, however small."
+          "en": "Each goat needs an ear tag plus an electronic ID, and the holding needs REGA registration, however small.",
+          "es": "Cada cabra necesita un crotal y una identificación electrónica, y la explotación necesita registro en el REGA, por pequeña que sea."
         },
         {
           "pt": "As campanhas de saneamento contra a brucelose são obrigatórias; a doença também passa para as pessoas.",
-          "en": "Brucellosis sanitation campaigns are mandatory; the disease can also infect people."
+          "en": "Brucellosis sanitation campaigns are mandatory; the disease can also infect people.",
+          "es": "Las campañas de saneamiento de brucelosis son obligatorias; la enfermedad también puede infectar a las personas."
         },
         {
           "pt": "No verão, água fresca à vontade, sombra e ventilação; uma queda no leite indica estresse por calor.",
-          "en": "In summer, give unlimited fresh water, shade and ventilation; a drop in milk signals heat stress."
+          "en": "In summer, give unlimited fresh water, shade and ventilation; a drop in milk signals heat stress.",
+          "es": "En verano, da agua fresca sin límite, sombra y ventilación; la bajada de la leche indica estrés por calor."
         },
         {
           "pt": "Antibióticos só com receita veterinária (RD 666/2023), respeitando a carência do leite.",
-          "en": "Antibiotics only with a vet prescription (RD 666/2023), respecting milk withdrawal times."
+          "en": "Antibiotics only with a vet prescription (RD 666/2023), respecting milk withdrawal times.",
+          "es": "Antibióticos solo con receta veterinaria (RD 666/2023), respetando el plazo de espera de la leche."
         }
       ],
       "sources": [
@@ -621,19 +719,23 @@
       "highlights": [
         {
           "pt": "Até cabras de estimação exigem declaração no EDE, dois marcadores (um eletrônico) antes dos 6 meses e recenseamento anual.",
-          "en": "Even pet goats require EDE registration, two identifiers (one electronic) before 6 months of age, and an annual census."
+          "en": "Even pet goats require EDE registration, two identifiers (one electronic) before 6 months of age, and an annual census.",
+          "es": "Incluso las cabras de compañía exigen registro en el EDE, dos identificadores (uno electrónico) antes de los 6 meses de edad y un censo anual."
         },
         {
           "pt": "A brucelose tem profilaxia obrigatória. Pequenos detentores podem pedir a derrogação \"petit détenteur\" conforme o arrêté do departamento.",
-          "en": "Brucellosis screening is compulsory; small keepers may apply for the \"petit détenteur\" exemption depending on the departmental order."
+          "en": "Brucellosis screening is compulsory; small keepers may apply for the \"petit détenteur\" exemption depending on the departmental order.",
+          "es": "La prueba de brucelosis es obligatoria; los pequeños criadores pueden pedir la exención de \"petit détenteur\" según la orden del departamento."
         },
         {
           "pt": "Para vender queijo de cabra fermier, declare a atividade à DDPP e siga as regras de higiene do leite cru.",
-          "en": "To sell farmhouse goat cheese, declare the activity to the DDPP and follow raw-milk hygiene rules."
+          "en": "To sell farmhouse goat cheese, declare the activity to the DDPP and follow raw-milk hygiene rules.",
+          "es": "Para vender queso de cabra artesano, declara la actividad a la DDPP y sigue las normas de higiene de la leche cruda."
         },
         {
           "pt": "Além da Alpine e da Saanen, a França reconhece 13 raças locais, como a Poitevine e a Rove.",
-          "en": "Besides Alpine and Saanen, France recognises 13 local breeds such as the Poitevine and the Rove."
+          "en": "Besides Alpine and Saanen, France recognises 13 local breeds such as the Poitevine and the Rove.",
+          "es": "Además de la Alpina y la Saanen, Francia reconoce 13 razas locales como la Poitevine y la Rove."
         }
       ],
       "sources": [
@@ -659,23 +761,28 @@
       "highlights": [
         {
           "pt": "Mesmo poucas cabras (até 6) precisam de registo no SNIRA da DGAV como 'detenção caseira'.",
-          "en": "Even a few goats (up to 6) must be registered in DGAV's SNIRA as 'home keeping'."
+          "en": "Even a few goats (up to 6) must be registered in DGAV's SNIRA as 'home keeping'.",
+          "es": "Incluso unas pocas cabras (hasta 6) deben registrarse en el SNIRA de la DGAV como 'tenencia doméstica'."
         },
         {
           "pt": "Cada cabra leva brinco e identificação eletrónica (bolo ou brinco eletrónico).",
-          "en": "Each goat needs an ear tag plus electronic ID (bolus or e-tag)."
+          "en": "Each goat needs an ear tag plus electronic ID (bolus or e-tag).",
+          "es": "Cada cabra necesita un crotal y una identificación electrónica (bolo o crotal electrónico)."
         },
         {
           "pt": "A brucelose (febre de Malta) tem programa oficial: faça o saneamento antes de consumir leite.",
-          "en": "Brucellosis (Malta fever) has an official programme: get the herd tested before drinking the milk."
+          "en": "Brucellosis (Malta fever) has an official programme: get the herd tested before drinking the milk.",
+          "es": "La brucelosis (fiebre de Malta) tiene un programa oficial: haz analizar el rebaño antes de beber la leche."
         },
         {
           "pt": "Pode abater até 8 cabritos por ano para a família, mas vender a carne é proibido.",
-          "en": "You may slaughter up to 8 kids a year for your family, but selling the meat is banned."
+          "en": "You may slaughter up to 8 kids a year for your family, but selling the meat is banned.",
+          "es": "Puedes sacrificar hasta 8 cabritos al año para tu familia, pero está prohibido vender la carne."
         },
         {
           "pt": "A cabra Serrana dá o Queijo de Cabra Transmontano DOP; há raças regionais como Bravia, Serpentina e Algarvia.",
-          "en": "Serrana goats produce PDO Transmontano goat cheese; regional breeds include Bravia, Serpentina and Algarvia."
+          "en": "Serrana goats produce PDO Transmontano goat cheese; regional breeds include Bravia, Serpentina and Algarvia.",
+          "es": "Las cabras Serrana dan el queso de cabra Transmontano DOP; entre las razas regionales están la Bravia, la Serpentina y la Algarvia."
         }
       ],
       "sources": [
@@ -701,23 +808,28 @@
       "highlights": [
         {
           "pt": "Toda cabra precisa de registro na BDN e identificação eletrônica, mesmo em criação familiar.",
-          "en": "Every goat must be registered in the BDN and electronically identified, even in a family holding."
+          "en": "Every goat must be registered in the BDN and electronically identified, even in a family holding.",
+          "es": "Toda cabra debe registrarse en la BDN e identificarse electrónicamente, incluso en una explotación familiar."
         },
         {
           "pt": "No norte use raças alpinas leiteiras (Saanen, Camosciata); no sul seco, rústicas como a Girgentana.",
-          "en": "In the north use Alpine dairy breeds (Saanen, Camosciata); in the dry south, hardy ones like Girgentana."
+          "en": "In the north use Alpine dairy breeds (Saanen, Camosciata); in the dry south, hardy ones like Girgentana.",
+          "es": "En el norte usa razas lecheras alpinas (Saanen, Camosciata); en el sur seco, rústicas como la Girgentana."
         },
         {
           "pt": "No sul a brucelose (febre de Malta) ainda existe: não tome leite cru de rebanho sem controle da ASL.",
-          "en": "Brucellosis (Malta fever) still occurs in the south: don't drink raw milk from untested herds."
+          "en": "Brucellosis (Malta fever) still occurs in the south: don't drink raw milk from untested herds.",
+          "es": "La brucelosis (fiebre de Malta) todavía aparece en el sur: no bebas leche cruda de rebaños sin pruebas."
         },
         {
           "pt": "Abate de cabrito em casa só seguindo as regras da ASL e lançando na BDN em 7 dias.",
-          "en": "Home slaughter of kids only under ASL rules and recorded in the BDN within 7 days."
+          "en": "Home slaughter of kids only under ASL rules and recorded in the BDN within 7 days.",
+          "es": "Sacrificio casero de cabritos solo según las normas de la ASL y anotado en la BDN en 7 días."
         },
         {
           "pt": "Remédio só com receita veterinária eletrônica (REV), respeitando a carência do leite.",
-          "en": "Medicines only with an electronic veterinary prescription (REV), observing milk withdrawal times."
+          "en": "Medicines only with an electronic veterinary prescription (REV), observing milk withdrawal times.",
+          "es": "Medicamentos solo con receta veterinaria electrónica (REV), respetando el plazo de espera de la leche."
         }
       ],
       "sources": [
@@ -743,23 +855,28 @@
       "highlights": [
         {
           "pt": "A cabra é o animal do semiárido do norte (Coahuila, San Luis Potosí, Comarca Lagunera), criada solta em pastagem nativa.",
-          "en": "Goats are the animal of the semi-arid north (Coahuila, San Luis Potosí, La Laguna), herded on native rangeland."
+          "en": "Goats are the animal of the semi-arid north (Coahuila, San Luis Potosí, La Laguna), herded on native rangeland.",
+          "es": "La cabra es el animal del norte semiárido (Coahuila, San Luis Potosí, La Laguna), pastoreada en el agostadero nativo."
         },
         {
           "pt": "Coahuila lidera o leite de cabra; o cabrito é o outro produto forte. Para carne, o INIFAP sugere reprodutor Boer mantendo sangue criollo.",
-          "en": "Coahuila leads goat milk output; kid meat (cabrito) is the other key product. For meat INIFAP suggests Boer bucks while keeping criollo blood."
+          "en": "Coahuila leads goat milk output; kid meat (cabrito) is the other key product. For meat INIFAP suggests Boer bucks while keeping criollo blood.",
+          "es": "Coahuila lidera la producción de leche de cabra; la carne de cabrito es el otro producto clave. Para carne, el INIFAP sugiere sementales Boer manteniendo sangre criolla."
         },
         {
           "pt": "Brucelose (febre de Malta) é o grande risco: vacina Rev-1 oficial aplicada por veterinário aprovado.",
-          "en": "Brucellosis (Malta fever) is the main risk: official Rev-1 vaccine given by an approved veterinarian."
+          "en": "Brucellosis (Malta fever) is the main risk: official Rev-1 vaccine given by an approved veterinarian.",
+          "es": "La brucelosis (fiebre de Malta) es el principal riesgo: vacuna oficial Rev-1 aplicada por un médico veterinario aprobado."
         },
         {
           "pt": "Sempre ferva ou pasteurize o leite de cabra antes de beber ou fazer queijo.",
-          "en": "Always boil or pasteurize goat milk before drinking it or making cheese."
+          "en": "Always boil or pasteurize goat milk before drinking it or making cheese.",
+          "es": "Hierve o pasteuriza siempre la leche de cabra antes de beberla o hacer queso."
         },
         {
           "pt": "Cabras também usam brinco SINIIGA; em San Luis Potosí ele é exigido para mobilização.",
-          "en": "Goats also carry SINIIGA ear tags; in San Luis Potosí they are required for movement."
+          "en": "Goats also carry SINIIGA ear tags; in San Luis Potosí they are required for movement.",
+          "es": "Las cabras también llevan arete SINIIGA; en San Luis Potosí son obligatorios para la movilización."
         }
       ],
       "sources": [

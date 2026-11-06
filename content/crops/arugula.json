@@ -2,28 +2,32 @@
   "id": "arugula",
   "summary": {
     "pt": "A rúcula é uma folhosa de sabor picante que cresce muito rápido: dá para colher em 30–40 dias. Ótima para quem está começando e para canteiros pequenos.",
-    "en": "Arugula is a peppery leafy green that grows very fast: you can harvest in 30–40 days. Great for beginners and small beds."
+    "en": "Arugula is a peppery leafy green that grows very fast: you can harvest in 30–40 days. Great for beginners and small beds.",
+    "es": "La rúcula es una hoja de sabor picante que crece muy rápido: puedes cosechar en 30–40 días. Ideal para principiantes y bancales pequeños."
   },
   "calendar": {
-    "tropical": { "directSowing": [3, 4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [4, 5, 6, 7, 8, 9], "notes": { "pt": "No calor forte as folhas ficam duras e a planta floresce cedo; prefira a época mais fresca ou meia-sombra.", "en": "In strong heat leaves get tough and plants bolt early; prefer the cooler season or partial shade." } },
+    "tropical": { "directSowing": [3, 4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [4, 5, 6, 7, 8, 9], "notes": { "pt": "No calor forte as folhas ficam duras e a planta floresce cedo; prefira a época mais fresca ou meia-sombra.", "en": "In strong heat leaves get tough and plants bolt early; prefer the cooler season or partial shade.", "es": "Con calor fuerte las hojas se endurecen y la planta se espiga antes; prefiere la estación más fresca o la semisombra." } },
     "subtropical": { "directSowing": [2, 3, 4, 5, 6, 7, 8, 9], "seedbed": [], "transplant": [], "harvest": [3, 4, 5, 6, 7, 8, 9, 10] },
     "temperate": { "directSowing": [2, 3, 4, 8, 9, 10], "seedbed": [], "transplant": [], "harvest": [3, 4, 5, 6, 9, 10, 11] },
-    "semiarid": { "directSowing": [4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8], "notes": { "pt": "Com irrigação e, se possível, sombrite à tarde.", "en": "With irrigation and, if possible, afternoon shade cloth." } },
-    "cold": { "directSowing": [10, 11, 12, 1, 2], "seedbed": [], "transplant": [], "harvest": [11, 12, 1, 2, 3], "notes": { "pt": "Semeie depois das geadas fortes; aguenta frio leve.", "en": "Sow after hard frosts; tolerates light cold." } }
+    "semiarid": { "directSowing": [4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8], "notes": { "pt": "Com irrigação e, se possível, sombrite à tarde.", "en": "With irrigation and, if possible, afternoon shade cloth.", "es": "Con riego y, si es posible, malla de sombra por la tarde." } },
+    "cold": { "directSowing": [10, 11, 12, 1, 2], "seedbed": [], "transplant": [], "harvest": [11, 12, 1, 2, 3], "notes": { "pt": "Semeie depois das geadas fortes; aguenta frio leve.", "en": "Sow after hard frosts; tolerates light cold.", "es": "Siembra después de las heladas fuertes; tolera el frío ligero." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Planta de pouca exigência. Antes de semear, misture composto ou esterco curtido (ou cama de frango bem curtida) no canteiro. Se crescer devagar, faça uma cobertura leve com nitrogênio (ou esterco) 2–3 semanas após a germinação. Excesso de adubo deixa as folhas amargas.",
-      "en": "A light feeder. Before sowing, mix compost or aged manure (or well-aged poultry litter) into the bed. If growth is slow, side-dress lightly with nitrogen (or manure) 2–3 weeks after germination. Too much fertilizer makes leaves bitter."
+      "en": "A light feeder. Before sowing, mix compost or aged manure (or well-aged poultry litter) into the bed. If growth is slow, side-dress lightly with nitrogen (or manure) 2–3 weeks after germination. Too much fertilizer makes leaves bitter.",
+      "es": "Pide poco abono. Antes de sembrar, mezcla compost o estiércol curado (o gallinaza bien curada) en el bancal. Si crece despacio, abona ligeramente con nitrógeno (o estiércol) 2–3 semanas después de la germinación. Demasiado abono amarga las hojas."
     },
     "pruning": null,
     "watering": {
       "pt": "Regue com frequência para o solo ficar sempre úmido, mas não encharque o canteiro (favorece doenças). Falta de água deixa a folha mais picante e faz florescer cedo.",
-      "en": "Water often to keep the soil evenly moist, but don't waterlog the bed (it invites disease). Lack of water makes leaves hotter and causes early bolting."
+      "en": "Water often to keep the soil evenly moist, but don't waterlog the bed (it invites disease). Lack of water makes leaves hotter and causes early bolting.",
+      "es": "Riega a menudo para mantener el suelo húmedo y uniforme, pero no encharques el bancal (favorece las enfermedades). La falta de agua hace las hojas más picantes y adelanta el espigado."
     },
     "other": {
       "pt": "Semeie um pouco a cada 2–3 semanas para ter folhas sempre. Desbaste deixando 5–10 cm entre plantas. Pulgões e pulga-das-crucíferas (furinhos nas folhas) são as pragas mais comuns.",
-      "en": "Sow a little every 2–3 weeks for a steady supply. Thin to 5–10 cm between plants. Aphids and flea beetles (tiny holes in leaves) are the most common pests."
+      "en": "Sow a little every 2–3 weeks for a steady supply. Thin to 5–10 cm between plants. Aphids and flea beetles (tiny holes in leaves) are the most common pests.",
+      "es": "Siembra un poco cada 2–3 semanas para tener siempre. Aclara a 5–10 cm entre plantas. Los pulgones y las altisas (agujeritos en las hojas) son las plagas más comunes."
     }
   },
   "sources": [

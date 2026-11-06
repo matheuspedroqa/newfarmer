@@ -2,7 +2,8 @@
   "id": "olive",
   "summary": {
     "pt": "Árvore de vida longuíssima, típica do Mediterrâneo, que dá azeitona para conserva e azeite. Começa a produzir por volta do 4º–5º ano e precisa de um inverno frio para florescer.",
-    "en": "A very long-lived Mediterranean tree that gives olives for curing and oil. Starts bearing around year 4–5 and needs a cool winter to flower."
+    "en": "A very long-lived Mediterranean tree that gives olives for curing and oil. Starts bearing around year 4–5 and needs a cool winter to flower.",
+    "es": "Árbol mediterráneo de vida muy larga que da aceitunas para curar y para aceite. Empieza a producir hacia el año 4–5 y necesita un invierno fresco para florecer."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "A árvore cresce, mas não floresce: precisa de semanas de frio no inverno (abaixo de ~12 °C). No Brasil tropical, só dá em serras altas (ex.: sul de MG, acima de ~900 m).", "en": "The tree grows but does not flower: it needs weeks of winter cold (below ~12 °C). In the tropics it only works in high mountains." }
+      "notes": { "pt": "A árvore cresce, mas não floresce: precisa de semanas de frio no inverno (abaixo de ~12 °C). No Brasil tropical, só dá em serras altas (ex.: sul de MG, acima de ~900 m).", "en": "The tree grows but does not flower: it needs weeks of winter cold (below ~12 °C). In the tropics it only works in high mountains.", "es": "El árbol crece pero no florece: necesita semanas de frío invernal (por debajo de ~12 °C). En los trópicos solo funciona en montañas altas." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10, 11],
       "harvest": [2, 3, 4],
-      "notes": { "pt": "Só onde o inverno é frio o bastante (como RS, serras de SC/PR e sul de MG). Inverno ameno demais dá pouca flor; chuva na florada também atrapalha.", "en": "Only where winter is cold enough. A too-mild winter gives few flowers; rain at bloom also hurts." }
+      "notes": { "pt": "Só onde o inverno é frio o bastante (como RS, serras de SC/PR e sul de MG). Inverno ameno demais dá pouca flor; chuva na florada também atrapalha.", "en": "Only where winter is cold enough. A too-mild winter gives few flowers; rain at bloom also hurts.", "es": "Solo donde el invierno sea lo bastante frío. Un invierno demasiado suave da pocas flores; la lluvia en la floración también perjudica." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10],
       "harvest": [4, 5, 6],
-      "notes": { "pt": "Clima ideal, sobretudo o mediterrâneo (verão seco). Plante na primavera, depois das geadas. Geada forte (abaixo de −7 a −10 °C) danifica a árvore.", "en": "Ideal climate, especially Mediterranean (dry summer). Plant in spring after frosts. Hard frost (below −7 to −10 °C) damages the tree." }
+      "notes": { "pt": "Clima ideal, sobretudo o mediterrâneo (verão seco). Plante na primavera, depois das geadas. Geada forte (abaixo de −7 a −10 °C) danifica a árvore.", "en": "Ideal climate, especially Mediterranean (dry summer). Plant in spring after frosts. Hard frost (below −7 to −10 °C) damages the tree.", "es": "Clima ideal, sobre todo el mediterráneo (verano seco). Planta en primavera después de las heladas. La helada fuerte (por debajo de −7 a −10 °C) daña el árbol." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [8, 9, 10],
       "harvest": [4, 5, 6],
-      "notes": { "pt": "Aguenta muito bem a seca, mas só produz se o inverno for frio (semiárido de inverno frio, como no interior da Espanha ou em Mendoza). No semiárido quente o ano todo, como o Nordeste, não floresce. Irrigação aumenta muito a colheita.", "en": "Very drought tolerant, but only bears with a cool winter (cold-winter dry areas like inland Spain or Mendoza). In hot-all-year dry areas it doesn't flower. Irrigation greatly raises yields." }
+      "notes": { "pt": "Aguenta muito bem a seca, mas só produz se o inverno for frio (semiárido de inverno frio, como no interior da Espanha ou em Mendoza). No semiárido quente o ano todo, como o Nordeste, não floresce. Irrigação aumenta muito a colheita.", "en": "Very drought tolerant, but only bears with a cool winter (cold-winter dry areas like inland Spain or Mendoza). In hot-all-year dry areas it doesn't flower. Irrigation greatly raises yields.", "es": "Muy tolerante a la sequía, pero solo produce con un invierno fresco (zonas secas de invierno frío como el interior de España o Mendoza). En zonas secas y calurosas todo el año no florece. El riego aumenta mucho el rendimiento." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Inverno rigoroso mata a planta. Só em vaso, guardada em lugar fresco e claro, sem congelar.", "en": "Harsh winters kill it. Only in a pot, kept somewhere cool and bright but frost-free." }
+      "notes": { "pt": "Inverno rigoroso mata a planta. Só em vaso, guardada em lugar fresco e claro, sem congelar.", "en": "Harsh winters kill it. Only in a pot, kept somewhere cool and bright but frost-free.", "es": "Los inviernos duros lo matan. Solo en maceta, en un lugar fresco y luminoso pero sin heladas." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Gosta de solo neutro a alcalino: corrija a acidez com calcário antes do plantio. Esterco curtido ou composto na cova. Na árvore adulta, nitrogênio e potássio no fim do inverno/início da brotação, conforme análise de solo e folha.",
-      "en": "Likes neutral to alkaline soil: lime acidic soil before planting. Rotted manure or compost in the hole. For mature trees, nitrogen and potassium in late winter/early growth, by soil and leaf tests."
+      "en": "Likes neutral to alkaline soil: lime acidic soil before planting. Rotted manure or compost in the hole. For mature trees, nitrogen and potassium in late winter/early growth, by soil and leaf tests.",
+      "es": "Prefiere suelo neutro a alcalino: encala el suelo ácido antes de plantar. Estiércol curado o compost en el hoyo. En árboles adultos, nitrógeno y potasio a finales del invierno/inicio del crecimiento, según análisis de suelo y de hoja."
     },
     "pruning": {
       "pt": "Nos primeiros anos, forme a copa em vaso (3–4 ramos principais). Depois, poda leve no fim do inverno, depois da colheita: a azeitona nasce nos ramos do ano anterior, então podar muito ou fora de época tira a safra.",
-      "en": "In early years, train an open vase (3–4 main branches). Then prune lightly in late winter after harvest: olives grow on last year's shoots, so heavy or badly timed pruning loses the crop."
+      "en": "In early years, train an open vase (3–4 main branches). Then prune lightly in late winter after harvest: olives grow on last year's shoots, so heavy or badly timed pruning loses the crop.",
+      "es": "En los primeros años, forma un vaso abierto (3–4 ramas principales). Después poda ligeramente a finales del invierno tras la cosecha: las aceitunas salen en los brotes del año anterior, así que una poda fuerte o a destiempo pierde la cosecha."
     },
     "watering": {
       "pt": "Muda nova: regue com regularidade nos 2 primeiros anos. Árvore adulta aguenta seca, mas uma rega funda na florada e no crescimento da azeitona aumenta a colheita. Não tolera encharcamento.",
-      "en": "Young trees: water regularly for the first 2 years. Mature trees handle drought, but a deep watering at bloom and while olives grow raises yields. Does not tolerate waterlogging."
+      "en": "Young trees: water regularly for the first 2 years. Mature trees handle drought, but a deep watering at bloom and while olives grow raises yields. Does not tolerate waterlogging.",
+      "es": "Árboles jóvenes: riega con regularidad los primeros 2 años. Los árboles adultos aguantan la sequía, pero un riego profundo en la floración y mientras crecen las aceitunas aumenta el rendimiento. No tolera el encharcamiento."
     },
     "other": {
       "pt": "Sol pleno e solo muito bem drenado. Escolha variedade adaptada ao seu frio (ex.: Arbequina e Koroneiki precisam de menos frio). Cuidado com formigas cortadeiras na muda nova.",
-      "en": "Full sun and very well-drained soil. Pick a variety suited to your winter (e.g. Arbequina and Koroneiki need less chill). Protect young trees from leaf-cutter ants."
+      "en": "Full sun and very well-drained soil. Pick a variety suited to your winter (e.g. Arbequina and Koroneiki need less chill). Protect young trees from leaf-cutter ants.",
+      "es": "Pleno sol y suelo muy bien drenado. Elige una variedad adecuada a tu invierno (p. ej. Arbequina y Koroneiki necesitan menos frío). Protege los árboles jóvenes de las hormigas cortadoras."
     }
   },
   "sources": [

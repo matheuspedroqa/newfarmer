@@ -2,7 +2,8 @@
   "id": "carrot",
   "summary": {
     "pt": "Raiz doce e nutritiva, semeada direto no canteiro (não aceita transplante). Fácil de guardar e com variedades para inverno e para verão.",
-    "en": "A sweet, nutritious root sown straight into the bed (it does not transplant). Stores well, with varieties for winter and for summer."
+    "en": "A sweet, nutritious root sown straight into the bed (it does not transplant). Stores well, with varieties for winter and for summer.",
+    "es": "Raíz dulce y nutritiva que se siembra directamente en el bancal (no se trasplanta). Se conserva bien, con variedades para invierno y para verano."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Melhor na época seca e mais fresca. Nas chuvas use cultivares de verão (tipo Brasília), resistentes à queima-das-folhas.", "en": "Best in the dry, cooler season. In the rainy season use summer varieties (Brasília type) resistant to leaf blight." }
+      "notes": { "pt": "Melhor na época seca e mais fresca. Nas chuvas use cultivares de verão (tipo Brasília), resistentes à queima-das-folhas.", "en": "Best in the dry, cooler season. In the rainy season use summer varieties (Brasília type) resistant to leaf blight.", "es": "Mejor en la época seca y fresca. En la época de lluvias usa variedades de verano (tipo Brasília) resistentes al tizón de la hoja." }
     },
     "subtropical": {
       "directSowing": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       "seedbed": [],
       "transplant": [],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Ano todo: cultivares de inverno (Nantes) de abril a agosto e de verão de setembro a fevereiro. Colheita uns 90–110 dias após semear.", "en": "Year-round: winter varieties (Nantes) April–August and summer varieties September–February. Harvest about 90–110 days after sowing." }
+      "notes": { "pt": "Ano todo: cultivares de inverno (Nantes) de abril a agosto e de verão de setembro a fevereiro. Colheita uns 90–110 dias após semear.", "en": "Year-round: winter varieties (Nantes) April–August and summer varieties September–February. Harvest about 90–110 days after sowing.", "es": "Todo el año: variedades de invierno (Nantes) de abril a agosto y variedades de verano de septiembre a febrero. Cosecha unos 90–110 días después de la siembra." }
     },
     "temperate": {
       "directSowing": [9, 10, 11, 12, 1],
       "seedbed": [],
       "transplant": [],
       "harvest": [12, 1, 2, 3, 4, 5],
-      "notes": { "pt": "Semeie 2–4 semanas antes da última geada e de novo no meio do verão para colher no outono.", "en": "Sow 2–4 weeks before the last frost and again in midsummer for an autumn crop." }
+      "notes": { "pt": "Semeie 2–4 semanas antes da última geada e de novo no meio do verão para colher no outono.", "en": "Sow 2–4 weeks before the last frost and again in midsummer for an autumn crop.", "es": "Siembra 2–4 semanas antes de la última helada y otra vez a mediados del verano para una cosecha de otoño." }
     },
     "semiarid": {
       "directSowing": [4, 5, 6, 7, 8],
       "seedbed": [],
       "transplant": [],
       "harvest": [7, 8, 9, 10, 11],
-      "notes": { "pt": "Com irrigação, nos meses mais frescos.", "en": "With irrigation, in the cooler months." }
+      "notes": { "pt": "Com irrigação, nos meses mais frescos.", "en": "With irrigation, in the cooler months.", "es": "Con riego, en los meses más frescos." }
     },
     "cold": {
       "directSowing": [11, 12],
       "seedbed": [],
       "transplant": [],
       "harvest": [2, 3, 4],
-      "notes": { "pt": "Semeie quando o solo chegar a uns 10 °C; use variedades de ciclo curto.", "en": "Sow once soil reaches about 10 °C; use short-season varieties." }
+      "notes": { "pt": "Semeie quando o solo chegar a uns 10 °C; use variedades de ciclo curto.", "en": "Sow once soil reaches about 10 °C; use short-season varieties.", "es": "Siembra cuando el suelo llegue a unos 10 °C; usa variedades de ciclo corto." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Solo fofo e sem pedras. Calcário conforme análise. Use composto ou esterco BEM curtido (esterco fresco deixa a raiz bifurcada) e NPK no plantio; cobertura com nitrogênio e potássio aos 30 e 60 dias.",
-      "en": "Loose, stone-free soil. Lime per soil test. Use compost or WELL-rotted manure (fresh manure makes forked roots) and NPK at sowing; side-dress with nitrogen and potassium at 30 and 60 days."
+      "en": "Loose, stone-free soil. Lime per soil test. Use compost or WELL-rotted manure (fresh manure makes forked roots) and NPK at sowing; side-dress with nitrogen and potassium at 30 and 60 days.",
+      "es": "Suelo suelto, sin piedras. Encala según el análisis de suelo. Usa compost o estiércol BIEN curado (el estiércol fresco hace raíces bifurcadas) y NPK en la siembra; abona en cobertura con nitrógeno y potasio a los 30 y 60 días."
     },
     "pruning": null,
     "watering": {
       "pt": "Terra sempre úmida até a germinação (pode levar 2–3 semanas). Depois, regas regulares; alternar seco e molhado racha a raiz.",
-      "en": "Keep soil moist until germination (can take 2–3 weeks). Then water regularly; dry-wet swings crack the roots."
+      "en": "Keep soil moist until germination (can take 2–3 weeks). Then water regularly; dry-wet swings crack the roots.",
+      "es": "Mantén el suelo húmedo hasta la germinación (puede tardar 2–3 semanas). Luego riega con regularidad; los cambios entre seco y mojado agrietan las raíces."
     },
     "other": {
       "pt": "Sementes a 1–2 cm de fundura, linhas a 20–30 cm. Faça o desbaste aos 25–30 dias, deixando 5–6 cm entre plantas. Sol pleno (6 h ou mais).",
-      "en": "Sow 1–2 cm deep, rows 20–30 cm apart. Thin at 25–30 days to 5–6 cm between plants. Full sun (6+ hours)."
+      "en": "Sow 1–2 cm deep, rows 20–30 cm apart. Thin at 25–30 days to 5–6 cm between plants. Full sun (6+ hours).",
+      "es": "Siembra a 1–2 cm de profundidad, con hileras a 20–30 cm. Aclara a los 25–30 días a 5–6 cm entre plantas. Pleno sol (6+ horas)."
     }
   },
   "sources": [

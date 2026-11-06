@@ -2,7 +2,8 @@
   "id": "spinach",
   "summary": {
     "pt": "Espinafre: folha rica e de ciclo rápido (35–60 dias), semeada direto no canteiro. Gosta de frio ameno; no calor e com dias longos ele floresce cedo.",
-    "en": "Spinach: a nutritious, fast leaf crop (35–60 days) sown straight in the bed. It likes mild cool weather; heat and long days make it bolt early."
+    "en": "Spinach: a nutritious, fast leaf crop (35–60 days) sown straight in the bed. It likes mild cool weather; heat and long days make it bolt early.",
+    "es": "Espinaca: un cultivo de hoja nutritivo y rápido (35–60 días) que se siembra directamente en el bancal. Le gusta el tiempo fresco y suave; el calor y los días largos hacen que se espigue pronto."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [5, 6, 7, 8, 9],
-      "notes": { "pt": "Difícil no calor: só nos meses mais frescos, de preferência em altitude e com meia-sombra.", "en": "Hard in the heat: only in the coolest months, ideally at altitude and with partial shade." }
+      "notes": { "pt": "Difícil no calor: só nos meses mais frescos, de preferência em altitude e com meia-sombra.", "en": "Hard in the heat: only in the coolest months, ideally at altitude and with partial shade.", "es": "Difícil con calor: solo en los meses más frescos, idealmente en altitud y con sombra parcial." }
     },
     "subtropical": {
       "directSowing": [3, 4, 5, 6, 7, 8],
       "seedbed": [],
       "transplant": [],
       "harvest": [4, 5, 6, 7, 8, 9, 10],
-      "notes": { "pt": "Outono e inverno, na faixa de 15–22 °C. Semeie a cada 2 semanas para colher sempre.", "en": "Autumn and winter, around 15–22 °C. Sow every 2 weeks for a steady harvest." }
+      "notes": { "pt": "Outono e inverno, na faixa de 15–22 °C. Semeie a cada 2 semanas para colher sempre.", "en": "Autumn and winter, around 15–22 °C. Sow every 2 weeks for a steady harvest.", "es": "Otoño e invierno, en torno a 15–22 °C. Siembra cada 2 semanas para tener una cosecha continua." }
     },
     "temperate": {
       "directSowing": [9, 10, 2, 3],
       "seedbed": [],
       "transplant": [],
       "harvest": [10, 11, 12, 3, 4, 5],
-      "notes": { "pt": "Semeie no início da primavera (antes dos dias longos) e de novo no fim do verão para o outono.", "en": "Sow in early spring (before long days) and again in late summer for autumn." }
+      "notes": { "pt": "Semeie no início da primavera (antes dos dias longos) e de novo no fim do verão para o outono.", "en": "Sow in early spring (before long days) and again in late summer for autumn.", "es": "Siembra a principios de primavera (antes de los días largos) y otra vez a finales del verano para el otoño." }
     },
     "semiarid": {
       "directSowing": [5, 6, 7],
       "seedbed": [],
       "transplant": [],
       "harvest": [6, 7, 8, 9],
-      "notes": { "pt": "Só com irrigação e nos meses mais frescos; prefira meia-sombra.", "en": "Only with irrigation and in the coolest months; prefer partial shade." }
+      "notes": { "pt": "Só com irrigação e nos meses mais frescos; prefira meia-sombra.", "en": "Only with irrigation and in the coolest months; prefer partial shade.", "es": "Solo con riego y en los meses más frescos; prefiere sombra parcial." }
     },
     "cold": {
       "directSowing": [10, 11, 2],
       "seedbed": [],
       "transplant": [],
       "harvest": [11, 12, 1, 3, 4],
-      "notes": { "pt": "Aguenta frio; semeie assim que der para mexer na terra e de novo no fim do verão. Use variedades lentas para florescer.", "en": "Cold-hardy; sow as soon as soil can be worked and again in late summer. Use slow-bolting varieties." }
+      "notes": { "pt": "Aguenta frio; semeie assim que der para mexer na terra e de novo no fim do verão. Use variedades lentas para florescer.", "en": "Cold-hardy; sow as soon as soil can be worked and again in late summer. Use slow-bolting varieties.", "es": "Resistente al frío; siembra en cuanto se pueda trabajar el suelo y otra vez a finales del verano. Usa variedades de espigado lento." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Não gosta de solo ácido: corrija com calcário conforme análise. Composto ou esterco curtido no canteiro e um pouco de nitrogênio em cobertura; nutriente e água em dia ajudam a evitar o florescimento precoce.",
-      "en": "Dislikes acid soil: lime according to a soil test. Compost or rotted manure in the bed and a little nitrogen side-dressing; good nutrition and water help delay bolting."
+      "en": "Dislikes acid soil: lime according to a soil test. Compost or rotted manure in the bed and a little nitrogen side-dressing; good nutrition and water help delay bolting.",
+      "es": "No le gusta el suelo ácido: encala según un análisis de suelo. Compost o estiércol curado en el bancal y un poco de nitrógeno en cobertera; una buena nutrición y el agua ayudan a retrasar el espigado."
     },
     "pruning": null,
     "watering": {
       "pt": "Terra sempre úmida, com regas leves e frequentes.",
-      "en": "Keep soil consistently moist with light, frequent watering."
+      "en": "Keep soil consistently moist with light, frequent watering.",
+      "es": "Mantén el suelo constantemente húmedo con riegos ligeros y frecuentes."
     },
     "other": {
       "pt": "Sementes a 1–2 cm, desbaste para 8–10 cm entre plantas (adensar demais faz florescer). Colha as folhas de fora ou a planta inteira antes de espigar.",
-      "en": "Sow 1–2 cm deep, thin to 8–10 cm apart (crowding promotes bolting). Pick outer leaves or the whole plant before it bolts."
+      "en": "Sow 1–2 cm deep, thin to 8–10 cm apart (crowding promotes bolting). Pick outer leaves or the whole plant before it bolts.",
+      "es": "Siembra a 1–2 cm de profundidad y aclara a 8–10 cm entre plantas (el hacinamiento favorece el espigado). Recoge las hojas exteriores o la planta entera antes de que se espigue."
     }
   },
   "sources": [

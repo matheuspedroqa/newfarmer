@@ -2,28 +2,32 @@
   "id": "turnip",
   "summary": {
     "pt": "O nabo é uma raiz de clima fresco, de ciclo curto (40–70 dias). Aproveita-se a raiz e também as folhas novas, que podem ser refogadas.",
-    "en": "Turnip is a cool-season root crop with a short cycle (40–70 days). Both the root and the young leaves, which can be sautéed, are eaten."
+    "en": "Turnip is a cool-season root crop with a short cycle (40–70 days). Both the root and the young leaves, which can be sautéed, are eaten.",
+    "es": "El nabo es una raíz de estación fresca con un ciclo corto (40–70 días). Se comen tanto la raíz como las hojas jóvenes, que se pueden saltear."
   },
   "calendar": {
-    "tropical": { "directSowing": [4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8, 9], "notes": { "pt": "Só na época mais fresca do ano ou em altitude; no calor a raiz fica fibrosa e picante.", "en": "Only in the coolest season or at altitude; heat makes roots woody and hot." } },
+    "tropical": { "directSowing": [4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8, 9], "notes": { "pt": "Só na época mais fresca do ano ou em altitude; no calor a raiz fica fibrosa e picante.", "en": "Only in the coolest season or at altitude; heat makes roots woody and hot.", "es": "Solo en la estación más fresca o en altitud; el calor vuelve las raíces leñosas y picantes." } },
     "subtropical": { "directSowing": [2, 3, 4, 5, 6, 7, 8], "seedbed": [], "transplant": [], "harvest": [4, 5, 6, 7, 8, 9, 10] },
     "temperate": { "directSowing": [2, 3, 4, 8, 9], "seedbed": [], "transplant": [], "harvest": [4, 5, 6, 10, 11] },
-    "semiarid": { "directSowing": [5, 6], "seedbed": [], "transplant": [], "harvest": [7, 8], "notes": { "pt": "Com irrigação, só nos meses mais amenos.", "en": "With irrigation, only in the mildest months." } },
-    "cold": { "directSowing": [9, 10, 1, 2], "seedbed": [], "transplant": [], "harvest": [11, 12, 3, 4], "notes": { "pt": "Semeie 2–3 semanas antes da última geada ou no fim do verão para colher no outono.", "en": "Sow 2–3 weeks before the last frost, or in late summer for an autumn harvest." } }
+    "semiarid": { "directSowing": [5, 6], "seedbed": [], "transplant": [], "harvest": [7, 8], "notes": { "pt": "Com irrigação, só nos meses mais amenos.", "en": "With irrigation, only in the mildest months.", "es": "Con riego, solo en los meses más suaves." } },
+    "cold": { "directSowing": [9, 10, 1, 2], "seedbed": [], "transplant": [], "harvest": [11, 12, 3, 4], "notes": { "pt": "Semeie 2–3 semanas antes da última geada ou no fim do verão para colher no outono.", "en": "Sow 2–3 weeks before the last frost, or in late summer for an autumn harvest.", "es": "Siembra 2–3 semanas antes de la última helada, o a finales del verano para una cosecha de otoño." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Se puder, faça análise de solo. Antes de semear, misture composto ou esterco curtido e um pouco de NPK (ex.: 10-10-10) nos primeiros 10–15 cm de solo. Normalmente não precisa de mais adubo depois. Use só esterco bem curtido: esterco fresco deforma a raiz.",
-      "en": "Test the soil if you can. Before sowing, mix compost or aged manure and a little NPK (e.g., 10-10-10) into the top 10–15 cm. It usually needs nothing more afterward. Use only well-aged manure: fresh manure deforms roots."
+      "en": "Test the soil if you can. Before sowing, mix compost or aged manure and a little NPK (e.g., 10-10-10) into the top 10–15 cm. It usually needs nothing more afterward. Use only well-aged manure: fresh manure deforms roots.",
+      "es": "Haz un análisis de suelo si puedes. Antes de sembrar, mezcla compost o estiércol curado y un poco de NPK (p. ej., 10-10-10) en los 10–15 cm superiores. Normalmente no necesita nada más después. Usa solo estiércol bien curado: el estiércol fresco deforma las raíces."
     },
     "pruning": null,
     "watering": {
       "pt": "Mantenha o solo úmido de forma constante. Seca deixa a raiz dura e com sabor forte; regas irregulares fazem a raiz rachar.",
-      "en": "Keep soil evenly moist. Drought makes roots tough and strong-flavored; irregular watering makes them crack."
+      "en": "Keep soil evenly moist. Drought makes roots tough and strong-flavored; irregular watering makes them crack.",
+      "es": "Mantén el suelo húmedo de forma uniforme. La sequía hace las raíces duras y de sabor fuerte; el riego irregular las agrieta."
     },
     "other": {
       "pt": "Semeie direto no canteiro e desbaste deixando 8–15 cm entre plantas. Não plante depois de couve, repolho ou brócolis (mesma família, mesmas pragas). Colha as raízes com 5–8 cm, ainda macias.",
-      "en": "Sow directly and thin to 8–15 cm between plants. Don't follow cabbage, kale or broccoli (same family, same pests). Harvest roots at 5–8 cm, while still tender."
+      "en": "Sow directly and thin to 8–15 cm between plants. Don't follow cabbage, kale or broccoli (same family, same pests). Harvest roots at 5–8 cm, while still tender.",
+      "es": "Siembra directa y aclara a 8–15 cm entre plantas. No lo plantes después de col, kale o brócoli (misma familia, mismas plagas). Cosecha las raíces a 5–8 cm, mientras están tiernas."
     }
   },
   "sources": [

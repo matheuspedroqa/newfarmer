@@ -2,31 +2,36 @@
   "id": "lavender",
   "summary": {
     "pt": "A lavanda é um arbusto perene perfumado, usado em sachês, chás, óleos e para atrair abelhas. Gosta de sol, solo pobre e pouca água, e vive vários anos.",
-    "en": "Lavender is a fragrant perennial shrub used for sachets, tea, oils and to attract bees. It likes sun, poor soil and little water, and lives for several years."
+    "en": "Lavender is a fragrant perennial shrub used for sachets, tea, oils and to attract bees. It likes sun, poor soil and little water, and lives for several years.",
+    "es": "La lavanda es un arbusto perenne aromático usado para saquitos, infusión, aceites y para atraer abejas. Le gustan el sol, el suelo pobre y poca agua, y vive varios años."
   },
   "calendar": {
-    "tropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [6, 7, 8, 9], "notes": { "pt": "Vai melhor em regiões altas e secas; em calor úmido a raiz apodrece. A lavanda-dentata é a mais tolerante.", "en": "Does best in high, dry areas; humid heat rots the roots. French (dentata) lavender is the most tolerant." } },
+    "tropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [6, 7, 8, 9], "notes": { "pt": "Vai melhor em regiões altas e secas; em calor úmido a raiz apodrece. A lavanda-dentata é a mais tolerante.", "en": "Does best in high, dry areas; humid heat rots the roots. French (dentata) lavender is the most tolerant.", "es": "Se da mejor en zonas altas y secas; el calor húmedo pudre las raíces. La lavanda francesa (dentata) es la más tolerante." } },
     "subtropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 8, 9], "harvest": [5, 6, 7, 8, 9, 10, 11] },
     "temperate": { "directSowing": [], "seedbed": [], "transplant": [9, 10, 11], "harvest": [12, 1, 2] },
-    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [4, 5, 6], "harvest": [7, 8, 9, 10], "notes": { "pt": "Adapta-se bem ao seco; regue só até pegar e em estiagens longas.", "en": "Adapts well to dry climates; water only to establish and in long droughts." } },
-    "cold": { "directSowing": [], "seedbed": [], "transplant": [10, 11, 12], "harvest": [1, 2], "notes": { "pt": "Use a lavanda-inglesa (angustifolia), a mais resistente ao frio; plante depois das geadas.", "en": "Use English lavender (angustifolia), the most cold-hardy; plant after frosts." } }
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [4, 5, 6], "harvest": [7, 8, 9, 10], "notes": { "pt": "Adapta-se bem ao seco; regue só até pegar e em estiagens longas.", "en": "Adapts well to dry climates; water only to establish and in long droughts.", "es": "Se adapta bien a climas secos; riega solo para establecerla y en sequías largas." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [10, 11, 12], "harvest": [1, 2], "notes": { "pt": "Use a lavanda-inglesa (angustifolia), a mais resistente ao frio; plante depois das geadas.", "en": "Use English lavender (angustifolia), the most cold-hardy; plant after frosts.", "es": "Usa lavanda inglesa (angustifolia), la más resistente al frío; planta después de las heladas." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Quase não precisa de adubo: solo fértil demais dá muita folha e pouca flor. Faça calagem se o solo for ácido (gosta de pH 6,5–7,5). No máximo, um pouco de composto ou adubo pobre em nitrogênio uma vez por ano, no início da primavera.",
-      "en": "Needs almost no fertilizer: rich soil gives lots of leaves and few flowers. Lime acid soil (it likes pH 6.5–7.5). At most, a little compost or low-nitrogen fertilizer once a year in early spring."
+      "en": "Needs almost no fertilizer: rich soil gives lots of leaves and few flowers. Lime acid soil (it likes pH 6.5–7.5). At most, a little compost or low-nitrogen fertilizer once a year in early spring.",
+      "es": "Casi no necesita fertilizante: el suelo rico da muchas hojas y pocas flores. Encala el suelo ácido (le gusta pH 6,5–7,5). Como mucho, un poco de compost o fertilizante bajo en nitrógeno una vez al año a principios de la primavera."
     },
     "pruning": {
       "pt": "Depois da floração, corte cerca de 1/3 da planta dando forma de bola. Corte só a parte verde: nunca pode o tronco lenhoso, que não rebrota.",
-      "en": "After flowering, cut back about 1/3 of the plant into a dome shape. Cut only green growth: never prune into old wood, which won't regrow."
+      "en": "After flowering, cut back about 1/3 of the plant into a dome shape. Cut only green growth: never prune into old wood, which won't regrow.",
+      "es": "Después de la floración, corta aproximadamente 1/3 de la planta dándole forma de cúpula. Corta solo el crecimiento verde: nunca podes en madera vieja, que no rebrota."
     },
     "watering": {
       "pt": "Regue até a muda pegar. Depois, só quando o solo estiver bem seco. Excesso de água é a principal causa de morte.",
-      "en": "Water until the plant is established. Then only when the soil is quite dry. Overwatering is the main cause of death."
+      "en": "Water until the plant is established. Then only when the soil is quite dry. Overwatering is the main cause of death.",
+      "es": "Riega hasta que la planta se establezca. Después solo cuando el suelo esté bastante seco. El exceso de riego es la principal causa de muerte."
     },
     "other": {
       "pt": "Sol pleno e solo muito bem drenado; em terra pesada, plante em canteiro elevado ou monte de terra. Espaçamento de 60–90 cm. Colha as flores quando os primeiros botões abrirem.",
-      "en": "Full sun and very well-drained soil; in heavy soil, plant on a raised bed or mound. Space 60–90 cm apart. Harvest flowers when the first buds open."
+      "en": "Full sun and very well-drained soil; in heavy soil, plant on a raised bed or mound. Space 60–90 cm apart. Harvest flowers when the first buds open.",
+      "es": "Pleno sol y suelo muy bien drenado; en suelo pesado, planta en un bancal elevado o un montículo. Separa 60–90 cm. Cosecha las flores cuando se abran los primeros botones."
     }
   },
   "sources": [

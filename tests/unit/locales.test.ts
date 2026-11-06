@@ -8,9 +8,10 @@ describe("resolveLocale", () => {
     expect(resolveLocale("fr")).toBe("en");
   });
 
-  it("respeita a escolha de português ou inglês", () => {
+  it("respeita a escolha de português, inglês ou espanhol", () => {
     expect(resolveLocale("pt")).toBe("pt");
     expect(resolveLocale("en")).toBe("en");
+    expect(resolveLocale("es")).toBe("es");
   });
 });
 

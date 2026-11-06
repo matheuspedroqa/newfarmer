@@ -2,7 +2,8 @@
   "id": "papaya",
   "summary": {
     "pt": "Fruteira tropical de crescimento rápido, que começa a produzir 8–10 meses após o plantio e dá frutos o ano todo por 2–3 anos.",
-    "en": "A fast-growing tropical fruit plant that starts bearing 8–10 months after planting and fruits year-round for 2–3 years."
+    "en": "A fast-growing tropical fruit plant that starts bearing 8–10 months after planting and fruits year-round for 2–3 years.",
+    "es": "Planta frutal tropical de crecimiento rápido que empieza a dar fruto 8–10 meses después de plantar y fructifica todo el año durante 2–3 años."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [8, 9],
       "transplant": [10, 11],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Semeie em saquinhos (3 sementes) e leve ao campo com 30–45 dias, no início das chuvas. Com irrigação, planta-se o ano todo.", "en": "Sow in bags (3 seeds each) and plant out at 30–45 days, at the start of the rains. With irrigation, plant year-round." }
+      "notes": { "pt": "Semeie em saquinhos (3 sementes) e leve ao campo com 30–45 dias, no início das chuvas. Com irrigação, planta-se o ano todo.", "en": "Sow in bags (3 seeds each) and plant out at 30–45 days, at the start of the rains. With irrigation, plant year-round.", "es": "Siembra en bolsas (3 semillas cada una) y trasplanta a los 30–45 días, al inicio de las lluvias. Con riego, planta todo el año." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [7, 8],
       "transplant": [9, 10],
       "harvest": [3, 4, 5, 6, 7, 8],
-      "notes": { "pt": "Plante após as geadas, em local quente e abrigado; o frio deixa o fruto menos doce.", "en": "Plant after frosts in a warm, sheltered spot; cold makes fruit less sweet." }
+      "notes": { "pt": "Plante após as geadas, em local quente e abrigado; o frio deixa o fruto menos doce.", "en": "Plant after frosts in a warm, sheltered spot; cold makes fruit less sweet.", "es": "Planta después de las heladas en un lugar cálido y protegido; el frío hace el fruto menos dulce." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não tolera geada; só em estufa.", "en": "Does not tolerate frost; greenhouse only." }
+      "notes": { "pt": "Não tolera geada; só em estufa.", "en": "Does not tolerate frost; greenhouse only.", "es": "No tolera la helada; solo en invernadero." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       "transplant": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Com irrigação, pode plantar em qualquer mês; proteja do vento.", "en": "With irrigation, plant in any month; shelter from wind." }
+      "notes": { "pt": "Com irrigação, pode plantar em qualquer mês; proteja do vento.", "en": "With irrigation, plant in any month; shelter from wind.", "es": "Con riego, planta en cualquier mes; protege del viento." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não se cultiva fora de estufa aquecida.", "en": "Not grown outside a heated greenhouse." }
+      "notes": { "pt": "Não se cultiva fora de estufa aquecida.", "en": "Not grown outside a heated greenhouse.", "es": "No se cultiva fuera de un invernadero calefaccionado." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça calagem conforme análise de solo. Na cova, use esterco curtido ou torta e fósforo. Depois, adube em cobertura com nitrogênio e potássio a cada 1–2 meses: o mamão produz o ano todo e responde muito ao adubo.",
-      "en": "Lime by soil test. In the hole, use rotted manure or oil cake plus phosphorus. Then side-dress nitrogen and potassium every 1–2 months: papaya fruits all year and responds strongly to feeding."
+      "en": "Lime by soil test. In the hole, use rotted manure or oil cake plus phosphorus. Then side-dress nitrogen and potassium every 1–2 months: papaya fruits all year and responds strongly to feeding.",
+      "es": "Encala según el análisis de suelo. En el hoyo, usa estiércol curado o torta oleaginosa más fósforo. Luego abona en cobertura con nitrógeno y potasio cada 1–2 meses: la papaya fructifica todo el año y responde mucho al abonado."
     },
     "pruning": {
       "pt": "Não se poda a copa. Plante 3 mudas por cova e, na floração (60–90 dias), faça a sexagem: deixe só a planta hermafrodita (fruto comprido). Tire brotos laterais e frutos mal formados.",
-      "en": "The crown isn't pruned. Plant 3 seedlings per hole and, at flowering (60–90 days), keep only the hermaphrodite plant (elongated fruit). Remove side shoots and misshapen fruit."
+      "en": "The crown isn't pruned. Plant 3 seedlings per hole and, at flowering (60–90 days), keep only the hermaphrodite plant (elongated fruit). Remove side shoots and misshapen fruit.",
+      "es": "La copa no se poda. Planta 3 plántulas por hoyo y, en la floración (60–90 días), deja solo la planta hermafrodita (fruto alargado). Quita los brotes laterales y los frutos deformes."
     },
     "watering": {
       "pt": "Precisa de água regular o ano todo; falta de água derruba flores e frutos. Encharcamento apodrece o pé em poucos dias.",
-      "en": "Needs regular water all year; drought drops flowers and fruit. Waterlogging rots the stem within days."
+      "en": "Needs regular water all year; drought drops flowers and fruit. Waterlogging rots the stem within days.",
+      "es": "Necesita agua regular todo el año; la sequía hace caer flores y frutos. El encharcamiento pudre el tallo en pocos días."
     },
     "other": {
       "pt": "Sol pleno, solo bem drenado e espaçamento de cerca de 3–4 m entre linhas e 1,8–2,5 m entre plantas. Arranque logo plantas com mosaico ou mancha anelar (vírus).",
-      "en": "Full sun, well-drained soil and spacing of about 3–4 m between rows and 1.8–2.5 m between plants. Remove plants with mosaic or ringspot (virus) right away."
+      "en": "Full sun, well-drained soil and spacing of about 3–4 m between rows and 1.8–2.5 m between plants. Remove plants with mosaic or ringspot (virus) right away.",
+      "es": "Pleno sol, suelo bien drenado y separación de unos 3–4 m entre hileras y 1,8–2,5 m entre plantas. Quita enseguida las plantas con mosaico o mancha anular (virus)."
     }
   },
   "sources": [

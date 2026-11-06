@@ -2,7 +2,8 @@
   "id": "cherry",
   "summary": {
     "pt": "Árvore frutífera de clima frio, a mais exigente em frio entre as frutíferas de caroço. Produz do 4º–5º ano; a cereja-doce é para comer fresca e a ácida, para doces.",
-    "en": "A cold-climate fruit tree, the most chill-demanding of the stone fruits. It bears from year 4–5; sweet cherries are for eating fresh and sour cherries for cooking."
+    "en": "A cold-climate fruit tree, the most chill-demanding of the stone fruits. It bears from year 4–5; sweet cherries are for eating fresh and sour cherries for cooking.",
+    "es": "Árbol frutal de clima frío, el más exigente en frío de los frutales de hueso. Produce desde el año 4–5; las cerezas dulces son para comer frescas y las ácidas para cocinar."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não produz: precisa de muito frio no inverno (em geral 700–900 horas abaixo de 7 °C).", "en": "Won't fruit: it needs a lot of winter cold (usually 700–900 hours below 7 °C)." }
+      "notes": { "pt": "Não produz: precisa de muito frio no inverno (em geral 700–900 horas abaixo de 7 °C).", "en": "Won't fruit: it needs a lot of winter cold (usually 700–900 hours below 7 °C).", "es": "No fructificará: necesita mucho frío invernal (normalmente 700–900 horas por debajo de 7 °C)." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [6, 7],
       "harvest": [11, 12],
-      "notes": { "pt": "Arriscado. Só em locais altos e frios, com variedades de pouco frio (cerca de 300–500 horas, como Stella e Lapins). Em inverno ameno, floresce pouco.", "en": "Risky. Only in high, cool spots with low-chill varieties (about 300–500 hours, such as Stella and Lapins). With mild winters it blooms poorly." }
+      "notes": { "pt": "Arriscado. Só em locais altos e frios, com variedades de pouco frio (cerca de 300–500 horas, como Stella e Lapins). Em inverno ameno, floresce pouco.", "en": "Risky. Only in high, cool spots with low-chill varieties (about 300–500 hours, such as Stella and Lapins). With mild winters it blooms poorly.", "es": "Arriesgado. Solo en lugares altos y frescos con variedades de poco frío (unas 300–500 horas, como Stella y Lapins). Con inviernos suaves florece mal." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [6, 7, 8],
       "harvest": [11, 12, 1],
-      "notes": { "pt": "Clima ideal onde o inverno é bem frio. Plante a muda dormente no inverno. Chuva na colheita racha os frutos.", "en": "Ideal where winters are properly cold. Plant dormant trees in winter. Rain at harvest cracks the fruit." }
+      "notes": { "pt": "Clima ideal onde o inverno é bem frio. Plante a muda dormente no inverno. Chuva na colheita racha os frutos.", "en": "Ideal where winters are properly cold. Plant dormant trees in winter. Rain at harvest cracks the fruit.", "es": "Ideal donde los inviernos son realmente fríos. Planta árboles en reposo en invierno. La lluvia en la cosecha parte los frutos." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não produz: falta frio no inverno e o calor seco prejudica a florada.", "en": "Won't fruit: winters lack cold and dry heat harms the bloom." }
+      "notes": { "pt": "Não produz: falta frio no inverno e o calor seco prejudica a florada.", "en": "Won't fruit: winters lack cold and dry heat harms the bloom.", "es": "No fructificará: los inviernos no tienen frío suficiente y el calor seco daña la floración." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10],
       "harvest": [12, 1],
-      "notes": { "pt": "A cereja-ácida aguenta bem inverno rigoroso; a doce é mais sensível. Plante na primavera, com o solo descongelado.", "en": "Sour cherries handle harsh winters well; sweet cherries are more tender. Plant in spring once the soil thaws." }
+      "notes": { "pt": "A cereja-ácida aguenta bem inverno rigoroso; a doce é mais sensível. Plante na primavera, com o solo descongelado.", "en": "Sour cherries handle harsh winters well; sweet cherries are more tender. Plant in spring once the soil thaws.", "es": "Las cerezas ácidas aguantan bien los inviernos duros; las dulces son más delicadas. Planta en primavera cuando el suelo se descongele." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Corrija o solo com calcário antes de plantar, conforme análise de solo. Depois, só esterco curtido ou composto no fim do inverno e pouco NPK na primavera. Adubo demais faz galho e não fruta.",
-      "en": "Lime the soil before planting, by soil test. Later, just rotted manure or compost in late winter and a little NPK in spring. Too much fertilizer makes wood, not fruit."
+      "en": "Lime the soil before planting, by soil test. Later, just rotted manure or compost in late winter and a little NPK in spring. Too much fertilizer makes wood, not fruit.",
+      "es": "Encala el suelo antes de plantar, según el análisis de suelo. Después, solo estiércol curado o compost a finales del invierno y un poco de NPK en primavera. Demasiado fertilizante da madera, no fruta."
     },
     "pruning": {
       "pt": "Forme a copa em vaso aberto ou com tronco central nos primeiros anos. Na árvore adulta, poda leve logo depois da colheita, tirando ramos cruzados, ladrões e doentes.",
-      "en": "Train an open-centre or central-leader shape in the first years. On mature trees, prune lightly right after harvest, removing crossing, water-sprout and diseased branches."
+      "en": "Train an open-centre or central-leader shape in the first years. On mature trees, prune lightly right after harvest, removing crossing, water-sprout and diseased branches.",
+      "es": "Forma un vaso abierto o un eje central en los primeros años. En árboles adultos, poda ligeramente justo después de la cosecha, quitando ramas cruzadas, chupones y enfermas."
     },
     "watering": {
       "pt": "Regue a muda nova toda semana no primeiro ano. Árvore adulta: regas fundas e regulares na seca. Não encharque: a raiz apodrece fácil.",
-      "en": "Water young trees weekly in the first year. Mature trees: deep, regular watering in dry spells. Don't waterlog: roots rot easily."
+      "en": "Water young trees weekly in the first year. Mature trees: deep, regular watering in dry spells. Don't waterlog: roots rot easily.",
+      "es": "Riega los árboles jóvenes cada semana el primer año. Árboles adultos: riego profundo y regular en periodos secos. No encharques: las raíces se pudren fácilmente."
     },
     "other": {
       "pt": "Sol pleno e solo bem drenado. A maioria das cerejas-doces precisa de outra variedade para polinizar (Stella, Lapins e Sweetheart dão sozinhas). Proteja os frutos dos pássaros com tela.",
-      "en": "Full sun and well-drained soil. Most sweet cherries need another variety to pollinate (Stella, Lapins and Sweetheart are self-fertile). Net the fruit against birds."
+      "en": "Full sun and well-drained soil. Most sweet cherries need another variety to pollinate (Stella, Lapins and Sweetheart are self-fertile). Net the fruit against birds.",
+      "es": "Pleno sol y suelo bien drenado. La mayoría de las cerezas dulces necesitan otra variedad para polinizar (Stella, Lapins y Sweetheart son autofértiles). Cubre los frutos con red contra los pájaros."
     }
   },
   "sources": [

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
+import { resolveLocale } from "@/i18n/locales";
 import { formatMoney, type Currency } from "@/lib/pricing";
 import { getAdminOverview } from "@/server/admin";
 import { requirePlatformAdmin } from "@/server/authz";
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function AdminOverviewPage() {
   await requirePlatformAdmin();
   const t = await getTranslations("admin");
-  const locale = (await getLocale()) === "pt" ? "pt" : "en";
+  const locale = resolveLocale(await getLocale());
   const o = await getAdminOverview(await getDb(), Date.now());
   const currencies = (["brl", "eur", "usd"] as Currency[]).filter((c) => o.mrr[c] > 0);
   const mrr = (currencies.length ? currencies : (["brl"] as Currency[])).map((c) => formatMoney(c, o.mrr[c], locale)).join(" · ");

@@ -2,28 +2,32 @@
   "id": "okra",
   "summary": {
     "pt": "O quiabo é uma hortaliça de calor, muito rústica e produtiva. Começa a dar frutos cerca de 2 meses após a semeadura e segue produzindo por meses.",
-    "en": "Okra is a hardy, productive warm-season vegetable. It starts bearing about 2 months after sowing and keeps producing for months."
+    "en": "Okra is a hardy, productive warm-season vegetable. It starts bearing about 2 months after sowing and keeps producing for months.",
+    "es": "El quimbombó (okra) es una hortaliza resistente y productiva de temporada cálida. Empieza a dar frutos unos 2 meses después de sembrar y sigue produciendo durante meses."
   },
   "calendar": {
     "tropical": { "directSowing": [8, 9, 10, 11, 12, 1, 2, 3], "seedbed": [], "transplant": [], "harvest": [10, 11, 12, 1, 2, 3, 4, 5, 6] },
     "subtropical": { "directSowing": [9, 10, 11, 12, 1], "seedbed": [], "transplant": [], "harvest": [11, 12, 1, 2, 3, 4] },
     "temperate": { "directSowing": [10, 11, 12], "seedbed": [], "transplant": [], "harvest": [1, 2, 3, 4] },
-    "semiarid": { "directSowing": [8, 9, 10, 11, 12, 1, 2], "seedbed": [], "transplant": [], "harvest": [10, 11, 12, 1, 2, 3, 4, 5], "notes": { "pt": "Com irrigação; tolera bem o calor.", "en": "With irrigation; handles heat well." } },
-    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Precisa de solo acima de 20 °C e não tolera frio; só em estufa.", "en": "Needs soil above 20 °C and does not tolerate cold; greenhouse only." } }
+    "semiarid": { "directSowing": [8, 9, 10, 11, 12, 1, 2], "seedbed": [], "transplant": [], "harvest": [10, 11, 12, 1, 2, 3, 4, 5], "notes": { "pt": "Com irrigação; tolera bem o calor.", "en": "With irrigation; handles heat well.", "es": "Con riego; aguanta bien el calor." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [], "harvest": [], "notes": { "pt": "Precisa de solo acima de 20 °C e não tolera frio; só em estufa.", "en": "Needs soil above 20 °C and does not tolerate cold; greenhouse only.", "es": "Necesita suelo por encima de 20 °C y no tolera el frío; solo en invernadero." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Corrija o solo com calcário (pH 5,8–6,5). No plantio, misture esterco curtido ou composto e um pouco de NPK (ex.: 10-10-10). Faça uma adubação de cobertura com nitrogênio após a primeira colheita. Excesso de nitrogênio dá muita folha e poucos frutos.",
-      "en": "Lime the soil to pH 5.8–6.5. At planting, mix in aged manure or compost plus a little NPK (e.g., 10-10-10). Side-dress with nitrogen after the first harvest. Too much nitrogen gives lots of leaves and few pods."
+      "en": "Lime the soil to pH 5.8–6.5. At planting, mix in aged manure or compost plus a little NPK (e.g., 10-10-10). Side-dress with nitrogen after the first harvest. Too much nitrogen gives lots of leaves and few pods.",
+      "es": "Encala el suelo hasta pH 5,8–6,5. Al plantar, mezcla estiércol curado o compost más un poco de NPK (p. ej., 10-10-10). Abona en cobertura con nitrógeno después de la primera cosecha. Demasiado nitrógeno da muchas hojas y pocas vainas."
     },
     "pruning": null,
     "watering": {
       "pt": "Regue com regularidade, principalmente na floração e frutificação. Tolera alguma seca, mas produz menos.",
-      "en": "Water regularly, especially during flowering and fruiting. It tolerates some drought but yields less."
+      "en": "Water regularly, especially during flowering and fruiting. It tolerates some drought but yields less.",
+      "es": "Riega con regularidad, sobre todo durante la floración y la fructificación. Tolera algo de sequía, pero rinde menos."
     },
     "other": {
       "pt": "Deixe as sementes de molho de um dia para o outro para germinar mais rápido. Desbaste deixando cerca de 30 cm entre plantas e colha os frutos novos a cada 2–3 dias, antes de ficarem fibrosos.",
-      "en": "Soak seeds overnight for faster germination. Thin to about 30 cm between plants and pick young pods every 2–3 days, before they turn woody."
+      "en": "Soak seeds overnight for faster germination. Thin to about 30 cm between plants and pick young pods every 2–3 days, before they turn woody.",
+      "es": "Remoja las semillas durante una noche para que germinen más rápido. Aclara a unos 30 cm entre plantas y recoge las vainas tiernas cada 2–3 días, antes de que se pongan leñosas."
     }
   },
   "sources": [

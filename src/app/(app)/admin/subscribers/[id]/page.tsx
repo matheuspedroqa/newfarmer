@@ -3,6 +3,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { setSubscriptionPausedAction } from "@/app/actions/admin";
+import { resolveLocale } from "@/i18n/locales";
 import { CROPS } from "@/lib/catalog";
 import { formatMoney, type Currency } from "@/lib/pricing";
 import { logSafely } from "@/server/activity-log";
@@ -27,7 +28,7 @@ export default async function SubscriberDetailPage({ params, searchParams }: { p
 
   const t = await getTranslations("admin");
   const tc = await getTranslations();
-  const locale = (await getLocale()) === "pt" ? "pt" : "en";
+  const locale = resolveLocale(await getLocale());
   const date = (ms: number | null) => (ms === null ? t("never") : new Intl.DateTimeFormat(locale, { dateStyle: "short" }).format(ms));
   const dateTime = new Intl.DateTimeFormat(locale, { dateStyle: "short", timeStyle: "medium" });
   const sub = d.subscription;

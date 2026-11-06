@@ -2,7 +2,8 @@
   "id": "corn",
   "summary": {
     "pt": "O milho é um cereal de verão, fácil de plantar, que serve para comer verde, fazer fubá e alimentar galinhas, porcos e vacas.",
-    "en": "Corn (maize) is an easy summer cereal you can eat fresh, grind into meal, or feed to chickens, pigs and cattle."
+    "en": "Corn (maize) is an easy summer cereal you can eat fresh, grind into meal, or feed to chickens, pigs and cattle.",
+    "es": "El maíz es un cereal de verano fácil que puedes comer fresco, moler para harina o dar a gallinas, cerdos y ganado."
   },
   "calendar": {
     "tropical": {
@@ -10,7 +11,7 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [2, 3, 4, 5, 6, 7],
-      "notes": { "pt": "Plante com o início das chuvas. O plantio de janeiro–fevereiro (safrinha) corre mais risco de faltar chuva no fim.", "en": "Sow when the rains start. A January–February sowing (second crop) risks running out of rain at the end." }
+      "notes": { "pt": "Plante com o início das chuvas. O plantio de janeiro–fevereiro (safrinha) corre mais risco de faltar chuva no fim.", "en": "Sow when the rains start. A January–February sowing (second crop) risks running out of rain at the end.", "es": "Siembra cuando empiecen las lluvias. Una siembra en enero–febrero (segunda cosecha) corre el riesgo de quedarse sin lluvia al final." }
     },
     "subtropical": {
       "directSowing": [8, 9, 10, 11],
@@ -23,36 +24,39 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [2, 3, 4],
-      "notes": { "pt": "Semeie quando o solo passar de 10 °C e o risco de geada acabar.", "en": "Sow once the soil is above 10 °C (50 °F) and frost risk is over." }
+      "notes": { "pt": "Semeie quando o solo passar de 10 °C e o risco de geada acabar.", "en": "Sow once the soil is above 10 °C (50 °F) and frost risk is over.", "es": "Siembra cuando el suelo esté por encima de 10 °C (50 °F) y haya pasado el riesgo de helada." }
     },
     "semiarid": {
       "directSowing": [11, 12, 1, 2],
       "seedbed": [],
       "transplant": [],
       "harvest": [3, 4, 5, 6],
-      "notes": { "pt": "Plante logo nas primeiras chuvas fortes, com variedade precoce, ou use irrigação.", "en": "Sow right after the first heavy rains with an early variety, or irrigate." }
+      "notes": { "pt": "Plante logo nas primeiras chuvas fortes, com variedade precoce, ou use irrigação.", "en": "Sow right after the first heavy rains with an early variety, or irrigate.", "es": "Siembra justo después de las primeras lluvias fuertes con una variedad temprana, o riega." }
     },
     "cold": {
       "directSowing": [11],
       "seedbed": [],
       "transplant": [],
       "harvest": [3, 4],
-      "notes": { "pt": "Só com híbridos de ciclo curto, depois da última geada.", "en": "Only with short-season hybrids, after the last frost." }
+      "notes": { "pt": "Só com híbridos de ciclo curto, depois da última geada.", "en": "Only with short-season hybrids, after the last frost.", "es": "Solo con híbridos de ciclo corto, después de la última helada." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo e corrija a acidez com calcário 2–3 meses antes. No plantio, use esterco curtido ou NPK (ex.: 4-14-8) no sulco. Quando o milho tiver 4–6 folhas, jogue ureia ou esterco em cobertura ao lado da linha: o milho gasta muito nitrogênio.",
-      "en": "Test the soil and lime acid soils 2–3 months ahead. At sowing, put aged manure or an NPK starter in the furrow. When plants have 4–6 leaves, side-dress with urea or manure beside the row: corn needs a lot of nitrogen."
+      "en": "Test the soil and lime acid soils 2–3 months ahead. At sowing, put aged manure or an NPK starter in the furrow. When plants have 4–6 leaves, side-dress with urea or manure beside the row: corn needs a lot of nitrogen.",
+      "es": "Haz un análisis de suelo y encala los suelos ácidos 2–3 meses antes. En la siembra, pon estiércol curado o un NPK de arranque en el surco. Cuando las plantas tengan 4–6 hojas, abona en cobertura con urea o estiércol junto a la hilera: el maíz necesita mucho nitrógeno."
     },
     "pruning": null,
     "watering": {
       "pt": "Precisa de água regular, principalmente no pendoamento e no enchimento dos grãos. Falta de água nessa fase dá espiga falhada.",
-      "en": "Needs steady water, above all at tasseling and grain fill. Drought at that stage leaves gaps in the ear."
+      "en": "Needs steady water, above all at tasseling and grain fill. Drought at that stage leaves gaps in the ear.",
+      "es": "Necesita agua constante, sobre todo en la espigazón y el llenado del grano. La sequía en esa etapa deja huecos en la mazorca."
     },
     "other": {
       "pt": "Pleno sol. Plante em blocos de várias linhas (não uma linha só) para a polinização encher as espigas. Fique de olho na lagarta-do-cartucho no miolo da planta.",
-      "en": "Full sun. Plant in blocks of several rows, not a single row, so pollination fills the ears. Watch for fall armyworm in the plant's whorl."
+      "en": "Full sun. Plant in blocks of several rows, not a single row, so pollination fills the ears. Watch for fall armyworm in the plant's whorl.",
+      "es": "Pleno sol. Planta en bloques de varias hileras, no en una sola, para que la polinización llene las mazorcas. Vigila el gusano cogollero en el cogollo de la planta."
     }
   },
   "sources": [

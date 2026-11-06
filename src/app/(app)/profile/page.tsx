@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getLocale, getTranslations } from "next-intl/server";
 import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
 import { openPortalAction } from "@/app/actions/billing";
+import { intlLocale, resolveLocale } from "@/i18n/locales";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getSubscription } from "@/server/subscriptions";
@@ -21,7 +22,7 @@ export default async function ProfilePage() {
   const sub = await getSubscription(await getDb(), user.id);
   const locale = await getLocale();
   const status = sub?.status === "active" || sub?.status === "trialing" ? "active" : sub?.status === "past_due" ? "past_due" : sub?.status === "paused" ? "paused" : sub?.status === "canceled" ? "canceled" : "none";
-  const date = sub?.currentPeriodEnd ? new Intl.DateTimeFormat(locale === "pt" ? "pt-BR" : "en-US", { dateStyle: "long" }).format(sub.currentPeriodEnd) : null;
+  const date = sub?.currentPeriodEnd ? new Intl.DateTimeFormat(intlLocale(resolveLocale(locale)), { dateStyle: "long" }).format(sub.currentPeriodEnd) : null;
   const btn = "inline-flex min-h-11 w-full items-center justify-center rounded-xl border-2 border-primary px-5 py-3 font-bold transition hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:w-60";
   const info: [string, string][] = [
     [t("profile.name"), user.name],

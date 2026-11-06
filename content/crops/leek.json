@@ -2,31 +2,36 @@
   "id": "leek",
   "summary": {
     "pt": "O alho-poró é parente da cebola, com um talo branco e suave muito usado em sopas. Gosta de clima ameno e tem ciclo longo (4–6 meses), mas é fácil de cuidar.",
-    "en": "Leek is an onion relative with a mild white stalk, great in soups. It likes mild weather and has a long cycle (4–6 months), but is easy to care for."
+    "en": "Leek is an onion relative with a mild white stalk, great in soups. It likes mild weather and has a long cycle (4–6 months), but is easy to care for.",
+    "es": "El puerro es pariente de la cebolla, con un tallo blanco suave, ideal para sopas. Le gusta el clima suave y tiene un ciclo largo (4–6 meses), pero es fácil de cuidar."
   },
   "calendar": {
-    "tropical": { "directSowing": [], "seedbed": [3, 4, 5], "transplant": [5, 6, 7], "harvest": [8, 9, 10, 11], "notes": { "pt": "Vai melhor em regiões de altitude e na época mais fresca.", "en": "Does best at altitude and in the cooler season." } },
+    "tropical": { "directSowing": [], "seedbed": [3, 4, 5], "transplant": [5, 6, 7], "harvest": [8, 9, 10, 11], "notes": { "pt": "Vai melhor em regiões de altitude e na época mais fresca.", "en": "Does best at altitude and in the cooler season.", "es": "Se da mejor en altitud y en la época más fresca." } },
     "subtropical": { "directSowing": [], "seedbed": [2, 3, 4, 5], "transplant": [4, 5, 6, 7], "harvest": [7, 8, 9, 10, 11] },
     "temperate": { "directSowing": [], "seedbed": [2, 3, 8, 9], "transplant": [4, 5, 10, 11], "harvest": [8, 9, 10, 2, 3, 4, 5, 6] },
-    "semiarid": { "directSowing": [], "seedbed": [3, 4], "transplant": [5, 6], "harvest": [8, 9, 10], "notes": { "pt": "Com irrigação, na época mais amena; o calor forte atrasa o crescimento.", "en": "With irrigation, in the mildest season; strong heat slows growth." } },
-    "cold": { "directSowing": [], "seedbed": [8, 9], "transplant": [10, 11], "harvest": [3, 4, 5, 6], "notes": { "pt": "Faça as mudas em local protegido; aguenta geada no fim do ciclo.", "en": "Raise seedlings under cover; tolerates frost late in the cycle." } }
+    "semiarid": { "directSowing": [], "seedbed": [3, 4], "transplant": [5, 6], "harvest": [8, 9, 10], "notes": { "pt": "Com irrigação, na época mais amena; o calor forte atrasa o crescimento.", "en": "With irrigation, in the mildest season; strong heat slows growth.", "es": "Con riego, en la época más suave; el calor fuerte frena el crecimiento." } },
+    "cold": { "directSowing": [], "seedbed": [8, 9], "transplant": [10, 11], "harvest": [3, 4, 5, 6], "notes": { "pt": "Faça as mudas em local protegido; aguenta geada no fim do ciclo.", "en": "Raise seedlings under cover; tolerates frost late in the cycle.", "es": "Cría las plántulas bajo cubierta; tolera la helada al final del ciclo." } }
   },
   "care": {
     "fertilizing": {
       "pt": "No plantio, misture bastante composto ou esterco curtido e corrija o pH com calcário (ideal 6–7). O alho-poró pede nitrogênio extra: faça 2 coberturas (esterco, ureia ou sulfato de amônio em pouca quantidade) cerca de 1 e 2 meses após o transplante.",
-      "en": "At planting, mix in plenty of compost or aged manure and lime to pH 6–7. Leeks need extra nitrogen: side-dress twice (manure or a small amount of ammonium-based fertilizer) about 1 and 2 months after transplanting."
+      "en": "At planting, mix in plenty of compost or aged manure and lime to pH 6–7. Leeks need extra nitrogen: side-dress twice (manure or a small amount of ammonium-based fertilizer) about 1 and 2 months after transplanting.",
+      "es": "Al plantar, mezcla mucho compost o estiércol curado y encala hasta pH 6–7. Los puerros necesitan nitrógeno extra: abona en cobertura dos veces (estiércol o una pequeña cantidad de fertilizante amoniacal) al mes y a los dos meses del trasplante, aproximadamente."
     },
     "pruning": {
       "pt": "No transplante, apare as raízes para uns 2–3 cm e as pontas das folhas pela metade; ajuda a muda a pegar.",
-      "en": "When transplanting, trim roots to about 2–3 cm and cut leaf tips by half; it helps the seedling establish."
+      "en": "When transplanting, trim roots to about 2–3 cm and cut leaf tips by half; it helps the seedling establish.",
+      "es": "Al trasplantar, recorta las raíces a unos 2–3 cm y corta la mitad de las puntas de las hojas; ayuda a que la plántula se establezca."
     },
     "watering": {
       "pt": "Precisa de solo sempre úmido durante todo o ciclo; regue com regularidade, sem encharcar.",
-      "en": "Needs evenly moist soil throughout the cycle; water regularly without waterlogging."
+      "en": "Needs evenly moist soil throughout the cycle; water regularly without waterlogging.",
+      "es": "Necesita suelo con humedad uniforme durante todo el ciclo; riega con regularidad sin encharcar."
     },
     "other": {
       "pt": "Plante as mudas fundo (10–15 cm), com 15 cm entre plantas, e vá chegando terra ao pé (amontoa) 2–3 vezes para o talo ficar branco e comprido. Mantenha o canteiro sem mato.",
-      "en": "Plant seedlings deep (10–15 cm), 15 cm apart, and hill soil around the stems 2–3 times for a long white shank. Keep the bed weed-free."
+      "en": "Plant seedlings deep (10–15 cm), 15 cm apart, and hill soil around the stems 2–3 times for a long white shank. Keep the bed weed-free.",
+      "es": "Planta las plántulas hondo (10–15 cm), a 15 cm de separación, y aporca tierra alrededor de los tallos 2–3 veces para obtener un fuste blanco largo. Mantén el bancal libre de malezas."
     }
   },
   "sources": [

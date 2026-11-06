@@ -119,3 +119,14 @@ Todos os links dos e-mails, do sitemap, do canonical e do retorno do Stripe saem
 - [ ] Domínio próprio verificado no Resend.
 - [ ] IVA/OSS para clientes da UE e tributação no Brasil, com um contador.
 - [ ] Termos e Política revisados por um advogado.
+
+## Aviso de site fora do ar (UptimeRobot, grátis)
+
+O endereço `https://newfarmer.app/api/health` responde `{"ok":true}` quando o site e o banco estão funcionando, e erro 503 quando o banco não responde. Ele não mostra nenhum dado.
+
+1. Crie uma conta grátis em https://uptimerobot.com.
+2. **Add New Monitor** → tipo **HTTP(s)** → URL `https://newfarmer.app/api/health` → intervalo de **5 minutos**.
+3. Em **Alert Contacts**, deixe o seu e-mail (e, se quiser, o app do UptimeRobot no celular).
+4. Crie um segundo monitor igual para `https://newfarmer.app/` (a landing), que avisa se a Vercel cair.
+
+Se o firewall da Vercel bloquear o UptimeRobot (o monitor mostra 403), crie em **Vercel → Firewall** uma regra que deixa passar o User-Agent que contém `UptimeRobot`.

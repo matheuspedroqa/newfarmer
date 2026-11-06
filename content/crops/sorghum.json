@@ -2,7 +2,8 @@
   "id": "sorghum",
   "summary": {
     "pt": "O sorgo é parecido com o milho, mas aguenta muito mais seca e calor. Dá grão para ração, silagem e pasto, e é ótimo para regiões de chuva incerta.",
-    "en": "Sorghum is like corn but handles far more drought and heat. It gives grain for feed, silage and pasture, and is ideal where rain is unreliable."
+    "en": "Sorghum is like corn but handles far more drought and heat. It gives grain for feed, silage and pasture, and is ideal where rain is unreliable.",
+    "es": "El sorgo es como el maíz, pero aguanta mucha más sequía y calor. Da grano para pienso, ensilado y pasto, y es ideal donde la lluvia no es fiable."
   },
   "calendar": {
     "tropical": {
@@ -10,7 +11,7 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [2, 3, 4, 5, 6, 7],
-      "notes": { "pt": "Muito usado na safrinha (jan–mar), depois da soja; quanto mais cedo dentro dessa janela, melhor.", "en": "Widely used as a second crop (Jan–Mar) after soybeans; the earlier within that window, the better." }
+      "notes": { "pt": "Muito usado na safrinha (jan–mar), depois da soja; quanto mais cedo dentro dessa janela, melhor.", "en": "Widely used as a second crop (Jan–Mar) after soybeans; the earlier within that window, the better.", "es": "Muy usado como segundo cultivo (ene–mar) después de la soja; cuanto antes dentro de esa ventana, mejor." }
     },
     "subtropical": {
       "directSowing": [9, 10, 11, 12],
@@ -23,36 +24,39 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [3, 4],
-      "notes": { "pt": "Semeie só com o solo acima de 18 °C, um pouco depois do milho.", "en": "Sow only once the soil is above 18 °C (65 °F), a little after corn." }
+      "notes": { "pt": "Semeie só com o solo acima de 18 °C, um pouco depois do milho.", "en": "Sow only once the soil is above 18 °C (65 °F), a little after corn.", "es": "Siembra solo cuando el suelo supere los 18 °C (65 °F), un poco después del maíz." }
     },
     "semiarid": {
       "directSowing": [12, 1, 2, 3],
       "seedbed": [],
       "transplant": [],
       "harvest": [4, 5, 6, 7],
-      "notes": { "pt": "Plante com as primeiras chuvas; é das melhores culturas de grão para o semiárido.", "en": "Sow with the first rains; one of the best grain crops for semi-arid land." }
+      "notes": { "pt": "Plante com as primeiras chuvas; é das melhores culturas de grão para o semiárido.", "en": "Sow with the first rains; one of the best grain crops for semi-arid land.", "es": "Siembra con las primeras lluvias; uno de los mejores cultivos de grano para tierras semiáridas." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não indicado: precisa de solo quente e verão longo.", "en": "Not suitable: needs warm soil and a long summer." }
+      "notes": { "pt": "Não indicado: precisa de solo quente e verão longo.", "en": "Not suitable: needs warm soil and a long summer.", "es": "No es adecuado: necesita suelo cálido y un verano largo." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo e corrija a acidez com calcário. No plantio, NPK ou esterco curtido no sulco. Nitrogênio em cobertura quando a planta tiver umas 5–6 folhas; em solo argiloso precisa de mais que em solo arenoso. Depois de feijão ou soja, dá para usar menos nitrogênio.",
-      "en": "Test the soil and lime acid soils. At sowing, put NPK or aged manure in the furrow. Side-dress nitrogen at about the 5–6 leaf stage; clay soils need more than sandy ones. After beans or soybeans you can use less nitrogen."
+      "en": "Test the soil and lime acid soils. At sowing, put NPK or aged manure in the furrow. Side-dress nitrogen at about the 5–6 leaf stage; clay soils need more than sandy ones. After beans or soybeans you can use less nitrogen.",
+      "es": "Haz un análisis de suelo y encala los suelos ácidos. A la siembra, pon NPK o estiércol curado en el surco. Aplica nitrógeno en cobertera hacia la fase de 5–6 hojas; los suelos arcillosos necesitan más que los arenosos. Después de judías o soja puedes usar menos nitrógeno."
     },
     "pruning": null,
     "watering": {
       "pt": "Aguenta seca: a planta 'para' e volta a crescer quando chove. Água ajuda mais na floração e no enchimento dos grãos.",
-      "en": "Drought tolerant: the plant pauses and resumes growing when rain returns. Water matters most at flowering and grain fill."
+      "en": "Drought tolerant: the plant pauses and resumes growing when rain returns. Water matters most at flowering and grain fill.",
+      "es": "Tolera la sequía: la planta se detiene y vuelve a crecer cuando regresa la lluvia. El agua importa más en la floración y el llenado del grano."
     },
     "other": {
       "pt": "Pleno sol. Semente pequena: plante raso (2–4 cm) em solo úmido. Passarinhos comem o grão maduro; colha logo. Não dê sorgo verde ou rebrota jovem e murcha a animais com fome: pode intoxicar.",
-      "en": "Full sun. Small seed: sow shallow (2–4 cm) in moist soil. Birds eat ripe grain; harvest promptly. Don't let hungry livestock graze young or wilted regrowth: it can poison them."
+      "en": "Full sun. Small seed: sow shallow (2–4 cm) in moist soil. Birds eat ripe grain; harvest promptly. Don't let hungry livestock graze young or wilted regrowth: it can poison them.",
+      "es": "Pleno sol. Semilla pequeña: siembra poco profundo (2–4 cm) en suelo húmedo. Los pájaros se comen el grano maduro; cosecha sin demora. No dejes que el ganado hambriento paste el rebrote joven o marchito: puede envenenarlo."
     }
   },
   "sources": [

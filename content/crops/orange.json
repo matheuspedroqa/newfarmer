@@ -2,7 +2,8 @@
   "id": "orange",
   "summary": {
     "pt": "Árvore frutífera perene que começa a produzir bem a partir do 3º–4º ano e dura décadas. Misturando variedades precoces e tardias, dá para colher laranja boa parte do ano.",
-    "en": "A long-lived fruit tree that starts bearing well from year 3–4 and lasts decades. Mixing early and late varieties gives oranges for much of the year."
+    "en": "A long-lived fruit tree that starts bearing well from year 3–4 and lasts decades. Mixing early and late varieties gives oranges for much of the year.",
+    "es": "Árbol frutal longevo que empieza a producir bien desde el año 3–4 y dura décadas. Mezclar variedades tempranas y tardías da naranjas durante gran parte del año."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [10, 11, 12, 1, 2],
       "harvest": [4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Plante na estação chuvosa. Hamlin é precoce, Pera colhe jul–out e Valência é tardia.", "en": "Plant in the rainy season. Hamlin is early, Pera is picked Jul–Oct and Valência is late." }
+      "notes": { "pt": "Plante na estação chuvosa. Hamlin é precoce, Pera colhe jul–out e Valência é tardia.", "en": "Plant in the rainy season. Hamlin is early, Pera is picked Jul–Oct and Valência is late.", "es": "Planta en la época de lluvias. Hamlin es temprana, Pera se recoge jul–oct y Valência es tardía." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10, 11],
       "harvest": [5, 6, 7, 8, 9, 10],
-      "notes": { "pt": "Plante na primavera, depois das geadas, para a muda pegar antes do inverno seguinte.", "en": "Plant in spring, after frosts, so the tree establishes before the next winter." }
+      "notes": { "pt": "Plante na primavera, depois das geadas, para a muda pegar antes do inverno seguinte.", "en": "Plant in spring, after frosts, so the tree establishes before the next winter.", "es": "Planta en primavera, después de las heladas, para que el árbol se establezca antes del siguiente invierno." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10],
       "harvest": [5, 6, 7, 8, 9, 10],
-      "notes": { "pt": "Só onde a geada é leve (até cerca de −2 °C), como no litoral mediterrâneo. Em geada forte, plante em vaso e abrigue.", "en": "Only where frost is light (to about −2 °C), as on the Mediterranean coast. With hard frost, grow in a pot and shelter it." }
+      "notes": { "pt": "Só onde a geada é leve (até cerca de −2 °C), como no litoral mediterrâneo. Em geada forte, plante em vaso e abrigue.", "en": "Only where frost is light (to about −2 °C), as on the Mediterranean coast. With hard frost, grow in a pot and shelter it.", "es": "Solo donde la helada es ligera (hasta unos −2 °C), como en la costa mediterránea. Con helada fuerte, cultívala en maceta y protégela." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [11, 12, 1, 2],
       "harvest": [5, 6, 7, 8, 9, 10],
-      "notes": { "pt": "Só com irrigação.", "en": "Irrigation only." }
+      "notes": { "pt": "Só com irrigação.", "en": "Irrigation only.", "es": "Solo con riego." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não tolera inverno rigoroso; só em vaso dentro de casa ou estufa.", "en": "Does not survive harsh winters; only in a pot indoors or in a greenhouse." }
+      "notes": { "pt": "Não tolera inverno rigoroso; só em vaso dentro de casa ou estufa.", "en": "Does not survive harsh winters; only in a pot indoors or in a greenhouse.", "es": "No sobrevive a inviernos duros; solo en maceta bajo techo o en invernadero." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça a calagem uns 2 meses antes do plantio. Não ponha adubo químico na cova; comece umas 3 semanas depois. Adube com NPK (ou esterco curtido) em 3–4 doses na época das chuvas, espalhando na projeção da copa, conforme análise de solo.",
-      "en": "Lime about 2 months before planting. Don't put chemical fertilizer in the hole; start about 3 weeks after. Apply NPK (or rotted manure) in 3–4 doses during the rainy season, spread under the canopy edge, by soil test."
+      "en": "Lime about 2 months before planting. Don't put chemical fertilizer in the hole; start about 3 weeks after. Apply NPK (or rotted manure) in 3–4 doses during the rainy season, spread under the canopy edge, by soil test.",
+      "es": "Encala unos 2 meses antes de plantar. No pongas fertilizante químico en el hoyo; empieza unas 3 semanas después. Aplica NPK (o estiércol curado) en 3–4 dosis durante la época de lluvias, repartido bajo el borde de la copa, según el análisis de suelo."
     },
     "pruning": {
       "pt": "Poda leve: tire ramos secos, doentes e os brotos que saem abaixo do enxerto (ladrões). Abrir um pouco o centro da copa deixa entrar luz.",
-      "en": "Light pruning: remove dead or diseased branches and shoots below the graft (suckers). Opening the canopy centre a little lets light in."
+      "en": "Light pruning: remove dead or diseased branches and shoots below the graft (suckers). Opening the canopy centre a little lets light in.",
+      "es": "Poda ligera: quita ramas muertas o enfermas y los brotes por debajo del injerto (chupones). Abrir un poco el centro de la copa deja entrar la luz."
     },
     "watering": {
       "pt": "Muda nova: regue com frequência nos primeiros meses. Árvore adulta: regas fundas e espaçadas na seca, principalmente na florada e no pegamento dos frutos. Encharcamento apodrece a raiz.",
-      "en": "Young trees: water often in the first months. Mature trees: deep, spaced watering in the dry season, especially at bloom and fruit set. Waterlogging rots roots."
+      "en": "Young trees: water often in the first months. Mature trees: deep, spaced watering in the dry season, especially at bloom and fruit set. Waterlogging rots roots.",
+      "es": "Árboles jóvenes: riega a menudo los primeros meses. Árboles adultos: riego profundo y espaciado en la época seca, sobre todo en la floración y el cuajado. El encharcamiento pudre las raíces."
     },
     "other": {
       "pt": "Sol pleno e solo bem drenado. Compre muda certificada de viveiro telado. O greening (HLB) não tem cura: arranque a planta doente e controle o psilídeo.",
-      "en": "Full sun and well-drained soil. Buy certified trees from a screenhouse nursery. Greening (HLB) has no cure: remove sick trees and control the psyllid."
+      "en": "Full sun and well-drained soil. Buy certified trees from a screenhouse nursery. Greening (HLB) has no cure: remove sick trees and control the psyllid.",
+      "es": "Pleno sol y suelo bien drenado. Compra árboles certificados de un vivero protegido con malla. El greening (HLB) no tiene cura: quita los árboles enfermos y controla el psílido."
     }
   },
   "sources": [

@@ -2,7 +2,8 @@
   "id": "sugarcane",
   "summary": {
     "pt": "Capim gigante semiperene, plantado por pedaços do colmo (toletes), que rebrota por vários anos. Serve para açúcar, caldo, rapadura e como ótima ração de seca para o gado.",
-    "en": "A giant semi-perennial grass planted from stalk pieces (setts) that regrows for several years. Used for sugar, juice, raw sugar and as great dry-season cattle feed."
+    "en": "A giant semi-perennial grass planted from stalk pieces (setts) that regrows for several years. Used for sugar, juice, raw sugar and as great dry-season cattle feed.",
+    "es": "Una gramínea gigante semiperenne que se planta a partir de trozos de caña (esquejes) y rebrota durante varios años. Se usa para azúcar, jugo, panela y como excelente alimento para el ganado en la estación seca."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [1, 2, 3, 9, 10, 11],
       "harvest": [5, 6, 7, 8, 9, 10, 11],
-      "notes": { "pt": "Toletes em sulco. Cana de ano: plantio set–nov; cana de ano e meio: jan–mar. Corte na seca.", "en": "Setts in furrows. One-year cane: plant Sep–Nov; 18-month cane: Jan–Mar. Cut in the dry season." }
+      "notes": { "pt": "Toletes em sulco. Cana de ano: plantio set–nov; cana de ano e meio: jan–mar. Corte na seca.", "en": "Setts in furrows. One-year cane: plant Sep–Nov; 18-month cane: Jan–Mar. Cut in the dry season.", "es": "Esquejes en surcos. Caña de un año: planta sep–nov; caña de 18 meses: ene–mar. Corta en la estación seca." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [8, 9, 10],
       "harvest": [5, 6, 7, 8],
-      "notes": { "pt": "Plante na primavera, após as geadas; geada forte queima a cana.", "en": "Plant in spring, after frosts; hard frost burns the cane." }
+      "notes": { "pt": "Plante na primavera, após as geadas; geada forte queima a cana.", "en": "Plant in spring, after frosts; hard frost burns the cane.", "es": "Planta en primavera, después de las heladas; una helada fuerte quema la caña." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Geada frequente mata a cana; só vale em áreas quase sem geada.", "en": "Frequent frost kills cane; only worthwhile in nearly frost-free spots." }
+      "notes": { "pt": "Geada frequente mata a cana; só vale em áreas quase sem geada.", "en": "Frequent frost kills cane; only worthwhile in nearly frost-free spots.", "es": "Las heladas frecuentes matan la caña; solo vale la pena en lugares casi sin heladas." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [4, 5, 6, 7, 8],
       "harvest": [9, 10, 11, 12, 1, 2],
-      "notes": { "pt": "Só com irrigação.", "en": "Irrigation only." }
+      "notes": { "pt": "Só com irrigação.", "en": "Irrigation only.", "es": "Solo con riego." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não se cultiva: precisa de calor e não tolera geada.", "en": "Not grown: needs heat and does not tolerate frost." }
+      "notes": { "pt": "Não se cultiva: precisa de calor e não tolera geada.", "en": "Not grown: needs heat and does not tolerate frost.", "es": "No se cultiva: necesita calor y no tolera la helada." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça calagem antes do plantio. Coloque o adubo (NPK conforme análise de solo, com bastante fósforo) no fundo do sulco; esterco curtido ou torta de filtro ajudam. Depois de cada corte, adube a soqueira com nitrogênio e potássio.",
-      "en": "Lime before planting. Place fertilizer (NPK by soil test, rich in phosphorus) in the furrow bottom; rotted manure or filter cake help. After each cut, feed the ratoon with nitrogen and potassium."
+      "en": "Lime before planting. Place fertilizer (NPK by soil test, rich in phosphorus) in the furrow bottom; rotted manure or filter cake help. After each cut, feed the ratoon with nitrogen and potassium.",
+      "es": "Encala antes de plantar. Pon el abono (NPK según el análisis de suelo, rico en fósforo) en el fondo del surco; el estiércol curado y la torta de filtro ayudan. Tras cada corte, abona el rebrote con nitrógeno y potasio."
     },
     "pruning": null,
     "watering": {
       "pt": "Precisa de muita água na fase de crescimento (estação chuvosa) e de um período seco antes do corte para acumular açúcar.",
-      "en": "Needs plenty of water while growing (rainy season) and a dry spell before cutting to build up sugar."
+      "en": "Needs plenty of water while growing (rainy season) and a dry spell before cutting to build up sugar.",
+      "es": "Necesita mucha agua mientras crece (estación lluviosa) y un periodo seco antes del corte para acumular azúcar."
     },
     "other": {
       "pt": "Sol pleno. Use toletes sadios com 3 gemas, deitados no sulco a cerca de 1,2–1,5 m entre linhas. Capine nos primeiros meses, até a cana fechar.",
-      "en": "Full sun. Use healthy setts with 3 buds, laid in furrows about 1.2–1.5 m apart. Weed in the first months until the cane closes the rows."
+      "en": "Full sun. Use healthy setts with 3 buds, laid in furrows about 1.2–1.5 m apart. Weed in the first months until the cane closes the rows.",
+      "es": "Pleno sol. Usa esquejes sanos con 3 yemas, colocados en surcos separados unos 1,2–1,5 m. Quita las malas hierbas los primeros meses, hasta que la caña cierre las filas."
     }
   },
   "sources": [

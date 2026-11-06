@@ -2,7 +2,8 @@
   "id": "jabuticaba",
   "summary": {
     "pt": "Árvore brasileira de crescimento lento que dá frutos grudados no tronco. Muda enxertada produz em 2–5 anos; de semente pode levar 8–10 anos. Vive muitas décadas e também é ornamental.",
-    "en": "A slow-growing Brazilian tree that bears fruit stuck to its trunk. Grafted trees bear in 2–5 years; from seed it can take 8–10 years. Lives for many decades and is also ornamental."
+    "en": "A slow-growing Brazilian tree that bears fruit stuck to its trunk. Grafted trees bear in 2–5 years; from seed it can take 8–10 years. Lives for many decades and is also ornamental.",
+    "es": "Árbol brasileño de crecimiento lento que da frutos pegados al tronco. Los árboles injertados producen en 2–5 años; de semilla puede tardar 8–10 años. Vive muchas décadas y también es ornamental."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [10, 11, 12, 1],
       "harvest": [8, 9, 10, 11, 12],
-      "notes": { "pt": "Plante no início das chuvas. A safra principal vem no fim do inverno/primavera; com irrigação pode dar mais de uma florada por ano. A fruta dura poucos dias depois de colhida.", "en": "Plant at the start of the rains. The main crop comes in late winter/spring; with irrigation it may flower more than once a year. Fruit lasts only a few days after picking." }
+      "notes": { "pt": "Plante no início das chuvas. A safra principal vem no fim do inverno/primavera; com irrigação pode dar mais de uma florada por ano. A fruta dura poucos dias depois de colhida.", "en": "Plant at the start of the rains. The main crop comes in late winter/spring; with irrigation it may flower more than once a year. Fruit lasts only a few days after picking.", "es": "Planta al inicio de las lluvias. La cosecha principal llega a finales del invierno/primavera; con riego puede florecer más de una vez al año. El fruto dura solo unos días tras la recolección." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10, 11],
       "harvest": [9, 10, 11, 12],
-      "notes": { "pt": "Vai bem (é nativa do Sudeste/Sul do Brasil). Árvore adulta aguenta geada leve; proteja a muda nova nos primeiros invernos.", "en": "Does well (native to south-eastern Brazil). Mature trees handle light frost; protect young plants in the first winters." }
+      "notes": { "pt": "Vai bem (é nativa do Sudeste/Sul do Brasil). Árvore adulta aguenta geada leve; proteja a muda nova nos primeiros invernos.", "en": "Does well (native to south-eastern Brazil). Mature trees handle light frost; protect young plants in the first winters.", "es": "Se da bien (nativo del sureste de Brasil). Los árboles adultos aguantan heladas ligeras; protege las plantas jóvenes en los primeros inviernos." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Geada forte e inverno longo matam a planta ou impedem a produção. Só em vaso grande, abrigado no inverno.", "en": "Hard frost and long winters kill it or stop it bearing. Only in a large pot sheltered in winter." }
+      "notes": { "pt": "Geada forte e inverno longo matam a planta ou impedem a produção. Só em vaso grande, abrigado no inverno.", "en": "Hard frost and long winters kill it or stop it bearing. Only in a large pot sheltered in winter.", "es": "La helada fuerte y los inviernos largos lo matan o impiden que dé fruto. Solo en una maceta grande protegida en invierno." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [1, 2, 3],
       "harvest": [8, 9, 10, 11],
-      "notes": { "pt": "Sofre com ar seco e falta de água: só com irrigação frequente e meia-sombra nos primeiros anos.", "en": "Suffers in dry air and drought: only with frequent irrigation and partial shade in the early years." }
+      "notes": { "pt": "Sofre com ar seco e falta de água: só com irrigação frequente e meia-sombra nos primeiros anos.", "en": "Suffers in dry air and drought: only with frequent irrigation and partial shade in the early years.", "es": "Sufre con el aire seco y la sequía: solo con riego frecuente y sombra parcial los primeros años." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não sobrevive ao inverno rigoroso. Só em estufa.", "en": "Does not survive harsh winters. Greenhouse only." }
+      "notes": { "pt": "Não sobrevive ao inverno rigoroso. Só em estufa.", "en": "Does not survive harsh winters. Greenhouse only.", "es": "No sobrevive a inviernos duros. Solo en invernadero." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Gosta de solo levemente ácido (pH 5,5–6,5) e rico em matéria orgânica: faça calagem com calcário dolomítico só se a análise pedir. Composto ou esterco curtido na cova e depois 2 vezes por ano (antes da florada e depois da colheita), mais NPK leve.",
-      "en": "Likes slightly acidic soil (pH 5.5–6.5) rich in organic matter: apply dolomitic lime only if the soil test asks. Compost or rotted manure in the hole, then twice a year (before bloom and after harvest), plus light NPK."
+      "en": "Likes slightly acidic soil (pH 5.5–6.5) rich in organic matter: apply dolomitic lime only if the soil test asks. Compost or rotted manure in the hole, then twice a year (before bloom and after harvest), plus light NPK.",
+      "es": "Le gusta el suelo ligeramente ácido (pH 5,5–6,5) y rico en materia orgánica: aplica cal dolomítica solo si el análisis de suelo lo pide. Compost o estiércol curado en el hoyo, luego dos veces al año (antes de la floración y después de la cosecha), más NPK ligero."
     },
     "pruning": {
       "pt": "Quase não precisa. Tire só ramos secos, doentes ou que cruzam por dentro da copa, e os brotos que saem abaixo do enxerto. Não pode o tronco e os galhos grossos: é neles que nascem os frutos.",
-      "en": "Barely needs it. Remove only dead, diseased or crossing inner branches, and shoots below the graft. Don't cut the trunk or thick branches: that's where the fruit grows."
+      "en": "Barely needs it. Remove only dead, diseased or crossing inner branches, and shoots below the graft. Don't cut the trunk or thick branches: that's where the fruit grows.",
+      "es": "Casi no la necesita. Quita solo ramas interiores muertas, enfermas o cruzadas, y los brotes por debajo del injerto. No cortes el tronco ni las ramas gruesas: es donde crece el fruto."
     },
     "watering": {
       "pt": "Mantenha o solo sempre úmido, sem encharcar. Falta de água na florada derruba flores e frutos: regue 2–3 vezes por semana na seca.",
-      "en": "Keep the soil always moist but not soggy. Drought at bloom drops flowers and fruit: water 2–3 times a week in dry spells."
+      "en": "Keep the soil always moist but not soggy. Drought at bloom drops flowers and fruit: water 2–3 times a week in dry spells.",
+      "es": "Mantén el suelo siempre húmedo pero no encharcado. La sequía en la floración hace caer flores y frutos: riega 2–3 veces por semana en periodos secos."
     },
     "other": {
       "pt": "Sol pleno ou meia-sombra, solo fundo e bem drenado. Prefira muda enxertada para colher mais cedo. Cubra o solo com palha para guardar umidade. Também vai bem em vaso grande.",
-      "en": "Full sun or partial shade, deep well-drained soil. Choose grafted trees to harvest sooner. Mulch to keep moisture. Also does well in a large pot."
+      "en": "Full sun or partial shade, deep well-drained soil. Choose grafted trees to harvest sooner. Mulch to keep moisture. Also does well in a large pot.",
+      "es": "Pleno sol o sombra parcial, suelo profundo y bien drenado. Elige árboles injertados para cosechar antes. Acolcha para conservar la humedad. También se da bien en una maceta grande."
     }
   },
   "sources": [

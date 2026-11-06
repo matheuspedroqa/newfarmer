@@ -4,6 +4,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { startCheckoutAction } from "@/app/actions/billing";
 import { OnboardingSteps } from "@/components/OnboardingSteps";
+import { resolveLocale } from "@/i18n/locales";
 import { currencyForCountry, formatPrice } from "@/lib/pricing";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
@@ -20,7 +21,7 @@ export default async function SubscribePage({ searchParams }: { searchParams: Pr
   const t = await getTranslations("subscribe");
   const { error } = await searchParams;
   const formError = error === "rateLimited" ? "rateLimited" : error === "checkout" ? "checkoutFailed" : null;
-  const price = formatPrice(currencyForCountry(user.countryCode), (await getLocale()) === "pt" ? "pt" : "en");
+  const price = formatPrice(currencyForCountry(user.countryCode), resolveLocale(await getLocale()));
   const link = "inline-flex min-h-11 items-center text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
   return (
     <section className="max-w-2xl">

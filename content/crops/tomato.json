@@ -2,7 +2,8 @@
   "id": "tomato",
   "summary": {
     "pt": "Fruto mais plantado nas hortas do mundo, usado em salada e molho. Exige mais cuidado (tutor, desbrota, pragas), mas uma planta bem cuidada produz vários quilos.",
-    "en": "The most grown fruit in home gardens, used fresh and for sauce. It needs more care (staking, suckering, pests), but a well-kept plant yields several kilos."
+    "en": "The most grown fruit in home gardens, used fresh and for sauce. It needs more care (staking, suckering, pests), but a well-kept plant yields several kilos.",
+    "es": "El fruto más cultivado en las huertas caseras, que se usa fresco y para salsa. Necesita más cuidados (tutores, desbrote, plagas), pero una planta bien cuidada rinde varios kilos."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [2, 3, 4, 5, 6, 7, 8],
       "transplant": [3, 4, 5, 6, 7, 8, 9],
       "harvest": [6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Plante na estação mais seca e fresca; nas chuvas quentes as doenças aumentam muito.", "en": "Plant in the drier, cooler season; hot rains bring many diseases." }
+      "notes": { "pt": "Plante na estação mais seca e fresca; nas chuvas quentes as doenças aumentam muito.", "en": "Plant in the drier, cooler season; hot rains bring many diseases.", "es": "Planta en la estación más seca y fresca; las lluvias calurosas traen muchas enfermedades." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [7, 8, 9, 10, 11, 12],
       "transplant": [8, 9, 10, 11, 12, 1],
       "harvest": [11, 12, 1, 2, 3, 4],
-      "notes": { "pt": "Plante depois das geadas; colheita cerca de 90–120 dias após o transplante.", "en": "Plant after the frosts; harvest about 90–120 days after transplanting." }
+      "notes": { "pt": "Plante depois das geadas; colheita cerca de 90–120 dias após o transplante.", "en": "Plant after the frosts; harvest about 90–120 days after transplanting.", "es": "Planta después de las heladas; cosecha unos 90–120 días después del trasplante." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [9, 10],
       "transplant": [11, 12],
       "harvest": [1, 2, 3, 4],
-      "notes": { "pt": "Semeie em local protegido e transplante só quando não houver mais risco de geada.", "en": "Sow indoors and transplant only once frost danger has passed." }
+      "notes": { "pt": "Semeie em local protegido e transplante só quando não houver mais risco de geada.", "en": "Sow indoors and transplant only once frost danger has passed.", "es": "Siembra en interior y trasplanta solo cuando haya pasado el peligro de helada." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [2, 3, 4, 5],
       "transplant": [3, 4, 5, 6],
       "harvest": [6, 7, 8, 9],
-      "notes": { "pt": "Com irrigação, na época seca e mais fresca. Atenção à mosca-branca.", "en": "With irrigation, in the dry, cooler season. Watch for whitefly." }
+      "notes": { "pt": "Com irrigação, na época seca e mais fresca. Atenção à mosca-branca.", "en": "With irrigation, in the dry, cooler season. Watch for whitefly.", "es": "Con riego, en la estación seca y más fresca. Vigila la mosca blanca." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [9, 10],
       "transplant": [12],
       "harvest": [2, 3],
-      "notes": { "pt": "Verão curto: use variedades precoces, mudas feitas dentro de casa e, de preferência, estufa.", "en": "Short summer: use early varieties, indoor-raised seedlings and preferably a greenhouse." }
+      "notes": { "pt": "Verão curto: use variedades precoces, mudas feitas dentro de casa e, de preferência, estufa.", "en": "Short summer: use early varieties, indoor-raised seedlings and preferably a greenhouse.", "es": "Verano corto: usa variedades tempranas, plantones criados en interior y, preferiblemente, un invernadero." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo e corrija com calcário (o tomate sofre com falta de cálcio: fundo preto no fruto). Na cova, esterco curtido ou composto e NPK de plantio; depois, adubação de cobertura a cada 15–20 dias a partir da floração.",
-      "en": "Test the soil and lime it (tomato suffers from low calcium: blossom-end rot). Put rotted manure or compost and starter NPK in the hole; then side-dress every 15–20 days from flowering."
+      "en": "Test the soil and lime it (tomato suffers from low calcium: blossom-end rot). Put rotted manure or compost and starter NPK in the hole; then side-dress every 15–20 days from flowering.",
+      "es": "Haz un análisis de suelo y encala (el tomate sufre con poco calcio: podredumbre apical). Pon estiércol curado o compost y NPK de arranque en el hoyo; después, abona en cobertera cada 15–20 días desde la floración."
     },
     "pruning": {
       "pt": "Nos tomates de crescimento indeterminado, tire os brotos que nascem entre o caule e as folhas (desbrota) e conduza em 1 ou 2 hastes. Remova as folhas velhas de baixo.",
-      "en": "On indeterminate tomatoes, pinch out the suckers between stem and leaves and train to 1 or 2 stems. Remove old lower leaves."
+      "en": "On indeterminate tomatoes, pinch out the suckers between stem and leaves and train to 1 or 2 stems. Remove old lower leaves.",
+      "es": "En los tomates indeterminados, quita los chupones entre el tallo y las hojas y guía a 1 o 2 tallos. Quita las hojas viejas de abajo."
     },
     "watering": {
       "pt": "Rega regular e profunda, de preferência gotejamento no pé, sem molhar as folhas. Rega irregular racha os frutos e causa fundo preto.",
-      "en": "Regular, deep watering, ideally drip at the base without wetting leaves. Irregular watering cracks fruit and causes blossom-end rot."
+      "en": "Regular, deep watering, ideally drip at the base without wetting leaves. Irregular watering cracks fruit and causes blossom-end rot.",
+      "es": "Riego regular y profundo, idealmente por goteo en la base sin mojar las hojas. El riego irregular agrieta los frutos y causa podredumbre apical."
     },
     "other": {
       "pt": "Sol pleno e tutor (estaca ou fitilho) desde o transplante. Principais problemas: traça-do-tomateiro, mosca-branca e requeima; faça rotação e não plante após batata ou pimentão.",
-      "en": "Full sun and a stake or string from transplanting. Main problems: tomato leafminer, whitefly and late blight; rotate and avoid planting after potato or pepper."
+      "en": "Full sun and a stake or string from transplanting. Main problems: tomato leafminer, whitefly and late blight; rotate and avoid planting after potato or pepper.",
+      "es": "Pleno sol y un tutor o cuerda desde el trasplante. Problemas principales: minador del tomate, mosca blanca y mildiu; rota los cultivos y evita plantar después de patata o pimiento."
     }
   },
   "sources": [

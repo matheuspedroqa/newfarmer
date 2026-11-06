@@ -9,6 +9,7 @@ import { SourcesList } from "@/components/SourcesList";
 import { VetWarning } from "@/components/VetWarning";
 import { resolveLocale } from "@/i18n/locales";
 import { ANIMALS, ANIMAL_IDS, type AnimalId } from "@/lib/catalog";
+import type { Text } from "@/lib/content-schema";
 import { seasonFor, type Season } from "@/lib/seasons";
 import { formatDay } from "@/lib/format";
 import { getAnimalContent } from "@/server/content";
@@ -46,7 +47,7 @@ export default async function AnimalPage({
   const locale = resolveLocale(await getLocale());
   const content = getAnimalContent(id as AnimalId);
   const current = seasonFor(new Date().getMonth() + 1, user.hemisphere);
-  const tx = (v: { pt: string; en: string }) => v[locale];
+  const tx = (v: Text) => v[locale];
   const diary = showDiary ? await listDiary(db, user.id, { animalId: id as AnimalId }) : [];
 
   return (

@@ -2,7 +2,8 @@
   "id": "sweetPotato",
   "summary": {
     "pt": "Planta rasteira de clima quente plantada por pedaços de rama, que forma raízes doces em 4–5 meses. É rústica, aguenta seca e solo pobre, e as folhas também servem de alimento.",
-    "en": "A warm-climate vining plant grown from vine cuttings (slips) that forms sweet roots in 4–5 months. Hardy, drought- and poor-soil tolerant, and the leaves are edible too."
+    "en": "A warm-climate vining plant grown from vine cuttings (slips) that forms sweet roots in 4–5 months. Hardy, drought- and poor-soil tolerant, and the leaves are edible too.",
+    "es": "Una planta trepadora de clima cálido que se cultiva a partir de esquejes de guía y forma raíces dulces en 4–5 meses. Resistente, tolera la sequía y el suelo pobre, y las hojas también son comestibles."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [10, 11, 12, 1],
       "harvest": [2, 3, 4, 5],
-      "notes": { "pt": "Plante as ramas na estação das chuvas. Com irrigação, dá para plantar quase o ano todo.", "en": "Plant cuttings in the rainy season. With irrigation you can plant almost year-round." }
+      "notes": { "pt": "Plante as ramas na estação das chuvas. Com irrigação, dá para plantar quase o ano todo.", "en": "Plant cuttings in the rainy season. With irrigation you can plant almost year-round.", "es": "Planta los esquejes en la estación lluviosa. Con riego puedes plantar casi todo el año." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [11, 12, 1],
       "harvest": [3, 4, 5, 6],
-      "notes": { "pt": "Melhor época é o meio do período chuvoso (nov–jan). Colha antes das geadas.", "en": "Best time is mid rainy season (Nov–Jan). Harvest before frost." }
+      "notes": { "pt": "Melhor época é o meio do período chuvoso (nov–jan). Colha antes das geadas.", "en": "Best time is mid rainy season (Nov–Jan). Harvest before frost.", "es": "La mejor época es mitad de la estación lluviosa (nov–ene). Cosecha antes de la helada." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [11, 12],
       "harvest": [3, 4],
-      "notes": { "pt": "Plante só quando o solo passar de ~18 °C e não houver mais geada. Colha antes da primeira geada do outono.", "en": "Plant only once soil is above ~18 °C and frost is over. Harvest before the first autumn frost." }
+      "notes": { "pt": "Plante só quando o solo passar de ~18 °C e não houver mais geada. Colha antes da primeira geada do outono.", "en": "Plant only once soil is above ~18 °C and frost is over. Harvest before the first autumn frost.", "es": "Planta solo cuando el suelo supere ~18 °C y haya pasado la helada. Cosecha antes de la primera helada de otoño." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [1, 2, 3],
       "harvest": [5, 6, 7],
-      "notes": { "pt": "Plante no início das chuvas; depois de pegar aguenta bem a seca. Com irrigação, pode plantar em outras épocas.", "en": "Plant at the start of the rains; once established it tolerates drought well. With irrigation you can plant at other times." }
+      "notes": { "pt": "Plante no início das chuvas; depois de pegar aguenta bem a seca. Com irrigação, pode plantar em outras épocas.", "en": "Plant at the start of the rains; once established it tolerates drought well. With irrigation you can plant at other times.", "es": "Planta al inicio de las lluvias; una vez establecido tolera bien la sequía. Con riego puedes plantar en otras épocas." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Verão curto e frio demais para formar raízes. Só com estufa ou plástico preto aquecendo o solo, e variedades precoces.", "en": "Summer is too short and cool to form roots. Only with a greenhouse or black plastic warming the soil, and early varieties." }
+      "notes": { "pt": "Verão curto e frio demais para formar raízes. Só com estufa ou plástico preto aquecendo o solo, e variedades precoces.", "en": "Summer is too short and cool to form roots. Only with a greenhouse or black plastic warming the soil, and early varieties.", "es": "El verano es demasiado corto y fresco para formar raíces. Solo con invernadero o plástico negro que caliente el suelo, y variedades tempranas." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo. Um pouco de esterco curtido ou composto e NPK com pouco nitrogênio e mais potássio (ex.: 5-10-10) no plantio. Uns 30–40 dias depois, cobertura leve com potássio. Nitrogênio demais dá muita rama e pouca batata.",
-      "en": "Soil test first. A little rotted manure or compost and a low-nitrogen, higher-potassium NPK (e.g. 5-10-10) at planting. About 30–40 days later, a light potassium side-dressing. Too much nitrogen gives lots of vine and few roots."
+      "en": "Soil test first. A little rotted manure or compost and a low-nitrogen, higher-potassium NPK (e.g. 5-10-10) at planting. About 30–40 days later, a light potassium side-dressing. Too much nitrogen gives lots of vine and few roots.",
+      "es": "Primero, análisis de suelo. Un poco de estiércol curado o compost y un NPK bajo en nitrógeno y más alto en potasio (p. ej. 5-10-10) al plantar. Unos 30–40 días después, una cobertera ligera de potasio. Demasiado nitrógeno da mucha guía y pocas raíces."
     },
     "pruning": null,
     "watering": {
       "pt": "Regue bem nas primeiras 2–3 semanas para as ramas pegarem. Depois aguenta seca; regue só em estiagem longa. Evite encharcar, principalmente perto da colheita.",
-      "en": "Water well for the first 2–3 weeks so cuttings root. After that it tolerates drought; water only in long dry spells. Avoid waterlogging, especially near harvest."
+      "en": "Water well for the first 2–3 weeks so cuttings root. After that it tolerates drought; water only in long dry spells. Avoid waterlogging, especially near harvest.",
+      "es": "Riega bien las primeras 2–3 semanas para que los esquejes enraícen. Después tolera la sequía; riega solo en periodos secos largos. Evita el encharcamiento, sobre todo cerca de la cosecha."
     },
     "other": {
       "pt": "Sol pleno e solo solto e arenoso, em leiras ou camalhões. Use ramas de 8–10 folhas, enterrando metade, a 30–40 cm uma da outra. Mantenha sem mato no início e colha de 110 a 160 dias, sem ferir as raízes.",
-      "en": "Full sun and loose, sandy soil, on ridges. Use cuttings with 8–10 leaves, burying half, 30–40 cm apart. Keep weed-free early on and harvest at 110–160 days without bruising the roots."
+      "en": "Full sun and loose, sandy soil, on ridges. Use cuttings with 8–10 leaves, burying half, 30–40 cm apart. Keep weed-free early on and harvest at 110–160 days without bruising the roots.",
+      "es": "Pleno sol y suelo suelto y arenoso, en caballones. Usa esquejes con 8–10 hojas, enterrando la mitad, a 30–40 cm. Mantenlo sin malas hierbas al principio y cosecha a los 110–160 días sin golpear las raíces."
     }
   },
   "sources": [

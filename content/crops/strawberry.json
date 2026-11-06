@@ -2,7 +2,8 @@
   "id": "strawberry",
   "summary": {
     "pt": "Planta rasteira de clima ameno, plantada por mudas, que dá frutos poucos meses depois. Vai bem em canteiro com cobertura plástica, em vaso ou em bancada.",
-    "en": "A low-growing mild-climate plant set out from runner plants that fruits a few months later. Does well in mulched raised beds, pots or tabletop systems."
+    "en": "A low-growing mild-climate plant set out from runner plants that fruits a few months later. Does well in mulched raised beds, pots or tabletop systems.",
+    "es": "Una planta baja de clima suave que se planta a partir de estolones y da fruto unos meses después. Se da bien en bancales elevados con acolchado, macetas o sistemas de mesa."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [3, 4, 5],
       "harvest": [6, 7, 8, 9, 10, 11],
-      "notes": { "pt": "Melhor em regiões altas (serra), com noites frescas. No calor forte produz pouco.", "en": "Best in highlands with cool nights. Produces little in strong heat." }
+      "notes": { "pt": "Melhor em regiões altas (serra), com noites frescas. No calor forte produz pouco.", "en": "Best in highlands with cool nights. Produces little in strong heat.", "es": "Mejor en tierras altas con noches frescas. Produce poco con calor fuerte." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [3, 4, 5],
       "harvest": [7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Plante as mudas no outono (mar–abr é o ideal).", "en": "Set plants in autumn (Mar–Apr is ideal)." }
+      "notes": { "pt": "Plante as mudas no outono (mar–abr é o ideal).", "en": "Set plants in autumn (Mar–Apr is ideal).", "es": "Planta en otoño (marzo–abril es lo ideal)." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [3, 9, 10],
       "harvest": [10, 11, 12, 1],
-      "notes": { "pt": "Plante cedo na primavera (ou mudas em torrão no fim do verão). Cubra com palha no inverno.", "en": "Plant in early spring (or plug plants in late summer). Mulch with straw over winter." }
+      "notes": { "pt": "Plante cedo na primavera (ou mudas em torrão no fim do verão). Cubra com palha no inverno.", "en": "Plant in early spring (or plug plants in late summer). Mulch with straw over winter.", "es": "Planta a principios de primavera (o plantas en alvéolo a finales del verano). Acolcha con paja durante el invierno." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [3, 4, 5],
       "harvest": [6, 7, 8, 9, 10],
-      "notes": { "pt": "Só com irrigação por gotejamento e na estação fresca.", "en": "Only with drip irrigation, in the cool season." }
+      "notes": { "pt": "Só com irrigação por gotejamento e na estação fresca.", "en": "Only with drip irrigation, in the cool season.", "es": "Solo con riego por goteo, en la estación fresca." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [10, 11],
       "harvest": [12, 1, 2],
-      "notes": { "pt": "Plante na primavera, após o degelo; proteja com palha grossa no inverno.", "en": "Plant in spring after thaw; protect with thick straw in winter." }
+      "notes": { "pt": "Plante na primavera, após o degelo; proteja com palha grossa no inverno.", "en": "Plant in spring after thaw; protect with thick straw in winter.", "es": "Planta en primavera, tras el deshielo; protege con una capa gruesa de paja en invierno." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça calagem pelo menos 2 meses antes. Incorpore esterco curtido ou composto no canteiro e adubo NPK conforme análise de solo. Depois, pequenas doses de nitrogênio e potássio (ou fertirrigação) a cada 2–4 semanas; não exagere no nitrogênio.",
-      "en": "Lime at least 2 months ahead. Work rotted manure or compost and NPK by soil test into the bed. Then small doses of nitrogen and potassium (or fertigation) every 2–4 weeks; don't overdo nitrogen."
+      "en": "Lime at least 2 months ahead. Work rotted manure or compost and NPK by soil test into the bed. Then small doses of nitrogen and potassium (or fertigation) every 2–4 weeks; don't overdo nitrogen.",
+      "es": "Encala al menos 2 meses antes. Incorpora al bancal estiércol curado o compost y NPK según el análisis de suelo. Después, dosis pequeñas de nitrógeno y potasio (o fertirrigación) cada 2–4 semanas; no te pases con el nitrógeno."
     },
     "pruning": {
       "pt": "Tire os estolões (ramos que fazem mudas) toda semana, a não ser que queira mudas novas. Retire folhas velhas e secas e frutos podres.",
-      "en": "Remove runners every week unless you want new plants. Remove old, dry leaves and rotten fruit."
+      "en": "Remove runners every week unless you want new plants. Remove old, dry leaves and rotten fruit.",
+      "es": "Quita los estolones cada semana, salvo que quieras plantas nuevas. Retira las hojas viejas y secas y los frutos podridos."
     },
     "watering": {
       "pt": "Raiz rasa: mantenha o solo sempre úmido, de preferência com gotejamento. Molhar folhas e frutos favorece mofo cinzento.",
-      "en": "Shallow roots: keep soil evenly moist, ideally with drip. Wetting leaves and fruit encourages grey mould."
+      "en": "Shallow roots: keep soil evenly moist, ideally with drip. Wetting leaves and fruit encourages grey mould.",
+      "es": "Raíces superficiales: mantén el suelo húmedo de forma uniforme, idealmente con goteo. Mojar las hojas y los frutos favorece el moho gris."
     },
     "other": {
       "pt": "Sol pleno, canteiro alto e cobertura (plástico ou palha) para o fruto não encostar na terra. Use mudas sadias e troque as plantas a cada 1–2 anos.",
-      "en": "Full sun, raised beds and mulch (plastic or straw) so fruit doesn't touch the soil. Use healthy plants and replace them every 1–2 years."
+      "en": "Full sun, raised beds and mulch (plastic or straw) so fruit doesn't touch the soil. Use healthy plants and replace them every 1–2 years.",
+      "es": "Pleno sol, bancales elevados y acolchado (plástico o paja) para que el fruto no toque el suelo. Usa plantas sanas y sustitúyelas cada 1–2 años."
     }
   },
   "sources": [

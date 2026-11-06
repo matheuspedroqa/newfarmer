@@ -2,7 +2,8 @@
   "id": "plum",
   "summary": {
     "pt": "Árvore frutífera de clima temperado que produz do 3º–4º ano. Há dois tipos: a japonesa (fruta grande e suculenta, pede menos frio) e a europeia (boa para secar, pede mais frio).",
-    "en": "A temperate fruit tree that bears from year 3–4. There are two types: Japanese (large, juicy fruit, needs less cold) and European (good for drying, needs more cold)."
+    "en": "A temperate fruit tree that bears from year 3–4. There are two types: Japanese (large, juicy fruit, needs less cold) and European (good for drying, needs more cold).",
+    "es": "Un frutal de clima templado que da fruto desde el año 3–4. Hay dos tipos: japonés (fruto grande y jugoso, necesita menos frío) y europeo (bueno para secar, necesita más frío)."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Sem frio no inverno não floresce direito. Só em serras altas, com ameixas japonesas de pouco frio.", "en": "Without winter cold it doesn't bloom well. Only in high mountains, with low-chill Japanese plums." }
+      "notes": { "pt": "Sem frio no inverno não floresce direito. Só em serras altas, com ameixas japonesas de pouco frio.", "en": "Without winter cold it doesn't bloom well. Only in high mountains, with low-chill Japanese plums.", "es": "Sin frío invernal no florece bien. Solo en montañas altas, con ciruelos japoneses de pocas horas de frío." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [6, 7, 8],
       "harvest": [11, 12, 1],
-      "notes": { "pt": "Use ameixas japonesas de pouco frio (a partir de cerca de 200 horas abaixo de 7 °C). As europeias não produzem com inverno ameno.", "en": "Use low-chill Japanese plums (from about 200 hours below 7 °C). European plums won't bear with mild winters." }
+      "notes": { "pt": "Use ameixas japonesas de pouco frio (a partir de cerca de 200 horas abaixo de 7 °C). As europeias não produzem com inverno ameno.", "en": "Use low-chill Japanese plums (from about 200 hours below 7 °C). European plums won't bear with mild winters.", "es": "Usa ciruelos japoneses de pocas horas de frío (desde unas 200 horas por debajo de 7 °C). Los ciruelos europeos no darán fruto con inviernos suaves." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [6, 7, 8],
       "harvest": [12, 1, 2, 3],
-      "notes": { "pt": "Clima ideal. Japonesas colhem dez–jan; europeias, mais tarde (fev–mar). Geada na florada derruba a safra.", "en": "Ideal climate. Japanese plums are picked Dec–Jan; European ones later (Feb–Mar). Frost at bloom can ruin the crop." }
+      "notes": { "pt": "Clima ideal. Japonesas colhem dez–jan; europeias, mais tarde (fev–mar). Geada na florada derruba a safra.", "en": "Ideal climate. Japanese plums are picked Dec–Jan; European ones later (Feb–Mar). Frost at bloom can ruin the crop.", "es": "Clima ideal. Las ciruelas japonesas se recogen en dic–ene; las europeas, más tarde (feb–mar). Una helada en la floración puede arruinar la cosecha." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Sem frio, não produz no manejo comum. Só em pomar técnico irrigado com variedades de pouco frio.", "en": "Without cold it doesn't fruit under normal care. Only in technical irrigated orchards with low-chill varieties." }
+      "notes": { "pt": "Sem frio, não produz no manejo comum. Só em pomar técnico irrigado com variedades de pouco frio.", "en": "Without cold it doesn't fruit under normal care. Only in technical irrigated orchards with low-chill varieties.", "es": "Sin frío no da fruto con cuidados normales. Solo en huertos técnicos con riego y variedades de pocas horas de frío." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [10, 11],
       "harvest": [2, 3],
-      "notes": { "pt": "Prefira ameixas europeias e variedades resistentes ao frio. Plante na primavera, com o solo descongelado.", "en": "Choose European plums and cold-hardy varieties. Plant in spring once the soil thaws." }
+      "notes": { "pt": "Prefira ameixas europeias e variedades resistentes ao frio. Plante na primavera, com o solo descongelado.", "en": "Choose European plums and cold-hardy varieties. Plant in spring once the soil thaws.", "es": "Elige ciruelos europeos y variedades resistentes al frío. Planta en primavera, cuando el suelo se deshiele." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Calcário antes de plantar, conforme análise de solo. Adube com esterco curtido ou composto no fim do inverno e pouco NPK na primavera. Evite nitrogênio demais.",
-      "en": "Lime before planting, by soil test. Apply rotted manure or compost in late winter and a little NPK in spring. Avoid too much nitrogen."
+      "en": "Lime before planting, by soil test. Apply rotted manure or compost in late winter and a little NPK in spring. Avoid too much nitrogen.",
+      "es": "Encala antes de plantar, según el análisis de suelo. Aplica estiércol curado o compost a finales del invierno y un poco de NPK en primavera. Evita el exceso de nitrógeno."
     },
     "pruning": {
       "pt": "Poda no fim do inverno, com a planta dormente; evite podar no verão (abre porta para doenças). Japonesa: copa em vaso aberto. Europeia: um tronco central e poda leve, pois ela sofre com poda forte.",
-      "en": "Prune in late winter while dormant; avoid summer pruning (it invites disease). Japanese: open-centre vase. European: one central trunk and light pruning, as it suffers from hard cuts."
+      "en": "Prune in late winter while dormant; avoid summer pruning (it invites disease). Japanese: open-centre vase. European: one central trunk and light pruning, as it suffers from hard cuts.",
+      "es": "Poda a finales del invierno, en reposo; evita la poda de verano (invita a enfermedades). Japonés: vaso de centro abierto. Europeo: un tronco central y poda ligera, porque sufre con los cortes fuertes."
     },
     "watering": {
       "pt": "Regue a muda nova toda semana no primeiro ano. Árvore adulta: regas fundas na seca, principalmente quando o fruto está crescendo. Não encharque.",
-      "en": "Water young trees weekly in the first year. Mature trees: deep watering in dry spells, especially while fruit grows. Don't waterlog."
+      "en": "Water young trees weekly in the first year. Mature trees: deep watering in dry spells, especially while fruit grows. Don't waterlog.",
+      "es": "Riega los árboles jóvenes cada semana durante el primer año. Árboles adultos: riego profundo en periodos secos, sobre todo mientras crece el fruto. No encharques."
     },
     "other": {
       "pt": "Sol pleno e solo fundo e drenado. Ameixa japonesa precisa de outra japonesa que floresça junto para polinizar; a europeia costuma se polinizar sozinha. Raleie os frutos da japonesa (10–15 cm entre eles).",
-      "en": "Full sun and deep, drained soil. Japanese plums need another Japanese plum blooming at the same time; European plums are usually self-fertile. Thin Japanese plums (10–15 cm apart)."
+      "en": "Full sun and deep, drained soil. Japanese plums need another Japanese plum blooming at the same time; European plums are usually self-fertile. Thin Japanese plums (10–15 cm apart).",
+      "es": "Pleno sol y suelo profundo y drenado. El ciruelo japonés necesita otro ciruelo japonés que florezca al mismo tiempo; los europeos suelen ser autofértiles. Aclara los ciruelos japoneses (10–15 cm entre frutos)."
     }
   },
   "sources": [

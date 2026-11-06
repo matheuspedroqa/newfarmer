@@ -2,31 +2,36 @@
   "id": "chard",
   "summary": {
     "pt": "A acelga é uma folhosa fácil e resistente, parente da beterraba. Você colhe as folhas de fora e a planta continua produzindo por meses.",
-    "en": "Chard is an easy, tough leafy green related to beets. You pick the outer leaves and the plant keeps producing for months."
+    "en": "Chard is an easy, tough leafy green related to beets. You pick the outer leaves and the plant keeps producing for months.",
+    "es": "La acelga es una hoja verde fácil y resistente, emparentada con la remolacha. Se recogen las hojas exteriores y la planta sigue produciendo durante meses."
   },
   "calendar": {
-    "tropical": { "directSowing": [3, 4, 5, 6], "seedbed": [3, 4, 5, 6, 7], "transplant": [4, 5, 6, 7, 8], "harvest": [5, 6, 7, 8, 9, 10], "notes": { "pt": "Prefira a época mais fresca e seca; em altitude dá o ano todo.", "en": "Prefer the cooler, drier season; at altitude it grows year-round." } },
+    "tropical": { "directSowing": [3, 4, 5, 6], "seedbed": [3, 4, 5, 6, 7], "transplant": [4, 5, 6, 7, 8], "harvest": [5, 6, 7, 8, 9, 10], "notes": { "pt": "Prefira a época mais fresca e seca; em altitude dá o ano todo.", "en": "Prefer the cooler, drier season; at altitude it grows year-round.", "es": "Prefiere la época más fresca y seca; en altitud crece todo el año." } },
     "subtropical": { "directSowing": [2, 3, 4, 5, 8, 9], "seedbed": [2, 3, 4, 5, 6, 7, 8, 9], "transplant": [3, 4, 5, 6, 7, 8, 9, 10], "harvest": [4, 5, 6, 7, 8, 9, 10, 11, 12] },
     "temperate": { "directSowing": [8, 9, 10, 2, 3], "seedbed": [8, 9, 2], "transplant": [9, 10, 3], "harvest": [10, 11, 12, 1, 4, 5, 6] },
-    "semiarid": { "directSowing": [4, 5, 6], "seedbed": [4, 5, 6], "transplant": [5, 6, 7], "harvest": [6, 7, 8, 9], "notes": { "pt": "Com irrigação, na época mais amena do ano.", "en": "With irrigation, in the mildest season of the year." } },
-    "cold": { "directSowing": [10, 11, 12], "seedbed": [9, 10], "transplant": [10, 11], "harvest": [12, 1, 2, 3], "notes": { "pt": "Plante após as geadas fortes; aguenta geada leve.", "en": "Plant after hard frosts; tolerates light frost." } }
+    "semiarid": { "directSowing": [4, 5, 6], "seedbed": [4, 5, 6], "transplant": [5, 6, 7], "harvest": [6, 7, 8, 9], "notes": { "pt": "Com irrigação, na época mais amena do ano.", "en": "With irrigation, in the mildest season of the year.", "es": "Con riego, en la época más suave del año." } },
+    "cold": { "directSowing": [10, 11, 12], "seedbed": [9, 10], "transplant": [10, 11], "harvest": [12, 1, 2, 3], "notes": { "pt": "Plante após as geadas fortes; aguenta geada leve.", "en": "Plant after hard frosts; tolerates light frost.", "es": "Planta después de las heladas fuertes; tolera heladas ligeras." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Antes de plantar, misture bastante composto ou esterco curtido; corrija com calcário se o pH estiver abaixo de 6,2. Se não tiver análise de solo, use pouco NPK (ex.: 10-10-10). Se as folhas ficarem pequenas, faça uma cobertura leve com nitrogênio (ou esterco) cerca de 4 semanas após o plantio.",
-      "en": "Before planting, mix in plenty of compost or aged manure; lime if pH is below 6.2. Without a soil test, use a little NPK (e.g., 10-10-10). If leaves stay small, side-dress lightly with nitrogen (or manure) about 4 weeks after planting."
+      "en": "Before planting, mix in plenty of compost or aged manure; lime if pH is below 6.2. Without a soil test, use a little NPK (e.g., 10-10-10). If leaves stay small, side-dress lightly with nitrogen (or manure) about 4 weeks after planting.",
+      "es": "Antes de plantar, mezcla mucho compost o estiércol curado; encala si el pH está por debajo de 6,2. Sin análisis de suelo, usa un poco de NPK (p. ej., 10-10-10). Si las hojas se quedan pequeñas, abona ligeramente en cobertura con nitrógeno (o estiércol) unas 4 semanas después de plantar."
     },
     "pruning": {
       "pt": "Não precisa de poda. Colha as folhas de fora e retire as velhas ou amareladas; deixe o miolo para continuar brotando.",
-      "en": "No pruning needed. Harvest the outer leaves and remove old or yellow ones; leave the center to keep growing."
+      "en": "No pruning needed. Harvest the outer leaves and remove old or yellow ones; leave the center to keep growing.",
+      "es": "No necesita poda. Cosecha las hojas exteriores y quita las viejas o amarillas; deja el centro para que siga creciendo."
     },
     "watering": {
       "pt": "Mantenha o solo sempre úmido, sem encharcar. Falta de água deixa as folhas duras e amargas.",
-      "en": "Keep the soil evenly moist, not soggy. Lack of water makes leaves tough and bitter."
+      "en": "Keep the soil evenly moist, not soggy. Lack of water makes leaves tough and bitter.",
+      "es": "Mantén el suelo con humedad uniforme, sin encharcar. La falta de agua vuelve las hojas duras y amargas."
     },
     "other": {
       "pt": "Sol pleno ou meia-sombra no calor. Deixe 20–30 cm entre plantas. Fique de olho em lagartas e pulgões no verso das folhas.",
-      "en": "Full sun, or partial shade in hot weather. Space plants 20–30 cm apart. Watch for caterpillars and aphids under the leaves."
+      "en": "Full sun, or partial shade in hot weather. Space plants 20–30 cm apart. Watch for caterpillars and aphids under the leaves.",
+      "es": "Pleno sol, o sombra parcial con calor. Separa las plantas 20–30 cm. Vigila orugas y pulgones bajo las hojas."
     }
   },
   "sources": [

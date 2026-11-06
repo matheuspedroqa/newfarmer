@@ -2,28 +2,32 @@
   "id": "dill",
   "summary": {
     "pt": "O endro (dill) é uma erva anual de folhas finas e sabor fresco, ótima para peixes, conservas e saladas. Cresce rápido: as folhas já podem ser colhidas 40–60 dias após a semeadura.",
-    "en": "Dill is an annual herb with feathery leaves and a fresh flavor, great for fish, pickles and salads. It grows fast: leaves can be picked 40–60 days after sowing."
+    "en": "Dill is an annual herb with feathery leaves and a fresh flavor, great for fish, pickles and salads. It grows fast: leaves can be picked 40–60 days after sowing.",
+    "es": "El eneldo es una hierba anual de hojas plumosas y sabor fresco, ideal para pescado, encurtidos y ensaladas. Crece rápido: las hojas se pueden recoger 40–60 días después de sembrar."
   },
   "calendar": {
-    "tropical": { "directSowing": [3, 4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8, 9], "notes": { "pt": "Planta anual: semeie no local na época mais fresca e seca. No calor forte ela floresce cedo e dá pouca folha.", "en": "Annual: sow in place during the cooler, drier season. In strong heat it flowers early and gives few leaves." } },
+    "tropical": { "directSowing": [3, 4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8, 9], "notes": { "pt": "Planta anual: semeie no local na época mais fresca e seca. No calor forte ela floresce cedo e dá pouca folha.", "en": "Annual: sow in place during the cooler, drier season. In strong heat it flowers early and gives few leaves.", "es": "Anual: siembra en el lugar definitivo en la época más fresca y seca. Con calor fuerte florece pronto y da pocas hojas." } },
     "subtropical": { "directSowing": [3, 4, 5, 8, 9, 10], "seedbed": [], "transplant": [], "harvest": [5, 6, 7, 8, 10, 11, 12] },
     "temperate": { "directSowing": [9, 10, 11, 12], "seedbed": [], "transplant": [], "harvest": [11, 12, 1, 2, 3] },
-    "semiarid": { "directSowing": [4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [6, 7, 8, 9], "notes": { "pt": "Com irrigação; semeie no período mais fresco do ano.", "en": "With irrigation; sow in the coolest part of the year." } },
-    "cold": { "directSowing": [10, 11, 12], "seedbed": [], "transplant": [], "harvest": [12, 1, 2, 3], "notes": { "pt": "Semeie depois da última geada.", "en": "Sow after the last frost." } }
+    "semiarid": { "directSowing": [4, 5, 6, 7], "seedbed": [], "transplant": [], "harvest": [6, 7, 8, 9], "notes": { "pt": "Com irrigação; semeie no período mais fresco do ano.", "en": "With irrigation; sow in the coolest part of the year.", "es": "Con riego; siembra en la parte más fría del año." } },
+    "cold": { "directSowing": [10, 11, 12], "seedbed": [], "transplant": [], "harvest": [12, 1, 2, 3], "notes": { "pt": "Semeie depois da última geada.", "en": "Sow after the last frost.", "es": "Siembra después de la última helada." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Pouca adubação: misture composto ou esterco curtido ao canteiro antes de semear. Se crescer fraco, uma dose leve de NPK pobre em nitrogênio (ex.: 4-14-8) no meio do ciclo. Adubo demais amarela as folhas.",
-      "en": "Light feeding: mix compost or aged manure into the bed before sowing. If growth is weak, one light dose of low-nitrogen NPK (e.g., 5-10-5) mid-season. Too much fertilizer yellows the leaves."
+      "en": "Light feeding: mix compost or aged manure into the bed before sowing. If growth is weak, one light dose of low-nitrogen NPK (e.g., 5-10-5) mid-season. Too much fertilizer yellows the leaves.",
+      "es": "Abonado ligero: mezcla compost o estiércol curado en el bancal antes de sembrar. Si el crecimiento es débil, una dosis ligera de NPK bajo en nitrógeno (p. ej., 5-10-5) a mitad de ciclo. Demasiado fertilizante amarillea las hojas."
     },
     "pruning": null,
     "watering": {
       "pt": "Mantenha o solo úmido até germinar (7–14 dias). Depois, regue quando a superfície secar, sem encharcar.",
-      "en": "Keep soil moist until germination (7–14 days). Then water when the surface dries, without waterlogging."
+      "en": "Keep soil moist until germination (7–14 days). Then water when the surface dries, without waterlogging.",
+      "es": "Mantén el suelo húmedo hasta la germinación (7–14 días). Luego riega cuando la superficie se seque, sin encharcar."
     },
     "other": {
       "pt": "Semeie direto no local, a 0,5 cm de profundidade: a raiz pivotante não aceita bem o transplante. Sol pleno, desbaste para 25–30 cm entre plantas. Semeie a cada 3–4 semanas para ter folha sempre. Proteja do vento.",
-      "en": "Sow in place, 0.5 cm deep: the taproot dislikes transplanting. Full sun; thin to 25–30 cm apart. Sow every 3–4 weeks for a steady leaf supply. Shelter from wind."
+      "en": "Sow in place, 0.5 cm deep: the taproot dislikes transplanting. Full sun; thin to 25–30 cm apart. Sow every 3–4 weeks for a steady leaf supply. Shelter from wind.",
+      "es": "Siembra en el lugar definitivo, a 0,5 cm de profundidad: la raíz pivotante no tolera el trasplante. Pleno sol; aclara a 25–30 cm. Siembra cada 3–4 semanas para tener hojas constantes. Protege del viento."
     }
   },
   "sources": [

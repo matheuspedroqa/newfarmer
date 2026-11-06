@@ -2,95 +2,112 @@
   "id": "pigs",
   "summary": {
     "pt": "Porcos crescem rápido e aproveitam bem grãos e sobras de lavoura, mas precisam de instalação limpa, sombra, água fresca e uma cerca firme. Eles não suam: no calor, dependem de sombra, ventilação e lama ou aspersão para se refrescar. Em quase todos os países, mesmo um único porco precisa ser registrado, e nunca se dá resto de comida com carne por causa da peste suína africana.",
-    "en": "Pigs grow fast and make good use of grain and crop leftovers, but they need clean housing, shade, fresh water and a solid fence. They do not sweat: in heat they rely on shade, airflow and mud or sprinklers to cool down. In almost every country even a single pig must be registered, and food scraps containing meat are never fed because of African swine fever."
+    "en": "Pigs grow fast and make good use of grain and crop leftovers, but they need clean housing, shade, fresh water and a solid fence. They do not sweat: in heat they rely on shade, airflow and mud or sprinklers to cool down. In almost every country even a single pig must be registered, and food scraps containing meat are never fed because of African swine fever.",
+    "es": "Los cerdos crecen rápido y aprovechan bien el grano y los restos de cultivo, pero necesitan una porqueriza limpia, sombra, agua fresca y una valla firme. No sudan: con calor dependen de la sombra, el aire y el barro o los aspersores para refrescarse. En casi todos los países hasta un solo cerdo debe registrarse, y nunca se les dan restos de comida con carne por la peste porcina africana."
   },
   "breeds": [
     {
       "name": "Moura",
       "purpose": {
         "pt": "Carne (caipira)",
-        "en": "Meat (free-range)"
+        "en": "Meat (free-range)",
+        "es": "Carne (al aire libre)"
       },
       "notes": {
         "pt": "Raça brasileira rústica, conservada pela Embrapa; boa para criação ao ar livre em clima tropical e subtropical.",
-        "en": "Hardy Brazilian breed conserved by Embrapa; good for outdoor systems in tropical and subtropical climates."
+        "en": "Hardy Brazilian breed conserved by Embrapa; good for outdoor systems in tropical and subtropical climates.",
+        "es": "Raza brasileña rústica conservada por Embrapa; buena para sistemas al aire libre en climas tropicales y subtropicales."
       }
     },
     {
       "name": "Piau",
       "purpose": {
         "pt": "Carne e banha",
-        "en": "Meat and lard"
+        "en": "Meat and lard",
+        "es": "Carne y manteca"
       },
       "notes": {
         "pt": "Raça brasileira muito resistente, cresce mais devagar; ideal para criação de subsistência no calor.",
-        "en": "Very hardy Brazilian breed, slower growing; ideal for subsistence farming in hot climates."
+        "en": "Very hardy Brazilian breed, slower growing; ideal for subsistence farming in hot climates.",
+        "es": "Raza brasileña muy rústica, de crecimiento más lento; ideal para la cría de subsistencia en climas cálidos."
       }
     },
     {
       "name": "Large White (Yorkshire)",
       "purpose": {
         "pt": "Carne",
-        "en": "Meat"
+        "en": "Meat",
+        "es": "Carne"
       },
       "notes": {
         "pt": "Raça comercial usada em todos os países; porcas prolíficas e boas mães. A pele clara queima no sol forte: precisa de sombra.",
-        "en": "Commercial breed used in every country; prolific sows and good mothers. Pale skin burns in strong sun: needs shade."
+        "en": "Commercial breed used in every country; prolific sows and good mothers. Pale skin burns in strong sun: needs shade.",
+        "es": "Raza comercial usada en todos los países; cerdas prolíficas y buenas madres. La piel clara se quema con el sol fuerte: necesita sombra."
       }
     },
     {
       "name": "Duroc",
       "purpose": {
         "pt": "Carne",
-        "en": "Meat"
+        "en": "Meat",
+        "es": "Carne"
       },
       "notes": {
         "pt": "Raça americana de pelagem avermelhada, cresce rápido e converte bem a ração; tolera o calor melhor que as raças brancas.",
-        "en": "Red-coated American breed that grows fast and converts feed well; copes with heat better than white breeds."
+        "en": "Red-coated American breed that grows fast and converts feed well; copes with heat better than white breeds.",
+        "es": "Raza estadounidense de pelo rojo que crece rápido y aprovecha bien el pienso; aguanta el calor mejor que las razas blancas."
       }
     },
     {
       "name": "Ibérico",
       "purpose": {
         "pt": "Carne e presunto",
-        "en": "Meat and cured ham"
+        "en": "Meat and cured ham",
+        "es": "Carne y jamón curado"
       },
       "notes": {
         "pt": "Raça escura e rústica da Espanha, engordada com bolota na dehesa; adaptada a clima mediterrâneo de verão seco e quente.",
-        "en": "Dark, hardy Spanish breed finished on acorns in the dehesa; adapted to Mediterranean climates with hot, dry summers."
+        "en": "Dark, hardy Spanish breed finished on acorns in the dehesa; adapted to Mediterranean climates with hot, dry summers.",
+        "es": "Raza española oscura y rústica, terminada con bellota en la dehesa; adaptada a climas mediterráneos con veranos cálidos y secos."
       }
     },
     {
       "name": "Cinta Senese",
       "purpose": {
         "pt": "Carne e embutidos",
-        "en": "Meat and cured meats"
+        "en": "Meat and cured meats",
+        "es": "Carne y embutidos"
       },
       "notes": {
         "pt": "Raça preta da Toscana (Itália), rende bem em criação semiextensiva em bosques e pastos de clima mediterrâneo.",
-        "en": "Black breed from Tuscany (Italy) that thrives in semi-extensive woodland and pasture systems in Mediterranean climates."
+        "en": "Black breed from Tuscany (Italy) that thrives in semi-extensive woodland and pasture systems in Mediterranean climates.",
+        "es": "Raza negra de la Toscana (Italia) que se cría muy bien en sistemas semiextensivos de bosque y pasto en climas mediterráneos."
       }
     },
     {
       "name": "Buntes Bentheimer",
       "purpose": {
         "pt": "Carne",
-        "en": "Meat"
+        "en": "Meat",
+        "es": "Carne"
       },
       "notes": {
         "pt": "Raça antiga malhada da Alemanha, resistente ao estresse e boa para pasto em clima temperado e frio.",
-        "en": "Spotted German heritage breed, stress-resistant and good on pasture in temperate and cold climates."
+        "en": "Spotted German heritage breed, stress-resistant and good on pasture in temperate and cold climates.",
+        "es": "Raza alemana tradicional de manchas, resistente al estrés y buena en pasto en climas templados y fríos."
       }
     },
     {
       "name": "Cerdo pelón mexicano",
       "purpose": {
         "pt": "Carne (quintal)",
-        "en": "Meat (backyard)"
+        "en": "Meat (backyard)",
+        "es": "Carne (traspatio)"
       },
       "notes": {
         "pt": "Porco criollo preto e sem pelo da Península de Yucatán (México); rústico, adaptado ao calor tropical e com mercado gourmet.",
-        "en": "Black, hairless criollo pig from the Yucatán Peninsula (Mexico); hardy, adapted to tropical heat and with a gourmet market."
+        "en": "Black, hairless criollo pig from the Yucatán Peninsula (Mexico); hardy, adapted to tropical heat and with a gourmet market.",
+        "es": "Cerdo criollo negro y sin pelo de la península de Yucatán (México); rústico, adaptado al calor tropical y con mercado gourmet."
       }
     }
   ],
@@ -99,260 +116,317 @@
     "maxC": 24,
     "notes": {
       "pt": "Porcos em crescimento e adultos ficam confortáveis entre 16 e 24 °C; porcos grandes aguentam um pouco mais de frio e começam a sofrer acima de uns 27 °C. Leitões recém-nascidos precisam de 30–34 °C no escamoteador (abrigo aquecido). No frio, porcos sentem muito as mudanças bruscas: cama seca ou profunda (que gera calor) e abrigo sem corrente de ar fazem a diferença. Lâmpadas de aquecimento mal instaladas causam incêndios.",
-      "en": "Growing and adult pigs are comfortable between 16 and 24 °C; large pigs tolerate a little more cold and start to suffer above about 27 °C. Newborn piglets need 30–34 °C in a heated creep area. In the cold, pigs feel sudden changes badly: dry or deep bedding (which produces heat) and a draught-free shelter make the difference. Poorly installed heat lamps cause fires."
+      "en": "Growing and adult pigs are comfortable between 16 and 24 °C; large pigs tolerate a little more cold and start to suffer above about 27 °C. Newborn piglets need 30–34 °C in a heated creep area. In the cold, pigs feel sudden changes badly: dry or deep bedding (which produces heat) and a draught-free shelter make the difference. Poorly installed heat lamps cause fires.",
+      "es": "Los cerdos en crecimiento y adultos están a gusto entre 16 y 24 °C; los cerdos grandes toleran un poco más de frío y empiezan a sufrir por encima de unos 27 °C. Los lechones recién nacidos necesitan 30–34 °C en una zona con calefacción. En el frío, los cerdos sienten mucho los cambios bruscos: la cama seca o profunda (que da calor) y un refugio sin corrientes marcan la diferencia. Las lámparas de calor mal instaladas causan incendios."
     }
   },
   "seasonalCare": {
     "tropical": {
       "summer": {
         "pt": "Sombra farta, água fresca e aspersão ou lâmina d'água; evite manejo nas horas quentes. Raças escuras e rústicas (Piau, cerdo pelón) sofrem menos.",
-        "en": "Plenty of shade, fresh water and sprinklers or a wallow; avoid handling in the hottest hours. Dark, hardy breeds (Piau, Mexican hairless) suffer less."
+        "en": "Plenty of shade, fresh water and sprinklers or a wallow; avoid handling in the hottest hours. Dark, hardy breeds (Piau, Mexican hairless) suffer less.",
+        "es": "Mucha sombra, agua fresca y aspersores o una charca de barro; evita manejarlos en las horas de más calor. Las razas oscuras y rústicas (Piau, pelón mexicano) sufren menos."
       },
       "autumn": {
         "pt": "Fim das chuvas: revise cercas e chiqueiro para impedir contato com javalis e porcos alheios; bom momento para vermifugar.",
-        "en": "End of the rains: check fences and pens to stop contact with wild boar and other people's pigs; good time to deworm."
+        "en": "End of the rains: check fences and pens to stop contact with wild boar and other people's pigs; good time to deworm.",
+        "es": "Fin de las lluvias: revisa vallas y corrales para evitar el contacto con jabalíes y con cerdos de otras personas; buen momento para desparasitar."
       },
       "winter": {
         "pt": "Estação seca: armazene milho e mandioca; controle sarna e piolho. Em terras altas, proteja leitões das noites frias.",
-        "en": "Dry season: store corn and cassava; control mange and lice. In highlands, protect piglets from cold nights."
+        "en": "Dry season: store corn and cassava; control mange and lice. In highlands, protect piglets from cold nights.",
+        "es": "Estación seca: guarda maíz y yuca; controla la sarna y los piojos. En zonas altas, protege a los lechones de las noches frías."
       },
       "spring": {
         "pt": "Prepare a maternidade com escamoteador para os partos e drene o chiqueiro antes das chuvas.",
-        "en": "Prepare the farrowing pen with a heated creep area and drain pens before the rains."
+        "en": "Prepare the farrowing pen with a heated creep area and drain pens before the rains.",
+        "es": "Prepara la paridera con una zona caliente para los lechones y drena los corrales antes de las lluvias."
       }
     },
     "subtropical": {
       "summer": {
         "pt": "Sombra, água à vontade e um lamaçal ou aspersão; porcas prenhes sofrem muito com o calor seco do verão mediterrâneo.",
-        "en": "Shade, unlimited water and a wallow or sprinklers; pregnant sows suffer badly in the dry Mediterranean summer heat."
+        "en": "Shade, unlimited water and a wallow or sprinklers; pregnant sows suffer badly in the dry Mediterranean summer heat.",
+        "es": "Sombra, agua sin límite y una charca o aspersores; las cerdas preñadas sufren mucho con el calor del verano seco mediterráneo."
       },
       "autumn": {
         "pt": "Época de bolota e castanha para engordar ao ar livre (como no montado e na dehesa); javalis circulam mais na caça, então reforce a cerca.",
-        "en": "Acorn and chestnut season for outdoor finishing (as in the montado and dehesa); wild boar move more in hunting season, so reinforce fences."
+        "en": "Acorn and chestnut season for outdoor finishing (as in the montado and dehesa); wild boar move more in hunting season, so reinforce fences.",
+        "es": "Época de bellota y castaña para el acabado al aire libre (como en el montado y la dehesa); los jabalíes se mueven más en la temporada de caza, así que refuerza las vallas."
       },
       "winter": {
         "pt": "Proteja do vento e da umidade; cama de palha ou maravalha mantém os leitões aquecidos. Época tradicional de abate caseiro, dentro das regras locais.",
-        "en": "Protect from wind and damp; straw or wood-shaving bedding keeps piglets warm. Traditional home-slaughter season, within local rules."
+        "en": "Protect from wind and damp; straw or wood-shaving bedding keeps piglets warm. Traditional home-slaughter season, within local rules.",
+        "es": "Protege del viento y la humedad; la cama de paja o viruta mantiene calientes a los lechones. Época tradicional de la matanza casera, dentro de las normas locales."
       },
       "spring": {
         "pt": "Pasto verde e boa época para partos; limpe e desinfete as baias e vermifugue antes de soltar no piquete.",
-        "en": "Green pasture and a good season for farrowing; clean and disinfect pens and deworm before turning out."
+        "en": "Green pasture and a good season for farrowing; clean and disinfect pens and deworm before turning out.",
+        "es": "Pasto verde y buena época para los partos; limpia y desinfecta los corrales y desparasita antes de sacarlos."
       }
     },
     "temperate": {
       "summer": {
         "pt": "Fase de pasto: sombra, lama para refrescar e água sempre; cuidado com queimadura de sol em porcos claros.",
-        "en": "Pasture season: shade, mud to cool off and water at all times; watch for sunburn on pale pigs."
+        "en": "Pasture season: shade, mud to cool off and water at all times; watch for sunburn on pale pigs.",
+        "es": "Época de pasto: sombra, barro para refrescarse y agua siempre; vigila las quemaduras de sol en los cerdos de piel clara."
       },
       "autumn": {
         "pt": "Engorda final e abate dos leitões comprados na primavera; na época de caça, use roupa e botas só do chiqueiro.",
-        "en": "Finish and slaughter the pigs bought in spring; in hunting season, wear clothes and boots used only in the pig pen."
+        "en": "Finish and slaughter the pigs bought in spring; in hunting season, wear clothes and boots used only in the pig pen.",
+        "es": "Termina y sacrifica los cerdos comprados en primavera; en temporada de caza, usa ropa y botas solo para la porqueriza."
       },
       "winter": {
         "pt": "Abrigo fechado, seco e sem corrente de ar, cama grossa de palha e água sem congelar; guarde ração e palha longe de javalis.",
-        "en": "Closed, dry, draught-free shelter, thick straw bedding and unfrozen water; store feed and straw away from wild boar."
+        "en": "Closed, dry, draught-free shelter, thick straw bedding and unfrozen water; store feed and straw away from wild boar.",
+        "es": "Refugio cerrado, seco y sin corrientes, cama gruesa de paja y agua sin congelar; guarda el pienso y la paja lejos de los jabalíes."
       },
       "spring": {
         "pt": "Época de comprar leitões de engorda; partos com aquecimento para os leitões e vermifugação antes de soltar no pasto.",
-        "en": "Time to buy feeder pigs; farrowing with heat for piglets and deworming before turning out to pasture."
+        "en": "Time to buy feeder pigs; farrowing with heat for piglets and deworming before turning out to pasture.",
+        "es": "Época de comprar cerdos de engorde; partos con calor para los lechones y desparasitación antes de salir al pasto."
       }
     },
     "semiarid": {
       "summer": {
         "pt": "Calor extremo: sombra densa, água em abundância e um lugar para se molhar; dê ração nas horas frescas.",
-        "en": "Extreme heat: dense shade, plenty of water and a place to get wet; feed in the cool hours."
+        "en": "Extreme heat: dense shade, plenty of water and a place to get wet; feed in the cool hours.",
+        "es": "Calor extremo: sombra densa, mucha agua y un lugar para mojarse; da de comer en las horas frescas."
       },
       "autumn": {
         "pt": "Chuvas curtas: drene as baias para não acumular lama e vermes.",
-        "en": "Short rains: drain pens so mud and worms do not build up."
+        "en": "Short rains: drain pens so mud and worms do not build up.",
+        "es": "Lluvias cortas: drena los corrales para que no se acumulen barro y gusanos."
       },
       "winter": {
         "pt": "Guarde palma forrageira, milho e mandioca para a seca; noites frias pedem cama para os leitões.",
-        "en": "Store forage cactus, corn and cassava for the dry season; cold nights call for bedding for piglets."
+        "en": "Store forage cactus, corn and cassava for the dry season; cold nights call for bedding for piglets.",
+        "es": "Guarda nopal forrajero, maíz y yuca para la estación seca; las noches frías piden cama para los lechones."
       },
       "spring": {
         "pt": "Seca: mantenha só os animais que a água disponível suporta e verifique bebedouros todos os dias.",
-        "en": "Drought: keep only as many animals as the available water can support and check drinkers every day."
+        "en": "Drought: keep only as many animals as the available water can support and check drinkers every day.",
+        "es": "Sequía: ten solo los animales que el agua disponible pueda mantener y revisa los bebederos cada día."
       }
     },
     "cold": {
       "summer": {
         "pt": "Temporada curta de pasto: engorde ao ar livre com abrigo contra sol e chuva; agende o abate cedo, pois os frigoríficos têm poucas vagas.",
-        "en": "Short pasture season: finish pigs outdoors with shelter from sun and rain; book slaughter early, as abattoir slots are limited."
+        "en": "Short pasture season: finish pigs outdoors with shelter from sun and rain; book slaughter early, as abattoir slots are limited.",
+        "es": "Temporada de pasto corta: termina los cerdos al aire libre con refugio del sol y la lluvia; reserva pronto el sacrificio, porque las plazas en el matadero son limitadas."
       },
       "autumn": {
         "pt": "Abata ou venda os porcos de engorda antes do frio intenso e prepare abrigo reforçado com cama funda.",
-        "en": "Slaughter or sell finishing pigs before severe cold and prepare a sturdy shelter with deep bedding."
+        "en": "Slaughter or sell finishing pigs before severe cold and prepare a sturdy shelter with deep bedding.",
+        "es": "Sacrifica o vende los cerdos de acabado antes del frío intenso y prepara un refugio sólido con cama profunda."
       },
       "winter": {
         "pt": "Galpão isolado, cama seca e funda (troque a molhada), aquecimento para leitões e água sem gelo todos os dias.",
-        "en": "Insulated barn, dry deep bedding (replace wet bedding), heat for piglets and ice-free water every day."
+        "en": "Insulated barn, dry deep bedding (replace wet bedding), heat for piglets and ice-free water every day.",
+        "es": "Nave aislada, cama profunda y seca (cambia la mojada), calor para los lechones y agua sin hielo todos los días."
       },
       "spring": {
         "pt": "Partos com abrigo aquecido; limpeza geral, vermifugação e revisão de cercas antes de voltar ao pasto.",
-        "en": "Farrowing in a heated shelter; full clean-out, deworming and fence check before returning to pasture."
+        "en": "Farrowing in a heated shelter; full clean-out, deworming and fence check before returning to pasture.",
+        "es": "Partos en un refugio con calefacción; limpieza completa, desparasitación y revisión de vallas antes de volver al pasto."
       }
     }
   },
   "feeding": [
     {
       "pt": "Ração balanceada por fase (leitão, crescimento, terminação); milho, cevada e farelo de soja são a base.",
-      "en": "Phase-balanced feed (piglet, grower, finisher); corn, barley and soybean meal are the base."
+      "en": "Phase-balanced feed (piglet, grower, finisher); corn, barley and soybean meal are the base.",
+      "es": "Pienso equilibrado por fase (lechón, crecimiento, acabado); maíz, cebada y harina de soja son la base."
     },
     {
       "pt": "Mandioca, abóbora, batata-doce, pasto, bolota e castanha complementam, sempre limpos e sem mofo.",
-      "en": "Cassava, pumpkin, sweet potato, pasture, acorns and chestnuts complement the diet, always clean and mould-free."
+      "en": "Cassava, pumpkin, sweet potato, pasture, acorns and chestnuts complement the diet, always clean and mould-free.",
+      "es": "Yuca, calabaza, boniato, pasto, bellotas y castañas complementan la dieta, siempre limpios y sin moho."
     },
     {
       "pt": "Nunca dê restos de cozinha ou lavagem com carne, embutidos ou peixe: é a principal porta de entrada da peste suína africana. Na UE é proibido; nos EUA só com licença e cozimento; no Brasil e no México as autoridades orientam não usar.",
-      "en": "Never feed kitchen scraps or swill with meat, cured meats or fish: it is the main way African swine fever gets in. It is banned in the EU; in the US only with a license and cooking; in Brazil and Mexico authorities advise against it."
+      "en": "Never feed kitchen scraps or swill with meat, cured meats or fish: it is the main way African swine fever gets in. It is banned in the EU; in the US only with a license and cooking; in Brazil and Mexico authorities advise against it.",
+      "es": "Nunca des restos de cocina ni lavazas con carne, embutidos o pescado: es la principal vía de entrada de la peste porcina africana. Está prohibido en la UE; en EE. UU. solo con licencia y cocción; en Brasil y México las autoridades lo desaconsejan."
     },
     {
       "pt": "Guarde ração e palha onde javalis e porcos ferais não alcancem.",
-      "en": "Store feed and straw where wild boar and feral hogs cannot reach them."
+      "en": "Store feed and straw where wild boar and feral hogs cannot reach them.",
+      "es": "Guarda el pienso y la paja donde no lleguen los jabalíes ni los cerdos asilvestrados."
     },
     {
       "pt": "Água limpa sempre: um porco adulto bebe de 10 a 20 litros por dia, mais no calor. No frio, garanta que não congele.",
-      "en": "Clean water always: an adult pig drinks 10 to 20 litres a day, more in heat. In the cold, make sure it does not freeze."
+      "en": "Clean water always: an adult pig drinks 10 to 20 litres a day, more in heat. In the cold, make sure it does not freeze.",
+      "es": "Agua limpia siempre: un cerdo adulto bebe de 10 a 20 litros al día, más con calor. En el frío, asegúrate de que no se congele."
     },
     {
       "pt": "Porcos são sociais: crie pelo menos dois.",
-      "en": "Pigs are social: keep at least two."
+      "en": "Pigs are social: keep at least two.",
+      "es": "Los cerdos son sociables: ten al menos dos."
     }
   ],
   "healthCare": [
     {
       "pt": "Registre a criação antes do primeiro leitão quando a autoridade exigir (mesmo um único porco na UE e no Canadá) e use a guia de trânsito ou a comunicação de movimentos para comprar, vender ou abater.",
-      "en": "Register your holding before the first piglet when the authority requires it (even a single pig in the EU and Canada) and use the transit permit or movement report to buy, sell or slaughter."
+      "en": "Register your holding before the first piglet when the authority requires it (even a single pig in the EU and Canada) and use the transit permit or movement report to buy, sell or slaughter.",
+      "es": "Registra tu explotación antes del primer lechón cuando la autoridad lo exija (incluso un solo cerdo en la UE y Canadá) y usa la guía de traslado o la comunicación de movimientos para comprar, vender o sacrificar."
     },
     {
       "pt": "Cerca firme, de preferência dupla ou com fio elétrico externo e aba enterrada, para evitar qualquer contato com javalis e porcos ferais.",
-      "en": "A solid fence, ideally double or with outer electric wires and a buried apron, to prevent any contact with wild boar and feral hogs."
+      "en": "A solid fence, ideally double or with outer electric wires and a buried apron, to prevent any contact with wild boar and feral hogs.",
+      "es": "Una valla firme, idealmente doble o con hilos eléctricos exteriores y una faldilla enterrada, para evitar cualquier contacto con jabalíes y cerdos asilvestrados."
     },
     {
       "pt": "Biossegurança simples: roupa e botas só do chiqueiro, nada de visitantes nem carne ou embutidos perto dos porcos, e desinfecção após caçar.",
-      "en": "Simple biosecurity: clothes and boots used only in the pen, no visitors and no meat or cured meats near the pigs, and disinfection after hunting."
+      "en": "Simple biosecurity: clothes and boots used only in the pen, no visitors and no meat or cured meats near the pigs, and disinfection after hunting.",
+      "es": "Bioseguridad sencilla: ropa y botas solo para la porqueriza, sin visitas, sin carne ni embutidos cerca de los cerdos y desinfección después de cazar."
     },
     {
       "pt": "Vermifugue regularmente e antes dos partos; siga as vacinas recomendadas na sua região (ex.: parvovirose e erisipela nas matrizes).",
-      "en": "Deworm regularly and before farrowing; follow your region's recommended vaccines (e.g. parvovirus and erysipelas in breeding sows)."
+      "en": "Deworm regularly and before farrowing; follow your region's recommended vaccines (e.g. parvovirus and erysipelas in breeding sows).",
+      "es": "Desparasita con regularidad y antes de los partos; sigue las vacunas recomendadas en tu región (p. ej. parvovirus y mal rojo en cerdas reproductoras)."
     },
     {
       "pt": "Ferro para os leitões nos primeiros dias evita anemia (com orientação veterinária). Antibiótico só com receita veterinária, respeitando a carência antes do abate.",
-      "en": "Iron for piglets in the first days prevents anaemia (with veterinary guidance). Antibiotics only on a vet's prescription, respecting the withdrawal period before slaughter."
+      "en": "Iron for piglets in the first days prevents anaemia (with veterinary guidance). Antibiotics only on a vet's prescription, respecting the withdrawal period before slaughter.",
+      "es": "El hierro para los lechones en los primeros días previene la anemia (con orientación veterinaria). Antibióticos solo con receta veterinaria, respetando el plazo de espera antes del sacrificio."
     },
     {
       "pt": "Febre, manchas roxas na pele ou mortes súbitas: avise na hora o serviço veterinário oficial. Carne para venda precisa de abate com inspeção.",
-      "en": "Fever, purple skin blotches or sudden deaths: report immediately to the official veterinary service. Pork for sale must be slaughtered under inspection."
+      "en": "Fever, purple skin blotches or sudden deaths: report immediately to the official veterinary service. Pork for sale must be slaughtered under inspection.",
+      "es": "Fiebre, manchas moradas en la piel o muertes repentinas: comunícalo enseguida al servicio veterinario oficial. La carne de cerdo para la venta debe sacrificarse con inspección."
     }
   ],
   "diseases": [
     {
       "name": {
         "pt": "Peste suína africana (PSA)",
-        "en": "African swine fever (ASF)"
+        "en": "African swine fever (ASF)",
+        "es": "Peste porcina africana (PPA)"
       },
       "signs": {
         "pt": "Febre alta, apatia, falta de apetite, manchas vermelhas ou arroxeadas na pele, vômito e mortes súbitas.",
-        "en": "High fever, dullness, loss of appetite, red or purple skin blotches, vomiting and sudden deaths."
+        "en": "High fever, dullness, loss of appetite, red or purple skin blotches, vomiting and sudden deaths.",
+        "es": "Fiebre alta, decaimiento, falta de apetito, manchas rojas o moradas en la piel, vómitos y muertes repentinas."
       },
       "homeCare": {
         "pt": "Isole os porcos, não deixe ninguém entrar ou sair com animais, carne ou equipamentos e avise na hora o serviço veterinário oficial. Javali morto também deve ser avisado.",
-        "en": "Isolate the pigs, let no one move animals, meat or equipment in or out and report immediately to the official veterinary service. Dead wild boar must also be reported."
+        "en": "Isolate the pigs, let no one move animals, meat or equipment in or out and report immediately to the official veterinary service. Dead wild boar must also be reported.",
+        "es": "Aísla a los cerdos, que nadie entre ni saque animales, carne o material, y avisa enseguida al servicio veterinario oficial. Los jabalíes muertos también deben comunicarse."
       },
       "vetCare": {
         "pt": "Doença de notificação obrigatória em todos os países. Não há vacina nem tratamento: o serviço oficial define as medidas. A prevenção é biossegurança.",
-        "en": "Notifiable disease in every country. There is no vaccine or treatment: the official service decides the measures. Prevention is biosecurity."
+        "en": "Notifiable disease in every country. There is no vaccine or treatment: the official service decides the measures. Prevention is biosecurity.",
+        "es": "Enfermedad de declaración obligatoria en todos los países. No hay vacuna ni tratamiento: el servicio oficial decide las medidas. La prevención es la bioseguridad."
       }
     },
     {
       "name": {
         "pt": "Peste suína clássica (PSC)",
-        "en": "Classical swine fever (CSF)"
+        "en": "Classical swine fever (CSF)",
+        "es": "Peste porcina clásica (PPC)"
       },
       "signs": {
         "pt": "Febre, manchas roxas na pele, tremores, aborto e mortes; parecida com a PSA.",
-        "en": "Fever, purple skin blotches, trembling, abortion and deaths; similar to ASF."
+        "en": "Fever, purple skin blotches, trembling, abortion and deaths; similar to ASF.",
+        "es": "Fiebre, manchas moradas en la piel, temblores, abortos y muertes; parecida a la PPA."
       },
       "homeCare": {
         "pt": "Isole os animais doentes, interrompa compras e vendas e chame o serviço veterinário oficial.",
-        "en": "Isolate sick animals, stop buying and selling and call the official veterinary service."
+        "en": "Isolate sick animals, stop buying and selling and call the official veterinary service.",
+        "es": "Aísla a los animales enfermos, deja de comprar y vender y llama al servicio veterinario oficial."
       },
       "vetCare": {
         "pt": "Doença de notificação obrigatória. Só o laboratório oficial confirma; em áreas com foco, a autoridade pode usar vacinação estratégica e vigilância.",
-        "en": "Notifiable disease. Only the official laboratory confirms it; in outbreak areas the authority may use strategic vaccination and surveillance."
+        "en": "Notifiable disease. Only the official laboratory confirms it; in outbreak areas the authority may use strategic vaccination and surveillance.",
+        "es": "Enfermedad de declaración obligatoria. Solo el laboratorio oficial la confirma; en zonas de brote la autoridad puede usar vacunación estratégica y vigilancia."
       }
     },
     {
       "name": {
         "pt": "Doença de Aujeszky (pseudorraiva)",
-        "en": "Aujeszky's disease (pseudorabies)"
+        "en": "Aujeszky's disease (pseudorabies)",
+        "es": "Enfermedad de Aujeszky (pseudorrabia)"
       },
       "signs": {
         "pt": "Leitões com tremores, falta de coordenação e mortes; tosse e febre nos maiores; abortos nas porcas.",
-        "en": "Piglets with tremors, poor coordination and deaths; coughing and fever in older pigs; abortions in sows."
+        "en": "Piglets with tremors, poor coordination and deaths; coughing and fever in older pigs; abortions in sows.",
+        "es": "Lechones con temblores, falta de coordinación y muertes; tos y fiebre en cerdos mayores; abortos en las cerdas."
       },
       "homeCare": {
         "pt": "Isole os animais e impeça contato com javalis e porcos ferais, que carregam o vírus.",
-        "en": "Isolate the animals and prevent contact with wild boar and feral hogs, which carry the virus."
+        "en": "Isolate the animals and prevent contact with wild boar and feral hogs, which carry the virus.",
+        "es": "Aísla a los animales y evita el contacto con jabalíes y cerdos asilvestrados, que llevan el virus."
       },
       "vetCare": {
         "pt": "Doença sob controle oficial e de notificação em vários países; não tem tratamento. O veterinário e o serviço oficial fazem os testes.",
-        "en": "Officially controlled and notifiable in several countries; there is no treatment. The vet and official service carry out the tests."
+        "en": "Officially controlled and notifiable in several countries; there is no treatment. The vet and official service carry out the tests.",
+        "es": "Con control oficial y de declaración obligatoria en varios países; no hay tratamiento. El veterinario y el servicio oficial hacen las pruebas."
       }
     },
     {
       "name": {
         "pt": "Diarreia dos leitões (colibacilose)",
-        "en": "Piglet diarrhoea (colibacillosis)"
+        "en": "Piglet diarrhoea (colibacillosis)",
+        "es": "Diarrea de los lechones (colibacilosis)"
       },
       "signs": {
         "pt": "Fezes líquidas amareladas, leitões fracos, desidratados e com frio.",
-        "en": "Watery yellowish faeces, weak, dehydrated and chilled piglets."
+        "en": "Watery yellowish faeces, weak, dehydrated and chilled piglets.",
+        "es": "Heces líquidas amarillentas, lechones débiles, deshidratados y fríos."
       },
       "homeCare": {
         "pt": "Aqueça os leitões, mantenha a baia seca e limpa e ofereça soro de reidratação.",
-        "en": "Keep piglets warm, the pen dry and clean, and offer oral rehydration solution."
+        "en": "Keep piglets warm, the pen dry and clean, and offer oral rehydration solution.",
+        "es": "Mantén calientes a los lechones, el corral seco y limpio, y ofrece suero oral de rehidratación."
       },
       "vetCare": {
         "pt": "Antibióticos indicados pelo veterinário, com receita; vacinar as porcas previne.",
-        "en": "Antibiotics prescribed by a vet; vaccinating sows prevents it."
+        "en": "Antibiotics prescribed by a vet; vaccinating sows prevents it.",
+        "es": "Antibióticos recetados por el veterinario; vacunar a las cerdas lo previene."
       }
     },
     {
       "name": {
         "pt": "Sarna e piolho",
-        "en": "Mange and lice"
+        "en": "Mange and lice",
+        "es": "Sarna y piojos"
       },
       "signs": {
         "pt": "Coceira intensa, porco se esfregando, crostas nas orelhas e pele grossa.",
-        "en": "Intense itching, rubbing against walls, crusts on the ears and thickened skin."
+        "en": "Intense itching, rubbing against walls, crusts on the ears and thickened skin.",
+        "es": "Picor intenso, se frotan contra las paredes, costras en las orejas y piel engrosada."
       },
       "homeCare": {
         "pt": "Separe os animais afetados e limpe bem as baias e esfregadores.",
-        "en": "Separate affected pigs and thoroughly clean pens and rubbing posts."
+        "en": "Separate affected pigs and thoroughly clean pens and rubbing posts.",
+        "es": "Separa a los cerdos afectados y limpia a fondo los corrales y los postes donde se rascan."
       },
       "vetCare": {
         "pt": "Acaricidas como ivermectina, com produto e intervalo definidos pelo veterinário; respeite a carência antes do abate.",
-        "en": "Acaricides such as ivermectin, with product and interval set by a vet; respect the withdrawal period before slaughter."
+        "en": "Acaricides such as ivermectin, with product and interval set by a vet; respect the withdrawal period before slaughter.",
+        "es": "Acaricidas como la ivermectina, con producto e intervalo fijados por el veterinario; respeta el plazo de espera antes del sacrificio."
       }
     },
     {
       "name": {
         "pt": "Verminose (lombriga)",
-        "en": "Roundworm infection"
+        "en": "Roundworm infection",
+        "es": "Verminosis (ascáridos)"
       },
       "signs": {
         "pt": "Crescimento lento, barriga grande, pelo arrepiado e tosse em animais jovens.",
-        "en": "Slow growth, pot belly, rough coat and coughing in young pigs."
+        "en": "Slow growth, pot belly, rough coat and coughing in young pigs.",
+        "es": "Crecimiento lento, barriga hinchada, pelo áspero y tos en cerdos jóvenes."
       },
       "homeCare": {
         "pt": "Rodízio de piquetes, drenagem da lama e limpeza diária das fezes.",
-        "en": "Rotate paddocks, drain mud and remove manure daily."
+        "en": "Rotate paddocks, drain mud and remove manure daily.",
+        "es": "Rota los cercados, drena el barro y retira el estiércol a diario."
       },
       "vetCare": {
         "pt": "Vermífugos (como fenbendazol ou ivermectina) conforme orientação veterinária.",
-        "en": "Dewormers (such as fenbendazole or ivermectin) as directed by a vet."
+        "en": "Dewormers (such as fenbendazole or ivermectin) as directed by a vet.",
+        "es": "Desparasitantes (como fenbendazol o ivermectina) según indique el veterinario."
       }
     }
   ],
@@ -407,23 +481,28 @@
       "highlights": [
         {
           "pt": "Peste suína clássica, peste suína africana e aftosa são de notificação obrigatória: febre, manchas roxas e mortes súbitas devem ser avisadas ao serviço veterinário estadual.",
-          "en": "Classical swine fever, African swine fever and FMD are notifiable: fever, purple skin blotches and sudden deaths must be reported to the state veterinary service."
+          "en": "Classical swine fever, African swine fever and FMD are notifiable: fever, purple skin blotches and sudden deaths must be reported to the state veterinary service.",
+          "es": "La peste porcina clásica, la peste porcina africana y la fiebre aftosa son de declaración obligatoria: la fiebre, las manchas moradas en la piel y las muertes repentinas deben comunicarse al servicio veterinario estatal."
         },
         {
           "pt": "Parte dos estados do Norte e Nordeste ainda não é zona livre de peste suína clássica, e os focos recentes foram em criações de subsistência.",
-          "en": "Some North and Northeast states are still not free of classical swine fever, and recent outbreaks were in backyard herds."
+          "en": "Some North and Northeast states are still not free of classical swine fever, and recent outbreaks were in backyard herds.",
+          "es": "Algunos estados del Norte y el Noreste todavía no están libres de peste porcina clásica, y los brotes recientes fueron en cerdos de traspatio."
         },
         {
           "pt": "Evite 'lavagem': o MAPA orienta não usar restos de comida, e estados como SC proíbem ou exigem tratamento térmico.",
-          "en": "Avoid swill feeding: MAPA advises against kitchen scraps, and states such as SC ban it or require heat treatment."
+          "en": "Avoid swill feeding: MAPA advises against kitchen scraps, and states such as SC ban it or require heat treatment.",
+          "es": "Evita dar lavazas: el MAPA desaconseja los restos de cocina, y estados como SC los prohíben o exigen tratamiento con calor."
         },
         {
           "pt": "Transporte de suínos exige GTA, e carne para venda precisa de abate com inspeção oficial.",
-          "en": "Moving pigs requires a GTA transit permit, and pork for sale must be slaughtered under official inspection."
+          "en": "Moving pigs requires a GTA transit permit, and pork for sale must be slaughtered under official inspection.",
+          "es": "Mover cerdos exige la guía de tránsito GTA, y la carne de cerdo para la venta debe sacrificarse con inspección oficial."
         },
         {
           "pt": "Raças nacionais como Moura e Piau são rústicas e boas para criação caipira; isole o chiqueiro do javali, espécie invasora.",
-          "en": "Native breeds such as Moura and Piau are hardy and suit free-range farming; keep pens isolated from invasive wild boar."
+          "en": "Native breeds such as Moura and Piau are hardy and suit free-range farming; keep pens isolated from invasive wild boar.",
+          "es": "Las razas autóctonas como Moura y Piau son rústicas y van bien en la cría al aire libre; mantén los corrales aislados de los jabalíes invasores."
         }
       ],
       "sources": [
@@ -449,23 +528,28 @@
       "highlights": [
         {
           "pt": "O jeito mais comum de começar é comprar leitões de terminação (feeder pigs) na primavera e abatê-los no outono.",
-          "en": "The usual way to start is buying feeder pigs in spring and finishing them for slaughter in fall."
+          "en": "The usual way to start is buying feeder pigs in spring and finishing them for slaughter in fall.",
+          "es": "La forma habitual de empezar es comprar cerdos de engorde en primavera y terminarlos para el sacrificio en otoño."
         },
         {
           "pt": "É crime federal dar restos de comida com carne, frango ou peixe sem licença e cozimento a 100 °C por 30 minutos; muitos estados proíbem de vez.",
-          "en": "Feeding food waste that contains meat, poultry or fish without a license and 212 °F/30-minute cooking is illegal federally; many states ban it outright."
+          "en": "Feeding food waste that contains meat, poultry or fish without a license and 212 °F/30-minute cooking is illegal federally; many states ban it outright.",
+          "es": "Dar restos de comida con carne, aves o pescado sin licencia y sin cocerlos a 100 °C (212 °F) durante 30 minutos es ilegal a nivel federal; muchos estados lo prohíben del todo."
         },
         {
           "pt": "Porcos ferais transmitem pseudorraiva e brucelose: use cerca dupla e mantenha seus porcos longe deles.",
-          "en": "Feral hogs carry pseudorabies and brucellosis: use double fencing and keep your pigs away from them."
+          "en": "Feral hogs carry pseudorabies and brucellosis: use double fencing and keep your pigs away from them.",
+          "es": "Los cerdos asilvestrados llevan pseudorrabia y brucelosis: usa doble valla y mantén tus cerdos lejos de ellos."
         },
         {
           "pt": "Porco quase não sua: no verão, ofereça chafurdo de lama ou sombra com aspersão, principalmente no Sul e no Texas.",
-          "en": "Pigs barely sweat: in summer give a mud wallow or shade with sprinklers, especially in the South and Texas."
+          "en": "Pigs barely sweat: in summer give a mud wallow or shade with sprinklers, especially in the South and Texas.",
+          "es": "Los cerdos casi no sudan: en verano dales una charca de barro o sombra con aspersores, sobre todo en el sur y en Texas."
         },
         {
           "pt": "Antibiótico na ração exige VFD e, desde 2023, todo antibiótico de importância médica para animais exige receita veterinária.",
-          "en": "Antibiotics in feed need a VFD and, since 2023, all medically important animal antibiotics need a veterinary prescription."
+          "en": "Antibiotics in feed need a VFD and, since 2023, all medically important animal antibiotics need a veterinary prescription.",
+          "es": "Los antibióticos en el pienso necesitan una VFD y, desde 2023, todos los antibióticos animales de importancia médica necesitan receta veterinaria."
         }
       ],
       "sources": [
@@ -491,23 +575,28 @@
       "highlights": [
         {
           "pt": "Todo dono de porco, mesmo de um só, deve se registrar no PigTRACE e ter número de propriedade (PID).",
-          "en": "Every pig owner, even of a single pig, must register with PigTRACE and have a premises ID (PID)."
+          "en": "Every pig owner, even of a single pig, must register with PigTRACE and have a premises ID (PID).",
+          "es": "Todo dueño de cerdos, aunque sea de uno solo, debe registrarse en PigTRACE y tener un identificador de instalación (PID)."
         },
         {
           "pt": "Reporte toda entrada e saída de porcos em até 7 dias; para abate, use a marca de rebanho de 5 dígitos.",
-          "en": "Report every pig movement in or out within 7 days; slaughter pigs carry a 5-digit herd mark."
+          "en": "Report every pig movement in or out within 7 days; slaughter pigs carry a 5-digit herd mark.",
+          "es": "Comunica cada entrada o salida de cerdos en 7 días; los cerdos para sacrificio llevan una marca de rebaño de 5 dígitos."
         },
         {
           "pt": "Peste suína africana é doença de notificação obrigatória ao CFIA e ameaça também os porcos de quintal.",
-          "en": "African swine fever is reportable to the CFIA and threatens backyard pigs too."
+          "en": "African swine fever is reportable to the CFIA and threatens backyard pigs too.",
+          "es": "La peste porcina africana es de declaración obligatoria a la CFIA y también amenaza a los cerdos de traspatio."
         },
         {
           "pt": "No inverno, use abrigo reforçado, cama seca ou profunda e garanta água sem gelo todos os dias.",
-          "en": "In winter, provide a sturdy shelter, dry or deep bedding, and ice-free water every day."
+          "en": "In winter, provide a sturdy shelter, dry or deep bedding, and ice-free water every day.",
+          "es": "En invierno, da un refugio sólido, cama seca o profunda y agua sin hielo todos los días."
         },
         {
           "pt": "Antibióticos medicamente importantes exigem receita veterinária desde dezembro de 2018.",
-          "en": "Medically important antimicrobials need a veterinary prescription since December 2018."
+          "en": "Medically important antimicrobials need a veterinary prescription since December 2018.",
+          "es": "Los antimicrobianos de importancia médica necesitan receta veterinaria desde diciembre de 2018."
         }
       ],
       "sources": [
@@ -529,23 +618,28 @@
       "highlights": [
         {
           "pt": "Peste suína africana (ASP) circula em javalis na Alemanha: não há vacina e a única defesa é biossegurança.",
-          "en": "African swine fever (ASF) circulates in German wild boar: there is no vaccine and biosecurity is the only defence."
+          "en": "African swine fever (ASF) circulates in German wild boar: there is no vaccine and biosecurity is the only defence.",
+          "es": "La peste porcina africana (PPA) circula en los jabalíes alemanes: no hay vacuna y la bioseguridad es la única defensa."
         },
         {
           "pt": "É proibido alimentar porcos com restos de cozinha ou comida; guarde ração e palha longe de javalis.",
-          "en": "Feeding pigs kitchen or food waste is prohibited; store feed and straw out of reach of wild boar."
+          "en": "Feeding pigs kitchen or food waste is prohibited; store feed and straw out of reach of wild boar.",
+          "es": "Está prohibido dar a los cerdos restos de cocina o de comida; guarda el pienso y la paja fuera del alcance de los jabalíes."
         },
         {
           "pt": "Mesmo um só porco ou miniporco exige registro no Veterinäramt e na Tierseuchenkasse, brinco oficial e livro de registro.",
-          "en": "Even a single pig or mini pig requires registration with the Veterinäramt and Tierseuchenkasse, an official ear tag and a herd register."
+          "en": "Even a single pig or mini pig requires registration with the Veterinäramt and Tierseuchenkasse, an official ear tag and a herd register.",
+          "es": "Incluso un solo cerdo o minicerdo exige registro en el Veterinäramt y en la Tierseuchenkasse, un crotal oficial y un libro de registro."
         },
         {
           "pt": "Em zonas de restrição da ASP, porcos criados ao ar livre podem ter de ficar confinados.",
-          "en": "In ASF restriction zones, outdoor pigs may have to be kept indoors."
+          "en": "In ASF restriction zones, outdoor pigs may have to be kept indoors.",
+          "es": "En las zonas restringidas por PPA, puede ser obligatorio meter bajo techo a los cerdos que viven fuera."
         },
         {
           "pt": "Raças antigas como Buntes Bentheimer e Schwäbisch-Hällisches são rústicas e boas para pasto.",
-          "en": "Heritage breeds such as Buntes Bentheimer and Schwäbisch-Hällisches are hardy and suit pasture."
+          "en": "Heritage breeds such as Buntes Bentheimer and Schwäbisch-Hällisches are hardy and suit pasture.",
+          "es": "Las razas tradicionales como Buntes Bentheimer y Schwäbisch-Hällisches son rústicas y van bien en pasto."
         }
       ],
       "sources": [
@@ -571,23 +665,28 @@
       "highlights": [
         {
           "pt": "Autoconsumo: no máximo 3 porcos de engorda por ano em intensivo ou 5 em extensivo, sem porcas reprodutoras, com registro REGA e livro de registro.",
-          "en": "Home use: at most 3 fattening pigs a year indoors or 5 outdoors, no breeding sows, with REGA registration and a record book."
+          "en": "Home use: at most 3 fattening pigs a year indoors or 5 outdoors, no breeding sows, with REGA registration and a record book.",
+          "es": "Autoconsumo: como máximo 3 cerdos de engorde al año en nave o 5 al aire libre, sin cerdas reproductoras, con registro en el REGA y libro de explotación."
         },
         {
           "pt": "O porco Ibérico engorda na dehesa com bolota durante a montanera, de outubro a março.",
-          "en": "Iberian pigs fatten on acorns in the dehesa during the montanera, October to March."
+          "en": "Iberian pigs fatten on acorns in the dehesa during the montanera, October to March.",
+          "es": "Los cerdos ibéricos engordan con bellota en la dehesa durante la montanera, de octubre a marzo."
         },
         {
           "pt": "Há peste suína africana em javalis na Catalunha: cercas fechadas e nada de restos de comida com carne.",
-          "en": "African swine fever is present in wild boar in Catalonia: keep fences tight and never feed meat scraps."
+          "en": "African swine fever is present in wild boar in Catalonia: keep fences tight and never feed meat scraps.",
+          "es": "La peste porcina africana está presente en jabalíes de Cataluña: mantén las vallas bien cerradas y nunca des restos de carne."
         },
         {
           "pt": "No verão seco, dê sombra, muita água e um lugar para o porco se molhar.",
-          "en": "In the dry summer, provide shade, plenty of water and a place for pigs to wet themselves."
+          "en": "In the dry summer, provide shade, plenty of water and a place for pigs to wet themselves.",
+          "es": "En el verano seco, da sombra, mucha agua y un lugar donde los cerdos puedan mojarse."
         },
         {
           "pt": "Antibióticos só com receita veterinária (RD 666/2023, sistema PRESVET).",
-          "en": "Antibiotics only with a vet prescription (RD 666/2023, PRESVET system)."
+          "en": "Antibiotics only with a vet prescription (RD 666/2023, PRESVET system).",
+          "es": "Antibióticos solo con receta veterinaria (RD 666/2023, sistema PRESVET)."
         }
       ],
       "sources": [
@@ -613,23 +712,28 @@
       "highlights": [
         {
           "pt": "Até um único porco (de estimação ou para consumo da família) precisa ser declarado no EDE e identificado.",
-          "en": "Even a single pig (pet or for family consumption) must be registered with the EDE and identified."
+          "en": "Even a single pig (pet or for family consumption) must be registered with the EDE and identified.",
+          "es": "Incluso un solo cerdo (de compañía o para consumo familiar) debe registrarse en el EDE e identificarse."
         },
         {
           "pt": "Por causa da peste suína africana, criar porcos ao ar livre exige cerca dupla ou reforçada contra javalis (postes fixos e aba enterrada ou fios elétricos).",
-          "en": "Because of African swine fever, outdoor pigs need wild-boar-proof fencing (fixed posts plus a buried apron or outer electric wires)."
+          "en": "Because of African swine fever, outdoor pigs need wild-boar-proof fencing (fixed posts plus a buried apron or outer electric wires).",
+          "es": "Por la peste porcina africana, los cerdos al aire libre necesitan vallas a prueba de jabalíes (postes fijos más faldilla enterrada o hilos eléctricos exteriores)."
         },
         {
           "pt": "Restos de cozinha são proibidos na alimentação dos porcos, e qualquer suspeita de doença ou javali morto deve ser avisada.",
-          "en": "Kitchen scraps are banned as pig feed; report any suspected disease or dead wild boar."
+          "en": "Kitchen scraps are banned as pig feed; report any suspected disease or dead wild boar.",
+          "es": "Está prohibido dar restos de cocina a los cerdos; comunica cualquier sospecha de enfermedad o jabalí muerto."
         },
         {
           "pt": "Movimentos de porcos são notificados à BDPORC em até 7 dias e os documentos ficam 5 anos no registro.",
-          "en": "Pig movements are notified to BDPORC within 7 days and records are kept for 5 years."
+          "en": "Pig movements are notified to BDPORC within 7 days and records are kept for 5 years.",
+          "es": "Los movimientos de cerdos se notifican a BDPORC en 7 días y los registros se guardan 5 años."
         },
         {
           "pt": "Raças locais como Basque, Gascon e Cul noir Limousin são ótimas para criação extensiva ao ar livre.",
-          "en": "Local breeds like Basque, Gascon and Limousin Black-Rump suit extensive outdoor rearing."
+          "en": "Local breeds like Basque, Gascon and Limousin Black-Rump suit extensive outdoor rearing.",
+          "es": "Las razas locales como el cerdo vasco, el Gascon y el Limousin de culo negro van bien en la cría extensiva al aire libre."
         }
       ],
       "sources": [
@@ -655,23 +759,28 @@
       "highlights": [
         {
           "pt": "Até 4 porcos em casa é 'detenção caseira': sem licença, mas com registo obrigatório no SNIRA (DGAV).",
-          "en": "Up to 4 pigs at home counts as 'home keeping': no licence, but mandatory registration in SNIRA (DGAV)."
+          "en": "Up to 4 pigs at home counts as 'home keeping': no licence, but mandatory registration in SNIRA (DGAV).",
+          "es": "Hasta 4 cerdos en casa es 'tenencia doméstica': sin licencia, pero con registro obligatorio en el SNIRA (DGAV)."
         },
         {
           "pt": "A matança caseira é legal até 3 porcos por ano, só para a família, registada no RED; vender a carne é proibido.",
-          "en": "Home slaughter is legal for up to 3 pigs a year, family use only, recorded in the RED; selling the meat is banned."
+          "en": "Home slaughter is legal for up to 3 pigs a year, family use only, recorded in the RED; selling the meat is banned.",
+          "es": "La matanza casera es legal hasta 3 cerdos al año, solo para la familia, anotada en el RED; está prohibido vender la carne."
         },
         {
           "pt": "As explorações declaram os porcos em abril, agosto e dezembro (DES) no IFAP/iDigital.",
-          "en": "Holdings declare their pigs in April, August and December (DES) via IFAP/iDigital."
+          "en": "Holdings declare their pigs in April, August and December (DES) via IFAP/iDigital.",
+          "es": "Las explotaciones declaran sus cerdos en abril, agosto y diciembre (DES) a través de IFAP/iDigital."
         },
         {
           "pt": "Nunca dê restos de cozinha aos porcos e afaste os javalis: a peste suína africana já está em Espanha.",
-          "en": "Never feed kitchen scraps and keep wild boar away: African swine fever is already in Spain."
+          "en": "Never feed kitchen scraps and keep wild boar away: African swine fever is already in Spain.",
+          "es": "Nunca des restos de cocina y mantén lejos a los jabalíes: la peste porcina africana ya está en España."
         },
         {
           "pt": "Raças autóctones: Bísaro no Norte e Alentejano no montado, engordado com bolota de novembro a fevereiro.",
-          "en": "Native breeds: Bísaro in the North and Alentejano in the oak montado, finished on acorns from November to February."
+          "en": "Native breeds: Bísaro in the North and Alentejano in the oak montado, finished on acorns from November to February.",
+          "es": "Razas autóctonas: Bísaro en el Norte y Alentejano en el montado de encinas, terminado con bellota de noviembre a febrero."
         }
       ],
       "sources": [
@@ -697,23 +806,28 @@
       "highlights": [
         {
           "pt": "Registre na BDN mesmo um único porco; \"familiar\" é até 4 animais para consumo próprio.",
-          "en": "Register even a single pig in the BDN; a \"family\" holding is up to 4 pigs for home use."
+          "en": "Register even a single pig in the BDN; a \"family\" holding is up to 4 pigs for home use.",
+          "es": "Registra incluso un solo cerdo en la BDN; una explotación \"familiar\" tiene hasta 4 cerdos para consumo propio."
         },
         {
           "pt": "Peste suína africana: proibido dar restos de cozinha e é preciso impedir qualquer contato com javalis (cerca dupla no semiextensivo).",
-          "en": "African swine fever: kitchen scraps are banned and any contact with wild boar must be prevented (double fencing outdoors)."
+          "en": "African swine fever: kitchen scraps are banned and any contact with wild boar must be prevented (double fencing outdoors).",
+          "es": "Peste porcina africana: están prohibidos los restos de cocina y hay que evitar cualquier contacto con jabalíes (doble valla al aire libre)."
         },
         {
           "pt": "Abate em casa: até 4 porcos por família, criados por você há pelo menos 30 dias, e a carne não pode ser vendida.",
-          "en": "Home slaughter: up to 4 pigs per household, raised by you for at least 30 days, and the meat cannot be sold."
+          "en": "Home slaughter: up to 4 pigs per household, raised by you for at least 30 days, and the meat cannot be sold.",
+          "es": "Matanza casera: hasta 4 cerdos por familia, criados por ti durante al menos 30 días, y la carne no se puede vender."
         },
         {
           "pt": "Remédio só com receita veterinária eletrônica (REV).",
-          "en": "Medicines only with an electronic veterinary prescription (REV)."
+          "en": "Medicines only with an electronic veterinary prescription (REV).",
+          "es": "Medicamentos solo con receta veterinaria electrónica (REV)."
         },
         {
           "pt": "Raças pretas autóctones como Cinta Senese, Nero dei Nebrodi e Mora Romagnola rendem bem no semiextensivo.",
-          "en": "Native black breeds such as Cinta Senese, Nero dei Nebrodi and Mora Romagnola thrive in outdoor systems."
+          "en": "Native black breeds such as Cinta Senese, Nero dei Nebrodi and Mora Romagnola thrive in outdoor systems.",
+          "es": "Las razas negras autóctonas como Cinta Senese, Nero dei Nebrodi y Mora Romagnola se crían muy bien al aire libre."
         }
       ],
       "sources": [
@@ -739,19 +853,23 @@
       "highlights": [
         {
           "pt": "Cerca de um terço dos porcos do México vive em quintais (traspatio), soltos e com complemento caseiro.",
-          "en": "About one third of Mexico's pigs live in backyards (traspatio), free ranging with home-supplied feed."
+          "en": "About one third of Mexico's pigs live in backyards (traspatio), free ranging with home-supplied feed.",
+          "es": "Cerca de un tercio de los cerdos de México vive en traspatio, en libertad y con alimento de la propia casa."
         },
         {
           "pt": "O cerdo pelón mexicano (Yucatán) é uma raça criolla rústica, ameaçada e com mercado gourmet.",
-          "en": "The Mexican hairless pig (Yucatán) is a hardy, endangered criollo breed with a growing gourmet market."
+          "en": "The Mexican hairless pig (Yucatán) is a hardy, endangered criollo breed with a growing gourmet market.",
+          "es": "El cerdo pelón mexicano (Yucatán) es una raza criolla rústica y en peligro, con un mercado gourmet en crecimiento."
         },
         {
           "pt": "O SENASICA pede para não alimentar porcos com restos de comida, para evitar a peste suína africana.",
-          "en": "SENASICA asks keepers not to feed food waste to pigs, to keep African swine fever out."
+          "en": "SENASICA asks keepers not to feed food waste to pigs, to keep African swine fever out.",
+          "es": "El SENASICA pide no dar restos de comida a los cerdos, para mantener fuera la peste porcina africana."
         },
         {
           "pt": "Mortes súbitas, febre ou vômito em porcos devem ser avisados ao SENASICA (800 751 2100).",
-          "en": "Report sudden deaths, fever or vomiting in pigs to SENASICA (800 751 2100)."
+          "en": "Report sudden deaths, fever or vomiting in pigs to SENASICA (800 751 2100).",
+          "es": "Comunica al SENASICA (800 751 2100) las muertes repentinas, la fiebre o los vómitos en cerdos."
         }
       ],
       "sources": [

@@ -2,7 +2,8 @@
   "id": "beans",
   "summary": {
     "pt": "O feijão é rápido (cerca de 90 dias), dá até três safras por ano no clima quente e ainda melhora o solo, porque fixa nitrogênio do ar.",
-    "en": "Beans are fast (about 90 days), give up to three crops a year in warm climates and improve the soil, since they fix nitrogen from the air."
+    "en": "Beans are fast (about 90 days), give up to three crops a year in warm climates and improve the soil, since they fix nitrogen from the air.",
+    "es": "El frijol es rápido (unos 90 días), da hasta tres cosechas al año en climas cálidos y mejora el suelo, ya que fija nitrógeno del aire."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [1, 2, 3, 4, 5, 8, 9],
-      "notes": { "pt": "Três épocas: 'das águas' (out–dez), 'da seca' (jan–fev) e 'de inverno' (mai–jun, só com irrigação).", "en": "Three seasons: rainy-season (Oct–Dec), late-rains (Jan–Feb) and winter (May–Jun, irrigated only)." }
+      "notes": { "pt": "Três épocas: 'das águas' (out–dez), 'da seca' (jan–fev) e 'de inverno' (mai–jun, só com irrigação).", "en": "Three seasons: rainy-season (Oct–Dec), late-rains (Jan–Feb) and winter (May–Jun, irrigated only).", "es": "Tres épocas: de lluvias (oct–dic), de fin de lluvias (ene–feb) y de invierno (may–jun, solo con riego)." }
     },
     "subtropical": {
       "directSowing": [8, 9, 10, 1, 2],
       "seedbed": [],
       "transplant": [],
       "harvest": [11, 12, 1, 4, 5],
-      "notes": { "pt": "Plante depois das geadas (safra) ou em jan–fev (safrinha), colhendo antes do frio.", "en": "Sow after the frosts (main crop) or in Jan–Feb (second crop), harvesting before the cold." }
+      "notes": { "pt": "Plante depois das geadas (safra) ou em jan–fev (safrinha), colhendo antes do frio.", "en": "Sow after the frosts (main crop) or in Jan–Feb (second crop), harvesting before the cold.", "es": "Siembra después de las heladas (cosecha principal) o en ene–feb (segunda cosecha), cosechando antes del frío." }
     },
     "temperate": {
       "directSowing": [11, 12],
       "seedbed": [],
       "transplant": [],
       "harvest": [2, 3],
-      "notes": { "pt": "Semeie com o solo acima de 15 °C. Abaixo de 10 °C a semente apodrece.", "en": "Sow when the soil is above 15 °C (60 °F). Below 10 °C (50 °F) seeds rot." }
+      "notes": { "pt": "Semeie com o solo acima de 15 °C. Abaixo de 10 °C a semente apodrece.", "en": "Sow when the soil is above 15 °C (60 °F). Below 10 °C (50 °F) seeds rot.", "es": "Siembra cuando el suelo esté por encima de 15 °C (60 °F). Por debajo de 10 °C (50 °F) las semillas se pudren." }
     },
     "semiarid": {
       "directSowing": [12, 1, 2, 3],
       "seedbed": [],
       "transplant": [],
       "harvest": [3, 4, 5, 6],
-      "notes": { "pt": "Plante com as primeiras chuvas. O feijão-de-corda (caupi) aguenta melhor a seca.", "en": "Sow with the first rains. Cowpea handles drought better than common beans." }
+      "notes": { "pt": "Plante com as primeiras chuvas. O feijão-de-corda (caupi) aguenta melhor a seca.", "en": "Sow with the first rains. Cowpea handles drought better than common beans.", "es": "Siembra con las primeras lluvias. El caupí aguanta mejor la sequía que el frijol común." }
     },
     "cold": {
       "directSowing": [12],
       "seedbed": [],
       "transplant": [],
       "harvest": [3],
-      "notes": { "pt": "Verão curto: use variedades precoces e plante só quando o solo esquentar.", "en": "Short summer: use early varieties and sow only once the soil has warmed." }
+      "notes": { "pt": "Verão curto: use variedades precoces e plante só quando o solo esquentar.", "en": "Short summer: use early varieties and sow only once the soil has warmed.", "es": "Verano corto: usa variedades tempranas y siembra solo cuando el suelo se haya calentado." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo e corrija a acidez com calcário. No plantio, use esterco curtido ou NPK com bastante fósforo, sem encostar o adubo na semente. Inocule a semente com rizóbio se a área nunca teve feijão. Um pouco de nitrogênio em cobertura aos 20–25 dias ajuda.",
-      "en": "Test the soil and lime acid soils. At sowing, use aged manure or a phosphorus-rich NPK, kept away from the seed. Inoculate seed with rhizobia if the field never grew beans. A little nitrogen side-dressed at 20–25 days helps."
+      "en": "Test the soil and lime acid soils. At sowing, use aged manure or a phosphorus-rich NPK, kept away from the seed. Inoculate seed with rhizobia if the field never grew beans. A little nitrogen side-dressed at 20–25 days helps.",
+      "es": "Haz un análisis de suelo y encala los suelos ácidos. En la siembra, usa estiércol curado o un NPK rico en fósforo, lejos de la semilla. Inocula la semilla con rizobios si en el campo nunca hubo frijol. Un poco de nitrógeno en cobertura a los 20–25 días ayuda."
     },
     "pruning": null,
     "watering": {
       "pt": "Precisa de água na germinação e principalmente na floração e formação das vagens. Encharcamento faz a raiz apodrecer.",
-      "en": "Needs water at germination and above all at flowering and pod fill. Waterlogged soil rots the roots."
+      "en": "Needs water at germination and above all at flowering and pod fill. Waterlogged soil rots the roots.",
+      "es": "Necesita agua en la germinación y sobre todo en la floración y el llenado de vainas. El suelo encharcado pudre las raíces."
     },
     "other": {
       "pt": "Pleno sol e solo bem drenado. Mantenha o mato limpo nos primeiros 30 dias. Evite mexer nas plantas molhadas para não espalhar doenças.",
-      "en": "Full sun and well-drained soil. Keep weeds down for the first 30 days. Avoid working among wet plants so diseases don't spread."
+      "en": "Full sun and well-drained soil. Keep weeds down for the first 30 days. Avoid working among wet plants so diseases don't spread.",
+      "es": "Pleno sol y suelo bien drenado. Mantén las malezas a raya los primeros 30 días. Evita trabajar entre plantas mojadas para no propagar enfermedades."
     }
   },
   "sources": [

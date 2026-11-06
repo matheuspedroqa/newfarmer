@@ -2,31 +2,36 @@
   "id": "celery",
   "summary": {
     "pt": "O aipo (salsão) é uma hortaliça de talos crocantes e perfumados, ótima para temperos e sopas. Gosta de clima ameno, solo rico e muita água.",
-    "en": "Celery is a vegetable with crunchy, aromatic stalks, great for seasoning and soups. It likes mild weather, rich soil and lots of water."
+    "en": "Celery is a vegetable with crunchy, aromatic stalks, great for seasoning and soups. It likes mild weather, rich soil and lots of water.",
+    "es": "El apio es una hortaliza de tallos crujientes y aromáticos, ideal para sazonar y para sopas. Le gustan el clima suave, el suelo rico y mucha agua."
   },
   "calendar": {
-    "tropical": { "directSowing": [], "seedbed": [3, 4, 5], "transplant": [4, 5, 6, 7], "harvest": [7, 8, 9, 10, 11], "notes": { "pt": "Vai melhor em regiões de altitude e na época mais fresca.", "en": "Does best at altitude and in the cooler season." } },
+    "tropical": { "directSowing": [], "seedbed": [3, 4, 5], "transplant": [4, 5, 6, 7], "harvest": [7, 8, 9, 10, 11], "notes": { "pt": "Vai melhor em regiões de altitude e na época mais fresca.", "en": "Does best at altitude and in the cooler season.", "es": "Se da mejor en altitud y en la época más fresca." } },
     "subtropical": { "directSowing": [], "seedbed": [2, 3, 4, 5, 6, 7], "transplant": [3, 4, 5, 6, 7, 8, 9], "harvest": [6, 7, 8, 9, 10, 11, 12] },
     "temperate": { "directSowing": [], "seedbed": [7, 8, 9, 2], "transplant": [9, 10, 11, 3], "harvest": [1, 2, 3, 4, 6, 7] },
-    "semiarid": { "directSowing": [], "seedbed": [3, 4], "transplant": [5, 6], "harvest": [8, 9, 10], "notes": { "pt": "Só com irrigação frequente, na época mais amena.", "en": "Only with frequent irrigation, in the mildest season." } },
-    "cold": { "directSowing": [], "seedbed": [8, 9], "transplant": [10, 11], "harvest": [2, 3, 4], "notes": { "pt": "Faça as mudas em local protegido; frio forte na fase de muda faz o aipo florescer cedo.", "en": "Raise seedlings under cover; hard cold at the seedling stage makes celery bolt early." } }
+    "semiarid": { "directSowing": [], "seedbed": [3, 4], "transplant": [5, 6], "harvest": [8, 9, 10], "notes": { "pt": "Só com irrigação frequente, na época mais amena.", "en": "Only with frequent irrigation, in the mildest season.", "es": "Solo con riego frecuente, en la época más suave." } },
+    "cold": { "directSowing": [], "seedbed": [8, 9], "transplant": [10, 11], "harvest": [2, 3, 4], "notes": { "pt": "Faça as mudas em local protegido; frio forte na fase de muda faz o aipo florescer cedo.", "en": "Raise seedlings under cover; hard cold at the seedling stage makes celery bolt early.", "es": "Cría las plántulas bajo cubierta; el frío fuerte en la etapa de plántula hace que el apio se espigue pronto." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Solo pouco ácido (corrija com calcário) e bem rico: misture bastante esterco de gado curtido ou composto antes do transplante, com um pouco de NPK (ex.: 5-10-10). Faça coberturas com nitrogênio (ou esterco) cerca de 4 e 8 semanas após o transplante. Não deixe o adubo encostar nas mudas.",
-      "en": "Slightly acidic soil (lime if needed) that is very rich: mix in plenty of aged cattle manure or compost before transplanting, plus a little NPK (e.g., 5-10-10). Side-dress with nitrogen (or manure) about 4 and 8 weeks after transplanting. Keep fertilizer off the seedlings."
+      "en": "Slightly acidic soil (lime if needed) that is very rich: mix in plenty of aged cattle manure or compost before transplanting, plus a little NPK (e.g., 5-10-10). Side-dress with nitrogen (or manure) about 4 and 8 weeks after transplanting. Keep fertilizer off the seedlings.",
+      "es": "Suelo ligeramente ácido (encala si hace falta) y muy rico: mezcla mucho estiércol vacuno curado o compost antes del trasplante, más un poco de NPK (p. ej., 5-10-10). Abona en cobertura con nitrógeno (o estiércol) a las 4 y 8 semanas del trasplante. Mantén el fertilizante lejos de las plántulas."
     },
     "pruning": {
       "pt": "Retire brotos laterais e folhas velhas da base. Se quiser talos mais claros e macios, amarre ou cubra os talos 2–3 semanas antes da colheita.",
-      "en": "Remove side shoots and old outer leaves. For paler, more tender stalks, tie or wrap them 2–3 weeks before harvest."
+      "en": "Remove side shoots and old outer leaves. For paler, more tender stalks, tie or wrap them 2–3 weeks before harvest.",
+      "es": "Quita los brotes laterales y las hojas exteriores viejas. Para tallos más claros y tiernos, átalos o envuélvelos 2–3 semanas antes de la cosecha."
     },
     "watering": {
       "pt": "Raiz curta: precisa de água constante (2–3 regas por semana ou mais no calor). Solo seco deixa os talos duros, fibrosos e amargos.",
-      "en": "Shallow roots: needs steady water (2–3 times a week or more in heat). Dry soil makes stalks tough, stringy and bitter."
+      "en": "Shallow roots: needs steady water (2–3 times a week or more in heat). Dry soil makes stalks tough, stringy and bitter.",
+      "es": "Raíces superficiales: necesita agua constante (2–3 veces por semana o más con calor). El suelo seco vuelve los tallos duros, fibrosos y amargos."
     },
     "other": {
       "pt": "As sementes são muito pequenas e demoram a germinar: faça mudas em bandeja e transplante com 4–6 folhas, com 20–30 cm entre plantas. Não deixe as raízes secarem no transplante.",
-      "en": "Seeds are tiny and slow to germinate: start them in trays and transplant at 4–6 leaves, 20–30 cm apart. Don't let roots dry out during transplanting."
+      "en": "Seeds are tiny and slow to germinate: start them in trays and transplant at 4–6 leaves, 20–30 cm apart. Don't let roots dry out during transplanting.",
+      "es": "Las semillas son diminutas y germinan despacio: empieza en bandejas y trasplanta con 4–6 hojas, a 20–30 cm. No dejes que las raíces se sequen durante el trasplante."
     }
   },
   "sources": [

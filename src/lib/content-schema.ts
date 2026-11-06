@@ -2,7 +2,8 @@ import { z } from "zod";
 import { ANIMAL_IDS, CROP_IDS } from "./catalog";
 import { KNOWLEDGE_COUNTRIES } from "./countries";
 
-export const textSchema = z.object({ pt: z.string().trim().min(1), en: z.string().trim().min(1) });
+export const textSchema = z.object({ pt: z.string().trim().min(1), en: z.string().trim().min(1), es: z.string().trim().min(1) });
+export type Text = z.infer<typeof textSchema>;
 const zones = <T extends z.ZodTypeAny>(schema: T) =>
   z.object({ tropical: schema, subtropical: schema, temperate: schema, semiarid: schema, cold: schema });
 const sourceSchema = z.object({ title: z.string().trim().min(1), url: z.string().url() });

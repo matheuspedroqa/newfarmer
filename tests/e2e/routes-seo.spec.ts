@@ -72,6 +72,28 @@ test.describe("sem cookie de idioma", () => {
     await page.getByTestId("top-controls").getByRole("button", { name: "PT", exact: true }).click();
     await expect(page).toHaveURL(/\/pt$/);
   });
+
+  test("espanhol em /es e páginas públicas 'o que plantar' com endereço na língua da página", async ({ page }) => {
+    await page.goto("/es");
+    await expect(page.locator("html")).toHaveAttribute("lang", "es");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Tus animales y tu huerta, organizados para tu clima");
+    await page.goto("/es/terms");
+    await expect(page.getByRole("heading", { name: "Términos de Uso", level: 1 })).toBeVisible();
+
+    await page.goto("/es/que-plantar/espana/noviembre");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Qué plantar en noviembre en España");
+    await expect(page.locator('link[rel="alternate"][hreflang="pt"]')).toHaveAttribute("href", /\/pt\/o-que-plantar\/espanha\/novembro$/);
+    // Árvores frutíferas ficam de fora; o semiárido de novembro tem tomate.
+    await expect(page.getByTestId("guide-zone-semiarid")).toContainText("Tomate");
+    await expect(page.getByTestId("guide-zone-subtropical")).not.toContainText("Naranja");
+    await page.waitForLoadState("networkidle");
+    await page.getByTestId("top-controls").getByRole("button", { name: "PT", exact: true }).click();
+    await expect(page).toHaveURL(/\/pt\/o-que-plantar\/espanha\/novembro$/);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("O que plantar em novembro na Espanha");
+    expect((await page.request.get("/pt/o-que-plantar/espanha/november")).status()).toBe(404);
+    expect((await page.request.get("/what-to-plant/narnia/march")).status()).toBe(404);
+    expect((await page.request.get("/api/health")).status()).toBe(200);
+  });
 });
 
 test("?aba=diario antigo ainda abre o diário", async ({ page }) => {
@@ -88,7 +110,8 @@ test("robots.txt e sitemap.xml", async ({ page }) => {
   const robots = await (await page.request.get("/robots.txt")).text();
   expect(robots).toContain("Disallow: /admin");
   expect(robots).toContain("Sitemap:");
-  expect(await (await page.request.get("/sitemap.xml")).text()).toContain("/pt/privacy");
+  const sitemap = await (await page.request.get("/sitemap.xml")).text();
+  for (const path of ["/pt/privacy", "/es/privacy", "/what-to-plant/brazil/march", "/es/que-plantar/mexico/enero"]) expect(sitemap).toContain(path);
 });
 
 test("área logada é noindex e a landing não", async ({ page }) => {

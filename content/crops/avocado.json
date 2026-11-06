@@ -2,7 +2,8 @@
   "id": "avocado",
   "summary": {
     "pt": "Árvore grande e perene que, enxertada, produz do 3º–4º ano e dura décadas. Gosta de calor, odeia encharcamento e, misturando variedades, a colheita se espalha por boa parte do ano.",
-    "en": "A large evergreen tree that, when grafted, bears from year 3–4 and lasts decades. It likes warmth, hates waterlogging, and mixing varieties spreads the harvest over much of the year."
+    "en": "A large evergreen tree that, when grafted, bears from year 3–4 and lasts decades. It likes warmth, hates waterlogging, and mixing varieties spreads the harvest over much of the year.",
+    "es": "Árbol grande de hoja perenne que, injertado, da fruta desde el año 3–4 y dura décadas. Le gusta el calor, odia el encharcamiento, y mezclar variedades reparte la cosecha durante buena parte del año."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [10, 11, 12, 1],
       "harvest": [2, 3, 4, 5, 6, 7, 8, 9],
-      "notes": { "pt": "Plante no início das chuvas. Variedades tropicais (Margarida, Fortuna, Quintal) colhem em épocas diferentes. Muito calor faz a árvore crescer muito e produzir menos.", "en": "Plant at the start of the rains. Tropical varieties ripen at different times. Too much heat makes the tree grow a lot and bear less." }
+      "notes": { "pt": "Plante no início das chuvas. Variedades tropicais (Margarida, Fortuna, Quintal) colhem em épocas diferentes. Muito calor faz a árvore crescer muito e produzir menos.", "en": "Plant at the start of the rains. Tropical varieties ripen at different times. Too much heat makes the tree grow a lot and bear less.", "es": "Planta al inicio de las lluvias. Las variedades tropicales maduran en épocas distintas. Demasiado calor hace que el árbol crezca mucho y dé menos." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10, 11],
       "harvest": [3, 4, 5, 6, 7, 8, 9, 10],
-      "notes": { "pt": "Plante na primavera, depois das geadas. Ótimo para Hass e Fuerte (colheita mai–out). Proteja a muda nova de geada nos primeiros invernos.", "en": "Plant in spring, after frosts. Great for Hass and Fuerte (picked May–Oct). Protect young trees from frost in their first winters." }
+      "notes": { "pt": "Plante na primavera, depois das geadas. Ótimo para Hass e Fuerte (colheita mai–out). Proteja a muda nova de geada nos primeiros invernos.", "en": "Plant in spring, after frosts. Great for Hass and Fuerte (picked May–Oct). Protect young trees from frost in their first winters.", "es": "Planta en primavera, después de las heladas. Muy bueno para Hass y Fuerte (cosecha de mayo a octubre). Protege los árboles jóvenes de las heladas en sus primeros inviernos." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10],
       "harvest": [8, 9, 10, 11, 12],
-      "notes": { "pt": "Só onde a geada é leve (até cerca de −1 °C), como no litoral mediterrâneo e no Chile central. Use Hass ou Bacon, as mais resistentes. Com geada forte, não vinga.", "en": "Only where frost is light (to about −1 °C), as on the Mediterranean coast or central Chile. Use Hass or Bacon, the hardiest. With hard frost it won't survive." }
+      "notes": { "pt": "Só onde a geada é leve (até cerca de −1 °C), como no litoral mediterrâneo e no Chile central. Use Hass ou Bacon, as mais resistentes. Com geada forte, não vinga.", "en": "Only where frost is light (to about −1 °C), as on the Mediterranean coast or central Chile. Use Hass or Bacon, the hardiest. With hard frost it won't survive.", "es": "Solo donde las heladas son ligeras (hasta unos −1 °C), como en la costa mediterránea o el centro de Chile. Usa Hass o Bacon, las más resistentes. Con heladas fuertes no sobrevive." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [11, 12, 1, 2],
       "harvest": [2, 3, 4, 5, 6, 7, 8],
-      "notes": { "pt": "Só com irrigação regular. Calor seco na florada derruba flores; quebra-vento ajuda.", "en": "Regular irrigation only. Dry heat at bloom drops flowers; a windbreak helps." }
+      "notes": { "pt": "Só com irrigação regular. Calor seco na florada derruba flores; quebra-vento ajuda.", "en": "Regular irrigation only. Dry heat at bloom drops flowers; a windbreak helps.", "es": "Solo con riego regular. El calor seco en la floración tira las flores; un cortavientos ayuda." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não aguenta inverno rigoroso; morre com geada forte. Só em estufa, e mesmo assim produz pouco.", "en": "Can't survive harsh winters; dies with hard frost. Only in a greenhouse, and even then it bears little." }
+      "notes": { "pt": "Não aguenta inverno rigoroso; morre com geada forte. Só em estufa, e mesmo assim produz pouco.", "en": "Can't survive harsh winters; dies with hard frost. Only in a greenhouse, and even then it bears little.", "es": "No sobrevive a los inviernos duros; muere con las heladas fuertes. Solo en invernadero, e incluso así da poca fruta." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Calcário antes de plantar, conforme análise de solo, e esterco curtido ou composto na cova. Depois, NPK (com nitrogênio e zinco) em doses na época das chuvas, espalhado na projeção da copa. Mantenha as folhas que caem no chão: viram adubo.",
-      "en": "Lime before planting, by soil test, and rotted manure or compost in the hole. Later, NPK (with nitrogen and zinc) in doses during the rainy season, spread under the canopy edge. Leave fallen leaves on the ground: they become mulch."
+      "en": "Lime before planting, by soil test, and rotted manure or compost in the hole. Later, NPK (with nitrogen and zinc) in doses during the rainy season, spread under the canopy edge. Leave fallen leaves on the ground: they become mulch.",
+      "es": "Encala antes de plantar, según el análisis de suelo, y pon estiércol curado o compost en el hoyo. Después, NPK (con nitrógeno y zinc) en varias aplicaciones durante la estación de lluvias, repartido bajo el borde de la copa. Deja en el suelo las hojas caídas: se convierten en acolchado."
     },
     "pruning": {
       "pt": "Pouca poda. Logo depois da colheita, tire ramos secos e baixe os galhos mais altos para a árvore não passar de uns 5–6 m e facilitar a colheita.",
-      "en": "Little pruning. Right after harvest, remove dead branches and cut back the tallest limbs so the tree stays around 5–6 m and is easier to pick."
+      "en": "Little pruning. Right after harvest, remove dead branches and cut back the tallest limbs so the tree stays around 5–6 m and is easier to pick.",
+      "es": "Poca poda. Justo después de la cosecha, quita las ramas secas y recorta las más altas para que el árbol se quede en unos 5–6 m y sea más fácil cosechar."
     },
     "watering": {
       "pt": "Primeiro ano: solo sempre úmido, mas nunca encharcado. Árvore adulta: regas fundas e espaçadas na seca (gotejamento é ótimo). Água parada causa podridão da raiz.",
-      "en": "First year: keep soil moist but never soggy. Mature trees: deep, spaced watering in dry spells (drip is great). Standing water causes root rot."
+      "en": "First year: keep soil moist but never soggy. Mature trees: deep, spaced watering in dry spells (drip is great). Standing water causes root rot.",
+      "es": "Primer año: mantén el suelo húmedo, pero nunca encharcado. Árboles adultos: riegos profundos y espaciados en las épocas secas (el goteo va muy bien). El agua estancada pudre las raíces."
     },
     "other": {
       "pt": "Sol pleno e solo muito bem drenado; em solo pesado, plante em leirão (monte). Não plante onde um abacateiro morreu. A podridão da raiz (Phytophthora) é o maior problema.",
-      "en": "Full sun and very well-drained soil; in heavy soil, plant on a mound. Don't plant where an avocado has died. Root rot (Phytophthora) is the biggest problem."
+      "en": "Full sun and very well-drained soil; in heavy soil, plant on a mound. Don't plant where an avocado has died. Root rot (Phytophthora) is the biggest problem.",
+      "es": "Pleno sol y suelo muy bien drenado; en suelo pesado, planta sobre un caballón. No plantes donde haya muerto un aguacate. La podredumbre de raíz (Phytophthora) es el mayor problema."
     }
   },
   "sources": [

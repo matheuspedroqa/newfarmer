@@ -2,7 +2,8 @@
   "id": "tangerine",
   "summary": {
     "pt": "Árvore cítrica perene, de fruta fácil de descascar, que produz do 3º ano e dura décadas. É dos cítricos que mais aguentam frio, e Ponkan e Murcott juntas espalham a colheita pelo inverno.",
-    "en": "An evergreen citrus tree with easy-peel fruit that bears from year 3 and lasts decades. It's among the more cold-tolerant citrus, and early and late varieties together spread the harvest through winter."
+    "en": "An evergreen citrus tree with easy-peel fruit that bears from year 3 and lasts decades. It's among the more cold-tolerant citrus, and early and late varieties together spread the harvest through winter.",
+    "es": "Un cítrico de hoja perenne con fruto fácil de pelar que da fruto desde el año 3 y dura décadas. Es de los cítricos más resistentes al frío, y combinar variedades tempranas y tardías reparte la cosecha a lo largo del invierno."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [10, 11, 12, 1, 2],
       "harvest": [4, 5, 6, 7, 8],
-      "notes": { "pt": "Plante no início das chuvas. Ponkan colhe mais cedo (abr–jul) e Murcott depois (jun–ago). Com calor o ano todo, a casca fica mais verde.", "en": "Plant at the start of the rains. Ponkan is picked earlier (Apr–Jul) and Murcott later (Jun–Aug). Year-round heat leaves the peel greener." }
+      "notes": { "pt": "Plante no início das chuvas. Ponkan colhe mais cedo (abr–jul) e Murcott depois (jun–ago). Com calor o ano todo, a casca fica mais verde.", "en": "Plant at the start of the rains. Ponkan is picked earlier (Apr–Jul) and Murcott later (Jun–Aug). Year-round heat leaves the peel greener.", "es": "Planta al inicio de las lluvias. La Ponkan se recoge antes (abr–jul) y la Murcott más tarde (jun–ago). El calor todo el año deja la cáscara más verde." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10, 11],
       "harvest": [4, 5, 6, 7, 8, 9],
-      "notes": { "pt": "Plante na primavera, depois das geadas. O inverno ameno dá cor e sabor melhores à fruta.", "en": "Plant in spring, after frosts. Mild winters give the fruit better colour and flavour." }
+      "notes": { "pt": "Plante na primavera, depois das geadas. O inverno ameno dá cor e sabor melhores à fruta.", "en": "Plant in spring, after frosts. Mild winters give the fruit better colour and flavour.", "es": "Planta en primavera, después de las heladas. Los inviernos suaves dan al fruto mejor color y sabor." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10],
       "harvest": [4, 5, 6, 7],
-      "notes": { "pt": "Prefira satsumas, que aguentam geada leve (até cerca de −7 °C na árvore adulta), sobre porta-enxerto trifoliata. A fruta sofre mais com o frio que a árvore.", "en": "Prefer satsumas, which handle light frost (to about −7 °C on mature trees), on trifoliate rootstock. The fruit suffers from cold more than the tree." }
+      "notes": { "pt": "Prefira satsumas, que aguentam geada leve (até cerca de −7 °C na árvore adulta), sobre porta-enxerto trifoliata. A fruta sofre mais com o frio que a árvore.", "en": "Prefer satsumas, which handle light frost (to about −7 °C on mature trees), on trifoliate rootstock. The fruit suffers from cold more than the tree.", "es": "Prefiere satsumas, que aguantan heladas ligeras (hasta unos −7 °C en árboles adultos), sobre patrón trifoliado. El fruto sufre más con el frío que el árbol." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [11, 12, 1, 2],
       "harvest": [4, 5, 6, 7, 8],
-      "notes": { "pt": "Só com irrigação.", "en": "Irrigation only." }
+      "notes": { "pt": "Só com irrigação.", "en": "Irrigation only.", "es": "Solo con riego." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não aguenta inverno rigoroso; só em vaso dentro de casa ou estufa.", "en": "Can't survive harsh winters; only in a pot indoors or in a greenhouse." }
+      "notes": { "pt": "Não aguenta inverno rigoroso; só em vaso dentro de casa ou estufa.", "en": "Can't survive harsh winters; only in a pot indoors or in a greenhouse.", "es": "No puede sobrevivir a inviernos duros; solo en maceta dentro de casa o en un invernadero." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Calcário uns 2 meses antes do plantio e esterco curtido na cova. Comece o adubo químico umas 3 semanas depois do plantio. Depois, NPK ou esterco em 3–4 doses na época das chuvas, na projeção da copa, conforme análise de solo.",
-      "en": "Lime about 2 months before planting and rotted manure in the hole. Start chemical fertilizer about 3 weeks after planting. Then NPK or manure in 3–4 doses during the rainy season, under the canopy edge, by soil test."
+      "en": "Lime about 2 months before planting and rotted manure in the hole. Start chemical fertilizer about 3 weeks after planting. Then NPK or manure in 3–4 doses during the rainy season, under the canopy edge, by soil test.",
+      "es": "Encala unos 2 meses antes de plantar y pon estiércol curado en el hoyo. Empieza con el abono químico unas 3 semanas después de plantar. Después, NPK o estiércol en 3–4 dosis durante la estación lluviosa, en el borde de la copa, según el análisis de suelo."
     },
     "pruning": {
       "pt": "Poda leve: tire ramos secos, doentes e os brotos abaixo do enxerto. Se carregar demais e os galhos vergarem, raleie frutos.",
-      "en": "Light pruning: remove dead or diseased branches and shoots below the graft. If the tree overbears and branches sag, thin the fruit."
+      "en": "Light pruning: remove dead or diseased branches and shoots below the graft. If the tree overbears and branches sag, thin the fruit.",
+      "es": "Poda ligera: quita las ramas muertas o enfermas y los brotes por debajo del injerto. Si el árbol da demasiado y las ramas se doblan, aclara los frutos."
     },
     "watering": {
       "pt": "Muda nova: regue com frequência nos primeiros meses. Adulta: regas fundas na seca, principalmente na florada e no pegamento dos frutos. Não encharque.",
-      "en": "Young trees: water often in the first months. Mature trees: deep watering in dry spells, especially at bloom and fruit set. Don't waterlog."
+      "en": "Young trees: water often in the first months. Mature trees: deep watering in dry spells, especially at bloom and fruit set. Don't waterlog.",
+      "es": "Árboles jóvenes: riega a menudo los primeros meses. Árboles adultos: riego profundo en periodos secos, sobre todo en la floración y el cuajado del fruto. No encharques."
     },
     "other": {
       "pt": "Sol pleno e solo bem drenado. Compre muda certificada. Colha logo que madurar: a casca da Ponkan solta e a fruta passa rápido. Gomose e greening são as doenças mais graves.",
-      "en": "Full sun and well-drained soil. Buy certified trees. Pick as soon as ripe: loose-peel fruit goes past its best quickly. Gummosis and greening (HLB) are the worst diseases."
+      "en": "Full sun and well-drained soil. Buy certified trees. Pick as soon as ripe: loose-peel fruit goes past its best quickly. Gummosis and greening (HLB) are the worst diseases.",
+      "es": "Pleno sol y suelo bien drenado. Compra árboles certificados. Recoge en cuanto maduren: el fruto de piel suelta pasa rápido de su punto. La gomosis y el enverdecimiento (HLB) son las peores enfermedades."
     }
   },
   "sources": [

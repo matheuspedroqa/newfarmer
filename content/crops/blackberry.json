@@ -2,7 +2,8 @@
   "id": "blackberry",
   "summary": {
     "pt": "Arbusto perene e rústico que dá frutinhas pretas doces, boas para comer frescas, geleia e polpa. Produz a partir do 2º ano e dura 12–15 anos com bom manejo.",
-    "en": "A hardy perennial cane shrub with sweet black berries for fresh eating, jam and pulp. Crops from the second year and lasts 12–15 years with good care."
+    "en": "A hardy perennial cane shrub with sweet black berries for fresh eating, jam and pulp. Crops from the second year and lasts 12–15 years with good care.",
+    "es": "Arbusto perenne de cañas resistente, con moras negras dulces para comer frescas, mermelada y pulpa. Produce desde el segundo año y dura 12–15 años con buenos cuidados."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "No calor o ano todo quase não floresce, por falta de frio. Só em regiões altas (serra), com variedades de pouco frio como 'Tupy'.", "en": "In year-round heat it hardly flowers due to lack of chill. Only in highlands, with low-chill varieties such as 'Tupy'." }
+      "notes": { "pt": "No calor o ano todo quase não floresce, por falta de frio. Só em regiões altas (serra), com variedades de pouco frio como 'Tupy'.", "en": "In year-round heat it hardly flowers due to lack of chill. Only in highlands, with low-chill varieties such as 'Tupy'.", "es": "Con calor todo el año casi no florece por falta de frío. Solo en zonas altas, con variedades de poco frío como 'Tupy'." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [7, 8, 9],
       "harvest": [11, 12, 1],
-      "notes": { "pt": "Use variedades de pouca exigência em frio (ex.: 'Tupy', 'BRS Xavante'). Plante no fim do inverno; com irrigação pode ir até o início do verão.", "en": "Use low-chill varieties (e.g. 'Tupy', 'BRS Xavante'). Plant in late winter; with irrigation you can go into early summer." }
+      "notes": { "pt": "Use variedades de pouca exigência em frio (ex.: 'Tupy', 'BRS Xavante'). Plante no fim do inverno; com irrigação pode ir até o início do verão.", "en": "Use low-chill varieties (e.g. 'Tupy', 'BRS Xavante'). Plant in late winter; with irrigation you can go into early summer.", "es": "Usa variedades de poco frío (p. ej. 'Tupy', 'BRS Xavante'). Planta a finales del invierno; con riego puedes llegar a principios del verano." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [7, 8, 9],
       "harvest": [12, 1, 2],
-      "notes": { "pt": "Clima ideal. Plante as mudas no fim do inverno ou início da primavera.", "en": "Ideal climate. Plant in late winter or early spring." }
+      "notes": { "pt": "Clima ideal. Plante as mudas no fim do inverno ou início da primavera.", "en": "Ideal climate. Plant in late winter or early spring.", "es": "Clima ideal. Planta a finales del invierno o principios de la primavera." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Calor seco e falta de frio prejudicam a floração. Só em altitude e com gotejamento.", "en": "Dry heat and lack of chill hurt flowering. Only at altitude and with drip irrigation." }
+      "notes": { "pt": "Calor seco e falta de frio prejudicam a floração. Só em altitude e com gotejamento.", "en": "Dry heat and lack of chill hurt flowering. Only at altitude and with drip irrigation.", "es": "El calor seco y la falta de frío perjudican la floración. Solo en altitud y con riego por goteo." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10],
       "harvest": [1, 2, 3],
-      "notes": { "pt": "Plante na primavera após o degelo. Prefira variedades resistentes ao frio; inverno muito rigoroso pode matar as hastes.", "en": "Plant in spring after thaw. Choose cold-hardy varieties; very harsh winters can kill canes." }
+      "notes": { "pt": "Plante na primavera após o degelo. Prefira variedades resistentes ao frio; inverno muito rigoroso pode matar as hastes.", "en": "Plant in spring after thaw. Choose cold-hardy varieties; very harsh winters can kill canes.", "es": "Planta en primavera, después del deshielo. Elige variedades resistentes al frío; inviernos muy duros pueden matar las cañas." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Gosta de solo levemente ácido (pH 5,5–6,0): faça calagem se a análise pedir. Uns 3 meses antes do plantio, incorpore esterco bem curtido na linha. Depois, todo ano, composto ou esterco e uma dose leve de NPK (ex.: 10-10-10, meia a 1 xícara por planta) no início da brotação/floração.",
-      "en": "Likes slightly acid soil (pH 5.5–6.0): lime if the soil test calls for it. About 3 months before planting, work well-rotted manure into the row. Then yearly, compost or manure plus a light NPK dose (e.g. 10-10-10, half to 1 cup per plant) at bud break/bloom."
+      "en": "Likes slightly acid soil (pH 5.5–6.0): lime if the soil test calls for it. About 3 months before planting, work well-rotted manure into the row. Then yearly, compost or manure plus a light NPK dose (e.g. 10-10-10, half to 1 cup per plant) at bud break/bloom.",
+      "es": "Prefiere suelo ligeramente ácido (pH 5,5–6,0): encala si el análisis de suelo lo indica. Unos 3 meses antes de plantar, incorpora estiércol bien curado en la hilera. Después, cada año, compost o estiércol más una dosis ligera de NPK (p. ej. 10-10-10, media a una taza por planta) en la brotación/floración."
     },
     "pruning": {
       "pt": "As hastes dão fruto no 2º ano e depois secam. Logo após a colheita, corte rente ao chão as que produziram. No verão, desponte as hastes novas uns 20 cm acima do arame para engrossar e ramificar. No inverno, deixe 4–6 hastes fortes por planta e encurte os ramos laterais.",
-      "en": "Canes fruit in their second year then die. Right after harvest, cut spent canes at ground level. In summer, tip new canes about 20 cm above the wire so they thicken and branch. In winter, keep 4–6 strong canes per plant and shorten side branches."
+      "en": "Canes fruit in their second year then die. Right after harvest, cut spent canes at ground level. In summer, tip new canes about 20 cm above the wire so they thicken and branch. In winter, keep 4–6 strong canes per plant and shorten side branches.",
+      "es": "Las cañas dan fruto en su segundo año y luego mueren. Justo después de la cosecha, corta las cañas gastadas a ras de suelo. En verano, despunta las cañas nuevas unos 20 cm por encima del alambre para que engrosen y ramifiquen. En invierno, deja 4–6 cañas fuertes por planta y acorta las ramas laterales."
     },
     "watering": {
       "pt": "Regue com frequência no primeiro ano e da floração à colheita, de preferência por gotejamento. Evite encharcamento.",
-      "en": "Water often in the first year and from bloom to harvest, ideally with drip. Avoid waterlogging."
+      "en": "Water often in the first year and from bloom to harvest, ideally with drip. Avoid waterlogging.",
+      "es": "Riega a menudo el primer año y desde la floración hasta la cosecha, idealmente por goteo. Evita el encharcamiento."
     },
     "other": {
       "pt": "Sol pleno e espaldeira de arame. Espaçamento de 0,3–0,7 m entre plantas e 2,5–3 m entre linhas. Arranque os brotos que nascem fora da linha, senão vira mato. Colha a cada 2–3 dias.",
-      "en": "Full sun and a wire trellis. Space 0.3–0.7 m between plants and 2.5–3 m between rows. Pull suckers that come up outside the row or it becomes a thicket. Pick every 2–3 days."
+      "en": "Full sun and a wire trellis. Space 0.3–0.7 m between plants and 2.5–3 m between rows. Pull suckers that come up outside the row or it becomes a thicket. Pick every 2–3 days.",
+      "es": "Pleno sol y espaldera de alambre. Separa 0,3–0,7 m entre plantas y 2,5–3 m entre hileras. Arranca los hijuelos que salgan fuera de la hilera o se vuelve una maraña. Recoge cada 2–3 días."
     }
   },
   "sources": [

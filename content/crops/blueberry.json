@@ -2,7 +2,8 @@
   "id": "blueberry",
   "summary": {
     "pt": "Arbusto de clima frio que dá frutinhas azuis e vive mais de 20 anos. Começa a produzir no 2º–3º ano, mas exige solo bem ácido e certa quantidade de frio no inverno.",
-    "en": "A cool-climate shrub that gives small blue berries and lives over 20 years. Starts bearing in year 2–3, but needs very acidic soil and some winter cold."
+    "en": "A cool-climate shrub that gives small blue berries and lives over 20 years. Starts bearing in year 2–3, but needs very acidic soil and some winter cold.",
+    "es": "Arbusto de clima frío que da pequeños frutos azules y vive más de 20 años. Empieza a producir en el año 2–3, pero necesita suelo muy ácido y algo de frío invernal."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Sem frio no inverno ele quase não floresce. Só em serras altas com variedades de baixa exigência de frio (ex.: Biloxi, Emerald), e mesmo assim produz pouco.", "en": "Without winter cold it barely flowers. Only in high mountains with low-chill varieties (e.g. Biloxi, Emerald), and even then yields are low." }
+      "notes": { "pt": "Sem frio no inverno ele quase não floresce. Só em serras altas com variedades de baixa exigência de frio (ex.: Biloxi, Emerald), e mesmo assim produz pouco.", "en": "Without winter cold it barely flowers. Only in high mountains with low-chill varieties (e.g. Biloxi, Emerald), and even then yields are low.", "es": "Sin frío invernal casi no florece. Solo en montañas altas con variedades de poco frío (p. ej. Biloxi, Emerald), y aun así el rendimiento es bajo." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [6, 7, 8],
       "harvest": [10, 11, 12, 1],
-      "notes": { "pt": "Use variedades de pouco frio (rabbiteye, cerca de 300 h de frio, ou southern highbush, até ~250 h). Plante no inverno, com a muda dormente.", "en": "Use low-chill varieties (rabbiteye, about 300 chill hours, or southern highbush, up to ~250 h). Plant in winter while the plant is dormant." }
+      "notes": { "pt": "Use variedades de pouco frio (rabbiteye, cerca de 300 h de frio, ou southern highbush, até ~250 h). Plante no inverno, com a muda dormente.", "en": "Use low-chill varieties (rabbiteye, about 300 chill hours, or southern highbush, up to ~250 h). Plant in winter while the plant is dormant.", "es": "Usa variedades de poco frío (rabbiteye, unas 300 horas de frío, o southern highbush, hasta ~250 h). Planta en invierno mientras la planta está en reposo." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [6, 7, 8, 9],
       "harvest": [11, 12, 1, 2],
-      "notes": { "pt": "Clima ideal. Plante no fim do outono ou no fim do inverno, com a muda dormente. Escolha a variedade conforme as horas de frio da sua região.", "en": "Ideal climate. Plant in late autumn or late winter while dormant. Choose the variety by your area's chill hours." }
+      "notes": { "pt": "Clima ideal. Plante no fim do outono ou no fim do inverno, com a muda dormente. Escolha a variedade conforme as horas de frio da sua região.", "en": "Ideal climate. Plant in late autumn or late winter while dormant. Choose the variety by your area's chill hours.", "es": "Clima ideal. Planta a finales del otoño o finales del invierno en reposo. Elige la variedad según las horas de frío de tu zona." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Calor seco, pouco frio e solo/água alcalinos atrapalham muito. Só em vaso ou canteiro com substrato ácido, irrigação com água de boa qualidade e meia-sombra.", "en": "Dry heat, little chill and alkaline soil/water make it very hard. Only in pots or beds with acidic mix, good-quality irrigation water and partial shade." }
+      "notes": { "pt": "Calor seco, pouco frio e solo/água alcalinos atrapalham muito. Só em vaso ou canteiro com substrato ácido, irrigação com água de boa qualidade e meia-sombra.", "en": "Dry heat, little chill and alkaline soil/water make it very hard. Only in pots or beds with acidic mix, good-quality irrigation water and partial shade.", "es": "El calor seco, el poco frío y el suelo/agua alcalinos lo hacen muy difícil. Solo en macetas o bancales con sustrato ácido, agua de riego de buena calidad y sombra parcial." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10],
       "harvest": [1, 2, 3],
-      "notes": { "pt": "Muito bom: as variedades northern highbush (600–1000 h de frio) e lowbush aguentam inverno rigoroso. Plante na primavera, depois do degelo.", "en": "Very good: northern highbush (600–1000 chill hours) and lowbush varieties survive harsh winters. Plant in spring after the thaw." }
+      "notes": { "pt": "Muito bom: as variedades northern highbush (600–1000 h de frio) e lowbush aguentam inverno rigoroso. Plante na primavera, depois do degelo.", "en": "Very good: northern highbush (600–1000 chill hours) and lowbush varieties survive harsh winters. Plant in spring after the thaw.", "es": "Muy bueno: las variedades northern highbush (600–1000 horas de frío) y lowbush sobreviven a inviernos duros. Planta en primavera después del deshielo." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Precisa de solo ácido (pH 4,5–5,2). Não use calcário. Se o pH estiver alto, aplique enxofre 6–12 meses antes e misture turfa ou composto de casca de pínus. Adube pouco: fertilizante para plantas ácidas (com nitrogênio amoniacal) em 2–3 doses na primavera; fosfato natural como fonte de fósforo.",
-      "en": "Needs acidic soil (pH 4.5–5.2). Don't lime. If pH is high, add sulfur 6–12 months ahead and mix in peat or pine-bark compost. Feed lightly: acid-plant fertilizer (ammonium nitrogen) in 2–3 doses in spring; rock phosphate for phosphorus."
+      "en": "Needs acidic soil (pH 4.5–5.2). Don't lime. If pH is high, add sulfur 6–12 months ahead and mix in peat or pine-bark compost. Feed lightly: acid-plant fertilizer (ammonium nitrogen) in 2–3 doses in spring; rock phosphate for phosphorus.",
+      "es": "Necesita suelo ácido (pH 4,5–5,2). No encales. Si el pH es alto, añade azufre 6–12 meses antes y mezcla turba o compost de corteza de pino. Abona poco: fertilizante para plantas acidófilas (nitrógeno amoniacal) en 2–3 dosis en primavera; roca fosfórica para el fósforo."
     },
     "pruning": {
       "pt": "Nos 2 primeiros anos, tire as flores para a planta crescer. Depois do 3º ano, no inverno, corte rente ao chão os ramos mais velhos e fracos e deixe os novos e vigorosos.",
-      "en": "For the first 2 years, remove flowers so the plant grows. From year 3, in winter, cut the oldest, weakest canes at ground level and keep the young, vigorous ones."
+      "en": "For the first 2 years, remove flowers so the plant grows. From year 3, in winter, cut the oldest, weakest canes at ground level and keep the young, vigorous ones.",
+      "es": "Durante los primeros 2 años, quita las flores para que la planta crezca. A partir del año 3, en invierno, corta a ras de suelo las cañas más viejas y débiles y deja las jóvenes y vigorosas."
     },
     "watering": {
       "pt": "Raiz rasa: mantenha o solo sempre úmido, principalmente da florada à colheita. Cubra com palha ou casca de pínus. Encharcamento mata a raiz.",
-      "en": "Shallow roots: keep the soil always moist, especially from bloom to harvest. Mulch with straw or pine bark. Waterlogging kills the roots."
+      "en": "Shallow roots: keep the soil always moist, especially from bloom to harvest. Mulch with straw or pine bark. Waterlogging kills the roots.",
+      "es": "Raíces superficiales: mantén el suelo siempre húmedo, sobre todo desde la floración hasta la cosecha. Acolchado con paja o corteza de pino. El encharcamiento mata las raíces."
     },
     "other": {
       "pt": "Pelo menos 6 h de sol e solo bem drenado; canteiro elevado ajuda. Plante 2 variedades do mesmo grupo para melhor polinização. Use rede contra passarinhos.",
-      "en": "At least 6 h of sun and well-drained soil; raised beds help. Plant 2 varieties of the same group for better pollination. Use netting against birds."
+      "en": "At least 6 h of sun and well-drained soil; raised beds help. Plant 2 varieties of the same group for better pollination. Use netting against birds.",
+      "es": "Al menos 6 h de sol y suelo bien drenado; los bancales elevados ayudan. Planta 2 variedades del mismo grupo para mejor polinización. Usa red contra los pájaros."
     }
   },
   "sources": [

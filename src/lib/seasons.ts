@@ -1,11 +1,12 @@
 import { CROPS, type CropId } from "./catalog";
+import type { Text } from "./content-schema";
 import type { ClimateZone, Hemisphere } from "@/server/climate";
 
 export type Season = "summer" | "autumn" | "winter" | "spring";
 export type Activity = "directSowing" | "seedbed" | "transplant" | "harvest";
 export const ACTIVITIES: Activity[] = ["directSowing", "seedbed", "transplant", "harvest"];
 
-export type CropCalendar = Record<Activity, number[]> & { notes?: { pt: string; en: string } };
+export type CropCalendar = Record<Activity, number[]> & { notes?: Text };
 
 // Calendários são escritos na referência do hemisfério sul.
 export function toUserMonth(month: number, hemisphere: Hemisphere): number {

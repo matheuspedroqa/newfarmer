@@ -2,7 +2,8 @@
   "id": "basil",
   "summary": {
     "pt": "Erva aromática (manjericão) de clima quente, fácil de cultivar em canteiro ou vaso. Cresce rápido e dá folhas para cortar durante toda a estação quente.",
-    "en": "A warm-climate aromatic herb, easy to grow in beds or pots. Grows fast and gives leaves to cut all through the warm season."
+    "en": "A warm-climate aromatic herb, easy to grow in beds or pots. Grows fast and gives leaves to cut all through the warm season.",
+    "es": "Hierba aromática de clima cálido, fácil de cultivar en bancales o macetas. Crece rápido y da hojas para cortar durante toda la temporada cálida."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [8, 9, 10, 11, 12, 1, 2, 3],
       "transplant": [9, 10, 11, 12, 1, 2, 3, 4],
       "harvest": [10, 11, 12, 1, 2, 3, 4, 5, 6, 7],
-      "notes": { "pt": "Pode ser cultivado quase o ano todo. Na época chuvosa, cuidado com excesso de água e fungos nas folhas.", "en": "Can be grown almost year-round. In the rainy season, watch for excess water and leaf fungi." }
+      "notes": { "pt": "Pode ser cultivado quase o ano todo. Na época chuvosa, cuidado com excesso de água e fungos nas folhas.", "en": "Can be grown almost year-round. In the rainy season, watch for excess water and leaf fungi.", "es": "Se puede cultivar casi todo el año. En la época de lluvias, vigila el exceso de agua y los hongos en las hojas." }
     },
     "subtropical": {
       "directSowing": [10, 11, 12],
       "seedbed": [8, 9, 10, 11],
       "transplant": [9, 10, 11, 12],
       "harvest": [11, 12, 1, 2, 3, 4, 5],
-      "notes": { "pt": "Semeie do fim do inverno ao fim da primavera. Morre com frio e geada; no inverno, mantenha em vaso abrigado.", "en": "Sow from late winter to late spring. Dies with cold and frost; in winter, keep a pot in a sheltered spot." }
+      "notes": { "pt": "Semeie do fim do inverno ao fim da primavera. Morre com frio e geada; no inverno, mantenha em vaso abrigado.", "en": "Sow from late winter to late spring. Dies with cold and frost; in winter, keep a pot in a sheltered spot.", "es": "Siembra desde finales del invierno hasta finales de la primavera. Muere con el frío y la helada; en invierno, guarda una maceta en un lugar protegido." }
     },
     "temperate": {
       "directSowing": [11, 12],
       "seedbed": [9, 10],
       "transplant": [11, 12],
       "harvest": [12, 1, 2, 3, 4],
-      "notes": { "pt": "Comece em bandeja dentro de casa e plante fora só depois da última geada, com noites acima de ~10 °C. Morre na primeira geada.", "en": "Start in trays indoors and plant out only after the last frost, with nights above ~10 °C. Dies at the first frost." }
+      "notes": { "pt": "Comece em bandeja dentro de casa e plante fora só depois da última geada, com noites acima de ~10 °C. Morre na primeira geada.", "en": "Start in trays indoors and plant out only after the last frost, with nights above ~10 °C. Dies at the first frost.", "es": "Empieza en bandejas bajo techo y trasplanta solo después de la última helada, con noches por encima de ~10 °C. Muere con la primera helada." }
     },
     "semiarid": {
       "directSowing": [2, 3, 4, 5, 8, 9],
       "seedbed": [2, 3, 4, 5, 8, 9],
       "transplant": [3, 4, 5, 6, 9, 10],
       "harvest": [4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Vai bem no calor, mas só com irrigação. No sol muito forte, meia-sombra à tarde ajuda.", "en": "Does well in heat, but only with irrigation. In very strong sun, afternoon shade helps." }
+      "notes": { "pt": "Vai bem no calor, mas só com irrigação. No sol muito forte, meia-sombra à tarde ajuda.", "en": "Does well in heat, but only with irrigation. In very strong sun, afternoon shade helps.", "es": "Se da bien con calor, pero solo con riego. Con sol muy fuerte, la sombra por la tarde ayuda." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [10],
       "transplant": [12],
       "harvest": [1, 2, 3],
-      "notes": { "pt": "Verão curto: comece em bandeja dentro de casa e plante fora só no pico do verão, ou cultive em estufa ou vaso na janela.", "en": "Short summer: start in trays indoors and plant out only in midsummer, or grow in a greenhouse or a pot on a windowsill." }
+      "notes": { "pt": "Verão curto: comece em bandeja dentro de casa e plante fora só no pico do verão, ou cultive em estufa ou vaso na janela.", "en": "Short summer: start in trays indoors and plant out only in midsummer, or grow in a greenhouse or a pot on a windowsill.", "es": "Verano corto: empieza en bandejas bajo techo y trasplanta solo a mediados del verano, o cultívala en invernadero o en una maceta en la ventana." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Solo leve, bem drenado e rico em matéria orgânica (pH 6,0–7,5): prepare com esterco curtido ou composto. A cada 30–40 dias, ou depois de cortes fortes, uma cobertura leve de composto ou adubo orgânico líquido. Não exagere: adubo demais enfraquece o aroma.",
-      "en": "Light, well-drained soil rich in organic matter (pH 6.0–7.5): prepare with rotted manure or compost. Every 30–40 days, or after heavy cutting, a light top-up of compost or liquid organic fertilizer. Don't overdo it: too much weakens the aroma."
+      "en": "Light, well-drained soil rich in organic matter (pH 6.0–7.5): prepare with rotted manure or compost. Every 30–40 days, or after heavy cutting, a light top-up of compost or liquid organic fertilizer. Don't overdo it: too much weakens the aroma.",
+      "es": "Suelo ligero, bien drenado y rico en materia orgánica (pH 6,0–7,5): prepáralo con estiércol curado o compost. Cada 30–40 días, o después de cortes fuertes, un abonado ligero con compost o fertilizante orgánico líquido. No te pases: demasiado debilita el aroma."
     },
     "pruning": {
       "pt": "Quando a muda tiver 6–8 folhas, corte a ponta logo acima de um par de folhas para ela ramificar. Colha sempre cortando as pontas dos ramos (não folhas soltas) e tire os botões de flor: depois de florir, as folhas ficam mais amargas.",
-      "en": "When the seedling has 6–8 leaves, cut the tip just above a pair of leaves so it branches. Always harvest by cutting stem tips (not single leaves) and remove flower buds: after flowering, leaves turn bitter."
+      "en": "When the seedling has 6–8 leaves, cut the tip just above a pair of leaves so it branches. Always harvest by cutting stem tips (not single leaves) and remove flower buds: after flowering, leaves turn bitter.",
+      "es": "Cuando la plántula tenga 6–8 hojas, corta la punta justo encima de un par de hojas para que ramifique. Cosecha siempre cortando puntas de tallo (no hojas sueltas) y quita los botones de flor: después de florecer, las hojas se vuelven amargas."
     },
     "watering": {
       "pt": "Mantenha o solo úmido, sem encharcar. Regue na base, de manhã; folhas molhadas à noite favorecem fungos.",
-      "en": "Keep soil moist but not soggy. Water at the base in the morning; leaves wet overnight encourage fungi."
+      "en": "Keep soil moist but not soggy. Water at the base in the morning; leaves wet overnight encourage fungi.",
+      "es": "Mantén el suelo húmedo pero no encharcado. Riega en la base por la mañana; las hojas mojadas durante la noche favorecen los hongos."
     },
     "other": {
       "pt": "Sol pleno (6 h ou mais) e calor. Espaçamento de ~30 cm entre plantas. Plante de novo a cada 2–3 meses para ter sempre folhas novas.",
-      "en": "Full sun (6+ hours) and warmth. Space about 30 cm apart. Replant every 2–3 months to always have fresh leaves."
+      "en": "Full sun (6+ hours) and warmth. Space about 30 cm apart. Replant every 2–3 months to always have fresh leaves.",
+      "es": "Pleno sol (6+ horas) y calor. Separa unos 30 cm entre plantas. Vuelve a sembrar cada 2–3 meses para tener siempre hojas frescas."
     }
   },
   "sources": [

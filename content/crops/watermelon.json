@@ -2,7 +2,8 @@
   "id": "watermelon",
   "summary": {
     "pt": "Fruta de verão rasteira, de ciclo curto (cerca de 80–100 dias da semeadura à colheita). Precisa de calor, sol e espaço para as ramas se espalharem.",
-    "en": "A sprawling summer fruit with a short cycle (about 80–100 days from sowing to harvest). Needs heat, sun and room for the vines to spread."
+    "en": "A sprawling summer fruit with a short cycle (about 80–100 days from sowing to harvest). Needs heat, sun and room for the vines to spread.",
+    "es": "Una fruta de verano rastrera con un ciclo corto (unos 80–100 días de la siembra a la cosecha). Necesita calor, sol y espacio para que se extiendan las guías."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Dá para plantar quase o ano todo; o melhor é na estação mais seca, com irrigação. Chuva forte na formação dos frutos piora a qualidade.", "en": "Can be planted almost all year; best in the drier season with irrigation. Heavy rain while fruit forms lowers quality." }
+      "notes": { "pt": "Dá para plantar quase o ano todo; o melhor é na estação mais seca, com irrigação. Chuva forte na formação dos frutos piora a qualidade.", "en": "Can be planted almost all year; best in the drier season with irrigation. Heavy rain while fruit forms lowers quality.", "es": "Se puede plantar casi todo el año; mejor en la estación más seca con riego. La lluvia fuerte mientras se forma el fruto baja la calidad." }
     },
     "subtropical": {
       "directSowing": [9, 10, 11, 12],
       "seedbed": [8, 9],
       "transplant": [9, 10],
       "harvest": [12, 1, 2, 3],
-      "notes": { "pt": "Semeie só depois das geadas, com o solo já quente.", "en": "Sow only after frosts, once the soil is warm." }
+      "notes": { "pt": "Semeie só depois das geadas, com o solo já quente.", "en": "Sow only after frosts, once the soil is warm.", "es": "Siembra solo después de las heladas, cuando el suelo esté cálido." }
     },
     "temperate": {
       "directSowing": [11, 12],
       "seedbed": [9, 10],
       "transplant": [11],
       "harvest": [1, 2, 3],
-      "notes": { "pt": "Espere o solo passar de 16–18 °C. Produzir mudas em copinho dentro de casa adianta a safra.", "en": "Wait until soil is above 16–18 °C. Starting seedlings in cups indoors gives an earlier harvest." }
+      "notes": { "pt": "Espere o solo passar de 16–18 °C. Produzir mudas em copinho dentro de casa adianta a safra.", "en": "Wait until soil is above 16–18 °C. Starting seedlings in cups indoors gives an earlier harvest.", "es": "Espera a que el suelo supere los 16–18 °C. Empezar los plantones en vasos en interior adelanta la cosecha." }
     },
     "semiarid": {
       "directSowing": [5, 6, 7, 8, 9, 10],
       "seedbed": [],
       "transplant": [],
       "harvest": [8, 9, 10, 11, 12, 1],
-      "notes": { "pt": "Cultura forte do Nordeste irrigado; com irrigação planta-se quase o ano todo.", "en": "A major crop in irrigated semi-arid areas; with irrigation it can be planted almost all year." }
+      "notes": { "pt": "Cultura forte do Nordeste irrigado; com irrigação planta-se quase o ano todo.", "en": "A major crop in irrigated semi-arid areas; with irrigation it can be planted almost all year.", "es": "Un cultivo importante en zonas semiáridas con riego; con riego se puede plantar casi todo el año." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [10],
       "transplant": [12],
       "harvest": [2, 3],
-      "notes": { "pt": "Verão curto: só variedades precoces de fruto pequeno, com mudas feitas dentro de casa, plástico preto no solo ou túnel/estufa.", "en": "Short summer: only early, small-fruited varieties, with seedlings started indoors, black plastic mulch or a tunnel/greenhouse." }
+      "notes": { "pt": "Verão curto: só variedades precoces de fruto pequeno, com mudas feitas dentro de casa, plástico preto no solo ou túnel/estufa.", "en": "Short summer: only early, small-fruited varieties, with seedlings started indoors, black plastic mulch or a tunnel/greenhouse.", "es": "Verano corto: solo variedades tempranas de fruto pequeño, con plantones criados en interior, acolchado de plástico negro o túnel/invernadero." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo; o ideal é pH 6–6,8 (corrija com calcário antes). Na cova, esterco curtido ou composto e adubo com fósforo. Depois, nitrogênio e potássio em 2–3 doses até o início dos frutos.",
-      "en": "Test the soil; ideal pH is 6–6.8 (lime beforehand if needed). In the hole, rotted manure or compost plus a phosphorus fertilizer. Then nitrogen and potassium in 2–3 doses until fruits start forming."
+      "en": "Test the soil; ideal pH is 6–6.8 (lime beforehand if needed). In the hole, rotted manure or compost plus a phosphorus fertilizer. Then nitrogen and potassium in 2–3 doses until fruits start forming.",
+      "es": "Haz un análisis de suelo; el pH ideal es 6–6,8 (encala antes si hace falta). En el hoyo, estiércol curado o compost más un abono con fósforo. Después, nitrógeno y potasio en 2–3 dosis hasta que empiecen a formarse los frutos."
     },
     "pruning": {
       "pt": "Não é obrigatório. Pode deixar só 2–3 frutos por planta para eles ficarem maiores.",
-      "en": "Not required. You can keep only 2–3 fruits per plant so they grow bigger."
+      "en": "Not required. You can keep only 2–3 fruits per plant so they grow bigger.",
+      "es": "No hace falta. Puedes dejar solo 2–3 frutos por planta para que crezcan más grandes."
     },
     "watering": {
       "pt": "Regue bem do plantio até os frutos crescerem, molhando o solo e não as folhas. Diminua a rega na última semana antes da colheita: a fruta fica mais doce.",
-      "en": "Water well from planting until fruits grow, wetting the soil and not the leaves. Reduce watering in the last week before harvest: the fruit gets sweeter."
+      "en": "Water well from planting until fruits grow, wetting the soil and not the leaves. Reduce watering in the last week before harvest: the fruit gets sweeter.",
+      "es": "Riega bien desde la plantación hasta que crezcan los frutos, mojando el suelo y no las hojas. Reduce el riego en la última semana antes de la cosecha: el fruto sale más dulce."
     },
     "other": {
       "pt": "Sol pleno, solo leve e bem drenado, e espaço (cerca de 2–3 m entre linhas). Está madura quando a gavinha perto do fruto seca e a parte que toca o chão fica amarelada.",
-      "en": "Full sun, light well-drained soil, and space (about 2–3 m between rows). It is ripe when the tendril near the fruit dries and the spot touching the ground turns yellowish."
+      "en": "Full sun, light well-drained soil, and space (about 2–3 m between rows). It is ripe when the tendril near the fruit dries and the spot touching the ground turns yellowish.",
+      "es": "Pleno sol, suelo ligero y bien drenado, y espacio (unos 2–3 m entre filas). Está maduro cuando el zarcillo junto al fruto se seca y la mancha que toca el suelo se pone amarillenta."
     }
   },
   "sources": [

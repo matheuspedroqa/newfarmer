@@ -2,7 +2,8 @@
   "id": "peach",
   "summary": {
     "pt": "Árvore frutífera de clima temperado que produz já do 2º–3º ano. Vive menos que outras frutíferas (8–15 anos bem cuidada) e pede poda forte todo inverno.",
-    "en": "A temperate fruit tree that bears from year 2–3. It lives shorter than other fruit trees (8–15 years with good care) and needs hard pruning every winter."
+    "en": "A temperate fruit tree that bears from year 2–3. It lives shorter than other fruit trees (8–15 years with good care) and needs hard pruning every winter.",
+    "es": "Un frutal de clima templado que da fruto desde el año 2–3. Vive menos que otros frutales (8–15 años con buenos cuidados) y necesita una poda fuerte cada invierno."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Sem frio no inverno não floresce. Só em serras altas, com variedades de pouquíssimo frio (100–200 horas abaixo de 7 °C).", "en": "Without winter cold it won't bloom. Only in high mountains, with very-low-chill varieties (100–200 hours below 7 °C)." }
+      "notes": { "pt": "Sem frio no inverno não floresce. Só em serras altas, com variedades de pouquíssimo frio (100–200 horas abaixo de 7 °C).", "en": "Without winter cold it won't bloom. Only in high mountains, with very-low-chill varieties (100–200 hours below 7 °C).", "es": "Sin frío invernal no florece. Solo en montañas altas, con variedades de muy pocas horas de frío (100–200 horas por debajo de 7 °C)." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [6, 7, 8],
       "harvest": [10, 11, 12],
-      "notes": { "pt": "Use variedades de pouco frio da Embrapa (como BRS Libra, 100–200 horas). Variedades de 400 horas ou mais brotam mal onde o inverno é ameno.", "en": "Use low-chill varieties (such as Embrapa's BRS Libra, 100–200 hours). Varieties needing 400+ hours sprout poorly where winters are mild." }
+      "notes": { "pt": "Use variedades de pouco frio da Embrapa (como BRS Libra, 100–200 horas). Variedades de 400 horas ou mais brotam mal onde o inverno é ameno.", "en": "Use low-chill varieties (such as Embrapa's BRS Libra, 100–200 hours). Varieties needing 400+ hours sprout poorly where winters are mild.", "es": "Usa variedades de pocas horas de frío (como la BRS Libra de Embrapa, 100–200 horas). Las variedades que necesitan más de 400 horas brotan mal donde los inviernos son suaves." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [6, 7, 8],
       "harvest": [11, 12, 1, 2],
-      "notes": { "pt": "Clima ideal. Plante a muda dormente no inverno. Geada na florada pode derrubar a safra.", "en": "Ideal climate. Plant dormant trees in winter. Frost at bloom can wipe out the crop." }
+      "notes": { "pt": "Clima ideal. Plante a muda dormente no inverno. Geada na florada pode derrubar a safra.", "en": "Ideal climate. Plant dormant trees in winter. Frost at bloom can wipe out the crop.", "es": "Clima ideal. Planta los árboles en reposo en invierno. Una helada en la floración puede arruinar la cosecha." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Sem frio, não produz no manejo comum. Só em pomar técnico irrigado com variedades de pouco frio e indutor de brotação.", "en": "Without cold it doesn't fruit under normal care. Only in technical irrigated orchards with low-chill varieties and bud-break sprays." }
+      "notes": { "pt": "Sem frio, não produz no manejo comum. Só em pomar técnico irrigado com variedades de pouco frio e indutor de brotação.", "en": "Without cold it doesn't fruit under normal care. Only in technical irrigated orchards with low-chill varieties and bud-break sprays.", "es": "Sin frío no da fruto con cuidados normales. Solo en huertos técnicos con riego, con variedades de pocas horas de frío y productos para romper la dormancia." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Frio abaixo de cerca de −20 °C mata gemas e galhos, e a geada tardia queima a flor. Só com variedades muito resistentes, em local abrigado.", "en": "Cold below about −20 °C kills buds and limbs, and late frost burns the blossoms. Only with very hardy varieties in a sheltered spot." }
+      "notes": { "pt": "Frio abaixo de cerca de −20 °C mata gemas e galhos, e a geada tardia queima a flor. Só com variedades muito resistentes, em local abrigado.", "en": "Cold below about −20 °C kills buds and limbs, and late frost burns the blossoms. Only with very hardy varieties in a sheltered spot.", "es": "El frío por debajo de unos −20 °C mata yemas y ramas, y la helada tardía quema las flores. Solo con variedades muy resistentes y en un lugar protegido." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Calcário antes de plantar, conforme análise de solo. Adube com esterco curtido ou composto no fim do inverno e pouco NPK em doses na primavera. Pare de adubar no fim do verão para não forçar broto mole antes do frio.",
-      "en": "Lime before planting, by soil test. Apply rotted manure or compost in late winter and small NPK doses in spring. Stop feeding in late summer so soft growth isn't pushed before the cold."
+      "en": "Lime before planting, by soil test. Apply rotted manure or compost in late winter and small NPK doses in spring. Stop feeding in late summer so soft growth isn't pushed before the cold.",
+      "es": "Encala antes de plantar, según el análisis de suelo. Aplica estiércol curado o compost a finales del invierno y dosis pequeñas de NPK en primavera. Deja de abonar a finales del verano para no forzar brotes tiernos antes del frío."
     },
     "pruning": {
       "pt": "Forme a copa em vaso aberto, com 3–4 galhos principais e o centro livre. Pode todo inverno: o pêssego dá fruta no ramo do ano anterior, então a poda renova a produção. Tire ramos ladrões, cruzados e doentes.",
-      "en": "Train an open-centre vase with 3–4 main limbs and a clear centre. Prune every winter: peaches fruit on last year's wood, so pruning renews the crop. Remove water sprouts, crossing and diseased branches."
+      "en": "Train an open-centre vase with 3–4 main limbs and a clear centre. Prune every winter: peaches fruit on last year's wood, so pruning renews the crop. Remove water sprouts, crossing and diseased branches.",
+      "es": "Forma un vaso abierto con 3–4 ramas principales y el centro libre. Poda cada invierno: el melocotonero da fruto en la madera del año anterior, así que podar renueva la cosecha. Quita chupones, ramas cruzadas y enfermas."
     },
     "watering": {
       "pt": "Regue a muda nova toda semana no primeiro ano. Na árvore adulta, o mais importante é regar nas semanas antes da colheita, quando o fruto engorda. Não encharque.",
-      "en": "Water young trees weekly in the first year. On mature trees, watering matters most in the weeks before harvest, when fruit swells. Don't waterlog."
+      "en": "Water young trees weekly in the first year. On mature trees, watering matters most in the weeks before harvest, when fruit swells. Don't waterlog.",
+      "es": "Riega los árboles jóvenes cada semana durante el primer año. En los adultos, el riego importa más en las semanas previas a la cosecha, cuando el fruto engorda. No encharques."
     },
     "other": {
       "pt": "Sol pleno e solo bem drenado. Raleie os frutos (deixe um a cada 15–20 cm) para ficarem maiores. Pragas comuns: mosca-das-frutas e podridão-parda.",
-      "en": "Full sun and well-drained soil. Thin fruit (one every 15–20 cm) for bigger peaches. Common problems: fruit flies and brown rot."
+      "en": "Full sun and well-drained soil. Thin fruit (one every 15–20 cm) for bigger peaches. Common problems: fruit flies and brown rot.",
+      "es": "Pleno sol y suelo bien drenado. Aclara los frutos (uno cada 15–20 cm) para tener melocotones más grandes. Problemas comunes: moscas de la fruta y moniliosis."
     }
   },
   "sources": [

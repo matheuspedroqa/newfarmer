@@ -2,7 +2,8 @@
   "id": "coffee",
   "summary": {
     "pt": "Arbusto perene de clima quente que dá os grãos de café. Começa a produzir cerca de 2–3 anos após o plantio e dura décadas; o arábica prefere lugares altos e frescos, o conilon/robusta aguenta mais calor.",
-    "en": "A warm-climate perennial shrub that produces coffee beans. Starts bearing about 2–3 years after planting and lasts decades; arabica prefers cool highlands, robusta/conilon handles more heat."
+    "en": "A warm-climate perennial shrub that produces coffee beans. Starts bearing about 2–3 years after planting and lasts decades; arabica prefers cool highlands, robusta/conilon handles more heat.",
+    "es": "Arbusto perenne de clima cálido que produce granos de café. Empieza a producir unos 2–3 años después de plantar y dura décadas; el arábica prefiere las tierras altas frescas, el robusta/conilon aguanta más calor."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [10, 11, 12],
       "harvest": [5, 6, 7, 8],
-      "notes": { "pt": "Plante as mudas no início das chuvas. Em terras baixas e muito quentes use conilon/robusta; arábica só em altitude.", "en": "Plant seedlings at the start of the rains. In hot lowlands use robusta/conilon; arabica only at altitude." }
+      "notes": { "pt": "Plante as mudas no início das chuvas. Em terras baixas e muito quentes use conilon/robusta; arábica só em altitude.", "en": "Plant seedlings at the start of the rains. In hot lowlands use robusta/conilon; arabica only at altitude.", "es": "Planta las plántulas al inicio de las lluvias. En zonas bajas y calurosas usa robusta/conilon; arábica solo en altitud." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [11, 12, 1],
       "harvest": [5, 6, 7, 8],
-      "notes": { "pt": "Bom para arábica. Geada queima a planta: evite baixadas e encostas viradas para o sul.", "en": "Good for arabica. Frost burns the plants: avoid low spots and cold-facing slopes." }
+      "notes": { "pt": "Bom para arábica. Geada queima a planta: evite baixadas e encostas viradas para o sul.", "en": "Good for arabica. Frost burns the plants: avoid low spots and cold-facing slopes.", "es": "Bueno para arábica. La helada quema las plantas: evita las hondonadas y las laderas orientadas al frío." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não tolera geada nem inverno frio. Só em vaso, protegido dentro de casa ou estufa.", "en": "Can't tolerate frost or cold winters. Only in a pot, indoors or in a greenhouse." }
+      "notes": { "pt": "Não tolera geada nem inverno frio. Só em vaso, protegido dentro de casa ou estufa.", "en": "Can't tolerate frost or cold winters. Only in a pot, indoors or in a greenhouse.", "es": "No tolera la helada ni los inviernos fríos. Solo en maceta, bajo techo o en invernadero." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [11, 12],
       "harvest": [5, 6, 7],
-      "notes": { "pt": "Só com irrigação o ano todo (gotejamento ou pivô). Sem água, a florada falha.", "en": "Only with year-round irrigation (drip or pivot). Without water, flowering fails." }
+      "notes": { "pt": "Só com irrigação o ano todo (gotejamento ou pivô). Sem água, a florada falha.", "en": "Only with year-round irrigation (drip or pivot). Without water, flowering fails.", "es": "Solo con riego todo el año (goteo o pivote). Sin agua, la floración falla." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não sobrevive ao frio. Só como planta de vaso dentro de casa.", "en": "Does not survive the cold. Only as an indoor potted plant." }
+      "notes": { "pt": "Não sobrevive ao frio. Só como planta de vaso dentro de casa.", "en": "Does not survive the cold. Only as an indoor potted plant.", "es": "No sobrevive al frío. Solo como planta en maceta bajo techo." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo e calagem antes de plantar (gosta de pH 5,5–6,5). Na cova, esterco curtido (~5 L) e fósforo (ex.: superfosfato simples). Depois, adube com NPK (rico em nitrogênio e potássio) dividido em 3–4 vezes durante as chuvas. Palha do café e composto devolvidos ao pé ajudam muito.",
-      "en": "Soil test and lime before planting (likes pH 5.5–6.5). In the hole, rotted manure (~5 L) and phosphorus (e.g. single superphosphate). Then feed NPK (rich in nitrogen and potassium) split into 3–4 doses during the rainy season. Returning coffee husks and compost to the base helps a lot."
+      "en": "Soil test and lime before planting (likes pH 5.5–6.5). In the hole, rotted manure (~5 L) and phosphorus (e.g. single superphosphate). Then feed NPK (rich in nitrogen and potassium) split into 3–4 doses during the rainy season. Returning coffee husks and compost to the base helps a lot.",
+      "es": "Análisis de suelo y encalado antes de plantar (le gusta pH 5,5–6,5). En el hoyo, estiércol curado (~5 L) y fósforo (p. ej. superfosfato simple). Luego abona con NPK (rico en nitrógeno y potasio) repartido en 3–4 dosis durante la época de lluvias. Devolver la cáscara de café y compost a la base ayuda mucho."
     },
     "pruning": {
       "pt": "Faça a poda logo depois da colheita e antes da florada. Tire ramos secos, doentes e 'ladrões' (brotos retos do tronco). Quando a planta fica alta demais ou fraca, faça uma poda mais forte (recepa ou decote) para renovar.",
-      "en": "Prune right after harvest and before flowering. Remove dead, diseased branches and suckers (upright shoots from the trunk). When plants get too tall or weak, cut back harder (stumping or topping) to renew them."
+      "en": "Prune right after harvest and before flowering. Remove dead, diseased branches and suckers (upright shoots from the trunk). When plants get too tall or weak, cut back harder (stumping or topping) to renew them.",
+      "es": "Poda justo después de la cosecha y antes de la floración. Quita ramas muertas y enfermas y chupones (brotes verticales del tronco). Cuando las plantas se pongan muy altas o débiles, corta más fuerte (recepe o despunte) para renovarlas."
     },
     "watering": {
       "pt": "Precisa de chuva bem distribuída ou irrigação, principalmente na florada e no enchimento dos grãos. Um período seco curto antes da florada ajuda a florir junto.",
-      "en": "Needs well-spread rain or irrigation, especially at flowering and bean filling. A short dry spell before flowering helps it bloom evenly."
+      "en": "Needs well-spread rain or irrigation, especially at flowering and bean filling. A short dry spell before flowering helps it bloom evenly.",
+      "es": "Necesita lluvia bien repartida o riego, sobre todo en la floración y el llenado del grano. Un breve periodo seco antes de la floración ayuda a que florezca de forma pareja."
     },
     "other": {
       "pt": "Use mudas sadias de viveiro registrado. Espaçamento comum de 2,5–3,5 m entre linhas e 0,5–1 m entre plantas. Fique de olho na ferrugem (pó laranja nas folhas) e na broca do café.",
-      "en": "Use healthy seedlings from a certified nursery. Common spacing is 2.5–3.5 m between rows and 0.5–1 m between plants. Watch for coffee leaf rust (orange powder on leaves) and the coffee berry borer."
+      "en": "Use healthy seedlings from a certified nursery. Common spacing is 2.5–3.5 m between rows and 0.5–1 m between plants. Watch for coffee leaf rust (orange powder on leaves) and the coffee berry borer.",
+      "es": "Usa plántulas sanas de un vivero certificado. El marco común es 2,5–3,5 m entre hileras y 0,5–1 m entre plantas. Vigila la roya del café (polvo naranja en las hojas) y la broca del café."
     }
   },
   "sources": [

@@ -2,7 +2,8 @@
   "id": "barley",
   "summary": {
     "pt": "A cevada é um cereal de inverno de ciclo curto, usado para cerveja (malte), ração e pasto. Aguenta seca e solo pobre melhor que o trigo.",
-    "en": "Barley is a short-cycle cool-season cereal used for beer (malt), feed and pasture. It handles drought and poor soil better than wheat."
+    "en": "Barley is a short-cycle cool-season cereal used for beer (malt), feed and pasture. It handles drought and poor soil better than wheat.",
+    "es": "La cebada es un cereal de clima fresco y ciclo corto que se usa para cerveza (malta), pienso y pasto. Aguanta la sequía y los suelos pobres mejor que el trigo."
   },
   "calendar": {
     "tropical": {
@@ -10,7 +11,7 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [9, 10],
-      "notes": { "pt": "Só em regiões altas, na seca, com irrigação (como no Cerrado com pivô).", "en": "Only in highlands, in the dry season, with irrigation (e.g. center-pivot in the Brazilian savanna)." }
+      "notes": { "pt": "Só em regiões altas, na seca, com irrigação (como no Cerrado com pivô).", "en": "Only in highlands, in the dry season, with irrigation (e.g. center-pivot in the Brazilian savanna).", "es": "Solo en zonas altas, en la estación seca y con riego (p. ej. pívot central en el Cerrado brasileño)." }
     },
     "subtropical": {
       "directSowing": [6, 7],
@@ -23,36 +24,39 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [12, 1, 2],
-      "notes": { "pt": "Cevada de inverno: semeie no outono (mar–abr). Cevada de primavera: semeie cedo, assim que der para trabalhar o solo (set).", "en": "Winter barley: sow in autumn (Mar–Apr). Spring barley: sow early, as soon as the soil can be worked (Sep)." }
+      "notes": { "pt": "Cevada de inverno: semeie no outono (mar–abr). Cevada de primavera: semeie cedo, assim que der para trabalhar o solo (set).", "en": "Winter barley: sow in autumn (Mar–Apr). Spring barley: sow early, as soon as the soil can be worked (Sep).", "es": "Cebada de invierno: siembra en otoño (mar–abr). Cebada de primavera: siembra temprano, en cuanto se pueda trabajar el suelo (sep)." }
     },
     "semiarid": {
       "directSowing": [5, 6],
       "seedbed": [],
       "transplant": [],
       "harvest": [9, 10],
-      "notes": { "pt": "Semeie com as chuvas da estação fresca; é dos cereais que mais aguentam seca.", "en": "Sow with the cool-season rains; it is one of the most drought-tolerant cereals." }
+      "notes": { "pt": "Semeie com as chuvas da estação fresca; é dos cereais que mais aguentam seca.", "en": "Sow with the cool-season rains; it is one of the most drought-tolerant cereals.", "es": "Siembra con las lluvias de la estación fresca; es uno de los cereales que mejor aguanta la sequía." }
     },
     "cold": {
       "directSowing": [10, 11],
       "seedbed": [],
       "transplant": [],
       "harvest": [2, 3],
-      "notes": { "pt": "Cevada de primavera, semeada cedo; o ciclo curto cabe no verão curto.", "en": "Spring barley sown early; its short cycle fits a short summer." }
+      "notes": { "pt": "Cevada de primavera, semeada cedo; o ciclo curto cabe no verão curto.", "en": "Spring barley sown early; its short cycle fits a short summer.", "es": "Cebada de primavera sembrada temprano; su ciclo corto encaja en un verano corto." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Corrija a acidez com calcário: a cevada sofre muito em solo ácido. No plantio, NPK com fósforo e potássio. Nitrogênio com moderação (no máximo uns 60 kg/ha de N para cerveja): demais deixa o grão com muita proteína, ruim para malte, e faz a planta tombar.",
-      "en": "Lime acid soils: barley suffers badly in acidity. At sowing, use an NPK with phosphorus and potassium. Go easy on nitrogen (about 60 kg/ha N at most for malting): too much raises grain protein, which maltsters reject, and makes plants lodge."
+      "en": "Lime acid soils: barley suffers badly in acidity. At sowing, use an NPK with phosphorus and potassium. Go easy on nitrogen (about 60 kg/ha N at most for malting): too much raises grain protein, which maltsters reject, and makes plants lodge.",
+      "es": "Encala los suelos ácidos: la cebada sufre mucho con la acidez. En la siembra, usa un NPK con fósforo y potasio. Cuidado con el nitrógeno (como máximo unos 60 kg/ha de N para maltería): el exceso sube la proteína del grano, que los malteros rechazan, y hace que las plantas se tumben."
     },
     "pruning": null,
     "watering": {
       "pt": "Normalmente basta a chuva. A fase mais sensível à falta de água é o espigamento. Chuva na colheita faz o grão germinar na espiga.",
-      "en": "Rain is usually enough. Heading is the stage most sensitive to drought. Rain at harvest makes grain sprout in the head."
+      "en": "Rain is usually enough. Heading is the stage most sensitive to drought. Rain at harvest makes grain sprout in the head.",
+      "es": "La lluvia suele bastar. El espigado es la fase más sensible a la sequía. La lluvia en la cosecha hace que el grano germine en la espiga."
     },
     "other": {
       "pt": "Pleno sol e solo bem drenado. Colha logo que o grão secar. Para cerveja, combine a venda com a maltaria antes de plantar. Fique de olho em manchas nas folhas e giberela.",
-      "en": "Full sun and well-drained soil. Harvest as soon as the grain dries. For malting, arrange a contract with the maltster before sowing. Watch for leaf spots and head blight."
+      "en": "Full sun and well-drained soil. Harvest as soon as the grain dries. For malting, arrange a contract with the maltster before sowing. Watch for leaf spots and head blight.",
+      "es": "Pleno sol y suelo bien drenado. Cosecha en cuanto el grano esté seco. Para maltería, cierra un contrato con el maltero antes de sembrar. Vigila las manchas foliares y la fusariosis de la espiga."
     }
   },
   "sources": [

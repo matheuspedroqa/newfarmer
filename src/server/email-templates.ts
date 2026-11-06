@@ -1,9 +1,10 @@
 import "server-only";
 import en from "../../messages/en.json";
+import es from "../../messages/es.json";
 import pt from "../../messages/pt.json";
 import type { Locale } from "@/i18n/locales";
 
-const TEXTS = { pt: pt.email, en: en.email };
+const TEXTS = { pt: pt.email, en: en.email, es: es.email };
 
 // Cores do tema claro do site (globals.css). E-mail não lê CSS externo: tudo vai inline, em tabelas,
 // que é o que o Gmail e o Outlook mostram do mesmo jeito.

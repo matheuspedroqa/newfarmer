@@ -2,7 +2,8 @@
   "id": "guava",
   "summary": {
     "pt": "Árvore rústica e produtiva que começa a dar frutos a partir do 2º ano. Com poda de frutificação dá para escolher a época da colheita e colher quase o ano todo.",
-    "en": "A hardy, productive tree that starts bearing from year 2. With fruiting pruning you can choose when to harvest and pick almost all year."
+    "en": "A hardy, productive tree that starts bearing from year 2. With fruiting pruning you can choose when to harvest and pick almost all year.",
+    "es": "Árbol resistente y productivo que empieza a dar fruto desde el año 2. Con la poda de fructificación puedes elegir cuándo cosechar y recoger casi todo el año."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [10, 11, 12, 1],
       "harvest": [1, 2, 3, 4],
-      "notes": { "pt": "Plante no início das chuvas. A safra natural é no fim do verão; com poda e irrigação colhe-se o ano todo (cerca de 6 meses depois de cada poda).", "en": "Plant at the start of the rains. The natural crop is in late summer; with pruning and irrigation you can harvest all year (about 6 months after each pruning)." }
+      "notes": { "pt": "Plante no início das chuvas. A safra natural é no fim do verão; com poda e irrigação colhe-se o ano todo (cerca de 6 meses depois de cada poda).", "en": "Plant at the start of the rains. The natural crop is in late summer; with pruning and irrigation you can harvest all year (about 6 months after each pruning).", "es": "Planta al inicio de las lluvias. La cosecha natural es a finales del verano; con poda y riego puedes cosechar todo el año (unos 6 meses después de cada poda)." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10, 11],
       "harvest": [1, 2, 3, 4],
-      "notes": { "pt": "Plante na primavera. Geada forte queima a planta nova; proteja nos 2 primeiros invernos.", "en": "Plant in spring. Hard frost burns young trees; protect them for the first 2 winters." }
+      "notes": { "pt": "Plante na primavera. Geada forte queima a planta nova; proteja nos 2 primeiros invernos.", "en": "Plant in spring. Hard frost burns young trees; protect them for the first 2 winters.", "es": "Planta en primavera. La helada fuerte quema los árboles jóvenes; protégelos durante los 2 primeros inviernos." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não tolera geada forte (abaixo de cerca de −2 °C). Só em vaso, abrigado no inverno.", "en": "Does not tolerate hard frost (below about −2 °C). Only in a pot sheltered in winter." }
+      "notes": { "pt": "Não tolera geada forte (abaixo de cerca de −2 °C). Só em vaso, abrigado no inverno.", "en": "Does not tolerate hard frost (below about −2 °C). Only in a pot sheltered in winter.", "es": "No tolera la helada fuerte (por debajo de unos −2 °C). Solo en maceta protegida en invierno." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [1, 2, 3],
       "harvest": [6, 7, 8, 9, 10, 11],
-      "notes": { "pt": "Produz muito bem com irrigação; com podas escalonadas colhe-se o ano todo. Plante no período das chuvas.", "en": "Bears very well with irrigation; with staggered pruning you can harvest all year. Plant in the rainy season." }
+      "notes": { "pt": "Produz muito bem com irrigação; com podas escalonadas colhe-se o ano todo. Plante no período das chuvas.", "en": "Bears very well with irrigation; with staggered pruning you can harvest all year. Plant in the rainy season.", "es": "Produce muy bien con riego; con podas escalonadas puedes cosechar todo el año. Planta en la época de lluvias." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não sobrevive ao inverno rigoroso. Só em estufa.", "en": "Does not survive harsh winters. Greenhouse only." }
+      "notes": { "pt": "Não sobrevive ao inverno rigoroso. Só em estufa.", "en": "Does not survive harsh winters. Greenhouse only.", "es": "No sobrevive a inviernos duros. Solo en invernadero." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Faça análise de solo e calagem antes do plantio. Esterco curtido ou composto e fósforo na cova. Depois, NPK em cobertura cerca de 3 vezes por ano (ex.: nov, jan e mar no Sul) e sempre após a poda.",
-      "en": "Test and lime the soil before planting. Rotted manure or compost plus phosphorus in the hole. Then side-dress NPK about 3 times a year and always after pruning."
+      "en": "Test and lime the soil before planting. Rotted manure or compost plus phosphorus in the hole. Then side-dress NPK about 3 times a year and always after pruning.",
+      "es": "Haz un análisis de suelo y encala antes de plantar. Estiércol curado o compost más fósforo en el hoyo. Luego abona en cobertura con NPK unas 3 veces al año y siempre después de podar."
     },
     "pruning": {
       "pt": "Forme a copa baixa e aberta (3–4 ramos). Na poda de frutificação, encurte os ramos do ano: os frutos nascem nos brotos novos e ficam prontos cerca de 6 meses depois. Tire ramos secos e brotos do tronco.",
-      "en": "Train a low, open canopy (3–4 branches). For fruiting pruning, shorten the year's shoots: fruit forms on new growth and is ready about 6 months later. Remove dead branches and trunk sprouts."
+      "en": "Train a low, open canopy (3–4 branches). For fruiting pruning, shorten the year's shoots: fruit forms on new growth and is ready about 6 months later. Remove dead branches and trunk sprouts.",
+      "es": "Forma una copa baja y abierta (3–4 ramas). Para la poda de fructificación, acorta los brotes del año: el fruto sale en brotes nuevos y está listo unos 6 meses después. Quita ramas muertas y chupones del tronco."
     },
     "watering": {
       "pt": "Regue a muda nova com frequência. Na adulta, regue na seca, principalmente da florada à formação dos frutos.",
-      "en": "Water young trees often. For mature trees, water in dry spells, mainly from bloom to fruit growth."
+      "en": "Water young trees often. For mature trees, water in dry spells, mainly from bloom to fruit growth.",
+      "es": "Riega a menudo los árboles jóvenes. En árboles adultos, riega en periodos secos, sobre todo desde la floración hasta el crecimiento del fruto."
     },
     "other": {
       "pt": "Sol pleno. Deixe uns 4–6 m entre árvores. A principal praga é o bicho-da-goiaba (larva da mosca-das-frutas e gorgulho): ensaque os frutos pequenos e recolha os caídos.",
-      "en": "Full sun. Leave about 4–6 m between trees. The main pest is fruit fly larvae and the guava weevil: bag young fruits and pick up fallen ones."
+      "en": "Full sun. Leave about 4–6 m between trees. The main pest is fruit fly larvae and the guava weevil: bag young fruits and pick up fallen ones.",
+      "es": "Pleno sol. Deja unos 4–6 m entre árboles. La plaga principal son las larvas de la mosca de la fruta y el picudo de la guayaba: embolsa los frutos jóvenes y recoge los caídos."
     }
   },
   "sources": [

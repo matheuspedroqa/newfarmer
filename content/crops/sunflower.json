@@ -2,7 +2,8 @@
   "id": "sunflower",
   "summary": {
     "pt": "Planta anual de ciclo curto (90–130 dias) que dá grãos para óleo, ração e alimentação de pássaros. Aguenta bem a seca e as abelhas adoram as flores.",
-    "en": "A short-cycle annual (90–130 days) grown for oil seed, feed and birdseed. It handles drought well and bees love the flowers."
+    "en": "A short-cycle annual (90–130 days) grown for oil seed, feed and birdseed. It handles drought well and bees love the flowers.",
+    "es": "Una anual de ciclo corto (90–130 días) que se cultiva por su semilla para aceite, pienso y alpiste. Aguanta bien la sequía y a las abejas les encantan las flores."
   },
   "calendar": {
     "tropical": {
@@ -10,50 +11,53 @@
       "seedbed": [],
       "transplant": [],
       "harvest": [6, 7],
-      "notes": { "pt": "Plantio de safrinha, logo após a soja ou o milho, no fim das chuvas.", "en": "Second-crop sowing right after soybean or corn, at the end of the rains." }
+      "notes": { "pt": "Plantio de safrinha, logo após a soja ou o milho, no fim das chuvas.", "en": "Second-crop sowing right after soybean or corn, at the end of the rains.", "es": "Siembra como segundo cultivo justo después de la soja o el maíz, al final de las lluvias." }
     },
     "subtropical": {
       "directSowing": [8, 9, 10],
       "seedbed": [],
       "transplant": [],
       "harvest": [12, 1, 2],
-      "notes": { "pt": "Semeie depois do risco de geada, no início da primavera.", "en": "Sow after the frost risk, in early spring." }
+      "notes": { "pt": "Semeie depois do risco de geada, no início da primavera.", "en": "Sow after the frost risk, in early spring.", "es": "Siembra pasado el riesgo de helada, a principios de primavera." }
     },
     "temperate": {
       "directSowing": [10, 11],
       "seedbed": [],
       "transplant": [],
       "harvest": [2, 3, 4],
-      "notes": { "pt": "Semeie quando o solo passar de 10 °C.", "en": "Sow once soil is above 10 °C." }
+      "notes": { "pt": "Semeie quando o solo passar de 10 °C.", "en": "Sow once soil is above 10 °C.", "es": "Siembra cuando el suelo supere los 10 °C." }
     },
     "semiarid": {
       "directSowing": [1, 2, 3],
       "seedbed": [],
       "transplant": [],
       "harvest": [5, 6, 7],
-      "notes": { "pt": "Semeie no início das chuvas; raiz funda tolera seca.", "en": "Sow at the start of the rains; deep roots tolerate drought." }
+      "notes": { "pt": "Semeie no início das chuvas; raiz funda tolera seca.", "en": "Sow at the start of the rains; deep roots tolerate drought.", "es": "Siembra al inicio de las lluvias; las raíces profundas toleran la sequía." }
     },
     "cold": {
       "directSowing": [11],
       "seedbed": [],
       "transplant": [],
       "harvest": [3, 4],
-      "notes": { "pt": "Só variedades precoces, depois da última geada.", "en": "Early varieties only, after the last frost." }
+      "notes": { "pt": "Só variedades precoces, depois da última geada.", "en": "Early varieties only, after the last frost.", "es": "Solo variedades tempranas, después de la última helada." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Corrija a acidez com calcário. No plantio, use NPK conforme análise de solo (ou esterco curtido) e, principalmente, boro: falta de boro derruba a produção. Nitrogênio em cobertura cerca de 30 dias após a emergência.",
-      "en": "Correct acidity with lime. At sowing, apply NPK by soil test (or well-rotted manure) and especially boron: boron shortage cuts yield. Side-dress nitrogen about 30 days after emergence."
+      "en": "Correct acidity with lime. At sowing, apply NPK by soil test (or well-rotted manure) and especially boron: boron shortage cuts yield. Side-dress nitrogen about 30 days after emergence.",
+      "es": "Corrige la acidez con cal. A la siembra, aplica NPK según el análisis de suelo (o estiércol bien curado) y, sobre todo, boro: la falta de boro reduce el rendimiento. Aplica nitrógeno en cobertera unos 30 días después de la emergencia."
     },
     "pruning": null,
     "watering": {
       "pt": "Tolera seca, mas precisa de água na germinação, no botão floral e no enchimento dos grãos. Evite encharcar.",
-      "en": "Drought tolerant, but needs water at germination, bud stage and seed fill. Avoid waterlogging."
+      "en": "Drought tolerant, but needs water at germination, bud stage and seed fill. Avoid waterlogging.",
+      "es": "Tolera la sequía, pero necesita agua en la germinación, en la fase de botón y en el llenado de la semilla. Evita el encharcamiento."
     },
     "other": {
       "pt": "Sol pleno, linhas a 70–90 cm. Pássaros comem os grãos maduros; colha logo que o verso da flor ficar marrom.",
-      "en": "Full sun, rows 70–90 cm apart. Birds eat ripe seeds; harvest as soon as the back of the head turns brown."
+      "en": "Full sun, rows 70–90 cm apart. Birds eat ripe seeds; harvest as soon as the back of the head turns brown.",
+      "es": "Pleno sol, filas a 70–90 cm. Los pájaros se comen las semillas maduras; cosecha en cuanto el reverso del capítulo se ponga marrón."
     }
   },
   "sources": [

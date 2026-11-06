@@ -2,7 +2,8 @@
   "id": "mango",
   "summary": {
     "pt": "Árvore tropical grande e perene que, enxertada, produz do 3º–4º ano e vive muitas décadas. Rústica, gosta de calor e de um período seco antes da florada.",
-    "en": "A large, long-lived tropical tree that, when grafted, bears from year 3–4 and lives many decades. Hardy, it loves heat and a dry spell before blooming."
+    "en": "A large, long-lived tropical tree that, when grafted, bears from year 3–4 and lives many decades. Hardy, it loves heat and a dry spell before blooming.",
+    "es": "Árbol tropical grande y longevo que, injertado, produce desde el año 3–4 y vive muchas décadas. Resistente, ama el calor y un periodo seco antes de florecer."
   },
   "calendar": {
     "tropical": {
@@ -10,53 +11,57 @@
       "seedbed": [],
       "transplant": [10, 11, 12, 1],
       "harvest": [9, 10, 11, 12, 1],
-      "notes": { "pt": "Plante no início das chuvas. Florada no fim da seca (jun–ago). Onde chove o ano todo, floresce pouco e a antracnose ataca mais.", "en": "Plant at the start of the rains. It blooms at the end of the dry season. Where it rains all year it blooms poorly and anthracnose is worse." }
+      "notes": { "pt": "Plante no início das chuvas. Florada no fim da seca (jun–ago). Onde chove o ano todo, floresce pouco e a antracnose ataca mais.", "en": "Plant at the start of the rains. It blooms at the end of the dry season. Where it rains all year it blooms poorly and anthracnose is worse.", "es": "Planta al inicio de las lluvias. Florece al final de la época seca. Donde llueve todo el año florece mal y la antracnosis es peor." }
     },
     "subtropical": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [9, 10, 11],
       "harvest": [11, 12, 1, 2],
-      "notes": { "pt": "Plante na primavera, depois das geadas. Geada mata a muda nova e queima a flor; escolha um canto protegido.", "en": "Plant in spring, after frosts. Frost kills young trees and burns flowers; choose a sheltered spot." }
+      "notes": { "pt": "Plante na primavera, depois das geadas. Geada mata a muda nova e queima a flor; escolha um canto protegido.", "en": "Plant in spring, after frosts. Frost kills young trees and burns flowers; choose a sheltered spot.", "es": "Planta en primavera, después de las heladas. La helada mata los árboles jóvenes y quema las flores; elige un lugar protegido." }
     },
     "temperate": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não tolera geada. Só em pontos sem geada do litoral (como o sul da Espanha), e mesmo assim produz pouco.", "en": "Can't take frost. Only in frost-free coastal pockets (like southern Spain), and even then it bears little." }
+      "notes": { "pt": "Não tolera geada. Só em pontos sem geada do litoral (como o sul da Espanha), e mesmo assim produz pouco.", "en": "Can't take frost. Only in frost-free coastal pockets (like southern Spain), and even then it bears little.", "es": "No aguanta la helada. Solo en rincones costeros sin heladas (como el sur de España), y aun así da poco fruto." }
     },
     "semiarid": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       "harvest": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "notes": { "pt": "Com irrigação, ótimo: no Vale do São Francisco, cortando a água (estresse hídrico) para induzir a florada, colhe-se em qualquer mês. Sem irrigação, só uma safra no fim do ano.", "en": "With irrigation it thrives: in Brazil's São Francisco Valley, cutting water (drought stress) to trigger bloom gives a crop in any month. Without irrigation, just one crop late in the year." }
+      "notes": { "pt": "Com irrigação, ótimo: no Vale do São Francisco, cortando a água (estresse hídrico) para induzir a florada, colhe-se em qualquer mês. Sem irrigação, só uma safra no fim do ano.", "en": "With irrigation it thrives: in Brazil's São Francisco Valley, cutting water (drought stress) to trigger bloom gives a crop in any month. Without irrigation, just one crop late in the year.", "es": "Con riego prospera: en el Valle del São Francisco, en Brasil, cortar el agua (estrés hídrico) para provocar la floración da cosecha en cualquier mes. Sin riego, solo una cosecha a finales del año." }
     },
     "cold": {
       "directSowing": [],
       "seedbed": [],
       "transplant": [],
       "harvest": [],
-      "notes": { "pt": "Não aguenta frio; só em estufa aquecida.", "en": "Can't take cold; heated greenhouse only." }
+      "notes": { "pt": "Não aguenta frio; só em estufa aquecida.", "en": "Can't take cold; heated greenhouse only.", "es": "No aguanta el frío; solo en invernadero calefaccionado." }
     }
   },
   "care": {
     "fertilizing": {
       "pt": "Na cova, esterco curtido ou composto, mais fósforo e potássio conforme análise de solo, com calcário se precisar. Depois, adube na época das chuvas e logo após a colheita. Nitrogênio demais faz folha e corta a florada.",
-      "en": "In the hole, rotted manure or compost plus phosphorus and potassium by soil test, with lime if needed. Later, fertilize in the rainy season and right after harvest. Too much nitrogen makes leaves and cuts blooming."
+      "en": "In the hole, rotted manure or compost plus phosphorus and potassium by soil test, with lime if needed. Later, fertilize in the rainy season and right after harvest. Too much nitrogen makes leaves and cuts blooming.",
+      "es": "En el hoyo, estiércol curado o compost más fósforo y potasio según el análisis de suelo, con cal si hace falta. Después, fertiliza en la época de lluvias y justo después de la cosecha. Demasiado nitrógeno da hojas y reduce la floración."
     },
     "pruning": {
       "pt": "Poda de formação: escolha 3 galhos bem distribuídos e tire os outros. Depois, logo após a colheita, tire ramos secos, doentes, restos de cacho e galhos de dentro da copa; baixe os mais altos para controlar o tamanho.",
-      "en": "Training: pick 3 well-spaced limbs and remove the rest. Then, right after harvest, remove dead and diseased wood, old flower stalks and inner branches; cut back the tallest to control size."
+      "en": "Training: pick 3 well-spaced limbs and remove the rest. Then, right after harvest, remove dead and diseased wood, old flower stalks and inner branches; cut back the tallest to control size.",
+      "es": "Formación: elige 3 ramas bien espaciadas y quita el resto. Después, justo tras la cosecha, quita madera muerta y enferma, restos de panículas viejas y ramas interiores; recorta las más altas para controlar el tamaño."
     },
     "watering": {
       "pt": "Muda nova: regue com frequência no primeiro ano. Adulta: aguenta seca; corte a água uns 2 meses antes da florada e volte a regar quando os frutos pegarem.",
-      "en": "Young trees: water often in the first year. Mature trees handle drought; stop watering about 2 months before bloom and resume once fruit sets."
+      "en": "Young trees: water often in the first year. Mature trees handle drought; stop watering about 2 months before bloom and resume once fruit sets.",
+      "es": "Árboles jóvenes: riega a menudo el primer año. Los árboles adultos aguantan la sequía; deja de regar unos 2 meses antes de la floración y reanuda cuando cuaje el fruto."
     },
     "other": {
       "pt": "Sol pleno e solo bem drenado. Árvore grande: deixe uns 8–10 m de espaço de casas e fios. Antracnose (manchas pretas) e mosca-das-frutas são os principais problemas.",
-      "en": "Full sun and well-drained soil. It's a big tree: leave about 8–10 m from buildings and power lines. Anthracnose (black spots) and fruit flies are the main problems."
+      "en": "Full sun and well-drained soil. It's a big tree: leave about 8–10 m from buildings and power lines. Anthracnose (black spots) and fruit flies are the main problems.",
+      "es": "Pleno sol y suelo bien drenado. Es un árbol grande: deja unos 8–10 m de edificios y líneas eléctricas. La antracnosis (manchas negras) y las moscas de la fruta son los problemas principales."
     }
   },
   "sources": [

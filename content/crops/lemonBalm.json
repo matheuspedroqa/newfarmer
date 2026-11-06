@@ -2,31 +2,36 @@
   "id": "lemonBalm",
   "summary": {
     "pt": "A melissa (erva-cidreira verdadeira) é uma erva perene da família da hortelã, com folhas de cheiro de limão usadas em chá calmante. É fácil de cultivar e rebrota muitas vezes.",
-    "en": "Lemon balm is a perennial herb in the mint family, with lemon-scented leaves used for calming tea. It is easy to grow and regrows many times."
+    "en": "Lemon balm is a perennial herb in the mint family, with lemon-scented leaves used for calming tea. It is easy to grow and regrows many times.",
+    "es": "La melisa es una hierba perenne de la familia de la menta, con hojas de aroma a limón usadas para infusión calmante. Es fácil de cultivar y rebrota muchas veces."
   },
   "calendar": {
-    "tropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [5, 6, 7, 8, 9, 10, 11], "notes": { "pt": "Prefere locais mais altos e frescos; no calor forte dê meia-sombra.", "en": "Prefers higher, cooler areas; give part shade in strong heat." } },
-    "subtropical": { "directSowing": [], "seedbed": [7, 8], "transplant": [3, 4, 8, 9, 10], "harvest": [10, 11, 12, 1, 2, 3, 4, 5], "notes": { "pt": "Rende mais folhas no verão.", "en": "Yields the most leaves in summer." } },
+    "tropical": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [5, 6, 7, 8, 9, 10, 11], "notes": { "pt": "Prefere locais mais altos e frescos; no calor forte dê meia-sombra.", "en": "Prefers higher, cooler areas; give part shade in strong heat.", "es": "Prefiere zonas más altas y frescas; dale sombra parcial con calor fuerte." } },
+    "subtropical": { "directSowing": [], "seedbed": [7, 8], "transplant": [3, 4, 8, 9, 10], "harvest": [10, 11, 12, 1, 2, 3, 4, 5], "notes": { "pt": "Rende mais folhas no verão.", "en": "Yields the most leaves in summer.", "es": "Da más hojas en verano." } },
     "temperate": { "directSowing": [], "seedbed": [8], "transplant": [9, 10], "harvest": [11, 12, 1, 2, 3, 4] },
-    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [5, 6, 7, 8, 9, 10], "notes": { "pt": "Só com irrigação e meia-sombra; não tolera solo seco por muito tempo.", "en": "Only with irrigation and part shade; it does not tolerate dry soil for long." } },
-    "cold": { "directSowing": [], "seedbed": [], "transplant": [10, 11], "harvest": [12, 1, 2, 3], "notes": { "pt": "Resistente ao frio: a parte aérea morre no inverno e rebrota na primavera.", "en": "Cold-hardy: top growth dies back in winter and regrows in spring." } }
+    "semiarid": { "directSowing": [], "seedbed": [], "transplant": [3, 4, 5], "harvest": [5, 6, 7, 8, 9, 10], "notes": { "pt": "Só com irrigação e meia-sombra; não tolera solo seco por muito tempo.", "en": "Only with irrigation and part shade; it does not tolerate dry soil for long.", "es": "Solo con riego y sombra parcial; no tolera mucho tiempo el suelo seco." } },
+    "cold": { "directSowing": [], "seedbed": [], "transplant": [10, 11], "harvest": [12, 1, 2, 3], "notes": { "pt": "Resistente ao frio: a parte aérea morre no inverno e rebrota na primavera.", "en": "Cold-hardy: top growth dies back in winter and regrows in spring.", "es": "Resistente al frío: la parte aérea se seca en invierno y rebrota en primavera." } }
   },
   "care": {
     "fertilizing": {
       "pt": "Adubação orgânica: húmus de minhoca, composto ou esterco curtido no plantio e uma cobertura leve depois de alguns cortes. O adubo orgânico também ajuda a segurar a umidade do solo.",
-      "en": "Organic feeding: worm castings, compost or aged manure at planting and a light top-dressing after a few cuts. Organic fertilizer also helps the soil hold moisture."
+      "en": "Organic feeding: worm castings, compost or aged manure at planting and a light top-dressing after a few cuts. Organic fertilizer also helps the soil hold moisture.",
+      "es": "Abonado orgánico: humus de lombriz, compost o estiércol curado al plantar y un abonado ligero de cobertura tras unos cortes. El abono orgánico también ayuda al suelo a retener la humedad."
     },
     "pruning": {
       "pt": "Colha com frequência cortando os ramos a uns 10 cm do chão — isso mantém a planta cheia. Retire as flores antes de formarem semente para ela não se espalhar.",
-      "en": "Harvest often by cutting stems about 10 cm above ground — this keeps the plant bushy. Remove flowers before they set seed so it doesn't spread."
+      "en": "Harvest often by cutting stems about 10 cm above ground — this keeps the plant bushy. Remove flowers before they set seed so it doesn't spread.",
+      "es": "Cosecha a menudo cortando los tallos a unos 10 cm del suelo: así la planta se mantiene frondosa. Quita las flores antes de que den semilla para que no se extienda."
     },
     "watering": {
       "pt": "Gosta de solo úmido, mas bem drenado. Regue sempre que a superfície secar.",
-      "en": "Likes moist but well-drained soil. Water whenever the surface dries out."
+      "en": "Likes moist but well-drained soil. Water whenever the surface dries out.",
+      "es": "Le gusta el suelo húmedo pero bien drenado. Riega siempre que la superficie se seque."
     },
     "other": {
       "pt": "Sol pleno ou meia-sombra, 30–45 cm entre plantas. Multiplique por estacas ou divisão da touceira (a semente é lenta). Espalha-se fácil: plante em vaso ou canteiro limitado. Não confunda com o capim-cidreira (capim-santo).",
-      "en": "Full sun or part shade, 30–45 cm apart. Propagate by cuttings or division (seed is slow). It spreads easily: grow in a pot or a contained bed. Not the same as lemongrass."
+      "en": "Full sun or part shade, 30–45 cm apart. Propagate by cuttings or division (seed is slow). It spreads easily: grow in a pot or a contained bed. Not the same as lemongrass.",
+      "es": "Pleno sol o sombra parcial, a 30–45 cm. Propaga por esquejes o división (la semilla es lenta). Se extiende fácilmente: cultívala en maceta o en un bancal delimitado. No es lo mismo que la hierba luisa o el limoncillo."
     }
   },
   "sources": [
