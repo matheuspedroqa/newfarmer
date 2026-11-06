@@ -1,6 +1,6 @@
 # Política de Privacidade
 
-**Última atualização: 5 de novembro de 2026**
+**Última atualização: 6 de novembro de 2026**
 
 Esta política explica, em palavras simples, quais dados o NewFarmer guarda sobre você, para que usa, com quem divide e quais são os seus direitos. Ela vale para quem usa o site no Brasil, na União Europeia, nos Estados Unidos ou em qualquer outro lugar.
 
@@ -49,6 +49,10 @@ O número do cartão **nunca** chega ao NewFarmer e não é guardado por nós.
 - **histórico de e-mails:** quais e-mails de novidades enviamos para você e quando;
 - **formulário de contato:** o nome, o e-mail e a mensagem que você escreve na página Contato. Isso vai por e-mail (pelo Resend) para a nossa caixa de contato, só para responder você, e **não fica guardado no site**.
 
+### Calendário mensal por e-mail (sem conta)
+
+Se você pede, na página **O que plantar**, para receber o calendário todo mês, guardamos o e-mail, o país escolhido, o idioma da página, a data do pedido, a data em que você confirmou, o último mês enviado e a data em que você se descadastrou (se for o caso), além de um código aleatório para os links de confirmar e de descadastrar. Esse e-mail não é ligado a nenhuma conta.
+
 ### Previsão do tempo
 
 Guardamos por até 7 dias as previsões do tempo de cada lugar, identificado por coordenadas arredondadas (2 casas decimais). Isso não é ligado a nenhuma pessoa.
@@ -60,6 +64,7 @@ Guardamos por até 7 dias as previsões do tempo de cada lugar, identificado por
 - **Para enviar e-mails da conta** (confirmar o e-mail, trocar a senha, lembrar o username): execução do contrato.
 - **Para cobrar a assinatura** (criar e manter a assinatura, saber se ela está ativa): execução do contrato (LGPD, art. 7º, V; RGPD, art. 6º, 1, b).
 - **Para medir as páginas visitadas** e entender o que o site precisa melhorar: o seu consentimento, dado em "Aceitar todos" (LGPD, art. 7º, I; RGPD, art. 6º, 1, a; e a regra de cookies da ePrivacy). Você pode tirar o consentimento quando quiser.
+- **Para enviar o calendário mensal por e-mail:** o seu consentimento, dado ao marcar a caixa e confirmar pelo e-mail que mandamos (LGPD, art. 7º, I; RGPD, art. 6º, 1, a). Em todo e-mail há um link para sair em um clique.
 - **Para enviar e-mails de novidades (marketing):** só se você aceitou, e a base é o consentimento. Em todo e-mail há um link para sair da lista em um clique, e você também pode mudar isso em **Perfil**.
 
 Não vendemos seus dados. Não usamos seus dados para anúncios.
@@ -91,6 +96,7 @@ O NewFarmer é mantido no Brasil, o banco de dados fica na União Europeia e alg
 - **Registro de erros:** 180 dias.
 - **Medição de páginas:** 180 dias.
 - **Histórico de e-mails de novidades:** enquanto a conta existir.
+- **Calendário mensal por e-mail:** quando você se descadastra, o e-mail fica guardado marcado como descadastrado (assim não mandamos mais e você pode voltar quando quiser). Para apagá-lo de vez, peça pela página Contato. Pedido nunca confirmado é apagado em 30 dias.
 - **Dados de cobrança no Stripe:** pelo prazo que a lei fiscal exige.
 - **Limites de tentativas:** cerca de 1 dia.
 - **Previsões do tempo:** até 7 dias.

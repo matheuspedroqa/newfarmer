@@ -96,6 +96,24 @@ test.describe("sem cookie de idioma", () => {
   });
 });
 
+test("calendário mensal: pede na página 'o que plantar', só com a caixa marcada, e confirma pelo e-mail", async ({ page }) => {
+  const email = uniqueEmail();
+  await page.goto("/pt/o-que-plantar/portugal/marco");
+  const box = page.getByTestId("guide-signup");
+  await box.getByLabel("Seu e-mail").fill(email);
+  await box.getByRole("button", { name: "Quero receber" }).click();
+  await expect(box.getByText("Marque a caixa para confirmar.")).toBeVisible();
+  await box.getByRole("checkbox", { name: /Quero receber todo mês, por e-mail, o que plantar em Portugal/ }).check();
+  await box.getByRole("button", { name: "Quero receber" }).click();
+  await expect(box.getByRole("status")).toContainText("Quase lá!");
+
+  await page.goto("/dev/inbox");
+  await page.locator("article", { hasText: "Confirme para receber o que plantar todo mês" }).filter({ hasText: email }).getByRole("link", { name: "Confirmar e receber" }).click();
+  await expect(page.getByText("Pronto, está confirmado!")).toBeVisible();
+  await page.goto("/confirm-guide/inventado");
+  await expect(page.getByText("Link inválido")).toBeVisible();
+});
+
 test("?aba=diario antigo ainda abre o diário", async ({ page }) => {
   await createAccount(page, uniqueEmail());
   await page.getByLabel("Vacas").check();

@@ -3,7 +3,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { requirePlatformAdmin } from "@/server/authz";
 import { getDb } from "@/server/db";
-import { FUNNEL_STEPS, leadFunnel, listLeads } from "@/server/page-views";
+import { FUNNEL_STEPS, leadFunnel, leadSources, listLeads } from "@/server/page-views";
 
 const PAGE_SIZE = 50;
 const PERIODS = [7, 30, 90] as const;
@@ -26,7 +26,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
   const before = Number.isSafeInteger(n) && n > 0 ? n : undefined;
   const db = await getDb();
   const since = Date.now() - days * DIA;
-  const [funnel, fetched] = await Promise.all([leadFunnel(db, since), listLeads(db, { since, before, limit: PAGE_SIZE + 1 })]);
+  const [funnel, sources, fetched] = await Promise.all([leadFunnel(db, since), leadSources(db, since), listLeads(db, { since, before, limit: PAGE_SIZE + 1 })]);
   const rows = fetched.slice(0, PAGE_SIZE);
 
   const locale = await getLocale();
@@ -40,6 +40,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
   const focus = "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
   const link = `inline-flex min-h-11 items-center font-semibold text-primary underline ${focus}`;
   const cell = "px-3 py-2";
+  const sourceName = (s: string | null) => (s === null ? t("sourceUnknown") : s || t("sourceDirect"));
   const account = (u: (typeof rows)[number]["user"]) =>
     u ? <Link href={`/admin/subscribers/${u.id}`} className={link}>@{u.username}</Link> : <span className="text-muted">{t("noAccount")}</span>;
 
@@ -77,6 +78,33 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
       </section>
 
       <section className="space-y-3">
+        <h2 className="font-display text-xl font-bold">{t("sourcesTitle")}</h2>
+        <p className="text-sm text-muted">{t("sourcesHelp")}</p>
+        {sources.length === 0 ? (
+          <p className="text-muted">{t("leadsEmpty")}</p>
+        ) : (
+          <div className="overflow-x-auto rounded-2xl bg-surface ring-1 ring-border">
+            <table data-testid="lead-sources" className="w-full text-left text-sm">
+              <thead className="text-muted">
+                <tr>{["colSource", "colEntry", "colVisitors", "colAccounts", "colPaid"].map((k) => <th key={k} className={cell}>{t(k)}</th>)}</tr>
+              </thead>
+              <tbody>
+                {sources.map((r) => (
+                  <tr key={`${r.source}|${r.entry}`} className="border-t border-border">
+                    <td className={`${cell} break-all`}>{sourceName(r.source)}</td>
+                    <td className={cell}>{r.entry ? t(`entry_${r.entry}`) : "—"}</td>
+                    <td className={cell}>{r.leads}</td>
+                    <td className={cell}>{r.accounts}</td>
+                    <td className={`${cell} font-semibold`}>{r.paid}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
+      <section className="space-y-3">
         <h2 className="font-display text-xl font-bold">{t("recentVisitors")}</h2>
         {rows.length === 0 ? (
           <p className="text-muted">{t("leadsEmpty")}</p>
@@ -85,7 +113,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
             <div className="hidden overflow-x-auto rounded-2xl bg-surface ring-1 ring-border md:block">
               <table className="w-full text-left text-sm">
                 <thead className="text-muted">
-                  <tr>{["colFirstSeen", "colLastVisit", "colPages", "colLastPage", "colLocation", "colReached", "colAccount"].map((k) => <th key={k} className={cell}>{t(k)}</th>)}</tr>
+                  <tr>{["colFirstSeen", "colLastVisit", "colPages", "colLastPage", "colSource", "colLocation", "colReached", "colAccount"].map((k) => <th key={k} className={cell}>{t(k)}</th>)}</tr>
                 </thead>
                 <tbody>
                   {rows.map((r) => (
@@ -94,6 +122,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
                       <td className={`${cell} whitespace-nowrap`}>{format.format(r.lastSeen)}</td>
                       <td className={cell}>{r.pages || "—"}</td>
                       <td className={`${cell} break-all`}>{r.lastPath ?? "—"}</td>
+                      <td className={`${cell} break-all`}>{sourceName(r.source)}</td>
                       <td className={cell} data-testid="lead-location">{place(r.location)}</td>
                       <td className={cell}>{stepName(r.furthestStep)}</td>
                       <td className={cell}>{account(r.user)}</td>
@@ -107,6 +136,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
                 <li key={r.id} data-testid="lead-card" className="rounded-2xl bg-surface p-4 ring-1 ring-border">
                   <p className="font-semibold">{stepName(r.furthestStep)}{r.pages > 0 && ` · ${r.pages} ${t("colPages").toLowerCase()}`}</p>
                   <p className="text-sm break-all">{t("colLastPage")}: {r.lastPath ?? "—"}</p>
+                  <p className="text-sm break-all">{t("colSource")}: {sourceName(r.source)}</p>
                   <p className="text-sm">{t("colLocation")}: {place(r.location)}</p>
                   <p className="text-xs text-muted">{format.format(r.firstSeen)} → {format.format(r.lastSeen)}</p>
                   {account(r.user)}

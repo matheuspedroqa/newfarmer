@@ -36,15 +36,17 @@ const NOT_ADMIN = "visitor_id NOT IN (SELECT visitor_id FROM page_views WHERE us
 const LEADS = `WITH pv AS (
     SELECT visitor_id::text AS visitor_id, MIN(created_at) AS first_seen, MAX(created_at) AS last_seen, COUNT(*) AS pages,
       (array_agg(path ORDER BY created_at DESC, id DESC))[1] AS last_path, MAX(user_id) AS uid,
+      (array_agg(referrer ORDER BY created_at, id))[1] AS source, (array_agg(path ORDER BY created_at, id))[1] AS landing,
       (array_agg(city ORDER BY created_at DESC, id DESC) FILTER (WHERE country <> ''))[1] AS city,
       (array_agg(country ORDER BY created_at DESC, id DESC) FILTER (WHERE country <> ''))[1] AS country,
-      MAX(CASE WHEN path IN ('/', '/pt') THEN 0 WHEN path = '/register' THEN 1 WHEN path = '/welcome' THEN 2
+      MAX(CASE WHEN path IN ('/', '/pt', '/es') THEN 0 WHEN path = '/register' THEN 1 WHEN path = '/welcome' THEN 2
                WHEN path = '/subscribe' OR path LIKE '/subscribe/%' THEN 3 ELSE -1 END) AS step
     FROM page_views WHERE ${NOT_ADMIN} GROUP BY visitor_id
   ),
   acc AS (
     SELECT u.id AS uid, u.username, u.email, u.created_at, MIN(pv.first_seen) AS first_seen, MAX(pv.last_seen) AS last_seen,
       COALESCE(SUM(pv.pages), 0) AS pages, (array_agg(pv.last_path ORDER BY pv.last_seen DESC NULLS LAST))[1] AS last_path, MAX(pv.step) AS pv_step,
+      (array_agg(pv.source ORDER BY pv.first_seen NULLS LAST))[1] AS source, (array_agg(pv.landing ORDER BY pv.first_seen NULLS LAST))[1] AS landing,
       (array_agg(pv.city ORDER BY pv.last_seen DESC) FILTER (WHERE pv.country IS NOT NULL))[1] AS city,
       (array_agg(pv.country ORDER BY pv.last_seen DESC) FILTER (WHERE pv.country IS NOT NULL))[1] AS country,
       u.city_label, u.country_code
@@ -53,7 +55,7 @@ const LEADS = `WITH pv AS (
   ),
   leads AS (
     SELECT 'v:' || visitor_id AS id, first_seen, last_seen, pages, last_path, NULL::integer AS uid, NULL::text AS username, NULL::text AS email, step,
-      city, country, NULL::text AS signup_city, NULL::text AS signup_country
+      city, country, NULL::text AS signup_city, NULL::text AS signup_country, source, landing
     FROM pv WHERE uid IS NULL
     UNION ALL
     SELECT 'u:' || a.uid, LEAST(a.created_at, COALESCE(a.first_seen, a.created_at)), GREATEST(a.created_at, COALESCE(a.last_seen, 0)),
@@ -62,7 +64,7 @@ const LEADS = `WITH pv AS (
            WHEN s.user_id IS NOT NULL THEN 3
            WHEN EXISTS (SELECT 1 FROM farm_animals f WHERE f.user_id = a.uid) OR EXISTS (SELECT 1 FROM farm_crops c WHERE c.user_id = a.uid) THEN GREATEST(2, COALESCE(a.pv_step, 2))
            ELSE GREATEST(1, COALESCE(a.pv_step, 1)) END,
-      a.city, a.country, a.city_label, a.country_code
+      a.city, a.country, a.city_label, a.country_code, a.source, a.landing
     FROM acc a LEFT JOIN subscriptions s ON s.user_id = a.uid
   )`;
 
@@ -76,6 +78,16 @@ export async function leadFunnel(db: Db, sinceMs: number) {
   return { "/": Number(r.home), "/register": Number(r.reg), "/welcome": Number(r.welcome), "/subscribe": Number(r.sub), paid: Number(r.paid) };
 }
 
+// Texto fixo do código, como LEADS.
+const SOURCES = `${LEADS} SELECT source, CASE WHEN landing IS NULL THEN NULL WHEN landing IN ('/', '/pt', '/es') THEN 'home'
+    WHEN landing LIKE '/what-to-plant%' OR landing LIKE '/pt/o-que-plantar%' OR landing LIKE '/es/que-plantar%' THEN 'guide' ELSE 'other' END AS entry,
+  COUNT(*)::int AS leads, COUNT(uid)::int AS accounts, (COUNT(*) FILTER (WHERE step = 4))::int AS paid
+  FROM leads WHERE last_seen >= $1 GROUP BY 1, 2 ORDER BY paid DESC, accounts DESC, leads DESC LIMIT 30`;
+
+/** Por onde cada lead chegou (o site de origem e a primeira página da primeira visita), com quantos criaram conta e assinaram. */
+export const leadSources = (db: Db, sinceMs: number) =>
+  db.query<{ source: string | null; entry: "home" | "guide" | "other" | null; leads: number; accounts: number; paid: number }>(SOURCES, [sinceMs]);
+
 export interface Lead {
   id: string;
   firstSeen: number;
@@ -88,6 +100,8 @@ export interface Lead {
   subscribed: boolean;
   /** De onde acessou por último (só com estatística ligada); `signup`: a cidade do cadastro, quando não há visita medida. */
   location: { city: string; country: string; signup: boolean } | null;
+  /** Site de onde veio na primeira visita ("": entrou direto; null: sem estatística). */
+  source: string | null;
 }
 
 // shortcut: `before` é só o lastSeen; leads com a mesma última visita no mesmo milissegundo podem pular uma página.
@@ -112,5 +126,6 @@ export async function listLeads(db: Db, { since, before, limit = 50 }: { since: 
     location: r.country !== null
       ? { city: String(r.city ?? ""), country: String(r.country), signup: false }
       : r.signup_country !== null ? { city: String(r.signup_city ?? ""), country: String(r.signup_country), signup: true } : null,
+    source: r.source === null ? null : String(r.source),
   }));
 }

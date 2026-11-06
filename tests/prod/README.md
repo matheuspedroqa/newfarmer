@@ -74,6 +74,7 @@ $env:PENTEST_RATELIMIT = "1"; npm run test:prod; Remove-Item Env:PENTEST_RATELIM
 | Logins por rede | 10 a cada 15 min | Cada rodada usa uns 4. Espere 15 min entre rodadas seguidas. |
 | Recuperar senha / username | 5 por hora por rede | Cada rodada usa 4. Espere 1 hora entre rodadas completas, ou pule com `--grep-invert "enumeração"`. |
 | Formulário de Contato | 5 por hora por rede | Cada rodada usa 1. |
+| Cadastros | 5 por hora por rede | A rodada completa cria mais de 5 contas: rode por partes (`--project`), com 1 hora entre elas. |
 
 Se um teste falhar com "Muitas tentativas", foi um desses limites. Espere e rode de novo.
 

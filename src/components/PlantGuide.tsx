@@ -2,17 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
+import { GuideSignup } from "@/components/GuideSignup";
 import { btn } from "@/components/PriceCard";
-import { intlLocale, type Locale } from "@/i18n/locales";
+import type { Locale } from "@/i18n/locales";
 import { CROPS } from "@/lib/catalog";
 import { KNOWLEDGE_COUNTRIES, type KnowledgeCountry } from "@/lib/countries";
-import { COUNTRY_CLIMATES, guidePath, guidePaths, parseGuide } from "@/lib/plant-guide";
-import { monthlyTasks, plantableThisMonth } from "@/lib/seasons";
-import { getAllCropContent } from "@/server/content";
+import { COUNTRY_CLIMATES, guidePath, guidePaths, monthName, parseGuide } from "@/lib/plant-guide";
+import { guideZones } from "@/server/guide-newsletter";
 
 const MONTHS = Array.from({ length: 12 }, (_, i) => i + 1);
-const monthName = (lang: Locale, month: number) =>
-  new Intl.DateTimeFormat(intlLocale(lang), { month: "long", timeZone: "UTC" }).format(Date.UTC(2000, month - 1, 15));
 const alternates = (paths: Record<Locale, string>, lang: Locale): Metadata["alternates"] => ({ canonical: paths[lang], languages: { ...paths, "x-default": paths.en } });
 const chip = "inline-flex min-h-11 items-center gap-1 rounded-full bg-surface px-4 py-2 ring-1 ring-border hover:ring-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
 
@@ -66,8 +64,7 @@ export async function guideMonthMetadata(lang: Locale, params: Params): Promise<
 export async function GuideMonth({ lang, params }: { lang: Locale; params: Params }) {
   const { country, month } = await resolveGuide(lang, params);
   const t = await getTranslations({ locale: lang });
-  const { hemisphere, zones } = COUNTRY_CLIMATES[country];
-  const crops = getAllCropContent();
+  const zones = COUNTRY_CLIMATES[country].zones;
   const vars = { month: monthName(lang, month), inCountry: t(`guide.inCountry.${country}`) };
   const prev = ((month + 10) % 12) + 1;
   const next = (month % 12) + 1;
@@ -79,9 +76,7 @@ export async function GuideMonth({ lang, params }: { lang: Locale; params: Param
       <h1 className="mt-2 font-display text-4xl font-bold text-primary first-letter:uppercase">{t("guide.title", vars)}</h1>
       <p className="mt-3 text-lg text-muted">{t(zones.length > 1 ? "guide.introMany" : "guide.introOne", vars)}</p>
 
-      {zones.map((zone) => {
-        const plantable = plantableThisMonth(crops, zone, hemisphere, month);
-        const tasks = monthlyTasks(crops.filter((c) => plantable.includes(c.id)), zone, hemisphere, month);
+      {guideZones(country, month).map(({ zone, tasks }) => {
         return (
           <section key={zone} data-testid={`guide-zone-${zone}`} className="mt-8">
             <h2 className="font-display text-2xl font-bold">{t("guide.zoneTitle", { zone: t(`climate.${zone}`) })}</h2>
@@ -90,7 +85,7 @@ export async function GuideMonth({ lang, params }: { lang: Locale; params: Param
                 {tasks.map((task) => (
                   <li key={task.cropId} className={chip}>
                     <span aria-hidden>{icon(task.cropId)}</span> <b>{t(`crops.${task.cropId}`)}</b>
-                    <span className="text-sm text-muted">· {task.activities.filter((a) => a !== "harvest").map((a) => t(`activities.${a}`)).join(", ")}</span>
+                    <span className="text-sm text-muted">· {task.activities.map((a) => t(`activities.${a}`)).join(", ")}</span>
                   </li>
                 ))}
               </ul>
@@ -106,6 +101,8 @@ export async function GuideMonth({ lang, params }: { lang: Locale; params: Param
         <p className="mx-auto mt-2 max-w-xl text-muted">{t("guide.ctaText")}</p>
         <Link href="/register" className={`${btn} mt-5 bg-primary text-primary-text transition-opacity hover:opacity-90 motion-reduce:transition-none`}>{t("guide.ctaButton")}</Link>
       </section>
+
+      <GuideSignup country={country} lang={lang} />
 
       <nav aria-label={t("guide.otherMonths")} className="mt-10 flex flex-wrap justify-between gap-3">
         <Link href={guidePath(lang, country, prev)} className={chip}>← <span className="first-letter:uppercase">{monthName(lang, prev)}</span></Link>

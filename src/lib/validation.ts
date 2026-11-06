@@ -49,6 +49,11 @@ export const contactSchema = z.object({
   message: z.string().trim().min(1, "required").max(5000, "tooLong"),
 });
 
+export const guideSignupSchema = z.object({
+  email,
+  consent: z.literal("on", { errorMap: () => ({ message: "confirmRequired" }) }),
+});
+
 export const resetSchema = z
   .object({ token: z.string().min(1), password: newPassword, confirmPassword: z.string() })
   .refine((d) => d.password === d.confirmPassword, { path: ["confirmPassword"], message: "passwordsDontMatch" });

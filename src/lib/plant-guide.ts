@@ -1,4 +1,4 @@
-import type { Locale } from "@/i18n/locales";
+import { intlLocale, type Locale } from "@/i18n/locales";
 import type { ClimateZone, Hemisphere } from "@/server/climate";
 import { KNOWLEDGE_COUNTRIES, type KnowledgeCountry } from "./countries";
 
@@ -35,6 +35,9 @@ export const COUNTRY_CLIMATES: Record<KnowledgeCountry, { hemisphere: Hemisphere
   IT: { hemisphere: "north", zones: ["subtropical", "temperate"] },
   MX: { hemisphere: "north", zones: ["tropical", "subtropical", "semiarid"] },
 };
+
+export const monthName = (lang: Locale, month: number) =>
+  new Intl.DateTimeFormat(intlLocale(lang), { month: "long", timeZone: "UTC" }).format(Date.UTC(2000, month - 1, 15));
 
 export function guidePath(lang: Locale, country?: KnowledgeCountry, month?: number): string {
   if (!country) return GUIDE_BASE[lang];

@@ -138,13 +138,21 @@
     "weMissYouButton": "Voltar a assinar",
     "announcementButton": "Abrir o NewFarmer",
     "marketingFooter": "Você recebe este e-mail porque aceitou novidades do NewFarmer.",
-    "unsubscribe": "Descadastrar"
+    "unsubscribe": "Descadastrar",
+    "guideConfirmSubject": "Confirme para receber o que plantar todo mês",
+    "guideConfirmTitle": "Falta só confirmar",
+    "guideConfirmIntro": "Você pediu para receber, todo mês, por e-mail, o que plantar {inCountry}. Clique no botão para confirmar que este e-mail é seu.",
+    "guideConfirmButton": "Confirmar e receber",
+    "guideConfirmNote": "Se não foi você que pediu, ignore este e-mail: sem a confirmação você não recebe nada, e o pedido é apagado em 30 dias.",
+    "guideMonthlyIntro": "Este é o seu calendário de {month}: o que dá para semear ou transplantar {inCountry}, em cada clima.",
+    "guideMonthlyButton": "Ver no site",
+    "guideFooter": "Você recebe este e-mail porque pediu o calendário mensal do NewFarmer."
   },
   "unsubscribe": {
     "title": "Descadastrar",
-    "question": "Quer parar de receber e-mails de novidades?",
+    "question": "Quer parar de receber estes e-mails?",
     "confirm": "Confirmar descadastro",
-    "done": "Você não vai mais receber e-mails de novidades.",
+    "done": "Pronto: você não vai mais receber estes e-mails.",
     "invalid": "Este link não é válido ou já foi usado."
   },
   "devInbox": {
@@ -482,7 +490,8 @@
     "subscribers": "Assinantes",
     "subscriber": "Assinante",
     "leads": "Leads",
-    "emails": "E-mails"
+    "emails": "E-mails",
+    "confirmGuide": "Calendário mensal"
   },
   "home": {
     "title": "NewFarmer · Criação e horta organizadas pelo seu clima",
@@ -860,7 +869,19 @@
     "pauseFailed": "Não deu para falar com a Stripe. Veja o motivo em Monitoramento e tente de novo.",
     "pauseLimited": "Muitas alterações seguidas. Espere um pouco e tente de novo.",
     "colLocation": "Local",
-    "locationSignup": "cadastro"
+    "locationSignup": "cadastro",
+    "sourcesTitle": "De onde vêm",
+    "sourcesHelp": "O site de onde a pessoa veio na primeira visita e a primeira página que abriu. Só conta quem aceitou os cookies de estatística; contas sem isso aparecem como \"Sem estatística\".",
+    "colSource": "Origem",
+    "colEntry": "Entrou por",
+    "colVisitors": "Visitantes",
+    "colAccounts": "Criaram conta",
+    "colPaid": "Assinaram",
+    "sourceDirect": "Direto (sem site de origem)",
+    "sourceUnknown": "Sem estatística",
+    "entry_home": "Página inicial",
+    "entry_guide": "O que plantar",
+    "entry_other": "Outra página"
   },
   "contact": {
     "footer": "Contato",
@@ -897,6 +918,19 @@
       "PT": "em Portugal",
       "IT": "na Itália",
       "MX": "no México"
-    }
+    },
+    "signupTitle": "Receba todo mês por e-mail",
+    "signupText": "No começo de cada mês mandamos o que plantar {inCountry}. Grátis, sem criar conta.",
+    "signupEmail": "Seu e-mail",
+    "signupConsent": "Quero receber todo mês, por e-mail, o que plantar {inCountry}. Posso cancelar quando quiser, pelo link no fim de cada e-mail.",
+    "signupButton": "Quero receber",
+    "signupSent": "Quase lá! Mandamos um e-mail para você confirmar. Sem a confirmação, nada é enviado."
+  },
+  "confirmGuide": {
+    "okTitle": "Pronto, está confirmado!",
+    "okText": "Todo mês você vai receber por e-mail o que plantar. O primeiro chega em até um dia.",
+    "invalidTitle": "Link inválido",
+    "invalidText": "Este link não vale mais. Peça de novo na página O que plantar.",
+    "back": "Ver o que plantar"
   }
 }

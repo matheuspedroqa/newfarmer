@@ -268,6 +268,19 @@ ALTER TABLE page_views ADD COLUMN city TEXT NOT NULL DEFAULT '';
 ALTER TABLE page_views ADD COLUMN country TEXT NOT NULL DEFAULT '';
 `,
   },
+  {
+    id: 12,
+    name: "guide_subscribers",
+    // E-mail mensal "o que plantar" para quem não tem conta. Só recebe depois de confirmar; descadastrar só marca unsubscribed_at.
+    sql: `
+CREATE TABLE guide_subscribers (
+  id SERIAL PRIMARY KEY, email TEXT NOT NULL, country TEXT NOT NULL, locale TEXT NOT NULL,
+  token TEXT NOT NULL UNIQUE, created_at BIGINT NOT NULL, confirmed_at BIGINT, unsubscribed_at BIGINT, last_sent_month TEXT,
+  UNIQUE (email, country)
+);
+ALTER TABLE guide_subscribers ENABLE ROW LEVEL SECURITY;
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

@@ -124,7 +124,7 @@ test("dono envia Sentimos sua falta para quem cancelou, o descadastro desliga o 
   await expect(mail).toHaveCount(1);
   await mail.getByRole("link", { name: "Descadastrar" }).click();
   await page.getByRole("button", { name: "Confirmar descadastro" }).click();
-  await expect(page.getByText("Você não vai mais receber e-mails de novidades.")).toBeVisible();
+  await expect(page.getByText("Pronto: você não vai mais receber estes e-mails.")).toBeVisible();
 
   // Reativa a conta só para o Perfil abrir (quem cancelou é levado para a Assinatura).
   expect((await page.request.post("/api/dev/set-subscription", { data: { username: churned, status: "active" } })).status()).toBe(204);

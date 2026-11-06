@@ -2,6 +2,7 @@ import "server-only";
 import { randomBytes } from "node:crypto";
 import { resolveLocale, type Locale } from "@/i18n/locales";
 import { logSafely } from "./activity-log";
+import { unsubscribeGuide } from "./guide-newsletter";
 import { limitByIp } from "./rate-limit";
 import type { Db } from "./db";
 import type { Mailer } from "./mailer";
@@ -55,9 +56,9 @@ export async function unsubscribeByToken(db: Db, token: string, ip = ""): Promis
   return true;
 }
 
-/** Token válido sempre descadastra (Gmail/Yahoo postam de poucos IPs); só tentativa inválida gasta o limite do IP. */
+/** Token válido (da conta ou do calendário mensal) sempre descadastra (Gmail/Yahoo postam de poucos IPs); só tentativa inválida gasta o limite do IP. */
 export async function unsubscribeAttempt(db: Db, token: string, ip: string) {
-  if (await unsubscribeByToken(db, token, ip)) return { result: "ok" as const, firstBlock: false };
+  if ((await unsubscribeByToken(db, token, ip)) || (await unsubscribeGuide(db, token))) return { result: "ok" as const, firstBlock: false };
   const limit = await limitByIp(db, "unsubscribe", ip);
   return limit.ok ? { result: "invalid" as const, firstBlock: false } : { result: "limited" as const, firstBlock: limit.firstBlock };
 }

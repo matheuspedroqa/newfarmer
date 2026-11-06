@@ -61,6 +61,18 @@ No plano Hobby da Vercel o job roda em algum minuto entre 00:00 e 00:59 UTC.
 4. Para testar na mão: `curl -H "Authorization: Bearer <CRON_SECRET>" https://newfarmer.vercel.app/api/cron/forecast`
    (deve responder `{"ok":true,"date":"AAAA-MM-DD"}`).
 
+## Calendário mensal por e-mail ("o que plantar")
+
+Todo dia às 08:00 UTC a Vercel chama `/api/cron/guide` (mesmo `CRON_SECRET`). Ele manda o calendário do mês a quem confirmou
+e ainda não recebeu neste mês: no dia 1 vai quase todo mundo, e quem confirma no meio do mês recebe no dia seguinte.
+Também apaga os pedidos não confirmados há mais de 30 dias.
+
+- Cada execução manda até 80 e-mails. O que sobrar vai no dia seguinte.
+- O plano grátis do Resend manda até 100 e-mails por dia e 3.000 por mês, somando todos os e-mails do site.
+  Passando disso, é preciso um plano pago do Resend.
+- Teste na mão: `curl -H "Authorization: Bearer <CRON_SECRET>" https://newfarmer.app/api/cron/guide`
+  (responde `{"ok":true,"sent":N,"failed":0}`).
+
 ## Virar dono do site (Admin)
 
 As telas do **Admin** (Assinantes, Leads, E-mails, Activity logs e Monitoramento) só aparecem para o dono do site; para os demais, dão 404.

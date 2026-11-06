@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { AUDIENCES, audienceCount, createCampaign, listAudience, listCampaigns, sendOrCreateCampaign } from "@/server/marketing";
-import { leadFunnel, listLeads, recordPageView } from "@/server/page-views";
+import { leadFunnel, leadSources, listLeads, recordPageView } from "@/server/page-views";
 import { testDb } from "../helpers/db";
 import { makeUser } from "../helpers/users";
 
@@ -52,6 +52,25 @@ describe("listLeads e leadFunnel", () => {
     expect(byId.get("v:v1")).toEqual({ city: "Lisboa", country: "PT", signup: false });
     expect(byId.get(`u:${ana}`)).toEqual({ city: "São Paulo", country: "BR", signup: false });
     expect(byId.get(`u:${bia}`)).toMatchObject({ signup: true });
+  });
+
+  it("de onde vêm: o site e a página da primeira visita, com quem criou conta e quem assinou", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db, { email: "ana@x.com" });
+    await makeUser(db, { email: "bia@x.com" }); // sem estatística
+    await db.run("INSERT INTO subscriptions (user_id, stripe_customer_id, status, updated_at) VALUES ($1, 'cus_a', 'active', 1)", [ana]);
+    await recordPageView(db, { ...view("g1", "/es/que-plantar/espana/noviembre"), referrer: "www.google.com" }, 100);
+    await recordPageView(db, { ...view("g1", "/dashboard", ana), referrer: "checkout.stripe.com" }, 110); // só a primeira visita conta
+    await recordPageView(db, { ...view("g2", "/what-to-plant/brazil/march"), referrer: "www.google.com" }, 120);
+    await recordPageView(db, view("d1", "/es"), 130);
+    expect(await leadSources(db, 0)).toEqual([
+      { source: "www.google.com", entry: "guide", leads: 2, accounts: 1, paid: 1 },
+      { source: null, entry: null, leads: 1, accounts: 1, paid: 0 },
+      { source: "", entry: "home", leads: 1, accounts: 0, paid: 0 },
+    ]);
+    const leads = await listLeads(db, { since: 0 });
+    expect(leads.find((l) => l.id === `u:${ana}`)?.source).toBe("www.google.com");
+    expect(leads.find((l) => l.id === "v:d1")?.furthestStep).toBe("/"); // /es é a página inicial em espanhol
   });
 
   it("não mostra o dono do site, nem no funil", async () => {

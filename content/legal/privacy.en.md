@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: November 5, 2026**
+**Last updated: November 6, 2026**
 
 This policy explains, in plain words, what data NewFarmer keeps about you, what it is used for, who it is shared with and what your rights are. It applies to everyone who uses the site, whether in Brazil, the European Union, the United States or anywhere else.
 
@@ -49,6 +49,10 @@ Your card number **never** reaches NewFarmer and is not stored by us.
 - **e-mail history:** which news e-mails we sent you and when;
 - **contact form:** the name, e-mail and message you write on the Contact page. It goes by e-mail (through Resend) to our contact inbox, only to reply to you, and **is not stored on the site**.
 
+### Monthly calendar by e-mail (no account)
+
+If you ask, on the **What to plant** page, to get the calendar every month, we keep the e-mail, the chosen country, the page language, the date of the request, the date you confirmed, the last month sent and the date you unsubscribed (if you did), plus a random code for the confirm and unsubscribe links. This e-mail is not linked to any account.
+
 ### Weather forecasts
 
 We keep weather forecasts for up to 7 days for each place, identified by coordinates rounded to 2 decimal places. This is not linked to any person.
@@ -60,6 +64,7 @@ We keep weather forecasts for up to 7 days for each place, identified by coordin
 - **To send account e-mails** (confirming your e-mail, resetting your password, reminding you of your username): performance of the contract.
 - **To bill the subscription** (creating and keeping the subscription, knowing whether it is active): performance of the contract (LGPD art. 7, V; GDPR art. 6(1)(b)).
 - **To measure the pages visited** and understand what the site needs to improve: your consent, given by "Accept all" (LGPD art. 7, I; GDPR art. 6(1)(a); and the ePrivacy cookie rule). You can withdraw consent at any time.
+- **To send the monthly calendar by e-mail:** your consent, given by ticking the box and confirming through the e-mail we send (LGPD, art. 7, I; GDPR, art. 6(1)(a)). Every e-mail has a one-click link to leave.
 - **To send news e-mails (marketing):** only if you agreed, and the basis is consent. Every e-mail has a one-click link to leave the list, and you can also change this under **Profile**.
 
 We do not sell your data. We do not use your data for advertising.
@@ -91,6 +96,7 @@ NewFarmer is run from Brazil, the database is in the European Union and some pro
 - **Error log:** 180 days.
 - **Page measurement:** 180 days.
 - **News e-mail history:** for as long as the account exists.
+- **Monthly calendar by e-mail:** when you unsubscribe, the e-mail stays stored and marked as unsubscribed (so we stop sending and you can come back whenever you want). To delete it for good, ask through the Contact page. Requests never confirmed are deleted after 30 days.
 - **Billing data at Stripe:** for as long as tax law requires.
 - **Attempt limits:** about 1 day.
 - **Weather forecasts:** up to 7 days.

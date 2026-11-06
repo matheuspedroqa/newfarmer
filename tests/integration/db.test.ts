@@ -12,6 +12,7 @@ const TABLES = [
   "farm_animals",
   "farm_crops",
   "forecast_snapshots",
+  "guide_subscribers",
   "login_attempts",
   "page_views",
   "password_reset_tokens",

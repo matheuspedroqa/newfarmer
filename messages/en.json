@@ -138,13 +138,21 @@
     "weMissYouButton": "Subscribe again",
     "announcementButton": "Open NewFarmer",
     "marketingFooter": "You get this e-mail because you agreed to receive news from NewFarmer.",
-    "unsubscribe": "Unsubscribe"
+    "unsubscribe": "Unsubscribe",
+    "guideConfirmSubject": "Confirm to get what to plant every month",
+    "guideConfirmTitle": "Just confirm",
+    "guideConfirmIntro": "You asked to get, every month, by e-mail, what to plant {inCountry}. Click the button to confirm this e-mail is yours.",
+    "guideConfirmButton": "Confirm and subscribe",
+    "guideConfirmNote": "If you did not ask for this, ignore this e-mail: without confirming you get nothing, and the request is deleted in 30 days.",
+    "guideMonthlyIntro": "Here is your {month} calendar: what you can sow or transplant {inCountry}, in each climate.",
+    "guideMonthlyButton": "See it on the site",
+    "guideFooter": "You get this e-mail because you asked for the NewFarmer monthly calendar."
   },
   "unsubscribe": {
     "title": "Unsubscribe",
-    "question": "Do you want to stop receiving news e-mails?",
+    "question": "Do you want to stop receiving these e-mails?",
     "confirm": "Confirm unsubscribe",
-    "done": "You will no longer receive news e-mails.",
+    "done": "Done: you will no longer receive these e-mails.",
     "invalid": "This link is not valid or was already used."
   },
   "devInbox": {
@@ -482,7 +490,8 @@
     "subscribers": "Subscribers",
     "subscriber": "Subscriber",
     "leads": "Leads",
-    "emails": "E-mails"
+    "emails": "E-mails",
+    "confirmGuide": "Monthly calendar"
   },
   "home": {
     "title": "NewFarmer · Animals and garden planner for your climate",
@@ -860,7 +869,19 @@
     "pauseFailed": "Could not reach Stripe. See the reason in Monitoring and try again.",
     "pauseLimited": "Too many changes in a row. Wait a moment and try again.",
     "colLocation": "Location",
-    "locationSignup": "sign-up"
+    "locationSignup": "sign-up",
+    "sourcesTitle": "Where they come from",
+    "sourcesHelp": "The site the person came from on their first visit and the first page they opened. Only counts people who accepted statistics cookies; accounts without them show as \"No statistics\".",
+    "colSource": "Source",
+    "colEntry": "Entered on",
+    "colVisitors": "Visitors",
+    "colAccounts": "Created an account",
+    "colPaid": "Subscribed",
+    "sourceDirect": "Direct (no referring site)",
+    "sourceUnknown": "No statistics",
+    "entry_home": "Home page",
+    "entry_guide": "What to plant",
+    "entry_other": "Other page"
   },
   "contact": {
     "footer": "Contact",
@@ -897,6 +918,19 @@
       "PT": "in Portugal",
       "IT": "in Italy",
       "MX": "in Mexico"
-    }
+    },
+    "signupTitle": "Get it by e-mail every month",
+    "signupText": "At the start of each month we send what to plant {inCountry}. Free, no account needed.",
+    "signupEmail": "Your e-mail",
+    "signupConsent": "I want to get, every month, by e-mail, what to plant {inCountry}. I can cancel at any time with the link at the end of each e-mail.",
+    "signupButton": "Send it to me",
+    "signupSent": "Almost there! We sent you an e-mail to confirm. Nothing is sent without your confirmation."
+  },
+  "confirmGuide": {
+    "okTitle": "Done, you are confirmed!",
+    "okText": "Every month you will get what to plant by e-mail. The first one arrives within a day.",
+    "invalidTitle": "Invalid link",
+    "invalidText": "This link is no longer valid. Ask again on the What to plant page.",
+    "back": "See what to plant"
   }
 }
