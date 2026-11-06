@@ -100,18 +100,44 @@ test("calendário mensal: pede na página 'o que plantar', só com a caixa marca
   const email = uniqueEmail();
   await page.goto("/pt/o-que-plantar/portugal/marco");
   const box = page.getByTestId("guide-signup");
+  await page.waitForLoadState("networkidle");
+  await expect(box.getByLabel("País do calendário")).toHaveValue("PT");
   await box.getByLabel("Seu e-mail").fill(email);
+  // Outro país que o da página: o calendário vai pelo país escolhido.
+  await box.getByLabel("País do calendário").selectOption({ label: "Espanha" });
   await box.getByRole("button", { name: "Quero receber" }).click();
   await expect(box.getByText("Marque a caixa para confirmar.")).toBeVisible();
-  await box.getByRole("checkbox", { name: /Quero receber todo mês, por e-mail, o que plantar em Portugal/ }).check();
+  await box.getByRole("checkbox", { name: /Quero receber todo mês, por e-mail, o que plantar na Espanha/ }).check();
   await box.getByRole("button", { name: "Quero receber" }).click();
   await expect(box.getByRole("status")).toContainText("Quase lá!");
 
   await page.goto("/dev/inbox");
-  await page.locator("article", { hasText: "Confirme para receber o que plantar todo mês" }).filter({ hasText: email }).getByRole("link", { name: "Confirmar e receber" }).click();
+  const mail = page.locator("article", { hasText: "Confirme para receber o que plantar todo mês" }).filter({ hasText: email });
+  await expect(mail).toContainText("o que plantar na Espanha");
+  await mail.getByRole("link", { name: "Confirmar e receber" }).click();
   await expect(page.getByText("Pronto, está confirmado!")).toBeVisible();
   await page.goto("/confirm-guide/inventado");
   await expect(page.getByText("Link inválido")).toBeVisible();
+});
+
+test("/how-to-plant-today: escolhe o país e cai no mês de agora, na língua do visitante", async ({ page, context }) => {
+  // Mesmo slug das páginas: nome do mês sem acento (março -> marco).
+  const slug = (locale: string) => new Intl.DateTimeFormat(locale, { month: "long", timeZone: "UTC" }).format(new Date()).normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+  await page.goto("/pt/o-que-plantar");
+  await page.getByRole("link", { name: /O que plantar hoje no seu país/ }).click();
+  await expect(page).toHaveURL(/\/how-to-plant-today$/);
+  await page.getByLabel("Seu país").selectOption({ label: "Espanha" });
+  await page.getByRole("button", { name: "Ver o que plantar" }).click();
+  await expect(page).toHaveURL(new RegExp(`/pt/o-que-plantar/espanha/${slug("pt-BR")}$`));
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("na Espanha");
+
+  // Sem JavaScript: o próprio servidor redireciona; país fora da lista só mostra a página de novo.
+  await context.clearCookies();
+  const res = await page.request.get("/how-to-plant-today?country=MX", { maxRedirects: 0 });
+  expect(res.status()).toBe(307);
+  expect(res.headers().location).toMatch(new RegExp(`/what-to-plant/mexico/${slug("en-US")}$`));
+  await page.goto("/how-to-plant-today?country=AR");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("What to plant today");
 });
 
 test("?aba=diario antigo ainda abre o diário", async ({ page }) => {

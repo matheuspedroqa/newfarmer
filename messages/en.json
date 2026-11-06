@@ -922,6 +922,7 @@
     "signupTitle": "Get it by e-mail every month",
     "signupText": "At the start of each month we send what to plant {inCountry}. Free, no account needed.",
     "signupEmail": "Your e-mail",
+    "signupCountry": "Calendar country",
     "signupConsent": "I want to get, every month, by e-mail, what to plant {inCountry}. I can cancel at any time with the link at the end of each e-mail.",
     "signupButton": "Send it to me",
     "signupSent": "Almost there! We sent you an e-mail to confirm. Nothing is sent without your confirmation."
@@ -932,5 +933,13 @@
     "invalidTitle": "Invalid link",
     "invalidText": "This link is no longer valid. Ask again on the What to plant page.",
     "back": "See what to plant"
+  },
+  "plantToday": {
+    "title": "What to plant today",
+    "intro": "Pick your country to see what you can sow or transplant this month, by climate. Free, from NewFarmer's planting calendar.",
+    "country": "Your country",
+    "choose": "Choose a country",
+    "button": "See what to plant",
+    "link": "What to plant today in your country"
   }
 }

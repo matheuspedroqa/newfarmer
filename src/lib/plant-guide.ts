@@ -1,6 +1,6 @@
 import { intlLocale, type Locale } from "@/i18n/locales";
 import type { ClimateZone, Hemisphere } from "@/server/climate";
-import { KNOWLEDGE_COUNTRIES, type KnowledgeCountry } from "./countries";
+import { KNOWLEDGE_COUNTRIES, knowledgeCountry, type KnowledgeCountry } from "./countries";
 
 // Páginas públicas "o que plantar em <mês> em <país>", com endereço na língua da página.
 export const GUIDE_BASE: Record<Locale, string> = { en: "/what-to-plant", pt: "/pt/o-que-plantar", es: "/es/que-plantar" };
@@ -42,6 +42,12 @@ export const monthName = (lang: Locale, month: number) =>
 export function guidePath(lang: Locale, country?: KnowledgeCountry, month?: number): string {
   if (!country) return GUIDE_BASE[lang];
   return `${GUIDE_BASE[lang]}/${COUNTRY_SLUGS[country][lang]}/${MONTH_SLUGS[lang][(month ?? 1) - 1]}`;
+}
+
+/** Destino de /how-to-plant-today: a página do país no mês de agora, na língua do visitante. País fora da lista dá null. */
+export function todayGuidePath(lang: Locale, countryCode: string, now = new Date()): string | null {
+  const country = knowledgeCountry(countryCode);
+  return country && guidePath(lang, country, now.getUTCMonth() + 1);
 }
 
 /** Endereço da mesma página em cada idioma (para hreflang e sitemap). */

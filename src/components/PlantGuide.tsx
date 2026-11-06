@@ -27,6 +27,7 @@ export async function GuideIndex({ lang }: { lang: Locale }) {
     <section className="mx-auto max-w-4xl px-5 py-12 md:px-8 md:py-16">
       <h1 className="font-display text-4xl font-bold text-primary">{t("guide.indexTitle")}</h1>
       <p className="mt-3 text-lg text-muted">{t("guide.indexIntro")}</p>
+      <Link href="/how-to-plant-today" className="mt-3 inline-flex min-h-11 items-center font-semibold text-primary hover:underline">{t("plantToday.link")} →</Link>
       <ul className="mt-8 space-y-6">
         {KNOWLEDGE_COUNTRIES.map((c) => (
           <li key={c} data-testid="guide-country" className="rounded-3xl bg-surface p-5 ring-1 ring-border">

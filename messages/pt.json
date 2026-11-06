@@ -922,6 +922,7 @@
     "signupTitle": "Receba todo mês por e-mail",
     "signupText": "No começo de cada mês mandamos o que plantar {inCountry}. Grátis, sem criar conta.",
     "signupEmail": "Seu e-mail",
+    "signupCountry": "País do calendário",
     "signupConsent": "Quero receber todo mês, por e-mail, o que plantar {inCountry}. Posso cancelar quando quiser, pelo link no fim de cada e-mail.",
     "signupButton": "Quero receber",
     "signupSent": "Quase lá! Mandamos um e-mail para você confirmar. Sem a confirmação, nada é enviado."
@@ -932,5 +933,13 @@
     "invalidTitle": "Link inválido",
     "invalidText": "Este link não vale mais. Peça de novo na página O que plantar.",
     "back": "Ver o que plantar"
+  },
+  "plantToday": {
+    "title": "O que plantar hoje",
+    "intro": "Escolha seu país e veja o que dá para semear ou transplantar neste mês, por clima. Grátis, do calendário de plantio do NewFarmer.",
+    "country": "Seu país",
+    "choose": "Escolha o país",
+    "button": "Ver o que plantar",
+    "link": "O que plantar hoje no seu país"
   }
 }
