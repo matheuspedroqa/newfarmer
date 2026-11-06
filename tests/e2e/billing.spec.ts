@@ -7,14 +7,14 @@ test("passo 2 de 3, preço por país e assinatura leva ao painel", async ({ page
   await expect(page.locator('[aria-current="step"]')).toContainText("Sua criação");
   await page.getByRole("button", { name: "Continuar" }).click();
   await expect(page).toHaveURL(/\/subscribe$/);
-  await expect(page.getByTestId("subscribe-price")).toContainText("R$ 6,99");
+  await expect(page.getByTestId("subscribe-price")).toContainText("R$ 7,99");
   await subscribeFake(page);
 });
 
 test("preço em euro para Lisboa", async ({ page }) => {
   await createAccount(page, uniqueEmail(), "Lisboa");
   await page.getByRole("link", { name: "Pular por enquanto" }).click();
-  await expect(page.getByTestId("subscribe-price")).toContainText(/€\s?1[.,]99/);
+  await expect(page.getByTestId("subscribe-price")).toContainText(/€\s?2[.,]99/);
 });
 
 test("sem assinar, o app fica bloqueado mas o perfil abre", async ({ page }) => {

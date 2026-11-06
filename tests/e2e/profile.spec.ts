@@ -2,9 +2,9 @@ import { expect, test } from "@playwright/test";
 import { PASSWORD, clearSession, openUserMenu, signup, uniqueEmail } from "./helpers";
 
 test.describe("primeira visita, sem idioma escolhido", () => {
-  test.use({ storageState: { cookies: [], origins: [] } });
+  test.use({ storageState: { cookies: [], origins: [] }, locale: "en-US" });
 
-  test("o site abre em inglês", async ({ page }) => {
+  test("navegador em inglês: o site abre em inglês", async ({ page }) => {
     await page.goto("/login");
     await expect(page.getByRole("heading", { name: "Welcome back" })).toBeVisible();
     await expect(page.getByRole("button", { name: "EN", exact: true })).toHaveAttribute("aria-pressed", "true");

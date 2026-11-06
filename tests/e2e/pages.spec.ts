@@ -49,12 +49,12 @@ test("as páginas legais em português mostram o texto e o contato", async ({ pa
 
 test("termos e privacidade falam de assinatura, preço, cookies e Stripe", async ({ page, context }) => {
   await page.goto("/terms");
-  for (const t of ["R$ 6,99", "7 dias", "14 dias"]) await expect(page.getByRole("main")).toContainText(t);
+  for (const t of ["R$ 7,99", "7 dias", "14 dias"]) await expect(page.getByRole("main")).toContainText(t);
   await page.goto("/privacy");
   for (const t of ["Stripe", "nf_vid", "Preferências de cookies", "Modo offline"]) await expect(page.getByRole("main")).toContainText(t);
   await context.addCookies([{ name: "nf_locale", value: "en", domain: "localhost", path: "/" }]);
   await page.goto("/terms");
-  for (const t of ["€1.99", "$2.00"]) await expect(page.getByRole("main")).toContainText(t);
+  for (const t of ["€2.99", "$2.99"]) await expect(page.getByRole("main")).toContainText(t);
 });
 
 test("quem está logado vai da inicial ao painel, que tem título próprio", async ({ page }) => {
@@ -145,7 +145,7 @@ for (const tema of ["claro", "escuro"]) {
 
 test.describe("landing: preço, alternância e dados estruturados", () => {
   // BR em português; Portugal e sem país em inglês (o formato do preço acompanha o idioma).
-  for (const [country, lang, price] of [["BR", "pt", "R$ 6,99"], ["PT", "en", "€1.99"], [undefined, "en", "$2.00"]] as const) {
+  for (const [country, lang, price] of [["BR", "pt", "R$ 7,99"], ["PT", "en", "€2.99"], [undefined, "en", "$2.99"]] as const) {
     test(`o botão do topo mostra ${price} (${country ?? "sem cabeçalho"})`, async ({ page, context }) => {
       await context.addCookies([{ name: "nf_locale", value: lang, domain: "localhost", path: "/" }]);
       await page.setExtraHTTPHeaders(country ? { "x-vercel-ip-country": country } : {});

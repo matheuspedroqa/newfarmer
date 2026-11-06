@@ -14,8 +14,8 @@ describe("preço por país", () => {
     expect(formatMoney("usd", 0, "en")).toBe("$0.00");
   });
   it("formata", () => {
-    expect(nbsp(formatPrice("brl", "pt"))).toBe("R$ 6,99");
-    expect(formatPrice("eur", "en")).toBe("€1.99");
-    expect(formatPrice("usd", "en")).toBe("$2.00");
+    expect(nbsp(formatPrice("brl", "pt"))).toBe("R$ 7,99");
+    expect(formatPrice("eur", "en")).toBe("€2.99");
+    expect(formatPrice("usd", "en")).toBe("$2.99");
   });
 });

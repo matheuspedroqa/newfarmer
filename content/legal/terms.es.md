@@ -1,6 +1,6 @@
 # Términos de Uso
 
-**Última actualización: 4 de noviembre de 2026**
+**Última actualización: 6 de noviembre de 2026**
 
 Estos términos son las reglas para usar NewFarmer. Al crear una cuenta, los aceptas a ellos y a la [Política de Privacidad](/privacy).
 
@@ -35,7 +35,7 @@ Hacemos todo lo posible para que el sitio funcione bien, pero se ofrece **tal cu
 
 ## 5. Suscripción y pago
 
-- **Precio:** la suscripción tiene un único precio mensual: **R$ 6,99** en Brasil, **1,99 €** en Europa y **2,00 $** en el resto del mundo. Los impuestos están incluidos donde la ley lo exige.
+- **Precio:** la suscripción tiene un único precio mensual: **R$ 7,99** en Brasil, **2,99 €** en Europa y **2,99 $** en el resto del mundo. Los impuestos están incluidos donde la ley lo exige.
 - **Cobro:** es recurrente, cada mes, automático, en tu tarjeta, gestionado por Stripe. No hay prueba gratuita.
 - **Acceso:** el acceso a la aplicación depende de una suscripción activa.
 - **Pago fallido:** Stripe intenta cobrar de nuevo. Si no se realiza el pago, el acceso se suspende y tus datos permanecen guardados hasta que elimines la cuenta.

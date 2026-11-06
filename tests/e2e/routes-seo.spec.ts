@@ -30,8 +30,38 @@ for (const [oldPath, newPath] of OLD_TO_NEW) {
   });
 }
 
+test.describe("sem cookie de idioma, navegador em espanhol ou português", () => {
+  test.use({ storageState: { cookies: [], origins: [] }, locale: "es-ES" });
+
+  test("a primeira visita segue o idioma do navegador; depois de escolher, vale a escolha", async ({ page, context }) => {
+    await page.goto("/");
+    await expect(page).toHaveURL(/\/es$/);
+    await expect(page.locator("html")).toHaveAttribute("lang", "es");
+    await context.clearCookies();
+    await page.goto("/what-to-plant/brazil/march?x=1");
+    await expect(page).toHaveURL(/\/es\/que-plantar\/brasil\/marzo\?x=1$/);
+    await context.clearCookies();
+    await page.goto("/register");
+    await expect(page.getByRole("heading", { name: "Crea tu cuenta" })).toBeVisible();
+    // Escolheu inglês: a raiz fica em inglês, mesmo com o navegador em espanhol.
+    await page.goto("/es");
+    await page.waitForLoadState("networkidle");
+    await page.getByTestId("top-controls").getByRole("button", { name: "EN", exact: true }).click();
+    await expect(page).toHaveURL(/\/$/);
+    await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  });
+
+  test.describe("em português", () => {
+    test.use({ locale: "pt-BR" });
+    test("navegador em português abre os Termos em português", async ({ page }) => {
+      await page.goto("/terms");
+      await expect(page).toHaveURL(/\/pt\/terms$/);
+    });
+  });
+});
+
 test.describe("sem cookie de idioma", () => {
-  test.use({ storageState: { cookies: [], origins: [] } });
+  test.use({ storageState: { cookies: [], origins: [] }, locale: "en-US" });
 
   test("/pt mostra a landing em português e / em inglês", async ({ page, context }) => {
     await page.goto("/pt");
@@ -136,8 +166,9 @@ test("/how-to-plant-today: escolhe o país e cai no mês de agora, na língua do
   const res = await page.request.get("/how-to-plant-today?country=MX", { maxRedirects: 0 });
   expect(res.status()).toBe(307);
   expect(res.headers().location).toMatch(new RegExp(`/what-to-plant/mexico/${slug("en-US")}$`));
+  // Sem idioma escolhido, a página segue o navegador (o dos testes está em português).
   await page.goto("/how-to-plant-today?country=AR");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("What to plant today");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("O que plantar hoje");
 });
 
 test("?aba=diario antigo ainda abre o diário", async ({ page }) => {

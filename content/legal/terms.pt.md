@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Última atualização: 4 de novembro de 2026**
+**Última atualização: 6 de novembro de 2026**
 
 Estes termos são as regras para usar o NewFarmer. Ao criar uma conta, você concorda com eles e com a [Política de Privacidade](/privacy).
 
@@ -35,7 +35,7 @@ Fazemos o possível para o site funcionar bem, mas ele é oferecido **como está
 
 ## 5. Assinatura e pagamento
 
-- **Preço:** a assinatura custa um valor mensal único: **R$ 6,99** no Brasil, **€ 1,99** na Europa e **US$ 2,00** no resto do mundo. Os impostos estão incluídos quando a lei exigir.
+- **Preço:** a assinatura custa um valor mensal único: **R$ 7,99** no Brasil, **€ 2,99** na Europa e **US$ 2,99** no resto do mundo. Os impostos estão incluídos quando a lei exigir.
 - **Cobrança:** é recorrente, todo mês, automática, no cartão, feita pelo Stripe. Não há teste grátis.
 - **Acesso:** o acesso ao app depende da assinatura ativa.
 - **Falha de pagamento:** o Stripe tenta cobrar de novo. Se o pagamento não for feito, o acesso é suspenso e os seus dados continuam guardados até você apagar a conta.

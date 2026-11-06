@@ -97,7 +97,7 @@ Saia e entre de novo (ou recarregue a página): o item **Admin** aparece no menu
 ## Stripe (assinatura)
 
 1. Crie a conta em stripe.com e conclua a verificação (CPF ou CNPJ).
-2. Em **Product catalog**, crie o produto com 3 preços **recorrentes mensais**: BRL 6,99, EUR 1,99 e USD 2,00. Copie o id `price_...` de cada um.
+2. Em **Product catalog**, crie o produto com 3 preços **recorrentes mensais**: BRL 7,99, EUR 2,99 e USD 2,99. Copie o id `price_...` de cada um.
 3. Em **Developers → Webhooks**, crie o endpoint `https://<site>/api/stripe/webhook` com os eventos `customer.subscription.created`, `customer.subscription.updated` e `customer.subscription.deleted`. Copie o segredo `whsec_...`.
 4. Em **Settings → Billing → Customer portal**, ligue o portal e permita o cancelamento da assinatura.
 5. Na Vercel, cadastre só em **Production**: `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_BRL`, `STRIPE_PRICE_EUR`, `STRIPE_PRICE_USD`. Depois, **Redeploy**.
