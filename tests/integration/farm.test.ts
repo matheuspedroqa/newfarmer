@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { getFarm, saveFarm } from "@/server/farm";
+import { CROP_IDS } from "@/lib/catalog";
+import { farmSchema } from "@/lib/validation";
 import { testDb } from "../helpers/db";
 import { makeUser } from "../helpers/users";
 
@@ -35,6 +37,11 @@ describe("fazenda", () => {
     const id = await makeUser(db);
     await saveFarm(db, id, { animals: {}, crops: ["tomato", "tomato"] });
     expect((await getFarm(db, id)).crops).toEqual(["tomato"]);
+  });
+
+  it("lista de plantações maior que o catálogo é recusada (não prende o banco)", () => {
+    expect(farmSchema.safeParse({ animals: {}, crops: Array(CROP_IDS.length + 1).fill("tomato") }).success).toBe(false);
+    expect(farmSchema.safeParse({ animals: {}, crops: [...CROP_IDS] }).success).toBe(true);
   });
 
   it("não mexe na fazenda de outra pessoa", async () => {

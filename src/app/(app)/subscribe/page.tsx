@@ -6,9 +6,8 @@ import { startCheckoutAction } from "@/app/actions/billing";
 import { OnboardingSteps } from "@/components/OnboardingSteps";
 import { resolveLocale } from "@/i18n/locales";
 import { currencyForCountry, formatPrice } from "@/lib/pricing";
-import { requireUser } from "@/server/current-user";
-import { getDb } from "@/server/db";
-import { getSubscription, hasAccess } from "@/server/subscriptions";
+import { requireUser, subscriptionOf } from "@/server/current-user";
+import { hasAccess } from "@/server/subscriptions";
 
 export async function generateMetadata(): Promise<Metadata> {
   return { title: (await getTranslations())("subscribe.metaTitle") };
@@ -16,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function SubscribePage({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
   const user = await requireUser();
-  const sub = await getSubscription(await getDb(), user.id);
+  const sub = await subscriptionOf(user.id);
   if (hasAccess(user, sub)) redirect("/dashboard");
   const t = await getTranslations("subscribe");
   const { error } = await searchParams;

@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect, unstable_rethrow } from "next/navigation";
 import { z } from "zod";
 import { appUrl } from "@/server/app-url";
-import { logSafely, logWriteLimited } from "@/server/activity-log";
+import { logSafely, limitWritesLogged } from "@/server/activity-log";
 import { getDb } from "@/server/db";
 import { requirePlatformAdmin } from "@/server/authz";
 import { getMailer } from "@/server/mailer";
@@ -13,7 +13,6 @@ import { MARKETING_TEMPLATES, renderMarketingEmail } from "@/server/marketing-te
 import { logRequestError } from "@/server/monitoring";
 import { getPaymentProvider } from "@/server/payments";
 import { getSubscription, upsertSubscription } from "@/server/subscriptions";
-import { limitWrites } from "@/server/rate-limit";
 import { clientIp } from "@/server/request-context";
 import { resolveLocale } from "@/i18n/locales";
 import { getLocale } from "next-intl/server";
@@ -37,9 +36,8 @@ const parse = (f: FormData) => {
 async function preview(formData: FormData): Promise<CampaignState> {
   const admin = await requirePlatformAdmin();
   const db = await getDb();
-  const limit = await limitWrites(db, admin.id);
+  const limit = await limitWritesLogged(db, admin, await clientIp());
   if (!limit.ok) {
-    if (limit.firstBlock) await logWriteLimited(db, admin.id, admin.username, await clientIp());
     return { error: "rateLimited" };
   }
   const parsed = parse(formData);
@@ -65,9 +63,8 @@ async function send(formData: FormData): Promise<CampaignState> {
   const held = raw ? Number(raw) : null;
   // Todo retorno de erro repete o id enviado: o formulário nunca perde a campanha em andamento.
   const echo = held !== null && Number.isSafeInteger(held) ? { campaignId: held } : {};
-  const limit = await limitWrites(db, admin.id);
+  const limit = await limitWritesLogged(db, admin, await clientIp());
   if (!limit.ok) {
-    if (limit.firstBlock) await logWriteLimited(db, admin.id, admin.username, await clientIp());
     return { error: "rateLimited", ...echo };
   }
   const parsed = held === null ? parse(formData) : null;
@@ -123,9 +120,8 @@ export async function setSubscriptionPausedAction(formData: FormData): Promise<v
   const back = `/admin/subscribers/${userId}`;
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitWrites(db, admin.id);
+  const limit = await limitWritesLogged(db, admin, ip);
   if (!limit.ok) {
-    if (limit.firstBlock) await logWriteLimited(db, admin.id, admin.username, ip);
     redirect(`${back}?error=rateLimited`);
   }
   const sub = await getSubscription(db, userId);

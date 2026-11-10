@@ -31,6 +31,7 @@ export function createStripeProvider(secretKey: string, fetchFn: typeof fetch = 
       method,
       headers: { Authorization: `Bearer ${secretKey}`, ...(form ? { "Content-Type": "application/x-www-form-urlencoded" } : {}) },
       body: form ? new URLSearchParams(form).toString() : undefined,
+      signal: AbortSignal.timeout(10_000), // Stripe lenta não prende a tela da pessoa
     });
     // Nunca copie o corpo do erro: pode ter e-mail e nome da pessoa.
     if (!response.ok && response.status !== okStatus) throw new Error(`Stripe respondeu ${response.status}`);
@@ -41,7 +42,15 @@ export function createStripeProvider(secretKey: string, fetchFn: typeof fetch = 
     async createCustomer({ email, name, userId }) {
       return String((await call("POST", "customers", { email, name, "metadata[user_id]": String(userId) })).id);
     },
+    async findOpenSubscription(customerId) {
+      const r = await call("GET", `subscriptions?customer=${encodeURIComponent(customerId)}&limit=10`);
+      const subs = ((r.data ?? []) as Raw[]).map(parseStripeSubscription);
+      return subs.find((s) => ["active", "trialing", "past_due"].includes(s.status)) ?? null;
+    },
     async createCheckout({ customerId, priceId, userId, locale, successUrl, cancelUrl }) {
+      const open = await call("GET", `checkout/sessions?customer=${encodeURIComponent(customerId)}&status=open&limit=10`);
+      // 400: a sessão terminou enquanto isso (paga ou vencida); não impede abrir a nova.
+      for (const s of (open.data ?? []) as Raw[]) await call("POST", `checkout/sessions/${encodeURIComponent(String(s.id))}/expire`, {}, 400);
       const r = await call("POST", "checkout/sessions", {
         mode: "subscription",
         customer: customerId,

@@ -8,10 +8,10 @@ import { OfflineSync } from "@/components/OfflineSync";
 import { TopControls } from "@/components/TopControls";
 import { UserMenu } from "@/components/UserMenu";
 import { VerifyEmailBanner } from "@/components/VerifyEmailBanner";
-import { requireUser } from "@/server/current-user";
+import { requireUser, subscriptionOf } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getFarm } from "@/server/farm";
-import { getSubscription, hasAccess } from "@/server/subscriptions";
+import { hasAccess } from "@/server/subscriptions";
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
 
@@ -22,7 +22,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   // Sem assinatura só abrem o onboarding e o perfil (o admin da plataforma sempre tem acesso).
   const path = (await headers()).get("x-nf-path") ?? "";
   const open = ["/welcome", "/subscribe", "/profile"].some((p) => path === p || path.startsWith(`${p}/`));
-  const access = hasAccess(user, await getSubscription(db, user.id));
+  const access = hasAccess(user, await subscriptionOf(user.id));
   if (!open && !access) redirect("/subscribe");
   const farm = await getFarm(db, user.id);
   // Páginas guardadas no aparelho para abrir sem internet (cada animal com a ficha e o diário).

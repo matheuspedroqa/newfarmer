@@ -2,7 +2,7 @@ import "server-only";
 import { normalizeUsername, usernameProblem } from "@/lib/username";
 import type { LoginResult } from "./accounts";
 import type { Db } from "./db";
-import { purgeRateLimits } from "./rate-limit";
+import { limitByIp, limitWrites, purgeRateLimits } from "./rate-limit";
 import { SESSION_IDLE_MS } from "./sessions";
 
 export const ACTIVITY_ACTIONS = [
@@ -84,8 +84,19 @@ export async function logSafely(db: Db, entry: LogInput): Promise<void> {
 }
 
 /** Bloqueio pelo limite de gravações por conta. */
-export const logWriteLimited = (db: Db, userId: number, target: string, ip: string) =>
-  logSafely(db, { userId, action: "security.rateLimited", target, details: { limit: "write" }, ip });
+/** Limite por IP; só o primeiro bloqueio da janela vai para o registro. */
+export async function limitByIpLogged(db: Db, name: Parameters<typeof limitByIp>[1], ip: string) {
+  const limit = await limitByIp(db, name, ip);
+  if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: name }, ip });
+  return limit;
+}
+
+/** Limite de gravações da conta; só o primeiro bloqueio da janela vai para o registro. */
+export async function limitWritesLogged(db: Db, user: { id: number; username: string }, ip: string) {
+  const limit = await limitWrites(db, user.id);
+  if (limit.firstBlock) await logSafely(db, { userId: user.id, action: "security.rateLimited", target: user.username, details: { limit: "write" }, ip });
+  return limit;
+}
 
 /** Login certo vira auth.login; errado vira auth.loginFailed (sem conta, com o username digitado). */
 export function logLoginAttempt(db: Db, typedUsername: string, result: LoginResult, ip: string): Promise<void> {

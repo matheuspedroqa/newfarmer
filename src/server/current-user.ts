@@ -1,6 +1,7 @@
 import "server-only";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { cache } from "react";
 import { LOCALE_COOKIE, SESSION_COOKIE, THEME_COOKIE } from "@/lib/cookies";
 import type { User } from "./accounts";
 import { getDb } from "./db";
@@ -9,10 +10,13 @@ import { createSession, deleteSession, getSessionUser } from "./sessions";
 
 const ONE_YEAR_S = 365 * 24 * 60 * 60;
 
-export async function getCurrentUser(): Promise<User | null> {
+// cache: o layout e a página do app perguntam a mesma coisa; numa mesma página, o banco responde uma vez só.
+export const getCurrentUser = cache(async (): Promise<User | null> => {
   const token = (await cookies()).get(SESSION_COOKIE)?.value;
-  return token ? getSessionUser((await getDb()), token) : null;
-}
+  return token ? getSessionUser(await getDb(), token) : null;
+});
+
+export const subscriptionOf = cache(async (userId: number) => getSubscription(await getDb(), userId));
 
 /** Usuário logado ou redireciona para /login (sessão vencida não quebra a página). */
 export async function requireUser(): Promise<User> {
@@ -24,7 +28,7 @@ export async function requireUser(): Promise<User> {
 /** Usuário logado com assinatura (ou dono do site); senão vai para /subscribe. Cada página paga chama isto: o layout não roda de novo na navegação interna. */
 export async function requireAccess(): Promise<User> {
   const user = await requireUser();
-  if (!hasAccess(user, await getSubscription(await getDb(), user.id))) redirect("/subscribe");
+  if (!hasAccess(user, await subscriptionOf(user.id))) redirect("/subscribe");
   return user;
 }
 

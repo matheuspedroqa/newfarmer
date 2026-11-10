@@ -17,7 +17,7 @@ import {
 import { getUserById, verifyCredentials } from "@/server/accounts";
 import { appUrl } from "@/server/app-url";
 import { getSubscription, hasAccess } from "@/server/subscriptions";
-import { logLoginAttempt, loginTarget, logSafely } from "@/server/activity-log";
+import { logLoginAttempt, loginTarget, logSafely, limitByIpLogged } from "@/server/activity-log";
 import { signUpLogged } from "@/server/audited";
 import { endSession, getCurrentUser, startSession } from "@/server/current-user";
 import { getDb } from "@/server/db";
@@ -25,7 +25,6 @@ import { linkVisitorToUser } from "@/server/page-views";
 import { sendVerificationEmail } from "@/server/email-verification";
 import { getMailer } from "@/server/mailer";
 import { requestPasswordReset, resetPassword } from "@/server/password-reset";
-import { limitByIp } from "@/server/rate-limit";
 import { sendUsernameReminder } from "@/server/username-reminder";
 import { clientIp } from "@/server/request-context";
 import { setPreferences } from "@/server/preferences";
@@ -62,9 +61,8 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
 
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitByIp(db, "signup", ip);
+  const limit = await limitByIpLogged(db, "signup", ip);
   if (!limit.ok) {
-    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "signup" }, ip });
     return { formError: "rateLimited", values };
   }
   const result = await signUpLogged(db, getWeatherProvider(), parsed.data, ip);
@@ -91,9 +89,8 @@ export async function loginAction(_prev: FormState, formData: FormData): Promise
 
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitByIp(db, "login", ip);
+  const limit = await limitByIpLogged(db, "login", ip);
   if (!limit.ok) {
-    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "login" }, ip });
     return { formError: "rateLimited", values };
   }
   const result = await verifyCredentials(db, parsed.data.username, parsed.data.password);
@@ -123,9 +120,8 @@ export async function forgotAction(_prev: FormState, formData: FormData): Promis
 
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitByIp(db, "recovery", ip);
+  const limit = await limitByIpLogged(db, "recovery", ip);
   if (!limit.ok) {
-    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "recovery" }, ip });
     return { formError: "rateLimited", values };
   }
   try {
@@ -149,9 +145,8 @@ export async function usernameReminderAction(_prev: FormState, formData: FormDat
 
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitByIp(db, "recovery", ip);
+  const limit = await limitByIpLogged(db, "recovery", ip);
   if (!limit.ok) {
-    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "recovery" }, ip });
     return { formError: "rateLimited", values };
   }
   try {

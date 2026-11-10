@@ -4,9 +4,8 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { openPortalAction } from "@/app/actions/billing";
 import { intlLocale, resolveLocale } from "@/i18n/locales";
 import { currencyForCountry, formatMoney, PRICES, type Currency } from "@/lib/pricing";
-import { requireUser } from "@/server/current-user";
-import { getDb } from "@/server/db";
-import { getSubscription, isAccessStatus } from "@/server/subscriptions";
+import { requireUser, subscriptionOf } from "@/server/current-user";
+import { isAccessStatus } from "@/server/subscriptions";
 
 export async function generateMetadata(): Promise<Metadata> {
   return { title: (await getTranslations())("profile.tabSubscription") };
@@ -20,7 +19,7 @@ export default async function SubscriptionPage() {
   const currency = currencyForCountry(user.countryCode);
   const sub = preview
     ? { subscriptionId: "preview", status: "active", startedAt: Date.now(), amount: PRICES[currency], currency, currentPeriodEnd: Date.now() + 30 * 86_400_000, cancelAtPeriodEnd: false }
-    : await getSubscription(await getDb(), user.id);
+    : await subscriptionOf(user.id);
   const locale = resolveLocale(await getLocale());
   const status = sub?.status === "active" || sub?.status === "trialing" ? "active" : sub?.status === "past_due" ? "past_due" : sub?.status === "paused" ? "paused" : sub?.status === "canceled" ? "canceled" : "none";
   const day = (ms: number) => new Intl.DateTimeFormat(intlLocale(locale), { dateStyle: "long" }).format(ms);

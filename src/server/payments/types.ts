@@ -13,6 +13,9 @@ export type StripeSubscription = {
 
 export interface PaymentProvider {
   createCustomer(input: { email: string; name: string; userId: number }): Promise<string>;
+  /** Assinatura do cliente que ainda dá acesso (ativa, em teste ou com pagamento pendente), direto da Stripe. */
+  findOpenSubscription(customerId: string): Promise<StripeSubscription | null>;
+  /** Fecha os pagamentos ainda abertos do cliente (outra aba) e abre um novo: só a aba mais nova consegue pagar. */
   createCheckout(input: { customerId: string; priceId: string; userId: number; locale: Locale; successUrl: string; cancelUrl: string }): Promise<string>;
   getCheckout(sessionId: string): Promise<{ customerId: string; subscription: StripeSubscription | null }>;
   createPortal(input: { customerId: string; returnUrl: string }): Promise<string>;

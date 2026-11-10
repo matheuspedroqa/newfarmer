@@ -38,6 +38,7 @@ export function createResendMailer(apiKey: string, from: string, fetchFn: typeof
         method: "POST",
         headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
         body: JSON.stringify({ from: own ?? from, to, subject, html, ...(headers && { headers }), ...(replyTo && { reply_to: replyTo }) }),
+        signal: AbortSignal.timeout(10_000), // Resend lento não prende a tela nem o envio mensal
       });
       // Só o código do erro (ex.: validation_error): a mensagem do Resend pode trazer o e-mail da pessoa.
       if (!response.ok) throw new Error(`Resend respondeu ${response.status} ${await response.json().then((r: { name?: unknown }) => String(r.name ?? "")).catch(() => "")}`.trim());

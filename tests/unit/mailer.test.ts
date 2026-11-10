@@ -14,6 +14,7 @@ describe("e-mail pelo Resend", () => {
       method: "POST",
       headers: { Authorization: "Bearer re_chave", "Content-Type": "application/json" },
       body: JSON.stringify({ from: "NewFarmer <oi@newfarmer.app>", ...message, reply_to: "contact@newfarmer.app" }),
+      signal: expect.any(AbortSignal),
     });
   });
 

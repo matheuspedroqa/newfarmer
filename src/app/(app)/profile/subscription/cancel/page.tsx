@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import { redirect } from "next/navigation";
 import { intlLocale, resolveLocale } from "@/i18n/locales";
-import { requireUser } from "@/server/current-user";
-import { getDb } from "@/server/db";
-import { getSubscription, isAccessStatus } from "@/server/subscriptions";
+import { requireUser, subscriptionOf } from "@/server/current-user";
+import { isAccessStatus } from "@/server/subscriptions";
 import { CancelForm } from "./CancelForm";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -14,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function CancelPage() {
   const user = await requireUser();
   // O dono vê a tela como prévia; confirmar não cancela nada (cancelSubscriptionAction recusa).
-  const sub = user.isPlatformAdmin ? { currentPeriodEnd: Date.now() + 30 * 86_400_000 } : await getSubscription(await getDb(), user.id);
+  const sub = user.isPlatformAdmin ? { currentPeriodEnd: Date.now() + 30 * 86_400_000 } : await subscriptionOf(user.id);
   // Só quem tem uma assinatura que ainda vai renovar chega aqui; o resto volta para a aba Assinatura.
   if (!user.isPlatformAdmin && !(sub && "status" in sub && sub.subscriptionId && isAccessStatus(sub.status) && !sub.cancelAtPeriodEnd)) redirect("/profile/subscription");
   const t = await getTranslations("cancel");

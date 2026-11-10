@@ -10,7 +10,7 @@ describe("cliente Stripe", () => {
     const p = createStripeProvider("sk_test_abc", asFetch(fetchFn));
     const url = await p.createCheckout({ customerId: "cus_1", priceId: "price_1", userId: 7, locale: "pt", successUrl: "https://s/ok", cancelUrl: "https://s/no" });
     expect(url).toBe("https://checkout.stripe.com/c/x");
-    const [endpoint, init] = fetchFn.mock.calls[0] as unknown as [string, RequestInit];
+    const [endpoint, init] = fetchFn.mock.calls[1] as unknown as [string, RequestInit];
     expect(endpoint).toBe("https://api.stripe.com/v1/checkout/sessions");
     expect((init.headers as Record<string, string>).Authorization).toBe("Bearer sk_test_abc");
     const body = new URLSearchParams(init.body as string);
@@ -21,6 +21,34 @@ describe("cliente Stripe", () => {
     expect(body.get("customer")).toBe("cus_1");
     expect(body.get("locale")).toBe("pt-BR");
     expect(body.get("subscription_data[metadata][user_id]")).toBe("7");
+  });
+
+  it("createCheckout fecha antes os pagamentos ainda abertos do cliente (outra aba)", async () => {
+    const calls: string[] = [];
+    const fetchFn = vi.fn(async (url: string, init: RequestInit) => {
+      calls.push(`${init.method} ${url.replace("https://api.stripe.com/v1/", "")}`);
+      if (url.includes("status=open")) return ok({ data: [{ id: "cs_old" }, { id: "cs_paid" }] });
+      if (url.endsWith("cs_paid/expire")) return new Response("{}", { status: 400 }); // pago enquanto isso: segue
+      return ok({ url: "https://checkout.stripe.com/c/new" });
+    });
+    const p = createStripeProvider("k", asFetch(fetchFn));
+    expect(await p.createCheckout({ customerId: "cus_1", priceId: "p", userId: 7, locale: "en", successUrl: "https://s/ok", cancelUrl: "https://s/no" })).toBe("https://checkout.stripe.com/c/new");
+    expect(calls).toEqual([
+      "GET checkout/sessions?customer=cus_1&status=open&limit=10",
+      "POST checkout/sessions/cs_old/expire",
+      "POST checkout/sessions/cs_paid/expire",
+      "POST checkout/sessions",
+    ]);
+  });
+
+  it("findOpenSubscription devolve só a assinatura que ainda dá acesso", async () => {
+    const sub = (id: string, status: string) => ({ id, customer: "cus_1", status, items: { data: [{ price: { unit_amount: 299, currency: "usd" } }] } });
+    const fetchFn = vi.fn(async () => ok({ data: [sub("s_old", "incomplete_expired"), sub("s_live", "active")] }));
+    const p = createStripeProvider("k", asFetch(fetchFn));
+    expect((await p.findOpenSubscription("cus_1"))?.id).toBe("s_live");
+    expect((fetchFn.mock.calls[0] as unknown as [string])[0]).toBe("https://api.stripe.com/v1/subscriptions?customer=cus_1&limit=10");
+    const none = createStripeProvider("k", asFetch(vi.fn(async () => ok({ data: [sub("s", "canceled")] }))));
+    expect(await none.findOpenSubscription("cus_1")).toBeNull();
   });
 
   it("erro HTTP lança sem copiar o corpo", async () => {

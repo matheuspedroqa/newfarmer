@@ -11,7 +11,7 @@ const months = z.array(z.number().int().min(1).max(12));
 
 // Bloco "No seu país": o que muda em cada país da base de conhecimento (raças, regras, épocas, cuidados).
 const countryNotesSchema = z
-  .record(z.enum(KNOWLEDGE_COUNTRIES), z.object({ highlights: z.array(textSchema).min(2), sources: z.array(sourceSchema).min(1) }))
+  .partialRecord(z.enum(KNOWLEDGE_COUNTRIES), z.object({ highlights: z.array(textSchema).min(2), sources: z.array(sourceSchema).min(1) }))
   .optional();
 
 export const animalContentSchema = z.object({

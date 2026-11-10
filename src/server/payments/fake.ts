@@ -9,6 +9,9 @@ export function createFakePaymentProvider(): PaymentProvider {
     async createCustomer({ userId }) {
       return `fake_cus_${userId}`;
     },
+    async findOpenSubscription() {
+      return null;
+    },
     async createCheckout({ userId, successUrl }) {
       const url = new URL(successUrl);
       url.searchParams.set("session_id", `fake_${userId}`);

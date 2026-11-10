@@ -128,6 +128,21 @@ test("sair, errar a senha e entrar de novo", async ({ page }) => {
   await expect(page).toHaveURL(/\/dashboard$/);
 });
 
+test("Enter na senha entra direto, sem clicar no botão (também depois de um erro)", async ({ page, context }) => {
+  const { username } = await signup(page, uniqueEmail());
+  await clearSession(context);
+  await page.goto("/login");
+  await page.getByLabel("Username").fill(username);
+  await page.getByLabel("Senha").fill("errada123");
+  await page.getByLabel("Senha").press("Enter");
+  await expect(page.getByText("Username ou senha incorretos")).toBeVisible();
+  // Como no preenchimento automático do navegador: campos cheios e o cursor fora deles.
+  await page.getByLabel("Senha").fill(PASSWORD);
+  await page.getByLabel("Senha").blur();
+  await page.keyboard.press("Enter");
+  await expect(page).toHaveURL(/\/dashboard$/);
+});
+
 test("painel sem login volta para a entrada", async ({ page }) => {
   await page.goto("/dashboard");
   await expect(page).toHaveURL(/\/login$/);

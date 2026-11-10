@@ -4,11 +4,11 @@ import { normalizeUsername, usernameProblem } from "./username";
 
 const email = z.string().trim().toLowerCase().min(1, "required").email("emailInvalid");
 const username = z
-  .string({ required_error: "usernameInvalid", invalid_type_error: "usernameInvalid" })
+  .string({ error: "usernameInvalid" })
   .transform(normalizeUsername)
   .superRefine((value, ctx) => {
     const problem = usernameProblem(value);
-    if (problem) ctx.addIssue({ code: z.ZodIssueCode.custom, message: problem });
+    if (problem) ctx.addIssue({ code: "custom", message: problem });
   });
 const newPassword = z.string().min(1, "required").min(8, "passwordTooShort").max(128, "passwordTooLong");
 
@@ -19,7 +19,7 @@ export const citySchema = z.object(
     longitude: z.number().min(-180).max(180),
     countryCode: z.string().min(2).max(3),
   },
-  { required_error: "cityRequired", invalid_type_error: "cityRequired" },
+  { error: "cityRequired" },
 );
 export type CityChoice = z.infer<typeof citySchema>;
 
@@ -31,7 +31,7 @@ export const signupSchema = z
     password: newPassword,
     confirmPassword: z.string(),
     city: citySchema,
-    terms: z.literal("on", { errorMap: () => ({ message: "termsRequired" }) }),
+    terms: z.literal("on", { error: "termsRequired" }),
     marketing: z.literal("on").nullish().transform((v) => v === "on").optional(),
   })
   .refine((d) => d.password === d.confirmPassword, { path: ["confirmPassword"], message: "passwordsDontMatch" });
@@ -51,14 +51,14 @@ export const contactSchema = z.object({
 
 export const guideSignupSchema = z.object({
   email,
-  consent: z.literal("on", { errorMap: () => ({ message: "confirmRequired" }) }),
+  consent: z.literal("on", { error: "confirmRequired" }),
 });
 
 export const CANCEL_REASONS = ["price", "notUsing", "missingFeatures", "otherApp", "technical", "other"] as const;
 
 /** "Outro" pede o texto; nos demais ele é opcional. */
 export const cancelSchema = z
-  .object({ reason: z.enum(CANCEL_REASONS, { errorMap: () => ({ message: "required" }) }), details: z.string().trim().max(1000, "tooLong") })
+  .object({ reason: z.enum(CANCEL_REASONS, { error: "required" }), details: z.string().trim().max(1000, "tooLong") })
   .refine((v) => v.reason !== "other" || v.details.length > 0, { message: "required", path: ["details"] });
 
 export const resetSchema = z
@@ -77,14 +77,14 @@ export function toFieldErrors(error: ZodError): Record<string, string> {
 export const MAX_ANIMAL_COUNT = 100_000;
 
 const animalCount = z.coerce
-  .number({ invalid_type_error: "countInvalid" })
+  .number({ error: "countInvalid" })
   .int("countInvalid")
   .min(1, "countTooSmall")
   .max(MAX_ANIMAL_COUNT, "countTooLarge");
 
 export const farmSchema = z.object({
-  animals: z.record(z.enum(ANIMAL_IDS), animalCount),
-  crops: z.array(z.enum(CROP_IDS)),
+  animals: z.partialRecord(z.enum(ANIMAL_IDS), animalCount),
+  crops: z.array(z.enum(CROP_IDS)).max(CROP_IDS.length),
 });
 export type FarmInput = z.infer<typeof farmSchema>;
 

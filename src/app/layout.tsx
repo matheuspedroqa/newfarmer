@@ -28,9 +28,16 @@ export async function generateMetadata(): Promise<Metadata> {
 // viewportFit "cover" faz o env(safe-area-inset-*) funcionar no iPhone; o zoom continua liberado.
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
 
+// Só os grupos de textos que os componentes do navegador usam: o resto fica no servidor e não pesa em toda página.
+const CLIENT_MESSAGES = [
+  "admin", "animals", "auth", "cancel", "contact", "cookieNotice", "countries", "cropGroups", "crops", "diary", "errors",
+  "farm", "guide", "languages", "myfarm", "offline", "profile", "toggles", "userMenu", "verifyBanner",
+] as const;
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
-  const messages = await getMessages();
+  const all = await getMessages();
+  const messages = Object.fromEntries(CLIENT_MESSAGES.map((k) => [k, all[k]]));
   const jar = await cookies();
   const theme = resolveTheme(jar.get(THEME_COOKIE)?.value);
   // nf_cookie_notice é o aviso antigo e vale como "só essenciais".

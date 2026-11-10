@@ -318,7 +318,11 @@ export async function applyMigrations(db: Db, list: readonly Migration[]): Promi
   return applied;
 }
 
-export const migrate = (db: Db) => applyMigrations(db, MIGRATIONS);
+/** Banco já em dia (o normal): uma consulta só, em vez de uma transação por migração a cada servidor que liga. */
+export async function migrate(db: Db): Promise<number[]> {
+  const done = new Set((await db.query<{ id: number }>("SELECT id FROM schema_migrations").catch(() => [])).map((r) => r.id));
+  return MIGRATIONS.every((m) => done.has(m.id)) ? [] : applyMigrations(db, MIGRATIONS);
+}
 
 /** Só para testes: aplica as migrações até a de número `n`. */
 export const migrateUpTo = (db: Db, n: number) => applyMigrations(db, MIGRATIONS.filter((m) => m.id <= n));

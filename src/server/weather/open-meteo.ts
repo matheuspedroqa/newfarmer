@@ -16,8 +16,9 @@ export function createOpenMeteoProvider(
   fetchImpl: typeof fetch = fetch,
   now: () => Date = () => new Date(),
 ): WeatherProvider {
-  async function getJson<T>(url: URL): Promise<T> {
-    const response = await fetchImpl(url, { signal: AbortSignal.timeout(15_000) });
+  // 6 s na tela (previsão, busca de cidade): depois disso vale a última previsão guardada. O histórico do clima é mais pesado.
+  async function getJson<T>(url: URL, timeoutMs = 6_000): Promise<T> {
+    const response = await fetchImpl(url, { signal: AbortSignal.timeout(timeoutMs) });
     if (!response.ok) throw new Error(`Open-Meteo respondeu ${response.status}`);
     return (await response.json()) as T;
   }
@@ -49,7 +50,7 @@ export function createOpenMeteoProvider(
       url.searchParams.set("timezone", "auto");
       const body = await getJson<{
         daily: { time: string[]; temperature_2m_mean: (number | null)[]; precipitation_sum: (number | null)[] };
-      }>(url);
+      }>(url, 15_000);
       return normalsFromDaily(body.daily);
     },
 

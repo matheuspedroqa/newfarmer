@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import { exportUserData } from "@/server/account-data";
-import { logSafely, logWriteLimited } from "@/server/activity-log";
+import { logSafely, limitWritesLogged } from "@/server/activity-log";
 import { getCurrentUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
-import { limitWrites } from "@/server/rate-limit";
 import { clientIp } from "@/server/request-context";
 
 export const dynamic = "force-dynamic";
@@ -14,9 +13,8 @@ export async function GET() {
   if (!user) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitWrites(db, user.id);
+  const limit = await limitWritesLogged(db, user, ip);
   if (!limit.ok) {
-    if (limit.firstBlock) await logWriteLimited(db, user.id, user.username, ip);
     return NextResponse.json({ error: "rateLimited" }, { status: 429 });
   }
   const data = await exportUserData(db, user.id);

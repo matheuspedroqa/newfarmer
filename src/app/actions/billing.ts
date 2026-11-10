@@ -6,23 +6,21 @@ import { resolveLocale } from "@/i18n/locales";
 import { cancelSchema, toFieldErrors } from "@/lib/validation";
 import { currencyForCountry } from "@/lib/pricing";
 import { appUrl } from "@/server/app-url";
-import { logSafely, logWriteLimited } from "@/server/activity-log";
+import { logSafely, limitWritesLogged } from "@/server/activity-log";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getPaymentProvider, priceIdFor, shouldUseFakePayments } from "@/server/payments";
-import { limitWrites } from "@/server/rate-limit";
 import { logRequestError } from "@/server/monitoring";
 import { clientIp } from "@/server/request-context";
-import { ensureCustomer, getSubscription, hasOpenSubscription, requestCancellation } from "@/server/subscriptions";
+import { ensureCustomer, getSubscription, hasOpenSubscription, requestCancellation, upsertSubscription } from "@/server/subscriptions";
 import type { FormState } from "./auth";
 
 export async function startCheckoutAction(): Promise<void> {
   const user = await requireUser();
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitWrites(db, user.id);
+  const limit = await limitWritesLogged(db, user, ip);
   if (!limit.ok) {
-    if (limit.firstBlock) await logWriteLimited(db, user.id, user.username, ip);
     redirect("/subscribe?error=rateLimited");
   }
   if (await hasOpenSubscription(db, user.id)) redirect("/dashboard");
@@ -33,7 +31,12 @@ export async function startCheckoutAction(): Promise<void> {
   try {
     const provider = getPaymentProvider();
     const customerId = await ensureCustomer(db, provider, user);
-    url = await provider.createCheckout({
+    // O aviso da Stripe (webhook) pode ainda não ter chegado: pergunta direto, para ninguém pagar duas vezes.
+    const paid = await provider.findOpenSubscription(customerId);
+    if (paid) {
+      await upsertSubscription(db, user.id, customerId, paid);
+      url = "/dashboard";
+    } else url = await provider.createCheckout({
       customerId,
       priceId: shouldUseFakePayments() ? "fake_price" : priceIdFor(currency),
       userId: user.id,
@@ -46,7 +49,7 @@ export async function startCheckoutAction(): Promise<void> {
     await logRequestError(db, "action:startCheckout", error instanceof Error ? error.message : String(error)).catch(() => undefined);
     redirect("/subscribe?error=checkout");
   }
-  await logSafely(db, { userId: user.id, action: "billing.checkoutStarted", target: user.username, details: { currency }, ip });
+  if (url !== "/dashboard") await logSafely(db, { userId: user.id, action: "billing.checkoutStarted", target: user.username, details: { currency }, ip });
   redirect(url);
 }
 
@@ -59,9 +62,8 @@ export async function cancelSubscriptionAction(_prev: FormState, formData: FormD
   if (user.isPlatformAdmin) return { formError: "ownerPreview", values };
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitWrites(db, user.id);
+  const limit = await limitWritesLogged(db, user, ip);
   if (!limit.ok) {
-    if (limit.firstBlock) await logWriteLimited(db, user.id, user.username, ip);
     return { formError: "rateLimited", values };
   }
   let result: "ok" | "notCancelable";

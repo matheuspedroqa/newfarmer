@@ -3,12 +3,11 @@
 import { resolveLocale } from "@/i18n/locales";
 import { KNOWLEDGE_COUNTRIES, type KnowledgeCountry } from "@/lib/countries";
 import { guideSignupSchema, toFieldErrors } from "@/lib/validation";
-import { logSafely } from "@/server/activity-log";
+import { limitByIpLogged } from "@/server/activity-log";
 import { appUrl } from "@/server/app-url";
 import { getDb } from "@/server/db";
 import { subscribeToGuide } from "@/server/guide-newsletter";
 import { getMailer } from "@/server/mailer";
-import { limitByIp } from "@/server/rate-limit";
 import { clientIp } from "@/server/request-context";
 import type { FormState } from "./auth";
 
@@ -23,9 +22,8 @@ export async function guideSignupAction(_prev: FormState, formData: FormData): P
 
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitByIp(db, "guide", ip);
+  const limit = await limitByIpLogged(db, "guide", ip);
   if (!limit.ok) {
-    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "guide" }, ip });
     return { formError: "rateLimited", values };
   }
   try {

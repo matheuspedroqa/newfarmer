@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { CityForm } from "@/components/CityForm";
-import { requireUser } from "@/server/current-user";
-import { getDb } from "@/server/db";
-import { getSubscription, mustCancelFirst } from "@/server/subscriptions";
+import { requireUser, subscriptionOf } from "@/server/current-user";
+import { mustCancelFirst } from "@/server/subscriptions";
 import { DeleteAccountForm } from "./DeleteAccountForm";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -15,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function ProfilePage() {
   const user = await requireUser();
   const t = await getTranslations();
-  const cancelFirst = mustCancelFirst(await getSubscription(await getDb(), user.id));
+  const cancelFirst = mustCancelFirst(await subscriptionOf(user.id));
   const info: [string, string][] = [
     [t("profile.name"), user.name],
     [t("auth.username"), user.username],

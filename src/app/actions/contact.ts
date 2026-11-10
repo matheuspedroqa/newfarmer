@@ -2,11 +2,10 @@
 
 import { getLocale } from "next-intl/server";
 import { contactSchema, toFieldErrors } from "@/lib/validation";
-import { logSafely } from "@/server/activity-log";
+import { limitByIpLogged } from "@/server/activity-log";
 import { sendContactMessage } from "@/server/contact";
 import { getDb } from "@/server/db";
 import { getMailer } from "@/server/mailer";
-import { limitByIp } from "@/server/rate-limit";
 import { clientIp } from "@/server/request-context";
 import type { FormState } from "./auth";
 
@@ -19,9 +18,8 @@ export async function contactAction(_prev: FormState, formData: FormData): Promi
 
   const db = await getDb();
   const ip = await clientIp();
-  const limit = await limitByIp(db, "contact", ip);
+  const limit = await limitByIpLogged(db, "contact", ip);
   if (!limit.ok) {
-    if (limit.firstBlock) await logSafely(db, { userId: null, action: "security.rateLimited", target: ip, details: { limit: "contact" }, ip });
     return { formError: "rateLimited", values };
   }
   try {
