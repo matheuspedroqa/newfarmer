@@ -363,7 +363,13 @@
     "deleteHelp": "Permanently deletes your account, animals, crops and diary. This cannot be undone. If you want to keep a copy, download your data first.",
     "deleteConfirm": "I understand my account and data will be deleted forever",
     "deletePassword": "Your password",
-    "deleteButton": "Delete my account"
+    "deleteButton": "Delete my account",
+    "tabsLabel": "Profile sections",
+    "tabData": "My data",
+    "tabPreferences": "Preferences",
+    "tabSecurity": "Security",
+    "tabSubscription": "Subscription",
+    "cookiesTitle": "Cookies"
   },
   "seasons": {
     "summer": "Summer",
@@ -739,13 +745,18 @@
     "past_due": "Payment pending",
     "canceled": "Canceled",
     "none": "No subscription",
-    "nextCharge": "Next charge: {date}",
-    "accessUntil": "Access until {date}",
-    "manage": "Manage or cancel",
+    "manage": "Manage payment",
     "subscribe": "Subscribe",
     "owner": "Owner account: no billing",
     "paused": "Paused",
-    "pausedNote": "Your subscription is paused and you are not being charged. Contact support to resume."
+    "pausedNote": "Your subscription is paused and you are not being charged. Contact support to resume.",
+    "since": "Subscriber since",
+    "price": "Price",
+    "perMonth": "{price}/month",
+    "nextChargeLabel": "Next charge",
+    "accessUntilLabel": "Access until",
+    "cancel": "Cancel subscription",
+    "cancelScheduled": "Cancellation requested. You keep access until {date} and won't be charged again."
   },
   "admin": {
     "title": "Admin",
@@ -881,7 +892,8 @@
     "sourceUnknown": "No statistics",
     "entry_home": "Home page",
     "entry_guide": "What to plant",
-    "entry_other": "Other page"
+    "entry_other": "Other page",
+    "cancelReason": "Cancellation reason"
   },
   "contact": {
     "footer": "Contact",
@@ -941,5 +953,23 @@
     "choose": "Choose a country",
     "button": "See what to plant",
     "link": "What to plant today in your country"
+  },
+  "cancel": {
+    "title": "Cancel subscription",
+    "intro": "We're sorry to see you go. Tell us why you're cancelling: it helps us improve NewFarmer.",
+    "keepAccess": "You keep access until {date} and won't be charged again.",
+    "reasonLabel": "Why do you want to cancel?",
+    "reasons": {
+      "price": "It's too expensive for me",
+      "notUsing": "I'm not using it",
+      "missingFeatures": "It's missing something I need",
+      "otherApp": "I'll use another app or method",
+      "technical": "I had technical problems",
+      "other": "Another reason"
+    },
+    "detailsLabel": "Tell us more",
+    "detailsHelp": "Optional, except for \"Another reason\". Up to 1,000 characters.",
+    "confirm": "Confirm cancellation",
+    "back": "Go back, I want to keep my subscription"
   }
 }

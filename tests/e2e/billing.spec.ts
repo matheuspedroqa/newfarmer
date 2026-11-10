@@ -23,8 +23,8 @@ test("sem assinar, o app fica bloqueado mas o perfil abre", async ({ page }) => 
     await page.goto(path);
     await expect(page).toHaveURL(/\/subscribe$/);
   }
-  await page.goto("/profile");
-  await expect(page).toHaveURL(/\/profile$/);
+  await page.goto("/profile/subscription");
+  await expect(page).toHaveURL(/\/profile\/subscription$/);
   await expect(page.getByText("Sem assinatura")).toBeVisible();
 });
 
@@ -55,10 +55,33 @@ test("sem assinar, a navegação interna também é bloqueada", async ({ page })
   await expect(page).toHaveURL(/\/subscribe$/);
 });
 
-test("perfil mostra Ativa e Gerenciar ou cancelar", async ({ page }) => {
+test("aba Assinatura mostra Ativa, o valor e cancela pedindo o motivo", async ({ page }) => {
   await signup(page, uniqueEmail());
   await openUserMenu(page, "Perfil");
+  await page.getByRole("link", { name: "Assinatura", exact: true }).click();
+  await expect(page).toHaveURL(/\/profile\/subscription$/);
   const card = page.getByTestId("billing-card");
   await expect(card).toContainText("Ativa");
-  await expect(card.getByRole("button", { name: "Gerenciar ou cancelar" })).toBeVisible();
+  await expect(card).toContainText("Assinante desde");
+  await expect(page.getByTestId("billing-price")).toContainText("/mês");
+  await expect(card.getByRole("button", { name: "Gerenciar pagamento" })).toBeVisible();
+
+  await card.getByRole("link", { name: "Cancelar assinatura" }).click();
+  await expect(page).toHaveURL(/\/profile\/subscription\/cancel$/);
+  const confirm = page.getByRole("button", { name: "Confirmar cancelamento" });
+  await confirm.click();
+  await expect(page.locator("#reason-error")).toHaveText("Preencha este campo");
+  await page.getByLabel("Outro motivo").check();
+  await confirm.click();
+  await expect(page.locator("#details-error")).toHaveText("Preencha este campo");
+  await page.getByLabel("Conte mais").fill("Vou viajar por um tempo");
+  await confirm.click();
+  await expect(page).toHaveURL(/\/profile\/subscription$/);
+  await expect(card.getByRole("status")).toContainText("Cancelamento pedido");
+  await expect(card.getByRole("link", { name: "Cancelar assinatura" })).toHaveCount(0);
+  // Ainda usa o app até o fim do período pago.
+  await page.goto("/dashboard");
+  await expect(page).toHaveURL(/\/dashboard$/);
+  await page.goto("/profile/subscription/cancel");
+  await expect(page).toHaveURL(/\/profile\/subscription$/);
 });

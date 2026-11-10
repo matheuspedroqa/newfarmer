@@ -42,7 +42,7 @@ test("Perfil mostra as informações da pessoa", async ({ page }) => {
 
 test("Perfil troca a senha (e recusa senha atual errada)", async ({ page, context }) => {
   const { username } = await signup(page, uniqueEmail());
-  await page.goto("/profile");
+  await page.goto("/profile/security");
 
   await page.getByLabel("Senha atual").fill("errada123");
   await page.getByLabel("Nova senha", { exact: true }).fill("nova-senha-1");
@@ -69,7 +69,7 @@ test("Perfil troca a senha (e recusa senha atual errada)", async ({ page, contex
 
 test("Perfil troca o idioma e a escolha fica salva na conta", async ({ page, context }) => {
   const { username } = await signup(page, uniqueEmail());
-  await page.goto("/profile");
+  await page.goto("/profile/preferences");
   await page.getByLabel("English").check();
   await page.getByRole("button", { name: "Salvar idioma" }).click();
   await expect(page.getByRole("heading", { name: "Profile", level: 1 })).toBeVisible();
@@ -104,7 +104,7 @@ test("formulário de senha adulterado com userId de outra conta só mexe na pró
   await vitima.close();
 
   const { username: userA } = await signup(page, uniqueEmail());
-  await page.goto("/profile");
+  await page.goto("/profile/security");
   const form = page.locator("form", { has: page.getByLabel("Nova senha", { exact: true }) });
   await form.evaluate((f, alvo) => {
     for (const name of ["userId", "id", "username"]) {
@@ -186,7 +186,7 @@ test("Apagar conta pede confirmação e senha, apaga e não deixa entrar de novo
 
 test("Perfil liga e desliga Receber novidades por e-mail", async ({ page }) => {
   await signup(page, uniqueEmail());
-  await page.goto("/profile");
+  await page.goto("/profile/preferences");
   const box = page.getByLabel("Receber novidades por e-mail");
   await expect(box).not.toBeChecked();
   await box.check();

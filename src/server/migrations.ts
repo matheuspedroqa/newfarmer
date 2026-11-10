@@ -281,6 +281,16 @@ CREATE TABLE guide_subscribers (
 ALTER TABLE guide_subscribers ENABLE ROW LEVEL SECURITY;
 `,
   },
+  {
+    id: 13,
+    name: "subscription_cancel_reason",
+    // Motivo que a pessoa escolhe ao cancelar pelo Perfil (o texto livre é opcional, menos em "Outro").
+    sql: `
+ALTER TABLE subscriptions ADD COLUMN cancel_reason TEXT;
+ALTER TABLE subscriptions ADD COLUMN cancel_details TEXT;
+ALTER TABLE subscriptions ADD COLUMN cancel_requested_at BIGINT;
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

@@ -16,9 +16,9 @@ describe("migrações", () => {
     await lite.exec(`INSERT INTO users (name,email,password_hash,city_label,latitude,longitude,country_code,climate_zone,hemisphere,created_at)
       VALUES ('Ana','a@x.com','h','C',0,0,'PT','temperate','north',0)`);
     const db = pgliteDb(lite, lite);
-    expect(await migrate(db)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    expect(await migrate(db)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
     expect(await db.query("SELECT name FROM users")).toEqual([{ name: "Ana" }]);
-    expect(await db.query("SELECT id FROM schema_migrations ORDER BY id")).toEqual([{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }, { id: 10 }, { id: 11 }, { id: 12 }]);
+    expect(await db.query("SELECT id FROM schema_migrations ORDER BY id")).toEqual([{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }, { id: 10 }, { id: 11 }, { id: 12 }, { id: 13 }]);
     expect(await migrate(db)).toEqual([]);
   });
 

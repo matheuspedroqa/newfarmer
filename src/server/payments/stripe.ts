@@ -67,6 +67,9 @@ export function createStripeProvider(secretKey: string, fetchFn: typeof fetch = 
       // 404: o cliente já não existe (nova tentativa, ou apagado pelo painel); não pode travar a exclusão da conta.
       await call("DELETE", `customers/${encodeURIComponent(customerId)}`, undefined, 404);
     },
+    async cancelAtPeriodEnd(subscriptionId) {
+      return parseStripeSubscription(await call("POST", `subscriptions/${encodeURIComponent(subscriptionId)}`, { cancel_at_period_end: "true" }));
+    },
     async setPaused(subscriptionId, paused) {
       // void: as faturas do tempo pausado não são cobradas; vazio tira a pausa.
       const form: Record<string, string> = paused ? { "pause_collection[behavior]": "void" } : { pause_collection: "" };

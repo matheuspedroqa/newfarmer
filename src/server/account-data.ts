@@ -80,6 +80,9 @@ export async function exportUserData(db: Db, userId: number) {
       currentPeriodEnd: subscription.currentPeriodEnd === null ? null : iso(subscription.currentPeriodEnd),
       cancelAtPeriodEnd: subscription.cancelAtPeriodEnd,
       canceledAt: subscription.canceledAt === null ? null : iso(subscription.canceledAt),
+      cancelReason: subscription.cancelReason,
+      cancelDetails: subscription.cancelDetails,
+      cancelRequestedAt: subscription.cancelRequestedAt === null ? null : iso(subscription.cancelRequestedAt),
     },
     pageViews: pageViews.map((v) => ({ path: v.path, referrer: v.referrer, at: iso(v.createdAt) })),
   };

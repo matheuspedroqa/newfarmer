@@ -15,6 +15,9 @@ export type SubscriptionRow = {
   cancelAtPeriodEnd: boolean;
   startedAt: number | null;
   canceledAt: number | null;
+  cancelReason: string | null;
+  cancelDetails: string | null;
+  cancelRequestedAt: number | null;
 };
 
 const num = (v: unknown) => (v === null || v === undefined ? null : Number(v));
@@ -33,6 +36,9 @@ export async function getSubscription(db: Db, userId: number): Promise<Subscript
     cancelAtPeriodEnd: r.cancel_at_period_end === true,
     startedAt: num(r.started_at),
     canceledAt: num(r.canceled_at),
+    cancelReason: (r.cancel_reason as string | null) ?? null,
+    cancelDetails: (r.cancel_details as string | null) ?? null,
+    cancelRequestedAt: num(r.cancel_requested_at),
   };
 }
 
@@ -85,6 +91,24 @@ export async function upsertSubscription(db: Db, userId: number, customerId: str
      )`,
     [userId, customerId, sub.id, sub.status, sub.currency, sub.amount, sub.currentPeriodEnd, sub.cancelAtPeriodEnd, sub.canceledAt, now, [...ACCESS_STATUSES], eventCreated],
   );
+}
+
+/** Pedido de cancelamento pelo Perfil: só para assinatura que dá acesso e ainda não está para terminar. Guarda o motivo. */
+export async function requestCancellation(
+  db: Db,
+  provider: PaymentProvider,
+  userId: number,
+  input: { reason: string; details: string },
+  now = Date.now(),
+): Promise<"ok" | "notCancelable"> {
+  const sub = await getSubscription(db, userId);
+  if (!sub?.subscriptionId || !isAccessStatus(sub.status) || sub.cancelAtPeriodEnd) return "notCancelable";
+  await upsertSubscription(db, userId, sub.customerId, await provider.cancelAtPeriodEnd(sub.subscriptionId), now);
+  await db.run(
+    "UPDATE subscriptions SET cancel_reason = $2, cancel_details = $3, cancel_requested_at = $4 WHERE user_id = $1",
+    [userId, input.reason, input.details || null, now],
+  );
+  return "ok";
 }
 
 /** Cria o cliente na Stripe uma vez e guarda; duas abas ao mesmo tempo acabam usando o mesmo id guardado. */

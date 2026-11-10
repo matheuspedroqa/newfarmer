@@ -134,7 +134,7 @@ test("dono envia Sentimos sua falta para quem cancelou, o descadastro desliga o 
   await page.getByLabel("Senha").fill(PASSWORD);
   await page.getByRole("button", { name: "Entrar" }).click();
   await expect(page).not.toHaveURL(/\/login/);
-  await page.goto("/profile");
+  await page.goto("/profile/preferences");
   await expect(page.getByLabel("Receber novidades por e-mail")).not.toBeChecked();
 
   // Quem saiu não recebe de novo, mesmo numa campanha nova.

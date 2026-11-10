@@ -13,8 +13,8 @@ test.describe("assinatura e trava", () => {
       await page.getByRole("navigation", { name: "NewFarmer" }).getByRole("link", { name, exact: true }).click();
       await expect(page, name).toHaveURL(/\/subscribe$/);
     }
-    await page.goto("/profile");
-    await expect(page).toHaveURL(/\/profile$/);
+    await page.goto("/profile/subscription");
+    await expect(page).toHaveURL(/\/profile\/subscription$/);
     await expect(page.getByTestId("billing-card")).toContainText("Sem assinatura");
   });
 
@@ -22,7 +22,7 @@ test.describe("assinatura e trava", () => {
     const page = await openAs(browser, "paidA");
     await page.goto("/subscribe");
     await expect(page).toHaveURL(/\/dashboard$/); // quem já assina não vê a tela de pagamento
-    await page.goto("/profile");
+    await page.goto("/profile/subscription");
     const card = page.getByTestId("billing-card");
     await expect(card).toContainText("Ativa");
     await expect(card).toContainText("Próxima cobrança");

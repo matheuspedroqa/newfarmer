@@ -89,7 +89,7 @@ for (const size of SIZES) {
       await expect(page.getByRole("heading", { name: "Próximos 5 dias" })).toBeVisible();
       await expect(page.getByTestId("day-card")).toHaveCount(5);
       await checkPage(page, "/myfarm", appNav, (p) => p.getByRole("button", { name: "Salvar", exact: true }));
-      await checkPage(page, "/profile", appNav, (p) => p.getByRole("button", { name: "Salvar nova senha" }));
+      await checkPage(page, "/profile/security", appNav, (p) => p.getByRole("button", { name: "Salvar nova senha" }));
 
       await page.getByRole("button", { name: "Sair" }).click();
       await expect(page).toHaveURL(/\/login$/);

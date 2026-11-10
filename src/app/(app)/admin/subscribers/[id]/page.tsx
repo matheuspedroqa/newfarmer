@@ -53,6 +53,9 @@ export default async function SubscriberDetailPage({ params, searchParams }: { p
         [t("cancelsAtEnd"), sub.cancelAtPeriodEnd ? t("yes") : t("no")],
         [t("startedAt"), date(sub.startedAt)],
         [t("canceledAt"), date(sub.canceledAt)],
+        ...(sub.cancelReason
+          ? [[t("cancelReason"), <span key="r" data-testid="detail-cancel-reason">{tc(`cancel.reasons.${sub.cancelReason}`)}{sub.cancelDetails && `: ${sub.cancelDetails}`}</span>] as [string, React.ReactNode]]
+          : []),
       ]
     : [];
 

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { loginSchema, resetSchema, signupSchema, toFieldErrors } from "@/lib/validation";
+import { cancelSchema, loginSchema, resetSchema, signupSchema, toFieldErrors } from "@/lib/validation";
 
 const city = { label: "Campinas, São Paulo, Brasil", latitude: -22.9, longitude: -47.06, countryCode: "BR" };
 const valid = { name: "Ana", email: "ana@exemplo.com", username: "ana", password: "segredo123", confirmPassword: "segredo123", city, terms: "on" };
@@ -94,5 +94,16 @@ describe("changePasswordSchema", () => {
     expect(errors({ currentPassword: "x", password: "123", confirmPassword: "123" }).password).toBe("passwordTooShort");
     expect(errors({ currentPassword: "x", password: "segredo123", confirmPassword: "outra" }).confirmPassword).toBe("passwordsDontMatch");
     expect(changePasswordSchema.safeParse({ currentPassword: "x", password: "segredo123", confirmPassword: "segredo123" }).success).toBe(true);
+  });
+});
+
+describe("cancelSchema", () => {
+  it("pede um motivo da lista e o texto só em Outro", () => {
+    expect(cancelSchema.safeParse({ reason: "price", details: "" }).success).toBe(true);
+    expect(cancelSchema.safeParse({ reason: "", details: "" }).success).toBe(false);
+    expect(cancelSchema.safeParse({ reason: "hack", details: "" }).success).toBe(false);
+    expect(cancelSchema.safeParse({ reason: "other", details: "  " }).success).toBe(false);
+    expect(cancelSchema.safeParse({ reason: "other", details: "Mudei de cidade" }).success).toBe(true);
+    expect(cancelSchema.safeParse({ reason: "price", details: "x".repeat(1001) }).success).toBe(false);
   });
 });

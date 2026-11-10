@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function AdminTabs({ tabs, label }: { tabs: { href: string; label: string }[]; label: string }) {
+/** Abas por endereço (Admin, Perfil): a primeira só fica ativa no endereço exato, as outras também nos de dentro. */
+export function Tabs({ tabs, label }: { tabs: { href: string; label: string }[]; label: string }) {
   const pathname = usePathname();
   return (
     <nav aria-label={label} className="flex gap-2 overflow-x-auto border-b border-border">
       {tabs.map((tab) => {
-        const active = tab.href === "/admin" ? pathname === tab.href : pathname.startsWith(tab.href);
+        const active = tab.href === tabs[0].href ? pathname === tab.href : pathname.startsWith(tab.href);
         return (
           <Link
             key={tab.href}

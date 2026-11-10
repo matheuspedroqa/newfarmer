@@ -25,7 +25,8 @@ Guardamos solo lo que el sitio necesita para funcionar. No pedimos documentos de
 
 ### Tu suscripción
 
-- los identificadores de cliente y de suscripción en Stripe, el estado, la moneda, el importe y las fechas de la suscripción.
+- los identificadores de cliente y de suscripción en Stripe, el estado, la moneda, el importe y las fechas de la suscripción;
+- si cancelas desde tu Perfil: el motivo que elegiste, el texto que escribiste (si lo hiciste) y la fecha de la solicitud. Esto nos ayuda a mejorar NewFarmer y se borra junto con la cuenta.
 
 El número de tu tarjeta **nunca** llega a NewFarmer y no lo guardamos.
 

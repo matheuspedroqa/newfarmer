@@ -26,6 +26,10 @@ export function createFakePaymentProvider(): PaymentProvider {
       return returnUrl;
     },
     async deleteCustomer() {},
+    async cancelAtPeriodEnd(subscriptionId) {
+      const userId = subscriptionId.replace(/^fake_sub_/, "");
+      return { id: subscriptionId, customer: `fake_cus_${userId}`, status: "active", currency: "usd", amount: 299, currentPeriodEnd: Date.now() + 30 * DAY, cancelAtPeriodEnd: true, canceledAt: null };
+    },
     async setPaused(subscriptionId, paused) {
       const userId = subscriptionId.replace(/^fake_sub_/, "");
       return { id: subscriptionId, customer: `fake_cus_${userId}`, status: paused ? "paused" : "active", currency: "usd", amount: 200, currentPeriodEnd: Date.now() + 30 * DAY, cancelAtPeriodEnd: false, canceledAt: null };

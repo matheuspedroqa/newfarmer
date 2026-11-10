@@ -25,7 +25,8 @@ Guardamos só o que o site precisa para funcionar. Não pedimos documentos, tele
 
 ### Dados da assinatura
 
-- o identificador de cliente e o da assinatura no Stripe, o status, a moeda, o valor e as datas da assinatura.
+- o identificador de cliente e o da assinatura no Stripe, o status, a moeda, o valor e as datas da assinatura;
+- se você cancelar pelo Perfil: o motivo que escolheu, o texto que escreveu (se escreveu) e a data do pedido. Isso nos ajuda a melhorar o NewFarmer e é apagado junto com a conta.
 
 O número do cartão **nunca** chega ao NewFarmer e não é guardado por nós.
 

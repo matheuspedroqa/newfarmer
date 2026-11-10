@@ -54,6 +54,13 @@ export const guideSignupSchema = z.object({
   consent: z.literal("on", { errorMap: () => ({ message: "confirmRequired" }) }),
 });
 
+export const CANCEL_REASONS = ["price", "notUsing", "missingFeatures", "otherApp", "technical", "other"] as const;
+
+/** "Outro" pede o texto; nos demais ele é opcional. */
+export const cancelSchema = z
+  .object({ reason: z.enum(CANCEL_REASONS, { errorMap: () => ({ message: "required" }) }), details: z.string().trim().max(1000, "tooLong") })
+  .refine((v) => v.reason !== "other" || v.details.length > 0, { message: "required", path: ["details"] });
+
 export const resetSchema = z
   .object({ token: z.string().min(1), password: newPassword, confirmPassword: z.string() })
   .refine((d) => d.password === d.confirmPassword, { path: ["confirmPassword"], message: "passwordsDontMatch" });

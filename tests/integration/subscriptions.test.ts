@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { shouldUseFakePayments } from "@/server/payments";
 import { createFakePaymentProvider } from "@/server/payments/fake";
-import { ensureCustomer, getSubscription, hasAccess, hasOpenSubscription, upsertSubscription, userIdForCustomer } from "@/server/subscriptions";
+import { ensureCustomer, getSubscription, hasAccess, hasOpenSubscription, requestCancellation, upsertSubscription, userIdForCustomer } from "@/server/subscriptions";
 import { testDb } from "../helpers/db";
 import { makeUser } from "../helpers/users";
 
@@ -118,5 +118,19 @@ describe("limpeza", () => {
     await db.run("INSERT INTO stripe_events (id, received_at) VALUES ('old', $1), ('new', $2)", [1, 100 * day]);
     await purgeOld(db, 100 * day + 1);
     expect((await db.query<{ id: string }>("SELECT id FROM stripe_events")).map((r) => r.id)).toEqual(["new"]);
+  });
+
+  it("cancelar pelo Perfil: fica para o fim do período, guarda o motivo e não cancela duas vezes", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db, { email: "ana@x.com" });
+    const bia = await makeUser(db, { email: "bia@x.com" });
+    const provider = createFakePaymentProvider();
+    await upsertSubscription(db, ana, `fake_cus_${ana}`, sub({ id: `fake_sub_${ana}`, customer: `fake_cus_${ana}` }), 100);
+    expect(await requestCancellation(db, provider, ana, { reason: "price", details: "" }, 500)).toBe("ok");
+    expect(await getSubscription(db, ana)).toMatchObject({ status: "active", cancelAtPeriodEnd: true, cancelReason: "price", cancelDetails: null, cancelRequestedAt: 500 });
+    expect(await hasOpenSubscription(db, ana)).toBe(true); // usa até o fim do que pagou
+    expect(await requestCancellation(db, provider, ana, { reason: "other", details: "x" }, 600)).toBe("notCancelable");
+    expect((await getSubscription(db, ana))?.cancelReason).toBe("price");
+    expect(await requestCancellation(db, provider, bia, { reason: "price", details: "" })).toBe("notCancelable");
   });
 });

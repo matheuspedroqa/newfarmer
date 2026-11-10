@@ -25,7 +25,8 @@ We keep only what the site needs to work. We do not ask for ID documents, phone 
 
 ### Your subscription
 
-- the customer and subscription identifiers at Stripe, the status, the currency, the amount and the dates of the subscription.
+- the customer and subscription identifiers at Stripe, the status, the currency, the amount and the dates of the subscription;
+- if you cancel from your Profile: the reason you chose, the text you wrote (if any) and the date of the request. This helps us improve NewFarmer and is deleted together with the account.
 
 Your card number **never** reaches NewFarmer and is not stored by us.
 

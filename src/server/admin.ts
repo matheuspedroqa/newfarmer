@@ -103,6 +103,7 @@ export async function getSubscriberDetail(db: Db, userId: number) {
   const subscription = sub && {
     status: sub.status, currency: sub.currency, amount: sub.amount, currentPeriodEnd: sub.currentPeriodEnd,
     cancelAtPeriodEnd: sub.cancelAtPeriodEnd, startedAt: sub.startedAt, canceledAt: sub.canceledAt,
+    cancelReason: sub.cancelReason, cancelDetails: sub.cancelDetails,
   };
   const farm = await getFarm(db, userId);
   return {

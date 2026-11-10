@@ -363,7 +363,13 @@
     "deleteHelp": "Apaga para sempre a sua conta, seus animais, plantações e diário. Não dá para desfazer. Se quiser guardar uma cópia, baixe seus dados antes.",
     "deleteConfirm": "Entendo que a conta e os dados serão apagados para sempre",
     "deletePassword": "Sua senha",
-    "deleteButton": "Apagar minha conta"
+    "deleteButton": "Apagar minha conta",
+    "tabsLabel": "Seções do perfil",
+    "tabData": "Meus dados",
+    "tabPreferences": "Preferências",
+    "tabSecurity": "Segurança",
+    "tabSubscription": "Assinatura",
+    "cookiesTitle": "Cookies"
   },
   "seasons": {
     "summer": "Verão",
@@ -739,13 +745,18 @@
     "past_due": "Pagamento pendente",
     "canceled": "Cancelada",
     "none": "Sem assinatura",
-    "nextCharge": "Próxima cobrança: {date}",
-    "accessUntil": "Acesso até {date}",
-    "manage": "Gerenciar ou cancelar",
+    "manage": "Gerenciar pagamento",
     "subscribe": "Assinar",
     "owner": "Conta do dono: sem cobrança",
     "paused": "Pausada",
-    "pausedNote": "Sua assinatura está pausada e não há cobrança. Fale com o suporte para retomar."
+    "pausedNote": "Sua assinatura está pausada e não há cobrança. Fale com o suporte para retomar.",
+    "since": "Assinante desde",
+    "price": "Valor",
+    "perMonth": "{price}/mês",
+    "nextChargeLabel": "Próxima cobrança",
+    "accessUntilLabel": "Acesso até",
+    "cancel": "Cancelar assinatura",
+    "cancelScheduled": "Cancelamento pedido. Você continua com acesso até {date} e não será cobrado de novo."
   },
   "admin": {
     "title": "Admin",
@@ -881,7 +892,8 @@
     "sourceUnknown": "Sem estatística",
     "entry_home": "Página inicial",
     "entry_guide": "O que plantar",
-    "entry_other": "Outra página"
+    "entry_other": "Outra página",
+    "cancelReason": "Motivo do cancelamento"
   },
   "contact": {
     "footer": "Contato",
@@ -941,5 +953,23 @@
     "choose": "Escolha o país",
     "button": "Ver o que plantar",
     "link": "O que plantar hoje no seu país"
+  },
+  "cancel": {
+    "title": "Cancelar assinatura",
+    "intro": "Que pena ver você ir. Conte por que está cancelando: isso ajuda a melhorar o NewFarmer.",
+    "keepAccess": "Você continua com acesso até {date} e não será cobrado de novo.",
+    "reasonLabel": "Por que você quer cancelar?",
+    "reasons": {
+      "price": "Está caro para mim",
+      "notUsing": "Não estou usando",
+      "missingFeatures": "Falta algo de que preciso",
+      "otherApp": "Vou usar outro app ou outro jeito",
+      "technical": "Tive problemas técnicos",
+      "other": "Outro motivo"
+    },
+    "detailsLabel": "Conte mais",
+    "detailsHelp": "Opcional, menos em \"Outro motivo\". Até 1.000 caracteres.",
+    "confirm": "Confirmar cancelamento",
+    "back": "Voltar, quero continuar assinando"
   }
 }

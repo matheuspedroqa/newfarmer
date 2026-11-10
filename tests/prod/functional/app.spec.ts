@@ -71,7 +71,7 @@ test.describe("app do assinante (conta A)", () => {
   });
 
   test("Perfil: idioma, modo noturno e e-mails de novidades ficam salvos", async () => {
-    await page.goto("/profile");
+    await page.goto("/profile/preferences");
     await page.getByLabel("English").check();
     await page.getByRole("button", { name: "Salvar idioma" }).click();
     await expect(page.getByRole("button", { name: "EN", exact: true })).toHaveAttribute("aria-pressed", "true");
@@ -114,7 +114,7 @@ test.describe("app do assinante (conta A)", () => {
   test("Perfil: trocar a senha exige a atual correta; a sessão atual continua", async () => {
     const a = userOf("paidA");
     const next = `${a.password}x`;
-    await page.goto("/profile");
+    await page.goto("/profile/security");
     await page.getByLabel("Senha atual").fill("senha-errada-123");
     await page.getByLabel("Nova senha", { exact: true }).fill(next);
     await page.getByLabel("Confirmar nova senha").fill(next);
