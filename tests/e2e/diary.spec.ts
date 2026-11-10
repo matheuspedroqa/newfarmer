@@ -41,11 +41,11 @@ test("diário do animal: anotar, ver no painel e apagar", async ({ page }) => {
   await expect(page.getByText("Nenhuma anotação ainda.")).toBeVisible();
 });
 
-test("a ficha continua sendo a aba padrão do animal", async ({ page }) => {
+test("a Visão geral continua sendo a aba padrão do animal", async ({ page }) => {
   await accountWithCows(page);
   await page.goto("/animals/cows");
   await expect(page.getByRole("heading", { name: "Raças" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Ficha" })).toHaveAttribute("aria-current", "page");
+  await expect(page.getByRole("link", { name: "Visão geral" })).toHaveAttribute("aria-current", "page");
 });
 
 test("anotações de um animal tirado do MyFarm continuam acessíveis pelo Painel", async ({ page }) => {

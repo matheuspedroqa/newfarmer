@@ -19,6 +19,8 @@ import { listDiary } from "@/server/diary";
 import { getFarm } from "@/server/farm";
 
 const SEASONS: Season[] = ["summer", "autumn", "winter", "spring"];
+const GUIDE_TABS = ["overview", "habitat", "feeding", "health", "breeding", "welfare"] as const;
+type GuideTab = (typeof GUIDE_TABS)[number];
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
@@ -49,6 +51,8 @@ export default async function AnimalPage({
   const current = seasonFor(new Date().getMonth() + 1, user.hemisphere);
   const tx = (v: Text) => v[locale];
   const diary = showDiary ? await listDiary(db, user.id, { animalId: id as AnimalId }) : [];
+  const tab: GuideTab = (GUIDE_TABS as readonly string[]).includes(sp.tab ?? "") ? (sp.tab as GuideTab) : "overview";
+  const tabHref = (g: GuideTab | "diary") => (g === "overview" ? `/animals/${id}` : `/animals/${id}?tab=${g}`);
 
   return (
     <section className="space-y-8">
@@ -70,8 +74,8 @@ export default async function AnimalPage({
       <h1 className="font-display text-4xl font-bold">{t(`animals.${id}`)}</h1>
       <nav className="flex gap-2 overflow-x-auto border-b border-border" aria-label={t(`animals.${id}`)}>
         {[
-          { href: `/animals/${id}`, label: t("diary.tabManual"), active: !showDiary },
-          { href: `/animals/${id}?tab=diary`, label: t("diary.tabDiary"), active: showDiary },
+          ...GUIDE_TABS.map((g) => ({ href: tabHref(g), label: t(`animalPage.tabs.${g}`), active: !showDiary && tab === g })),
+          { href: tabHref("diary"), label: t("diary.tabDiary"), active: showDiary },
         ].map((tab) => (
           <Link
             key={tab.href}
@@ -115,6 +119,8 @@ export default async function AnimalPage({
         <p className="text-muted">{t("animalPage.noContent")}</p>
       ) : (
         <>
+          {tab === "overview" && (
+            <>
           <p className="max-w-3xl text-lg">{tx(content.summary)}</p>
 
           <CountryNotes notes={content.countryNotes} countryCode={user.countryCode} />
@@ -162,21 +168,34 @@ export default async function AnimalPage({
             </div>
           </section>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <section>
-              <h2 className="font-display text-2xl font-bold">{t("animalPage.feeding")}</h2>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                {content.feeding.map((f, i) => <li key={i}>{tx(f)}</li>)}
-              </ul>
-            </section>
-            <section>
-              <h2 className="font-display text-2xl font-bold">{t("animalPage.healthCare")}</h2>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                {content.healthCare.map((h, i) => <li key={i}>{tx(h)}</li>)}
-              </ul>
-            </section>
-          </div>
-
+            </>
+          )}
+          {tab === "habitat" && (
+            <>
+              <Facts testId="habitat-facts" title={t("animalPage.habitat")} facts={content.habitat.facts.map((f) => [tx(f.label), tx(f.value)])} />
+              <List title={t("animalPage.habitatTips")} items={content.habitat.tips.map(tx)} />
+              {(
+                <section data-testid="predators" className="space-y-3">
+                  <h2 className="font-display text-2xl font-bold">{t("animalPage.predators")}</h2>
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
+                    {content.predators.threats.map((p, i) => (
+                      <article key={i} className="rounded-2xl bg-surface p-4 ring-1 ring-border">
+                        <p className="font-bold">{tx(p.name)}</p>
+                        <p className="mt-1 text-sm">{tx(p.signs)}</p>
+                      </article>
+                    ))}
+                  </div>
+                  <List title={t("animalPage.protection")} items={content.predators.protection.map(tx)} level={3} />
+                </section>
+              )}
+            </>
+          )}
+          {tab === "feeding" && (
+          <List title={t("animalPage.feeding")} items={content.feeding.map(tx)} />
+          )}
+          {tab === "health" && (
+            <>
+          <List title={t("animalPage.healthCare")} items={content.healthCare.map(tx)} />
           <section className="space-y-3">
             <h2 className="font-display text-2xl font-bold">{t("animalPage.diseases")}</h2>
             <VetWarning />
@@ -192,9 +211,69 @@ export default async function AnimalPage({
             ))}
           </section>
 
+            </>
+          )}
+          {tab === "breeding" && (
+            <>
+              <Facts testId="breeding-facts" title={t("animalPage.breeding")} facts={content.reproduction.facts.map((f) => [tx(f.label), tx(f.value)])} />
+              <List title={t("animalPage.breedingTips")} items={content.reproduction.tips.map(tx)} />
+            </>
+          )}
+          {tab === "welfare" && (
+            <>
+              <section data-testid="routine">
+                <h2 className="font-display text-2xl font-bold">{t("animalPage.routine")}</h2>
+                <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-3">
+                  {(["daily", "weekly", "monthly"] as const).map((k) => (
+                    <article key={k} className="rounded-2xl bg-surface p-4 ring-1 ring-border">
+                      <p className="font-bold">{t(`animalPage.${k}`)}</p>
+                      <ul className="mt-1 list-disc space-y-1 pl-5 text-sm">
+                        {content.welfare[k].map((x, i) => <li key={i}>{tx(x)}</li>)}
+                      </ul>
+                    </article>
+                  ))}
+                </div>
+              </section>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <List title={t("animalPage.happy")} items={content.welfare.happy.map(tx)} />
+                <List title={t("animalPage.stressSigns")} items={content.welfare.stressSigns.map(tx)} />
+              </div>
+              <List title={t("animalPage.handling")} items={content.welfare.handling.map(tx)} />
+            </>
+          )}
+
           <SourcesList sources={content.sources} />
         </>
       )}
+    </section>
+  );
+}
+
+function List({ title, items, level = 2 }: { title: string; items: string[]; level?: 2 | 3 }) {
+  const H = level === 2 ? "h2" : "h3";
+  return (
+    <section>
+      <H className={`font-display font-bold ${level === 2 ? "text-2xl" : "text-xl"}`}>{title}</H>
+      <ul className="mt-2 list-disc space-y-1 pl-5">
+        {items.map((x, i) => <li key={i}>{x}</li>)}
+      </ul>
+    </section>
+  );
+}
+
+/** Números-chave em cartões ("Ninhos" → "1 para cada 4–5 galinhas"). */
+function Facts({ title, facts, testId }: { title: string; facts: [string, string][]; testId: string }) {
+  return (
+    <section>
+      <h2 className="font-display text-2xl font-bold">{title}</h2>
+      <dl data-testid={testId} className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
+        {facts.map(([label, value]) => (
+          <div key={label} className="rounded-2xl bg-soft p-4">
+            <dt className="text-sm font-semibold text-accent">{label}</dt>
+            <dd className="mt-1 font-bold">{value}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

@@ -429,7 +429,28 @@
     "notInFarm": "Este animal não está no seu MyFarm. Suas anotações continuam aqui.",
     "emptyTitle": "Você ainda não tem animais",
     "emptyText": "Escolha seus animais no MyFarm para ver as fichas e o diário.",
-    "addAnimal": "＋ Adicionar animal"
+    "addAnimal": "＋ Adicionar animal",
+    "tabs": {
+      "overview": "Visão geral",
+      "habitat": "Habitat e proteção",
+      "feeding": "Alimentação",
+      "health": "Saúde",
+      "breeding": "Reprodução",
+      "welfare": "Bem-estar e manejo"
+    },
+    "habitat": "Como montar o habitat",
+    "habitatTips": "Dicas para o abrigo",
+    "predators": "Predadores: quem ataca e o sinal que deixa",
+    "protection": "Como proteger",
+    "breeding": "Reprodução em números",
+    "breedingTips": "Cuidados em cada fase",
+    "routine": "Rotina de manejo",
+    "daily": "Todo dia",
+    "weekly": "Toda semana",
+    "monthly": "Todo mês",
+    "happy": "O que deixa o animal feliz",
+    "stressSigns": "Sinais de estresse ou doença",
+    "handling": "Como pegar e manusear"
   },
   "cropPage": {
     "groups": "Plantações por tipo",
@@ -449,7 +470,6 @@
     "inYourCountry": "No seu país: {country}"
   },
   "diary": {
-    "tabManual": "Ficha",
     "tabDiary": "Diário",
     "title": "Diário: {animal}",
     "date": "Data",

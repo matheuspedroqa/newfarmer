@@ -451,6 +451,18 @@
     {
       "title": "Engormix — Manejo de patos Pekin e Muscovy no calor",
       "url": "https://www.engormix.com/mbr-724425/darofu"
+    },
+    {
+      "title": "Cornell University Duck Research Laboratory — Duck Housing and Management",
+      "url": "https://www.vet.cornell.edu/animal-health-diagnostic-center/programs/duck-research-laboratory/duck-housing-and-management"
+    },
+    {
+      "title": "University of Maryland Extension — Prevention of Predation (small poultry flocks)",
+      "url": "https://extension.umd.edu/resource/prevention-predation"
+    },
+    {
+      "title": "MSD Veterinary Manual — Laying and Reproduction in Backyard Poultry",
+      "url": "https://www.msdvetmanual.com/exotic-and-laboratory-animals/backyard-poultry/laying-and-reproduction-in-backyard-poultry"
     }
   ],
   "countryNotes": {
@@ -841,5 +853,299 @@
         }
       ]
     }
+  },
+  "habitat": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Abrigo para a noite",
+          "en": "Night shelter",
+          "es": "Refugio nocturno"
+        },
+        "value": {
+          "pt": "Cerca de 0,3 m² por pato",
+          "en": "About 0.3 m² per duck",
+          "es": "Unos 0,3 m² por pato"
+        }
+      },
+      {
+        "label": {
+          "pt": "Área externa",
+          "en": "Outdoor area",
+          "es": "Área exterior"
+        },
+        "value": {
+          "pt": "Pelo menos 1,4 m² por pato; mais se não sai para o pasto",
+          "en": "At least 1.4 m² per duck; more if they don't get out to pasture",
+          "es": "Al menos 1,4 m² por pato; más si no sale al pasto"
+        }
+      },
+      {
+        "label": {
+          "pt": "Bebedouro",
+          "en": "Drinker",
+          "es": "Bebedero"
+        },
+        "value": {
+          "pt": "5 cm de borda por pato, fundo o bastante para mergulhar a cabeça",
+          "en": "5 cm of edge per duck, deep enough to dip the whole head",
+          "es": "5 cm de borde por pato, hondo para meter toda la cabeza"
+        }
+      },
+      {
+        "label": {
+          "pt": "Luz para botar",
+          "en": "Light for laying",
+          "es": "Luz para poner"
+        },
+        "value": {
+          "pt": "14 a 17 horas por dia",
+          "en": "14 to 17 hours a day",
+          "es": "14 a 17 horas al día"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "Abrigo baixo, com porta larga e rampa suave: pato não usa poleiro e dorme no chão.",
+        "en": "A low shelter with a wide door and a gentle ramp: ducks don't perch and sleep on the floor.",
+        "es": "Refugio bajo, con puerta ancha y rampa suave: el pato no usa palo y duerme en el suelo."
+      },
+      {
+        "pt": "Muita palha seca para dormir e água longe da cama, sobre brita ou ralo.",
+        "en": "Plenty of dry straw to sleep on and water away from the bedding, over gravel or a drain.",
+        "es": "Mucha paja seca para dormir y el agua lejos de la cama, sobre grava o un desagüe."
+      },
+      {
+        "pt": "Ventilação no alto: patos soltam muita umidade ao respirar.",
+        "en": "Ventilation up high: ducks breathe out a lot of moisture.",
+        "es": "Ventilación en lo alto: los patos exhalan mucha humedad."
+      },
+      {
+        "pt": "Bacia ou laguinho para banho, com água trocada sempre, e sombra no calor.",
+        "en": "A tub or small pond for bathing, with water changed often, and shade in heat.",
+        "es": "Barreño o estanque para bañarse, con agua cambiada a menudo, y sombra con calor."
+      }
+    ]
+  },
+  "predators": {
+    "threats": [
+      {
+        "name": {
+          "pt": "Raposa, coiote e cachorro",
+          "en": "Fox, coyote and dog",
+          "es": "Zorro, coyote y perro"
+        },
+        "signs": {
+          "pt": "Patos somem à noite, ficam penas; cachorro deixa vários mortos.",
+          "en": "Ducks vanish at night, leaving feathers; dogs leave several dead.",
+          "es": "Los patos desaparecen de noche y quedan plumas; el perro deja varios muertos."
+        }
+      },
+      {
+        "name": {
+          "pt": "Guaxinim, marta e visom",
+          "en": "Raccoon, marten and mink",
+          "es": "Mapache, marta y visón"
+        },
+        "signs": {
+          "pt": "Cabeças arrancadas e ataques perto da água, ovos quebrados.",
+          "en": "Heads torn off and attacks near the water, broken eggs.",
+          "es": "Cabezas arrancadas y ataques junto al agua, huevos rotos."
+        }
+      },
+      {
+        "name": {
+          "pt": "Gavião, coruja e ratos",
+          "en": "Hawk, owl and rats",
+          "es": "Gavilán, búho y ratas"
+        },
+        "signs": {
+          "pt": "Somem patinhos, sobretudo os soltos ou perto do lago.",
+          "en": "Ducklings disappear, especially loose ones or near the pond.",
+          "es": "Desaparecen patitos, sobre todo los sueltos o cerca del estanque."
+        }
+      }
+    ],
+    "protection": [
+      {
+        "pt": "Feche os patos todas as noites: acostume-os a entrar com um pouco de ração no fim da tarde.",
+        "en": "Shut ducks in every night: train them to go in with a little feed in the late afternoon.",
+        "es": "Encierra los patos cada noche: acostúmbralos a entrar con un poco de pienso al atardecer."
+      },
+      {
+        "pt": "Tela soldada de malha 12 mm, enterrada 30 a 45 cm, e cobertura no piquete dos patinhos.",
+        "en": "Welded mesh with 12 mm holes, buried 30 to 45 cm deep, and a covered run for ducklings.",
+        "es": "Malla soldada de 12 mm, enterrada 30 a 45 cm, y corral cubierto para los patitos."
+      },
+      {
+        "pt": "Ração guardada fechada e controle de ratos.",
+        "en": "Feed stored sealed and rats controlled.",
+        "es": "Pienso guardado cerrado y control de ratas."
+      }
+    ]
+  },
+  "reproduction": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Primeiro ovo",
+          "en": "First egg",
+          "es": "Primer huevo"
+        },
+        "value": {
+          "pt": "Por volta de 5 a 6 meses",
+          "en": "Around 5 to 6 months",
+          "es": "Hacia los 5 a 6 meses"
+        }
+      },
+      {
+        "label": {
+          "pt": "Incubação",
+          "en": "Incubation",
+          "es": "Incubación"
+        },
+        "value": {
+          "pt": "28 dias (pato-do-mato/Muscovy: cerca de 35)",
+          "en": "28 days (Muscovy: about 35)",
+          "es": "28 días (pato criollo/Muscovy: unos 35)"
+        }
+      },
+      {
+        "label": {
+          "pt": "Machos",
+          "en": "Drakes",
+          "es": "Machos"
+        },
+        "value": {
+          "pt": "1 para 4 a 6 patas",
+          "en": "1 per 4 to 6 ducks",
+          "es": "1 por cada 4 a 6 patas"
+        }
+      },
+      {
+        "label": {
+          "pt": "Patinhos",
+          "en": "Ducklings",
+          "es": "Patitos"
+        },
+        "value": {
+          "pt": "30 °C no 1º dia, baixando até cerca de 15 °C com 4 semanas",
+          "en": "30 °C on day 1, lowering to about 15 °C by 4 weeks",
+          "es": "30 °C el 1.er día, bajando hasta unos 15 °C a las 4 semanas"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "Macho demais machuca as patas: mantenha a proporção ou separe os machos.",
+        "en": "Too many drakes injure the ducks: keep the ratio or separate the males.",
+        "es": "Demasiados machos lastiman a las patas: mantén la proporción o separa los machos."
+      },
+      {
+        "pt": "Patas botam de madrugada: solte o grupo só no meio da manhã para os ovos ficarem no abrigo.",
+        "en": "Ducks lay in the early morning: let them out mid-morning so eggs stay in the shelter.",
+        "es": "Las patas ponen de madrugada: suéltalas a media mañana para que los huevos queden en el refugio."
+      },
+      {
+        "pt": "Patinhos: água só para beber até terem penas de verdade; antes disso molham, esfriam e podem afogar.",
+        "en": "Ducklings: drinking water only until they have real feathers; before that they get soaked, chilled and can drown.",
+        "es": "Patitos: agua solo para beber hasta tener plumas de verdad; antes se mojan, se enfrían y pueden ahogarse."
+      },
+      {
+        "pt": "Ração para patos ou levedura de cerveja para garantir niacina e pernas fortes.",
+        "en": "Duck feed or brewer's yeast to provide niacin for strong legs.",
+        "es": "Pienso para patos o levadura de cerveza para aportar niacina y patas fuertes."
+      }
+    ]
+  },
+  "welfare": {
+    "daily": [
+      {
+        "pt": "Soltar de manhã e fechar ao anoitecer.",
+        "en": "Let them out in the morning and shut them in at dusk.",
+        "es": "Soltarlos por la mañana y encerrarlos al anochecer."
+      },
+      {
+        "pt": "Água limpa funda para mergulhar a cabeça e ração; recolher os ovos.",
+        "en": "Clean, deep water to dip the head and feed; collect the eggs.",
+        "es": "Agua limpia y honda para meter la cabeza y pienso; recoger los huevos."
+      }
+    ],
+    "weekly": [
+      {
+        "pt": "Trocar a palha molhada e lavar bacias e bebedouros.",
+        "en": "Replace wet straw and wash tubs and drinkers.",
+        "es": "Cambiar la paja mojada y lavar barreños y bebederos."
+      },
+      {
+        "pt": "Conferir tela, portas e trincos.",
+        "en": "Check mesh, doors and latches.",
+        "es": "Revisar malla, puertas y cierres."
+      }
+    ],
+    "monthly": [
+      {
+        "pt": "Ver pés (calos e cortes) e penas: pato sem banho fica com penas sujas e sem impermeabilidade.",
+        "en": "Check feet (calluses and cuts) and feathers: ducks without bathing water get dirty, non-waterproof plumage.",
+        "es": "Revisar patas (callos y cortes) y plumas: sin agua para bañarse, el plumaje se ensucia y pierde impermeabilidad."
+      },
+      {
+        "pt": "Limpeza geral do abrigo e controle de ratos.",
+        "en": "Deep-clean the shelter and control rats.",
+        "es": "Limpieza general del refugio y control de ratas."
+      }
+    ],
+    "happy": [
+      {
+        "pt": "Água para banhar e mergulhar a cabeça.",
+        "en": "Water to bathe in and dip the head.",
+        "es": "Agua para bañarse y meter la cabeza."
+      },
+      {
+        "pt": "Procurar lesmas, insetos e verduras no gramado.",
+        "en": "Foraging for slugs, insects and greens in the grass.",
+        "es": "Buscar babosas, insectos y verduras en el césped."
+      },
+      {
+        "pt": "Grupo: comece com 4 a 6 patos.",
+        "en": "A group: start with 4 to 6 ducks.",
+        "es": "Grupo: empieza con 4 a 6 patos."
+      }
+    ],
+    "stressSigns": [
+      {
+        "pt": "Mancando ou sentado o tempo todo: pés machucados ou falta de niacina.",
+        "en": "Limping or sitting all the time: injured feet or lack of niacin.",
+        "es": "Cojera o sentado todo el tiempo: patas lastimadas o falta de niacina."
+      },
+      {
+        "pt": "Olhos sujos ou com espuma: falta água para mergulhar a cabeça.",
+        "en": "Crusty or foamy eyes: not enough water to dip the head.",
+        "es": "Ojos sucios o con espuma: falta agua para meter la cabeza."
+      },
+      {
+        "pt": "Bico aberto e asas afastadas no calor; isolado e sem comer.",
+        "en": "Open bill and wings held out in heat; alone and off feed.",
+        "es": "Pico abierto y alas separadas con calor; aislado y sin comer."
+      }
+    ],
+    "handling": [
+      {
+        "pt": "Conduza o grupo devagar, com os braços abertos; pato segue o bando.",
+        "en": "Herd the group slowly with your arms out; ducks follow the flock.",
+        "es": "Guía al grupo despacio con los brazos abiertos; el pato sigue al grupo."
+      },
+      {
+        "pt": "Segure pelo corpo, com as asas fechadas junto a você; nunca pelas pernas ou pelo pescoço, que se machucam fácil.",
+        "en": "Hold by the body with the wings folded against you; never by the legs or neck, which injure easily.",
+        "es": "Sujétalo por el cuerpo con las alas plegadas contra ti; nunca por las patas ni el cuello, que se lastiman fácil."
+      },
+      {
+        "pt": "Lave as mãos depois de mexer em patos e patinhos (Salmonella).",
+        "en": "Wash your hands after handling ducks and ducklings (Salmonella).",
+        "es": "Lávate las manos después de tocar patos y patitos (Salmonella)."
+      }
+    ]
   }
 }

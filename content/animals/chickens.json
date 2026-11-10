@@ -455,6 +455,30 @@
     {
       "title": "Embrapa Meio-Norte — Instalações e conforto térmico para aves caipiras (Prosa Rural, 2020)",
       "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/1124118"
+    },
+    {
+      "title": "Utah State University Extension — Housing Backyard Chickens",
+      "url": "https://extension.usu.edu/poultry/research/housing-backyard-chickens"
+    },
+    {
+      "title": "University of Maryland Extension — Prevention of Predation (small poultry flocks)",
+      "url": "https://extension.umd.edu/resource/prevention-predation"
+    },
+    {
+      "title": "MSD Veterinary Manual — Laying and Reproduction in Backyard Poultry",
+      "url": "https://www.msdvetmanual.com/exotic-and-laboratory-animals/backyard-poultry/laying-and-reproduction-in-backyard-poultry"
+    },
+    {
+      "title": "University of Wisconsin–Madison Extension — Life Cycle of a Laying Hen",
+      "url": "https://livestock.extension.wisc.edu/articles/life-cycle-of-a-laying-hen"
+    },
+    {
+      "title": "RSPCA Australia — What housing do I need for my chickens?",
+      "url": "https://kb.rspca.org.au/knowledge-base/what-housing-do-i-need-for-my-chickens"
+    },
+    {
+      "title": "EFSA (2023) — Welfare of laying hens on farm",
+      "url": "https://doi.org/10.2903/j.efsa.2023.7789"
     }
   ],
   "countryNotes": {
@@ -890,5 +914,409 @@
         }
       ]
     }
+  },
+  "habitat": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Espaço no galinheiro",
+          "en": "Coop floor space",
+          "es": "Espacio en el gallinero"
+        },
+        "value": {
+          "pt": "0,15–0,2 m² por galinha se ela passa o dia solta; cerca de 0,3 m² (3 por m²) se fica presa",
+          "en": "0.15–0.2 m² per hen if she spends the day outside; about 0.3 m² (3 per m²) if kept in",
+          "es": "0,15–0,2 m² por gallina si pasa el día suelta; unos 0,3 m² (3 por m²) si vive encerrada"
+        }
+      },
+      {
+        "label": {
+          "pt": "Área externa (piquete)",
+          "en": "Outdoor run",
+          "es": "Área exterior (corral)"
+        },
+        "value": {
+          "pt": "Pelo menos 0,75–1 m² por galinha; mais espaço e pasto é melhor",
+          "en": "At least 0.75–1 m² per hen; more space and grass is better",
+          "es": "Al menos 0,75–1 m² por gallina; más espacio y pasto es mejor"
+        }
+      },
+      {
+        "label": {
+          "pt": "Poleiro",
+          "en": "Perch",
+          "es": "Palo de dormir"
+        },
+        "value": {
+          "pt": "15–25 cm por ave, no máximo 90 cm de altura, barras a 36 cm uma da outra",
+          "en": "15–25 cm per bird, no higher than 90 cm, bars 36 cm apart",
+          "es": "15–25 cm por ave, a 90 cm de altura como máximo, barras separadas 36 cm"
+        }
+      },
+      {
+        "label": {
+          "pt": "Ninhos",
+          "en": "Nest boxes",
+          "es": "Nidos"
+        },
+        "value": {
+          "pt": "1 para cada 4–5 galinhas, cerca de 30 × 30 cm, a 45 cm ou mais do chão",
+          "en": "1 for every 4–5 hens, about 30 × 30 cm, 45 cm or more off the floor",
+          "es": "1 por cada 4–5 gallinas, unos 30 × 30 cm, a 45 cm o más del suelo"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "Escolha um lugar alto, que não alague, com sol de manhã e sombra à tarde.",
+        "en": "Pick high ground that never floods, with morning sun and afternoon shade.",
+        "es": "Elige un lugar alto que no se inunde, con sol por la mañana y sombra por la tarde."
+      },
+      {
+        "pt": "Ventilação no alto das paredes, perto do telhado, sem vento direto nas aves: umidade e amônia da cama causam doenças respiratórias e, no frio, queimadura na crista.",
+        "en": "Vents high on the walls, near the roof, with no draught on the birds: moisture and ammonia from the bedding cause breathing problems and, in the cold, frostbitten combs.",
+        "es": "Ventilación en lo alto de las paredes, cerca del techo, sin corriente sobre las aves: la humedad y el amoníaco de la cama causan problemas respiratorios y, con frío, quemaduras en la cresta."
+      },
+      {
+        "pt": "Cama seca no chão (maravalha, casca de arroz ou palha); troque logo as partes molhadas perto do bebedouro.",
+        "en": "Dry bedding on the floor (wood shavings, rice hulls or straw); replace wet patches near the drinker right away.",
+        "es": "Cama seca en el suelo (viruta, cascarilla de arroz o paja); cambia enseguida las partes mojadas junto al bebedero."
+      },
+      {
+        "pt": "Ninhos no canto mais escuro e calmo, com palha limpa; poleiros mais altos que os ninhos, para elas não dormirem dentro deles.",
+        "en": "Nest boxes in the darkest, quietest corner with clean straw; perches higher than the nests so hens don't sleep in them.",
+        "es": "Nidos en el rincón más oscuro y tranquilo, con paja limpia; palos más altos que los nidos para que no duerman dentro."
+      },
+      {
+        "pt": "Comedouro e bebedouro na altura do dorso das aves, cobertos, para não sujar nem atrair aves silvestres e ratos.",
+        "en": "Feeder and drinker at the birds' back height and under cover, so they stay clean and don't attract wild birds or rats.",
+        "es": "Comedero y bebedero a la altura del lomo de las aves y bajo techo, para que no se ensucien ni atraigan aves silvestres o ratas."
+      },
+      {
+        "pt": "Deixe um canto com terra seca ou areia para o banho de terra, e uma porta grande para você limpar com facilidade.",
+        "en": "Leave a corner of dry soil or sand for dust bathing, and a door big enough for you to clean easily.",
+        "es": "Deja un rincón con tierra seca o arena para el baño de tierra, y una puerta grande para limpiar con facilidad."
+      }
+    ]
+  },
+  "predators": {
+    "threats": [
+      {
+        "name": {
+          "pt": "Raposa, coiote e cachorro",
+          "en": "Fox, coyote and dog",
+          "es": "Zorro, coyote y perro"
+        },
+        "signs": {
+          "pt": "Aves somem, sobram poucas penas. Cachorro costuma matar várias e deixar os corpos perto.",
+          "en": "Birds go missing with few feathers left. Dogs often kill several and leave the bodies nearby.",
+          "es": "Desaparecen aves y quedan pocas plumas. El perro suele matar varias y dejar los cuerpos cerca."
+        }
+      },
+      {
+        "name": {
+          "pt": "Gavião (de dia) e coruja (à noite)",
+          "en": "Hawk (by day) and owl (by night)",
+          "es": "Gavilán (de día) y búho (de noche)"
+        },
+        "signs": {
+          "pt": "Somem aves, principalmente pintinhos e frangas, mesmo dentro de piquete sem cobertura.",
+          "en": "Birds disappear, mostly chicks and young hens, even inside an uncovered run.",
+          "es": "Desaparecen aves, sobre todo pollitos y pollitas, incluso dentro de un corral sin techo."
+        }
+      },
+      {
+        "name": {
+          "pt": "Guaxinim e marta",
+          "en": "Raccoon and marten",
+          "es": "Mapache y marta"
+        },
+        "signs": {
+          "pt": "Cabeça ou pernas arrancadas pela tela e cascas de ovo espalhadas.",
+          "en": "Heads or legs pulled through the mesh and eggshells left behind.",
+          "es": "Cabezas o patas arrancadas a través de la malla y cáscaras de huevo esparcidas."
+        }
+      },
+      {
+        "name": {
+          "pt": "Gambá e cangambá",
+          "en": "Opossum and skunk",
+          "es": "Zarigüeya y zorrillo"
+        },
+        "signs": {
+          "pt": "Somem ovos e pintinhos durante a noite.",
+          "en": "Eggs and chicks vanish during the night.",
+          "es": "Desaparecen huevos y pollitos durante la noche."
+        }
+      },
+      {
+        "name": {
+          "pt": "Furão, doninha e visom",
+          "en": "Weasel, stoat and mink",
+          "es": "Comadreja, armiño y visón"
+        },
+        "signs": {
+          "pt": "Várias aves mortas de uma vez, com feridas na cabeça, no pescoço ou perto da cloaca e penas espalhadas.",
+          "en": "Several birds killed at once, with wounds on the head, neck or near the vent and scattered feathers.",
+          "es": "Varias aves muertas a la vez, con heridas en la cabeza, el cuello o junto a la cloaca y plumas esparcidas."
+        }
+      },
+      {
+        "name": {
+          "pt": "Ratos e cobras",
+          "en": "Rats and snakes",
+          "es": "Ratas y serpientes"
+        },
+        "signs": {
+          "pt": "Ovos e pintinhos somem sem deixar rastro; rato também morde as pernas das aves.",
+          "en": "Eggs and chicks disappear without a trace; rats also bite the birds' legs.",
+          "es": "Huevos y pollitos desaparecen sin rastro; las ratas también muerden las patas de las aves."
+        }
+      }
+    ],
+    "protection": [
+      {
+        "pt": "Feche as aves no galinheiro todas as noites: é quando acontece a maioria dos ataques.",
+        "en": "Shut the birds in the coop every night: that is when most attacks happen.",
+        "es": "Encierra las aves en el gallinero todas las noches: es cuando ocurren la mayoría de los ataques."
+      },
+      {
+        "pt": "Use tela soldada de malha 12 mm (não tela de galinheiro comum, que guaxinim e cachorro rasgam), presa com parafuso e arruela, e não deixe frestas maiores que 6 mm onde elas dormem.",
+        "en": "Use welded mesh with 12 mm holes (not ordinary chicken wire, which raccoons and dogs tear), fixed with screws and washers, and leave no gaps over 6 mm where they roost.",
+        "es": "Usa malla soldada de 12 mm (no la tela de gallinero común, que mapaches y perros rompen), sujeta con tornillos y arandelas, y no dejes rendijas de más de 6 mm donde duermen."
+      },
+      {
+        "pt": "Enterre a tela 30 a 45 cm em volta do galinheiro contra quem cava.",
+        "en": "Bury the mesh 30 to 45 cm deep around the coop against diggers.",
+        "es": "Entierra la malla 30 a 45 cm alrededor del gallinero contra los que cavan."
+      },
+      {
+        "pt": "Cubra o piquete com tela ou rede contra gavião e coruja e contra quem escala.",
+        "en": "Cover the run with mesh or netting against hawks, owls and climbers.",
+        "es": "Cubre el corral con malla o red contra gavilanes, búhos y los que trepan."
+      },
+      {
+        "pt": "Recolha os ovos todo dia, guarde a ração fechada e controle ratos com ratoeiras; luz com sensor de movimento ajuda a espantar.",
+        "en": "Collect eggs daily, keep feed sealed and control rats with snap traps; motion-sensor lights help scare predators off.",
+        "es": "Recoge los huevos cada día, guarda el pienso cerrado y controla las ratas con trampas; una luz con sensor de movimiento ayuda a ahuyentar."
+      }
+    ]
+  },
+  "reproduction": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Primeiro ovo",
+          "en": "First egg",
+          "es": "Primer huevo"
+        },
+        "value": {
+          "pt": "18 a 22 semanas de idade",
+          "en": "18 to 22 weeks of age",
+          "es": "18 a 22 semanas de edad"
+        }
+      },
+      {
+        "label": {
+          "pt": "Luz para botar bem",
+          "en": "Light for good laying",
+          "es": "Luz para poner bien"
+        },
+        "value": {
+          "pt": "14 a 16 horas por dia",
+          "en": "14 to 16 hours a day",
+          "es": "14 a 16 horas al día"
+        }
+      },
+      {
+        "label": {
+          "pt": "Incubação",
+          "en": "Incubation",
+          "es": "Incubación"
+        },
+        "value": {
+          "pt": "21 dias, a 37–38 °C",
+          "en": "21 days at 37–38 °C",
+          "es": "21 días a 37–38 °C"
+        }
+      },
+      {
+        "label": {
+          "pt": "Galo",
+          "en": "Rooster",
+          "es": "Gallo"
+        },
+        "value": {
+          "pt": "Só para ter pintinhos: 1 para cerca de 10 galinhas",
+          "en": "Only needed for chicks: 1 per about 10 hens",
+          "es": "Solo para tener pollitos: 1 por cada 10 gallinas aprox."
+        }
+      },
+      {
+        "label": {
+          "pt": "Muda de penas",
+          "en": "Moult",
+          "es": "Muda"
+        },
+        "value": {
+          "pt": "1 vez por ano, em geral no outono; dura 3–4 meses e a postura cai",
+          "en": "Once a year, usually in autumn; lasts 3–4 months and laying drops",
+          "es": "1 vez al año, por lo general en otoño; dura 3–4 meses y baja la puesta"
+        }
+      },
+      {
+        "label": {
+          "pt": "Vida produtiva",
+          "en": "Laying life",
+          "es": "Vida productiva"
+        },
+        "value": {
+          "pt": "Botam bem por 3–4 anos e vivem 6–8",
+          "en": "Lay well for 3–4 years and live 6–8",
+          "es": "Ponen bien 3–4 años y viven 6–8"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "A galinha bota sem galo: o galo só é preciso se você quer ovos férteis para tirar pintinhos.",
+        "en": "Hens lay without a rooster: you only need one if you want fertile eggs to hatch chicks.",
+        "es": "La gallina pone sin gallo: solo lo necesitas si quieres huevos fértiles para sacar pollitos."
+      },
+      {
+        "pt": "Galinha choca fica no ninho 3–4 semanas: dê a ela um ninho separado e calmo, com água e ração por perto, e marque os ovos dela para tirar os que outras botarem depois.",
+        "en": "A broody hen sits for 3–4 weeks: give her a separate, quiet nest with water and feed nearby, and mark her eggs so you can remove any laid later by others.",
+        "es": "La gallina clueca se queda en el nido 3–4 semanas: dale un nido aparte y tranquilo, con agua y pienso cerca, y marca sus huevos para retirar los que pongan otras después."
+      },
+      {
+        "pt": "Na chocadeira: ligue 2–3 dias antes para estabilizar a temperatura, vire os ovos várias vezes ao dia até o 18º dia e veja contra a luz entre o 7º e o 10º dia para tirar os inférteis.",
+        "en": "In an incubator: run it 2–3 days beforehand to stabilise the temperature, turn the eggs several times a day until day 18 and candle them between days 7 and 10 to remove infertile ones.",
+        "es": "En incubadora: enciéndela 2–3 días antes para estabilizar la temperatura, voltea los huevos varias veces al día hasta el día 18 y míralos al trasluz entre los días 7 y 10 para retirar los infértiles."
+      },
+      {
+        "pt": "Pintinhos precisam de calor (cerca de 32 °C na 1ª semana, baixando um pouco a cada semana), ração inicial e bebedouro raso até ganharem as penas, por volta de 6 semanas.",
+        "en": "Chicks need heat (about 32 °C in week 1, a little lower each week), starter feed and a shallow drinker until they are feathered, at around 6 weeks.",
+        "es": "Los pollitos necesitan calor (unos 32 °C la 1.ª semana, bajando un poco cada semana), pienso de iniciación y bebedero bajo hasta emplumar, hacia las 6 semanas."
+      },
+      {
+        "pt": "Na muda e no inverno a postura cai: é normal. Dê ração com mais proteína e evite mexer muito nelas.",
+        "en": "Laying drops during the moult and in winter: that's normal. Give higher-protein feed and avoid handling them too much.",
+        "es": "En la muda y en invierno baja la puesta: es normal. Da pienso con más proteína y evita manipularlas demasiado."
+      }
+    ]
+  },
+  "welfare": {
+    "daily": [
+      {
+        "pt": "Soltar de manhã e fechar ao anoitecer.",
+        "en": "Let them out in the morning and shut them in at dusk.",
+        "es": "Soltarlas por la mañana y encerrarlas al anochecer."
+      },
+      {
+        "pt": "Água limpa e ração; recolher os ovos.",
+        "en": "Fresh water and feed; collect the eggs.",
+        "es": "Agua limpia y pienso; recoger los huevos."
+      },
+      {
+        "pt": "Olhar cada ave: ativa, comendo, fezes normais.",
+        "en": "Look at every bird: active, eating, normal droppings.",
+        "es": "Mirar cada ave: activa, comiendo, heces normales."
+      }
+    ],
+    "weekly": [
+      {
+        "pt": "Lavar bebedouros e comedouros.",
+        "en": "Wash drinkers and feeders.",
+        "es": "Lavar bebederos y comederos."
+      },
+      {
+        "pt": "Trocar a cama molhada e a palha dos ninhos.",
+        "en": "Replace wet bedding and nest straw.",
+        "es": "Cambiar la cama mojada y la paja de los nidos."
+      },
+      {
+        "pt": "Conferir tela, portas e trincos.",
+        "en": "Check mesh, doors and latches.",
+        "es": "Revisar malla, puertas y cierres."
+      }
+    ],
+    "monthly": [
+      {
+        "pt": "Procurar piolhos e ácaros sob as asas e perto da cloaca, também à noite no poleiro.",
+        "en": "Look for lice and mites under the wings and near the vent, and at night on the perches.",
+        "es": "Buscar piojos y ácaros bajo las alas y junto a la cloaca, y de noche en los palos."
+      },
+      {
+        "pt": "Ver os pés (calos e inchaço) e o peso de cada ave.",
+        "en": "Check feet (calluses and swelling) and each bird's weight.",
+        "es": "Revisar las patas (callos e hinchazón) y el peso de cada ave."
+      },
+      {
+        "pt": "Limpeza geral do galinheiro e controle de ratos.",
+        "en": "Deep-clean the coop and control rats.",
+        "es": "Limpieza general del gallinero y control de ratas."
+      }
+    ],
+    "happy": [
+      {
+        "pt": "Ciscar e procurar comida: espalhe grãos, verduras e grama cortada no piquete.",
+        "en": "Scratching and foraging: scatter grain, greens and cut grass in the run.",
+        "es": "Escarbar y buscar comida: esparce granos, verduras y pasto cortado en el corral."
+      },
+      {
+        "pt": "Banho de terra em um canto seco: é assim que elas limpam as penas e se livram de parasitas.",
+        "en": "Dust bathing in a dry corner: it's how they clean their feathers and get rid of parasites.",
+        "es": "Baño de tierra en un rincón seco: así limpian las plumas y se libran de parásitos."
+      },
+      {
+        "pt": "Dormir no alto, no poleiro, e botar num ninho escuro e reservado.",
+        "en": "Sleeping up high on a perch and laying in a dark, private nest.",
+        "es": "Dormir en alto, en el palo, y poner en un nido oscuro y apartado."
+      },
+      {
+        "pt": "Companhia: galinha é ave de bando, tenha pelo menos 3.",
+        "en": "Company: chickens are flock birds, keep at least 3.",
+        "es": "Compañía: la gallina es ave de grupo, ten al menos 3."
+      }
+    ],
+    "stressSigns": [
+      {
+        "pt": "Bico aberto e asas afastadas do corpo: calor demais.",
+        "en": "Open beak and wings held away from the body: too hot.",
+        "es": "Pico abierto y alas separadas del cuerpo: demasiado calor."
+      },
+      {
+        "pt": "Bicando as penas umas das outras: falta de espaço, de atividade ou de proteína.",
+        "en": "Pecking each other's feathers: too little space, activity or protein.",
+        "es": "Se picotean las plumas: falta de espacio, de actividad o de proteína."
+      },
+      {
+        "pt": "Ave encolhida, de penas arrepiadas e sozinha num canto, crista pálida ou diarreia.",
+        "en": "A hunched bird with fluffed feathers alone in a corner, pale comb or diarrhoea.",
+        "es": "Ave encogida, con plumas erizadas y sola en un rincón, cresta pálida o diarrea."
+      },
+      {
+        "pt": "Queda brusca na postura fora da época de muda.",
+        "en": "A sudden drop in laying outside the moult.",
+        "es": "Caída brusca de la puesta fuera de la época de muda."
+      }
+    ],
+    "handling": [
+      {
+        "pt": "Pegue à noite, no poleiro, quando elas estão calmas; chegue devagar e sem gritar.",
+        "en": "Catch them at night on the perch, when they are calm; approach slowly and quietly.",
+        "es": "Atrápalas de noche en el palo, cuando están tranquilas; acércate despacio y sin gritar."
+      },
+      {
+        "pt": "Segure com as duas mãos sobre as asas, o corpo junto ao seu e as pernas entre os dedos; nunca pela asa ou pelo pescoço.",
+        "en": "Hold her with both hands over the wings, body against yours and legs between your fingers; never by a wing or the neck.",
+        "es": "Sujétala con las dos manos sobre las alas, el cuerpo contra el tuyo y las patas entre los dedos; nunca por un ala ni por el cuello."
+      },
+      {
+        "pt": "Lave as mãos depois de mexer nas aves.",
+        "en": "Wash your hands after handling the birds.",
+        "es": "Lávate las manos después de tocar las aves."
+      }
+    ]
   }
 }

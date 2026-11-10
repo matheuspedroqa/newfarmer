@@ -429,7 +429,28 @@
     "notInFarm": "This animal isn't in your MyFarm. Your notes are still here.",
     "emptyTitle": "You don't have any animals yet",
     "emptyText": "Pick your animals in MyFarm to see their guides and diary.",
-    "addAnimal": "＋ Add animal"
+    "addAnimal": "＋ Add animal",
+    "tabs": {
+      "overview": "Overview",
+      "habitat": "Habitat & protection",
+      "feeding": "Feeding",
+      "health": "Health",
+      "breeding": "Breeding",
+      "welfare": "Welfare & routine"
+    },
+    "habitat": "Setting up the habitat",
+    "habitatTips": "Shelter tips",
+    "predators": "Predators: who attacks and the sign they leave",
+    "protection": "How to protect",
+    "breeding": "Breeding in numbers",
+    "breedingTips": "Care at each stage",
+    "routine": "Care routine",
+    "daily": "Every day",
+    "weekly": "Every week",
+    "monthly": "Every month",
+    "happy": "What keeps them happy",
+    "stressSigns": "Signs of stress or illness",
+    "handling": "How to catch and handle"
   },
   "cropPage": {
     "groups": "Crops by type",
@@ -449,7 +470,6 @@
     "inYourCountry": "In your country: {country}"
   },
   "diary": {
-    "tabManual": "Guide",
     "tabDiary": "Diary",
     "title": "Diary: {animal}",
     "date": "Date",

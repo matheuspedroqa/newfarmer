@@ -473,6 +473,22 @@
     {
       "title": "Embrapa — Circular Técnica 52: método FAMACHA",
       "url": "https://www.infoteca.cnptia.embrapa.br/bitstream/doc/37734/1/Circular52.pdf"
+    },
+    {
+      "title": "Penn State Extension — Sheep Housing and Facilities Requirements",
+      "url": "https://extension.psu.edu/sheep-housing-and-facilities-requirements"
+    },
+    {
+      "title": "University of New Hampshire Extension — Housing and Space Guidelines for Livestock",
+      "url": "https://extension.unh.edu/resource/housing-and-space-guidelines-livestock"
+    },
+    {
+      "title": "MSD Veterinary Manual — Features of the Reproductive Cycle",
+      "url": "https://www.msdvetmanual.com/multimedia/table/features-of-the-reproductive-cycle"
+    },
+    {
+      "title": "MSD Veterinary Manual — Hormonal Control of the Estrous Cycle in Goats and Sheep",
+      "url": "https://www.msdvetmanual.com/reproductive-system/hormonal-control-of-the-estrous-cycle/hormonal-control-of-the-estrous-cycle-in-goats-and-sheep"
     }
   ],
   "countryNotes": {
@@ -889,5 +905,318 @@
         }
       ]
     }
+  },
+  "habitat": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Abrigo",
+          "en": "Shelter",
+          "es": "Refugio"
+        },
+        "value": {
+          "pt": "1,1–1,5 m² por ovelha; 1,4–1,9 m² com cordeiros",
+          "en": "1.1–1.5 m² per ewe; 1.4–1.9 m² with lambs",
+          "es": "1,1–1,5 m² por oveja; 1,4–1,9 m² con corderos"
+        }
+      },
+      {
+        "label": {
+          "pt": "Área externa",
+          "en": "Outdoor yard",
+          "es": "Patio exterior"
+        },
+        "value": {
+          "pt": "2,3–3,7 m² por ovelha",
+          "en": "2.3–3.7 m² per sheep",
+          "es": "2,3–3,7 m² por oveja"
+        }
+      },
+      {
+        "label": {
+          "pt": "Pasto",
+          "en": "Pasture",
+          "es": "Pasto"
+        },
+        "value": {
+          "pt": "800 a 1.200 m² por ovelha, com rodízio",
+          "en": "800 to 1,200 m² per sheep, rotated",
+          "es": "800 a 1.200 m² por oveja, con rotación"
+        }
+      },
+      {
+        "label": {
+          "pt": "Baias de parição",
+          "en": "Lambing pens",
+          "es": "Corrales de parto"
+        },
+        "value": {
+          "pt": "Cerca de 1 para cada 10 ovelhas",
+          "en": "About 1 for every 10 ewes",
+          "es": "Cerca de 1 por cada 10 ovejas"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "Galpão aberto de um lado, de costas para o vento, seco e bem ventilado: ovelha aguenta frio seco, mas não umidade e vento.",
+        "en": "An open-fronted shed with its back to the wind, dry and well ventilated: sheep handle dry cold, not damp and wind.",
+        "es": "Cobertizo abierto por un lado, de espaldas al viento, seco y ventilado: la oveja aguanta el frío seco, no la humedad y el viento."
+      },
+      {
+        "pt": "Piso seco ou com cama; chão molhado causa podridão do casco.",
+        "en": "Dry or bedded floor; wet ground causes foot rot.",
+        "es": "Suelo seco o con cama; el suelo mojado causa pedero."
+      },
+      {
+        "pt": "Comedouro de feno que não suje a lã e bebedouro limpo, sem gelo no inverno.",
+        "en": "A hay rack that doesn't soil the fleece and a clean drinker, ice-free in winter.",
+        "es": "Comedero de heno que no ensucie la lana y bebedero limpio, sin hielo en invierno."
+      },
+      {
+        "pt": "Um curral pequeno com corredor ajuda a vermifugar, aparar cascos e tosquiar sem estresse.",
+        "en": "A small handling pen with a race makes deworming, hoof trimming and shearing easier and calmer.",
+        "es": "Un corral pequeño con manga facilita desparasitar, recortar pezuñas y esquilar con calma."
+      }
+    ]
+  },
+  "predators": {
+    "threats": [
+      {
+        "name": {
+          "pt": "Cachorro",
+          "en": "Dog",
+          "es": "Perro"
+        },
+        "signs": {
+          "pt": "Muitas ovelhas feridas de uma vez, mordidas nas pernas traseiras, nos flancos e nas orelhas, e ovelhas exaustas.",
+          "en": "Many sheep injured at once, bites on the hind legs, flanks and ears, and exhausted sheep.",
+          "es": "Muchas ovejas heridas a la vez, mordidas en patas traseras, flancos y orejas, y ovejas agotadas."
+        }
+      },
+      {
+        "name": {
+          "pt": "Coiote e lobo",
+          "en": "Coyote and wolf",
+          "es": "Coyote y lobo"
+        },
+        "signs": {
+          "pt": "Mordida na garganta e carcaça parcialmente comida, quase sempre à noite.",
+          "en": "A bite to the throat and a partly eaten carcass, almost always at night.",
+          "es": "Mordida en la garganta y cadáver parcialmente comido, casi siempre de noche."
+        }
+      },
+      {
+        "name": {
+          "pt": "Raposa",
+          "en": "Fox",
+          "es": "Zorro"
+        },
+        "signs": {
+          "pt": "Somem cordeiros recém-nascidos.",
+          "en": "Newborn lambs go missing.",
+          "es": "Desaparecen corderos recién nacidos."
+        }
+      },
+      {
+        "name": {
+          "pt": "Aves de rapina, corvos e urubus",
+          "en": "Birds of prey, ravens and crows",
+          "es": "Rapaces, cuervos y buitres"
+        },
+        "signs": {
+          "pt": "Atacam cordeiros fracos e ovelhas caídas, começando pelos olhos.",
+          "en": "They attack weak lambs and cast ewes, starting with the eyes.",
+          "es": "Atacan corderos débiles y ovejas caídas, empezando por los ojos."
+        }
+      }
+    ],
+    "protection": [
+      {
+        "pt": "Cerca elétrica (pelo menos 90 cm em área de lobo) e recolher o rebanho à noite.",
+        "en": "Electric fencing (at least 90 cm in wolf areas) and penning the flock at night.",
+        "es": "Cerca eléctrica (al menos 90 cm en zona de lobos) y encerrar el rebaño de noche."
+      },
+      {
+        "pt": "Animais de guarda: cães pastores, lhamas ou burros.",
+        "en": "Guardian animals: livestock guardian dogs, llamas or donkeys.",
+        "es": "Animales guardianes: perros pastores, llamas o burros."
+      },
+      {
+        "pt": "Parição perto de casa ou no galpão e retirada rápida de carcaças, que atraem predadores.",
+        "en": "Lamb near the house or in the shed and remove carcasses quickly, as they attract predators.",
+        "es": "Partos cerca de casa o en el cobertizo y retirada rápida de cadáveres, que atraen depredadores."
+      }
+    ]
+  },
+  "reproduction": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Puberdade",
+          "en": "Puberty",
+          "es": "Pubertad"
+        },
+        "value": {
+          "pt": "6 a 9 meses",
+          "en": "6 to 9 months",
+          "es": "6 a 9 meses"
+        }
+      },
+      {
+        "label": {
+          "pt": "Época de cio",
+          "en": "Breeding season",
+          "es": "Época de celo"
+        },
+        "value": {
+          "pt": "Do começo do outono ao inverno; raças deslanadas de clima quente ciclam o ano todo",
+          "en": "Early autumn to winter; hair breeds in hot climates cycle all year",
+          "es": "Del inicio del otoño al invierno; las razas de pelo de clima cálido ciclan todo el año"
+        }
+      },
+      {
+        "label": {
+          "pt": "Cio",
+          "en": "Heat",
+          "es": "Celo"
+        },
+        "value": {
+          "pt": "A cada 17 dias; dura 24–36 horas",
+          "en": "Every 17 days; lasts 24–36 hours",
+          "es": "Cada 17 días; dura 24–36 horas"
+        }
+      },
+      {
+        "label": {
+          "pt": "Gestação",
+          "en": "Pregnancy",
+          "es": "Gestación"
+        },
+        "value": {
+          "pt": "144–150 dias (cerca de 5 meses)",
+          "en": "144–150 days (about 5 months)",
+          "es": "144–150 días (unos 5 meses)"
+        }
+      },
+      {
+        "label": {
+          "pt": "Cordeiros",
+          "en": "Lambs",
+          "es": "Corderos"
+        },
+        "value": {
+          "pt": "1 ou 2 por parto; gêmeos são comuns",
+          "en": "1 or 2 per birth; twins are common",
+          "es": "1 o 2 por parto; los mellizos son comunes"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "Cubra a borrega quando chegar a cerca de 2/3 do peso adulto, não só pela idade.",
+        "en": "Breed ewe lambs when they reach about two-thirds of adult weight, not just by age.",
+        "es": "Cubre la borrega cuando llegue a unos 2/3 del peso adulto, no solo por la edad."
+      },
+      {
+        "pt": "Aumente a ração no fim da gestação: o peso do cordeiro ao nascer depende disso. Ovelha que para de comer no fim da prenhez pode ter toxemia: chame o veterinário.",
+        "en": "Increase feed in late pregnancy: lamb birth weight depends on it. A ewe that stops eating in late pregnancy may have pregnancy toxaemia: call the vet.",
+        "es": "Aumenta el pienso al final de la gestación: el peso del cordero al nacer depende de ello. Una oveja que deja de comer al final de la preñez puede tener toxemia: llama al veterinario."
+      },
+      {
+        "pt": "Depois do parto, 1 a 3 dias na baia com a mãe; o cordeiro deve mamar o colostro nas primeiras horas e ter o umbigo curado com iodo.",
+        "en": "After lambing, 1 to 3 days in the pen with the mother; the lamb should drink colostrum within the first hours and have its navel dipped in iodine.",
+        "es": "Tras el parto, 1 a 3 días en el corral con la madre; el cordero debe mamar calostro en las primeras horas y curarse el ombligo con yodo."
+      },
+      {
+        "pt": "Desmame entre 2 e 3 meses, com pasto bom e água à vontade.",
+        "en": "Wean at 2 to 3 months, onto good pasture with plenty of water.",
+        "es": "Destete entre los 2 y 3 meses, con buen pasto y agua a voluntad."
+      }
+    ]
+  },
+  "welfare": {
+    "daily": [
+      {
+        "pt": "Água, pasto ou feno e sal mineral próprio para ovinos.",
+        "en": "Water, pasture or hay and sheep-specific mineral.",
+        "es": "Agua, pasto o heno y sal mineral para ovinos."
+      },
+      {
+        "pt": "Contar o rebanho e ver se alguma ovelha está caída de costas ou mancando.",
+        "en": "Count the flock and look for any sheep cast on its back or limping.",
+        "es": "Contar el rebaño y ver si alguna oveja está caída de espaldas o cojea."
+      }
+    ],
+    "weekly": [
+      {
+        "pt": "Rodar o piquete e limpar o bebedouro.",
+        "en": "Rotate the paddock and clean the drinker.",
+        "es": "Rotar el potrero y limpiar el bebedero."
+      },
+      {
+        "pt": "Olhar a cor da pálpebra (FAMACHA) nas épocas de verme.",
+        "en": "Check eyelid colour (FAMACHA) in worm season.",
+        "es": "Revisar el color del párpado (FAMACHA) en época de parásitos."
+      }
+    ],
+    "monthly": [
+      {
+        "pt": "Avaliar condição corporal pelo lombo, por baixo da lã.",
+        "en": "Assess body condition by feeling the loin under the fleece.",
+        "es": "Evaluar la condición corporal palpando el lomo bajo la lana."
+      },
+      {
+        "pt": "Ver cascos e aparar a cada 3–4 meses; tosquia 1 vez por ano na primavera.",
+        "en": "Check hooves and trim every 3–4 months; shear once a year in spring.",
+        "es": "Revisar pezuñas y recortar cada 3–4 meses; esquilar 1 vez al año en primavera."
+      }
+    ],
+    "happy": [
+      {
+        "pt": "Rebanho: ovelha sozinha entra em pânico; mantenha pelo menos 3.",
+        "en": "A flock: a lone sheep panics; keep at least 3.",
+        "es": "Rebaño: una oveja sola entra en pánico; ten al menos 3."
+      },
+      {
+        "pt": "Pastar com calma em pasto limpo e rodado.",
+        "en": "Grazing calmly on clean, rotated pasture.",
+        "es": "Pastar con calma en pasto limpio y rotado."
+      },
+      {
+        "pt": "Sombra no verão e abrigo seco contra chuva e vento.",
+        "en": "Shade in summer and dry shelter from rain and wind.",
+        "es": "Sombra en verano y refugio seco contra lluvia y viento."
+      }
+    ],
+    "stressSigns": [
+      {
+        "pt": "Afastada do rebanho, cabeça baixa, sem ruminar.",
+        "en": "Away from the flock, head down, not chewing the cud.",
+        "es": "Apartada del rebaño, cabeza baja, sin rumiar."
+      },
+      {
+        "pt": "Pálpebra pálida, barba inchada (edema sob a mandíbula) ou diarreia: verminose.",
+        "en": "Pale eyelids, a swelling under the jaw (bottle jaw) or diarrhoea: worms.",
+        "es": "Párpado pálido, hinchazón bajo la mandíbula o diarrea: parásitos."
+      },
+      {
+        "pt": "Coçando e perdendo lã, ou mancando.",
+        "en": "Rubbing and losing wool, or limping.",
+        "es": "Rascándose y perdiendo lana, o cojeando."
+      }
+    ],
+    "handling": [
+      {
+        "pt": "Conduza o rebanho junto e devagar, por um corredor; ovelha segue as outras.",
+        "en": "Move the flock together and slowly through a race; sheep follow each other.",
+        "es": "Mueve el rebaño junto y despacio por una manga; las ovejas se siguen."
+      },
+      {
+        "pt": "Segure com uma mão sob a mandíbula e a outra na anca; nunca puxe pela lã, que machuca a pele.",
+        "en": "Hold with one hand under the jaw and the other at the rump; never pull by the wool, which bruises the skin.",
+        "es": "Sujétala con una mano bajo la mandíbula y otra en la grupa; nunca tires de la lana, que lastima la piel."
+      }
+    ]
   }
 }

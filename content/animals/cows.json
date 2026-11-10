@@ -478,6 +478,18 @@
     {
       "title": "Compre Rural — Programa da raça Girolando seleciona animais mais resistentes ao calor",
       "url": "https://comprerural.com/programa-da-raca-girolando-seleciona-animais-mais-resistentes-ao-calor/"
+    },
+    {
+      "title": "University of New Hampshire Extension — Housing and Space Guidelines for Livestock",
+      "url": "https://extension.unh.edu/resource/housing-and-space-guidelines-livestock"
+    },
+    {
+      "title": "MSD Veterinary Manual — Features of the Reproductive Cycle",
+      "url": "https://www.msdvetmanual.com/multimedia/table/features-of-the-reproductive-cycle"
+    },
+    {
+      "title": "MSD Veterinary Manual — Approximate Gestation Periods",
+      "url": "https://www.msdvetmanual.com/multimedia/table/approximate-gestation-periods"
     }
   ],
   "countryNotes": {
@@ -899,5 +911,323 @@
         }
       ]
     }
+  },
+  "habitat": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Abrigo",
+          "en": "Shelter",
+          "es": "Refugio"
+        },
+        "value": {
+          "pt": "7 a 9 m² por vaca, galpão aberto de um lado",
+          "en": "7 to 9 m² per cow, an open-fronted shed",
+          "es": "7 a 9 m² por vaca, cobertizo abierto por un lado"
+        }
+      },
+      {
+        "label": {
+          "pt": "Área de exercício",
+          "en": "Exercise yard",
+          "es": "Patio"
+        },
+        "value": {
+          "pt": "9 a 12 m² por vaca",
+          "en": "9 to 12 m² per cow",
+          "es": "9 a 12 m² por vaca"
+        }
+      },
+      {
+        "label": {
+          "pt": "Pasto",
+          "en": "Pasture",
+          "es": "Pasto"
+        },
+        "value": {
+          "pt": "0,4 a 0,8 ha de pasto bom por vaca; pasto fraco ou seca pedem bem mais",
+          "en": "0.4 to 0.8 ha of good pasture per cow; poor pasture or drought need much more",
+          "es": "0,4 a 0,8 ha de buen pasto por vaca; pasto pobre o sequía piden mucho más"
+        }
+      },
+      {
+        "label": {
+          "pt": "Água",
+          "en": "Water",
+          "es": "Agua"
+        },
+        "value": {
+          "pt": "Vaca leiteira pode beber mais de 60 litros por dia",
+          "en": "A dairy cow can drink more than 60 litres a day",
+          "es": "Una vaca lechera puede beber más de 60 litros al día"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "Sombra de árvores ou tela no pasto e quebra-vento no frio.",
+        "en": "Tree or shade-cloth shade in the pasture and a windbreak in the cold.",
+        "es": "Sombra de árboles o malla en el pasto y cortavientos con frío."
+      },
+      {
+        "pt": "Área de descanso seca e com cama: vaca passa boa parte do dia deitada ruminando.",
+        "en": "A dry, bedded resting area: cows spend much of the day lying down chewing the cud.",
+        "es": "Zona de descanso seca y con cama: la vaca pasa buena parte del día echada rumiando."
+      },
+      {
+        "pt": "Bebedouro limpo, com piso firme em volta para não virar lama, e cocho de sal coberto.",
+        "en": "A clean water trough with firm ground around it so it doesn't turn to mud, and a covered salt trough.",
+        "es": "Bebedero limpio, con suelo firme alrededor para que no se embarre, y comedero de sal cubierto."
+      },
+      {
+        "pt": "Curral com tronco de contenção para vacinar, examinar e tratar com segurança.",
+        "en": "A handling pen with a crush (squeeze chute) to vaccinate, examine and treat safely.",
+        "es": "Corral con manga o cepo para vacunar, revisar y tratar con seguridad."
+      }
+    ]
+  },
+  "predators": {
+    "threats": [
+      {
+        "name": {
+          "pt": "Coiote, lobo e cachorro",
+          "en": "Coyote, wolf and dog",
+          "es": "Coyote, lobo y perro"
+        },
+        "signs": {
+          "pt": "Atacam bezerros recém-nascidos: mordidas no pescoço, nos quartos traseiros ou nas pernas.",
+          "en": "They attack newborn calves: bites on the neck, hindquarters or legs.",
+          "es": "Atacan terneros recién nacidos: mordeduras en el cuello, los cuartos traseros o las patas."
+        }
+      },
+      {
+        "name": {
+          "pt": "Onça e puma (nas Américas)",
+          "en": "Jaguar and puma (in the Americas)",
+          "es": "Jaguar y puma (en América)"
+        },
+        "signs": {
+          "pt": "Bezerro morto com mordida na nuca ou no pescoço, às vezes arrastado e coberto com folhas.",
+          "en": "A calf killed with a bite to the nape or neck, sometimes dragged and covered with leaves.",
+          "es": "Ternero muerto con mordida en la nuca o el cuello, a veces arrastrado y cubierto de hojas."
+        }
+      },
+      {
+        "name": {
+          "pt": "Morcego-vampiro (América Latina)",
+          "en": "Vampire bat (Latin America)",
+          "es": "Murciélago vampiro (América Latina)"
+        },
+        "signs": {
+          "pt": "Feridas pequenas que sangram no pescoço, nas orelhas ou nas patas; risco de raiva.",
+          "en": "Small bleeding wounds on the neck, ears or feet; risk of rabies.",
+          "es": "Heridas pequeñas que sangran en el cuello, las orejas o las patas; riesgo de rabia."
+        }
+      },
+      {
+        "name": {
+          "pt": "Mosca-da-bicheira",
+          "en": "Screwworm fly",
+          "es": "Mosca del gusano barrenador"
+        },
+        "signs": {
+          "pt": "Larvas em feridas e no umbigo do bezerro, com cheiro forte.",
+          "en": "Maggots in wounds and in the calf's navel, with a strong smell.",
+          "es": "Larvas en heridas y en el ombligo del ternero, con olor fuerte."
+        }
+      }
+    ],
+    "protection": [
+      {
+        "pt": "Faça a parição num piquete limpo perto de casa e olhe o bezerro todo dia.",
+        "en": "Calve in a clean paddock near the house and check the calf every day.",
+        "es": "Haz los partos en un potrero limpio cerca de casa y revisa el ternero cada día."
+      },
+      {
+        "pt": "Recolha vacas com bezerro novo no curral à noite onde há predadores; burros e cães de guarda ajudam.",
+        "en": "Bring cows with young calves into a pen at night where predators are around; donkeys and guardian dogs help.",
+        "es": "Encierra de noche a las vacas con ternero pequeño donde hay depredadores; burros y perros guardianes ayudan."
+      },
+      {
+        "pt": "Cure o umbigo com iodo e trate feridas na hora; mordida de morcego deve ser avisada ao serviço veterinário oficial.",
+        "en": "Dip the navel in iodine and treat wounds at once; report vampire bat bites to the official veterinary service.",
+        "es": "Cura el ombligo con yodo y trata las heridas enseguida; avisa las mordidas de murciélago al servicio veterinario oficial."
+      }
+    ]
+  },
+  "reproduction": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Puberdade",
+          "en": "Puberty",
+          "es": "Pubertad"
+        },
+        "value": {
+          "pt": "10 a 12 meses; primeira cobertura em geral aos 14–15 meses",
+          "en": "10 to 12 months; usually first bred at 14–15 months",
+          "es": "10 a 12 meses; primera cubrición en general a los 14–15 meses"
+        }
+      },
+      {
+        "label": {
+          "pt": "Cio",
+          "en": "Heat",
+          "es": "Celo"
+        },
+        "value": {
+          "pt": "A cada 21 dias (18–24); dura cerca de 18 horas",
+          "en": "Every 21 days (18–24); lasts about 18 hours",
+          "es": "Cada 21 días (18–24); dura unas 18 horas"
+        }
+      },
+      {
+        "label": {
+          "pt": "Gestação",
+          "en": "Pregnancy",
+          "es": "Gestación"
+        },
+        "value": {
+          "pt": "Cerca de 9 meses (279–287 dias, conforme a raça)",
+          "en": "About 9 months (279–287 days, depending on breed)",
+          "es": "Unos 9 meses (279–287 días, según la raza)"
+        }
+      },
+      {
+        "label": {
+          "pt": "Primeira cria",
+          "en": "First calf",
+          "es": "Primer parto"
+        },
+        "value": {
+          "pt": "Por volta dos 24 meses",
+          "en": "Around 24 months",
+          "es": "Hacia los 24 meses"
+        }
+      },
+      {
+        "label": {
+          "pt": "Colostro",
+          "en": "Colostrum",
+          "es": "Calostro"
+        },
+        "value": {
+          "pt": "Nas primeiras 2 horas de vida; 8–10% do peso do bezerro nas primeiras 12 horas",
+          "en": "Within the first 2 hours of life; 8–10% of the calf's weight in the first 12 hours",
+          "es": "En las primeras 2 horas de vida; 8–10% del peso del ternero en las primeras 12 horas"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "Sinais de cio: vaca que aceita ser montada, monta nas outras, muge e fica agitada, com muco claro. A ovulação vem 10–12 horas depois do fim do cio.",
+        "en": "Heat signs: a cow that stands to be mounted, mounts others, bellows and is restless, with clear mucus. Ovulation comes 10–12 hours after heat ends.",
+        "es": "Señales de celo: vaca que se deja montar, monta a otras, muge y está inquieta, con moco claro. La ovulación llega 10–12 horas después del fin del celo."
+      },
+      {
+        "pt": "Cubra a novilha pelo peso, não só pela idade: bem desenvolvida, ela tem partos mais fáceis.",
+        "en": "Breed heifers by weight, not just age: a well-grown heifer calves more easily.",
+        "es": "Cubre la novilla por peso, no solo por edad: bien desarrollada tiene partos más fáciles."
+      },
+      {
+        "pt": "Perto do parto, deixe a vaca num piquete limpo e calmo. Se o parto não avança depois que aparecem as patas, chame o veterinário.",
+        "en": "Near calving, keep the cow in a clean, quiet paddock. If calving stalls after the feet appear, call the vet.",
+        "es": "Cerca del parto, deja la vaca en un potrero limpio y tranquilo. Si el parto no avanza tras asomar las patas, llama al veterinario."
+      },
+      {
+        "pt": "Bezerro em lugar seco e sem vento, umbigo curado com iodo e colostro garantido, mesmo que seja na mamadeira.",
+        "en": "Keep the calf dry and out of the wind, dip the navel in iodine and make sure it gets colostrum, by bottle if needed.",
+        "es": "Ternero en lugar seco y sin viento, ombligo curado con yodo y calostro asegurado, aunque sea con biberón."
+      }
+    ]
+  },
+  "welfare": {
+    "daily": [
+      {
+        "pt": "Água, pasto ou volumoso e sal mineral.",
+        "en": "Water, pasture or forage and mineral salt.",
+        "es": "Agua, pasto o forraje y sal mineral."
+      },
+      {
+        "pt": "Olhar o rebanho: ruminando, andando bem, sem feridas ou bicheira.",
+        "en": "Look over the herd: chewing the cud, walking well, no wounds or maggots.",
+        "es": "Mirar el rebaño: rumiando, caminando bien, sin heridas ni gusanos."
+      },
+      {
+        "pt": "Ordenha com higiene, se for leiteira.",
+        "en": "Clean milking, for dairy cows.",
+        "es": "Ordeño con higiene, si es lechera."
+      }
+    ],
+    "weekly": [
+      {
+        "pt": "Limpar bebedouros e cochos.",
+        "en": "Clean water and feed troughs.",
+        "es": "Limpiar bebederos y comederos."
+      },
+      {
+        "pt": "Conferir cercas e porteiras e rodar os piquetes.",
+        "en": "Check fences and gates and rotate paddocks.",
+        "es": "Revisar cercas y portones y rotar potreros."
+      }
+    ],
+    "monthly": [
+      {
+        "pt": "Avaliar condição corporal (nem magra, nem gorda) e cascos.",
+        "en": "Assess body condition (neither thin nor fat) and hooves.",
+        "es": "Evaluar la condición corporal (ni flaca ni gorda) y las pezuñas."
+      },
+      {
+        "pt": "Controle de carrapatos e conferência do calendário de vacinas.",
+        "en": "Tick control and a check of the vaccine schedule.",
+        "es": "Control de garrapatas y revisión del calendario de vacunas."
+      }
+    ],
+    "happy": [
+      {
+        "pt": "Rebanho: nunca uma vaca sozinha.",
+        "en": "A herd: never a cow on its own.",
+        "es": "Rebaño: nunca una vaca sola."
+      },
+      {
+        "pt": "Pastar, ruminar e descansar deitada em lugar seco e com sombra.",
+        "en": "Grazing, chewing the cud and resting lying down somewhere dry and shaded.",
+        "es": "Pastar, rumiar y descansar echada en un lugar seco y con sombra."
+      },
+      {
+        "pt": "Rotina tranquila: mesmos horários, pessoas calmas, uma escova para se coçar.",
+        "en": "A calm routine: same times, calm people, a brush to scratch on.",
+        "es": "Rutina tranquila: mismos horarios, gente calmada, un cepillo para rascarse."
+      }
+    ],
+    "stressSigns": [
+      {
+        "pt": "Respiração ofegante, boca aberta e baba no calor.",
+        "en": "Panting, open mouth and drooling in heat.",
+        "es": "Jadeo, boca abierta y babeo con calor."
+      },
+      {
+        "pt": "Mancando, de costas arqueadas ou deitada mais do que o normal.",
+        "en": "Limping, arched back or lying down more than usual.",
+        "es": "Cojera, lomo arqueado o echada más de lo normal."
+      },
+      {
+        "pt": "Queda no leite ou no apetite, sem ruminar, isolada do rebanho.",
+        "en": "A drop in milk or appetite, not chewing the cud, apart from the herd.",
+        "es": "Baja de leche o de apetito, sin rumiar, apartada del rebaño."
+      }
+    ],
+    "handling": [
+      {
+        "pt": "Conduza devagar, pela lateral e atrás do ombro da vaca, sem gritar, bater ou usar cachorro.",
+        "en": "Move cattle slowly, working from the side behind the shoulder, without shouting, hitting or using dogs.",
+        "es": "Muévelas despacio, desde el costado y detrás de la paleta, sin gritar, golpear ni usar perros."
+      },
+      {
+        "pt": "Para examinar ou tratar, use o tronco de contenção; nunca fique atrás de uma vaca agitada.",
+        "en": "To examine or treat, use the crush; never stand behind a nervous cow.",
+        "es": "Para revisar o tratar usa la manga; nunca te pongas detrás de una vaca nerviosa."
+      }
+    ]
   }
 }

@@ -17,10 +17,28 @@ test("aba Animais mostra só os animais da fazenda, a ficha completa, o bloco do
   await expect(page.getByTestId("animal-tab-cows")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Raças" })).toBeVisible();
   await expect(page.getByTestId("current-season")).toHaveCount(1);
-  await expect(page.getByTestId("disease").first()).toBeVisible();
-  await expect(page.getByTestId("vet-warning")).toContainText("Consulte um veterinário");
   await expect(page.getByTestId("country-notes")).toContainText("No seu país: Brasil");
   await expect(page.getByTestId("sources").getByRole("link").first()).toBeVisible();
+
+  // Cada assunto em sua aba, pelo endereço (?tab=).
+  const tab = (name: string) => page.getByRole("link", { name, exact: true }).click();
+  await tab("Saúde");
+  await expect(page).toHaveURL(/\/animals\/chickens\?tab=health$/);
+  await expect(page.getByTestId("disease").first()).toBeVisible();
+  await expect(page.getByTestId("vet-warning")).toContainText("Consulte um veterinário");
+  await tab("Habitat e proteção");
+  await expect(page.getByTestId("habitat-facts")).toContainText("Ninhos");
+  await expect(page.getByTestId("predators")).toContainText("Como proteger");
+  await tab("Alimentação");
+  await expect(page.getByRole("heading", { name: "Alimentação", level: 2 })).toBeVisible();
+  await tab("Reprodução");
+  await expect(page.getByTestId("breeding-facts")).toContainText("21 dias");
+  await tab("Bem-estar e manejo");
+  await expect(page.getByTestId("routine")).toContainText("Todo dia");
+  await expect(page.getByRole("heading", { name: "Como pegar e manusear" })).toBeVisible();
+  await expect(page.getByTestId("sources").getByRole("link").first()).toBeVisible();
+  await tab("Visão geral");
+  await expect(page.getByRole("heading", { name: "Raças" })).toBeVisible();
 
   await page.getByTestId("animal-tab-cows").click();
   await expect(page.getByRole("heading", { name: "Vacas", level: 1 })).toBeVisible();

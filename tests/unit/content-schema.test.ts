@@ -9,7 +9,16 @@ const sources = [
   { title: "FAO", url: "https://www.fao.org/b" },
 ];
 
+const fact = { label: t, value: t };
+const guide = {
+  habitat: { facts: [fact, fact, fact], tips: [t, t, t, t] },
+  predators: { threats: [1, 2, 3].map(() => ({ name: t, signs: t })), protection: [t, t, t] },
+  reproduction: { facts: [fact, fact, fact, fact], tips: [t, t, t, t] },
+  welfare: { daily: [t, t], weekly: [t, t], monthly: [t, t], happy: [t, t, t], stressSigns: [t, t, t], handling: [t, t] },
+};
+
 const animal = {
+  ...guide,
   id: "chickens",
   summary: t,
   breeds: [1, 2, 3].map((i) => ({ name: `Raça ${i}`, purpose: t, notes: t })),
@@ -30,6 +39,11 @@ describe("animalContentSchema", () => {
     expect(animalContentSchema.safeParse({ ...animal, summary: { pt: "x", en: "x", es: "" } }).success).toBe(false));
   it("recusa menos de 2 fontes", () =>
     expect(animalContentSchema.safeParse({ ...animal, sources: [sources[0]] }).success).toBe(false));
+  it("recusa habitat, predadores, reprodução ou bem-estar faltando ou incompletos", () => {
+    expect(animalContentSchema.safeParse({ ...animal, welfare: undefined }).success).toBe(false);
+    expect(animalContentSchema.safeParse({ ...animal, habitat: { facts: [fact], tips: [t, t, t, t] } }).success).toBe(false);
+    expect(animalContentSchema.safeParse({ ...animal, welfare: { ...guide.welfare, handling: [] } }).success).toBe(false);
+  });
   it("recusa id fora do catálogo", () =>
     expect(animalContentSchema.safeParse({ ...animal, id: "dragons" }).success).toBe(false));
   it("recusa temperatura mínima maior que a máxima", () =>

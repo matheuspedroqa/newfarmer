@@ -14,7 +14,19 @@ const countryNotesSchema = z
   .partialRecord(z.enum(KNOWLEDGE_COUNTRIES), z.object({ highlights: z.array(textSchema).min(2), sources: z.array(sourceSchema).min(1) }))
   .optional();
 
+// Número-chave em destaque ("Ninhos" → "1 para cada 4–5 galinhas").
+const factsSchema = (min: number) => z.array(z.object({ label: textSchema, value: textSchema })).min(min);
+const tips = (min: number) => z.array(textSchema).min(min);
+
+const guideSchema = {
+  habitat: z.object({ facts: factsSchema(3), tips: tips(4) }),
+  predators: z.object({ threats: z.array(z.object({ name: textSchema, signs: textSchema })).min(3), protection: tips(3) }),
+  reproduction: z.object({ facts: factsSchema(4), tips: tips(4) }),
+  welfare: z.object({ daily: tips(2), weekly: tips(2), monthly: tips(2), happy: tips(3), stressSigns: tips(3), handling: tips(2) }),
+};
+
 export const animalContentSchema = z.object({
+  ...guideSchema,
   id: z.enum(ANIMAL_IDS),
   summary: textSchema,
   breeds: z.array(z.object({ name: z.string().trim().min(1), purpose: textSchema, notes: textSchema })).min(3),

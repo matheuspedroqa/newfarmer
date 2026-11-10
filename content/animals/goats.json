@@ -477,6 +477,30 @@
     {
       "title": "Embrapa Semiárido — Caracterização sanitária de rebanhos caprinos (2018)",
       "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1092299/1/Daniel2018.pdf"
+    },
+    {
+      "title": "New Mexico State University — Housing and Working Facilities for Dairy Goats",
+      "url": "https://pubs.nmsu.edu/_d/D703/"
+    },
+    {
+      "title": "UMass Amherst — Housing and Working Facilities for Goats",
+      "url": "https://www.umass.edu/agriculture-food-environment/crops-dairy-livestock-equine/fact-sheets/housing-working-facilites-for-goats"
+    },
+    {
+      "title": "University of New Hampshire Extension — Housing and Space Guidelines for Livestock",
+      "url": "https://extension.unh.edu/resource/housing-and-space-guidelines-livestock"
+    },
+    {
+      "title": "MSD Veterinary Manual — Features of the Reproductive Cycle",
+      "url": "https://www.msdvetmanual.com/multimedia/table/features-of-the-reproductive-cycle"
+    },
+    {
+      "title": "MSD Veterinary Manual — Approximate Gestation Periods",
+      "url": "https://www.msdvetmanual.com/multimedia/table/approximate-gestation-periods"
+    },
+    {
+      "title": "MSD Veterinary Manual — Hormonal Control of the Estrous Cycle in Goats and Sheep",
+      "url": "https://www.msdvetmanual.com/reproductive-system/hormonal-control-of-the-estrous-cycle/hormonal-control-of-the-estrous-cycle-in-goats-and-sheep"
     }
   ],
   "countryNotes": {
@@ -898,5 +922,306 @@
         }
       ]
     }
+  },
+  "habitat": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Abrigo com cama",
+          "en": "Bedded shelter",
+          "es": "Refugio con cama"
+        },
+        "value": {
+          "pt": "1 a 1,4 m² por cabra adulta; cabras leiteiras, até 2,3 m²",
+          "en": "1 to 1.4 m² per adult goat; dairy goats up to 2.3 m²",
+          "es": "1 a 1,4 m² por cabra adulta; cabras lecheras, hasta 2,3 m²"
+        }
+      },
+      {
+        "label": {
+          "pt": "Área de exercício",
+          "en": "Exercise area",
+          "es": "Área de ejercicio"
+        },
+        "value": {
+          "pt": "2,3 a 4,6 m² por cabra",
+          "en": "2.3 to 4.6 m² per goat",
+          "es": "2,3 a 4,6 m² por cabra"
+        }
+      },
+      {
+        "label": {
+          "pt": "Pasto",
+          "en": "Pasture",
+          "es": "Pasto"
+        },
+        "value": {
+          "pt": "800 a 1.200 m² por cabra, com arbustos e rodízio",
+          "en": "800 to 1,200 m² per goat, with shrubs and rotation",
+          "es": "800 a 1.200 m² por cabra, con arbustos y rotación"
+        }
+      },
+      {
+        "label": {
+          "pt": "Cerca",
+          "en": "Fence",
+          "es": "Cerca"
+        },
+        "value": {
+          "pt": "Arame liso tensionado ou 4–5 fios elétricos (90 cm ou mais onde há lobos)",
+          "en": "High-tensile wire or 4–5 electric strands (90 cm or more where there are wolves)",
+          "es": "Alambre liso tensado o 4–5 hilos eléctricos (90 cm o más donde hay lobos)"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "Abrigo seco, sem goteira nem vento direto, com piso elevado ou ripado: cabra sofre mais com chuva e umidade do que com frio.",
+        "en": "A dry shelter, no leaks or direct draughts, with a raised or slatted floor: goats suffer more from rain and damp than from cold.",
+        "es": "Refugio seco, sin goteras ni corrientes, con piso elevado o de listones: la cabra sufre más con lluvia y humedad que con frío."
+      },
+      {
+        "pt": "Feno em cocho ou rede no alto: cabra não come o que caiu no chão.",
+        "en": "Hay in a raised rack or net: goats won't eat what falls on the floor.",
+        "es": "Heno en comedero o red en alto: la cabra no come lo que cae al suelo."
+      },
+      {
+        "pt": "Plataformas, pedras ou troncos para subir.",
+        "en": "Platforms, rocks or logs to climb.",
+        "es": "Plataformas, piedras o troncos para trepar."
+      },
+      {
+        "pt": "Evite tela em que os chifres possam prender e plantas tóxicas por perto (como azaleia, oleandro e teixo).",
+        "en": "Avoid netting that can trap horns and toxic plants nearby (such as azalea, oleander and yew).",
+        "es": "Evita mallas donde se enganchen los cuernos y plantas tóxicas cerca (como azalea, adelfa y tejo)."
+      }
+    ]
+  },
+  "predators": {
+    "threats": [
+      {
+        "name": {
+          "pt": "Cachorro",
+          "en": "Dog",
+          "es": "Perro"
+        },
+        "signs": {
+          "pt": "Várias cabras mordidas nas pernas e flancos, animais exaustos e cerca forçada.",
+          "en": "Several goats bitten on the legs and flanks, exhausted animals and a forced fence.",
+          "es": "Varias cabras mordidas en patas y flancos, animales agotados y cerca forzada."
+        }
+      },
+      {
+        "name": {
+          "pt": "Coiote, lobo e puma",
+          "en": "Coyote, wolf and puma",
+          "es": "Coyote, lobo y puma"
+        },
+        "signs": {
+          "pt": "Mordida na garganta ou na nuca, quase sempre à noite.",
+          "en": "A bite to the throat or nape, almost always at night.",
+          "es": "Mordida en la garganta o la nuca, casi siempre de noche."
+        }
+      },
+      {
+        "name": {
+          "pt": "Raposa e aves de rapina",
+          "en": "Fox and birds of prey",
+          "es": "Zorro y rapaces"
+        },
+        "signs": {
+          "pt": "Somem cabritos pequenos.",
+          "en": "Young kids go missing.",
+          "es": "Desaparecen cabritos pequeños."
+        }
+      }
+    ],
+    "protection": [
+      {
+        "pt": "Recolha as cabras à noite em abrigo fechado.",
+        "en": "Pen goats at night in a closed shelter.",
+        "es": "Encierra las cabras de noche en un refugio cerrado."
+      },
+      {
+        "pt": "Cerca firme e elétrica; cabra testa a cerca todo dia e foge por qualquer brecha.",
+        "en": "A solid, electric fence; goats test fences daily and escape through any gap.",
+        "es": "Cerca firme y eléctrica; la cabra prueba la cerca a diario y escapa por cualquier hueco."
+      },
+      {
+        "pt": "Cães de guarda, lhamas ou burros junto ao rebanho.",
+        "en": "Guardian dogs, llamas or donkeys with the herd.",
+        "es": "Perros guardianes, llamas o burros con el rebaño."
+      }
+    ]
+  },
+  "reproduction": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Puberdade",
+          "en": "Puberty",
+          "es": "Pubertad"
+        },
+        "value": {
+          "pt": "5 a 7 meses",
+          "en": "5 to 7 months",
+          "es": "5 a 7 meses"
+        }
+      },
+      {
+        "label": {
+          "pt": "Época de cio",
+          "en": "Breeding season",
+          "es": "Época de celo"
+        },
+        "value": {
+          "pt": "Do começo do outono ao fim do inverno; raças tropicais ciclam o ano todo",
+          "en": "Early autumn to late winter; tropical breeds cycle all year",
+          "es": "Del inicio del otoño al final del invierno; las razas tropicales ciclan todo el año"
+        }
+      },
+      {
+        "label": {
+          "pt": "Cio",
+          "en": "Heat",
+          "es": "Celo"
+        },
+        "value": {
+          "pt": "A cada 21 dias; dura 24–48 horas",
+          "en": "Every 21 days; lasts 24–48 hours",
+          "es": "Cada 21 días; dura 24–48 horas"
+        }
+      },
+      {
+        "label": {
+          "pt": "Gestação",
+          "en": "Pregnancy",
+          "es": "Gestación"
+        },
+        "value": {
+          "pt": "Cerca de 150 dias (5 meses)",
+          "en": "About 150 days (5 months)",
+          "es": "Unos 150 días (5 meses)"
+        }
+      },
+      {
+        "label": {
+          "pt": "Cabritos",
+          "en": "Kids",
+          "es": "Cabritos"
+        },
+        "value": {
+          "pt": "1 a 3 por parto; gêmeos são comuns",
+          "en": "1 to 3 per birth; twins are common",
+          "es": "1 a 3 por parto; los mellizos son comunes"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "Cabritas entram no cio cedo: separe o bode das fêmeas jovens e cubra quando elas tiverem cerca de 2/3 do peso adulto.",
+        "en": "Doelings come into heat early: keep the buck away from young does and breed them at about two-thirds of adult weight.",
+        "es": "Las cabritas entran en celo pronto: separa el macho de las hembras jóvenes y cúbrelas con unos 2/3 del peso adulto."
+      },
+      {
+        "pt": "Sinais de cio: abana o rabo, bale muito, fica inquieta e procura o bode.",
+        "en": "Heat signs: tail wagging, lots of bleating, restlessness and seeking out the buck.",
+        "es": "Señales de celo: mueve la cola, bala mucho, está inquieta y busca al macho."
+      },
+      {
+        "pt": "Parto em baia limpa e seca; o cabrito mama o colostro nas primeiras horas e tem o umbigo curado com iodo.",
+        "en": "Kid in a clean, dry pen; the kid drinks colostrum in the first hours and has its navel dipped in iodine.",
+        "es": "Parto en corral limpio y seco; el cabrito mama calostro en las primeras horas y se cura el ombligo con yodo."
+      },
+      {
+        "pt": "Cabritos precisam de abrigo quente e seco, sobretudo em partos de inverno; desmame entre 8 e 12 semanas.",
+        "en": "Kids need a warm, dry shelter, especially for winter kidding; wean at 8 to 12 weeks.",
+        "es": "Los cabritos necesitan refugio cálido y seco, sobre todo en partos de invierno; destete entre las 8 y 12 semanas."
+      }
+    ]
+  },
+  "welfare": {
+    "daily": [
+      {
+        "pt": "Água limpa (cabra recusa água suja), feno ou ramos e sal mineral para caprinos.",
+        "en": "Clean water (goats refuse dirty water), hay or browse and goat mineral.",
+        "es": "Agua limpia (la cabra rechaza el agua sucia), heno o ramas y sal mineral para caprinos."
+      },
+      {
+        "pt": "Contar as cabras e conferir a cerca: elas fogem com facilidade.",
+        "en": "Count the goats and check the fence: they escape easily.",
+        "es": "Contar las cabras y revisar la cerca: escapan con facilidad."
+      }
+    ],
+    "weekly": [
+      {
+        "pt": "Trocar a cama e limpar cochos e bebedouros.",
+        "en": "Change bedding and clean racks and drinkers.",
+        "es": "Cambiar la cama y limpiar comederos y bebederos."
+      },
+      {
+        "pt": "Olhar a pálpebra (FAMACHA) na época de verme.",
+        "en": "Check the eyelids (FAMACHA) in worm season.",
+        "es": "Revisar el párpado (FAMACHA) en época de parásitos."
+      }
+    ],
+    "monthly": [
+      {
+        "pt": "Aparar os cascos e avaliar a condição corporal.",
+        "en": "Trim hooves and assess body condition.",
+        "es": "Recortar pezuñas y evaluar la condición corporal."
+      },
+      {
+        "pt": "Procurar caroços (linfadenite) e conferir o calendário de vacinas.",
+        "en": "Look for lumps (caseous lymphadenitis) and check the vaccine schedule.",
+        "es": "Buscar bultos (linfadenitis) y revisar el calendario de vacunas."
+      }
+    ],
+    "happy": [
+      {
+        "pt": "Comer folhas e arbustos, não só capim.",
+        "en": "Browsing leaves and shrubs, not just grass.",
+        "es": "Ramonear hojas y arbustos, no solo pasto."
+      },
+      {
+        "pt": "Subir em lugares altos e explorar.",
+        "en": "Climbing up high and exploring.",
+        "es": "Trepar a lugares altos y explorar."
+      },
+      {
+        "pt": "Companhia: nunca uma cabra sozinha.",
+        "en": "Company: never a goat on its own.",
+        "es": "Compañía: nunca una cabra sola."
+      }
+    ],
+    "stressSigns": [
+      {
+        "pt": "Pelos arrepiados, cabeça baixa e afastada do grupo.",
+        "en": "Rough coat, head down and apart from the group.",
+        "es": "Pelo erizado, cabeza baja y apartada del grupo."
+      },
+      {
+        "pt": "Pálpebra pálida, barriga inchada ou diarreia.",
+        "en": "Pale eyelids, bloated belly or diarrhoea.",
+        "es": "Párpado pálido, barriga hinchada o diarrea."
+      },
+      {
+        "pt": "Balido constante, mancando ou queda no leite.",
+        "en": "Constant bleating, limping or a drop in milk.",
+        "es": "Balido constante, cojera o baja de leche."
+      }
+    ],
+    "handling": [
+      {
+        "pt": "Use coleira e conduza com calma; cabra acostumada vem pelo petisco.",
+        "en": "Use a collar and lead calmly; goats used to people come for a treat.",
+        "es": "Usa collar y guía con calma; la cabra acostumbrada viene por una golosina."
+      },
+      {
+        "pt": "Segure pela coleira ou sob o queixo; nunca pelos chifres, pela barba ou pelas pernas.",
+        "en": "Hold by the collar or under the chin; never by the horns, beard or legs.",
+        "es": "Sujétala por el collar o bajo la barbilla; nunca por los cuernos, la barba ni las patas."
+      }
+    ]
   }
 }

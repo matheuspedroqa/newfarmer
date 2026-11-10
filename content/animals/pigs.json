@@ -474,6 +474,26 @@
     {
       "title": "UFPel — Abrigo móvel para suínos criados ao ar livre (SISCAL)",
       "url": "https://anais-siiepe.ufpel.edu.br/2025/XM_06049.pdf"
+    },
+    {
+      "title": "University of New Hampshire Extension — Housing and Space Guidelines for Livestock",
+      "url": "https://extension.unh.edu/resource/housing-and-space-guidelines-livestock"
+    },
+    {
+      "title": "Council Directive 2008/120/EC — minimum standards for the protection of pigs",
+      "url": "https://eur-lex.europa.eu/eli/dir/2008/120/oj"
+    },
+    {
+      "title": "MSD Veterinary Manual — Breeding Management of Pigs",
+      "url": "https://www.msdvetmanual.com/management-and-nutrition/management-of-reproduction-pigs/breeding-management-of-pigs"
+    },
+    {
+      "title": "MSD Veterinary Manual — Features of the Reproductive Cycle",
+      "url": "https://www.msdvetmanual.com/multimedia/table/features-of-the-reproductive-cycle"
+    },
+    {
+      "title": "MSD Veterinary Manual — Approximate Gestation Periods",
+      "url": "https://www.msdvetmanual.com/multimedia/table/approximate-gestation-periods"
     }
   ],
   "countryNotes": {
@@ -891,5 +911,323 @@
         }
       ]
     }
+  },
+  "habitat": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Abrigo (porco adulto)",
+          "en": "Shelter (adult pig)",
+          "es": "Refugio (cerdo adulto)"
+        },
+        "value": {
+          "pt": "Cerca de 4,5 m² por porco se tem piquete; 9 m² se vive só no abrigo",
+          "en": "About 4.5 m² per pig with an outdoor yard; 9 m² if kept indoors only",
+          "es": "Unos 4,5 m² por cerdo si tiene corral; 9 m² si vive solo en el refugio"
+        }
+      },
+      {
+        "label": {
+          "pt": "Piquete",
+          "en": "Yard",
+          "es": "Corral"
+        },
+        "value": {
+          "pt": "Cerca de 18 m² por porco adulto",
+          "en": "About 18 m² per adult pig",
+          "es": "Unos 18 m² por cerdo adulto"
+        }
+      },
+      {
+        "label": {
+          "pt": "Mínimo legal na UE (engorda)",
+          "en": "EU legal minimum (finishing)",
+          "es": "Mínimo legal en la UE (engorde)"
+        },
+        "value": {
+          "pt": "0,65 m² livres por porco de 85–110 kg; 1 m² acima de 110 kg",
+          "en": "0.65 m² of free floor per pig of 85–110 kg; 1 m² above 110 kg",
+          "es": "0,65 m² libres por cerdo de 85–110 kg; 1 m² por encima de 110 kg"
+        }
+      },
+      {
+        "label": {
+          "pt": "Água",
+          "en": "Water",
+          "es": "Agua"
+        },
+        "value": {
+          "pt": "10 a 20 litros por dia por adulto, mais no calor",
+          "en": "10 to 20 litres a day per adult, more in heat",
+          "es": "10 a 20 litros al día por adulto, más con calor"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "Área de dormir seca, com palha e sem vento encanado; o porco faz as fezes longe de onde dorme se tiver espaço.",
+        "en": "A dry, draught-free sleeping area with straw; given space, pigs dung away from where they sleep.",
+        "es": "Zona de dormir seca, con paja y sin corrientes; con espacio, el cerdo defeca lejos de donde duerme."
+      },
+      {
+        "pt": "Sombra e lama ou aspersor: porco não sua e sofre acima de 27 °C.",
+        "en": "Shade and a wallow or sprinkler: pigs don't sweat and suffer above 27 °C.",
+        "es": "Sombra y barro o aspersor: el cerdo no suda y sufre por encima de 27 °C."
+      },
+      {
+        "pt": "Cerca firme, de preferência dupla ou com fio elétrico por fora, que impeça contato com javalis e porcos asselvajados.",
+        "en": "A solid fence, ideally double or with an outer electric wire, preventing any contact with wild boar and feral hogs.",
+        "es": "Cerca firme, ideal doble o con hilo eléctrico por fuera, que impida el contacto con jabalíes y cerdos asilvestrados."
+      },
+      {
+        "pt": "Palha, feno ou madeira para fuçar sempre à disposição (na UE é obrigatório).",
+        "en": "Straw, hay or wood to root in, always available (mandatory in the EU).",
+        "es": "Paja, heno o madera para hozar siempre disponibles (obligatorio en la UE)."
+      },
+      {
+        "pt": "Chão de piso firme ou terreno bem drenado, longe de poços e nascentes.",
+        "en": "Firm flooring or well-drained ground, away from wells and springs.",
+        "es": "Suelo firme o terreno bien drenado, lejos de pozos y manantiales."
+      }
+    ]
+  },
+  "predators": {
+    "threats": [
+      {
+        "name": {
+          "pt": "Cachorro, raposa e coiote",
+          "en": "Dog, fox and coyote",
+          "es": "Perro, zorro y coyote"
+        },
+        "signs": {
+          "pt": "Atacam leitões: somem filhotes ou aparecem mordidos, sobretudo em criação ao ar livre.",
+          "en": "They target piglets: young ones vanish or turn up bitten, mostly in outdoor herds.",
+          "es": "Atacan a los lechones: desaparecen crías o aparecen mordidas, sobre todo al aire libre."
+        }
+      },
+      {
+        "name": {
+          "pt": "Javali e porco asselvajado",
+          "en": "Wild boar and feral hog",
+          "es": "Jabalí y cerdo asilvestrado"
+        },
+        "signs": {
+          "pt": "Terra fuçada e cerca forçada por fora; trazem peste suína africana e podem cruzar com as suas fêmeas.",
+          "en": "Rooted ground and a pushed fence from outside; they bring African swine fever and can mate with your sows.",
+          "es": "Tierra hozada y cerca forzada desde fuera; traen peste porcina africana y pueden cruzarse con tus cerdas."
+        }
+      },
+      {
+        "name": {
+          "pt": "Ratos",
+          "en": "Rats",
+          "es": "Ratas"
+        },
+        "signs": {
+          "pt": "Sacos de ração roídos, fezes pequenas e leitões mordidos; transmitem leptospirose.",
+          "en": "Gnawed feed bags, small droppings and bitten piglets; they spread leptospirosis.",
+          "es": "Sacos de pienso roídos, heces pequeñas y lechones mordidos; transmiten leptospirosis."
+        }
+      }
+    ],
+    "protection": [
+      {
+        "pt": "Parto em baia fechada ou cabana com porta, perto de casa.",
+        "en": "Farrow in a closed pen or hut with a door, close to the house.",
+        "es": "Parto en corral cerrado o caseta con puerta, cerca de casa."
+      },
+      {
+        "pt": "Cerca dupla ou com fio elétrico e tela enterrada contra quem cava.",
+        "en": "A double or electric fence with buried mesh against diggers.",
+        "es": "Cerca doble o eléctrica con malla enterrada contra los que cavan."
+      },
+      {
+        "pt": "Ração guardada em tambor fechado e controle de ratos com ratoeiras.",
+        "en": "Feed stored in sealed bins and rats controlled with snap traps.",
+        "es": "Pienso guardado en bidones cerrados y control de ratas con trampas."
+      }
+    ]
+  },
+  "reproduction": {
+    "facts": [
+      {
+        "label": {
+          "pt": "Puberdade",
+          "en": "Puberty",
+          "es": "Pubertad"
+        },
+        "value": {
+          "pt": "6 a 7 meses",
+          "en": "6 to 7 months",
+          "es": "6 a 7 meses"
+        }
+      },
+      {
+        "label": {
+          "pt": "Cio",
+          "en": "Heat",
+          "es": "Celo"
+        },
+        "value": {
+          "pt": "A cada 21 dias; dura 1–2 dias na leitoa e 2–3 na porca",
+          "en": "Every 21 days; lasts 1–2 days in gilts and 2–3 in sows",
+          "es": "Cada 21 días; dura 1–2 días en la cerda joven y 2–3 en la adulta"
+        }
+      },
+      {
+        "label": {
+          "pt": "Gestação",
+          "en": "Pregnancy",
+          "es": "Gestación"
+        },
+        "value": {
+          "pt": "114–116 dias (3 meses, 3 semanas e 3 dias)",
+          "en": "114–116 days (3 months, 3 weeks and 3 days)",
+          "es": "114–116 días (3 meses, 3 semanas y 3 días)"
+        }
+      },
+      {
+        "label": {
+          "pt": "Leitões por parto",
+          "en": "Piglets per litter",
+          "es": "Lechones por parto"
+        },
+        "value": {
+          "pt": "12–16 em raças comerciais; menos nas rústicas",
+          "en": "12–16 in commercial breeds; fewer in heritage breeds",
+          "es": "12–16 en razas comerciales; menos en las rústicas"
+        }
+      },
+      {
+        "label": {
+          "pt": "Desmame",
+          "en": "Weaning",
+          "es": "Destete"
+        },
+        "value": {
+          "pt": "A partir de 4 semanas (na UE, nunca antes de 28 dias)",
+          "en": "From 4 weeks (in the EU, never before 28 days)",
+          "es": "Desde las 4 semanas (en la UE, nunca antes de 28 días)"
+        }
+      },
+      {
+        "label": {
+          "pt": "Volta ao cio",
+          "en": "Back in heat",
+          "es": "Vuelta al celo"
+        },
+        "value": {
+          "pt": "3 a 7 dias depois do desmame",
+          "en": "3 to 7 days after weaning",
+          "es": "3 a 7 días después del destete"
+        }
+      }
+    ],
+    "tips": [
+      {
+        "pt": "O contato com um cachaço (macho adulto) é o que mais ajuda a leitoa bem desenvolvida a entrar no cio.",
+        "en": "Contact with a mature boar is the strongest trigger for a well-grown gilt to come into heat.",
+        "es": "El contacto con un verraco adulto es lo que más ayuda a que la cerda joven bien desarrollada entre en celo."
+      },
+      {
+        "pt": "Prepare a baia de parto uma semana antes: limpa, com cama, protetor contra esmagamento e um canto aquecido a 30–34 °C para os leitões.",
+        "en": "Set up the farrowing pen a week ahead: clean, bedded, with a rail against crushing and a corner heated to 30–34 °C for the piglets.",
+        "es": "Prepara el corral de parto una semana antes: limpio, con cama, barra antiaplastamiento y un rincón a 30–34 °C para los lechones."
+      },
+      {
+        "pt": "No parto nasce um leitão a cada 10–15 minutos; a placenta sai até 4 horas depois do último. Se demorar muito, chame o veterinário.",
+        "en": "During farrowing a piglet arrives every 10–15 minutes; the afterbirth comes within 4 hours of the last. If it takes much longer, call the vet.",
+        "es": "En el parto nace un lechón cada 10–15 minutos; la placenta sale hasta 4 horas después del último. Si tarda mucho, llama al veterinario."
+      },
+      {
+        "pt": "Garanta que todo leitão mame o colostro nas primeiras horas e, com orientação veterinária, dê ferro nos primeiros dias.",
+        "en": "Make sure every piglet drinks colostrum in the first hours and, with veterinary advice, give iron in the first days.",
+        "es": "Asegúrate de que cada lechón mame calostro en las primeras horas y, con indicación veterinaria, da hierro en los primeros días."
+      }
+    ]
+  },
+  "welfare": {
+    "daily": [
+      {
+        "pt": "Água limpa e ração; ver se todos comem.",
+        "en": "Fresh water and feed; check everyone eats.",
+        "es": "Agua limpia y pienso; ver que todos coman."
+      },
+      {
+        "pt": "Olhar cada porco: anda bem, respira normal, sem feridas.",
+        "en": "Look at each pig: walking well, breathing normally, no wounds.",
+        "es": "Mirar cada cerdo: camina bien, respira normal, sin heridas."
+      }
+    ],
+    "weekly": [
+      {
+        "pt": "Retirar o esterco e repor a palha seca.",
+        "en": "Remove manure and top up dry straw.",
+        "es": "Retirar el estiércol y reponer paja seca."
+      },
+      {
+        "pt": "Conferir cercas, fio elétrico e bebedouros.",
+        "en": "Check fences, electric wire and drinkers.",
+        "es": "Revisar cercas, hilo eléctrico y bebederos."
+      }
+    ],
+    "monthly": [
+      {
+        "pt": "Pesar ou medir para acompanhar o crescimento.",
+        "en": "Weigh or measure to track growth.",
+        "es": "Pesar o medir para seguir el crecimiento."
+      },
+      {
+        "pt": "Ver pele, cascos e sinais de sarna; vermifugar no calendário do veterinário.",
+        "en": "Check skin, hooves and signs of mange; deworm on your vet's schedule.",
+        "es": "Revisar piel, pezuñas y señales de sarna; desparasitar según el veterinario."
+      }
+    ],
+    "happy": [
+      {
+        "pt": "Fuçar: palha, feno, terra ou raízes para explorar.",
+        "en": "Rooting: straw, hay, soil or roots to explore.",
+        "es": "Hozar: paja, heno, tierra o raíces para explorar."
+      },
+      {
+        "pt": "Companhia: pelo menos dois porcos.",
+        "en": "Company: at least two pigs.",
+        "es": "Compañía: al menos dos cerdos."
+      },
+      {
+        "pt": "Lama ou água para se refrescar e cama seca para dormir.",
+        "en": "Mud or water to cool off and dry bedding to sleep on.",
+        "es": "Barro o agua para refrescarse y cama seca para dormir."
+      }
+    ],
+    "stressSigns": [
+      {
+        "pt": "Morder cauda ou orelha de outro porco: tédio, falta de espaço ou de material para fuçar.",
+        "en": "Biting another pig's tail or ears: boredom, too little space or nothing to root in.",
+        "es": "Morder la cola u orejas de otro cerdo: aburrimiento, poco espacio o nada para hozar."
+      },
+      {
+        "pt": "Respiração rápida e deitado de lado no calor.",
+        "en": "Fast breathing and lying flat on its side in heat.",
+        "es": "Respiración rápida y tumbado de lado con calor."
+      },
+      {
+        "pt": "Isolado, sem comer, com febre ou manchas roxas na pele: chame o veterinário.",
+        "en": "Alone, off feed, feverish or with purple skin blotches: call the vet.",
+        "es": "Aislado, sin comer, con fiebre o manchas moradas en la piel: llama al veterinario."
+      }
+    ],
+    "handling": [
+      {
+        "pt": "Conduza com uma tábua de manejo e calma, sem gritar nem bater; porco segue para onde vê caminho livre.",
+        "en": "Move them with a pig board and patience, without shouting or hitting; pigs go where they see an open path.",
+        "es": "Muévelos con una tabla de manejo y calma, sin gritar ni golpear; el cerdo va hacia donde ve camino libre."
+      },
+      {
+        "pt": "Nunca levante pelas orelhas ou pelo rabo; leitão se pega pelo corpo, apoiando o peito.",
+        "en": "Never lift by the ears or tail; pick piglets up by the body, supporting the chest.",
+        "es": "Nunca lo levantes por las orejas o la cola; el lechón se coge por el cuerpo, sujetando el pecho."
+      }
+    ]
   }
 }
