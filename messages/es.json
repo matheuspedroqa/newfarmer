@@ -76,7 +76,9 @@
     "usernameReserved": "Este nombre de usuario está reservado. Elige otro",
     "usernameTaken": "Este nombre de usuario ya está en uso",
     "termsRequired": "Para crear tu cuenta, acepta los Términos y la Política de privacidad",
-    "confirmRequired": "Marca la casilla para confirmar."
+    "confirmRequired": "Marca la casilla para confirmar.",
+    "cancelFirst": "Cancela la suscripción antes de borrar la cuenta.",
+    "ownerPreview": "Esto es solo una vista previa para el dueño: no se canceló nada."
   },
   "climate": {
     "tropical": "Tropical",
@@ -369,7 +371,9 @@
     "tabPreferences": "Preferencias",
     "tabSecurity": "Seguridad",
     "tabSubscription": "Suscripción",
-    "cookiesTitle": "Cookies"
+    "cookiesTitle": "Cookies",
+    "deleteCancelFirst": "Tu suscripción sigue activa. Para borrar la cuenta, cancela primero la suscripción.",
+    "deleteGoCancel": "Ir a Suscripción"
   },
   "seasons": {
     "summer": "Verano",
@@ -747,7 +751,6 @@
     "none": "Sin suscripción",
     "manage": "Gestionar pago",
     "subscribe": "Suscribirse",
-    "owner": "Cuenta del propietario: sin cobro",
     "paused": "En pausa",
     "pausedNote": "Tu suscripción está en pausa y no se te está cobrando. Contacta con soporte para reanudarla.",
     "since": "Suscriptor desde",
@@ -756,7 +759,8 @@
     "nextChargeLabel": "Próximo cobro",
     "accessUntilLabel": "Acceso hasta",
     "cancel": "Cancelar suscripción",
-    "cancelScheduled": "Cancelación solicitada. Mantienes el acceso hasta el {date} y no se te cobrará de nuevo."
+    "cancelScheduled": "Cancelación solicitada. Mantienes el acceso hasta el {date} y no se te cobrará de nuevo.",
+    "ownerPreview": "Vista previa del dueño: así ven esta pestaña los suscriptores. Los valores son de ejemplo y no se cobra ni se cancela nada."
   },
   "admin": {
     "title": "Admin",

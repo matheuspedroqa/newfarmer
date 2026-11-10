@@ -4,9 +4,12 @@ Robôs do Playwright que testam o site publicado (https://newfarmer.app) de verd
 
 ## O que eles fazem e o que nunca fazem
 
-- **Criam** contas de teste com e-mail `delivered+nf-...@resend.dev`. É a caixa de teste do Resend: aceita e descarta.
-- **Pagam** com o cartão de teste 4242 da Stripe. Se o pagamento não for de teste (`cs_test_`), o teste para sem pagar.
-- **Apagam** as contas de teste no fim, na etapa `cleanup`.
+- **Não testam cadastro nem pagamento no site de verdade.** A Stripe de produção está com as chaves reais e cobraria de verdade.
+  Todo teste que precisa de conta de teste (cadastro, pagamento, conta paga ou sem pagar) é **pulado** e aparece como `skipped`.
+  Rodam as páginas públicas, a API, os cabeçalhos de segurança e as partes do Admin que usam só a sua conta.
+- Só com `PROD_TEST_ACCOUNTS=1`, e só contra um endereço com as chaves **de teste** da Stripe (por exemplo, um Preview da Vercel com `PROD_URL`),
+  eles voltam a criar contas `delivered+nf-...@resend.dev`, pagar com o cartão 4242 e apagar tudo no fim. Mesmo assim, se o pagamento
+  não for de teste (`cs_test_`), o teste para sem pagar.
 - **Nunca** apagam o banco nem a conta do admin. A função que apaga contas recusa o username do admin.
 - **Nunca** enviam campanha do Admin → E-mails, porque iria para clientes de verdade. Só usam a prévia.
 - **Mandam 1 e-mail** por rodada para contact@newfarmer.app: é o teste do formulário de Contato.

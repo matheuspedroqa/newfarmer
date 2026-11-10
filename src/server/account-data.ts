@@ -4,7 +4,7 @@ import type { Db } from "./db";
 import { listUserPageViews } from "./page-views";
 import { getPaymentProvider } from "./payments";
 import type { PaymentProvider } from "./payments/types";
-import { getSubscription } from "./subscriptions";
+import { getSubscription, mustCancelFirst } from "./subscriptions";
 
 // Direito de acesso e portabilidade (LGPD art. 18, RGPD art. 15 e 20, CCPA): tudo que é da pessoa,
 // num formato aberto. Ficam de fora senha, tokens e sessões, que só servem para entrar na conta.
@@ -99,10 +99,12 @@ export async function deleteAccount(
   userId: number,
   password: string,
   provider: PaymentProvider | (() => PaymentProvider) = getPaymentProvider,
-): Promise<"ok" | "wrongPassword" | "paymentError"> {
+): Promise<"ok" | "wrongPassword" | "paymentError" | "cancelFirst"> {
   const [row] = await db.query<{ password_hash: string }>("SELECT password_hash FROM users WHERE id = $1", [userId]);
   if (!row || !(await bcrypt.compare(password, row.password_hash))) return "wrongPassword";
   const sub = await getSubscription(db, userId);
+  // Quem ainda vai ser cobrado cancela antes, pela aba Assinatura (e diz o motivo); só depois apaga a conta.
+  if (mustCancelFirst(sub)) return "cancelFirst";
   if (sub) {
     try {
       await (typeof provider === "function" ? provider() : provider).deleteCustomer(sub.customerId);

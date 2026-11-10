@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 import { requireUser } from "@/server/current-user";
+import { getDb } from "@/server/db";
+import { getSubscription, mustCancelFirst } from "@/server/subscriptions";
 import { DeleteAccountForm } from "./DeleteAccountForm";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -11,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function ProfilePage() {
   const user = await requireUser();
   const t = await getTranslations();
+  const cancelFirst = mustCancelFirst(await getSubscription(await getDb(), user.id));
   const info: [string, string][] = [
     [t("profile.name"), user.name],
     [t("auth.username"), user.username],
@@ -48,7 +52,14 @@ export default async function ProfilePage() {
       <div className="rounded-3xl bg-surface p-6 ring-1 ring-danger/40">
         <h2 className="font-display text-2xl font-bold text-danger">{t("profile.deleteTitle")}</h2>
         <p className="mb-4 text-sm text-muted">{t("profile.deleteHelp")}</p>
-        <DeleteAccountForm />
+        {cancelFirst ? (
+          <p data-testid="delete-cancel-first" className="rounded-xl bg-soft px-4 py-3">
+            {t("profile.deleteCancelFirst")}{" "}
+            <Link href="/profile/subscription" className="font-semibold text-primary underline">{t("profile.deleteGoCancel")}</Link>
+          </p>
+        ) : (
+          <DeleteAccountForm />
+        )}
       </div>
     </>
   );

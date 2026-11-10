@@ -13,11 +13,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function CancelPage() {
   const user = await requireUser();
-  const sub = await getSubscription(await getDb(), user.id);
+  // O dono vê a tela como prévia; confirmar não cancela nada (cancelSubscriptionAction recusa).
+  const sub = user.isPlatformAdmin ? { currentPeriodEnd: Date.now() + 30 * 86_400_000 } : await getSubscription(await getDb(), user.id);
   // Só quem tem uma assinatura que ainda vai renovar chega aqui; o resto volta para a aba Assinatura.
-  if (!sub?.subscriptionId || !isAccessStatus(sub.status) || sub.cancelAtPeriodEnd) redirect("/profile/subscription");
+  if (!user.isPlatformAdmin && !(sub && "status" in sub && sub.subscriptionId && isAccessStatus(sub.status) && !sub.cancelAtPeriodEnd)) redirect("/profile/subscription");
   const t = await getTranslations("cancel");
-  const date = sub.currentPeriodEnd ? new Intl.DateTimeFormat(intlLocale(resolveLocale(await getLocale())), { dateStyle: "long" }).format(sub.currentPeriodEnd) : null;
+  const date = sub?.currentPeriodEnd ? new Intl.DateTimeFormat(intlLocale(resolveLocale(await getLocale())), { dateStyle: "long" }).format(sub.currentPeriodEnd) : null;
 
   return (
     <div className="rounded-3xl bg-surface p-6 ring-1 ring-border">

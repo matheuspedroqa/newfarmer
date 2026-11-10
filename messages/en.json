@@ -76,7 +76,9 @@
     "usernameReserved": "This username is reserved. Choose another one",
     "usernameTaken": "This username is already taken",
     "termsRequired": "To create your account, accept the Terms and the Privacy Policy",
-    "confirmRequired": "Tick the box to confirm."
+    "confirmRequired": "Tick the box to confirm.",
+    "cancelFirst": "Cancel your subscription before deleting your account.",
+    "ownerPreview": "This is only a preview for the owner: nothing was cancelled."
   },
   "climate": {
     "tropical": "Tropical",
@@ -369,7 +371,9 @@
     "tabPreferences": "Preferences",
     "tabSecurity": "Security",
     "tabSubscription": "Subscription",
-    "cookiesTitle": "Cookies"
+    "cookiesTitle": "Cookies",
+    "deleteCancelFirst": "Your subscription is still active. To delete your account, cancel your subscription first.",
+    "deleteGoCancel": "Go to Subscription"
   },
   "seasons": {
     "summer": "Summer",
@@ -747,7 +751,6 @@
     "none": "No subscription",
     "manage": "Manage payment",
     "subscribe": "Subscribe",
-    "owner": "Owner account: no billing",
     "paused": "Paused",
     "pausedNote": "Your subscription is paused and you are not being charged. Contact support to resume.",
     "since": "Subscriber since",
@@ -756,7 +759,8 @@
     "nextChargeLabel": "Next charge",
     "accessUntilLabel": "Access until",
     "cancel": "Cancel subscription",
-    "cancelScheduled": "Cancellation requested. You keep access until {date} and won't be charged again."
+    "cancelScheduled": "Cancellation requested. You keep access until {date} and won't be charged again.",
+    "ownerPreview": "Owner preview: this is how subscribers see this tab. The values are examples and nothing is charged or cancelled."
   },
   "admin": {
     "title": "Admin",

@@ -9,7 +9,7 @@ const host = new URL(BASE).hostname;
 
 /**
  * Testes contra o site publicado (funcionais, API e pentest). Não apaga o banco nem a conta do admin:
- * só cria contas de teste (delivered+...@resend.dev, Stripe em modo teste) e apaga essas no fim.
+ * contas de teste (cadastro e pagamento) só com PROD_TEST_ACCOUNTS=1, porque a Stripe de produção cobra de verdade.
  * Um teste por vez: o limite de logins é 10 a cada 15 min por rede, e o site é de verdade.
  */
 export default defineConfig({

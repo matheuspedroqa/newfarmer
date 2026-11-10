@@ -1,6 +1,6 @@
 import { randomBytes } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { expect, type APIRequestContext, type Browser, type Page } from "@playwright/test";
+import { expect, test, type APIRequestContext, type Browser, type Page } from "@playwright/test";
 
 /** Pasta fora do git com as sessões e as contas criadas nesta rodada (para apagar no fim). */
 export const AUTH_DIR = "tests/prod/.auth";
@@ -18,6 +18,13 @@ export function adminCredentials() {
 
 export const storageOf = (who: Who) => `${AUTH_DIR}/${who}.json`;
 
+/**
+ * Cadastro e pagamento não rodam no site de verdade: a Stripe está em modo real (cobra de verdade).
+ * Só com PROD_TEST_ACCOUNTS=1, e só contra um endereço com chaves de teste da Stripe (ex.: Preview da Vercel).
+ */
+export const TEST_ACCOUNTS = process.env.PROD_TEST_ACCOUNTS === "1";
+const needsTestAccounts = () => test.skip(!TEST_ACCOUNTS, "Precisa de conta de teste (cadastro e pagamento): desligado em produção. Veja tests/prod/README.md.");
+
 type Run = { users: Record<string, TestUser> };
 export function readRun(): Run {
   return existsSync(RUN_FILE) ? (JSON.parse(readFileSync(RUN_FILE, "utf8")) as Run) : { users: {} };
@@ -30,6 +37,7 @@ export function remember(key: string, user: TestUser) {
   writeFileSync(RUN_FILE, JSON.stringify(run, null, 2));
 }
 export const userOf = (key: string): TestUser => {
+  needsTestAccounts();
   const u = readRun().users[key];
   if (!u) throw new Error(`Conta de teste "${key}" não existe: rode o projeto setup primeiro.`);
   return u;
@@ -37,18 +45,21 @@ export const userOf = (key: string): TestUser => {
 
 /** Contas de teste: e-mail na caixa de teste do Resend (aceita e descarta, sem prejudicar o domínio). */
 export function newTestUser(tag: string): TestUser {
+  needsTestAccounts();
   const stamp = Date.now().toString(36) + randomBytes(2).toString("hex");
   return { username: `pw${tag}${stamp}`.toLowerCase().slice(0, 30), email: `delivered+nf-${tag}-${stamp}@resend.dev`, password: `Pw-${randomBytes(9).toString("base64url")}` };
 }
 
 /** Abre uma página já logada como uma das contas da rodada. */
 export async function openAs(browser: Browser, who: Who): Promise<Page> {
+  if (who !== "admin") needsTestAccounts();
   const ctx = await browser.newContext({ storageState: storageOf(who) });
   return ctx.newPage();
 }
 
 /** Cadastro até a etapa 2 (/welcome). Não usa login (o limite de logins por rede é pequeno). */
 export async function register(page: Page, user: TestUser, name = "Teste Playwright") {
+  needsTestAccounts();
   await page.goto("/register");
   await page.getByLabel("Nome").fill(name);
   await page.getByLabel("E-mail", { exact: true }).fill(user.email);
@@ -64,6 +75,7 @@ export async function register(page: Page, user: TestUser, name = "Teste Playwri
 
 /** Paga na Stripe com o cartão de teste. Se o checkout não for de teste (cs_test_), para sem pagar. */
 export async function payWithTestCard(page: Page) {
+  needsTestAccounts();
   await expect(page).toHaveURL(/\/subscribe$/);
   await page.getByRole("button", { name: /^Assinar por/ }).click();
   await page.waitForURL(/checkout\.stripe\.com/, { timeout: 45_000 });
@@ -119,6 +131,7 @@ export function replayAction(request: APIRequestContext, cap: CapturedAction, wh
 
 /** Cookies de uma sessão salva, prontos para um cabeçalho Cookie. */
 export function cookieHeader(who: Who): string {
+  if (who !== "admin") needsTestAccounts();
   const state = JSON.parse(readFileSync(storageOf(who), "utf8")) as { cookies: { name: string; value: string }[] };
   return state.cookies.map((c) => `${c.name}=${c.value}`).join("; ");
 }

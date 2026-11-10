@@ -56,6 +56,7 @@ export async function cancelSubscriptionAction(_prev: FormState, formData: FormD
   const values = { reason: String(formData.get("reason") ?? ""), details: String(formData.get("details") ?? "") };
   const parsed = cancelSchema.safeParse(values);
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
+  if (user.isPlatformAdmin) return { formError: "ownerPreview", values };
   const db = await getDb();
   const ip = await clientIp();
   const limit = await limitWrites(db, user.id);

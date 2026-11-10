@@ -89,7 +89,7 @@ export async function deleteAccountAction(_prev: FormState, formData: FormData):
   }
   if (formData.get("confirm") !== "on") return { fieldErrors: { confirm: "confirmRequired" } };
   const result = await deleteAccountLogged(db, user, String(formData.get("password") ?? ""), ip);
-  if (result === "paymentError") return { formError: "paymentError" };
+  if (result === "paymentError" || result === "cancelFirst") return { formError: result };
   if (result !== "ok") return { fieldErrors: { password: "wrongPassword" } };
   // As sessões já saíram do banco junto com a conta; falta só o cookie neste navegador.
   (await cookies()).delete(SESSION_COOKIE);

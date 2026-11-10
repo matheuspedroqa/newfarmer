@@ -49,6 +49,9 @@ export async function userIdForCustomer(db: Db, customerId: string): Promise<num
 
 export const isAccessStatus = (status: string | undefined) => (ACCESS_STATUSES as readonly string[]).includes(status ?? "");
 
+/** Assinatura que ainda vai renovar: precisa ser cancelada antes de apagar a conta. */
+export const mustCancelFirst = (sub: Pick<SubscriptionRow, "status" | "cancelAtPeriodEnd"> | null) => !!sub && isAccessStatus(sub.status) && !sub.cancelAtPeriodEnd;
+
 export function hasAccess(user: { isPlatformAdmin: boolean }, sub: Pick<SubscriptionRow, "status"> | null): boolean {
   return user.isPlatformAdmin || isAccessStatus(sub?.status);
 }

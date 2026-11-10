@@ -61,11 +61,25 @@ describe("deleteAccount", () => {
   });
 
   const active = { id: "sub_1", customer: "cus_1", status: "active", currency: "brl", amount: 699, currentPeriodEnd: 9000, cancelAtPeriodEnd: false, canceledAt: null };
+  const canceling = { ...active, cancelAtPeriodEnd: true };
+
+  it("assinatura que ainda renova trava a exclusão: cancela primeiro", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db);
+    await upsertSubscription(db, ana, "cus_1", active);
+    const provider = createFakePaymentProvider();
+    const del = vi.spyOn(provider, "deleteCustomer");
+    expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("cancelFirst");
+    expect(del).not.toHaveBeenCalled();
+    expect(await db.query("SELECT 1 FROM users WHERE id = $1", [ana])).toHaveLength(1);
+    await upsertSubscription(db, ana, "cus_1", { ...active, status: "past_due" });
+    expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("cancelFirst");
+  });
 
   it("com cliente na Stripe apaga o cliente antes de apagar a conta", async () => {
     const db = await testDb();
     const ana = await makeUser(db);
-    await upsertSubscription(db, ana, "cus_1", active);
+    await upsertSubscription(db, ana, "cus_1", canceling);
     const provider = createFakePaymentProvider();
     const del = vi.spyOn(provider, "deleteCustomer");
     expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("ok");
@@ -86,7 +100,7 @@ describe("deleteAccount", () => {
   it("se o provedor falhar, devolve paymentError e a conta continua", async () => {
     const db = await testDb();
     const ana = await makeUser(db);
-    await upsertSubscription(db, ana, "cus_1", active);
+    await upsertSubscription(db, ana, "cus_1", canceling);
     const provider = createFakePaymentProvider();
     vi.spyOn(provider, "deleteCustomer").mockRejectedValue(new Error("Stripe respondeu 500"));
     vi.spyOn(console, "error").mockImplementation(() => {});
@@ -97,7 +111,7 @@ describe("deleteAccount", () => {
   it("cliente já apagado na Stripe (404) não impede apagar a conta", async () => {
     const db = await testDb();
     const ana = await makeUser(db);
-    await upsertSubscription(db, ana, "cus_1", active);
+    await upsertSubscription(db, ana, "cus_1", canceling);
     const gone = vi.fn(async () => new Response("{}", { status: 404 }));
     const provider = createStripeProvider("k", gone as unknown as typeof fetch);
     expect(await deleteAccount(db, ana, DEFAULT_PASSWORD, provider)).toBe("ok");

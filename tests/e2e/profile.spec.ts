@@ -155,8 +155,16 @@ test("Perfil baixa os dados da pessoa e não deixa outra pessoa baixar", async (
   expect((await page.request.get("/api/account/data")).status()).toBe(401);
 });
 
-test("Apagar conta pede confirmação e senha, apaga e não deixa entrar de novo", async ({ page }) => {
+test("Apagar conta pede cancelar a assinatura antes, depois confirmação e senha, apaga e não deixa entrar de novo", async ({ page }) => {
   const { username } = await signup(page, uniqueEmail());
+  await page.goto("/profile");
+  // Assinante ativo: no lugar do formulário, o aviso para cancelar primeiro.
+  await expect(page.getByRole("button", { name: "Apagar minha conta" })).toHaveCount(0);
+  await page.getByTestId("delete-cancel-first").getByRole("link", { name: "Ir para Assinatura" }).click();
+  await page.getByRole("link", { name: "Cancelar assinatura" }).click();
+  await page.getByLabel("Não estou usando").check();
+  await page.getByRole("button", { name: "Confirmar cancelamento" }).click();
+  await expect(page).toHaveURL(/\/profile\/subscription$/);
   await page.goto("/profile");
   const apagar = page.getByRole("button", { name: "Apagar minha conta" });
 

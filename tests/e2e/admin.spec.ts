@@ -24,6 +24,14 @@ test("dono do site vê as abas, o próprio login, o Monitoramento e abre o detal
   const { username } = await signup(page, uniqueEmail());
   expect((await page.request.post("/api/dev/make-admin", { data: { username } })).status()).toBe(204);
 
+  // O dono vê a aba Assinatura e a tela de cancelar como prévia; confirmar não cancela nada.
+  await page.goto("/profile/subscription");
+  await expect(page.getByTestId("owner-preview")).toBeVisible();
+  await page.getByRole("link", { name: "Cancelar assinatura" }).click();
+  await page.getByLabel("Está caro para mim").check();
+  await page.getByRole("button", { name: "Confirmar cancelamento" }).click();
+  await expect(page.getByRole("alert").filter({ hasText: "Esta é só uma prévia para o dono: nada foi cancelado." })).toBeVisible();
+
   // Sai e entra de novo para gerar um login no registro.
   await clearSession(context);
   await page.goto("/login");
