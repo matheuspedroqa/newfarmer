@@ -36,14 +36,14 @@ test("sem animais, Animais mostra o estado vazio e o botão leva ao MyFarm", asy
   await expect(page).toHaveURL(/\/animals$/);
   await expect(page.getByRole("heading", { name: "Você ainda não tem animais" })).toBeVisible();
   await page.getByRole("link", { name: "＋ Adicionar animal" }).click();
-  await expect(page).toHaveURL(/\/myfarm#animals$/);
+  await expect(page).toHaveURL(/\/myfarm$/);
 });
 
 test("Plantações tem o botão Adicionar plantação que leva ao MyFarm", async ({ page }) => {
   await signup(page, uniqueEmail());
   await page.getByRole("link", { name: "Plantações", exact: true }).click();
   await page.getByRole("link", { name: "＋ Adicionar plantação" }).click();
-  await expect(page).toHaveURL(/\/myfarm#crops$/);
+  await expect(page).toHaveURL(/\/myfarm\/crops$/);
 });
 
 test("ficha de plantação mostra calendário no clima e hemisfério do usuário", async ({ page }) => {
@@ -63,7 +63,7 @@ test("hemisfério norte desloca o calendário em 6 meses", async ({ page }) => {
     page.locator('[data-testid^="month-cell-"]').evaluateAll((els) => els.map((e) => e.getAttribute("data-testid")!));
   const south = await cells();
 
-  await page.goto("/myfarm");
+  await page.goto("/profile");
   await page.getByTestId("city-input").fill("Lisboa");
   await page.getByTestId("city-option").first().click();
   await page.getByRole("button", { name: "Trocar cidade" }).click();

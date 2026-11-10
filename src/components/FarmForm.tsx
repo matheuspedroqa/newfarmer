@@ -24,6 +24,7 @@ export function FarmForm({
   submitLabel,
   footer,
   offlineOwner,
+  only,
 }: {
   initial: Farm;
   action: Action;
@@ -31,6 +32,8 @@ export function FarmForm({
   footer?: React.ReactNode;
   /** Com o username, salvar sem internet guarda na fila do aparelho (só no MyFarm). */
   offlineOwner?: string;
+  /** Abas do MyFarm: mostra só uma parte; a outra vai escondida para o salvar não apagá-la. */
+  only?: "animals" | "crops";
 }) {
   const t = useTranslations();
   const wrapped = useMemo(
@@ -63,7 +66,14 @@ export function FarmForm({
 
   return (
     <form action={formAction} noValidate className="space-y-6">
-      <section id="animals" className={`scroll-mt-6 ${card}`}>
+      {only === "crops" && initial.animals.map((a) => (
+        <span key={a.id} hidden>
+          <input type="hidden" name={`animal:${a.id}`} value="on" />
+          <input type="hidden" name={`count:${a.id}`} value={a.count} />
+        </span>
+      ))}
+      {only === "animals" && initial.crops.map((id) => <input key={id} type="hidden" name="crop" value={id} />)}
+      {only !== "crops" && <section id="animals" className={`scroll-mt-6 ${card}`}>
         <h2 className="font-display text-2xl font-bold">{t("farm.animalsTitle")}</h2>
         <p className="text-sm text-muted">{t("farm.animalsHelp")}</p>
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
@@ -108,9 +118,9 @@ export function FarmForm({
             );
           })}
         </div>
-      </section>
+      </section>}
 
-      <section id="crops" className={`scroll-mt-6 ${card}`}>
+      {only !== "animals" && <section id="crops" className={`scroll-mt-6 ${card}`}>
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <h2 className="font-display text-2xl font-bold">{t("farm.cropsTitle")}</h2>
           <p className="text-sm font-semibold text-accent" aria-live="polite">{t("farm.cropsCount", { count: crops.size })}</p>
@@ -170,7 +180,7 @@ export function FarmForm({
           })}
           {!CROPS.some((c) => matches(c.id)) && <p className="p-2 text-sm text-muted">{t("farm.cropsNone")}</p>}
         </div>
-      </section>
+      </section>}
 
       {state.formError && <p role="alert" className="rounded-xl bg-danger/10 px-4 py-2 text-sm text-danger">{t(`errors.${state.formError}`)}</p>}
       {state.done && (

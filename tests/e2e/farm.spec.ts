@@ -48,6 +48,13 @@ test("MyFarm edita animais e plantações", async ({ page }) => {
   await page.locator("#count-chickens").fill("15");
   await page.getByLabel("Patos").check();
   await page.locator("#count-ducks").fill("5");
+  await page.getByRole("button", { name: "Salvar", exact: true }).click();
+  await expect(page.getByText("Salvo!")).toBeVisible();
+
+  // Cada aba salva só a sua parte; a outra continua como estava.
+  await page.getByRole("navigation", { name: "Seções do MyFarm" }).getByRole("link", { name: "Plantações" }).click();
+  await expect(page).toHaveURL(/\/myfarm\/crops$/);
+  await expect(page.locator("#count-chickens")).toHaveCount(0);
   await page.getByRole("checkbox", { name: "Tomate", exact: true }).uncheck();
   await page.getByRole("checkbox", { name: "Milho", exact: true }).check();
   await page.getByRole("button", { name: "Salvar", exact: true }).click();
@@ -60,9 +67,9 @@ test("MyFarm edita animais e plantações", async ({ page }) => {
   await expect(page.getByTestId("crop-chips")).not.toContainText("Tomate");
 });
 
-test("MyFarm troca a cidade e o clima acompanha", async ({ page }) => {
+test("Perfil troca a cidade e o clima acompanha", async ({ page }) => {
   await signup(page, uniqueEmail());
-  await page.goto("/myfarm");
+  await page.goto("/profile");
   await expect(page.getByTestId("current-city")).toContainText("Curitiba");
   await page.getByTestId("city-input").fill("Lisboa");
   await page.getByTestId("city-option").first().click();

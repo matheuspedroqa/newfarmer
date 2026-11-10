@@ -301,6 +301,7 @@
   },
   "myfarm": {
     "title": "MyFarm",
+    "tabsLabel": "Secciones de MyFarm",
     "cityTitle": "Mi ciudad",
     "currentCity": "Ciudad actual",
     "saveCity": "Cambiar ciudad",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import { CityForm } from "@/components/CityForm";
 import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getSubscription, mustCancelFirst } from "@/server/subscriptions";
@@ -35,6 +36,14 @@ export default async function ProfilePage() {
             </div>
           ))}
         </dl>
+      </div>
+
+      <div className="rounded-3xl bg-surface p-6 ring-1 ring-border">
+        <h2 className="font-display text-2xl font-bold">{t("myfarm.cityTitle")}</h2>
+        <p className="mt-1 text-sm text-muted">
+          {t("myfarm.currentCity")}: <b data-testid="current-city">{user.cityLabel}</b>
+        </p>
+        <CityForm />
       </div>
 
       <div className="rounded-3xl bg-surface p-6 ring-1 ring-border">

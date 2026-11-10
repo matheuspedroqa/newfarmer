@@ -56,6 +56,9 @@ test.describe("app do assinante (conta A)", () => {
     await page.goto("/myfarm");
     await page.getByLabel("Galinhas").check();
     await page.locator("#count-chickens").fill("7");
+    await page.getByRole("button", { name: "Salvar", exact: true }).click();
+    await expect(page.getByText("Salvo!")).toBeVisible();
+    await page.goto("/myfarm/crops");
     await page.getByLabel("Buscar plantação").fill("milh");
     await page.getByRole("checkbox", { name: "Milho", exact: true }).check();
     await page.getByRole("button", { name: "Salvar", exact: true }).click();
@@ -65,6 +68,9 @@ test.describe("app do assinante (conta A)", () => {
     await expect(page.getByTestId("crop-chips")).toContainText("Milho");
     await page.goto("/myfarm");
     await page.getByLabel("Galinhas").uncheck();
+    await page.getByRole("button", { name: "Salvar", exact: true }).click();
+    await expect(page.getByText("Salvo!")).toBeVisible();
+    await page.goto("/myfarm/crops");
     await page.getByRole("button", { name: "Desmarcar Milho" }).click();
     await page.getByRole("button", { name: "Salvar", exact: true }).click();
     await expect(page.getByText("Salvo!")).toBeVisible();

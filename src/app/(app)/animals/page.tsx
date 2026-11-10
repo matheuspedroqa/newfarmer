@@ -20,7 +20,7 @@ export default async function AnimalsIndex() {
       <h1 className="font-display text-4xl font-bold">{t("animalPage.emptyTitle")}</h1>
       <p className="text-muted">{t("animalPage.emptyText")}</p>
       <Link
-        href="/myfarm#animals"
+        href="/myfarm"
         className="inline-flex min-h-11 items-center rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-colors duration-150 hover:opacity-90 motion-reduce:transition-none"
       >
         {t("animalPage.addAnimal")}

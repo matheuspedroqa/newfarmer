@@ -16,7 +16,7 @@ export default async function CropsIndex() {
       <div className="flex flex-wrap items-center justify-between gap-4">
         <h1 className="font-display text-4xl font-bold">{t("cropPage.groups")}</h1>
         <Link
-          href="/myfarm#crops"
+          href="/myfarm/crops"
           className="flex items-center gap-2 rounded-3xl border-2 border-dashed border-primary/30 px-5 py-3 text-primary transition-colors duration-150 hover:bg-hover motion-reduce:transition-none"
         >
           {t("cropPage.addCrop")}
