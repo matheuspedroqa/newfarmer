@@ -48,6 +48,14 @@ test("dono do site vê as abas, o próprio login, o Monitoramento e abre o detal
   for (const name of ["Visão geral", "Assinantes", "Leads", "E-mails", "Activity logs", "Monitoramento"]) await expect(nav.getByRole("link", { name })).toBeVisible();
   await expect(page.getByTestId("overview-active")).toBeVisible();
   await expect(page.getByTestId("views-chart").locator("li")).toHaveCount(14);
+  // Mapa de visitas por país: 14 dias por padrão; tocar num dia filtra só aquele dia.
+  await expect(page.getByTestId("country-map")).toContainText("Visitas por país (últimos 14 dias)");
+  await expect(page.getByTestId("country-map").locator("svg path").first()).toBeVisible();
+  await page.getByTestId("views-chart").getByRole("link").last().click();
+  await expect(page).toHaveURL(/\/admin\?day=\d{4}-\d{2}-\d{2}$/);
+  await expect(page.getByTestId("views-chart").locator('[aria-current="date"]')).toHaveCount(1);
+  await page.getByRole("link", { name: "Ver os 14 dias" }).click();
+  await expect(page).toHaveURL(/\/admin$/);
 
   await nav.getByRole("link", { name: "Assinantes" }).click();
   await expect(page).toHaveURL(/\/admin\/subscribers$/);

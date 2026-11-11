@@ -918,7 +918,18 @@
     "entry_home": "Página de inicio",
     "entry_guide": "Qué plantar",
     "entry_other": "Otra página",
-    "cancelReason": "Motivo de la cancelación"
+    "cancelReason": "Motivo de la cancelación",
+    "chartHint": "Toca un día para ver de dónde vinieron las visitas.",
+    "mapTitle": "Visitas por país ({period})",
+    "mapAll": "últimos 14 días",
+    "mapShowAll": "Ver los 14 días",
+    "visitors": "Visitantes",
+    "views": "Páginas vistas",
+    "unknownCountry": "País desconocido",
+    "mapEmpty": "Ninguna visita en este período.",
+    "mapFew": "Menos",
+    "mapMany": "Más",
+    "mapCountry": "{country}: {visitors} visitantes, {views} páginas vistas"
   },
   "contact": {
     "footer": "Contacto",

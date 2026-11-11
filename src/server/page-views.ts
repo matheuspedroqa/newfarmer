@@ -129,3 +129,10 @@ export async function listLeads(db: Db, { since, before, limit = 50 }: { since: 
     source: r.source === null ? null : String(r.source),
   }));
 }
+
+const BY_COUNTRY = `SELECT country, COUNT(DISTINCT visitor_id)::int AS visitors, COUNT(*)::int AS views FROM page_views
+  WHERE created_at >= $1 AND created_at < $2 AND ${NOT_ADMIN} GROUP BY country ORDER BY country = '', views DESC, country`;
+
+/** Visitantes e páginas vistas por país (código da Vercel) entre `fromMs` e `toMs`, sem o dono do site; país vazio = desconhecido no fim. */
+export const visitsByCountry = (db: Db, fromMs: number, toMs: number) =>
+  db.query<{ country: string; visitors: number; views: number }>(BY_COUNTRY, [fromMs, toMs]);

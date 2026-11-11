@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { purgeOld } from "@/server/activity-log";
 import { exportUserData } from "@/server/account-data";
-import { leadFunnel, linkVisitorToUser, listUserPageViews, recordPageView } from "@/server/page-views";
+import { leadFunnel, linkVisitorToUser, listUserPageViews, recordPageView, visitsByCountry } from "@/server/page-views";
 import { upsertSubscription } from "@/server/subscriptions";
 import { testDb } from "../helpers/db";
 import { makeUser } from "../helpers/users";
@@ -21,6 +21,26 @@ describe("page views", () => {
       { path: "/b", referrer: "google.com", createdAt: 2000 },
     ]);
     expect((await exportUserData(db, ana)).pageViews).toHaveLength(2);
+  });
+
+  it("visitsByCountry soma visitantes e páginas por país no período, sem o dono do site", async () => {
+    const db = await testDb();
+    const dono = await makeUser(db, { email: "dono@exemplo.com" });
+    await db.run("UPDATE users SET is_platform_admin = TRUE WHERE id = $1", [dono]);
+    const at = (visitorId: string, country: string, t: number, userId: number | null = null) =>
+      recordPageView(db, { ...view(visitorId, "/", userId), country }, t);
+    await at("a", "BR", DAY);
+    await at("a", "BR", DAY + 5);
+    await at("b", "BR", DAY + 9);
+    await at("c", "PT", DAY + 1);
+    await at("d", "", DAY + 2); // país desconhecido
+    await at("e", "US", 2 * DAY); // fora do período (dia seguinte)
+    await at("x", "ES", DAY + 3, dono); // o dono do site não conta
+    expect(await visitsByCountry(db, DAY, 2 * DAY)).toEqual([
+      { country: "BR", visitors: 2, views: 3 },
+      { country: "PT", visitors: 1, views: 1 },
+      { country: "", visitors: 1, views: 1 }, // desconhecido sempre no fim
+    ]);
   });
 
   it("linkVisitorToUser liga só as visitas sem dono daquele visitante", async () => {

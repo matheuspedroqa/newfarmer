@@ -918,7 +918,18 @@
     "entry_home": "Home page",
     "entry_guide": "What to plant",
     "entry_other": "Other page",
-    "cancelReason": "Cancellation reason"
+    "cancelReason": "Cancellation reason",
+    "chartHint": "Tap a day to see where the visits came from.",
+    "mapTitle": "Visits by country ({period})",
+    "mapAll": "last 14 days",
+    "mapShowAll": "See all 14 days",
+    "visitors": "Visitors",
+    "views": "Page views",
+    "unknownCountry": "Unknown country",
+    "mapEmpty": "No visits in this period.",
+    "mapFew": "Fewer",
+    "mapMany": "More",
+    "mapCountry": "{country}: {visitors} visitors, {views} page views"
   },
   "contact": {
     "footer": "Contact",
