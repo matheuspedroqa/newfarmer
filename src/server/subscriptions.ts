@@ -3,6 +3,18 @@ import type { Db } from "./db";
 import type { PaymentProvider, StripeSubscription } from "./payments/types";
 
 export const ACCESS_STATUSES = ["active", "trialing", "past_due"] as const;
+export const TRIAL_DAYS = 3;
+
+/** Teste grátis: só para quem nunca teve assinatura nesta conta e cujo e-mail nunca começou um teste (nem em conta já apagada). */
+export async function trialEligible(db: Db, userId: number): Promise<boolean> {
+  const [r] = await db.query<{ ok: boolean }>(
+    `SELECT NOT EXISTS (SELECT 1 FROM trial_emails t WHERE t.email_hash = encode(sha256(convert_to(lower(u.email), 'UTF8')), 'hex'))
+        AND NOT EXISTS (SELECT 1 FROM subscriptions s WHERE s.user_id = u.id AND s.stripe_subscription_id IS NOT NULL) AS ok
+     FROM users u WHERE u.id = $1`,
+    [userId],
+  );
+  return r?.ok === true;
+}
 
 export type SubscriptionRow = {
   userId: number;
@@ -76,6 +88,8 @@ export async function upsertSubscription(db: Db, userId: number, customerId: str
     );
     return;
   }
+  if (sub.status === "trialing")
+    await db.run("INSERT INTO trial_emails (email_hash, used_at) SELECT encode(sha256(convert_to(lower(u.email), 'UTF8')), 'hex'), $2 FROM users u WHERE u.id = $1 ON CONFLICT DO NOTHING", [userId, now]);
   await db.run(
     `INSERT INTO subscriptions (user_id, stripe_customer_id, stripe_subscription_id, status, currency, amount, current_period_end, cancel_at_period_end, started_at, canceled_at, updated_at, stripe_event_created)
      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, CASE WHEN $4 = ANY($11::text[]) THEN $10::bigint END, $9, $10, $12::bigint)

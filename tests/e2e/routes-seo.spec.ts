@@ -65,7 +65,7 @@ test.describe("sem cookie de idioma", () => {
 
   test("/pt mostra a landing em português e / em inglês", async ({ page, context }) => {
     await page.goto("/pt");
-    await expect(page.getByRole("link", { name: "Assinar", exact: true }).first()).toBeVisible();
+    await expect(page.getByRole("link", { name: "Experimente já" }).first()).toBeVisible();
     await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");
     expect((await context.cookies()).find((c) => c.name === "nf_locale")?.value).toBe("pt");
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/pt$/);

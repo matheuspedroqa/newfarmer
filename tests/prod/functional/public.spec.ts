@@ -4,8 +4,7 @@ test.describe("páginas públicas", () => {
   test("landing em português: título, preço, botões e sem perguntas frequentes", async ({ page }) => {
     await page.goto("/pt");
     await expect(page.locator("h1")).toHaveCount(1);
-    await expect(page.getByTestId("price")).toContainText(/\/mês/);
-    await expect(page.getByRole("main").getByRole("link", { name: /^Assinar por/ }).first()).toHaveAttribute("href", "/register");
+    await expect(page.getByRole("main").getByRole("link", { name: "Experimente já" }).first()).toHaveAttribute("href", "/pt/try");
     await expect(page.getByText("Perguntas frequentes")).toHaveCount(0);
     await expect(page.getByRole("banner").getByRole("link", { name: "Experimente já" })).toBeVisible();
   });

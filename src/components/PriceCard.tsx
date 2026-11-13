@@ -8,7 +8,7 @@ export const btn = "inline-flex min-h-11 items-center justify-center rounded-ful
 
 const INCLUDES = ["a", "b", "c", "d", "e"] as const;
 
-/** Preço do país do visitante (pelo cabeçalho da Vercel) com o que vem no plano e o botão de assinar. */
+/** Preço do país do visitante (pelo cabeçalho da Vercel) com o que vem no plano e o botão do teste grátis. */
 export async function PriceCard() {
   const t = await getTranslations("home");
   const price = formatPrice(currencyForCountry((await headers()).get("x-vercel-ip-country")), resolveLocale(await getLocale()));
@@ -22,12 +22,12 @@ export async function PriceCard() {
             <li key={k} className="flex gap-2"><span aria-hidden className="text-primary">✓</span>{t(`includes.${k}`)}</li>
           ))}
         </ul>
-        <p className="mt-6 text-sm text-muted">{t("priceCancel")}</p>
-        <div className="mt-4 flex justify-center">
+        <div className="mt-6 flex justify-center">
           <Link href="/register" className={`${btn} bg-primary text-primary-text transition-opacity hover:opacity-90 motion-reduce:transition-none`}>
-            {t("ctaPrice", { price })}
+            {t("tryCta")}
           </Link>
         </div>
+        <p className="mt-4 text-sm text-muted">{t("tryCtaNote", { price })}</p>
       </div>
     </section>
   );

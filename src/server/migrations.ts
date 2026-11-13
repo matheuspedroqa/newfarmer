@@ -291,6 +291,15 @@ ALTER TABLE subscriptions ADD COLUMN cancel_details TEXT;
 ALTER TABLE subscriptions ADD COLUMN cancel_requested_at BIGINT;
 `,
   },
+  {
+    id: 14,
+    name: "trial_emails",
+    // Um teste grátis por e-mail: só o hash, sem ligação com a conta, para valer mesmo depois de a conta ser apagada.
+    sql: `
+CREATE TABLE trial_emails (email_hash TEXT PRIMARY KEY, used_at BIGINT NOT NULL);
+ALTER TABLE trial_emails ENABLE ROW LEVEL SECURITY;
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

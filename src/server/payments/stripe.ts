@@ -47,7 +47,7 @@ export function createStripeProvider(secretKey: string, fetchFn: typeof fetch = 
       const subs = ((r.data ?? []) as Raw[]).map(parseStripeSubscription);
       return subs.find((s) => ["active", "trialing", "past_due"].includes(s.status)) ?? null;
     },
-    async createCheckout({ customerId, priceId, userId, locale, successUrl, cancelUrl }) {
+    async createCheckout({ customerId, priceId, userId, locale, successUrl, cancelUrl, trialDays }) {
       const open = await call("GET", `checkout/sessions?customer=${encodeURIComponent(customerId)}&status=open&limit=10`);
       // 400: a sessão terminou enquanto isso (paga ou vencida); não impede abrir a nova.
       for (const s of (open.data ?? []) as Raw[]) await call("POST", `checkout/sessions/${encodeURIComponent(String(s.id))}/expire`, {}, 400);
@@ -59,6 +59,8 @@ export function createStripeProvider(secretKey: string, fetchFn: typeof fetch = 
         "line_items[0][price]": priceId,
         "line_items[0][quantity]": "1",
         "subscription_data[metadata][user_id]": String(userId),
+        // Cartão pedido já; a Stripe cobra sozinha quando o teste acaba.
+        ...(trialDays ? { "subscription_data[trial_period_days]": String(trialDays) } : {}),
         success_url: successUrl,
         cancel_url: cancelUrl,
       });

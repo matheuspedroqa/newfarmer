@@ -21,6 +21,7 @@ const TABLES = [
   "sessions",
   "stripe_events",
   "subscriptions",
+  "trial_emails",
   "users",
   "weather_cache",
 ];

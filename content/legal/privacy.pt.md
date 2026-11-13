@@ -1,6 +1,6 @@
 # Política de Privacidade
 
-**Última atualização: 6 de novembro de 2026**
+**Última atualização: 13 de novembro de 2026**
 
 Esta política explica, em palavras simples, quais dados o NewFarmer guarda sobre você, para que usa, com quem divide e quais são os seus direitos. Ela vale para quem usa o site no Brasil, na União Europeia, nos Estados Unidos ou em qualquer outro lugar.
 
@@ -27,6 +27,7 @@ Guardamos só o que o site precisa para funcionar. Não pedimos documentos, tele
 
 - o identificador de cliente e o da assinatura no Stripe, o status, a moeda, o valor e as datas da assinatura;
 - se você cancelar pelo Perfil: o motivo que escolheu, o texto que escreveu (se escreveu) e a data do pedido. Isso nos ajuda a melhorar o NewFarmer e é apagado junto com a conta.
+- se você começar o teste grátis: um código embaralhado (hash) do seu e-mail, que não permite descobrir o e-mail. Serve só para o teste valer uma vez por e-mail e, por isso, continua guardado mesmo depois de a conta ser apagada.
 
 O número do cartão **nunca** chega ao NewFarmer e não é guardado por nós.
 
@@ -40,7 +41,7 @@ O número do cartão **nunca** chega ao NewFarmer e não é guardado por nós.
 
 ### Dados técnicos e de segurança
 
-- **sessões:** quando você entra, criamos uma sessão para manter você conectado. Guardamos uma versão embaralhada do código da sessão, quando ela vence e quando você usou o site pela última vez. A sessão termina depois de 1 hora sem uso e dura no máximo 30 dias;
+- **sessões:** quando você entra, criamos uma sessão para manter você conectado. Guardamos uma versão embaralhada do código da sessão, quando ela vence e quando você usou o site pela última vez. A sessão termina depois de 3 horas sem uso e dura no máximo 30 dias;
 - **tentativas de entrar:** o username digitado (só se tiver um formato válido), a hora e se deu certo. Usamos isso para bloquear a conta por um tempo depois de 5 senhas erradas seguidas;
 - **limites de tentativas:** contadores ligados ao endereço IP ou à conta, para impedir abusos (como alguém tentando adivinhar senhas);
 - **registro de atividade:** quem fez, o que fez, em quê, o endereço IP e quando, para as ações da conta (por exemplo: entrar, sair, trocar a senha, editar a criação ou o diário). Esse registro **nunca** guarda senhas, códigos de acesso nem o texto do seu diário;
@@ -101,7 +102,7 @@ O NewFarmer é mantido no Brasil, o banco de dados fica na União Europeia e alg
 - **Dados de cobrança no Stripe:** pelo prazo que a lei fiscal exige.
 - **Limites de tentativas:** cerca de 1 dia.
 - **Previsões do tempo:** até 7 dias.
-- **Sessões:** até você sair, até 1 hora sem uso ou no máximo 30 dias.
+- **Sessões:** até você sair, até 3 horas sem uso ou no máximo 30 dias.
 - **Código para trocar a senha:** vale 1 hora. **Código para confirmar o e-mail:** vale 7 dias.
 
 ## 7. Seus direitos

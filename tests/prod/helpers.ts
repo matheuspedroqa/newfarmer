@@ -77,7 +77,7 @@ export async function register(page: Page, user: TestUser, name = "Teste Playwri
 export async function payWithTestCard(page: Page) {
   needsTestAccounts();
   await expect(page).toHaveURL(/\/subscribe$/);
-  await page.getByRole("button", { name: /^Assinar por/ }).click();
+  await page.getByRole("button", { name: /^(Assinar por|Testar 3 dias)/ }).click();
   await page.waitForURL(/checkout\.stripe\.com/, { timeout: 45_000 });
   expect(page.url(), "A Stripe NÃO está em modo teste: parei sem pagar.").toContain("cs_test_");
   await page.locator("#cardNumber").fill("4242424242424242");

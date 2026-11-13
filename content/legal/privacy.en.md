@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: November 6, 2026**
+**Last updated: November 13, 2026**
 
 This policy explains, in plain words, what data NewFarmer keeps about you, what it is used for, who it is shared with and what your rights are. It applies to everyone who uses the site, whether in Brazil, the European Union, the United States or anywhere else.
 
@@ -27,6 +27,7 @@ We keep only what the site needs to work. We do not ask for ID documents, phone 
 
 - the customer and subscription identifiers at Stripe, the status, the currency, the amount and the dates of the subscription;
 - if you cancel from your Profile: the reason you chose, the text you wrote (if any) and the date of the request. This helps us improve NewFarmer and is deleted together with the account.
+- if you start the free trial: a scrambled code (hash) of your email, from which the email cannot be recovered. It only makes sure the trial is used once per email, so it is kept even after the account is deleted.
 
 Your card number **never** reaches NewFarmer and is not stored by us.
 
@@ -40,7 +41,7 @@ Your card number **never** reaches NewFarmer and is not stored by us.
 
 ### Technical and security data
 
-- **sessions:** when you sign in, we create a session to keep you signed in. We store a scrambled version of the session code, when it expires and when you last used the site. A session ends after 1 hour without use and lasts at most 30 days;
+- **sessions:** when you sign in, we create a session to keep you signed in. We store a scrambled version of the session code, when it expires and when you last used the site. A session ends after 3 hours without use and lasts at most 30 days;
 - **sign-in attempts:** the username typed (only if it has a valid format), the time and whether it worked. We use this to lock the account for a while after 5 wrong passwords in a row;
 - **attempt limits:** counters tied to the IP address or the account, to stop abuse (such as someone trying to guess passwords);
 - **activity log:** who did what, on what, the IP address and when, for account actions (for example: signing in, signing out, changing the password, editing the farm or the diary). This log **never** stores passwords, access codes or the text of your diary;
@@ -101,7 +102,7 @@ NewFarmer is run from Brazil, the database is in the European Union and some pro
 - **Billing data at Stripe:** for as long as tax law requires.
 - **Attempt limits:** about 1 day.
 - **Weather forecasts:** up to 7 days.
-- **Sessions:** until you sign out, after 1 hour without use, or at most 30 days.
+- **Sessions:** until you sign out, after 3 hours without use, or at most 30 days.
 - **Password reset code:** valid for 1 hour. **E-mail confirmation code:** valid for 7 days.
 
 ## 7. Your rights

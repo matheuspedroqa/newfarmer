@@ -36,7 +36,7 @@ export async function createAccount(page: Page, email: string, city = "Curitiba"
 /** Na tela /subscribe: assina (pagamento falso) e termina no Painel. */
 export async function subscribeFake(page: Page) {
   await expect(page).toHaveURL(/\/subscribe$/);
-  await page.getByRole("button", { name: /^Assinar por/ }).click();
+  await page.getByRole("button", { name: /^(Assinar por|Testar 3 dias)/ }).click();
   await expect(page).toHaveURL(/\/dashboard$/);
 }
 

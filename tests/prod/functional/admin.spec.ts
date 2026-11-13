@@ -48,7 +48,7 @@ test.describe("Admin (sua conta)", () => {
       await pb.goto("/dashboard");
       await expect(pb).toHaveURL(/\/subscribe$/);
       await expect(pb.getByTestId("subscription-paused")).toBeVisible();
-      await expect(pb.getByRole("button", { name: /^Assinar por/ })).toHaveCount(0);
+      await expect(pb.getByRole("button", { name: /^(Assinar por|Testar 3 dias)/ })).toHaveCount(0);
       await pb.goto("/profile/subscription");
       await expect(pb.getByTestId("billing-card")).toContainText("Pausada");
       await pb.context().close();

@@ -16,7 +16,7 @@ export interface PaymentProvider {
   /** Assinatura do cliente que ainda dá acesso (ativa, em teste ou com pagamento pendente), direto da Stripe. */
   findOpenSubscription(customerId: string): Promise<StripeSubscription | null>;
   /** Fecha os pagamentos ainda abertos do cliente (outra aba) e abre um novo: só a aba mais nova consegue pagar. */
-  createCheckout(input: { customerId: string; priceId: string; userId: number; locale: Locale; successUrl: string; cancelUrl: string }): Promise<string>;
+  createCheckout(input: { customerId: string; priceId: string; userId: number; locale: Locale; successUrl: string; cancelUrl: string; trialDays?: number }): Promise<string>;
   getCheckout(sessionId: string): Promise<{ customerId: string; subscription: StripeSubscription | null }>;
   createPortal(input: { customerId: string; returnUrl: string }): Promise<string>;
   /** Apaga o cliente: a Stripe cancela na hora todas as assinaturas dele e remove nome e e-mail. */

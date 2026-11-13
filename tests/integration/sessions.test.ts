@@ -44,14 +44,14 @@ describe("sessões", () => {
     expect(await getSessionUser(db, token, SESSION_TTL_MS + 1)).toBeNull();
   });
 
-  it("1 hora parado: a sessão acaba e é apagada", async () => {
+  it("3 horas parado: a sessão acaba e é apagada", async () => {
     const db = await testDb();
     const token = await createSession(db, await makeUser(db), 0);
     expect(await getSessionUser(db, token, SESSION_IDLE_MS + 1)).toBeNull();
     expect(await db.query("SELECT COUNT(*)::int AS n FROM sessions")).toEqual([{ n: 0 }]);
   });
 
-  it("exatamente 1 hora parado ainda vale; só acima disso acaba", async () => {
+  it("exatamente 3 horas parado ainda vale; só acima disso acaba", async () => {
     const db = await testDb();
     const id = await makeUser(db);
     const token = await createSession(db, id, 0);

@@ -30,10 +30,10 @@ it("conta contas novas em 7 dias, sessões ativas, bloqueios, erros e cache do t
   const nova = await makeUser(db, { email: "nova@exemplo.com" });
   await db.run("UPDATE users SET created_at = $1 WHERE id = $2", [AGORA - DIA, nova]);
 
-  // sessão ativa, sessão parada há 2 h e sessão vencida
+  // sessão ativa, sessão parada há 4 h e sessão vencida
   const sessao = "INSERT INTO sessions (user_id, token_hash, expires_at, last_seen_at) VALUES ($1, $2, $3, $4)";
   await db.run(sessao, [nova, "a", AGORA + DIA, AGORA - 10 * 60_000]);
-  await db.run(sessao, [nova, "b", AGORA + DIA, AGORA - 2 * HORA]);
+  await db.run(sessao, [nova, "b", AGORA + DIA, AGORA - 4 * HORA]);
   await db.run(sessao, [nova, "c", AGORA - 1, AGORA - 60_000]);
 
   // "bloqueado": 5 erros em 15 min; "liberado": 5 erros e depois um acerto; "pouco": 4 erros; "antigo": erros há 1 h

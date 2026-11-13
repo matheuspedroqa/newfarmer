@@ -1,15 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { getLocale, getTranslations } from "next-intl/server";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { FloatingCard, VerifiedSeal } from "@/components/DeviceExtras";
 import { PhoneFrame } from "@/components/PhoneFrame";
-import { btn, PriceCard } from "@/components/PriceCard";
-import { resolveLocale } from "@/i18n/locales";
-import { currencyForCountry, formatPrice, PRICES, type Currency } from "@/lib/pricing";
+import { btn } from "@/components/PriceCard";
+import { localePrefix, resolveLocale } from "@/i18n/locales";
+import { PRICES, type Currency } from "@/lib/pricing";
 import { marketingAlternates } from "@/lib/seo";
 import { getCurrentUser } from "@/server/current-user";
 
@@ -26,13 +25,11 @@ export default async function HomePage() {
   if (await getCurrentUser().catch(() => null)) redirect("/dashboard");
   const t = await getTranslations("home");
   const locale = resolveLocale(await getLocale());
-  const currency = currencyForCountry((await headers()).get("x-vercel-ip-country"));
-  const price = formatPrice(currency, locale);
   const img = (name: string, device: "desktop" | "mobile") => `/screenshots/${locale}-${name}-${device}.png`;
   const card = (k: "weather" | "diary" | "count") => ({ icon: t(`cards.${k}.icon`), title: t(`cards.${k}.title`), text: t(`cards.${k}.text`) });
   const cta = (
-    <Link href="/register" className={`${btn} bg-primary text-primary-text transition-opacity hover:opacity-90 motion-reduce:transition-none`}>
-      {t("ctaPrice", { price })}
+    <Link href={`${localePrefix(locale)}/try`} className={`${btn} bg-primary text-primary-text transition-opacity hover:opacity-90 motion-reduce:transition-none`}>
+      {t("tryNav")}
     </Link>
   );
 
@@ -95,8 +92,6 @@ export default async function HomePage() {
           ))}
         </ul>
       </section>
-
-      <PriceCard />
 
       <section className="px-5 py-16 text-center md:px-8">
         <h2 className="font-display text-3xl font-bold">{t("finalTitle")}</h2>

@@ -197,7 +197,7 @@ test("dono pausa a assinatura: a pessoa fica bloqueada sem poder assinar de novo
   await login(sub);
   await expect(page).toHaveURL(/\/subscribe$/);
   await expect(page.getByTestId("subscription-paused")).toBeVisible();
-  await expect(page.getByRole("button", { name: /^Assinar por/ })).toHaveCount(0);
+  await expect(page.getByRole("button", { name: /^(Assinar por|Testar 3 dias)/ })).toHaveCount(0);
 
   await login(owner);
   await openDetail();

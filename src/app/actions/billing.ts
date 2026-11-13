@@ -12,7 +12,7 @@ import { getDb } from "@/server/db";
 import { getPaymentProvider, priceIdFor, shouldUseFakePayments } from "@/server/payments";
 import { logRequestError } from "@/server/monitoring";
 import { clientIp } from "@/server/request-context";
-import { ensureCustomer, getSubscription, hasOpenSubscription, requestCancellation, upsertSubscription } from "@/server/subscriptions";
+import { ensureCustomer, getSubscription, hasOpenSubscription, requestCancellation, TRIAL_DAYS, trialEligible, upsertSubscription } from "@/server/subscriptions";
 import type { FormState } from "./auth";
 
 export async function startCheckoutAction(): Promise<void> {
@@ -43,6 +43,7 @@ export async function startCheckoutAction(): Promise<void> {
       locale: resolveLocale(await getLocale()),
       successUrl: `${appUrl()}/subscribe/success?session_id={CHECKOUT_SESSION_ID}`,
       cancelUrl: `${appUrl()}/subscribe`,
+      trialDays: (await trialEligible(db, user.id)) ? TRIAL_DAYS : undefined,
     });
   } catch (error) {
     // Stripe fora do ar ou variável faltando na Vercel: o motivo vai para Admin > Monitoramento e a pessoa vê um aviso.

@@ -25,9 +25,6 @@ export default async function MarketingLayout({ children }: { children: React.Re
         <div className="flex flex-wrap items-center gap-2 md:gap-4 lg:justify-self-end">
           <TopControls />
           <Link href="/login" className={navLink}>{t("home.login")}</Link>
-          <Link href="/register" className="inline-flex min-h-11 items-center rounded-full bg-primary px-5 py-2 font-semibold text-primary-text transition-opacity duration-150 hover:opacity-90 motion-reduce:transition-none">
-            {t("home.headerCta")}
-          </Link>
         </div>
       </header>
       <main className="flex-1">{children}</main>

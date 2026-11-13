@@ -21,6 +21,14 @@ describe("cliente Stripe", () => {
     expect(body.get("customer")).toBe("cus_1");
     expect(body.get("locale")).toBe("pt-BR");
     expect(body.get("subscription_data[metadata][user_id]")).toBe("7");
+    expect(body.has("subscription_data[trial_period_days]")).toBe(false);
+  });
+
+  it("createCheckout com teste grátis manda os dias à Stripe", async () => {
+    const fetchFn = vi.fn(async () => ok({ url: "https://checkout.stripe.com/c/x" }));
+    await createStripeProvider("k", asFetch(fetchFn)).createCheckout({ customerId: "cus_1", priceId: "p", userId: 7, locale: "pt", successUrl: "https://s/ok", cancelUrl: "https://s/no", trialDays: 3 });
+    const [, init] = fetchFn.mock.calls[1] as unknown as [string, RequestInit];
+    expect(new URLSearchParams(init.body as string).get("subscription_data[trial_period_days]")).toBe("3");
   });
 
   it("createCheckout fecha antes os pagamentos ainda abertos do cliente (outra aba)", async () => {

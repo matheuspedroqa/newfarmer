@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { shouldUseFakePayments } from "@/server/payments";
 import { createFakePaymentProvider } from "@/server/payments/fake";
-import { ensureCustomer, getSubscription, hasAccess, hasOpenSubscription, requestCancellation, upsertSubscription, userIdForCustomer } from "@/server/subscriptions";
+import { ensureCustomer, getSubscription, hasAccess, hasOpenSubscription, requestCancellation, trialEligible, upsertSubscription, userIdForCustomer } from "@/server/subscriptions";
 import { testDb } from "../helpers/db";
 import { makeUser } from "../helpers/users";
 
@@ -132,5 +132,23 @@ describe("limpeza", () => {
     expect(await requestCancellation(db, provider, ana, { reason: "other", details: "x" }, 600)).toBe("notCancelable");
     expect((await getSubscription(db, ana))?.cancelReason).toBe("price");
     expect(await requestCancellation(db, provider, bia, { reason: "price", details: "" })).toBe("notCancelable");
+  });
+});
+
+describe("teste grátis", () => {
+  it("vale uma vez por e-mail, mesmo depois de a conta ser apagada, e nunca para quem já assinou", async () => {
+    const db = await testDb();
+    const ana = await makeUser(db, { email: "Ana@Exemplo.com" });
+    const bia = await makeUser(db, { email: "bia@exemplo.com", username: "bia" });
+    expect(await trialEligible(db, ana)).toBe(true);
+    await upsertSubscription(db, ana, "cus_1", null); // cliente criado, sem assinatura: ainda vale
+    expect(await trialEligible(db, ana)).toBe(true);
+    await upsertSubscription(db, ana, "cus_1", sub({ status: "trialing" }));
+    expect(await trialEligible(db, ana)).toBe(false);
+    await upsertSubscription(db, bia, "cus_2", sub({ id: "sub_2", customer: "cus_2" })); // assinou sem teste
+    expect(await trialEligible(db, bia)).toBe(false);
+    await db.run("DELETE FROM users WHERE id = $1", [ana]);
+    const again = await makeUser(db, { email: "ana@exemplo.com" });
+    expect(await trialEligible(db, again)).toBe(false);
   });
 });

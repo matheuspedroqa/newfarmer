@@ -3,9 +3,9 @@ import { getUserById, type User } from "./accounts";
 import type { Db } from "./db";
 import { hashToken, newToken } from "./tokens";
 
-// Teto absoluto de 30 dias + 1 hora sem uso. O último uso só é regravado a cada 5 min (evita escrita a cada clique).
+// Teto absoluto de 30 dias + 3 horas sem uso. O último uso só é regravado a cada 5 min (evita escrita a cada clique).
 export const SESSION_TTL_MS = 30 * 24 * 60 * 60_000;
-export const SESSION_IDLE_MS = 60 * 60_000;
+export const SESSION_IDLE_MS = 3 * 60 * 60_000;
 export const SESSION_TOUCH_MS = 5 * 60_000;
 
 export async function createSession(db: Db, userId: number, now = Date.now()): Promise<string> {

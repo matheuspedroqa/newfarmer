@@ -21,7 +21,7 @@ export default async function SubscriptionPage() {
     ? { subscriptionId: "preview", status: "active", startedAt: Date.now(), amount: PRICES[currency], currency, currentPeriodEnd: Date.now() + 30 * 86_400_000, cancelAtPeriodEnd: false }
     : await subscriptionOf(user.id);
   const locale = resolveLocale(await getLocale());
-  const status = sub?.status === "active" || sub?.status === "trialing" ? "active" : sub?.status === "past_due" ? "past_due" : sub?.status === "paused" ? "paused" : sub?.status === "canceled" ? "canceled" : "none";
+  const status = sub?.status === "trialing" ? "trialing" : sub?.status === "active" ? "active" : sub?.status === "past_due" ? "past_due" : sub?.status === "paused" ? "paused" : sub?.status === "canceled" ? "canceled" : "none";
   const day = (ms: number) => new Intl.DateTimeFormat(intlLocale(locale), { dateStyle: "long" }).format(ms);
   const date = sub?.currentPeriodEnd ? day(sub.currentPeriodEnd) : null;
   const btn = "inline-flex min-h-11 w-full items-center justify-center rounded-xl border-2 border-primary px-5 py-3 font-bold transition hover:bg-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:w-60";

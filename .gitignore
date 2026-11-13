@@ -49,3 +49,4 @@ next-env.d.ts
 /tests/prod/.auth/
 /test-results-prod/
 /playwright-report-prod/
+/APP.md

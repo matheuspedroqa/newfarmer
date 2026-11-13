@@ -7,7 +7,8 @@ test("página inicial: CTA no topo leva ao cadastro; Entrar ao login", async ({ 
   await page.getByRole("banner").getByRole("link", { name: "Entrar" }).click();
   await expect(page).toHaveURL(/\/login$/);
   await page.goto("/");
-  await page.getByRole("banner").getByRole("link", { name: "Assinar", exact: true }).click();
+  await page.getByRole("banner").getByRole("link", { name: "Experimente já" }).click();
+  await page.getByRole("link", { name: "Testar 3 dias grátis", exact: true }).click();
   await expect(page).toHaveURL(/\/register$/);
   await expect(page).toHaveTitle("Criar conta · NewFarmer");
 });
@@ -146,11 +147,11 @@ for (const tema of ["claro", "escuro"]) {
 test.describe("landing: preço, alternância e dados estruturados", () => {
   // BR em português; Portugal e sem país em inglês (o formato do preço acompanha o idioma).
   for (const [country, lang, price] of [["BR", "pt", "R$ 7,99"], ["PT", "en", "€2.99"], [undefined, "en", "$2.99"]] as const) {
-    test(`o botão do topo mostra ${price} (${country ?? "sem cabeçalho"})`, async ({ page, context }) => {
+    test(`o cartão do plano mostra ${price} (${country ?? "sem cabeçalho"})`, async ({ page, context }) => {
       await context.addCookies([{ name: "nf_locale", value: lang, domain: "localhost", path: "/" }]);
       await page.setExtraHTTPHeaders(country ? { "x-vercel-ip-country": country } : {});
-      await page.goto("/");
-      await expect(page.getByRole("main").getByRole("link", { name: /^(Assinar por|Subscribe for)/ }).first()).toContainText(price.replace(/\u00a0/g, " "));
+      await page.goto("/try");
+      await expect(page.getByTestId("price")).toContainText(price.replace(/\u00a0/g, " "));
     });
   }
 
