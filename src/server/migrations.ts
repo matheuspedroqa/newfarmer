@@ -300,6 +300,14 @@ CREATE TABLE trial_emails (email_hash TEXT PRIMARY KEY, used_at BIGINT NOT NULL)
 ALTER TABLE trial_emails ENABLE ROW LEVEL SECURITY;
 `,
   },
+  {
+    id: 15,
+    name: "session_idle_ms",
+    // Tempo sem uso que derruba a sessão: 3 horas, ou 7 dias para quem marcou "Manter-me conectado" ao entrar.
+    sql: `
+ALTER TABLE sessions ADD COLUMN idle_ms BIGINT NOT NULL DEFAULT 10800000;
+`,
+  },
 ] as const satisfies readonly { id: number; name: string; sql: string }[];
 
 // Trava para duas instâncias subindo juntas não aplicarem a mesma migração duas vezes.

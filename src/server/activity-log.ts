@@ -3,7 +3,6 @@ import { normalizeUsername, usernameProblem } from "@/lib/username";
 import type { LoginResult } from "./accounts";
 import type { Db } from "./db";
 import { limitByIp, limitWrites, purgeRateLimits } from "./rate-limit";
-import { SESSION_IDLE_MS } from "./sessions";
 
 export const ACTIVITY_ACTIONS = [
   "auth.login",
@@ -158,7 +157,7 @@ export async function purgeOld(db: Db, now = Date.now()): Promise<void> {
   await db.run("DELETE FROM weather_cache WHERE fetched_at < $1", [now - WEATHER_CACHE_RETENTION_MS]);
   await db.run("DELETE FROM error_logs WHERE at < $1", [now - ACTIVITY_RETENTION_MS]);
   // Sessão vencida ou parada além do prazo de inatividade, e tokens vencidos (link vencido continua dando "expirado").
-  await db.run("DELETE FROM sessions WHERE expires_at < $1 OR last_seen_at < $2", [now, now - SESSION_IDLE_MS]);
+  await db.run("DELETE FROM sessions WHERE expires_at < $1 OR last_seen_at < $1 - idle_ms", [now]);
   await db.run("DELETE FROM password_reset_tokens WHERE expires_at < $1", [now]);
   await db.run("DELETE FROM email_verification_tokens WHERE expires_at < $1", [now]);
   await db.run("DELETE FROM page_views WHERE created_at < $1", [now - ACTIVITY_RETENTION_MS]);

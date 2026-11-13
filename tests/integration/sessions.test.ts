@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   SESSION_IDLE_MS,
+  SESSION_REMEMBER_IDLE_MS,
   SESSION_TOUCH_MS,
   SESSION_TTL_MS,
   createSession,
@@ -49,6 +50,15 @@ describe("sessões", () => {
     const token = await createSession(db, await makeUser(db), 0);
     expect(await getSessionUser(db, token, SESSION_IDLE_MS + 1)).toBeNull();
     expect(await db.query("SELECT COUNT(*)::int AS n FROM sessions")).toEqual([{ n: 0 }]);
+  });
+
+  it("manter conectado: aguenta 7 dias parado, não mais", async () => {
+    const db = await testDb();
+    const id = await makeUser(db);
+    const token = await createSession(db, id, 0, true);
+    expect((await getSessionUser(db, token, SESSION_REMEMBER_IDLE_MS))?.id).toBe(id);
+    const other = await createSession(db, id, 0, true);
+    expect(await getSessionUser(db, other, SESSION_REMEMBER_IDLE_MS + 1)).toBeNull();
   });
 
   it("exatamente 3 horas parado ainda vale; só acima disso acaba", async () => {

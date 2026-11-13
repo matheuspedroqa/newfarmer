@@ -83,7 +83,7 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
 }
 
 export async function loginAction(_prev: FormState, formData: FormData): Promise<FormState> {
-  const values = typed(formData, "username");
+  const values = typed(formData, "username", "remember", "saveUser");
   const parsed = loginSchema.safeParse({ username: formData.get("username"), password: formData.get("password") });
   if (!parsed.success) return { fieldErrors: toFieldErrors(parsed.error), values };
 
@@ -102,7 +102,7 @@ export async function loginAction(_prev: FormState, formData: FormData): Promise
 
   await refreshEstimatedClimate(db, getWeatherProvider(), result.userId).catch(() => undefined);
   const user = (await getUserById(db, result.userId))!;
-  await startSession(user);
+  await startSession(user, values.remember === "on");
   redirect(hasAccess(user, await getSubscription(db, user.id)) ? "/dashboard" : "/subscribe");
 }
 

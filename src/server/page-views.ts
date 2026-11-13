@@ -60,7 +60,7 @@ const LEADS = `WITH pv AS (
     UNION ALL
     SELECT 'u:' || a.uid, LEAST(a.created_at, COALESCE(a.first_seen, a.created_at)), GREATEST(a.created_at, COALESCE(a.last_seen, 0)),
       a.pages, a.last_path, a.uid, a.username, a.email,
-      CASE WHEN s.status IN ('active','trialing','past_due') THEN 4
+      CASE WHEN s.status IN ('active','past_due') THEN 4
            WHEN s.user_id IS NOT NULL THEN 3
            WHEN EXISTS (SELECT 1 FROM farm_animals f WHERE f.user_id = a.uid) OR EXISTS (SELECT 1 FROM farm_crops c WHERE c.user_id = a.uid) THEN GREATEST(2, COALESCE(a.pv_step, 2))
            ELSE GREATEST(1, COALESCE(a.pv_step, 1)) END,

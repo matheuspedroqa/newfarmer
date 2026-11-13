@@ -41,7 +41,7 @@ El número de tu tarjeta **nunca** llega a NewFarmer y no lo guardamos.
 
 ### Datos técnicos y de seguridad
 
-- **sesiones:** cuando inicias sesión, creamos una sesión para mantenerte conectado. Guardamos una versión codificada del código de sesión, cuándo caduca y cuándo usaste el sitio por última vez. Una sesión termina tras 3 horas sin uso y dura 30 días como máximo;
+- **sesiones:** cuando inicias sesión, creamos una sesión para mantenerte conectado. Guardamos una versión codificada del código de sesión, cuándo caduca y cuándo usaste el sitio por última vez. Una sesión termina tras 3 horas sin uso (o 7 días, si marcas "Mantenerme conectado" al entrar) y dura 30 días como máximo. Si marcas "Recordar mi usuario", el nombre de usuario se guarda solo en tu navegador, no en nuestros servidores;
 - **intentos de inicio de sesión:** el nombre de usuario escrito (solo si tiene un formato válido), la hora y si funcionó. Lo usamos para bloquear la cuenta durante un tiempo tras 5 contraseñas incorrectas seguidas;
 - **límites de intentos:** contadores ligados a la dirección IP o a la cuenta, para frenar abusos (como alguien que intenta adivinar contraseñas);
 - **registro de actividad:** quién hizo qué, sobre qué, la dirección IP y cuándo, para acciones de la cuenta (por ejemplo: iniciar sesión, cerrar sesión, cambiar la contraseña, editar la finca o el diario). Este registro **nunca** guarda contraseñas, códigos de acceso ni el texto de tu diario;
@@ -102,7 +102,7 @@ NewFarmer se gestiona desde Brasil, la base de datos está en la Unión Europea 
 - **Datos de facturación en Stripe:** el tiempo que exija la ley tributaria.
 - **Límites de intentos:** cerca de 1 día.
 - **Previsiones del tiempo:** hasta 7 días.
-- **Sesiones:** hasta que salgas, tras 3 horas sin uso, o 30 días como máximo.
+- **Sesiones:** hasta que salgas, tras 3 horas sin uso (7 días con "Mantenerme conectado"), o 30 días como máximo.
 - **Código para restablecer la contraseña:** válido durante 1 hora. **Código de confirmación del correo:** válido durante 7 días.
 
 ## 7. Tus derechos

@@ -7,11 +7,12 @@ import { listUserPageViews } from "./page-views";
 import { getSubscription } from "./subscriptions";
 
 const DIA = 24 * 60 * 60_000;
-export const SUBSCRIBER_STATUSES = ["active", "past_due", "paused", "canceled", "none"] as const;
+export const SUBSCRIBER_STATUSES = ["active", "trialing", "past_due", "paused", "canceled", "none"] as const;
 export type SubscriberStatus = (typeof SUBSCRIBER_STATUSES)[number];
 
 // Faixa de status da assinatura; quem não tem linha (ou está em none/incomplete/unpaid) cai em "none".
-const BUCKET = `CASE WHEN s.status IN ('active','trialing') THEN 'active' WHEN s.status = 'past_due' THEN 'past_due'
+// Só "active" é assinante que pagou: quem está no teste grátis ("trialing") ainda não foi cobrado e fica na própria faixa.
+const BUCKET = `CASE WHEN s.status = 'active' THEN 'active' WHEN s.status = 'trialing' THEN 'trialing' WHEN s.status = 'past_due' THEN 'past_due'
   WHEN s.status = 'paused' THEN 'paused' WHEN s.status = 'canceled' THEN 'canceled' ELSE 'none' END`;
 
 /** Tudo exclui o dono do site. */
@@ -20,7 +21,7 @@ export async function getAdminOverview(db: Db, now: number) {
     "SELECT COUNT(*) AS users, COUNT(*) FILTER (WHERE created_at >= $1) AS new7 FROM users WHERE NOT is_platform_admin",
     [now - 7 * DIA],
   );
-  const subscriptions: Record<SubscriberStatus, number> = { active: 0, past_due: 0, paused: 0, canceled: 0, none: 0 };
+  const subscriptions: Record<SubscriberStatus, number> = { active: 0, trialing: 0, past_due: 0, paused: 0, canceled: 0, none: 0 };
   // sql só junta constantes deste arquivo (BUCKET) e $n: nada que venha de fora entra no texto.
   const bucketSql = `SELECT ${BUCKET} AS bucket, COUNT(*) AS n FROM users u LEFT JOIN subscriptions s ON s.user_id = u.id WHERE NOT u.is_platform_admin GROUP BY 1`;
   for (const r of await db.query<{ bucket: SubscriberStatus; n: string }>(bucketSql)) subscriptions[r.bucket] = Number(r.n);
@@ -28,11 +29,11 @@ export async function getAdminOverview(db: Db, now: number) {
   const mrr: Record<Currency, number> = { brl: 0, eur: 0, usd: 0 };
   for (const r of await db.query<{ currency: Currency; total: string }>(
     `SELECT s.currency, SUM(s.amount) AS total FROM subscriptions s JOIN users u ON u.id = s.user_id
-     WHERE NOT u.is_platform_admin AND s.status IN ('active','trialing') AND s.currency IN ('brl','eur','usd') GROUP BY s.currency`,
+     WHERE NOT u.is_platform_admin AND s.status = 'active' AND s.currency IN ('brl','eur','usd') GROUP BY s.currency`,
   )) mrr[r.currency] = Number(r.total);
 
   const [m] = await db.query<Record<string, string>>(
-    `SELECT COUNT(*) FILTER (WHERE s.started_at >= $1) AS started, COUNT(*) FILTER (WHERE s.canceled_at >= $1) AS canceled
+    `SELECT COUNT(*) FILTER (WHERE s.started_at >= $1 AND s.status <> 'trialing') AS started, COUNT(*) FILTER (WHERE s.canceled_at >= $1) AS canceled
      FROM subscriptions s JOIN users u ON u.id = s.user_id WHERE NOT u.is_platform_admin`,
     [now - 30 * DIA],
   );
@@ -71,7 +72,8 @@ export async function listSubscribers(db: Db, opts: { q?: string; status?: Subsc
     const like = p(`%${q.replace(/[\\%_]/g, "\\$&")}%`);
     where.push(`(u.name ILIKE ${like} OR u.email ILIKE ${like} OR u.username ILIKE ${like})`);
   }
-  if (opts.status) where.push(`${BUCKET} = ${p(opts.status)}`);
+  // Sem filtro, só quem tem ou já teve assinatura confirmada na Stripe; conta que só chegou ao pagamento aparece em "Sem assinatura".
+  where.push(opts.status ? `${BUCKET} = ${p(opts.status)}` : `${BUCKET} <> 'none'`);
   if (opts.before) where.push(`u.created_at < ${p(opts.before)}`);
   const limit = p(opts.limit ?? 50);
   const sql = `SELECT u.id, u.name, u.username, u.email, u.city_label, u.country_code, u.created_at, ${BUCKET} AS bucket, s.currency, s.current_period_end,

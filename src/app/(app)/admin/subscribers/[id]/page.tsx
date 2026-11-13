@@ -32,7 +32,7 @@ export default async function SubscriberDetailPage({ params, searchParams }: { p
   const date = (ms: number | null) => (ms === null ? t("never") : new Intl.DateTimeFormat(locale, { dateStyle: "short" }).format(ms));
   const dateTime = new Intl.DateTimeFormat(locale, { dateStyle: "short", timeStyle: "medium" });
   const sub = d.subscription;
-  const status = !sub ? "none" : sub.status === "trialing" ? "active" : ["active", "past_due", "paused", "canceled"].includes(sub.status) ? sub.status : "none";
+  const status = !sub ? "none" : ["active", "trialing", "past_due", "paused", "canceled"].includes(sub.status) ? sub.status : "none";
   const block = "rounded-3xl bg-surface p-5 ring-1 ring-border";
   const pill = "rounded-full bg-background px-3 py-1 text-sm ring-1 ring-border";
   const rows = (items: [string, React.ReactNode][]) => (

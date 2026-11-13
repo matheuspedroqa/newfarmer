@@ -41,7 +41,7 @@ O número do cartão **nunca** chega ao NewFarmer e não é guardado por nós.
 
 ### Dados técnicos e de segurança
 
-- **sessões:** quando você entra, criamos uma sessão para manter você conectado. Guardamos uma versão embaralhada do código da sessão, quando ela vence e quando você usou o site pela última vez. A sessão termina depois de 3 horas sem uso e dura no máximo 30 dias;
+- **sessões:** quando você entra, criamos uma sessão para manter você conectado. Guardamos uma versão embaralhada do código da sessão, quando ela vence e quando você usou o site pela última vez. A sessão termina depois de 3 horas sem uso (ou 7 dias, se você marcar "Manter-me conectado" ao entrar) e dura no máximo 30 dias. Se você marcar "Lembrar meu usuário", o nome de usuário fica guardado só no seu navegador, não em nossos servidores;
 - **tentativas de entrar:** o username digitado (só se tiver um formato válido), a hora e se deu certo. Usamos isso para bloquear a conta por um tempo depois de 5 senhas erradas seguidas;
 - **limites de tentativas:** contadores ligados ao endereço IP ou à conta, para impedir abusos (como alguém tentando adivinhar senhas);
 - **registro de atividade:** quem fez, o que fez, em quê, o endereço IP e quando, para as ações da conta (por exemplo: entrar, sair, trocar a senha, editar a criação ou o diário). Esse registro **nunca** guarda senhas, códigos de acesso nem o texto do seu diário;
@@ -102,7 +102,7 @@ O NewFarmer é mantido no Brasil, o banco de dados fica na União Europeia e alg
 - **Dados de cobrança no Stripe:** pelo prazo que a lei fiscal exige.
 - **Limites de tentativas:** cerca de 1 dia.
 - **Previsões do tempo:** até 7 dias.
-- **Sessões:** até você sair, até 3 horas sem uso ou no máximo 30 dias.
+- **Sessões:** até você sair, até 3 horas sem uso (7 dias com "Manter-me conectado") ou no máximo 30 dias.
 - **Código para trocar a senha:** vale 1 hora. **Código para confirmar o e-mail:** vale 7 dias.
 
 ## 7. Seus direitos

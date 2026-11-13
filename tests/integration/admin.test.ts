@@ -40,7 +40,7 @@ it("visão geral: contagens, MRR só das ativas por moeda, 30 e 7 dias, sem o do
   const o = await getAdminOverview(db, AGORA);
   expect(o.users).toBe(3);
   expect(o.newUsers7d).toBe(1);
-  expect(o.subscriptions).toEqual({ active: 1, past_due: 0, paused: 0, canceled: 1, none: 1 });
+  expect(o.subscriptions).toEqual({ active: 1, trialing: 0, past_due: 0, paused: 0, canceled: 1, none: 1 });
   expect(o.mrr).toEqual({ brl: 699, eur: 0, usd: 0 });
   expect(o.newSubscriptions30d).toBe(1);
   expect(o.cancellations30d).toBe(1);
@@ -55,7 +55,7 @@ it("lista assinantes: busca por e-mail parcial, filtro de status, paginação e 
   const { db, ana, bia } = await cenario();
   await saveFarm(db, ana, { animals: { chickens: 3, cows: 1 }, crops: ["tomato"] });
   const todos = await listSubscribers(db, {});
-  expect(todos).toHaveLength(3);
+  expect(todos.map((s) => s.username)).toEqual(["bia", "ana"]); // sem filtro, só quem tem ou teve assinatura: caio (sem assinatura) fica de fora
   expect(todos[0].username).toBe("bia"); // mais nova primeiro
   expect((await listSubscribers(db, { q: "IA@exe" })).map((s) => s.username)).toEqual(["bia"]);
   expect((await listSubscribers(db, { status: "active" })).map((s) => s.username)).toEqual(["ana"]);
@@ -82,15 +82,15 @@ it("detalhe: conta, assinatura, criação, páginas e opt-in, sem diário nem id
   expect(await getSubscriberDetail(db, 9999)).toBeNull();
 });
 
-it("visão geral: trialing conta como ativa e entra no MRR; past_due só na própria faixa, fora do MRR", async () => {
+it("visão geral: trialing (ainda não pagou) fica na própria faixa, fora dos ativos e do MRR; past_due também", async () => {
   const { db } = await cenario();
   const dua = await makeUser(db, { email: "dua@exemplo.com" });
   const edu = await makeUser(db, { email: "edu@exemplo.com" });
   await sub(db, dua, { status: "trialing", currency: "eur", amount: 199 });
   await sub(db, edu, { status: "past_due", currency: "usd", amount: 200 });
   const o = await getAdminOverview(db, AGORA);
-  expect(o.subscriptions).toEqual({ active: 2, past_due: 1, paused: 0, canceled: 1, none: 1 });
-  expect(o.mrr).toEqual({ brl: 699, eur: 199, usd: 0 });
+  expect(o.subscriptions).toEqual({ active: 1, trialing: 1, past_due: 1, paused: 0, canceled: 1, none: 1 });
+  expect(o.mrr).toEqual({ brl: 699, eur: 0, usd: 0 });
 });
 
 it("detalhe: com 205 páginas vistas traz as 200 mais recentes, da mais nova para a mais velha", async () => {

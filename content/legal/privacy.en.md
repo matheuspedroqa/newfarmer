@@ -41,7 +41,7 @@ Your card number **never** reaches NewFarmer and is not stored by us.
 
 ### Technical and security data
 
-- **sessions:** when you sign in, we create a session to keep you signed in. We store a scrambled version of the session code, when it expires and when you last used the site. A session ends after 3 hours without use and lasts at most 30 days;
+- **sessions:** when you sign in, we create a session to keep you signed in. We store a scrambled version of the session code, when it expires and when you last used the site. A session ends after 3 hours without use (or 7 days, if you tick "Keep me signed in" when signing in) and lasts at most 30 days. If you tick "Remember my username", the username is stored only in your browser, not on our servers;
 - **sign-in attempts:** the username typed (only if it has a valid format), the time and whether it worked. We use this to lock the account for a while after 5 wrong passwords in a row;
 - **attempt limits:** counters tied to the IP address or the account, to stop abuse (such as someone trying to guess passwords);
 - **activity log:** who did what, on what, the IP address and when, for account actions (for example: signing in, signing out, changing the password, editing the farm or the diary). This log **never** stores passwords, access codes or the text of your diary;
@@ -102,7 +102,7 @@ NewFarmer is run from Brazil, the database is in the European Union and some pro
 - **Billing data at Stripe:** for as long as tax law requires.
 - **Attempt limits:** about 1 day.
 - **Weather forecasts:** up to 7 days.
-- **Sessions:** until you sign out, after 3 hours without use, or at most 30 days.
+- **Sessions:** until you sign out, after 3 hours without use (7 days with "Keep me signed in"), or at most 30 days.
 - **Password reset code:** valid for 1 hour. **E-mail confirmation code:** valid for 7 days.
 
 ## 7. Your rights

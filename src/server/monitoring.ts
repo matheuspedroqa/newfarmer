@@ -1,7 +1,6 @@
 import "server-only";
 import { LOCK_WINDOW_MS, MAX_FAILED_LOGINS } from "./accounts";
 import type { Db } from "./db";
-import { SESSION_IDLE_MS } from "./sessions";
 
 const DIA = 24 * 60 * 60_000;
 
@@ -28,7 +27,7 @@ export async function getPlatformStats(db: Db, now = Date.now()): Promise<Platfo
     `SELECT
        (SELECT COUNT(*)::int FROM users) AS users,
        (SELECT COUNT(*)::int FROM users WHERE created_at > $1) AS "newUsers7d",
-       (SELECT COUNT(*)::int FROM sessions WHERE expires_at > $2 AND last_seen_at >= $3) AS "activeSessions",
+       (SELECT COUNT(*)::int FROM sessions WHERE expires_at > $2 AND last_seen_at >= $3 - idle_ms) AS "activeSessions",
        (SELECT COUNT(*)::int FROM activity_logs WHERE action = 'auth.login' AND created_at > $4) AS "loginsOk",
        (SELECT COUNT(*)::int FROM activity_logs WHERE action = 'auth.loginFailed' AND created_at > $4) AS "loginsFailed",
        (SELECT COUNT(*)::int FROM activity_logs WHERE action = 'security.rateLimited' AND created_at > $4) AS "rateLimited24h",
@@ -41,7 +40,7 @@ export async function getPlatformStats(db: Db, now = Date.now()): Promise<Platfo
             AND f.attempted_at > COALESCE((SELECT MAX(s.attempted_at) FROM login_attempts s WHERE s.identifier = f.identifier AND s.success = 1), 0)
           GROUP BY f.identifier HAVING COUNT(*) >= $6
         ) l) AS "lockedAccounts"`,
-    [now - 7 * DIA, now, now - SESSION_IDLE_MS, now - DIA, now - LOCK_WINDOW_MS, MAX_FAILED_LOGINS],
+    [now - 7 * DIA, now, now, now - DIA, now - LOCK_WINDOW_MS, MAX_FAILED_LOGINS],
   );
   const recentErrors = await db.query<{ at: number; route: string; message: string }>(
     "SELECT at, route, message FROM error_logs ORDER BY at DESC, id DESC LIMIT 50",

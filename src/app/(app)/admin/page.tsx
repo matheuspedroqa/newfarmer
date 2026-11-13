@@ -32,6 +32,7 @@ export default async function AdminOverviewPage({ searchParams }: { searchParams
   const mrr = (currencies.length ? currencies : (["brl"] as Currency[])).map((c) => formatMoney(c, o.mrr[c], locale)).join(" · ");
   const cards = [
     { id: "active", label: t("activeSubscribers"), value: String(o.subscriptions.active) },
+    { id: "trialing", label: t("status_trialing"), value: String(o.subscriptions.trialing) },
     { id: "mrr", label: t("mrr"), value: mrr },
     { id: "new", label: t("new30"), value: String(o.newSubscriptions30d) },
     { id: "canceled", label: t("canceled30"), value: String(o.cancellations30d) },
