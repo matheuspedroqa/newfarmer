@@ -4,7 +4,8 @@ import { marketingAlternates } from "@/lib/seo";
 import { LegalPage } from "@/components/LegalPage";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return { title: (await getTranslations())("meta.privacy"), alternates: marketingAlternates("/privacy", "en") };
+  const t = await getTranslations();
+  return { title: t("meta.privacy"), description: t("meta.privacyDescription"), alternates: marketingAlternates("/privacy", "en") };
 }
 
 export default function Page() {

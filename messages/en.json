@@ -525,7 +525,9 @@
     "subscriber": "Subscriber",
     "leads": "Leads",
     "emails": "E-mails",
-    "confirmGuide": "Monthly calendar"
+    "confirmGuide": "Monthly calendar",
+    "termsDescription": "The terms of use of NewFarmer: subscription, billing, cancellation and refunds, and what you can expect from the service.",
+    "privacyDescription": "How NewFarmer collects, uses and protects your data, which cookies we use, and how to download or delete your account data."
   },
   "home": {
     "title": "NewFarmer · Animals and garden planner for your climate",
@@ -980,7 +982,20 @@
     "signupCountry": "Calendar country",
     "signupConsent": "I want to get, every month, by e-mail, what to plant {inCountry}. I can cancel at any time with the link at the end of each e-mail.",
     "signupButton": "Send it to me",
-    "signupSent": "Almost there! We sent you an e-mail to confirm. Nothing is sent without your confirmation."
+    "signupSent": "Almost there! We sent you an e-mail to confirm. Nothing is sent without your confirmation.",
+    "zoneRegions": {
+      "US": {
+        "temperate": "Most of the Midwest, Northeast, Mid-Atlantic and Pacific Northwest, roughly USDA zones 5 to 7.",
+        "subtropical": "Florida, the Gulf Coast, south Texas, coastal Georgia and the Carolinas, and southern California, roughly USDA zones 8 to 10.",
+        "semiarid": "The Great Plains and the Southwest, such as Arizona, New Mexico, west Texas and Nevada, roughly USDA zones 6 to 9.",
+        "cold": "Northern states such as Minnesota, the Dakotas, Wisconsin, Maine and the high Rockies, plus Alaska, roughly USDA zones 2 to 4."
+      },
+      "BR": {
+        "tropical": "North, Center-West, most of the Southeast and the Northeast coast.",
+        "subtropical": "The South (Paraná, Santa Catarina, Rio Grande do Sul) and the Southeast highlands.",
+        "semiarid": "The Northeast backcountry (sertão) and northern Minas Gerais."
+      }
+    }
   },
   "confirmGuide": {
     "okTitle": "Done, you are confirmed!",

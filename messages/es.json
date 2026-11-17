@@ -525,7 +525,9 @@
     "subscriber": "Suscriptor",
     "leads": "Leads",
     "emails": "Correos",
-    "confirmGuide": "Calendario mensual"
+    "confirmGuide": "Calendario mensual",
+    "termsDescription": "Los términos de uso de NewFarmer: suscripción, cobro, cancelación y reembolso, y qué esperar del servicio.",
+    "privacyDescription": "Cómo NewFarmer recoge, usa y protege tus datos, qué cookies usamos y cómo descargar o borrar los datos de tu cuenta."
   },
   "home": {
     "title": "NewFarmer · Animales y huerta organizados para tu clima",
@@ -980,7 +982,20 @@
     "signupCountry": "País del calendario",
     "signupConsent": "Quiero recibir cada mes, por correo, qué plantar {inCountry}. Puedo cancelar cuando quiera con el enlace al final de cada correo.",
     "signupButton": "Quiero recibirlo",
-    "signupSent": "¡Casi listo! Te enviamos un correo para confirmar. Sin la confirmación no se envía nada."
+    "signupSent": "¡Casi listo! Te enviamos un correo para confirmar. Sin la confirmación no se envía nada.",
+    "zoneRegions": {
+      "US": {
+        "temperate": "La mayor parte del Medio Oeste, el Noreste, el Atlántico Medio y el Noroeste del Pacífico, más o menos las zonas USDA 5 a 7.",
+        "subtropical": "Florida, la costa del Golfo, el sur de Texas, la costa de Georgia y las Carolinas y el sur de California, más o menos las zonas USDA 8 a 10.",
+        "semiarid": "Las Grandes Llanuras y el Suroeste, como Arizona, Nuevo México, el oeste de Texas y Nevada, más o menos las zonas USDA 6 a 9.",
+        "cold": "Estados del norte como Minnesota, las Dakotas, Wisconsin, Maine y las Montañas Rocosas, además de Alaska, más o menos las zonas USDA 2 a 4."
+      },
+      "BR": {
+        "tropical": "Norte, Centro-Oeste, gran parte del Sudeste y la costa del Nordeste.",
+        "subtropical": "La región Sur (Paraná, Santa Catarina y Rio Grande do Sul) y las sierras del Sudeste.",
+        "semiarid": "El sertón del Nordeste y el norte de Minas Gerais."
+      }
+    }
   },
   "confirmGuide": {
     "okTitle": "¡Listo, está confirmado!",

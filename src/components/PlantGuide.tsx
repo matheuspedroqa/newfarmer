@@ -81,6 +81,7 @@ export async function GuideMonth({ lang, params }: { lang: Locale; params: Param
         return (
           <section key={zone} data-testid={`guide-zone-${zone}`} className="mt-8">
             <h2 className="font-display text-2xl font-bold">{t("guide.zoneTitle", { zone: t(`climate.${zone}`) })}</h2>
+            {t.has(`guide.zoneRegions.${country}.${zone}`) && <p className="mt-1 text-muted">{t(`guide.zoneRegions.${country}.${zone}`)}</p>}
             {tasks.length ? (
               <ul className="mt-4 flex flex-wrap gap-2">
                 {tasks.map((task) => (

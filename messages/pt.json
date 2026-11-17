@@ -525,7 +525,9 @@
     "subscriber": "Assinante",
     "leads": "Leads",
     "emails": "E-mails",
-    "confirmGuide": "Calendário mensal"
+    "confirmGuide": "Calendário mensal",
+    "termsDescription": "Os termos de uso do NewFarmer: assinatura, cobrança, cancelamento e reembolso, e o que esperar do serviço.",
+    "privacyDescription": "Como o NewFarmer coleta, usa e protege seus dados, quais cookies usamos e como baixar ou apagar os dados da sua conta."
   },
   "home": {
     "title": "NewFarmer · Criação e horta organizadas pelo seu clima",
@@ -951,7 +953,7 @@
   "guide": {
     "footer": "O que plantar",
     "indexTitle": "O que plantar em cada mês",
-    "indexIntro": "Escolha seu país e o mês para ver quais hortaliças, grãos e ervas você pode semear ou transplantar, conforme o clima. Grátis, do calendário de plantio do NewFarmer.",
+    "indexIntro": "Escolha seu país e o mês para ver quais hortaliças, grãos e ervas você pode semear ou transplantar, conforme o clima. Calendário de plantio grátis.",
     "title": "O que plantar em {month} {inCountry}",
     "description": "Hortaliças, grãos e ervas que você pode semear ou transplantar em {month} {inCountry}, conforme o clima. Calendário de plantio grátis do NewFarmer.",
     "introMany": "Há mais de um clima {inCountry}. Encontre o seu abaixo: cada lista mostra o que você pode semear ou transplantar em {month}. Árvores frutíferas ficam de fora.",
@@ -980,7 +982,20 @@
     "signupCountry": "País do calendário",
     "signupConsent": "Quero receber todo mês, por e-mail, o que plantar {inCountry}. Posso cancelar quando quiser, pelo link no fim de cada e-mail.",
     "signupButton": "Quero receber",
-    "signupSent": "Quase lá! Mandamos um e-mail para você confirmar. Sem a confirmação, nada é enviado."
+    "signupSent": "Quase lá! Mandamos um e-mail para você confirmar. Sem a confirmação, nada é enviado.",
+    "zoneRegions": {
+      "US": {
+        "temperate": "Maior parte do Meio-Oeste, Nordeste, Meio-Atlântico e Noroeste Pacífico, mais ou menos as zonas USDA 5 a 7.",
+        "subtropical": "Flórida, costa do Golfo, sul do Texas, litoral da Geórgia e das Carolinas e sul da Califórnia, mais ou menos as zonas USDA 8 a 10.",
+        "semiarid": "Grandes Planícies e Sudoeste, como Arizona, Novo México, oeste do Texas e Nevada, mais ou menos as zonas USDA 6 a 9.",
+        "cold": "Estados do norte como Minnesota, Dakotas, Wisconsin, Maine e as Montanhas Rochosas, além do Alasca, mais ou menos as zonas USDA 2 a 4."
+      },
+      "BR": {
+        "tropical": "Norte, Centro-Oeste, boa parte do Sudeste e o litoral do Nordeste.",
+        "subtropical": "Região Sul (Paraná, Santa Catarina e Rio Grande do Sul) e as serras do Sudeste.",
+        "semiarid": "Sertão do Nordeste e norte de Minas Gerais."
+      }
+    }
   },
   "confirmGuide": {
     "okTitle": "Pronto, está confirmado!",
