@@ -4,6 +4,7 @@ import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
 import { TopControls } from "@/components/TopControls";
 import { localePrefix, resolveLocale } from "@/i18n/locales";
 import { guidePath } from "@/lib/plant-guide";
+import { cropGuidePath } from "@/lib/crop-guide";
 
 export default async function MarketingLayout({ children }: { children: React.ReactNode }) {
   const t = await getTranslations();
@@ -32,6 +33,7 @@ export default async function MarketingLayout({ children }: { children: React.Re
         <Link href="/privacy" className={footLink}>{t("home.privacy")}</Link>
         <Link href="/terms" className={footLink}>{t("home.terms")}</Link>
         <Link href={guidePath(locale)} className={footLink}>{t("guide.footer")}</Link>
+        <Link href={cropGuidePath(locale)} className={footLink}>{t("cropGuide.footer")}</Link>
         <Link href={`${pt}/contact`} className={footLink}>{t("contact.footer")}</Link>
         <CookiePreferencesLink className={footLink} />
       </footer>

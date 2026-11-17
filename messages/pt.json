@@ -1029,5 +1029,18 @@
     "detailsHelp": "Opcional, menos em \"Outro motivo\". Até 1.000 caracteres.",
     "confirm": "Confirmar cancelamento",
     "back": "Voltar, quero continuar assinando"
+  },
+  "cropGuide": {
+    "indexTitle": "Quando plantar: hortaliças, frutas e ervas",
+    "indexIntro": "Calendário de plantio de 100 culturas por clima: quando semear, transplantar e colher, e como cultivar cada uma. Grátis, do NewFarmer.",
+    "title": "Como e quando plantar {crop}",
+    "zoneTitle": "Quando plantar {crop} no clima {zone}",
+    "notSuited": "Não recomendado neste clima.",
+    "howTitle": "Como cultivar {crop}",
+    "hemisphereNote": {
+      "north": "Os meses valem para o hemisfério norte (Portugal, Europa, Estados Unidos). No hemisfério sul, some seis meses.",
+      "south": "Os meses valem para o hemisfério sul (Brasil). Em Portugal e no resto do hemisfério norte, some seis meses."
+    },
+    "footer": "Quando plantar cada cultura"
   }
 }

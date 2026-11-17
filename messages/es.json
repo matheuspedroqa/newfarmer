@@ -1029,5 +1029,18 @@
     "detailsHelp": "Opcional, salvo en \"Otro motivo\". Hasta 1.000 caracteres.",
     "confirm": "Confirmar cancelación",
     "back": "Volver, quiero seguir suscrito"
+  },
+  "cropGuide": {
+    "indexTitle": "Cuándo plantar: hortalizas, frutas y hierbas",
+    "indexIntro": "Calendario de siembra de 100 cultivos por clima: cuándo sembrar, trasplantar y cosechar, y cómo cultivar cada uno. Gratis, de NewFarmer.",
+    "title": "Cómo y cuándo plantar {crop}",
+    "zoneTitle": "Cuándo plantar {crop} en clima {zone}",
+    "notSuited": "No recomendado en este clima.",
+    "howTitle": "Cómo cultivar {crop}",
+    "hemisphereNote": {
+      "north": "Los meses valen para el hemisferio norte (España, México, Estados Unidos). En el hemisferio sur, súmales seis meses.",
+      "south": "Los meses valen para el hemisferio sur (Argentina, Chile, Brasil). En el hemisferio norte, súmales seis meses."
+    },
+    "footer": "Cuándo plantar cada cultivo"
   }
 }

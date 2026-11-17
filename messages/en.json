@@ -1029,5 +1029,18 @@
     "detailsHelp": "Optional, except for \"Another reason\". Up to 1,000 characters.",
     "confirm": "Confirm cancellation",
     "back": "Go back, I want to keep my subscription"
+  },
+  "cropGuide": {
+    "indexTitle": "When to plant: vegetables, fruits and herbs",
+    "indexIntro": "Planting calendars for 100 crops by climate: when to sow, transplant and harvest, and how to grow each one. Free, from NewFarmer.",
+    "title": "How and when to plant {crop}",
+    "zoneTitle": "When to plant {crop} in a {zone} climate",
+    "notSuited": "Not recommended in this climate.",
+    "howTitle": "How to grow {crop}",
+    "hemisphereNote": {
+      "north": "Months are for the northern hemisphere (United States, Canada, Europe, Mexico). In the southern hemisphere, shift them by six months.",
+      "south": "Months are for the southern hemisphere (Brazil, Argentina, Australia). In the northern hemisphere, shift them by six months."
+    },
+    "footer": "When to plant each crop"
   }
 }

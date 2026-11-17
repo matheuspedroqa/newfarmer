@@ -7,6 +7,7 @@ import { btn } from "@/components/PriceCard";
 import type { Locale } from "@/i18n/locales";
 import { CROPS } from "@/lib/catalog";
 import { KNOWLEDGE_COUNTRIES, type KnowledgeCountry } from "@/lib/countries";
+import { cropGuidePath } from "@/lib/crop-guide";
 import { COUNTRY_CLIMATES, guidePath, guidePaths, monthName, parseGuide } from "@/lib/plant-guide";
 import { guideZones } from "@/server/guide-newsletter";
 
@@ -85,9 +86,11 @@ export async function GuideMonth({ lang, params }: { lang: Locale; params: Param
             {tasks.length ? (
               <ul className="mt-4 flex flex-wrap gap-2">
                 {tasks.map((task) => (
-                  <li key={task.cropId} className={chip}>
-                    <span aria-hidden>{icon(task.cropId)}</span> <b>{t(`crops.${task.cropId}`)}</b>
-                    <span className="text-sm text-muted">· {task.activities.map((a) => t(`activities.${a}`)).join(", ")}</span>
+                  <li key={task.cropId}>
+                    <Link href={cropGuidePath(lang, task.cropId)} className={chip}>
+                      <span aria-hidden>{icon(task.cropId)}</span> <b>{t(`crops.${task.cropId}`)}</b>
+                      <span className="text-sm text-muted">· {task.activities.map((a) => t(`activities.${a}`)).join(", ")}</span>
+                    </Link>
                   </li>
                 ))}
               </ul>

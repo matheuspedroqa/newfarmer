@@ -2,7 +2,10 @@ import type { MetadataRoute } from "next";
 import { siteUrl } from "@/server/app-url";
 import { LOCALES, localePrefix } from "@/i18n/locales";
 import { KNOWLEDGE_COUNTRIES } from "@/lib/countries";
+import { CROP_IDS } from "@/lib/catalog";
+import { cropGuidePaths } from "@/lib/crop-guide";
 import { guidePaths } from "@/lib/plant-guide";
+import { getCropContent } from "@/server/content";
 import { MARKETING_PATHS } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -11,7 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const languages = Object.fromEntries(LOCALES.map((l) => [l, `${base}${localePrefix(l)}${p}` || `${base}/`]));
     return LOCALES.map((l) => ({ url: languages[l], alternates: { languages } }));
   });
-  const guides = [guidePaths(), ...KNOWLEDGE_COUNTRIES.flatMap((c) => Array.from({ length: 12 }, (_, i) => guidePaths(c, i + 1)))].flatMap((paths) => {
+  const guides = [
+    guidePaths(),
+    ...KNOWLEDGE_COUNTRIES.flatMap((c) => Array.from({ length: 12 }, (_, i) => guidePaths(c, i + 1))),
+    cropGuidePaths(),
+    ...CROP_IDS.filter((id) => getCropContent(id)).map((id) => cropGuidePaths(id)),
+  ].flatMap((paths) => {
     const languages = Object.fromEntries(LOCALES.map((l) => [l, `${base}${paths[l]}`]));
     return LOCALES.map((l) => ({ url: languages[l], alternates: { languages } }));
   });

@@ -27,8 +27,8 @@ export function middleware(request: NextRequest) {
   const toBrowserLang = browserRedirect(request);
   if (toBrowserLang) return NextResponse.redirect(toBrowserLang);
   if (ROOT_PAGES.has(pathname)) return NextResponse.next();
-  // /what-to-plant é a versão em inglês das páginas públicas "o que plantar": o idioma vem do endereço, não do cookie.
-  const prefixed = /^\/(pt|es)(?:\/|$)/.exec(pathname)?.[1] ?? (/^\/what-to-plant(?:\/|$)/.test(pathname) ? "en" : undefined);
+  // /what-to-plant e /when-to-plant são a versão em inglês das páginas públicas "o que plantar": o idioma vem do endereço, não do cookie.
+  const prefixed = /^\/(pt|es)(?:\/|$)/.exec(pathname)?.[1] ?? (/^\/(what|when)-to-plant(?:\/|$)/.test(pathname) ? "en" : undefined);
   if (prefixed) {
     const headers = new Headers(request.headers);
     headers.set("x-nf-locale", prefixed);
@@ -46,5 +46,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/privacy", "/terms", "/contact", "/try", "/pt", "/pt/:path*", "/es", "/es/:path*", "/what-to-plant", "/what-to-plant/:path*", "/dashboard/:path*", "/welcome/:path*", "/subscribe/:path*", "/profile/:path*", "/myfarm/:path*", "/animals/:path*", "/crops/:path*", "/weather/:path*", "/admin/:path*"],
+  matcher: ["/", "/privacy", "/terms", "/contact", "/try", "/pt", "/pt/:path*", "/es", "/es/:path*", "/what-to-plant", "/what-to-plant/:path*", "/when-to-plant", "/when-to-plant/:path*", "/dashboard/:path*", "/welcome/:path*", "/subscribe/:path*", "/profile/:path*", "/myfarm/:path*", "/animals/:path*", "/crops/:path*", "/weather/:path*", "/admin/:path*"],
 };
