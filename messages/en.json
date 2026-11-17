@@ -985,17 +985,19 @@
     "signupSent": "Almost there! We sent you an e-mail to confirm. Nothing is sent without your confirmation.",
     "zoneRegions": {
       "US": {
-        "temperate": "Most of the Midwest, Northeast, Mid-Atlantic and Pacific Northwest, roughly USDA zones 5 to 7.",
-        "subtropical": "Florida, the Gulf Coast, south Texas, coastal Georgia and the Carolinas, and southern California, roughly USDA zones 8 to 10.",
-        "semiarid": "The Great Plains and the Southwest, such as Arizona, New Mexico, west Texas and Nevada, roughly USDA zones 6 to 9.",
-        "cold": "Northern states such as Minnesota, the Dakotas, Wisconsin, Maine and the high Rockies, plus Alaska, roughly USDA zones 2 to 4."
+        "temperate": "The Pacific Northwest, the Mid-Atlantic, the Ohio Valley, the southern Plains and much of the Southeast, such as Oregon, Pennsylvania, Virginia, Kansas, Tennessee and the Carolinas, roughly USDA zones 6 to 8.",
+        "subtropical": "Florida, Georgia, Louisiana and the Gulf Coast, roughly USDA zones 8 to 10.",
+        "semiarid": "The Southwest: Arizona, Nevada, New Mexico, California and most of Texas, roughly USDA zones 7 to 10.",
+        "cold": "The Upper Midwest, New England, New York and the Rockies, such as Minnesota, Wisconsin, Michigan, Maine, Colorado and Montana, roughly USDA zones 3 to 6."
       },
       "BR": {
         "tropical": "North, Center-West, most of the Southeast and the Northeast coast.",
-        "subtropical": "The South (Paraná, Santa Catarina, Rio Grande do Sul) and the Southeast highlands.",
+        "subtropical": "The South (Paraná, Santa Catarina, Rio Grande do Sul), most of São Paulo and the Southeast highlands.",
         "semiarid": "The Northeast backcountry (sertão) and northern Minas Gerais."
       }
-    }
+    },
+    "mapTitle": "Climates {inCountry}",
+    "mapNote": "Approximate map: each state or province shows its most common climate, using the same rule NewFarmer applies to your town. Borders: Natural Earth. Climate data: NASA POWER (2001–2025)."
   },
   "confirmGuide": {
     "okTitle": "Done, you are confirmed!",
@@ -1031,7 +1033,7 @@
     "back": "Go back, I want to keep my subscription"
   },
   "cropGuide": {
-    "indexTitle": "When to plant: vegetables, fruits and herbs",
+    "indexTitle": "Planting calendar: when to plant vegetables, fruits and herbs",
     "indexIntro": "Planting calendars for 100 crops by climate: when to sow, transplant and harvest, and how to grow each one. Free, from NewFarmer.",
     "title": "How and when to plant {crop}",
     "zoneTitle": "When to plant {crop} in a {zone} climate",

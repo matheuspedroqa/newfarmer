@@ -985,17 +985,19 @@
     "signupSent": "¡Casi listo! Te enviamos un correo para confirmar. Sin la confirmación no se envía nada.",
     "zoneRegions": {
       "US": {
-        "temperate": "La mayor parte del Medio Oeste, el Noreste, el Atlántico Medio y el Noroeste del Pacífico, más o menos las zonas USDA 5 a 7.",
-        "subtropical": "Florida, la costa del Golfo, el sur de Texas, la costa de Georgia y las Carolinas y el sur de California, más o menos las zonas USDA 8 a 10.",
-        "semiarid": "Las Grandes Llanuras y el Suroeste, como Arizona, Nuevo México, el oeste de Texas y Nevada, más o menos las zonas USDA 6 a 9.",
-        "cold": "Estados del norte como Minnesota, las Dakotas, Wisconsin, Maine y las Montañas Rocosas, además de Alaska, más o menos las zonas USDA 2 a 4."
+        "temperate": "El Noroeste del Pacífico, el Atlántico Medio, el valle del Ohio, el sur de las Grandes Llanuras y buena parte del Sureste, como Oregón, Pensilvania, Virginia, Kansas, Tennessee y las Carolinas, más o menos las zonas USDA 6 a 8.",
+        "subtropical": "Florida, Georgia, Luisiana y la costa del Golfo, más o menos las zonas USDA 8 a 10.",
+        "semiarid": "El Suroeste: Arizona, Nevada, Nuevo México, California y la mayor parte de Texas, más o menos las zonas USDA 7 a 10.",
+        "cold": "El Alto Medio Oeste, Nueva Inglaterra, Nueva York y las Montañas Rocosas, como Minnesota, Wisconsin, Míchigan, Maine, Colorado y Montana, más o menos las zonas USDA 3 a 6."
       },
       "BR": {
         "tropical": "Norte, Centro-Oeste, gran parte del Sudeste y la costa del Nordeste.",
-        "subtropical": "La región Sur (Paraná, Santa Catarina y Rio Grande do Sul) y las sierras del Sudeste.",
+        "subtropical": "La región Sur (Paraná, Santa Catarina y Rio Grande do Sul), la mayor parte de São Paulo y las sierras del Sudeste.",
         "semiarid": "El sertón del Nordeste y el norte de Minas Gerais."
       }
-    }
+    },
+    "mapTitle": "Climas {inCountry}",
+    "mapNote": "Mapa aproximado: cada estado o provincia muestra su clima más común, con la misma regla que NewFarmer aplica a tu localidad. Fronteras: Natural Earth. Datos de clima: NASA POWER (2001–2025)."
   },
   "confirmGuide": {
     "okTitle": "¡Listo, está confirmado!",
@@ -1031,7 +1033,7 @@
     "back": "Volver, quiero seguir suscrito"
   },
   "cropGuide": {
-    "indexTitle": "Cuándo plantar: hortalizas, frutas y hierbas",
+    "indexTitle": "Calendario de siembra y cosecha: cuándo plantar hortalizas, frutas y hierbas",
     "indexIntro": "Calendario de siembra de 100 cultivos por clima: cuándo sembrar, trasplantar y cosechar, y cómo cultivar cada uno. Gratis, de NewFarmer.",
     "title": "Cómo y cuándo plantar {crop}",
     "zoneTitle": "Cuándo plantar {crop} en clima {zone}",

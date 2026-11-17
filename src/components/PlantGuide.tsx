@@ -7,6 +7,7 @@ import { btn } from "@/components/PriceCard";
 import type { Locale } from "@/i18n/locales";
 import { CROPS } from "@/lib/catalog";
 import { KNOWLEDGE_COUNTRIES, type KnowledgeCountry } from "@/lib/countries";
+import { ClimateMap } from "@/components/ClimateMap";
 import { cropGuidePath } from "@/lib/crop-guide";
 import { COUNTRY_CLIMATES, guidePath, guidePaths, monthName, parseGuide } from "@/lib/plant-guide";
 import { guideZones } from "@/server/guide-newsletter";
@@ -77,10 +78,11 @@ export async function GuideMonth({ lang, params }: { lang: Locale; params: Param
       <Link href={guidePath(lang)} className="inline-flex min-h-11 items-center text-sm text-primary hover:underline">← {t("guide.indexTitle")}</Link>
       <h1 className="mt-2 font-display text-4xl font-bold text-primary first-letter:uppercase">{t("guide.title", vars)}</h1>
       <p className="mt-3 text-lg text-muted">{t(zones.length > 1 ? "guide.introMany" : "guide.introOne", vars)}</p>
+      <ClimateMap country={country} lang={lang} />
 
       {guideZones(country, month).map(({ zone, tasks }) => {
         return (
-          <section key={zone} data-testid={`guide-zone-${zone}`} className="mt-8">
+          <section key={zone} id={`clima-${zone}`} data-testid={`guide-zone-${zone}`} className="mt-8 scroll-mt-4">
             <h2 className="font-display text-2xl font-bold">{t("guide.zoneTitle", { zone: t(`climate.${zone}`) })}</h2>
             {t.has(`guide.zoneRegions.${country}.${zone}`) && <p className="mt-1 text-muted">{t(`guide.zoneRegions.${country}.${zone}`)}</p>}
             {tasks.length ? (
