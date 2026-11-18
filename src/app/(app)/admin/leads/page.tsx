@@ -41,6 +41,14 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
   const link = `inline-flex min-h-11 items-center font-semibold text-primary underline ${focus}`;
   const cell = "px-3 py-2";
   const sourceName = (s: string | null) => (s === null ? t("sourceUnknown") : s || t("sourceDirect"));
+  // Mais de uma página: lista todas, na ordem em que foram visitadas pela primeira vez.
+  const pages = (r: (typeof rows)[number]) =>
+    r.paths.length > 1 ? (
+      <span>
+        {r.pages} ·{" "}
+        {r.paths.map((p, i) => <span key={p} className="break-all">{i > 0 && ", "}{p}</span>)}
+      </span>
+    ) : r.pages || "—";
   const account = (u: (typeof rows)[number]["user"]) =>
     u ? <Link href={`/admin/subscribers/${u.id}`} className={link}>@{u.username}</Link> : <span className="text-muted">{t("noAccount")}</span>;
 
@@ -120,7 +128,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
                     <tr key={r.id} data-testid="lead-row" className="border-t border-border">
                       <td className={`${cell} whitespace-nowrap`}>{format.format(r.firstSeen)}</td>
                       <td className={`${cell} whitespace-nowrap`}>{format.format(r.lastSeen)}</td>
-                      <td className={cell}>{r.pages || "—"}</td>
+                      <td className={`${cell} min-w-48`} data-testid="lead-pages">{pages(r)}</td>
                       <td className={`${cell} break-all`}>{r.lastPath ?? "—"}</td>
                       <td className={`${cell} break-all`}>{sourceName(r.source)}</td>
                       <td className={cell} data-testid="lead-location">{place(r.location)}</td>
@@ -135,6 +143,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
               {rows.map((r) => (
                 <li key={r.id} data-testid="lead-card" className="rounded-2xl bg-surface p-4 ring-1 ring-border">
                   <p className="font-semibold">{stepName(r.furthestStep)}{r.pages > 0 && ` · ${r.pages} ${t("colPages").toLowerCase()}`}</p>
+                  {r.paths.length > 1 && <p className="text-sm break-all">{t("colPages")}: {r.paths.join(", ")}</p>}
                   <p className="text-sm break-all">{t("colLastPage")}: {r.lastPath ?? "—"}</p>
                   <p className="text-sm break-all">{t("colSource")}: {sourceName(r.source)}</p>
                   <p className="text-sm">{t("colLocation")}: {place(r.location)}</p>

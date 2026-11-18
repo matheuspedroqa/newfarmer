@@ -34,6 +34,10 @@ describe("listLeads e leadFunnel", () => {
     expect(leads[3]).toMatchObject({ furthestStep: "/subscribe", pages: 0, lastPath: null, subscribed: false });
     expect(leads[4]).toMatchObject({ furthestStep: "/welcome", pages: 0, lastPath: null, firstSeen: 150, lastSeen: 150, user: { id: bia, username: "bia", email: "bia@x.com" } });
     expect(leads[5]).toMatchObject({ furthestStep: "paid", lastPath: "/dashboard", pages: 3, firstSeen: 90, lastSeen: 120, subscribed: true });
+    // Todas as páginas diferentes, na ordem da primeira visita (a página de leads lista quando há mais de uma).
+    expect(leads[2].paths).toEqual(["/", "/subscribe/ok", "/termos"]);
+    expect(leads[5].paths).toEqual(["/", "/register", "/dashboard"]);
+    expect(leads[4].paths).toEqual([]);
 
     expect((await listLeads(db, { since: 50, before: 220 })).map((l) => l.id)).toEqual([`u:${carla}`, `u:${bia}`, `u:${ana}`]);
     expect(await listLeads(db, { since: 50, limit: 1 })).toHaveLength(1);

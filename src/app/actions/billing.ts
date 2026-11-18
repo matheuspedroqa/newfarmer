@@ -11,6 +11,7 @@ import { requireUser } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { getPaymentProvider, priceIdFor, shouldUseFakePayments } from "@/server/payments";
 import { logRequestError } from "@/server/monitoring";
+import { alertOwner } from "@/server/owner-alerts";
 import { clientIp } from "@/server/request-context";
 import { ensureCustomer, getSubscription, hasOpenSubscription, requestCancellation, TRIAL_DAYS, trialEligible, upsertSubscription } from "@/server/subscriptions";
 import type { FormState } from "./auth";
@@ -28,6 +29,7 @@ export async function startCheckoutAction(): Promise<void> {
   if ((await getSubscription(db, user.id))?.status === "paused") redirect("/subscribe");
   const currency = currencyForCountry(user.countryCode);
   let url: string;
+  let trial = false;
   try {
     const provider = getPaymentProvider();
     const customerId = await ensureCustomer(db, provider, user);
@@ -36,20 +38,24 @@ export async function startCheckoutAction(): Promise<void> {
     if (paid) {
       await upsertSubscription(db, user.id, customerId, paid);
       url = "/dashboard";
-    } else url = await provider.createCheckout({
-      customerId,
-      priceId: shouldUseFakePayments() ? "fake_price" : priceIdFor(currency),
-      userId: user.id,
-      locale: resolveLocale(await getLocale()),
-      successUrl: `${appUrl()}/subscribe/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancelUrl: `${appUrl()}/subscribe`,
-      trialDays: (await trialEligible(db, user.id)) ? TRIAL_DAYS : undefined,
-    });
+    } else {
+      trial = await trialEligible(db, user.id);
+      url = await provider.createCheckout({
+        customerId,
+        priceId: shouldUseFakePayments() ? "fake_price" : priceIdFor(currency),
+        userId: user.id,
+        locale: resolveLocale(await getLocale()),
+        successUrl: `${appUrl()}/subscribe/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancelUrl: `${appUrl()}/subscribe`,
+        trialDays: trial ? TRIAL_DAYS : undefined,
+      });
+    }
   } catch (error) {
     // Stripe fora do ar ou variável faltando na Vercel: o motivo vai para Admin > Monitoramento e a pessoa vê um aviso.
     await logRequestError(db, "action:startCheckout", error instanceof Error ? error.message : String(error)).catch(() => undefined);
     redirect("/subscribe?error=checkout");
   }
+  if (trial && url !== "/dashboard") await alertOwner(db, "trial", { Usuário: user.username, País: user.countryCode ?? "", Moeda: currency }, ip);
   if (url !== "/dashboard") await logSafely(db, { userId: user.id, action: "billing.checkoutStarted", target: user.username, details: { currency }, ip });
   redirect(url);
 }

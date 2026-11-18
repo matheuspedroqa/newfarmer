@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { RegisterAlert } from "./RegisterAlert";
 import { SignupForm } from "./SignupForm";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -7,5 +8,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function SignupPage() {
-  return <SignupForm />;
+  return (
+    <>
+      <RegisterAlert />
+      <SignupForm />
+    </>
+  );
 }

@@ -36,6 +36,7 @@ const NOT_ADMIN = "visitor_id NOT IN (SELECT visitor_id FROM page_views WHERE us
 const LEADS = `WITH pv AS (
     SELECT visitor_id::text AS visitor_id, MIN(created_at) AS first_seen, MAX(created_at) AS last_seen, COUNT(*) AS pages,
       (array_agg(path ORDER BY created_at DESC, id DESC))[1] AS last_path, MAX(user_id) AS uid,
+      LEFT(string_agg(path, chr(10) ORDER BY created_at, id), 4000) AS paths,
       (array_agg(referrer ORDER BY created_at, id))[1] AS source, (array_agg(path ORDER BY created_at, id))[1] AS landing,
       (array_agg(city ORDER BY created_at DESC, id DESC) FILTER (WHERE country <> ''))[1] AS city,
       (array_agg(country ORDER BY created_at DESC, id DESC) FILTER (WHERE country <> ''))[1] AS country,
@@ -46,6 +47,7 @@ const LEADS = `WITH pv AS (
   acc AS (
     SELECT u.id AS uid, u.username, u.email, u.created_at, MIN(pv.first_seen) AS first_seen, MAX(pv.last_seen) AS last_seen,
       COALESCE(SUM(pv.pages), 0) AS pages, (array_agg(pv.last_path ORDER BY pv.last_seen DESC NULLS LAST))[1] AS last_path, MAX(pv.step) AS pv_step,
+      LEFT(string_agg(pv.paths, chr(10) ORDER BY pv.first_seen), 4000) AS paths,
       (array_agg(pv.source ORDER BY pv.first_seen NULLS LAST))[1] AS source, (array_agg(pv.landing ORDER BY pv.first_seen NULLS LAST))[1] AS landing,
       (array_agg(pv.city ORDER BY pv.last_seen DESC) FILTER (WHERE pv.country IS NOT NULL))[1] AS city,
       (array_agg(pv.country ORDER BY pv.last_seen DESC) FILTER (WHERE pv.country IS NOT NULL))[1] AS country,
@@ -54,12 +56,12 @@ const LEADS = `WITH pv AS (
     WHERE NOT u.is_platform_admin GROUP BY u.id, u.username, u.email, u.created_at, u.city_label, u.country_code
   ),
   leads AS (
-    SELECT 'v:' || visitor_id AS id, first_seen, last_seen, pages, last_path, NULL::integer AS uid, NULL::text AS username, NULL::text AS email, step,
+    SELECT 'v:' || visitor_id AS id, first_seen, last_seen, pages, last_path, paths, NULL::integer AS uid, NULL::text AS username, NULL::text AS email, step,
       city, country, NULL::text AS signup_city, NULL::text AS signup_country, source, landing
     FROM pv WHERE uid IS NULL
     UNION ALL
     SELECT 'u:' || a.uid, LEAST(a.created_at, COALESCE(a.first_seen, a.created_at)), GREATEST(a.created_at, COALESCE(a.last_seen, 0)),
-      a.pages, a.last_path, a.uid, a.username, a.email,
+      a.pages, a.last_path, a.paths, a.uid, a.username, a.email,
       CASE WHEN s.status IN ('active','past_due') THEN 4
            WHEN s.user_id IS NOT NULL THEN 3
            WHEN EXISTS (SELECT 1 FROM farm_animals f WHERE f.user_id = a.uid) OR EXISTS (SELECT 1 FROM farm_crops c WHERE c.user_id = a.uid) THEN GREATEST(2, COALESCE(a.pv_step, 2))
@@ -95,6 +97,8 @@ export interface Lead {
   /** Páginas vistas com estatística ligada (0: a pessoa não aceitou os cookies de estatística). */
   pages: number;
   lastPath: string | null;
+  /** Páginas diferentes que visitou, na ordem da primeira visita a cada uma. */
+  paths: string[];
   furthestStep: (typeof FUNNEL_STEPS)[number] | null;
   user: { id: number; username: string; email: string } | null;
   subscribed: boolean;
@@ -120,6 +124,7 @@ export async function listLeads(db: Db, { since, before, limit = 50 }: { since: 
     lastSeen: Number(r.last_seen),
     pages: Number(r.pages),
     lastPath: r.last_path === null ? null : String(r.last_path),
+    paths: [...new Set(String(r.paths ?? "").split("\n").filter(Boolean))],
     furthestStep: FUNNEL_STEPS[Number(r.step)] ?? null,
     user: r.uid === null ? null : { id: Number(r.uid), username: String(r.username), email: String(r.email) },
     subscribed: Number(r.step) === 4,
