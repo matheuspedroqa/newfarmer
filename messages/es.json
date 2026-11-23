@@ -98,7 +98,8 @@
     "myfarm": "MyFarm",
     "weather": "Clima",
     "animals": "Animales",
-    "crops": "Cultivos"
+    "crops": "Cultivos",
+    "recipes": "Recetas"
   },
   "dashboard": {
     "hello": "¡Hola, {name}!",
@@ -466,6 +467,22 @@
     "addCrop": "＋ Añadir cultivo",
     "notSuited": "No recomendado para tu clima.",
     "noContent": "Guía en preparación."
+  },
+  "recipePage": {
+    "title": "Recetas del campo",
+    "intro": "Recetas con lo que sale de la huerta y de los animales.",
+    "groups": {
+      "chicken": "Pollo",
+      "cheese": "Quesos",
+      "salad": "Ensaladas"
+    },
+    "serves": "{count} porciones",
+    "minutes": "{count} min",
+    "ingredients": "Ingredientes",
+    "steps": "Preparación",
+    "tip": "Consejo",
+    "safety": "Seguridad",
+    "back": "Recetas"
   },
   "content": {
     "sources": "Fuentes",

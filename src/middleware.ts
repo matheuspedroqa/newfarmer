@@ -46,5 +46,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/privacy", "/terms", "/contact", "/try", "/pt", "/pt/:path*", "/es", "/es/:path*", "/what-to-plant", "/what-to-plant/:path*", "/when-to-plant", "/when-to-plant/:path*", "/dashboard/:path*", "/welcome/:path*", "/subscribe/:path*", "/profile/:path*", "/myfarm/:path*", "/animals/:path*", "/crops/:path*", "/weather/:path*", "/admin/:path*"],
+  matcher: ["/", "/privacy", "/terms", "/contact", "/try", "/pt", "/pt/:path*", "/es", "/es/:path*", "/what-to-plant", "/what-to-plant/:path*", "/when-to-plant", "/when-to-plant/:path*", "/dashboard/:path*", "/welcome/:path*", "/subscribe/:path*", "/profile/:path*", "/myfarm/:path*", "/animals/:path*", "/crops/:path*", "/recipes/:path*", "/weather/:path*", "/admin/:path*"],
 };

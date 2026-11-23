@@ -9,6 +9,7 @@ import { TopControls } from "@/components/TopControls";
 import { UserMenu } from "@/components/UserMenu";
 import { VerifyEmailBanner } from "@/components/VerifyEmailBanner";
 import { requireUser, subscriptionOf } from "@/server/current-user";
+import { getRecipes } from "@/server/content";
 import { getDb } from "@/server/db";
 import { getFarm } from "@/server/farm";
 import { hasAccess } from "@/server/subscriptions";
@@ -27,10 +28,12 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   const farm = await getFarm(db, user.id);
   // Páginas guardadas no aparelho para abrir sem internet (cada animal com a ficha e o diário).
   const offlinePaths = [
-    "/dashboard", "/animals", "/crops", "/weather", "/myfarm", "/profile",
+    "/dashboard", "/animals", "/crops", "/recipes", "/weather", "/myfarm", "/profile",
     ...farm.animals.flatMap((a) => [`/animals/${a.id}`, `/animals/${a.id}?tab=diary`]),
     // shortcut: até 20 plantações, para não pesar no servidor; aumentar se alguém reclamar de faltar ficha offline.
     ...farm.crops.slice(0, 20).map((c) => `/crops/${c}`),
+    // As 16 receitas também, para abrir na cozinha sem sinal.
+    ...getRecipes().map((r) => `/recipes/${r.id}`),
   ];
 
   // Trilho de ícones da variante D. MyFarm e Perfil ficam no menu da conta.
@@ -38,6 +41,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     { href: "/dashboard", icon: "📊", label: t("nav.dashboard") },
     { href: "/animals", icon: "🐔", label: t("nav.animals") },
     { href: "/crops", icon: "🌱", label: t("nav.crops") },
+    { href: "/recipes", icon: "🍲", label: t("nav.recipes") },
     { href: "/weather", icon: "☀️", label: t("nav.weather") },
   ];
 

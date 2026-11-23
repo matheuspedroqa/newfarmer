@@ -60,3 +60,26 @@ export const cropContentSchema = z.object({
   sources: z.array(sourceSchema).min(2),
 });
 export type CropContent = z.infer<typeof cropContentSchema>;
+
+export const RECIPE_GROUPS = ["chicken", "cheese", "salad"] as const;
+export type RecipeGroup = (typeof RECIPE_GROUPS)[number];
+
+const recipeSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  group: z.enum(RECIPE_GROUPS),
+  icon: z.string().trim().min(1),
+  title: textSchema,
+  summary: textSchema,
+  serves: z.number().int().positive(),
+  minutes: z.number().int().positive(),
+  ingredients: z.array(textSchema).min(3),
+  steps: z.array(textSchema).min(3),
+  tip: textSchema.optional(),
+  // Aviso de segurança alimentar (leite cru, ponto da carne), mostrado em destaque.
+  safety: textSchema.optional(),
+});
+export type Recipe = z.infer<typeof recipeSchema>;
+
+export const recipesSchema = z
+  .object({ recipes: z.array(recipeSchema) })
+  .refine((d) => new Set(d.recipes.map((r) => r.id)).size === d.recipes.length, "id de receita repetido");

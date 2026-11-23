@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { ANIMAL_IDS, CROP_IDS } from "@/lib/catalog";
-import { animalContentSchema, cropContentSchema } from "@/lib/content-schema";
+import { animalContentSchema, cropContentSchema, recipesSchema } from "@/lib/content-schema";
 import { KNOWLEDGE_COUNTRIES } from "@/lib/countries";
 
 function countriesOf(data: unknown): string[] {
@@ -22,6 +22,19 @@ describe.each(ANIMAL_IDS)("ficha do animal %s", (id) => {
     expect(parsed.success ? "ok" : parsed.error.issues.slice(0, 3)).toBe("ok");
     expect((data as { id: string }).id).toBe(id);
     expect(countriesOf(data), "bloco No seu país para os 9 países").toEqual([...KNOWLEDGE_COUNTRIES].sort());
+  });
+});
+
+describe("receitas", () => {
+  it("são válidas e têm 5 de frango, até 6 queijos e 5 saladas", () => {
+    const parsed = recipesSchema.safeParse(JSON.parse(fs.readFileSync(path.join(process.cwd(), "content", "recipes.json"), "utf8")));
+    expect(parsed.success ? "ok" : parsed.error.issues.slice(0, 3)).toBe("ok");
+    const count = (g: string) => parsed.data!.recipes.filter((r) => r.group === g).length;
+    expect(count("chicken")).toBe(5);
+    expect(count("cheese")).toBeGreaterThan(0);
+    expect(count("cheese")).toBeLessThanOrEqual(6);
+    expect(count("salad")).toBe(5);
+    expect(parsed.data!.recipes.some((r) => r.id === "chicken-soup"), "canja").toBe(true);
   });
 });
 

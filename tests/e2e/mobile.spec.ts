@@ -73,7 +73,7 @@ for (const size of SIZES) {
 
       await checkPage(page, "/dashboard", appNav, (p) => p.getByRole("link", { name: "Adicionar animal" }), shot("painel"));
       // A barra de baixo e os controles do topo também têm área de toque.
-      for (const name of ["Painel", "Animais", "Plantações", "Clima"]) {
+      for (const name of ["Painel", "Animais", "Plantações", "Receitas", "Clima"]) {
         await expectTouchTarget(appNav(page).getByRole("link", { name, exact: true }));
       }
       await expectTouchTarget(page.getByRole("button", { name: "Sair" }));
@@ -85,6 +85,8 @@ for (const size of SIZES) {
       await checkPage(page, "/animals/chickens?tab=diary", appNav, (p) => p.getByRole("button", { name: "Salvar anotação" }));
       await checkPage(page, "/crops", appNav, (p) => p.getByRole("link", { name: "Adicionar plantação" }));
       await checkPage(page, "/crops/tomato", appNav, (p) => p.getByRole("link", { name: "← Plantações por tipo" }));
+      await checkPage(page, "/recipes", appNav, (p) => p.getByTestId("recipe-link-chicken-soup"));
+      await checkPage(page, "/recipes/fresh-cheese", appNav, (p) => p.getByTestId("recipe-safety"));
       await checkPage(page, "/weather", appNav, (p) => appNav(p).getByRole("link", { name: "Clima", exact: true }), shot("clima"));
       await expect(page.getByRole("heading", { name: "Próximos 5 dias" })).toBeVisible();
       await expect(page.getByTestId("day-card")).toHaveCount(5);

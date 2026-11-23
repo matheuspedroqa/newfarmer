@@ -1,0 +1,379 @@
+{
+  "recipes": [
+    {
+      "id": "chicken-soup",
+      "group": "chicken",
+      "icon": "🍲",
+      "title": { "pt": "Canja de galinha", "en": "Chicken and rice soup (canja)", "es": "Sopa de gallina con arroz (canja)" },
+      "summary": { "pt": "Caldo leve de galinha com arroz e legumes da horta. Bom para dias frios e para quem está se recuperando.", "en": "A light chicken broth with rice and garden vegetables. Good for cold days and for anyone getting back on their feet.", "es": "Caldo ligero de gallina con arroz y verduras de la huerta. Bueno para los días fríos y para reponerse." },
+      "serves": 6,
+      "minutes": 90,
+      "ingredients": [
+        { "pt": "1 galinha caipira (cerca de 1,5 kg) em pedaços", "en": "1 free-range chicken (about 1.5 kg), cut into pieces", "es": "1 gallina de campo (cerca de 1,5 kg) en trozos" },
+        { "pt": "1 xícara de arroz", "en": "1 cup of rice", "es": "1 taza de arroz" },
+        { "pt": "2 cenouras em cubos", "en": "2 carrots, diced", "es": "2 zanahorias en cubos" },
+        { "pt": "2 batatas em cubos", "en": "2 potatoes, diced", "es": "2 papas en cubos" },
+        { "pt": "1 cebola picada e 3 dentes de alho", "en": "1 chopped onion and 3 garlic cloves", "es": "1 cebolla picada y 3 dientes de ajo" },
+        { "pt": "Salsinha e cebolinha a gosto", "en": "Parsley and chives to taste", "es": "Perejil y cebollino al gusto" },
+        { "pt": "Sal e 2 litros de água", "en": "Salt and 2 litres of water", "es": "Sal y 2 litros de agua" }
+      ],
+      "steps": [
+        { "pt": "Refogue a cebola e o alho num fio de óleo e junte a galinha até dourar.", "en": "Fry the onion and garlic in a little oil, then add the chicken and brown it.", "es": "Sofríe la cebolla y el ajo con un poco de aceite y añade la gallina hasta dorarla." },
+        { "pt": "Cubra com a água, tempere com sal e cozinhe em fogo baixo por cerca de 1 hora, até a carne soltar do osso.", "en": "Cover with the water, season with salt and simmer for about 1 hour, until the meat falls off the bone.", "es": "Cubre con el agua, sala y cocina a fuego bajo cerca de 1 hora, hasta que la carne se separe del hueso." },
+        { "pt": "Retire a galinha, desfie a carne e descarte ossos e pele.", "en": "Take the chicken out, shred the meat and discard the bones and skin.", "es": "Saca la gallina, deshilacha la carne y descarta huesos y piel." },
+        { "pt": "Volte a carne ao caldo com o arroz, a cenoura e a batata. Cozinhe por 20 minutos.", "en": "Return the meat to the broth with the rice, carrot and potato. Cook for 20 minutes.", "es": "Devuelve la carne al caldo con el arroz, la zanahoria y la papa. Cocina 20 minutos." },
+        { "pt": "Desligue, junte as ervas picadas e sirva quente.", "en": "Turn off the heat, stir in the chopped herbs and serve hot.", "es": "Apaga el fuego, añade las hierbas picadas y sirve caliente." }
+      ],
+      "tip": { "pt": "Galinha caipira mais velha é mais dura: cozinhe na panela de pressão por 40 minutos antes de seguir a receita.", "en": "An older free-range hen is tougher: pressure-cook it for 40 minutes before following the recipe.", "es": "Una gallina de campo vieja es más dura: cocínala 40 minutos en olla a presión antes de seguir la receta." }
+    },
+    {
+      "id": "chicken-rice",
+      "group": "chicken",
+      "icon": "🍛",
+      "title": { "pt": "Galinhada", "en": "Chicken rice with turmeric (galinhada)", "es": "Arroz con pollo y cúrcuma (galinhada)" },
+      "summary": { "pt": "Arroz cozido junto com o frango e açafrão-da-terra, prato de panela única da roça.", "en": "Rice cooked together with chicken and turmeric, a one-pot farm dish.", "es": "Arroz cocido junto con el pollo y cúrcuma, un plato de olla única del campo." },
+      "serves": 6,
+      "minutes": 60,
+      "ingredients": [
+        { "pt": "1 kg de frango em pedaços (coxa e sobrecoxa)", "en": "1 kg of chicken pieces (thighs and drumsticks)", "es": "1 kg de pollo en trozos (muslos y contramuslos)" },
+        { "pt": "2 xícaras de arroz", "en": "2 cups of rice", "es": "2 tazas de arroz" },
+        { "pt": "1 colher (chá) de açafrão-da-terra (cúrcuma)", "en": "1 teaspoon of ground turmeric", "es": "1 cucharadita de cúrcuma" },
+        { "pt": "1 cebola, 3 dentes de alho e 1 tomate picados", "en": "1 onion, 3 garlic cloves and 1 tomato, chopped", "es": "1 cebolla, 3 dientes de ajo y 1 tomate picados" },
+        { "pt": "1 pimentão picado e milho verde (opcional)", "en": "1 chopped bell pepper and sweetcorn (optional)", "es": "1 pimiento picado y maíz tierno (opcional)" },
+        { "pt": "Cheiro-verde, sal e 4 xícaras de água quente", "en": "Parsley and chives, salt and 4 cups of hot water", "es": "Perejil y cebollino, sal y 4 tazas de agua caliente" }
+      ],
+      "steps": [
+        { "pt": "Tempere o frango com sal e alho e doure bem os pedaços na panela.", "en": "Season the chicken with salt and garlic and brown the pieces well in the pot.", "es": "Sazona el pollo con sal y ajo y dora bien los trozos en la olla." },
+        { "pt": "Junte a cebola, o tomate e o pimentão e refogue até murchar.", "en": "Add the onion, tomato and pepper and fry until soft.", "es": "Añade la cebolla, el tomate y el pimiento y sofríe hasta que se ablanden." },
+        { "pt": "Acrescente o arroz e o açafrão e mexa por 2 minutos.", "en": "Stir in the rice and turmeric for 2 minutes.", "es": "Agrega el arroz y la cúrcuma y remueve 2 minutos." },
+        { "pt": "Cubra com a água quente, tampe e cozinhe em fogo baixo por 20 minutos, até o arroz secar.", "en": "Pour in the hot water, cover and cook on low for 20 minutes, until the rice is dry.", "es": "Cubre con el agua caliente, tapa y cocina a fuego bajo 20 minutos, hasta que el arroz se seque." },
+        { "pt": "Finalize com o milho e o cheiro-verde.", "en": "Finish with the sweetcorn and herbs.", "es": "Termina con el maíz y las hierbas." }
+      ],
+      "tip": { "pt": "O frango precisa chegar a 74 °C no centro: corte o pedaço mais grosso e veja se não há sangue perto do osso.", "en": "Chicken must reach 74 °C in the centre: cut the thickest piece and check there is no blood near the bone.", "es": "El pollo debe llegar a 74 °C en el centro: corta el trozo más grueso y mira que no haya sangre cerca del hueso." }
+    },
+    {
+      "id": "roast-chicken",
+      "group": "chicken",
+      "icon": "🍗",
+      "title": { "pt": "Frango assado com ervas da horta", "en": "Roast chicken with garden herbs", "es": "Pollo asado con hierbas de la huerta" },
+      "summary": { "pt": "Frango inteiro assado sobre batatas e legumes, temperado com alecrim, tomilho e alho.", "en": "A whole chicken roasted over potatoes and vegetables, with rosemary, thyme and garlic.", "es": "Pollo entero asado sobre papas y verduras, con romero, tomillo y ajo." },
+      "serves": 4,
+      "minutes": 100,
+      "ingredients": [
+        { "pt": "1 frango inteiro (1,5 a 2 kg)", "en": "1 whole chicken (1.5 to 2 kg)", "es": "1 pollo entero (1,5 a 2 kg)" },
+        { "pt": "4 batatas e 2 cenouras em pedaços grandes", "en": "4 potatoes and 2 carrots in large chunks", "es": "4 papas y 2 zanahorias en trozos grandes" },
+        { "pt": "1 cabeça de alho", "en": "1 head of garlic", "es": "1 cabeza de ajo" },
+        { "pt": "Alecrim, tomilho e sálvia frescos", "en": "Fresh rosemary, thyme and sage", "es": "Romero, tomillo y salvia frescos" },
+        { "pt": "1 limão", "en": "1 lemon", "es": "1 limón" },
+        { "pt": "Azeite, sal e pimenta", "en": "Olive oil, salt and pepper", "es": "Aceite de oliva, sal y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Na véspera ou 2 horas antes, esfregue o frango com sal, alho amassado, ervas picadas, suco de limão e azeite.", "en": "The day before or 2 hours ahead, rub the chicken with salt, crushed garlic, chopped herbs, lemon juice and olive oil.", "es": "La víspera o 2 horas antes, frota el pollo con sal, ajo machacado, hierbas picadas, jugo de limón y aceite." },
+        { "pt": "Coloque as metades do limão e alguns ramos de ervas dentro do frango.", "en": "Put the squeezed lemon halves and a few herb sprigs inside the chicken.", "es": "Pon las mitades del limón y unas ramas de hierbas dentro del pollo." },
+        { "pt": "Espalhe batatas e cenouras na assadeira e o frango por cima.", "en": "Spread the potatoes and carrots in the tray and put the chicken on top.", "es": "Reparte las papas y zanahorias en la bandeja y el pollo encima." },
+        { "pt": "Asse coberto com papel-alumínio a 200 °C por 50 minutos, depois descoberto por mais 30 a 40 minutos, até dourar.", "en": "Roast covered with foil at 200 °C for 50 minutes, then uncovered for 30 to 40 more minutes, until golden.", "es": "Asa cubierto con papel aluminio a 200 °C durante 50 minutos y luego destapado 30 a 40 minutos más, hasta dorar." },
+        { "pt": "Deixe descansar 10 minutos antes de cortar.", "en": "Let it rest for 10 minutes before carving.", "es": "Déjalo reposar 10 minutos antes de cortar." }
+      ],
+      "tip": { "pt": "Furando a coxa, o caldo deve sair claro, sem sangue. Com termômetro, 74 °C na parte mais grossa.", "en": "When you pierce the thigh, the juices should run clear. With a thermometer, 74 °C in the thickest part.", "es": "Al pinchar el muslo, el jugo debe salir claro. Con termómetro, 74 °C en la parte más gruesa." }
+    },
+    {
+      "id": "chicken-okra",
+      "group": "chicken",
+      "icon": "🥘",
+      "title": { "pt": "Frango com quiabo", "en": "Chicken and okra stew", "es": "Guiso de pollo con quimbombó" },
+      "summary": { "pt": "Ensopado mineiro de frango com quiabo, servido com angu ou arroz.", "en": "A Brazilian country stew of chicken and okra, served with polenta or rice.", "es": "Guiso brasileño de pollo con quimbombó, servido con polenta o arroz." },
+      "serves": 5,
+      "minutes": 70,
+      "ingredients": [
+        { "pt": "1 kg de frango em pedaços", "en": "1 kg of chicken pieces", "es": "1 kg de pollo en trozos" },
+        { "pt": "500 g de quiabo cortado em rodelas", "en": "500 g of okra, sliced", "es": "500 g de quimbombó en rodajas" },
+        { "pt": "2 tomates, 1 cebola e 3 dentes de alho picados", "en": "2 tomatoes, 1 onion and 3 garlic cloves, chopped", "es": "2 tomates, 1 cebolla y 3 dientes de ajo picados" },
+        { "pt": "Suco de 1 limão", "en": "Juice of 1 lemon", "es": "Jugo de 1 limón" },
+        { "pt": "Cheiro-verde, sal e pimenta a gosto", "en": "Parsley, chives, salt and pepper to taste", "es": "Perejil, cebollino, sal y pimienta al gusto" },
+        { "pt": "2 xícaras de água quente", "en": "2 cups of hot water", "es": "2 tazas de agua caliente" }
+      ],
+      "steps": [
+        { "pt": "Tempere o frango com sal, alho e limão e deixe pegar gosto por 30 minutos.", "en": "Season the chicken with salt, garlic and lemon and leave it for 30 minutes.", "es": "Sazona el pollo con sal, ajo y limón y déjalo reposar 30 minutos." },
+        { "pt": "Doure o frango na panela, junte a cebola e os tomates e refogue.", "en": "Brown the chicken in the pot, add the onion and tomatoes and fry.", "es": "Dora el pollo en la olla, añade la cebolla y los tomates y sofríe." },
+        { "pt": "Acrescente a água e cozinhe tampado por 30 minutos.", "en": "Add the water and cook covered for 30 minutes.", "es": "Agrega el agua y cocina tapado 30 minutos." },
+        { "pt": "Enquanto isso, frite o quiabo numa frigideira sem tampa até parar de babar.", "en": "Meanwhile, fry the okra in an open pan until it stops being slimy.", "es": "Mientras tanto, fríe el quimbombó en una sartén destapada hasta que deje de soltar baba." },
+        { "pt": "Junte o quiabo ao frango, cozinhe mais 10 minutos e finalize com cheiro-verde.", "en": "Add the okra to the chicken, cook 10 more minutes and finish with the herbs.", "es": "Junta el quimbombó con el pollo, cocina 10 minutos más y termina con las hierbas." }
+      ],
+      "tip": { "pt": "Lave e seque bem o quiabo antes de cortar: com ele seco, baba bem menos.", "en": "Wash and dry the okra well before slicing: dry okra is much less slimy.", "es": "Lava y seca bien el quimbombó antes de cortarlo: seco suelta mucha menos baba." }
+    },
+    {
+      "id": "chicken-pie",
+      "group": "chicken",
+      "icon": "🥧",
+      "title": { "pt": "Torta de frango com legumes", "en": "Chicken and vegetable pie", "es": "Pastel de pollo con verduras" },
+      "summary": { "pt": "Massa de liquidificador com recheio de frango desfiado, milho, ervilha e cenoura da horta.", "en": "An easy blender batter over a filling of shredded chicken, sweetcorn, peas and garden carrots.", "es": "Masa de licuadora sobre un relleno de pollo deshilachado, maíz, arvejas y zanahoria de la huerta." },
+      "serves": 8,
+      "minutes": 75,
+      "ingredients": [
+        { "pt": "500 g de peito de frango cozido e desfiado", "en": "500 g of cooked, shredded chicken breast", "es": "500 g de pechuga de pollo cocida y deshilachada" },
+        { "pt": "1 cenoura ralada, 1 xícara de milho e 1 de ervilha", "en": "1 grated carrot, 1 cup of sweetcorn and 1 of peas", "es": "1 zanahoria rallada, 1 taza de maíz y 1 de arvejas" },
+        { "pt": "1 cebola, 2 tomates e cheiro-verde picados", "en": "1 onion, 2 tomatoes and herbs, chopped", "es": "1 cebolla, 2 tomates y hierbas picadas" },
+        { "pt": "Massa: 3 ovos, 2 xícaras de leite, 1 xícara de óleo", "en": "Batter: 3 eggs, 2 cups of milk, 1 cup of oil", "es": "Masa: 3 huevos, 2 tazas de leche, 1 taza de aceite" },
+        { "pt": "Massa: 2 xícaras de farinha de trigo, 1 colher (sopa) de fermento em pó e sal", "en": "Batter: 2 cups of plain flour, 1 tablespoon of baking powder and salt", "es": "Masa: 2 tazas de harina de trigo, 1 cucharada de polvo de hornear y sal" },
+        { "pt": "Queijo ralado para cobrir", "en": "Grated cheese for the top", "es": "Queso rallado para cubrir" }
+      ],
+      "steps": [
+        { "pt": "Refogue a cebola e o tomate, junte o frango, a cenoura, o milho e a ervilha e tempere. Deixe esfriar.", "en": "Fry the onion and tomato, add the chicken, carrot, sweetcorn and peas and season. Let it cool.", "es": "Sofríe la cebolla y el tomate, añade el pollo, la zanahoria, el maíz y las arvejas y sazona. Deja enfriar." },
+        { "pt": "Bata no liquidificador os ovos, o leite, o óleo, a farinha e o sal. Misture o fermento por último, com uma colher.", "en": "Blend the eggs, milk, oil, flour and salt. Stir in the baking powder last, with a spoon.", "es": "Licúa los huevos, la leche, el aceite, la harina y la sal. Incorpora el polvo de hornear al final, con una cuchara." },
+        { "pt": "Unte uma forma, despeje metade da massa, espalhe o recheio e cubra com o resto da massa.", "en": "Grease a tin, pour in half the batter, spread the filling and cover with the rest of the batter.", "es": "Engrasa un molde, vierte la mitad de la masa, reparte el relleno y cubre con el resto de la masa." },
+        { "pt": "Polvilhe o queijo e asse a 180 °C por 40 a 45 minutos, até dourar.", "en": "Sprinkle with cheese and bake at 180 °C for 40 to 45 minutes, until golden.", "es": "Espolvorea el queso y hornea a 180 °C durante 40 a 45 minutos, hasta dorar." }
+      ],
+      "tip": { "pt": "Use o caldo do cozimento do frango no lugar de parte do leite: a massa fica mais saborosa.", "en": "Use the chicken cooking broth instead of some of the milk for a tastier batter.", "es": "Usa el caldo de cocción del pollo en lugar de parte de la leche: la masa queda más sabrosa." }
+    },
+    {
+      "id": "fresh-cheese",
+      "group": "cheese",
+      "icon": "🧀",
+      "title": { "pt": "Queijo fresco (tipo minas frescal)", "en": "Fresh farm cheese", "es": "Queso fresco" },
+      "summary": { "pt": "Queijo branco, macio e úmido, pronto no mesmo dia. É o primeiro queijo para quem está começando.", "en": "A soft, moist white cheese, ready the same day. The best first cheese for beginners.", "es": "Queso blanco, suave y húmedo, listo el mismo día. Es el primer queso ideal para quien empieza." },
+      "serves": 8,
+      "minutes": 180,
+      "ingredients": [
+        { "pt": "5 litros de leite", "en": "5 litres of milk", "es": "5 litros de leche" },
+        { "pt": "Coalho líquido ou em pó, na dose do rótulo para 5 litros", "en": "Liquid or powdered rennet, at the label dose for 5 litres", "es": "Cuajo líquido o en polvo, en la dosis de la etiqueta para 5 litros" },
+        { "pt": "1 colher (sopa) de cloreto de cálcio (se o leite for pasteurizado comprado)", "en": "1 tablespoon of calcium chloride (if using shop-bought pasteurized milk)", "es": "1 cucharada de cloruro de calcio (si la leche es pasteurizada comprada)" },
+        { "pt": "1 colher (sopa) de sal", "en": "1 tablespoon of salt", "es": "1 cucharada de sal" },
+        { "pt": "Forma de queijo com furos e pano limpo", "en": "A cheese mould with holes and a clean cloth", "es": "Molde de queso con agujeros y un paño limpio" }
+      ],
+      "steps": [
+        { "pt": "Pasteurize o leite: aqueça a 65 °C e mantenha por 30 minutos, mexendo. Esfrie até 35 a 37 °C.", "en": "Pasteurize the milk: heat it to 65 °C and hold for 30 minutes, stirring. Cool to 35 to 37 °C.", "es": "Pasteuriza la leche: caliéntala a 65 °C y mantenla 30 minutos, removiendo. Enfría hasta 35 a 37 °C." },
+        { "pt": "Junte o cloreto de cálcio e o coalho diluído em meio copo de água, mexa por 1 minuto e deixe em repouso por 40 minutos.", "en": "Add the calcium chloride and the rennet diluted in half a glass of water, stir for 1 minute and leave still for 40 minutes.", "es": "Añade el cloruro de calcio y el cuajo diluido en medio vaso de agua, remueve 1 minuto y deja reposar 40 minutos." },
+        { "pt": "Quando a coalhada estiver firme, corte em cubos de 2 cm e mexa devagar por 10 minutos.", "en": "When the curd is firm, cut it into 2 cm cubes and stir gently for 10 minutes.", "es": "Cuando la cuajada esté firme, córtala en cubos de 2 cm y remueve despacio 10 minutos." },
+        { "pt": "Retire parte do soro, coloque a massa na forma e salgue a superfície.", "en": "Pour off some of the whey, put the curd in the mould and salt the top.", "es": "Retira parte del suero, pon la cuajada en el molde y sala la superficie." },
+        { "pt": "Vire o queijo depois de 30 minutos, salgue o outro lado e leve à geladeira na forma. Consuma em até 10 dias.", "en": "Turn the cheese after 30 minutes, salt the other side and refrigerate in the mould. Eat within 10 days.", "es": "Da vuelta al queso a los 30 minutos, sala el otro lado y refrigera en el molde. Consúmelo en 10 días." }
+      ],
+      "safety": { "pt": "Queijo fresco de leite cru pode transmitir brucelose, tuberculose e listeria. Sempre pasteurize o leite e use utensílios fervidos.", "en": "Fresh cheese made from raw milk can spread brucellosis, tuberculosis and listeria. Always pasteurize the milk and use boiled utensils.", "es": "El queso fresco de leche cruda puede transmitir brucelosis, tuberculosis y listeria. Pasteuriza siempre la leche y usa utensilios hervidos." }
+    },
+    {
+      "id": "semi-cured-cheese",
+      "group": "cheese",
+      "icon": "🧀",
+      "title": { "pt": "Queijo meia cura", "en": "Semi-cured cheese", "es": "Queso semicurado" },
+      "summary": { "pt": "Massa prensada e curada por 2 a 3 semanas: casca fina, miolo firme e sabor mais marcante que o fresco.", "en": "A pressed cheese aged 2 to 3 weeks: thin rind, firm inside and more flavour than fresh cheese.", "es": "Queso prensado y curado de 2 a 3 semanas: corteza fina, interior firme y más sabor que el fresco." },
+      "serves": 10,
+      "minutes": 240,
+      "ingredients": [
+        { "pt": "10 litros de leite", "en": "10 litres of milk", "es": "10 litros de leche" },
+        { "pt": "Fermento lático mesofílico, na dose do rótulo", "en": "Mesophilic starter culture, at the label dose", "es": "Fermento láctico mesófilo, en la dosis de la etiqueta" },
+        { "pt": "Coalho na dose do rótulo para 10 litros", "en": "Rennet at the label dose for 10 litres", "es": "Cuajo en la dosis de la etiqueta para 10 litros" },
+        { "pt": "Sal grosso para a salga", "en": "Coarse salt for salting", "es": "Sal gruesa para salar" },
+        { "pt": "Forma com dessorador e um peso de 5 a 10 kg para prensar", "en": "A mould with a liner and a 5 to 10 kg weight for pressing", "es": "Molde con desuerador y un peso de 5 a 10 kg para prensar" }
+      ],
+      "steps": [
+        { "pt": "Pasteurize o leite (65 °C por 30 minutos) e esfrie a 32 °C. Junte o fermento e espere 30 minutos.", "en": "Pasteurize the milk (65 °C for 30 minutes) and cool to 32 °C. Add the starter and wait 30 minutes.", "es": "Pasteuriza la leche (65 °C durante 30 minutos) y enfría a 32 °C. Añade el fermento y espera 30 minutos." },
+        { "pt": "Coloque o coalho, deixe firmar por 40 minutos, corte em cubos de 1 cm e mexa por 20 minutos, subindo a temperatura até 38 °C.", "en": "Add the rennet, let it set for 40 minutes, cut into 1 cm cubes and stir for 20 minutes while raising the heat to 38 °C.", "es": "Añade el cuajo, deja cuajar 40 minutos, corta en cubos de 1 cm y remueve 20 minutos subiendo la temperatura a 38 °C." },
+        { "pt": "Escorra o soro, enforme e prense por 6 horas, virando o queijo na metade do tempo.", "en": "Drain the whey, fill the mould and press for 6 hours, turning the cheese halfway.", "es": "Escurre el suero, pon en el molde y prensa 6 horas, dando vuelta al queso a la mitad." },
+        { "pt": "Salgue numa salmoura de 20% por 8 horas ou esfregue sal grosso na casca.", "en": "Brine in 20% salt water for 8 hours, or rub coarse salt on the rind.", "es": "Sala en salmuera al 20% durante 8 horas o frota sal gruesa en la corteza." },
+        { "pt": "Cure de 15 a 21 dias em lugar fresco (10 a 15 °C) e ventilado, virando e limpando a casca a cada 2 dias.", "en": "Age 15 to 21 days in a cool (10 to 15 °C), airy place, turning and wiping the rind every 2 days.", "es": "Cura de 15 a 21 días en un lugar fresco (10 a 15 °C) y ventilado, girando y limpiando la corteza cada 2 días." }
+      ],
+      "safety": { "pt": "Use leite pasteurizado. Mofo branco ou azul na casca sai com pano e salmoura; mofo preto, rosa ou cheiro de amônia forte: descarte o queijo.", "en": "Use pasteurized milk. White or blue mould on the rind can be wiped off with brine; black or pink mould or a strong ammonia smell means throw it away.", "es": "Usa leche pasteurizada. El moho blanco o azul de la corteza se limpia con salmuera; moho negro, rosa u olor fuerte a amoníaco: desecha el queso." }
+    },
+    {
+      "id": "colonial-cheese",
+      "group": "cheese",
+      "icon": "🧀",
+      "title": { "pt": "Queijo colonial", "en": "Colonial farmhouse cheese", "es": "Queso colonial" },
+      "summary": { "pt": "Queijo típico das colônias do Sul do Brasil: massa amarelada, macia e levemente ácida, curada por cerca de 30 dias.", "en": "A traditional farmhouse cheese from southern Brazil: yellowish, soft and slightly tangy, aged about 30 days.", "es": "Queso típico de las colonias del sur de Brasil: amarillento, suave y algo ácido, curado unos 30 días." },
+      "serves": 10,
+      "minutes": 240,
+      "ingredients": [
+        { "pt": "10 litros de leite integral", "en": "10 litres of whole milk", "es": "10 litros de leche entera" },
+        { "pt": "Fermento lático mesofílico, na dose do rótulo", "en": "Mesophilic starter culture, at the label dose", "es": "Fermento láctico mesófilo, en la dosis de la etiqueta" },
+        { "pt": "Coalho na dose do rótulo", "en": "Rennet at the label dose", "es": "Cuajo en la dosis de la etiqueta" },
+        { "pt": "1 colher (chá) de urucum (opcional, para a cor)", "en": "1 teaspoon of annatto (optional, for colour)", "es": "1 cucharadita de achiote (opcional, para el color)" },
+        { "pt": "Sal para salmoura", "en": "Salt for brine", "es": "Sal para salmuera" }
+      ],
+      "steps": [
+        { "pt": "Pasteurize o leite (65 °C por 30 minutos), esfrie a 34 °C e junte o fermento e o urucum.", "en": "Pasteurize the milk (65 °C for 30 minutes), cool to 34 °C and add the starter and annatto.", "es": "Pasteuriza la leche (65 °C durante 30 minutos), enfría a 34 °C y añade el fermento y el achiote." },
+        { "pt": "Depois de 30 minutos, coloque o coalho e deixe firmar por 40 minutos.", "en": "After 30 minutes, add the rennet and let it set for 40 minutes.", "es": "A los 30 minutos, añade el cuajo y deja cuajar 40 minutos." },
+        { "pt": "Corte em grãos do tamanho de milho e mexa por 30 minutos, aquecendo até 38 °C.", "en": "Cut into corn-kernel-sized pieces and stir for 30 minutes, warming to 38 °C.", "es": "Corta en granos del tamaño de un maíz y remueve 30 minutos, calentando hasta 38 °C." },
+        { "pt": "Enforme, prense por 8 horas virando duas vezes e salgue em salmoura por 12 horas.", "en": "Fill the mould, press for 8 hours turning twice, and brine for 12 hours.", "es": "Pon en el molde, prensa 8 horas girando dos veces y sala en salmuera 12 horas." },
+        { "pt": "Cure por cerca de 30 dias a 12 a 15 °C, virando e limpando a casca a cada 2 dias.", "en": "Age about 30 days at 12 to 15 °C, turning and wiping the rind every 2 days.", "es": "Cura unos 30 días a 12 a 15 °C, girando y limpiando la corteza cada 2 días." }
+      ],
+      "safety": { "pt": "Use leite pasteurizado e vacas com exames de brucelose e tuberculose em dia.", "en": "Use pasteurized milk from cows with up-to-date brucellosis and tuberculosis tests.", "es": "Usa leche pasteurizada de vacas con pruebas de brucelosis y tuberculosis al día." }
+    },
+    {
+      "id": "butter-cheese",
+      "group": "cheese",
+      "icon": "🧈",
+      "title": { "pt": "Queijo amanteigado (queijo de manteiga)", "en": "Butter cheese (queijo de manteiga)", "es": "Queso mantecoso (queijo de manteiga)" },
+      "summary": { "pt": "Queijo do Nordeste feito com a massa cozida na manteiga de garrafa: cremoso, dourado e para comer na hora ou assado.", "en": "A cheese from north-east Brazil whose curd is cooked in clarified butter: creamy, golden, eaten as is or grilled.", "es": "Queso del noreste de Brasil cuya cuajada se cocina en mantequilla clarificada: cremoso, dorado, para comer tal cual o asado." },
+      "serves": 8,
+      "minutes": 150,
+      "ingredients": [
+        { "pt": "6 litros de leite desnatado ou de leite que já deu a nata", "en": "6 litres of skimmed milk (or milk with the cream taken off)", "es": "6 litros de leche desnatada (o leche a la que se le quitó la nata)" },
+        { "pt": "Suco de 3 limões ou meio copo de vinagre de álcool", "en": "Juice of 3 lemons or half a glass of white vinegar", "es": "Jugo de 3 limones o medio vaso de vinagre blanco" },
+        { "pt": "250 ml de manteiga de garrafa (manteiga clarificada)", "en": "250 ml of clarified butter (ghee)", "es": "250 ml de mantequilla clarificada (ghee)" },
+        { "pt": "Sal a gosto", "en": "Salt to taste", "es": "Sal al gusto" }
+      ],
+      "steps": [
+        { "pt": "Aqueça o leite a 85 °C, junte o limão ou o vinagre e espere a coalhada se separar do soro.", "en": "Heat the milk to 85 °C, add the lemon or vinegar and wait for the curd to separate from the whey.", "es": "Calienta la leche a 85 °C, añade el limón o el vinagre y espera a que la cuajada se separe del suero." },
+        { "pt": "Escorra num pano e lave a massa com água morna para tirar a acidez. Esprema bem.", "en": "Drain in a cloth and rinse the curd with warm water to remove the sourness. Squeeze well.", "es": "Escurre en un paño y lava la cuajada con agua tibia para quitar la acidez. Exprime bien." },
+        { "pt": "Numa panela larga, derreta a manteiga, junte a massa esfarelada e o sal e mexa sem parar em fogo baixo.", "en": "In a wide pan, melt the butter, add the crumbled curd and salt and stir constantly over low heat.", "es": "En una olla ancha, derrite la mantequilla, añade la cuajada desmenuzada y la sal y remueve sin parar a fuego bajo." },
+        { "pt": "Cozinhe por 20 a 30 minutos, até virar uma massa lisa e elástica que solta do fundo.", "en": "Cook for 20 to 30 minutes, until it becomes a smooth, stretchy mass that comes away from the pan.", "es": "Cocina de 20 a 30 minutos, hasta tener una masa lisa y elástica que se despegue del fondo." },
+        { "pt": "Despeje numa forma untada com manteiga, deixe esfriar e guarde na geladeira por até 30 dias.", "en": "Pour into a buttered mould, let it cool and keep in the fridge for up to 30 days.", "es": "Vierte en un molde untado con mantequilla, deja enfriar y guarda en la nevera hasta 30 días." }
+      ],
+      "tip": { "pt": "A nata separada do leite vira a própria manteiga de garrafa: bata até virar manteiga e ferva até ficar dourada e límpida.", "en": "The cream taken off the milk can become the clarified butter: churn it into butter, then simmer until golden and clear.", "es": "La nata que quitas de la leche puede ser la mantequilla clarificada: bátela hasta hacer mantequilla y hiérvela hasta que quede dorada y clara." }
+    },
+    {
+      "id": "ricotta",
+      "group": "cheese",
+      "icon": "🥛",
+      "title": { "pt": "Ricota caseira", "en": "Homemade ricotta", "es": "Ricota casera" },
+      "summary": { "pt": "Aproveita o soro que sobra dos outros queijos. Leve, sem sal, boa para recheios e para comer com mel.", "en": "Uses up the whey left from other cheeses. Light and unsalted, good for fillings or with honey.", "es": "Aprovecha el suero que sobra de otros quesos. Ligera y sin sal, buena para rellenos o con miel." },
+      "serves": 4,
+      "minutes": 40,
+      "ingredients": [
+        { "pt": "5 litros de soro fresco de queijo (do mesmo dia)", "en": "5 litres of fresh cheese whey (same day)", "es": "5 litros de suero fresco de queso (del mismo día)" },
+        { "pt": "1 litro de leite (opcional, rende mais)", "en": "1 litre of milk (optional, for a bigger yield)", "es": "1 litro de leche (opcional, rinde más)" },
+        { "pt": "3 colheres (sopa) de vinagre ou suco de limão", "en": "3 tablespoons of vinegar or lemon juice", "es": "3 cucharadas de vinagre o jugo de limón" },
+        { "pt": "Pano fino para coar", "en": "A fine cloth for straining", "es": "Un paño fino para colar" }
+      ],
+      "steps": [
+        { "pt": "Aqueça o soro (e o leite, se usar) até 85 a 90 °C, sem ferver.", "en": "Heat the whey (and the milk, if using) to 85 to 90 °C, without boiling.", "es": "Calienta el suero (y la leche, si la usas) hasta 85 a 90 °C, sin hervir." },
+        { "pt": "Desligue, junte o vinagre e mexa uma vez só. Os flocos brancos sobem.", "en": "Turn off the heat, add the vinegar and stir just once. White flakes will rise.", "es": "Apaga, añade el vinagre y remueve una sola vez. Subirán copos blancos." },
+        { "pt": "Espere 10 minutos e recolha os flocos com escumadeira para o pano.", "en": "Wait 10 minutes and skim the flakes into the cloth.", "es": "Espera 10 minutos y recoge los copos con una espumadera hacia el paño." },
+        { "pt": "Deixe escorrer por 1 hora e guarde na geladeira. Consuma em até 5 dias.", "en": "Let it drain for 1 hour and refrigerate. Eat within 5 days.", "es": "Deja escurrir 1 hora y guarda en la nevera. Consúmela en 5 días." }
+      ],
+      "tip": { "pt": "O soro que sobra no fim pode ir para as galinhas e os porcos, em pequena quantidade.", "en": "The whey left over at the end can go to the chickens and pigs, in small amounts.", "es": "El suero que sobra al final puede ir a las gallinas y los cerdos, en poca cantidad." }
+    },
+    {
+      "id": "coalho-cheese",
+      "group": "cheese",
+      "icon": "🔥",
+      "title": { "pt": "Queijo coalho", "en": "Grilling cheese (queijo coalho)", "es": "Queso para asar (queijo coalho)" },
+      "summary": { "pt": "Queijo firme e elástico que não derrete na brasa: perfeito no espeto, com melaço ou orégano.", "en": "A firm, squeaky cheese that does not melt on the grill: perfect on skewers with molasses or oregano.", "es": "Queso firme y elástico que no se derrite en la parrilla: perfecto en brochetas con melaza u orégano." },
+      "serves": 8,
+      "minutes": 180,
+      "ingredients": [
+        { "pt": "10 litros de leite", "en": "10 litres of milk", "es": "10 litros de leche" },
+        { "pt": "Fermento lático na dose do rótulo (ou 300 ml de soro do dia anterior)", "en": "Starter culture at the label dose (or 300 ml of the previous day's whey)", "es": "Fermento láctico en la dosis de la etiqueta (o 300 ml del suero del día anterior)" },
+        { "pt": "Coalho na dose do rótulo", "en": "Rennet at the label dose", "es": "Cuajo en la dosis de la etiqueta" },
+        { "pt": "2 colheres (sopa) de sal", "en": "2 tablespoons of salt", "es": "2 cucharadas de sal" }
+      ],
+      "steps": [
+        { "pt": "Pasteurize o leite (65 °C por 30 minutos), esfrie a 35 °C, junte o fermento e o coalho.", "en": "Pasteurize the milk (65 °C for 30 minutes), cool to 35 °C and add the starter and rennet.", "es": "Pasteuriza la leche (65 °C durante 30 minutos), enfría a 35 °C y añade el fermento y el cuajo." },
+        { "pt": "Depois de 40 minutos, corte a coalhada em grãos pequenos e mexa por 15 minutos.", "en": "After 40 minutes, cut the curd into small pieces and stir for 15 minutes.", "es": "A los 40 minutos, corta la cuajada en granos pequeños y remueve 15 minutos." },
+        { "pt": "Tire um terço do soro e troque por água a 75 °C, mexendo até a massa chegar a 45 °C. É isso que deixa o queijo firme na brasa.", "en": "Remove a third of the whey and replace it with water at 75 °C, stirring until the curd reaches 45 °C. This is what keeps it firm on the grill.", "es": "Retira un tercio del suero y reemplázalo por agua a 75 °C, removiendo hasta que la cuajada llegue a 45 °C. Eso lo mantiene firme en la parrilla." },
+        { "pt": "Escorra, misture o sal na massa, enforme e prense por 4 horas.", "en": "Drain, mix the salt into the curd, fill the mould and press for 4 hours.", "es": "Escurre, mezcla la sal en la cuajada, pon en el molde y prensa 4 horas." },
+        { "pt": "Desenforme, corte em barras ou espetos e guarde na geladeira por até 20 dias.", "en": "Unmould, cut into bars or skewers and keep in the fridge for up to 20 days.", "es": "Desmolda, corta en barras o brochetas y guarda en la nevera hasta 20 días." }
+      ],
+      "safety": { "pt": "Mesmo indo para a brasa, use leite pasteurizado: o calor por fora não chega ao centro do queijo.", "en": "Even though it goes on the grill, use pasteurized milk: the outside heat does not reach the centre.", "es": "Aunque vaya a la parrilla, usa leche pasteurizada: el calor de fuera no llega al centro." }
+    },
+    {
+      "id": "garden-salad",
+      "group": "salad",
+      "icon": "🥗",
+      "title": { "pt": "Salada verde da horta", "en": "Garden green salad", "es": "Ensalada verde de la huerta" },
+      "summary": { "pt": "Folhas colhidas na hora com rabanete, cebolinha e um molho simples de limão e mel.", "en": "Just-picked leaves with radish, chives and a simple lemon and honey dressing.", "es": "Hojas recién cosechadas con rábano, cebollino y un aliño sencillo de limón y miel." },
+      "serves": 4,
+      "minutes": 15,
+      "ingredients": [
+        { "pt": "1 pé de alface e 1 maço de rúcula", "en": "1 head of lettuce and 1 bunch of rocket", "es": "1 lechuga y 1 manojo de rúcula" },
+        { "pt": "6 rabanetes em rodelas finas", "en": "6 radishes, thinly sliced", "es": "6 rábanos en rodajas finas" },
+        { "pt": "Cebolinha picada", "en": "Chopped chives", "es": "Cebollino picado" },
+        { "pt": "Molho: 3 colheres de azeite, 1 de limão, 1 colher (chá) de mel e sal", "en": "Dressing: 3 spoons of olive oil, 1 of lemon juice, 1 teaspoon of honey and salt", "es": "Aliño: 3 cucharadas de aceite, 1 de limón, 1 cucharadita de miel y sal" }
+      ],
+      "steps": [
+        { "pt": "Colha as folhas cedo, com o dia fresco, e deixe de molho em água com vinagre por 10 minutos.", "en": "Pick the leaves early in the cool of the morning and soak them in water with vinegar for 10 minutes.", "es": "Cosecha las hojas temprano, con el fresco, y déjalas en remojo en agua con vinagre 10 minutos." },
+        { "pt": "Enxágue, seque bem e rasgue com as mãos.", "en": "Rinse, dry well and tear by hand.", "es": "Enjuaga, seca bien y corta con las manos." },
+        { "pt": "Misture os ingredientes do molho num pote fechado e chacoalhe.", "en": "Shake the dressing ingredients together in a closed jar.", "es": "Mezcla los ingredientes del aliño en un frasco cerrado y agita." },
+        { "pt": "Junte folhas, rabanete e cebolinha e tempere só na hora de servir.", "en": "Combine the leaves, radish and chives and dress just before serving.", "es": "Junta hojas, rábano y cebollino y aliña justo antes de servir." }
+      ]
+    },
+    {
+      "id": "tomato-salad",
+      "group": "salad",
+      "icon": "🍅",
+      "title": { "pt": "Salada de tomate, pepino e cebola", "en": "Tomato, cucumber and onion salad", "es": "Ensalada de tomate, pepino y cebolla" },
+      "summary": { "pt": "A salada de verão da horta, com tomates bem maduros e um vinagrete de ervas.", "en": "The summer garden salad, with ripe tomatoes and a herb vinaigrette.", "es": "La ensalada de verano de la huerta, con tomates bien maduros y una vinagreta de hierbas." },
+      "serves": 4,
+      "minutes": 15,
+      "ingredients": [
+        { "pt": "4 tomates maduros", "en": "4 ripe tomatoes", "es": "4 tomates maduros" },
+        { "pt": "1 pepino", "en": "1 cucumber", "es": "1 pepino" },
+        { "pt": "1 cebola roxa em fatias finas", "en": "1 red onion, thinly sliced", "es": "1 cebolla morada en rodajas finas" },
+        { "pt": "Manjericão ou salsinha picados", "en": "Chopped basil or parsley", "es": "Albahaca o perejil picados" },
+        { "pt": "Azeite, vinagre, sal e orégano", "en": "Olive oil, vinegar, salt and oregano", "es": "Aceite de oliva, vinagre, sal y orégano" }
+      ],
+      "steps": [
+        { "pt": "Deixe a cebola de molho em água gelada por 10 minutos para ficar mais suave.", "en": "Soak the onion in iced water for 10 minutes to make it milder.", "es": "Deja la cebolla en agua helada 10 minutos para que quede más suave." },
+        { "pt": "Corte os tomates em gomos e o pepino em meias-luas.", "en": "Cut the tomatoes into wedges and the cucumber into half-moons.", "es": "Corta los tomates en gajos y el pepino en medias lunas." },
+        { "pt": "Misture tudo com as ervas, tempere com azeite, vinagre, sal e orégano.", "en": "Toss everything with the herbs and season with olive oil, vinegar, salt and oregano.", "es": "Mezcla todo con las hierbas y aliña con aceite, vinagre, sal y orégano." },
+        { "pt": "Deixe descansar 10 minutos antes de servir para pegar gosto.", "en": "Leave for 10 minutes before serving so the flavours blend.", "es": "Deja reposar 10 minutos antes de servir para que tome sabor." }
+      ]
+    },
+    {
+      "id": "potato-egg-salad",
+      "group": "salad",
+      "icon": "🥔",
+      "title": { "pt": "Salada de batata com ovos caipiras", "en": "Potato salad with farm eggs", "es": "Ensalada de papa con huevos de campo" },
+      "summary": { "pt": "Batata, ovos das suas galinhas e cheiro-verde, com molho de iogurte. Boa para acompanhar o frango assado.", "en": "Potatoes, eggs from your own hens and herbs, in a yoghurt dressing. Great with roast chicken.", "es": "Papas, huevos de tus gallinas y hierbas, con aliño de yogur. Ideal con el pollo asado." },
+      "serves": 6,
+      "minutes": 35,
+      "ingredients": [
+        { "pt": "1 kg de batata em cubos", "en": "1 kg of potatoes, diced", "es": "1 kg de papas en cubos" },
+        { "pt": "4 ovos caipiras", "en": "4 farm eggs", "es": "4 huevos de campo" },
+        { "pt": "1 cenoura cozida em cubos (opcional)", "en": "1 cooked, diced carrot (optional)", "es": "1 zanahoria cocida en cubos (opcional)" },
+        { "pt": "Cheiro-verde e cebola picados", "en": "Chopped herbs and onion", "es": "Hierbas y cebolla picadas" },
+        { "pt": "Molho: 1 pote de iogurte natural, 1 colher de mostarda, limão e sal", "en": "Dressing: 1 pot of plain yoghurt, 1 spoon of mustard, lemon and salt", "es": "Aliño: 1 yogur natural, 1 cucharada de mostaza, limón y sal" }
+      ],
+      "steps": [
+        { "pt": "Cozinhe a batata em água com sal até ficar macia, mas inteira. Escorra e esfrie.", "en": "Boil the potatoes in salted water until tender but still whole. Drain and cool.", "es": "Cuece las papas en agua con sal hasta que estén tiernas pero enteras. Escurre y enfría." },
+        { "pt": "Cozinhe os ovos por 10 minutos, passe na água fria, descasque e pique.", "en": "Boil the eggs for 10 minutes, cool them in cold water, peel and chop.", "es": "Cuece los huevos 10 minutos, pásalos por agua fría, pélalos y pícalos." },
+        { "pt": "Misture o iogurte, a mostarda, o limão e o sal.", "en": "Mix the yoghurt, mustard, lemon and salt.", "es": "Mezcla el yogur, la mostaza, el limón y la sal." },
+        { "pt": "Junte tudo com cuidado e leve à geladeira por 30 minutos antes de servir.", "en": "Fold everything together gently and chill for 30 minutes before serving.", "es": "Junta todo con cuidado y refrigera 30 minutos antes de servir." }
+      ],
+      "tip": { "pt": "Ovo muito fresco é difícil de descascar: para salada, use ovos de 4 a 5 dias.", "en": "Very fresh eggs are hard to peel: for salad, use eggs that are 4 to 5 days old.", "es": "El huevo muy fresco cuesta pelarlo: para ensalada, usa huevos de 4 a 5 días." }
+    },
+    {
+      "id": "cabbage-salad",
+      "group": "salad",
+      "icon": "🥬",
+      "title": { "pt": "Salada de repolho com cenoura", "en": "Cabbage and carrot slaw", "es": "Ensalada de repollo y zanahoria" },
+      "summary": { "pt": "Repolho fininho e cenoura ralada num molho agridoce. Aguenta bem na geladeira por 2 dias.", "en": "Finely shredded cabbage and grated carrot in a sweet-sour dressing. Keeps well in the fridge for 2 days.", "es": "Repollo fino y zanahoria rallada con un aliño agridulce. Aguanta bien 2 días en la nevera." },
+      "serves": 6,
+      "minutes": 20,
+      "ingredients": [
+        { "pt": "Meio repolho cortado bem fino", "en": "Half a cabbage, very finely shredded", "es": "Medio repollo cortado muy fino" },
+        { "pt": "2 cenouras raladas", "en": "2 grated carrots", "es": "2 zanahorias ralladas" },
+        { "pt": "Salsinha picada", "en": "Chopped parsley", "es": "Perejil picado" },
+        { "pt": "Molho: 3 colheres de azeite, 2 de vinagre de maçã, 1 colher (chá) de açúcar ou mel e sal", "en": "Dressing: 3 spoons of olive oil, 2 of cider vinegar, 1 teaspoon of sugar or honey and salt", "es": "Aliño: 3 cucharadas de aceite, 2 de vinagre de manzana, 1 cucharadita de azúcar o miel y sal" }
+      ],
+      "steps": [
+        { "pt": "Misture o repolho com uma pitada de sal e espere 10 minutos. Esprema o líquido que sair.", "en": "Toss the cabbage with a pinch of salt and wait 10 minutes. Squeeze out the liquid.", "es": "Mezcla el repollo con una pizca de sal y espera 10 minutos. Exprime el líquido que suelte." },
+        { "pt": "Junte a cenoura e a salsinha.", "en": "Add the carrot and parsley.", "es": "Añade la zanahoria y el perejil." },
+        { "pt": "Bata os ingredientes do molho e misture com a salada.", "en": "Whisk the dressing and toss it with the salad.", "es": "Bate el aliño y mézclalo con la ensalada." },
+        { "pt": "Sirva gelada.", "en": "Serve chilled.", "es": "Sirve fría." }
+      ]
+    },
+    {
+      "id": "beet-salad",
+      "group": "salad",
+      "icon": "🧀",
+      "title": { "pt": "Salada de beterraba com queijo fresco", "en": "Beetroot salad with fresh cheese", "es": "Ensalada de remolacha con queso fresco" },
+      "summary": { "pt": "Beterraba cozida, queijo fresco feito em casa e hortelã. Junta a horta e o curral no mesmo prato.", "en": "Cooked beetroot, homemade fresh cheese and mint. The garden and the dairy on one plate.", "es": "Remolacha cocida, queso fresco casero y menta. La huerta y el corral en el mismo plato." },
+      "serves": 4,
+      "minutes": 50,
+      "ingredients": [
+        { "pt": "4 beterrabas médias", "en": "4 medium beetroots", "es": "4 remolachas medianas" },
+        { "pt": "150 g de queijo fresco em cubos", "en": "150 g of fresh cheese, cubed", "es": "150 g de queso fresco en cubos" },
+        { "pt": "Folhas de hortelã", "en": "Mint leaves", "es": "Hojas de menta" },
+        { "pt": "Um punhado de nozes ou sementes de girassol (opcional)", "en": "A handful of walnuts or sunflower seeds (optional)", "es": "Un puñado de nueces o pipas de girasol (opcional)" },
+        { "pt": "Azeite, vinagre, sal e pimenta", "en": "Olive oil, vinegar, salt and pepper", "es": "Aceite de oliva, vinagre, sal y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Cozinhe as beterrabas com casca por 35 a 40 minutos, até a faca entrar fácil.", "en": "Boil the beetroots in their skins for 35 to 40 minutes, until a knife slides in easily.", "es": "Cuece las remolachas con piel de 35 a 40 minutos, hasta que el cuchillo entre fácil." },
+        { "pt": "Esfrie, descasque e corte em cubos.", "en": "Cool, peel and cube them.", "es": "Enfría, pela y corta en cubos." },
+        { "pt": "Tempere com azeite, vinagre, sal e pimenta.", "en": "Season with olive oil, vinegar, salt and pepper.", "es": "Aliña con aceite, vinagre, sal y pimienta." },
+        { "pt": "Por cima, espalhe o queijo, a hortelã e as nozes.", "en": "Top with the cheese, mint and nuts.", "es": "Por encima, reparte el queso, la menta y las nueces." }
+      ],
+      "tip": { "pt": "As folhas novas da beterraba também vão na salada, cruas ou refogadas.", "en": "Young beet leaves can go in the salad too, raw or sautéed.", "es": "Las hojas jóvenes de la remolacha también van en la ensalada, crudas o salteadas." }
+    }
+  ]
+}

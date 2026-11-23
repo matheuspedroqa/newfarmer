@@ -98,7 +98,8 @@
     "myfarm": "MyFarm",
     "weather": "Weather",
     "animals": "Animals",
-    "crops": "Crops"
+    "crops": "Crops",
+    "recipes": "Recipes"
   },
   "dashboard": {
     "hello": "Hello, {name}!",
@@ -466,6 +467,22 @@
     "addCrop": "＋ Add crop",
     "notSuited": "Not recommended for your climate.",
     "noContent": "Guide in preparation."
+  },
+  "recipePage": {
+    "title": "Farm recipes",
+    "intro": "Recipes made with what comes from your garden and your animals.",
+    "groups": {
+      "chicken": "Chicken",
+      "cheese": "Cheeses",
+      "salad": "Salads"
+    },
+    "serves": "Serves {count}",
+    "minutes": "{count} min",
+    "ingredients": "Ingredients",
+    "steps": "Method",
+    "tip": "Tip",
+    "safety": "Food safety",
+    "back": "Recipes"
   },
   "content": {
     "sources": "Sources",

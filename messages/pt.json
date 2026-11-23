@@ -98,7 +98,8 @@
     "myfarm": "MyFarm",
     "weather": "Clima",
     "animals": "Animais",
-    "crops": "Plantações"
+    "crops": "Plantações",
+    "recipes": "Receitas"
   },
   "dashboard": {
     "hello": "Olá, {name}!",
@@ -466,6 +467,22 @@
     "addCrop": "＋ Adicionar plantação",
     "notSuited": "Não recomendado para o seu clima.",
     "noContent": "Ficha em preparação."
+  },
+  "recipePage": {
+    "title": "Receitas da roça",
+    "intro": "Receitas com o que sai da horta e dos animais.",
+    "groups": {
+      "chicken": "Frango",
+      "cheese": "Queijos",
+      "salad": "Saladas"
+    },
+    "serves": "{count} porções",
+    "minutes": "{count} min",
+    "ingredients": "Ingredientes",
+    "steps": "Modo de fazer",
+    "tip": "Dica",
+    "safety": "Segurança",
+    "back": "Receitas"
   },
   "content": {
     "sources": "Fontes",
