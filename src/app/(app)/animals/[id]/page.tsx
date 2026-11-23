@@ -5,6 +5,7 @@ import { notFound, redirect } from "next/navigation";
 import { deleteDiaryAction } from "@/app/actions/diary";
 import { CountryNotes } from "@/components/CountryNotes";
 import { DiaryForm } from "@/components/DiaryForm";
+import { RecipeLinks } from "@/components/RecipeLinks";
 import { SourcesList } from "@/components/SourcesList";
 import { VetWarning } from "@/components/VetWarning";
 import { resolveLocale } from "@/i18n/locales";
@@ -242,6 +243,7 @@ export default async function AnimalPage({
             </>
           )}
 
+          <RecipeLinks item={id} name={t(`animals.${id}`)} />
           <SourcesList sources={content.sources} />
         </>
       )}

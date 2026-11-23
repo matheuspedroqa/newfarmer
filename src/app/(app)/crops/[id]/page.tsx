@@ -3,6 +3,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MonthCalendar } from "@/components/MonthCalendar";
+import { RecipeLinks } from "@/components/RecipeLinks";
 import { SourcesList } from "@/components/SourcesList";
 import { resolveLocale } from "@/i18n/locales";
 import { CROPS, CROP_IDS, type CropId } from "@/lib/catalog";
@@ -79,6 +80,8 @@ export default async function CropPage({ params }: { params: Promise<{ id: strin
           <p className="mt-1">{content.care.pruning ? tx(content.care.pruning) : t("cropPage.noPruning")}</p>
         </section>
       </div>
+
+      <RecipeLinks item={id} name={t(`crops.${id}`)} />
 
       <SourcesList sources={content.sources} />
     </section>

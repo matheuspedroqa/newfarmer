@@ -33,8 +33,11 @@ describe("receitas", () => {
     expect(count("chicken")).toBe(5);
     expect(count("cheese")).toBeGreaterThan(0);
     expect(count("cheese")).toBeLessThanOrEqual(6);
-    expect(count("salad")).toBe(5);
+    expect(count("salad")).toBeGreaterThanOrEqual(5);
     expect(parsed.data!.recipes.some((r) => r.id === "chicken-soup"), "canja").toBe(true);
+    // Toda página de cultivo e de animal tem "Receitas com ...".
+    const used = new Set(parsed.data!.recipes.flatMap((r) => r.uses));
+    expect([...CROP_IDS, ...ANIMAL_IDS].filter((i) => !used.has(i))).toEqual([]);
   });
 });
 

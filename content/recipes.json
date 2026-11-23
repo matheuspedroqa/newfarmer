@@ -24,7 +24,8 @@
         { "pt": "Volte a carne ao caldo com o arroz, a cenoura e a batata. Cozinhe por 20 minutos.", "en": "Return the meat to the broth with the rice, carrot and potato. Cook for 20 minutes.", "es": "Devuelve la carne al caldo con el arroz, la zanahoria y la papa. Cocina 20 minutos." },
         { "pt": "Desligue, junte as ervas picadas e sirva quente.", "en": "Turn off the heat, stir in the chopped herbs and serve hot.", "es": "Apaga el fuego, añade las hierbas picadas y sirve caliente." }
       ],
-      "tip": { "pt": "Galinha caipira mais velha é mais dura: cozinhe na panela de pressão por 40 minutos antes de seguir a receita.", "en": "An older free-range hen is tougher: pressure-cook it for 40 minutes before following the recipe.", "es": "Una gallina de campo vieja es más dura: cocínala 40 minutos en olla a presión antes de seguir la receta." }
+      "tip": { "pt": "Galinha caipira mais velha é mais dura: cozinhe na panela de pressão por 40 minutos antes de seguir a receita.", "en": "An older free-range hen is tougher: pressure-cook it for 40 minutes before following the recipe.", "es": "Una gallina de campo vieja es más dura: cocínala 40 minutos en olla a presión antes de seguir la receta." },
+      "uses": ["chickens", "rice", "carrot", "potato", "onion", "garlic", "parsley", "chives"]
     },
     {
       "id": "chicken-rice",
@@ -49,7 +50,8 @@
         { "pt": "Cubra com a água quente, tampe e cozinhe em fogo baixo por 20 minutos, até o arroz secar.", "en": "Pour in the hot water, cover and cook on low for 20 minutes, until the rice is dry.", "es": "Cubre con el agua caliente, tapa y cocina a fuego bajo 20 minutos, hasta que el arroz se seque." },
         { "pt": "Finalize com o milho e o cheiro-verde.", "en": "Finish with the sweetcorn and herbs.", "es": "Termina con el maíz y las hierbas." }
       ],
-      "tip": { "pt": "O frango precisa chegar a 74 °C no centro: corte o pedaço mais grosso e veja se não há sangue perto do osso.", "en": "Chicken must reach 74 °C in the centre: cut the thickest piece and check there is no blood near the bone.", "es": "El pollo debe llegar a 74 °C en el centro: corta el trozo más grueso y mira que no haya sangre cerca del hueso." }
+      "tip": { "pt": "O frango precisa chegar a 74 °C no centro: corte o pedaço mais grosso e veja se não há sangue perto do osso.", "en": "Chicken must reach 74 °C in the centre: cut the thickest piece and check there is no blood near the bone.", "es": "El pollo debe llegar a 74 °C en el centro: corta el trozo más grueso y mira que no haya sangre cerca del hueso." },
+      "uses": ["chickens", "rice", "turmeric", "onion", "garlic", "tomato", "bellPepper", "corn"]
     },
     {
       "id": "roast-chicken",
@@ -74,7 +76,8 @@
         { "pt": "Asse coberto com papel-alumínio a 200 °C por 50 minutos, depois descoberto por mais 30 a 40 minutos, até dourar.", "en": "Roast covered with foil at 200 °C for 50 minutes, then uncovered for 30 to 40 more minutes, until golden.", "es": "Asa cubierto con papel aluminio a 200 °C durante 50 minutos y luego destapado 30 a 40 minutos más, hasta dorar." },
         { "pt": "Deixe descansar 10 minutos antes de cortar.", "en": "Let it rest for 10 minutes before carving.", "es": "Déjalo reposar 10 minutos antes de cortar." }
       ],
-      "tip": { "pt": "Furando a coxa, o caldo deve sair claro, sem sangue. Com termômetro, 74 °C na parte mais grossa.", "en": "When you pierce the thigh, the juices should run clear. With a thermometer, 74 °C in the thickest part.", "es": "Al pinchar el muslo, el jugo debe salir claro. Con termómetro, 74 °C en la parte más gruesa." }
+      "tip": { "pt": "Furando a coxa, o caldo deve sair claro, sem sangue. Com termômetro, 74 °C na parte mais grossa.", "en": "When you pierce the thigh, the juices should run clear. With a thermometer, 74 °C in the thickest part.", "es": "Al pinchar el muslo, el jugo debe salir claro. Con termómetro, 74 °C en la parte más gruesa." },
+      "uses": ["chickens", "potato", "carrot", "garlic", "rosemary", "thyme", "sage", "lemon"]
     },
     {
       "id": "chicken-okra",
@@ -99,7 +102,8 @@
         { "pt": "Enquanto isso, frite o quiabo numa frigideira sem tampa até parar de babar.", "en": "Meanwhile, fry the okra in an open pan until it stops being slimy.", "es": "Mientras tanto, fríe el quimbombó en una sartén destapada hasta que deje de soltar baba." },
         { "pt": "Junte o quiabo ao frango, cozinhe mais 10 minutos e finalize com cheiro-verde.", "en": "Add the okra to the chicken, cook 10 more minutes and finish with the herbs.", "es": "Junta el quimbombó con el pollo, cocina 10 minutos más y termina con las hierbas." }
       ],
-      "tip": { "pt": "Lave e seque bem o quiabo antes de cortar: com ele seco, baba bem menos.", "en": "Wash and dry the okra well before slicing: dry okra is much less slimy.", "es": "Lava y seca bien el quimbombó antes de cortarlo: seco suelta mucha menos baba." }
+      "tip": { "pt": "Lave e seque bem o quiabo antes de cortar: com ele seco, baba bem menos.", "en": "Wash and dry the okra well before slicing: dry okra is much less slimy.", "es": "Lava y seca bien el quimbombó antes de cortarlo: seco suelta mucha menos baba." },
+      "uses": ["chickens", "okra", "tomato", "onion", "garlic", "lemon"]
     },
     {
       "id": "chicken-pie",
@@ -123,7 +127,8 @@
         { "pt": "Unte uma forma, despeje metade da massa, espalhe o recheio e cubra com o resto da massa.", "en": "Grease a tin, pour in half the batter, spread the filling and cover with the rest of the batter.", "es": "Engrasa un molde, vierte la mitad de la masa, reparte el relleno y cubre con el resto de la masa." },
         { "pt": "Polvilhe o queijo e asse a 180 °C por 40 a 45 minutos, até dourar.", "en": "Sprinkle with cheese and bake at 180 °C for 40 to 45 minutes, until golden.", "es": "Espolvorea el queso y hornea a 180 °C durante 40 a 45 minutos, hasta dorar." }
       ],
-      "tip": { "pt": "Use o caldo do cozimento do frango no lugar de parte do leite: a massa fica mais saborosa.", "en": "Use the chicken cooking broth instead of some of the milk for a tastier batter.", "es": "Usa el caldo de cocción del pollo en lugar de parte de la leche: la masa queda más sabrosa." }
+      "tip": { "pt": "Use o caldo do cozimento do frango no lugar de parte do leite: a massa fica mais saborosa.", "en": "Use the chicken cooking broth instead of some of the milk for a tastier batter.", "es": "Usa el caldo de cocción del pollo en lugar de parte de la leche: la masa queda más sabrosa." },
+      "uses": ["chickens", "carrot", "corn", "pea", "onion", "tomato", "wheat", "cows"]
     },
     {
       "id": "fresh-cheese",
@@ -147,7 +152,8 @@
         { "pt": "Retire parte do soro, coloque a massa na forma e salgue a superfície.", "en": "Pour off some of the whey, put the curd in the mould and salt the top.", "es": "Retira parte del suero, pon la cuajada en el molde y sala la superficie." },
         { "pt": "Vire o queijo depois de 30 minutos, salgue o outro lado e leve à geladeira na forma. Consuma em até 10 dias.", "en": "Turn the cheese after 30 minutes, salt the other side and refrigerate in the mould. Eat within 10 days.", "es": "Da vuelta al queso a los 30 minutos, sala el otro lado y refrigera en el molde. Consúmelo en 10 días." }
       ],
-      "safety": { "pt": "Queijo fresco de leite cru pode transmitir brucelose, tuberculose e listeria. Sempre pasteurize o leite e use utensílios fervidos.", "en": "Fresh cheese made from raw milk can spread brucellosis, tuberculosis and listeria. Always pasteurize the milk and use boiled utensils.", "es": "El queso fresco de leche cruda puede transmitir brucelosis, tuberculosis y listeria. Pasteuriza siempre la leche y usa utensilios hervidos." }
+      "safety": { "pt": "Queijo fresco de leite cru pode transmitir brucelose, tuberculose e listeria. Sempre pasteurize o leite e use utensílios fervidos.", "en": "Fresh cheese made from raw milk can spread brucellosis, tuberculosis and listeria. Always pasteurize the milk and use boiled utensils.", "es": "El queso fresco de leche cruda puede transmitir brucelosis, tuberculosis y listeria. Pasteuriza siempre la leche y usa utensilios hervidos." },
+      "uses": ["cows", "goats"]
     },
     {
       "id": "semi-cured-cheese",
@@ -171,7 +177,8 @@
         { "pt": "Salgue numa salmoura de 20% por 8 horas ou esfregue sal grosso na casca.", "en": "Brine in 20% salt water for 8 hours, or rub coarse salt on the rind.", "es": "Sala en salmuera al 20% durante 8 horas o frota sal gruesa en la corteza." },
         { "pt": "Cure de 15 a 21 dias em lugar fresco (10 a 15 °C) e ventilado, virando e limpando a casca a cada 2 dias.", "en": "Age 15 to 21 days in a cool (10 to 15 °C), airy place, turning and wiping the rind every 2 days.", "es": "Cura de 15 a 21 días en un lugar fresco (10 a 15 °C) y ventilado, girando y limpiando la corteza cada 2 días." }
       ],
-      "safety": { "pt": "Use leite pasteurizado. Mofo branco ou azul na casca sai com pano e salmoura; mofo preto, rosa ou cheiro de amônia forte: descarte o queijo.", "en": "Use pasteurized milk. White or blue mould on the rind can be wiped off with brine; black or pink mould or a strong ammonia smell means throw it away.", "es": "Usa leche pasteurizada. El moho blanco o azul de la corteza se limpia con salmuera; moho negro, rosa u olor fuerte a amoníaco: desecha el queso." }
+      "safety": { "pt": "Use leite pasteurizado. Mofo branco ou azul na casca sai com pano e salmoura; mofo preto, rosa ou cheiro de amônia forte: descarte o queijo.", "en": "Use pasteurized milk. White or blue mould on the rind can be wiped off with brine; black or pink mould or a strong ammonia smell means throw it away.", "es": "Usa leche pasteurizada. El moho blanco o azul de la corteza se limpia con salmuera; moho negro, rosa u olor fuerte a amoníaco: desecha el queso." },
+      "uses": ["cows"]
     },
     {
       "id": "colonial-cheese",
@@ -195,7 +202,8 @@
         { "pt": "Enforme, prense por 8 horas virando duas vezes e salgue em salmoura por 12 horas.", "en": "Fill the mould, press for 8 hours turning twice, and brine for 12 hours.", "es": "Pon en el molde, prensa 8 horas girando dos veces y sala en salmuera 12 horas." },
         { "pt": "Cure por cerca de 30 dias a 12 a 15 °C, virando e limpando a casca a cada 2 dias.", "en": "Age about 30 days at 12 to 15 °C, turning and wiping the rind every 2 days.", "es": "Cura unos 30 días a 12 a 15 °C, girando y limpiando la corteza cada 2 días." }
       ],
-      "safety": { "pt": "Use leite pasteurizado e vacas com exames de brucelose e tuberculose em dia.", "en": "Use pasteurized milk from cows with up-to-date brucellosis and tuberculosis tests.", "es": "Usa leche pasteurizada de vacas con pruebas de brucelosis y tuberculosis al día." }
+      "safety": { "pt": "Use leite pasteurizado e vacas com exames de brucelose e tuberculose em dia.", "en": "Use pasteurized milk from cows with up-to-date brucellosis and tuberculosis tests.", "es": "Usa leche pasteurizada de vacas con pruebas de brucelosis y tuberculosis al día." },
+      "uses": ["cows"]
     },
     {
       "id": "butter-cheese",
@@ -218,7 +226,8 @@
         { "pt": "Cozinhe por 20 a 30 minutos, até virar uma massa lisa e elástica que solta do fundo.", "en": "Cook for 20 to 30 minutes, until it becomes a smooth, stretchy mass that comes away from the pan.", "es": "Cocina de 20 a 30 minutos, hasta tener una masa lisa y elástica que se despegue del fondo." },
         { "pt": "Despeje numa forma untada com manteiga, deixe esfriar e guarde na geladeira por até 30 dias.", "en": "Pour into a buttered mould, let it cool and keep in the fridge for up to 30 days.", "es": "Vierte en un molde untado con mantequilla, deja enfriar y guarda en la nevera hasta 30 días." }
       ],
-      "tip": { "pt": "A nata separada do leite vira a própria manteiga de garrafa: bata até virar manteiga e ferva até ficar dourada e límpida.", "en": "The cream taken off the milk can become the clarified butter: churn it into butter, then simmer until golden and clear.", "es": "La nata que quitas de la leche puede ser la mantequilla clarificada: bátela hasta hacer mantequilla y hiérvela hasta que quede dorada y clara." }
+      "tip": { "pt": "A nata separada do leite vira a própria manteiga de garrafa: bata até virar manteiga e ferva até ficar dourada e límpida.", "en": "The cream taken off the milk can become the clarified butter: churn it into butter, then simmer until golden and clear.", "es": "La nata que quitas de la leche puede ser la mantequilla clarificada: bátela hasta hacer mantequilla y hiérvela hasta que quede dorada y clara." },
+      "uses": ["cows", "lemon"]
     },
     {
       "id": "ricotta",
@@ -240,7 +249,8 @@
         { "pt": "Espere 10 minutos e recolha os flocos com escumadeira para o pano.", "en": "Wait 10 minutes and skim the flakes into the cloth.", "es": "Espera 10 minutos y recoge los copos con una espumadera hacia el paño." },
         { "pt": "Deixe escorrer por 1 hora e guarde na geladeira. Consuma em até 5 dias.", "en": "Let it drain for 1 hour and refrigerate. Eat within 5 days.", "es": "Deja escurrir 1 hora y guarda en la nevera. Consúmela en 5 días." }
       ],
-      "tip": { "pt": "O soro que sobra no fim pode ir para as galinhas e os porcos, em pequena quantidade.", "en": "The whey left over at the end can go to the chickens and pigs, in small amounts.", "es": "El suero que sobra al final puede ir a las gallinas y los cerdos, en poca cantidad." }
+      "tip": { "pt": "O soro que sobra no fim pode ir para as galinhas e os porcos, em pequena quantidade.", "en": "The whey left over at the end can go to the chickens and pigs, in small amounts.", "es": "El suero que sobra al final puede ir a las gallinas y los cerdos, en poca cantidad." },
+      "uses": ["cows", "goats"]
     },
     {
       "id": "coalho-cheese",
@@ -263,7 +273,8 @@
         { "pt": "Escorra, misture o sal na massa, enforme e prense por 4 horas.", "en": "Drain, mix the salt into the curd, fill the mould and press for 4 hours.", "es": "Escurre, mezcla la sal en la cuajada, pon en el molde y prensa 4 horas." },
         { "pt": "Desenforme, corte em barras ou espetos e guarde na geladeira por até 20 dias.", "en": "Unmould, cut into bars or skewers and keep in the fridge for up to 20 days.", "es": "Desmolda, corta en barras o brochetas y guarda en la nevera hasta 20 días." }
       ],
-      "safety": { "pt": "Mesmo indo para a brasa, use leite pasteurizado: o calor por fora não chega ao centro do queijo.", "en": "Even though it goes on the grill, use pasteurized milk: the outside heat does not reach the centre.", "es": "Aunque vaya a la parrilla, usa leche pasteurizada: el calor de fuera no llega al centro." }
+      "safety": { "pt": "Mesmo indo para a brasa, use leite pasteurizado: o calor por fora não chega ao centro do queijo.", "en": "Even though it goes on the grill, use pasteurized milk: the outside heat does not reach the centre.", "es": "Aunque vaya a la parrilla, usa leche pasteurizada: el calor de fuera no llega al centro." },
+      "uses": ["cows"]
     },
     {
       "id": "garden-salad",
@@ -284,7 +295,8 @@
         { "pt": "Enxágue, seque bem e rasgue com as mãos.", "en": "Rinse, dry well and tear by hand.", "es": "Enjuaga, seca bien y corta con las manos." },
         { "pt": "Misture os ingredientes do molho num pote fechado e chacoalhe.", "en": "Shake the dressing ingredients together in a closed jar.", "es": "Mezcla los ingredientes del aliño en un frasco cerrado y agita." },
         { "pt": "Junte folhas, rabanete e cebolinha e tempere só na hora de servir.", "en": "Combine the leaves, radish and chives and dress just before serving.", "es": "Junta hojas, rábano y cebollino y aliña justo antes de servir." }
-      ]
+      ],
+      "uses": ["lettuce", "arugula", "radish", "chives", "lemon"]
     },
     {
       "id": "tomato-salad",
@@ -306,7 +318,8 @@
         { "pt": "Corte os tomates em gomos e o pepino em meias-luas.", "en": "Cut the tomatoes into wedges and the cucumber into half-moons.", "es": "Corta los tomates en gajos y el pepino en medias lunas." },
         { "pt": "Misture tudo com as ervas, tempere com azeite, vinagre, sal e orégano.", "en": "Toss everything with the herbs and season with olive oil, vinegar, salt and oregano.", "es": "Mezcla todo con las hierbas y aliña con aceite, vinagre, sal y orégano." },
         { "pt": "Deixe descansar 10 minutos antes de servir para pegar gosto.", "en": "Leave for 10 minutes before serving so the flavours blend.", "es": "Deja reposar 10 minutos antes de servir para que tome sabor." }
-      ]
+      ],
+      "uses": ["tomato", "cucumber", "onion", "basil", "parsley", "oregano"]
     },
     {
       "id": "potato-egg-salad",
@@ -329,7 +342,8 @@
         { "pt": "Misture o iogurte, a mostarda, o limão e o sal.", "en": "Mix the yoghurt, mustard, lemon and salt.", "es": "Mezcla el yogur, la mostaza, el limón y la sal." },
         { "pt": "Junte tudo com cuidado e leve à geladeira por 30 minutos antes de servir.", "en": "Fold everything together gently and chill for 30 minutes before serving.", "es": "Junta todo con cuidado y refrigera 30 minutos antes de servir." }
       ],
-      "tip": { "pt": "Ovo muito fresco é difícil de descascar: para salada, use ovos de 4 a 5 dias.", "en": "Very fresh eggs are hard to peel: for salad, use eggs that are 4 to 5 days old.", "es": "El huevo muy fresco cuesta pelarlo: para ensalada, usa huevos de 4 a 5 días." }
+      "tip": { "pt": "Ovo muito fresco é difícil de descascar: para salada, use ovos de 4 a 5 dias.", "en": "Very fresh eggs are hard to peel: for salad, use eggs that are 4 to 5 days old.", "es": "El huevo muy fresco cuesta pelarlo: para ensalada, usa huevos de 4 a 5 días." },
+      "uses": ["potato", "chickens", "carrot", "onion", "parsley", "cows"]
     },
     {
       "id": "cabbage-salad",
@@ -350,7 +364,8 @@
         { "pt": "Junte a cenoura e a salsinha.", "en": "Add the carrot and parsley.", "es": "Añade la zanahoria y el perejil." },
         { "pt": "Bata os ingredientes do molho e misture com a salada.", "en": "Whisk the dressing and toss it with the salad.", "es": "Bate el aliño y mézclalo con la ensalada." },
         { "pt": "Sirva gelada.", "en": "Serve chilled.", "es": "Sirve fría." }
-      ]
+      ],
+      "uses": ["cabbage", "carrot", "parsley"]
     },
     {
       "id": "beet-salad",
@@ -373,7 +388,1398 @@
         { "pt": "Tempere com azeite, vinagre, sal e pimenta.", "en": "Season with olive oil, vinegar, salt and pepper.", "es": "Aliña con aceite, vinagre, sal y pimienta." },
         { "pt": "Por cima, espalhe o queijo, a hortelã e as nozes.", "en": "Top with the cheese, mint and nuts.", "es": "Por encima, reparte el queso, la menta y las nueces." }
       ],
-      "tip": { "pt": "As folhas novas da beterraba também vão na salada, cruas ou refogadas.", "en": "Young beet leaves can go in the salad too, raw or sautéed.", "es": "Las hojas jóvenes de la remolacha también van en la ensalada, crudas o salteadas." }
+      "tip": { "pt": "As folhas novas da beterraba também vão na salada, cruas ou refogadas.", "en": "Young beet leaves can go in the salad too, raw or sautéed.", "es": "Las hojas jóvenes de la remolacha también van en la ensalada, crudas o salteadas." },
+      "uses": ["beet", "mint", "sunflower", "cows"]
+    },
+    {
+      "id": "leek-quiche",
+      "group": "vegetable",
+      "icon": "🥧",
+      "title": { "pt": "Quiche de alho-poró", "en": "Leek quiche", "es": "Quiche de puerro" },
+      "summary": { "pt": "Massa crocante de manteiga com recheio cremoso de alho-poró, ovos e queijo.", "en": "A crisp butter crust with a creamy filling of leek, eggs and cheese.", "es": "Masa crujiente de mantequilla con un relleno cremoso de puerro, huevos y queso." },
+      "serves": 6,
+      "minutes": 70,
+      "uses": ["leek", "wheat", "thyme", "chickens", "cows"],
+      "ingredients": [
+        { "pt": "Massa: 200 g de farinha de trigo, 100 g de manteiga gelada, 1 ovo e 1 pitada de sal", "en": "Crust: 200 g flour, 100 g cold butter, 1 egg and a pinch of salt", "es": "Masa: 200 g de harina, 100 g de mantequilla fría, 1 huevo y una pizca de sal" },
+        { "pt": "2 talos de alho-poró em rodelas finas", "en": "2 leeks, thinly sliced", "es": "2 puerros en rodajas finas" },
+        { "pt": "3 ovos e 200 ml de creme de leite (ou nata)", "en": "3 eggs and 200 ml of cream", "es": "3 huevos y 200 ml de nata" },
+        { "pt": "100 g de queijo ralado (meia cura serve bem)", "en": "100 g of grated cheese (semi-cured works well)", "es": "100 g de queso rallado (sirve el semicurado)" },
+        { "pt": "Tomilho, sal, pimenta e noz-moscada", "en": "Thyme, salt, pepper and nutmeg", "es": "Tomillo, sal, pimienta y nuez moscada" }
+      ],
+      "steps": [
+        { "pt": "Misture a farinha, a manteiga e o sal com a ponta dos dedos, junte o ovo e forme uma bola. Leve à geladeira por 30 minutos.", "en": "Rub the flour, butter and salt together, add the egg and form a ball. Chill for 30 minutes.", "es": "Mezcla la harina, la mantequilla y la sal con la punta de los dedos, añade el huevo y forma una bola. Refrigera 30 minutos." },
+        { "pt": "Refogue o alho-poró em um fio de manteiga por 10 minutos, até murchar sem dourar.", "en": "Soften the leek in a little butter for 10 minutes, without browning.", "es": "Rehoga el puerro en un poco de mantequilla 10 minutos, hasta que se ablande sin dorarse." },
+        { "pt": "Abra a massa numa forma de 24 cm, fure com um garfo e asse por 12 minutos a 200 °C.", "en": "Roll the dough into a 24 cm tin, prick it with a fork and bake for 12 minutes at 200 °C.", "es": "Extiende la masa en un molde de 24 cm, pínchala con un tenedor y hornea 12 minutos a 200 °C." },
+        { "pt": "Bata ovos, creme, queijo e temperos, junte o alho-poró, despeje na massa e asse por 25 a 30 minutos a 180 °C, até firmar.", "en": "Whisk the eggs, cream, cheese and seasoning, stir in the leek, pour into the crust and bake 25 to 30 minutes at 180 °C until set.", "es": "Bate los huevos, la nata, el queso y los condimentos, añade el puerro, vierte sobre la masa y hornea de 25 a 30 minutos a 180 °C hasta que cuaje." }
+      ],
+      "tip": { "pt": "Lave bem o alho-poró: a terra fica presa entre as camadas.", "en": "Wash the leek well: soil hides between the layers.", "es": "Lava bien el puerro: la tierra se queda entre las capas." }
+    },
+    {
+      "id": "pumpkin-soup",
+      "group": "vegetable",
+      "icon": "🎃",
+      "title": { "pt": "Sopa de abóbora com gengibre", "en": "Pumpkin and ginger soup", "es": "Sopa de calabaza con jengibre" },
+      "summary": { "pt": "Creme liso e adocicado, com o calor do gengibre fresco.", "en": "A smooth, sweet soup warmed with fresh ginger.", "es": "Crema suave y dulce, con el toque picante del jengibre fresco." },
+      "serves": 6,
+      "minutes": 40,
+      "uses": ["pumpkin", "ginger", "onion", "garlic", "carrot"],
+      "ingredients": [
+        { "pt": "1 kg de abóbora sem casca, em cubos", "en": "1 kg of peeled pumpkin, cubed", "es": "1 kg de calabaza pelada, en cubos" },
+        { "pt": "1 cenoura em rodelas", "en": "1 carrot, sliced", "es": "1 zanahoria en rodajas" },
+        { "pt": "1 cebola e 2 dentes de alho picados", "en": "1 onion and 2 garlic cloves, chopped", "es": "1 cebolla y 2 dientes de ajo picados" },
+        { "pt": "1 pedaço de gengibre de 3 cm ralado", "en": "3 cm of fresh ginger, grated", "es": "3 cm de jengibre fresco rallado" },
+        { "pt": "1 litro de água ou caldo, azeite e sal", "en": "1 litre of water or stock, olive oil and salt", "es": "1 litro de agua o caldo, aceite y sal" }
+      ],
+      "steps": [
+        { "pt": "Refogue a cebola, o alho e o gengibre no azeite por 3 minutos.", "en": "Sauté the onion, garlic and ginger in olive oil for 3 minutes.", "es": "Sofríe la cebolla, el ajo y el jengibre en aceite 3 minutos." },
+        { "pt": "Junte a abóbora, a cenoura e a água, tampe e cozinhe por 20 minutos, até tudo ficar macio.", "en": "Add the pumpkin, carrot and water, cover and cook for 20 minutes until soft.", "es": "Añade la calabaza, la zanahoria y el agua, tapa y cuece 20 minutos hasta que esté tierno." },
+        { "pt": "Bata no liquidificador ou com mixer, acerte o sal e sirva quente.", "en": "Blend until smooth, season with salt and serve hot.", "es": "Tritura hasta que quede liso, ajusta la sal y sirve caliente." }
+      ],
+      "tip": { "pt": "Torre as sementes da abóbora com sal e use por cima.", "en": "Roast the pumpkin seeds with salt and scatter on top.", "es": "Tuesta las pipas de la calabaza con sal y úsalas por encima." }
+    },
+    {
+      "id": "roasted-vegetables",
+      "group": "vegetable",
+      "icon": "🍆",
+      "title": { "pt": "Legumes assados no forno", "en": "Oven-roasted summer vegetables", "es": "Verduras asadas al horno" },
+      "summary": { "pt": "Berinjela, abobrinha, pimentão e tomate assados juntos, com ervas. Bom quente ou frio.", "en": "Eggplant, zucchini, pepper and tomato roasted together with herbs. Good hot or cold.", "es": "Berenjena, calabacín, pimiento y tomate asados juntos con hierbas. Bueno caliente o frío." },
+      "serves": 4,
+      "minutes": 50,
+      "uses": ["eggplant", "zucchini", "bellPepper", "tomato", "onion", "garlic", "marjoram"],
+      "ingredients": [
+        { "pt": "1 berinjela e 2 abobrinhas em cubos grandes", "en": "1 eggplant and 2 zucchini in large cubes", "es": "1 berenjena y 2 calabacines en cubos grandes" },
+        { "pt": "1 pimentão em tiras e 1 cebola em gomos", "en": "1 bell pepper in strips and 1 onion in wedges", "es": "1 pimiento en tiras y 1 cebolla en gajos" },
+        { "pt": "3 tomates em gomos e 4 dentes de alho com casca", "en": "3 tomatoes in wedges and 4 unpeeled garlic cloves", "es": "3 tomates en gajos y 4 dientes de ajo con piel" },
+        { "pt": "Manjerona ou orégano, azeite, sal e pimenta", "en": "Marjoram or oregano, olive oil, salt and pepper", "es": "Mejorana u orégano, aceite, sal y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Aqueça o forno a 220 °C.", "en": "Heat the oven to 220 °C.", "es": "Precalienta el horno a 220 °C." },
+        { "pt": "Espalhe os legumes numa assadeira grande, sem amontoar, regue com azeite e tempere.", "en": "Spread the vegetables in a large tray without crowding, drizzle with oil and season.", "es": "Reparte las verduras en una bandeja grande sin amontonar, riega con aceite y sazona." },
+        { "pt": "Asse por 35 a 40 minutos, mexendo na metade, até dourar nas pontas. Esprema o alho por cima.", "en": "Roast for 35 to 40 minutes, stirring halfway, until browned at the edges. Squeeze the garlic over.", "es": "Asa de 35 a 40 minutos, removiendo a mitad, hasta que se doren los bordes. Exprime el ajo por encima." }
+      ],
+      "tip": { "pt": "Com assadeira cheia demais os legumes cozinham no vapor e não douram.", "en": "If the tray is too full the vegetables steam instead of browning.", "es": "Si la bandeja está muy llena, las verduras se cuecen al vapor y no se doran." }
+    },
+    {
+      "id": "green-beans-eggs",
+      "group": "vegetable",
+      "icon": "🫛",
+      "title": { "pt": "Vagem refogada com ovos", "en": "Green beans with scrambled eggs", "es": "Judías verdes salteadas con huevo" },
+      "summary": { "pt": "Vagem macia e crocante com alho e ovos mexidos. Um almoço rápido da horta.", "en": "Tender-crisp green beans with garlic and scrambled eggs. A quick garden lunch.", "es": "Judías tiernas y crujientes con ajo y huevo revuelto. Un almuerzo rápido de la huerta." },
+      "serves": 4,
+      "minutes": 20,
+      "uses": ["greenBean", "garlic", "onion", "chickens"],
+      "ingredients": [
+        { "pt": "500 g de vagem em pedaços de 3 cm", "en": "500 g of green beans in 3 cm pieces", "es": "500 g de judías verdes en trozos de 3 cm" },
+        { "pt": "1 cebola e 2 dentes de alho picados", "en": "1 onion and 2 garlic cloves, chopped", "es": "1 cebolla y 2 dientes de ajo picados" },
+        { "pt": "3 ovos", "en": "3 eggs", "es": "3 huevos" },
+        { "pt": "Azeite, sal e pimenta", "en": "Olive oil, salt and pepper", "es": "Aceite, sal y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Cozinhe a vagem em água fervente com sal por 5 minutos e escorra.", "en": "Boil the beans in salted water for 5 minutes and drain.", "es": "Cuece las judías en agua hirviendo con sal 5 minutos y escurre." },
+        { "pt": "Refogue a cebola e o alho no azeite, junte a vagem e salteie por 3 minutos.", "en": "Sauté the onion and garlic in oil, add the beans and toss for 3 minutes.", "es": "Sofríe la cebolla y el ajo en aceite, añade las judías y saltea 3 minutos." },
+        { "pt": "Junte os ovos batidos e mexa até firmarem. Acerte o sal.", "en": "Add the beaten eggs and stir until just set. Season.", "es": "Añade los huevos batidos y remueve hasta que cuajen. Ajusta la sal." }
+      ]
+    },
+    {
+      "id": "broccoli-cauliflower-gratin",
+      "group": "vegetable",
+      "icon": "🥦",
+      "title": { "pt": "Brócolis e couve-flor gratinados", "en": "Broccoli and cauliflower cheese", "es": "Gratinado de brócoli y coliflor" },
+      "summary": { "pt": "Floretes cozidos cobertos de molho branco e queijo, dourados no forno.", "en": "Cooked florets under a white sauce and cheese, browned in the oven.", "es": "Ramilletes cocidos con bechamel y queso, dorados al horno." },
+      "serves": 6,
+      "minutes": 45,
+      "uses": ["broccoli", "cauliflower", "wheat", "cows"],
+      "ingredients": [
+        { "pt": "1 brócolis e 1 couve-flor em floretes", "en": "1 head of broccoli and 1 cauliflower, in florets", "es": "1 brócoli y 1 coliflor en ramilletes" },
+        { "pt": "2 colheres (sopa) de manteiga e 2 de farinha de trigo", "en": "2 tablespoons of butter and 2 of flour", "es": "2 cucharadas de mantequilla y 2 de harina" },
+        { "pt": "500 ml de leite", "en": "500 ml of milk", "es": "500 ml de leche" },
+        { "pt": "100 g de queijo ralado", "en": "100 g of grated cheese", "es": "100 g de queso rallado" },
+        { "pt": "Sal e noz-moscada", "en": "Salt and nutmeg", "es": "Sal y nuez moscada" }
+      ],
+      "steps": [
+        { "pt": "Cozinhe os floretes em água com sal por 5 minutos, ainda firmes, e escorra.", "en": "Boil the florets in salted water for 5 minutes, still firm, and drain.", "es": "Cuece los ramilletes en agua con sal 5 minutos, aún firmes, y escurre." },
+        { "pt": "Derreta a manteiga, junte a farinha e mexa 1 minuto. Adicione o leite aos poucos, mexendo até engrossar. Tempere e junte metade do queijo.", "en": "Melt the butter, stir in the flour for 1 minute, then whisk in the milk gradually until thick. Season and add half the cheese.", "es": "Derrite la mantequilla, añade la harina y remueve 1 minuto. Incorpora la leche poco a poco hasta que espese. Sazona y añade la mitad del queso." },
+        { "pt": "Ponha os legumes numa travessa, cubra com o molho e o resto do queijo e asse a 200 °C por 20 minutos, até dourar.", "en": "Put the vegetables in a dish, cover with the sauce and remaining cheese and bake at 200 °C for 20 minutes until golden.", "es": "Pon las verduras en una fuente, cubre con la salsa y el resto del queso y hornea a 200 °C 20 minutos hasta dorar." }
+      ],
+      "tip": { "pt": "Os talos do brócolis, descascados, cozinham junto e são doces.", "en": "Peeled broccoli stalks cook along with the florets and are sweet.", "es": "Los tallos del brócoli, pelados, se cuecen junto y son dulces." }
+    },
+    {
+      "id": "roasted-brussels-sprouts",
+      "group": "vegetable",
+      "icon": "🥬",
+      "title": { "pt": "Couve-de-bruxelas assada com alho e limão", "en": "Roasted Brussels sprouts with garlic and lemon", "es": "Coles de Bruselas asadas con ajo y limón" },
+      "summary": { "pt": "Assadas até caramelizar, perdem o amargor e ficam crocantes.", "en": "Roasted until caramelised, they lose their bitterness and turn crisp.", "es": "Asadas hasta caramelizar, pierden el amargor y quedan crujientes." },
+      "serves": 4,
+      "minutes": 30,
+      "uses": ["brusselsSprouts", "garlic", "lemon"],
+      "ingredients": [
+        { "pt": "500 g de couve-de-bruxelas cortadas ao meio", "en": "500 g of Brussels sprouts, halved", "es": "500 g de coles de Bruselas cortadas por la mitad" },
+        { "pt": "3 dentes de alho fatiados", "en": "3 garlic cloves, sliced", "es": "3 dientes de ajo laminados" },
+        { "pt": "Raspas e suco de 1 limão", "en": "Zest and juice of 1 lemon", "es": "Ralladura y zumo de 1 limón" },
+        { "pt": "Azeite, sal e pimenta", "en": "Olive oil, salt and pepper", "es": "Aceite, sal y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Aqueça o forno a 220 °C.", "en": "Heat the oven to 220 °C.", "es": "Precalienta el horno a 220 °C." },
+        { "pt": "Misture as couves com azeite, sal e pimenta e espalhe com o lado cortado para baixo.", "en": "Toss the sprouts with oil, salt and pepper and lay them cut side down.", "es": "Mezcla las coles con aceite, sal y pimienta y colócalas con el corte hacia abajo." },
+        { "pt": "Asse por 20 minutos, junte o alho e asse mais 5. Finalize com raspas e suco de limão.", "en": "Roast for 20 minutes, add the garlic and roast 5 more. Finish with lemon zest and juice.", "es": "Asa 20 minutos, añade el ajo y asa 5 más. Termina con la ralladura y el zumo de limón." }
+      ]
+    },
+    {
+      "id": "sauteed-kale",
+      "group": "vegetable",
+      "icon": "🥬",
+      "title": { "pt": "Couve refogada no alho", "en": "Garlicky sautéed kale", "es": "Col rizada salteada con ajo" },
+      "summary": { "pt": "A couve fininha da roça, refogada em poucos minutos. Acompanha feijão, arroz e ovo.", "en": "Finely shredded kale cooked in minutes. Goes with beans, rice and eggs.", "es": "Col cortada fina, salteada en pocos minutos. Acompaña frijoles, arroz y huevo." },
+      "serves": 4,
+      "minutes": 10,
+      "uses": ["kale", "garlic"],
+      "ingredients": [
+        { "pt": "1 maço de couve (cerca de 10 folhas)", "en": "1 bunch of kale (about 10 leaves)", "es": "1 manojo de col rizada (unas 10 hojas)" },
+        { "pt": "3 dentes de alho picados", "en": "3 garlic cloves, chopped", "es": "3 dientes de ajo picados" },
+        { "pt": "Azeite ou banha e sal", "en": "Olive oil or lard and salt", "es": "Aceite o manteca y sal" }
+      ],
+      "steps": [
+        { "pt": "Tire o talo central, enrole as folhas como charuto e corte em tiras bem finas.", "en": "Remove the centre rib, roll the leaves up and slice into very thin strips.", "es": "Quita el nervio central, enrolla las hojas y córtalas en tiras muy finas." },
+        { "pt": "Doure o alho no azeite em fogo médio.", "en": "Lightly brown the garlic in the oil over medium heat.", "es": "Dora el ajo en el aceite a fuego medio." },
+        { "pt": "Junte a couve e o sal e mexa por 2 a 3 minutos, só até murchar e ficar verde-viva.", "en": "Add the kale and salt and stir for 2 to 3 minutes, just until wilted and bright green.", "es": "Añade la col y la sal y remueve de 2 a 3 minutos, solo hasta que se ablande y quede verde intenso." }
+      ],
+      "tip": { "pt": "Não tampe a panela, senão a couve escurece e amarga.", "en": "Do not cover the pan or the kale turns dark and bitter.", "es": "No tapes la sartén o la col se oscurece y amarga." }
+    },
+    {
+      "id": "spinach-omelette",
+      "group": "vegetable",
+      "icon": "🍳",
+      "title": { "pt": "Omelete de espinafre e queijo", "en": "Spinach and cheese omelette", "es": "Tortilla de espinacas y queso" },
+      "summary": { "pt": "Ovos das galinhas, espinafre da horta e queijo da casa, em 15 minutos.", "en": "Eggs from the hens, spinach from the garden and homemade cheese, in 15 minutes.", "es": "Huevos de las gallinas, espinacas de la huerta y queso de casa, en 15 minutos." },
+      "serves": 2,
+      "minutes": 15,
+      "uses": ["spinach", "chives", "chickens", "cows"],
+      "ingredients": [
+        { "pt": "4 ovos", "en": "4 eggs", "es": "4 huevos" },
+        { "pt": "2 punhados de espinafre", "en": "2 handfuls of spinach", "es": "2 puñados de espinacas" },
+        { "pt": "50 g de queijo fresco ou meia cura", "en": "50 g of fresh or semi-cured cheese", "es": "50 g de queso fresco o semicurado" },
+        { "pt": "Cebolinha, manteiga, sal e pimenta", "en": "Chives, butter, salt and pepper", "es": "Cebollino, mantequilla, sal y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Murche o espinafre na frigideira com um pouco de manteiga e reserve.", "en": "Wilt the spinach in the pan with a little butter and set aside.", "es": "Saltea las espinacas en la sartén con un poco de mantequilla y reserva." },
+        { "pt": "Bata os ovos com sal, pimenta e cebolinha e despeje na frigideira quente com manteiga.", "en": "Beat the eggs with salt, pepper and chives and pour into the hot buttered pan.", "es": "Bate los huevos con sal, pimienta y cebollino y viértelos en la sartén caliente con mantequilla." },
+        { "pt": "Quando a borda firmar, ponha o espinafre e o queijo de um lado, dobre e cozinhe mais 1 minuto.", "en": "When the edge sets, add the spinach and cheese to one half, fold and cook 1 more minute.", "es": "Cuando el borde cuaje, pon las espinacas y el queso en una mitad, dobla y cocina 1 minuto más." }
+      ]
+    },
+    {
+      "id": "chard-chickpea-stew",
+      "group": "vegetable",
+      "icon": "🥘",
+      "title": { "pt": "Ensopado de acelga com grão-de-bico", "en": "Chard and chickpea stew", "es": "Guiso de acelgas con garbanzos" },
+      "summary": { "pt": "Prato de panela única, sustancioso e sem carne.", "en": "A hearty one-pot meal with no meat.", "es": "Plato de una sola olla, contundente y sin carne." },
+      "serves": 4,
+      "minutes": 35,
+      "uses": ["chard", "chickpea", "onion", "garlic", "tomato", "cilantro"],
+      "ingredients": [
+        { "pt": "1 maço de acelga, talos e folhas separados", "en": "1 bunch of chard, stems and leaves separated", "es": "1 manojo de acelgas, pencas y hojas separadas" },
+        { "pt": "2 xícaras de grão-de-bico cozido", "en": "2 cups of cooked chickpeas", "es": "2 tazas de garbanzos cocidos" },
+        { "pt": "1 cebola, 3 dentes de alho e 2 tomates picados", "en": "1 onion, 3 garlic cloves and 2 tomatoes, chopped", "es": "1 cebolla, 3 dientes de ajo y 2 tomates picados" },
+        { "pt": "1 colher (chá) de cominho e páprica", "en": "1 teaspoon each of cumin and paprika", "es": "1 cucharadita de comino y de pimentón" },
+        { "pt": "Coentro ou salsinha, azeite e sal", "en": "Coriander or parsley, olive oil and salt", "es": "Cilantro o perejil, aceite y sal" }
+      ],
+      "steps": [
+        { "pt": "Refogue a cebola, o alho e os talos picados da acelga por 5 minutos.", "en": "Sauté the onion, garlic and chopped chard stems for 5 minutes.", "es": "Sofríe la cebolla, el ajo y las pencas picadas 5 minutos." },
+        { "pt": "Junte tomate, especiarias, grão-de-bico e 1 xícara de água e cozinhe 15 minutos.", "en": "Add the tomato, spices, chickpeas and 1 cup of water and simmer for 15 minutes.", "es": "Añade el tomate, las especias, los garbanzos y 1 taza de agua y cuece 15 minutos." },
+        { "pt": "Junte as folhas picadas, cozinhe até murchar, acerte o sal e finalize com coentro.", "en": "Stir in the chopped leaves until wilted, season and finish with coriander.", "es": "Añade las hojas picadas hasta que se ablanden, ajusta la sal y termina con cilantro." }
+      ],
+      "tip": { "pt": "Grão-de-bico seco: deixe de molho 12 horas e cozinhe na pressão por 25 minutos.", "en": "Dried chickpeas: soak 12 hours and pressure-cook for 25 minutes.", "es": "Garbanzos secos: remójalos 12 horas y cuécelos en olla a presión 25 minutos." }
+    },
+    {
+      "id": "chayote-stew",
+      "group": "vegetable",
+      "icon": "🥒",
+      "title": { "pt": "Chuchu refogado", "en": "Braised chayote", "es": "Chayote guisado" },
+      "summary": { "pt": "Simples e leve: o chuchu absorve o tempero do refogado.", "en": "Simple and light: chayote soaks up the flavour of the base.", "es": "Sencillo y ligero: el chayote absorbe el sabor del sofrito." },
+      "serves": 4,
+      "minutes": 25,
+      "uses": ["chayote", "onion", "garlic", "tomato", "parsley"],
+      "ingredients": [
+        { "pt": "3 chuchus descascados em cubos", "en": "3 chayotes, peeled and cubed", "es": "3 chayotes pelados en cubos" },
+        { "pt": "1 cebola, 2 dentes de alho e 1 tomate picados", "en": "1 onion, 2 garlic cloves and 1 tomato, chopped", "es": "1 cebolla, 2 dientes de ajo y 1 tomate picados" },
+        { "pt": "Salsinha picada, azeite e sal", "en": "Chopped parsley, olive oil and salt", "es": "Perejil picado, aceite y sal" }
+      ],
+      "steps": [
+        { "pt": "Refogue a cebola e o alho no azeite, junte o tomate e cozinhe 2 minutos.", "en": "Sauté the onion and garlic in oil, add the tomato and cook 2 minutes.", "es": "Sofríe la cebolla y el ajo en aceite, añade el tomate y cocina 2 minutos." },
+        { "pt": "Junte o chuchu e o sal, tampe e cozinhe em fogo baixo por 12 a 15 minutos, sem água: ele solta a própria.", "en": "Add the chayote and salt, cover and cook on low for 12 to 15 minutes with no water: it releases its own.", "es": "Añade el chayote y la sal, tapa y cocina a fuego bajo de 12 a 15 minutos sin agua: suelta la suya." },
+        { "pt": "Desligue quando estiver macio e finalize com salsinha.", "en": "Turn off when tender and finish with parsley.", "es": "Apaga cuando esté tierno y termina con perejil." }
+      ],
+      "tip": { "pt": "Descasque com um fio de óleo nas mãos: a seiva do chuchu gruda e repuxa a pele.", "en": "Peel with a little oil on your hands: chayote sap is sticky and tightens the skin.", "es": "Pela con un poco de aceite en las manos: la savia del chayote es pegajosa y tira de la piel." }
+    },
+    {
+      "id": "artichoke-lemon",
+      "group": "vegetable",
+      "icon": "🌿",
+      "title": { "pt": "Alcachofra cozida com molho de limão", "en": "Steamed artichokes with lemon dip", "es": "Alcachofas cocidas con salsa de limón" },
+      "summary": { "pt": "Come-se folha por folha, molhando a base no molho, até chegar ao coração.", "en": "Eaten leaf by leaf, dipping the base in the sauce, until you reach the heart.", "es": "Se come hoja a hoja, mojando la base en la salsa, hasta llegar al corazón." },
+      "serves": 2,
+      "minutes": 45,
+      "uses": ["artichoke", "lemon", "garlic"],
+      "ingredients": [
+        { "pt": "2 alcachofras", "en": "2 artichokes", "es": "2 alcachofas" },
+        { "pt": "1 limão", "en": "1 lemon", "es": "1 limón" },
+        { "pt": "1 dente de alho amassado", "en": "1 crushed garlic clove", "es": "1 diente de ajo machacado" },
+        { "pt": "4 colheres (sopa) de azeite e sal", "en": "4 tablespoons of olive oil and salt", "es": "4 cucharadas de aceite y sal" }
+      ],
+      "steps": [
+        { "pt": "Corte o cabo e a ponta das folhas e esfregue limão nos cortes para não escurecer.", "en": "Trim the stem and leaf tips and rub the cut parts with lemon so they do not darken.", "es": "Corta el tallo y la punta de las hojas y frota los cortes con limón para que no se oscurezcan." },
+        { "pt": "Cozinhe em água com sal e meio limão por 30 a 40 minutos, até uma folha de dentro sair fácil.", "en": "Simmer in salted water with half a lemon for 30 to 40 minutes, until an inner leaf pulls out easily.", "es": "Cuece en agua con sal y medio limón de 30 a 40 minutos, hasta que una hoja interior salga fácil." },
+        { "pt": "Misture o suco do outro meio limão, o alho, o azeite e o sal e sirva como molho.", "en": "Mix the juice of the other half lemon with the garlic, oil and salt and serve as a dip.", "es": "Mezcla el zumo del otro medio limón con el ajo, el aceite y la sal y sírvelo como salsa." }
+      ],
+      "tip": { "pt": "No coração, retire a parte peluda com uma colher antes de comer.", "en": "At the heart, scrape off the hairy choke with a spoon before eating.", "es": "En el corazón, retira la parte peluda con una cuchara antes de comer." }
+    },
+    {
+      "id": "asparagus-eggs",
+      "group": "vegetable",
+      "icon": "🥚",
+      "title": { "pt": "Aspargos com ovo mole e manteiga", "en": "Asparagus with soft eggs and butter", "es": "Espárragos con huevo pasado y mantequilla" },
+      "summary": { "pt": "Os primeiros aspargos da primavera molhados na gema.", "en": "The first spring asparagus dipped in runny yolk.", "es": "Los primeros espárragos de primavera mojados en la yema." },
+      "serves": 2,
+      "minutes": 15,
+      "uses": ["asparagus", "chickens", "cows", "lemon"],
+      "ingredients": [
+        { "pt": "1 maço de aspargos frescos", "en": "1 bunch of fresh asparagus", "es": "1 manojo de espárragos frescos" },
+        { "pt": "2 a 4 ovos", "en": "2 to 4 eggs", "es": "2 a 4 huevos" },
+        { "pt": "2 colheres (sopa) de manteiga", "en": "2 tablespoons of butter", "es": "2 cucharadas de mantequilla" },
+        { "pt": "Raspas de limão, sal e pimenta", "en": "Lemon zest, salt and pepper", "es": "Ralladura de limón, sal y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Quebre a base dura de cada aspargo: ela parte sozinha no ponto certo.", "en": "Snap off the tough base of each spear: it breaks at the right place.", "es": "Quiebra la base dura de cada espárrago: se parte sola en el punto justo." },
+        { "pt": "Cozinhe os ovos por 6 minutos em água fervente e passe para água fria.", "en": "Boil the eggs for 6 minutes and move them to cold water.", "es": "Cuece los huevos 6 minutos en agua hirviendo y pásalos a agua fría." },
+        { "pt": "Cozinhe os aspargos 3 a 4 minutos em água com sal, escorra e regue com manteiga derretida e raspas de limão. Sirva com os ovos.", "en": "Cook the asparagus 3 to 4 minutes in salted water, drain and pour over melted butter and lemon zest. Serve with the eggs.", "es": "Cuece los espárragos de 3 a 4 minutos en agua con sal, escurre y riega con mantequilla derretida y ralladura de limón. Sirve con los huevos." }
+      ]
+    },
+    {
+      "id": "roasted-roots",
+      "group": "vegetable",
+      "icon": "🥕",
+      "title": { "pt": "Raízes assadas com alecrim", "en": "Rosemary roasted root vegetables", "es": "Raíces asadas con romero" },
+      "summary": { "pt": "Cenoura, beterraba, nabo e batata-doce assados até ficarem doces e dourados.", "en": "Carrot, beetroot, turnip and sweet potato roasted until sweet and golden.", "es": "Zanahoria, remolacha, nabo y boniato asados hasta quedar dulces y dorados." },
+      "serves": 4,
+      "minutes": 50,
+      "uses": ["carrot", "beet", "turnip", "sweetPotato", "rosemary", "thyme"],
+      "ingredients": [
+        { "pt": "2 cenouras e 2 beterrabas", "en": "2 carrots and 2 beetroots", "es": "2 zanahorias y 2 remolachas" },
+        { "pt": "2 nabos e 1 batata-doce grande", "en": "2 turnips and 1 large sweet potato", "es": "2 nabos y 1 boniato grande" },
+        { "pt": "Ramos de alecrim e tomilho", "en": "Sprigs of rosemary and thyme", "es": "Ramitas de romero y tomillo" },
+        { "pt": "Azeite, sal grosso e pimenta", "en": "Olive oil, coarse salt and pepper", "es": "Aceite, sal gruesa y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Aqueça o forno a 200 °C e corte tudo em pedaços do mesmo tamanho.", "en": "Heat the oven to 200 °C and cut everything into even pieces.", "es": "Precalienta el horno a 200 °C y corta todo en trozos iguales." },
+        { "pt": "Misture com azeite, sal, pimenta e as ervas numa assadeira grande.", "en": "Toss with oil, salt, pepper and the herbs in a large tray.", "es": "Mezcla con aceite, sal, pimienta y las hierbas en una bandeja grande." },
+        { "pt": "Asse por 40 minutos, virando na metade, até estarem macios por dentro e dourados por fora.", "en": "Roast for 40 minutes, turning halfway, until tender inside and golden outside.", "es": "Asa 40 minutos, dando la vuelta a mitad, hasta que estén tiernos por dentro y dorados por fuera." }
+      ],
+      "tip": { "pt": "Asse a beterraba num canto para não tingir o resto.", "en": "Keep the beetroot in one corner so it does not stain the rest.", "es": "Pon la remolacha en una esquina para que no tiña el resto." }
+    },
+    {
+      "id": "cassava-fries",
+      "group": "vegetable",
+      "icon": "🍠",
+      "title": { "pt": "Mandioca cozida e frita", "en": "Boiled and fried cassava", "es": "Yuca hervida y frita" },
+      "summary": { "pt": "Cozida até abrir e depois frita: macia por dentro e crocante por fora.", "en": "Boiled until it splits, then fried: soft inside and crisp outside.", "es": "Hervida hasta que se abra y luego frita: suave por dentro y crujiente por fuera." },
+      "serves": 4,
+      "minutes": 45,
+      "uses": ["cassava", "garlic"],
+      "ingredients": [
+        { "pt": "1 kg de mandioca (aipim, macaxeira) descascada", "en": "1 kg of peeled sweet cassava", "es": "1 kg de yuca dulce pelada" },
+        { "pt": "2 dentes de alho amassados", "en": "2 crushed garlic cloves", "es": "2 dientes de ajo machacados" },
+        { "pt": "Óleo para fritar e sal", "en": "Oil for frying and salt", "es": "Aceite para freír y sal" }
+      ],
+      "steps": [
+        { "pt": "Corte em pedaços de 8 cm e cozinhe em água com sal e alho por 20 a 30 minutos, até abrir e ficar macia.", "en": "Cut into 8 cm pieces and boil in water with salt and garlic for 20 to 30 minutes, until it splits and is tender.", "es": "Corta en trozos de 8 cm y cuece en agua con sal y ajo de 20 a 30 minutos, hasta que se abra y esté tierna." },
+        { "pt": "Escorra, tire o fio do meio e corte em palitos.", "en": "Drain, remove the woody core and cut into sticks.", "es": "Escurre, quita la fibra central y corta en bastones." },
+        { "pt": "Frite em óleo quente até dourar, escorra no papel e salgue.", "en": "Fry in hot oil until golden, drain on paper and salt.", "es": "Fríe en aceite caliente hasta dorar, escurre sobre papel y sala." }
+      ],
+      "safety": { "pt": "Use só mandioca mansa (aipim). A mandioca brava tem veneno e não deve ser cozida em casa assim. Nunca coma mandioca crua.", "en": "Use only sweet cassava. Bitter cassava is toxic and must not be cooked this way at home. Never eat cassava raw.", "es": "Usa solo yuca dulce. La yuca amarga es tóxica y no debe cocinarse así en casa. Nunca comas yuca cruda." }
+    },
+    {
+      "id": "yam-taro-puree",
+      "group": "vegetable",
+      "icon": "🥔",
+      "title": { "pt": "Purê de inhame e cará", "en": "Yam and taro mash", "es": "Puré de ñame y malanga" },
+      "summary": { "pt": "Purê cremoso e leve, sem batata. Bom com carne de panela ou frango.", "en": "A creamy, light mash with no potato. Good with stews or chicken.", "es": "Puré cremoso y ligero, sin patata. Bueno con guisos o pollo." },
+      "serves": 4,
+      "minutes": 35,
+      "uses": ["yam", "taro", "garlic", "cows", "chives"],
+      "ingredients": [
+        { "pt": "500 g de inhame (taro) e 500 g de cará", "en": "500 g of taro and 500 g of yam", "es": "500 g de malanga y 500 g de ñame" },
+        { "pt": "2 colheres (sopa) de manteiga e meia xícara de leite", "en": "2 tablespoons of butter and half a cup of milk", "es": "2 cucharadas de mantequilla y media taza de leche" },
+        { "pt": "1 dente de alho, cebolinha e sal", "en": "1 garlic clove, chives and salt", "es": "1 diente de ajo, cebollino y sal" }
+      ],
+      "steps": [
+        { "pt": "Descasque usando luvas, corte em pedaços e cozinhe em água com sal por 20 minutos, até desmanchar.", "en": "Peel wearing gloves, cut into pieces and boil in salted water for 20 minutes until very soft.", "es": "Pela con guantes, corta en trozos y cuece en agua con sal 20 minutos hasta que se deshaga." },
+        { "pt": "Escorra e amasse ainda quente.", "en": "Drain and mash while hot.", "es": "Escurre y machaca en caliente." },
+        { "pt": "Doure o alho na manteiga, junte o purê e o leite e mexa até ficar cremoso. Finalize com cebolinha.", "en": "Brown the garlic in the butter, add the mash and milk and stir until creamy. Finish with chives.", "es": "Dora el ajo en la mantequilla, añade el puré y la leche y remueve hasta que quede cremoso. Termina con cebollino." }
+      ],
+      "safety": { "pt": "Inhame (taro) e cará devem ser sempre bem cozidos: crus irritam a boca e a pele.", "en": "Taro and yam must always be well cooked: raw, they irritate the mouth and skin.", "es": "La malanga y el ñame deben cocerse siempre bien: crudos irritan la boca y la piel." }
+    },
+    {
+      "id": "celery-potato-soup",
+      "group": "vegetable",
+      "icon": "🥣",
+      "title": { "pt": "Sopa de aipo com batata", "en": "Celery and potato soup", "es": "Sopa de apio con patata" },
+      "summary": { "pt": "Creme verde-claro e perfumado, que aproveita os talos do aipo.", "en": "A pale green, fragrant soup that uses up celery stalks.", "es": "Crema verde clara y aromática que aprovecha las pencas del apio." },
+      "serves": 6,
+      "minutes": 40,
+      "uses": ["celery", "potato", "leek", "onion", "cows"],
+      "ingredients": [
+        { "pt": "6 talos de aipo (salsão) picados, com folhas", "en": "6 celery stalks, chopped, with leaves", "es": "6 pencas de apio picadas, con hojas" },
+        { "pt": "3 batatas em cubos", "en": "3 potatoes, cubed", "es": "3 patatas en cubos" },
+        { "pt": "1 alho-poró e 1 cebola picados", "en": "1 leek and 1 onion, chopped", "es": "1 puerro y 1 cebolla picados" },
+        { "pt": "1 litro de caldo ou água, 1 colher de manteiga e meia xícara de leite", "en": "1 litre of stock or water, 1 spoon of butter and half a cup of milk", "es": "1 litro de caldo o agua, 1 cucharada de mantequilla y media taza de leche" }
+      ],
+      "steps": [
+        { "pt": "Refogue a cebola, o alho-poró e o aipo na manteiga por 8 minutos.", "en": "Soften the onion, leek and celery in the butter for 8 minutes.", "es": "Rehoga la cebolla, el puerro y el apio en la mantequilla 8 minutos." },
+        { "pt": "Junte as batatas e o caldo e cozinhe 20 minutos.", "en": "Add the potatoes and stock and simmer for 20 minutes.", "es": "Añade las patatas y el caldo y cuece 20 minutos." },
+        { "pt": "Bata, junte o leite, acerte o sal e sirva com folhas de aipo picadas.", "en": "Blend, stir in the milk, season and serve with chopped celery leaves.", "es": "Tritura, añade la leche, ajusta la sal y sirve con hojas de apio picadas." }
+      ]
+    },
+    {
+      "id": "pea-mint-soup",
+      "group": "vegetable",
+      "icon": "🫛",
+      "title": { "pt": "Sopa de ervilha fresca com hortelã", "en": "Fresh pea and mint soup", "es": "Sopa de guisantes frescos con menta" },
+      "summary": { "pt": "Verde-viva e doce, feita em 25 minutos com ervilhas recém-colhidas.", "en": "Bright green and sweet, made in 25 minutes with fresh peas.", "es": "Verde intenso y dulce, lista en 25 minutos con guisantes recién cogidos." },
+      "serves": 4,
+      "minutes": 25,
+      "uses": ["pea", "mint", "onion", "potato"],
+      "ingredients": [
+        { "pt": "500 g de ervilha fresca debulhada", "en": "500 g of fresh shelled peas", "es": "500 g de guisantes frescos desgranados" },
+        { "pt": "1 cebola picada e 1 batata pequena em cubos", "en": "1 onion, chopped, and 1 small potato, cubed", "es": "1 cebolla picada y 1 patata pequeña en cubos" },
+        { "pt": "Um punhado de folhas de hortelã", "en": "A handful of mint leaves", "es": "Un puñado de hojas de menta" },
+        { "pt": "800 ml de caldo ou água, azeite e sal", "en": "800 ml of stock or water, olive oil and salt", "es": "800 ml de caldo o agua, aceite y sal" }
+      ],
+      "steps": [
+        { "pt": "Refogue a cebola no azeite, junte a batata e o caldo e cozinhe 10 minutos.", "en": "Sauté the onion in oil, add the potato and stock and simmer for 10 minutes.", "es": "Sofríe la cebolla en aceite, añade la patata y el caldo y cuece 10 minutos." },
+        { "pt": "Junte as ervilhas e cozinhe só 4 a 5 minutos, para não perder a cor.", "en": "Add the peas and cook only 4 to 5 minutes so they keep their colour.", "es": "Añade los guisantes y cuece solo de 4 a 5 minutos para que no pierdan el color." },
+        { "pt": "Junte a hortelã, bata até ficar liso e acerte o sal.", "en": "Add the mint, blend until smooth and season.", "es": "Añade la menta, tritura hasta que quede liso y ajusta la sal." }
+      ],
+      "tip": { "pt": "As vagens vazias rendem um caldo doce: ferva 20 minutos e coe.", "en": "The empty pods make a sweet stock: simmer 20 minutes and strain.", "es": "Las vainas vacías dan un caldo dulce: hiérvelas 20 minutos y cuela." }
+    },
+    {
+      "id": "tropeiro-beans",
+      "group": "vegetable",
+      "icon": "🫘",
+      "title": { "pt": "Feijão tropeiro", "en": "Brazilian drover's beans", "es": "Frijoles tropeiros" },
+      "summary": { "pt": "Feijão firme com farinha de mandioca, toucinho, ovos e couve. Prato de roça mineiro.", "en": "Firm beans with cassava flour, bacon, eggs and kale. A Brazilian farm classic.", "es": "Frijoles firmes con harina de yuca, tocino, huevos y col. Un clásico del campo brasileño." },
+      "serves": 6,
+      "minutes": 50,
+      "uses": ["beans", "cassava", "kale", "garlic", "onion", "chickens", "pigs"],
+      "ingredients": [
+        { "pt": "3 xícaras de feijão carioca ou preto cozido, sem caldo", "en": "3 cups of cooked pinto or black beans, drained", "es": "3 tazas de frijoles pintos o negros cocidos y escurridos" },
+        { "pt": "200 g de toucinho ou bacon em cubos", "en": "200 g of diced bacon or salt pork", "es": "200 g de tocino en dados" },
+        { "pt": "3 ovos", "en": "3 eggs", "es": "3 huevos" },
+        { "pt": "1 cebola, 4 dentes de alho e 1 maço de couve fatiada fina", "en": "1 onion, 4 garlic cloves and 1 bunch of finely sliced kale", "es": "1 cebolla, 4 dientes de ajo y 1 manojo de col en tiras finas" },
+        { "pt": "1 xícara e meia de farinha de mandioca e cheiro-verde", "en": "1 and a half cups of cassava flour and fresh herbs", "es": "1 taza y media de harina de yuca y hierbas frescas" }
+      ],
+      "steps": [
+        { "pt": "Frite o toucinho na panela até dourar e soltar a gordura.", "en": "Fry the bacon until golden and the fat has rendered.", "es": "Fríe el tocino hasta que se dore y suelte la grasa." },
+        { "pt": "Na mesma gordura, refogue cebola e alho, junte os ovos e mexa até firmarem.", "en": "In the same fat, sauté onion and garlic, add the eggs and scramble.", "es": "En la misma grasa, sofríe cebolla y ajo, añade los huevos y revuelve." },
+        { "pt": "Junte o feijão, depois a farinha aos poucos, mexendo até ficar soltinho. Acerte o sal.", "en": "Add the beans, then the flour little by little, stirring until crumbly. Season.", "es": "Añade los frijoles y luego la harina poco a poco, removiendo hasta que quede suelto. Ajusta la sal." },
+        { "pt": "Refogue a couve à parte por 2 minutos e sirva por cima, com cheiro-verde.", "en": "Sauté the kale separately for 2 minutes and serve on top with herbs.", "es": "Saltea la col aparte 2 minutos y sírvela por encima con hierbas." }
+      ]
+    },
+    {
+      "id": "lentil-soup",
+      "group": "vegetable",
+      "icon": "🍲",
+      "title": { "pt": "Sopa de lentilha", "en": "Lentil soup", "es": "Sopa de lentejas" },
+      "summary": { "pt": "Sopa grossa e barata, que não precisa de molho prévio.", "en": "A thick, cheap soup with no soaking needed.", "es": "Sopa espesa y barata que no necesita remojo." },
+      "serves": 6,
+      "minutes": 45,
+      "uses": ["lentil", "carrot", "celery", "onion", "garlic", "tomato"],
+      "ingredients": [
+        { "pt": "2 xícaras de lentilha", "en": "2 cups of lentils", "es": "2 tazas de lentejas" },
+        { "pt": "1 cebola, 1 cenoura e 1 talo de aipo picados", "en": "1 onion, 1 carrot and 1 celery stalk, chopped", "es": "1 cebolla, 1 zanahoria y 1 penca de apio picadas" },
+        { "pt": "3 dentes de alho e 2 tomates picados", "en": "3 garlic cloves and 2 tomatoes, chopped", "es": "3 dientes de ajo y 2 tomates picados" },
+        { "pt": "1 colher (chá) de cominho, 1 folha de louro, azeite e sal", "en": "1 teaspoon of cumin, 1 bay leaf, olive oil and salt", "es": "1 cucharadita de comino, 1 hoja de laurel, aceite y sal" },
+        { "pt": "1,5 litro de água", "en": "1.5 litres of water", "es": "1,5 litros de agua" }
+      ],
+      "steps": [
+        { "pt": "Lave a lentilha e retire pedrinhas.", "en": "Rinse the lentils and pick out any stones.", "es": "Lava las lentejas y quita las piedrecitas." },
+        { "pt": "Refogue cebola, cenoura, aipo e alho no azeite por 5 minutos. Junte o tomate e o cominho.", "en": "Sauté onion, carrot, celery and garlic in oil for 5 minutes. Add the tomato and cumin.", "es": "Sofríe cebolla, zanahoria, apio y ajo en aceite 5 minutos. Añade el tomate y el comino." },
+        { "pt": "Junte lentilha, louro e água e cozinhe 30 minutos, até a lentilha desmanchar um pouco. Acerte o sal.", "en": "Add the lentils, bay and water and simmer 30 minutes until the lentils start to break down. Season.", "es": "Añade las lentejas, el laurel y el agua y cuece 30 minutos hasta que empiecen a deshacerse. Ajusta la sal." }
+      ],
+      "tip": { "pt": "Um fio de limão no prato realça o sabor.", "en": "A squeeze of lemon in the bowl lifts the flavour.", "es": "Un chorrito de limón en el plato realza el sabor." }
+    },
+    {
+      "id": "edamame",
+      "group": "vegetable",
+      "icon": "🫛",
+      "title": { "pt": "Edamame com alho e pimenta", "en": "Edamame with garlic and chilli", "es": "Edamame con ajo y guindilla" },
+      "summary": { "pt": "Vagens de soja verde cozidas e salteadas. Petisco rápido e rico em proteína.", "en": "Green soybean pods boiled and tossed. A quick, protein-rich snack.", "es": "Vainas de soja verde cocidas y salteadas. Un aperitivo rápido y rico en proteína." },
+      "serves": 4,
+      "minutes": 10,
+      "uses": ["soy", "garlic", "chiliPepper"],
+      "ingredients": [
+        { "pt": "500 g de vagens de soja verde (colhidas com o grão ainda verde)", "en": "500 g of green soybean pods (picked while the beans are still green)", "es": "500 g de vainas de soja verde (cosechadas con el grano aún verde)" },
+        { "pt": "2 dentes de alho picados", "en": "2 garlic cloves, chopped", "es": "2 dientes de ajo picados" },
+        { "pt": "1 pimenta picada, sem sementes se quiser menos ardido", "en": "1 chilli, chopped, seeded for less heat", "es": "1 guindilla picada, sin semillas para que pique menos" },
+        { "pt": "Azeite e sal grosso", "en": "Olive oil and coarse salt", "es": "Aceite y sal gruesa" }
+      ],
+      "steps": [
+        { "pt": "Cozinhe as vagens em água fervente com sal por 5 minutos e escorra.", "en": "Boil the pods in salted water for 5 minutes and drain.", "es": "Cuece las vainas en agua hirviendo con sal 5 minutos y escurre." },
+        { "pt": "Doure o alho e a pimenta no azeite por 1 minuto.", "en": "Fry the garlic and chilli in oil for 1 minute.", "es": "Dora el ajo y la guindilla en aceite 1 minuto." },
+        { "pt": "Junte as vagens, salteie e polvilhe sal grosso. Coma só os grãos, apertando a vagem.", "en": "Add the pods, toss and sprinkle with coarse salt. Eat only the beans, squeezing them from the pod.", "es": "Añade las vainas, saltea y espolvorea sal gruesa. Come solo los granos, apretando la vaina." }
+      ],
+      "safety": { "pt": "Soja sempre cozida: crua ela é indigesta.", "en": "Always cook soybeans: raw they are indigestible.", "es": "Cuece siempre la soja: cruda es indigesta." }
+    },
+    {
+      "id": "homemade-bread",
+      "group": "grain",
+      "icon": "🍞",
+      "title": { "pt": "Pão caseiro de trigo e centeio", "en": "Wheat and rye farmhouse loaf", "es": "Pan casero de trigo y centeno" },
+      "summary": { "pt": "Pão de casca grossa, com centeio e sementes de girassol. Rende um pão grande.", "en": "A crusty loaf with rye and sunflower seeds. Makes one large loaf.", "es": "Pan de corteza gruesa con centeno y pipas de girasol. Da un pan grande." },
+      "serves": 10,
+      "minutes": 180,
+      "uses": ["wheat", "rye", "sunflower"],
+      "ingredients": [
+        { "pt": "400 g de farinha de trigo e 100 g de farinha de centeio", "en": "400 g of wheat flour and 100 g of rye flour", "es": "400 g de harina de trigo y 100 g de harina de centeno" },
+        { "pt": "10 g de fermento biológico seco", "en": "10 g of dried yeast", "es": "10 g de levadura seca" },
+        { "pt": "350 ml de água morna", "en": "350 ml of lukewarm water", "es": "350 ml de agua tibia" },
+        { "pt": "10 g de sal e meia xícara de sementes de girassol", "en": "10 g of salt and half a cup of sunflower seeds", "es": "10 g de sal y media taza de pipas de girasol" }
+      ],
+      "steps": [
+        { "pt": "Misture as farinhas, o fermento, o sal e a água e sove por 10 minutos, até a massa ficar elástica. Junte as sementes.", "en": "Mix the flours, yeast, salt and water and knead for 10 minutes until elastic. Work in the seeds.", "es": "Mezcla las harinas, la levadura, la sal y el agua y amasa 10 minutos hasta que esté elástica. Incorpora las pipas." },
+        { "pt": "Cubra e deixe crescer até dobrar, cerca de 1 hora e meia.", "en": "Cover and let it rise until doubled, about 1 and a half hours.", "es": "Tapa y deja que doble su volumen, alrededor de hora y media." },
+        { "pt": "Modele, ponha na assadeira e deixe crescer mais 40 minutos.", "en": "Shape, place on the tray and let it rise 40 more minutes.", "es": "Forma el pan, ponlo en la bandeja y deja crecer 40 minutos más." },
+        { "pt": "Asse a 220 °C por 35 a 40 minutos, com uma vasilha de água no forno, até soar oco ao bater embaixo.", "en": "Bake at 220 °C for 35 to 40 minutes with a dish of water in the oven, until it sounds hollow when tapped underneath.", "es": "Hornea a 220 °C de 35 a 40 minutos con un recipiente de agua en el horno, hasta que suene hueco al golpear la base." }
+      ],
+      "tip": { "pt": "Espere esfriar antes de cortar: o miolo ainda está terminando de assar.", "en": "Let it cool before slicing: the crumb is still setting.", "es": "Déjalo enfriar antes de cortar: la miga todavía se está asentando." }
+    },
+    {
+      "id": "granola",
+      "group": "grain",
+      "icon": "🥣",
+      "title": { "pt": "Granola caseira", "en": "Homemade granola", "es": "Granola casera" },
+      "summary": { "pt": "Aveia, sementes, coco e amendoim torrados com mel. Dura semanas num pote fechado.", "en": "Oats, seeds, coconut and peanuts toasted with honey. Keeps for weeks in a closed jar.", "es": "Avena, semillas, coco y cacahuetes tostados con miel. Dura semanas en un bote cerrado." },
+      "serves": 10,
+      "minutes": 40,
+      "uses": ["oats", "sunflower", "coconut", "peanut"],
+      "ingredients": [
+        { "pt": "3 xícaras de aveia em flocos", "en": "3 cups of rolled oats", "es": "3 tazas de copos de avena" },
+        { "pt": "1 xícara de sementes de girassol", "en": "1 cup of sunflower seeds", "es": "1 taza de pipas de girasol" },
+        { "pt": "1 xícara de coco ralado e 1 de amendoim picado", "en": "1 cup of grated coconut and 1 of chopped peanuts", "es": "1 taza de coco rallado y 1 de cacahuetes picados" },
+        { "pt": "4 colheres (sopa) de mel e 3 de óleo", "en": "4 tablespoons of honey and 3 of oil", "es": "4 cucharadas de miel y 3 de aceite" },
+        { "pt": "1 pitada de sal e canela", "en": "A pinch of salt and cinnamon", "es": "Una pizca de sal y canela" }
+      ],
+      "steps": [
+        { "pt": "Aqueça o forno a 160 °C.", "en": "Heat the oven to 160 °C.", "es": "Precalienta el horno a 160 °C." },
+        { "pt": "Misture tudo até a aveia ficar toda úmida e espalhe numa assadeira.", "en": "Mix everything until all the oats are coated and spread on a tray.", "es": "Mezcla todo hasta que la avena quede bien untada y extiéndela en una bandeja." },
+        { "pt": "Asse 25 a 30 minutos, mexendo a cada 10, até dourar. Esfrie na assadeira: ela fica crocante ao esfriar.", "en": "Bake 25 to 30 minutes, stirring every 10, until golden. Cool on the tray: it crisps as it cools.", "es": "Hornea de 25 a 30 minutos, removiendo cada 10, hasta dorar. Enfría en la bandeja: se vuelve crujiente al enfriar." }
+      ]
+    },
+    {
+      "id": "barley-soup",
+      "group": "grain",
+      "icon": "🥣",
+      "title": { "pt": "Sopa de cevada com legumes", "en": "Barley and vegetable soup", "es": "Sopa de cebada con verduras" },
+      "summary": { "pt": "Sopa de inverno grossa e reconfortante, com o grão da própria lavoura.", "en": "A thick, comforting winter soup with grain from your own field.", "es": "Sopa de invierno espesa y reconfortante, con el grano de tu propio campo." },
+      "serves": 6,
+      "minutes": 60,
+      "uses": ["barley", "carrot", "celery", "leek", "onion", "thyme"],
+      "ingredients": [
+        { "pt": "1 xícara de cevada em grão", "en": "1 cup of pearl barley", "es": "1 taza de cebada perlada" },
+        { "pt": "2 cenouras, 2 talos de aipo e 1 alho-poró picados", "en": "2 carrots, 2 celery stalks and 1 leek, chopped", "es": "2 zanahorias, 2 pencas de apio y 1 puerro picados" },
+        { "pt": "1 cebola picada", "en": "1 onion, chopped", "es": "1 cebolla picada" },
+        { "pt": "Tomilho, azeite e sal", "en": "Thyme, olive oil and salt", "es": "Tomillo, aceite y sal" },
+        { "pt": "2 litros de água ou caldo", "en": "2 litres of water or stock", "es": "2 litros de agua o caldo" }
+      ],
+      "steps": [
+        { "pt": "Lave a cevada e deixe de molho por 2 horas (opcional, encurta o cozimento).", "en": "Rinse the barley and soak for 2 hours (optional, shortens cooking).", "es": "Lava la cebada y déjala en remojo 2 horas (opcional, acorta la cocción)." },
+        { "pt": "Refogue cebola, alho-poró, cenoura e aipo no azeite por 8 minutos.", "en": "Sauté the onion, leek, carrot and celery in oil for 8 minutes.", "es": "Sofríe la cebolla, el puerro, la zanahoria y el apio en aceite 8 minutos." },
+        { "pt": "Junte a cevada, o tomilho e o caldo e cozinhe em fogo baixo por 40 a 50 minutos, até o grão ficar macio. Acerte o sal.", "en": "Add the barley, thyme and stock and simmer 40 to 50 minutes until the grain is tender. Season.", "es": "Añade la cebada, el tomillo y el caldo y cuece a fuego bajo de 40 a 50 minutos hasta que el grano esté tierno. Ajusta la sal." }
+      ],
+      "tip": { "pt": "A cevada da lavoura precisa ser descascada (perolada) antes de ir para a panela.", "en": "Barley from the field needs its husk removed (pearled) before cooking.", "es": "La cebada del campo debe pelarse (perlarse) antes de cocinarla." }
+    },
+    {
+      "id": "popped-sorghum",
+      "group": "grain",
+      "icon": "🍿",
+      "title": { "pt": "Pipoca de sorgo", "en": "Popped sorghum", "es": "Palomitas de sorgo" },
+      "summary": { "pt": "O grão de sorgo estoura como pipoca, em miniatura. Petisco crocante e sem glúten.", "en": "Sorghum grain pops like tiny popcorn. A crunchy, gluten-free snack.", "es": "El grano de sorgo revienta como palomitas en miniatura. Aperitivo crujiente y sin gluten." },
+      "serves": 4,
+      "minutes": 10,
+      "uses": ["sorghum"],
+      "ingredients": [
+        { "pt": "Meia xícara de grãos de sorgo secos e limpos", "en": "Half a cup of dry, clean sorghum grain", "es": "Media taza de granos de sorgo secos y limpios" },
+        { "pt": "1 colher (sopa) de óleo", "en": "1 tablespoon of oil", "es": "1 cucharada de aceite" },
+        { "pt": "Sal ou açúcar a gosto", "en": "Salt or sugar to taste", "es": "Sal o azúcar al gusto" }
+      ],
+      "steps": [
+        { "pt": "Aqueça o óleo numa panela funda com tampa, em fogo médio-alto.", "en": "Heat the oil in a deep lidded pan over medium-high heat.", "es": "Calienta el aceite en una olla honda con tapa a fuego medio-alto." },
+        { "pt": "Junte o sorgo, tampe e balance a panela enquanto estoura, de 2 a 4 minutos.", "en": "Add the sorghum, cover and shake the pan as it pops, 2 to 4 minutes.", "es": "Añade el sorgo, tapa y agita la olla mientras revienta, de 2 a 4 minutos." },
+        { "pt": "Desligue quando os estalos espaçarem e tempere.", "en": "Turn off when the popping slows and season.", "es": "Apaga cuando los estallidos se espacien y sazona." }
+      ],
+      "tip": { "pt": "Sorgo granífero branco estoura melhor que o sorgo forrageiro.", "en": "White grain sorghum pops better than forage sorghum.", "es": "El sorgo granífero blanco revienta mejor que el forrajero." }
+    },
+    {
+      "id": "corn-pudding",
+      "group": "grain",
+      "icon": "🌽",
+      "title": { "pt": "Curau de milho verde", "en": "Fresh corn pudding (curau)", "es": "Crema de maíz tierno (curau)" },
+      "summary": { "pt": "Doce cremoso de milho verde ralado, leite e canela. Clássico das festas juninas.", "en": "A creamy pudding of fresh corn, milk and cinnamon. A Brazilian harvest classic.", "es": "Crema dulce de maíz tierno, leche y canela. Un clásico brasileño de cosecha." },
+      "serves": 6,
+      "minutes": 40,
+      "uses": ["corn", "cows", "sugarcane"],
+      "ingredients": [
+        { "pt": "6 espigas de milho verde", "en": "6 ears of fresh corn", "es": "6 mazorcas de maíz tierno" },
+        { "pt": "1 litro de leite", "en": "1 litre of milk", "es": "1 litro de leche" },
+        { "pt": "1 xícara de açúcar", "en": "1 cup of sugar", "es": "1 taza de azúcar" },
+        { "pt": "1 pitada de sal e canela em pó", "en": "A pinch of salt and ground cinnamon", "es": "Una pizca de sal y canela molida" }
+      ],
+      "steps": [
+        { "pt": "Corte os grãos das espigas e bata no liquidificador com o leite.", "en": "Cut the kernels from the cobs and blend with the milk.", "es": "Corta los granos de las mazorcas y tritúralos con la leche." },
+        { "pt": "Coe numa peneira, apertando bem.", "en": "Strain through a sieve, pressing well.", "es": "Cuela por un colador, apretando bien." },
+        { "pt": "Leve ao fogo com o açúcar e o sal, mexendo sem parar por 15 a 20 minutos, até engrossar.", "en": "Cook with the sugar and salt, stirring constantly for 15 to 20 minutes, until thick.", "es": "Cuece con el azúcar y la sal, removiendo sin parar de 15 a 20 minutos, hasta que espese." },
+        { "pt": "Despeje em potinhos, polvilhe canela e sirva frio ou morno.", "en": "Pour into small bowls, dust with cinnamon and serve cold or warm.", "es": "Vierte en cuencos, espolvorea canela y sirve frío o templado." }
+      ],
+      "tip": { "pt": "Use milho verde no ponto de pamonha: ao apertar o grão, sai um leite branco.", "en": "Use corn at the milky stage: pressing a kernel releases white juice.", "es": "Usa maíz en estado lechoso: al apretar el grano sale un jugo blanco." }
+    },
+    {
+      "id": "banana-cake",
+      "group": "grain",
+      "icon": "🍌",
+      "title": { "pt": "Bolo de banana com aveia", "en": "Banana and oat cake", "es": "Bizcocho de plátano y avena" },
+      "summary": { "pt": "Aproveita as bananas bem maduras. Úmido e perfumado com canela.", "en": "Uses up very ripe bananas. Moist and fragrant with cinnamon.", "es": "Aprovecha los plátanos muy maduros. Jugoso y perfumado con canela." },
+      "serves": 10,
+      "minutes": 60,
+      "uses": ["banana", "wheat", "chickens", "oats"],
+      "ingredients": [
+        { "pt": "4 bananas bem maduras amassadas", "en": "4 very ripe bananas, mashed", "es": "4 plátanos muy maduros machacados" },
+        { "pt": "3 ovos e meia xícara de óleo", "en": "3 eggs and half a cup of oil", "es": "3 huevos y media taza de aceite" },
+        { "pt": "1 xícara de açúcar mascavo", "en": "1 cup of brown sugar", "es": "1 taza de azúcar moreno" },
+        { "pt": "1 xícara de farinha de trigo e 1 de aveia", "en": "1 cup of flour and 1 of oats", "es": "1 taza de harina y 1 de avena" },
+        { "pt": "1 colher (sopa) de fermento em pó e canela", "en": "1 tablespoon of baking powder and cinnamon", "es": "1 cucharada de levadura química y canela" }
+      ],
+      "steps": [
+        { "pt": "Aqueça o forno a 180 °C e unte uma forma.", "en": "Heat the oven to 180 °C and grease a tin.", "es": "Precalienta el horno a 180 °C y engrasa un molde." },
+        { "pt": "Misture as bananas, os ovos, o óleo e o açúcar. Junte a farinha, a aveia e a canela e, por último, o fermento.", "en": "Mix the bananas, eggs, oil and sugar. Fold in the flour, oats and cinnamon, then the baking powder.", "es": "Mezcla los plátanos, los huevos, el aceite y el azúcar. Añade la harina, la avena y la canela y, al final, la levadura." },
+        { "pt": "Asse 40 minutos, até o palito sair limpo.", "en": "Bake 40 minutes, until a skewer comes out clean.", "es": "Hornea 40 minutos, hasta que el palillo salga limpio." }
+      ]
+    },
+    {
+      "id": "orange-cake",
+      "group": "grain",
+      "icon": "🍊",
+      "title": { "pt": "Bolo de laranja", "en": "Orange cake", "es": "Bizcocho de naranja" },
+      "summary": { "pt": "Massa batida com a laranja inteira, casca e tudo, e calda de suco por cima.", "en": "A batter blended with the whole orange, peel and all, with a juice glaze on top.", "es": "Masa batida con la naranja entera, con piel, y almíbar de zumo por encima." },
+      "serves": 10,
+      "minutes": 55,
+      "uses": ["orange", "wheat", "chickens"],
+      "ingredients": [
+        { "pt": "1 laranja inteira lavada, sem sementes, em pedaços", "en": "1 whole washed orange, seeded, in pieces", "es": "1 naranja entera lavada, sin semillas, en trozos" },
+        { "pt": "3 ovos e meia xícara de óleo", "en": "3 eggs and half a cup of oil", "es": "3 huevos y media taza de aceite" },
+        { "pt": "1 xícara e meia de açúcar", "en": "1 and a half cups of sugar", "es": "1 taza y media de azúcar" },
+        { "pt": "2 xícaras de farinha de trigo e 1 colher (sopa) de fermento", "en": "2 cups of flour and 1 tablespoon of baking powder", "es": "2 tazas de harina y 1 cucharada de levadura química" },
+        { "pt": "Calda: suco de 2 laranjas e meia xícara de açúcar", "en": "Glaze: juice of 2 oranges and half a cup of sugar", "es": "Almíbar: zumo de 2 naranjas y media taza de azúcar" }
+      ],
+      "steps": [
+        { "pt": "Bata no liquidificador a laranja, os ovos, o óleo e o açúcar.", "en": "Blend the orange, eggs, oil and sugar.", "es": "Tritura la naranja, los huevos, el aceite y el azúcar." },
+        { "pt": "Passe para uma tigela, junte a farinha e o fermento e asse a 180 °C por 35 a 40 minutos.", "en": "Pour into a bowl, fold in the flour and baking powder and bake at 180 °C for 35 to 40 minutes.", "es": "Pásalo a un bol, añade la harina y la levadura y hornea a 180 °C de 35 a 40 minutos." },
+        { "pt": "Ferva o suco com o açúcar por 3 minutos e regue o bolo ainda quente.", "en": "Boil the juice with the sugar for 3 minutes and pour over the warm cake.", "es": "Hierve el zumo con el azúcar 3 minutos y riega el bizcocho aún caliente." }
+      ],
+      "tip": { "pt": "Tirar a parte branca grossa da casca deixa o bolo menos amargo.", "en": "Removing the thick white pith makes the cake less bitter.", "es": "Quitar la parte blanca gruesa de la piel hace el bizcocho menos amargo." }
+    },
+    {
+      "id": "lavender-cookies",
+      "group": "grain",
+      "icon": "🍪",
+      "title": { "pt": "Biscoitos amanteigados de lavanda", "en": "Lavender butter cookies", "es": "Galletas de mantequilla con lavanda" },
+      "summary": { "pt": "Biscoitos que derretem na boca, com um toque floral leve.", "en": "Melt-in-the-mouth cookies with a light floral note.", "es": "Galletas que se deshacen en la boca, con un ligero toque floral." },
+      "serves": 24,
+      "minutes": 40,
+      "uses": ["lavender", "wheat", "cows", "chickens"],
+      "ingredients": [
+        { "pt": "200 g de manteiga em temperatura ambiente", "en": "200 g of soft butter", "es": "200 g de mantequilla a temperatura ambiente" },
+        { "pt": "100 g de açúcar e 1 gema", "en": "100 g of sugar and 1 egg yolk", "es": "100 g de azúcar y 1 yema" },
+        { "pt": "300 g de farinha de trigo", "en": "300 g of flour", "es": "300 g de harina" },
+        { "pt": "1 colher (chá) de flores de lavanda secas, picadas", "en": "1 teaspoon of dried lavender flowers, chopped", "es": "1 cucharadita de flores de lavanda secas, picadas" }
+      ],
+      "steps": [
+        { "pt": "Bata a manteiga com o açúcar e a lavanda até ficar claro. Junte a gema.", "en": "Beat the butter with the sugar and lavender until pale. Add the yolk.", "es": "Bate la mantequilla con el azúcar y la lavanda hasta que blanquee. Añade la yema." },
+        { "pt": "Junte a farinha só até formar uma massa, enrole num rolo e leve à geladeira por 30 minutos.", "en": "Add the flour just until it forms a dough, roll into a log and chill 30 minutes.", "es": "Añade la harina solo hasta formar una masa, haz un rulo y refrigera 30 minutos." },
+        { "pt": "Corte rodelas de 1 cm e asse a 170 °C por 12 a 15 minutos, até as bordas dourarem levemente.", "en": "Slice into 1 cm rounds and bake at 170 °C for 12 to 15 minutes, until lightly golden at the edges.", "es": "Corta rodajas de 1 cm y hornea a 170 °C de 12 a 15 minutos, hasta que los bordes se doren ligeramente." }
+      ],
+      "tip": { "pt": "Use pouca lavanda: em excesso fica com gosto de sabonete.", "en": "Go easy on the lavender: too much tastes of soap.", "es": "Usa poca lavanda: en exceso sabe a jabón." },
+      "safety": { "pt": "Use só lavanda que não recebeu agrotóxico. A lavanda-inglesa (Lavandula angustifolia) é a indicada para cozinhar.", "en": "Only use lavender that has not been sprayed. English lavender (Lavandula angustifolia) is the one for cooking.", "es": "Usa solo lavanda sin pesticidas. La lavanda inglesa (Lavandula angustifolia) es la indicada para cocinar." }
+    },
+    {
+      "id": "roast-pork-apple",
+      "group": "meat",
+      "icon": "🐖",
+      "title": { "pt": "Lombo de porco assado com maçã e sálvia", "en": "Roast pork loin with apple and sage", "es": "Lomo de cerdo asado con manzana y salvia" },
+      "summary": { "pt": "O lombo assa sobre maçãs e cebolas, que viram um molho doce.", "en": "The loin roasts on apples and onions, which turn into a sweet sauce.", "es": "El lomo se asa sobre manzanas y cebollas, que se convierten en una salsa dulce." },
+      "serves": 6,
+      "minutes": 120,
+      "uses": ["pigs", "apple", "sage", "onion"],
+      "ingredients": [
+        { "pt": "1,5 kg de lombo de porco", "en": "1.5 kg of pork loin", "es": "1,5 kg de lomo de cerdo" },
+        { "pt": "4 maçãs e 2 cebolas em gomos", "en": "4 apples and 2 onions in wedges", "es": "4 manzanas y 2 cebollas en gajos" },
+        { "pt": "Folhas de sálvia e 4 dentes de alho", "en": "Sage leaves and 4 garlic cloves", "es": "Hojas de salvia y 4 dientes de ajo" },
+        { "pt": "Azeite, sal e pimenta", "en": "Olive oil, salt and pepper", "es": "Aceite, sal y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Tempere o lombo com sal, pimenta, alho amassado e sálvia picada e deixe 1 hora na geladeira.", "en": "Season the loin with salt, pepper, crushed garlic and chopped sage and chill for 1 hour.", "es": "Sazona el lomo con sal, pimienta, ajo machacado y salvia picada y déjalo 1 hora en la nevera." },
+        { "pt": "Ponha as maçãs e as cebolas na assadeira, o lombo por cima, regue com azeite e cubra com papel-alumínio.", "en": "Lay the apples and onions in a tray, the loin on top, drizzle with oil and cover with foil.", "es": "Pon las manzanas y las cebollas en la bandeja, el lomo encima, riega con aceite y cubre con papel de aluminio." },
+        { "pt": "Asse a 180 °C por 1 hora, tire o papel e asse mais 20 a 30 minutos para dourar.", "en": "Roast at 180 °C for 1 hour, remove the foil and roast 20 to 30 minutes more to brown.", "es": "Asa a 180 °C 1 hora, quita el papel y asa de 20 a 30 minutos más para dorar." },
+        { "pt": "Descanse 10 minutos antes de fatiar.", "en": "Rest 10 minutes before slicing.", "es": "Deja reposar 10 minutos antes de cortar." }
+      ],
+      "safety": { "pt": "A carne de porco está pronta com 63 °C no centro, seguida de 3 minutos de descanso.", "en": "Pork is done at 63 °C in the centre, followed by a 3-minute rest.", "es": "El cerdo está hecho a 63 °C en el centro, seguido de 3 minutos de reposo." }
+    },
+    {
+      "id": "duck-orange",
+      "group": "meat",
+      "icon": "🦆",
+      "title": { "pt": "Pato assado com laranja", "en": "Roast duck with orange", "es": "Pato asado a la naranja" },
+      "summary": { "pt": "Pele crocante, carne macia e um molho de laranja feito com o caldo da assadeira.", "en": "Crisp skin, tender meat and an orange sauce made from the pan juices.", "es": "Piel crujiente, carne tierna y una salsa de naranja hecha con el jugo de la bandeja." },
+      "serves": 4,
+      "minutes": 150,
+      "uses": ["ducks", "orange", "garlic", "thyme"],
+      "ingredients": [
+        { "pt": "1 pato de 2 a 2,5 kg", "en": "1 duck of 2 to 2.5 kg", "es": "1 pato de 2 a 2,5 kg" },
+        { "pt": "3 laranjas", "en": "3 oranges", "es": "3 naranjas" },
+        { "pt": "1 cabeça de alho e ramos de tomilho", "en": "1 head of garlic and sprigs of thyme", "es": "1 cabeza de ajo y ramitas de tomillo" },
+        { "pt": "2 colheres (sopa) de mel, sal e pimenta", "en": "2 tablespoons of honey, salt and pepper", "es": "2 cucharadas de miel, sal y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Fure a pele do pato com um garfo, sem atingir a carne, e tempere por dentro e por fora com sal e pimenta.", "en": "Prick the duck skin all over with a fork without piercing the meat, and season inside and out.", "es": "Pincha la piel del pato con un tenedor sin llegar a la carne y sazona por dentro y por fuera." },
+        { "pt": "Recheie com 1 laranja em pedaços, o alho e o tomilho.", "en": "Stuff with 1 orange in pieces, the garlic and the thyme.", "es": "Rellena con 1 naranja en trozos, el ajo y el tomillo." },
+        { "pt": "Asse a 180 °C por cerca de 2 horas, tirando a gordura que juntar na assadeira a cada 30 minutos.", "en": "Roast at 180 °C for about 2 hours, spooning off the fat in the tray every 30 minutes.", "es": "Asa a 180 °C unas 2 horas, retirando la grasa de la bandeja cada 30 minutos." },
+        { "pt": "Ferva o suco das outras 2 laranjas com o mel e um pouco do caldo da assadeira até engrossar e sirva com o pato.", "en": "Boil the juice of the other 2 oranges with the honey and some pan juices until syrupy and serve with the duck.", "es": "Hierve el zumo de las otras 2 naranjas con la miel y un poco del jugo de la bandeja hasta que espese y sirve con el pato." }
+      ],
+      "tip": { "pt": "Guarde a gordura do pato: batatas assadas nela ficam ótimas.", "en": "Keep the duck fat: potatoes roasted in it are excellent.", "es": "Guarda la grasa del pato: las patatas asadas en ella quedan buenísimas." },
+      "safety": { "pt": "O pato inteiro está pronto com 74 °C na parte mais grossa da coxa.", "en": "A whole duck is done at 74 °C in the thickest part of the thigh.", "es": "El pato entero está hecho a 74 °C en la parte más gruesa del muslo." }
+    },
+    {
+      "id": "lamb-rosemary",
+      "group": "meat",
+      "icon": "🐑",
+      "title": { "pt": "Pernil de cordeiro com alecrim e batatas", "en": "Leg of lamb with rosemary and potatoes", "es": "Pierna de cordero con romero y patatas" },
+      "summary": { "pt": "Assado lento com alho e alecrim, com as batatas cozinhando no caldo da carne.", "en": "A slow roast with garlic and rosemary, the potatoes cooking in the meat juices.", "es": "Asado lento con ajo y romero, con las patatas cocinándose en el jugo de la carne." },
+      "serves": 6,
+      "minutes": 150,
+      "uses": ["sheep", "rosemary", "garlic", "potato"],
+      "ingredients": [
+        { "pt": "1 pernil de cordeiro de 2 kg", "en": "1 leg of lamb of 2 kg", "es": "1 pierna de cordero de 2 kg" },
+        { "pt": "1 cabeça de alho e 4 ramos de alecrim", "en": "1 head of garlic and 4 sprigs of rosemary", "es": "1 cabeza de ajo y 4 ramitas de romero" },
+        { "pt": "1 kg de batatas em pedaços", "en": "1 kg of potatoes in chunks", "es": "1 kg de patatas en trozos" },
+        { "pt": "Suco de 1 limão, azeite, sal e pimenta", "en": "Juice of 1 lemon, olive oil, salt and pepper", "es": "Zumo de 1 limón, aceite, sal y pimienta" }
+      ],
+      "steps": [
+        { "pt": "Faça furos no pernil e enfie lascas de alho e raminhos de alecrim. Tempere com limão, azeite, sal e pimenta e deixe de um dia para o outro na geladeira.", "en": "Make small cuts in the lamb and push in garlic slivers and rosemary sprigs. Rub with lemon, oil, salt and pepper and chill overnight.", "es": "Haz cortes en la pierna e introduce láminas de ajo y ramitas de romero. Unta con limón, aceite, sal y pimienta y deja en la nevera toda la noche." },
+        { "pt": "Ponha numa assadeira com meio copo de água, cubra com papel-alumínio e asse a 170 °C por 1 hora e meia.", "en": "Place in a tray with half a glass of water, cover with foil and roast at 170 °C for 1 and a half hours.", "es": "Ponlo en una bandeja con medio vaso de agua, cubre con papel de aluminio y asa a 170 °C hora y media." },
+        { "pt": "Tire o papel, junte as batatas em volta e asse mais 40 minutos a 200 °C, até tudo dourar.", "en": "Remove the foil, add the potatoes around it and roast 40 more minutes at 200 °C until browned.", "es": "Quita el papel, pon las patatas alrededor y asa 40 minutos más a 200 °C hasta dorar." }
+      ],
+      "safety": { "pt": "Cordeiro inteiro em peça está seguro com 63 °C no centro e 3 minutos de descanso; carne moída precisa de 71 °C.", "en": "A whole cut of lamb is safe at 63 °C in the centre with a 3-minute rest; minced lamb needs 71 °C.", "es": "Una pieza entera de cordero es segura a 63 °C en el centro con 3 minutos de reposo; la carne picada necesita 71 °C." }
+    },
+    {
+      "id": "quinoa-tabbouleh",
+      "group": "salad",
+      "icon": "🥗",
+      "title": { "pt": "Tabule de quinoa", "en": "Quinoa tabbouleh", "es": "Tabulé de quinoa" },
+      "summary": { "pt": "A salada árabe de ervas, feita com quinoa no lugar do trigo.", "en": "The herb-packed Middle Eastern salad, made with quinoa instead of wheat.", "es": "La ensalada árabe de hierbas, hecha con quinoa en lugar de trigo." },
+      "serves": 4,
+      "minutes": 25,
+      "uses": ["quinoa", "cucumber", "tomato", "parsley", "mint", "lemon"],
+      "ingredients": [
+        { "pt": "1 xícara de quinoa", "en": "1 cup of quinoa", "es": "1 taza de quinoa" },
+        { "pt": "1 pepino e 2 tomates em cubos pequenos", "en": "1 cucumber and 2 tomatoes, finely diced", "es": "1 pepino y 2 tomates en dados pequeños" },
+        { "pt": "1 maço de salsinha e meio de hortelã, picados", "en": "1 bunch of parsley and half a bunch of mint, chopped", "es": "1 manojo de perejil y medio de menta, picados" },
+        { "pt": "Suco de 1 limão, azeite e sal", "en": "Juice of 1 lemon, olive oil and salt", "es": "Zumo de 1 limón, aceite y sal" }
+      ],
+      "steps": [
+        { "pt": "Lave bem a quinoa numa peneira, esfregando, para tirar o amargor.", "en": "Rinse the quinoa well in a sieve, rubbing it, to remove the bitterness.", "es": "Lava bien la quinoa en un colador, frotándola, para quitar el amargor." },
+        { "pt": "Cozinhe em 2 xícaras de água com sal por 15 minutos, até a água secar. Espalhe para esfriar.", "en": "Cook in 2 cups of salted water for 15 minutes until the water is absorbed. Spread out to cool.", "es": "Cuece en 2 tazas de agua con sal 15 minutos hasta que se absorba. Extiéndela para que se enfríe." },
+        { "pt": "Misture com os legumes e as ervas e tempere com limão, azeite e sal.", "en": "Mix with the vegetables and herbs and dress with lemon, oil and salt.", "es": "Mezcla con las verduras y las hierbas y aliña con limón, aceite y sal." }
+      ],
+      "tip": { "pt": "A quinoa da lavoura tem saponina na casca: lave em várias águas até parar de espumar.", "en": "Home-grown quinoa has saponin on its coat: rinse in several waters until it stops foaming.", "es": "La quinoa del campo tiene saponina: lávala en varias aguas hasta que deje de hacer espuma." }
+    },
+    {
+      "id": "fennel-orange-salad",
+      "group": "salad",
+      "icon": "🍊",
+      "title": { "pt": "Salada de funcho com laranja", "en": "Fennel and orange salad", "es": "Ensalada de hinojo con naranja" },
+      "summary": { "pt": "Funcho crocante e laranja suculenta, com azeitonas. Fresca e perfumada.", "en": "Crunchy fennel and juicy orange with olives. Fresh and fragrant.", "es": "Hinojo crujiente y naranja jugosa con aceitunas. Fresca y aromática." },
+      "serves": 4,
+      "minutes": 15,
+      "uses": ["fennel", "orange", "olive", "mint"],
+      "ingredients": [
+        { "pt": "1 bulbo de funcho (erva-doce) em fatias finas", "en": "1 fennel bulb, thinly sliced", "es": "1 bulbo de hinojo en láminas finas" },
+        { "pt": "2 laranjas em gomos sem pele", "en": "2 oranges, segmented", "es": "2 naranjas en gajos sin piel" },
+        { "pt": "Um punhado de azeitonas pretas", "en": "A handful of black olives", "es": "Un puñado de aceitunas negras" },
+        { "pt": "Hortelã, azeite e sal", "en": "Mint, olive oil and salt", "es": "Menta, aceite y sal" }
+      ],
+      "steps": [
+        { "pt": "Fatie o funcho bem fino e deixe 5 minutos em água gelada para ficar crocante.", "en": "Slice the fennel very thinly and soak 5 minutes in iced water to crisp it.", "es": "Lamina el hinojo muy fino y déjalo 5 minutos en agua helada para que quede crujiente." },
+        { "pt": "Descasque as laranjas a faca e solte os gomos, guardando o suco que escorrer.", "en": "Peel the oranges with a knife and cut out the segments, saving the juice.", "es": "Pela las naranjas a cuchillo y saca los gajos, guardando el zumo." },
+        { "pt": "Monte com o funcho, as laranjas, as azeitonas e a hortelã e regue com o suco, azeite e sal.", "en": "Arrange the fennel, oranges, olives and mint and dress with the juice, oil and salt.", "es": "Monta el hinojo, las naranjas, las aceitunas y la menta y aliña con el zumo, aceite y sal." }
+      ],
+      "tip": { "pt": "As folhinhas do funcho também vão na salada.", "en": "The fennel fronds go in the salad too.", "es": "Las hojitas del hinojo también van en la ensalada." }
+    },
+    {
+      "id": "rice-pudding",
+      "group": "fruit",
+      "icon": "🍚",
+      "title": { "pt": "Arroz-doce", "en": "Rice pudding", "es": "Arroz con leche" },
+      "summary": { "pt": "Arroz cozido devagar no leite com casca de limão e canela.", "en": "Rice cooked slowly in milk with lemon peel and cinnamon.", "es": "Arroz cocido despacio en leche con piel de limón y canela." },
+      "serves": 6,
+      "minutes": 50,
+      "uses": ["rice", "cows", "lemon"],
+      "ingredients": [
+        { "pt": "1 xícara de arroz", "en": "1 cup of rice", "es": "1 taza de arroz" },
+        { "pt": "1 litro de leite", "en": "1 litre of milk", "es": "1 litro de leche" },
+        { "pt": "1 xícara de açúcar", "en": "1 cup of sugar", "es": "1 taza de azúcar" },
+        { "pt": "1 casca de limão (só a parte amarela) e 1 pau de canela", "en": "1 strip of lemon peel (yellow part only) and 1 cinnamon stick", "es": "1 piel de limón (solo la parte amarilla) y 1 rama de canela" }
+      ],
+      "steps": [
+        { "pt": "Cozinhe o arroz em 2 xícaras de água por 10 minutos.", "en": "Cook the rice in 2 cups of water for 10 minutes.", "es": "Cuece el arroz en 2 tazas de agua 10 minutos." },
+        { "pt": "Junte o leite, a casca de limão e a canela e cozinhe em fogo baixo por 30 minutos, mexendo sempre.", "en": "Add the milk, lemon peel and cinnamon and simmer 30 minutes, stirring often.", "es": "Añade la leche, la piel de limón y la canela y cuece a fuego bajo 30 minutos, removiendo a menudo." },
+        { "pt": "Junte o açúcar, cozinhe mais 5 minutos, tire a casca e a canela e sirva com canela em pó.", "en": "Add the sugar, cook 5 more minutes, remove the peel and stick and serve dusted with cinnamon.", "es": "Añade el azúcar, cuece 5 minutos más, retira la piel y la canela y sirve con canela molida." }
+      ]
+    },
+    {
+      "id": "pacoca",
+      "group": "fruit",
+      "icon": "🥜",
+      "title": { "pt": "Paçoca de amendoim", "en": "Peanut paçoca", "es": "Paçoca de cacahuete" },
+      "summary": { "pt": "Doce de amendoim torrado, farinha e açúcar, socado no pilão ou no processador.", "en": "A sweet of roasted peanuts, flour and sugar, pounded or blitzed.", "es": "Dulce de cacahuete tostado, harina y azúcar, machacado en mortero o procesadora." },
+      "serves": 20,
+      "minutes": 30,
+      "uses": ["peanut", "cassava", "sugarcane"],
+      "ingredients": [
+        { "pt": "2 xícaras de amendoim cru sem casca", "en": "2 cups of raw shelled peanuts", "es": "2 tazas de cacahuetes crudos pelados" },
+        { "pt": "1 xícara de farinha de mandioca fina", "en": "1 cup of fine cassava flour", "es": "1 taza de harina de yuca fina" },
+        { "pt": "1 xícara de açúcar (ou rapadura ralada)", "en": "1 cup of sugar (or grated rapadura)", "es": "1 taza de azúcar (o panela rallada)" },
+        { "pt": "1 pitada de sal", "en": "A pinch of salt", "es": "Una pizca de sal" }
+      ],
+      "steps": [
+        { "pt": "Torre o amendoim numa panela em fogo médio, mexendo, por 10 a 15 minutos. Esfregue num pano para soltar a pele.", "en": "Toast the peanuts in a pan over medium heat, stirring, for 10 to 15 minutes. Rub in a cloth to remove the skins.", "es": "Tuesta los cacahuetes en una sartén a fuego medio, removiendo, de 10 a 15 minutos. Frótalos en un paño para quitar la piel." },
+        { "pt": "Bata o amendoim no processador até virar uma farofa úmida.", "en": "Blitz the peanuts in a processor to a moist crumb.", "es": "Tritura los cacahuetes en la procesadora hasta que queden como una arena húmeda." },
+        { "pt": "Junte a farinha, o açúcar e o sal e bata mais um pouco.", "en": "Add the flour, sugar and salt and blitz a little more.", "es": "Añade la harina, el azúcar y la sal y tritura un poco más." },
+        { "pt": "Aperte com força em forminhas ou num copinho e desenforme.", "en": "Press firmly into small moulds or a shot glass and turn out.", "es": "Aprieta con fuerza en moldecitos o en un vaso pequeño y desmolda." }
+      ],
+      "safety": { "pt": "Descarte amendoim mofado ou com gosto amargo: pode ter aflatoxina.", "en": "Throw away mouldy or bitter peanuts: they may contain aflatoxin.", "es": "Desecha los cacahuetes con moho o sabor amargo: pueden tener aflatoxina." }
+    },
+    {
+      "id": "apple-pear-crumble",
+      "group": "fruit",
+      "icon": "🍎",
+      "title": { "pt": "Crumble de maçã e pera", "en": "Apple and pear crumble", "es": "Crumble de manzana y pera" },
+      "summary": { "pt": "Frutas assadas sob uma farofa crocante de aveia e manteiga.", "en": "Baked fruit under a crunchy oat and butter topping.", "es": "Fruta horneada bajo una cobertura crujiente de avena y mantequilla." },
+      "serves": 6,
+      "minutes": 50,
+      "uses": ["apple", "pear", "oats", "wheat", "cows"],
+      "ingredients": [
+        { "pt": "3 maçãs e 3 peras em cubos", "en": "3 apples and 3 pears, cubed", "es": "3 manzanas y 3 peras en cubos" },
+        { "pt": "2 colheres (sopa) de açúcar e canela", "en": "2 tablespoons of sugar and cinnamon", "es": "2 cucharadas de azúcar y canela" },
+        { "pt": "Farofa: 1 xícara de aveia, meia de farinha de trigo e meia de açúcar mascavo", "en": "Topping: 1 cup of oats, half a cup of flour and half of brown sugar", "es": "Cobertura: 1 taza de avena, media de harina y media de azúcar moreno" },
+        { "pt": "100 g de manteiga gelada em cubos", "en": "100 g of cold butter, cubed", "es": "100 g de mantequilla fría en cubos" }
+      ],
+      "steps": [
+        { "pt": "Misture as frutas com o açúcar e a canela num refratário.", "en": "Toss the fruit with the sugar and cinnamon in a baking dish.", "es": "Mezcla la fruta con el azúcar y la canela en una fuente." },
+        { "pt": "Esfregue a aveia, a farinha, o açúcar e a manteiga com os dedos até formar uma farofa grossa.", "en": "Rub the oats, flour, sugar and butter together with your fingers into coarse crumbs.", "es": "Frota la avena, la harina, el azúcar y la mantequilla con los dedos hasta formar migas gruesas." },
+        { "pt": "Cubra as frutas e asse a 190 °C por 30 a 35 minutos, até dourar e a fruta borbulhar.", "en": "Cover the fruit and bake at 190 °C for 30 to 35 minutes, until golden and bubbling.", "es": "Cubre la fruta y hornea a 190 °C de 30 a 35 minutos, hasta que se dore y la fruta burbujee." }
+      ]
+    },
+    {
+      "id": "tropical-fruit-salad",
+      "group": "fruit",
+      "icon": "🥭",
+      "title": { "pt": "Salada de frutas tropical", "en": "Tropical fruit salad", "es": "Macedonia tropical" },
+      "summary": { "pt": "As frutas da estação com maracujá por cima, que faz o papel de calda.", "en": "Seasonal fruit topped with passion fruit pulp instead of syrup.", "es": "Fruta de temporada con pulpa de maracuyá por encima en lugar de almíbar." },
+      "serves": 6,
+      "minutes": 20,
+      "uses": ["mango", "papaya", "pineapple", "melon", "watermelon", "passionFruit", "tangerine", "mint"],
+      "ingredients": [
+        { "pt": "1 manga e meio mamão", "en": "1 mango and half a papaya", "es": "1 mango y media papaya" },
+        { "pt": "2 fatias de abacaxi, 1 fatia de melão e 1 de melancia", "en": "2 slices of pineapple, 1 of melon and 1 of watermelon", "es": "2 rodajas de piña, 1 de melón y 1 de sandía" },
+        { "pt": "2 mexericas em gomos", "en": "2 tangerines, segmented", "es": "2 mandarinas en gajos" },
+        { "pt": "Polpa de 2 maracujás e folhas de hortelã", "en": "Pulp of 2 passion fruits and mint leaves", "es": "Pulpa de 2 maracuyás y hojas de menta" }
+      ],
+      "steps": [
+        { "pt": "Corte todas as frutas em cubos do mesmo tamanho, tirando sementes e cascas.", "en": "Cut all the fruit into even cubes, removing seeds and peel.", "es": "Corta toda la fruta en cubos iguales, quitando semillas y pieles." },
+        { "pt": "Misture numa tigela grande com cuidado, para não amassar.", "en": "Mix gently in a large bowl so the fruit does not bruise.", "es": "Mezcla con cuidado en un bol grande para no aplastar la fruta." },
+        { "pt": "Regue com a polpa do maracujá, junte a hortelã e leve à geladeira por 15 minutos antes de servir.", "en": "Spoon over the passion fruit pulp, add the mint and chill 15 minutes before serving.", "es": "Riega con la pulpa de maracuyá, añade la menta y refrigera 15 minutos antes de servir." }
+      ],
+      "tip": { "pt": "Sem açúcar ela fica melhor no mesmo dia; no dia seguinte as frutas soltam muita água.", "en": "Without sugar it is best eaten the same day; by the next day the fruit releases a lot of juice.", "es": "Sin azúcar está mejor el mismo día; al día siguiente la fruta suelta mucho jugo." }
+    },
+    {
+      "id": "passion-fruit-mousse",
+      "group": "fruit",
+      "icon": "🟡",
+      "title": { "pt": "Mousse de maracujá", "en": "Passion fruit mousse", "es": "Mousse de maracuyá" },
+      "summary": { "pt": "Sobremesa gelada, azedinha e aerada, sem ir ao fogo.", "en": "A chilled, tangy, airy dessert with no cooking.", "es": "Postre frío, ácido y esponjoso, sin cocción." },
+      "serves": 8,
+      "minutes": 20,
+      "uses": ["passionFruit", "cows"],
+      "ingredients": [
+        { "pt": "1 xícara de suco concentrado de maracujá (polpa de 4 a 5 frutas batida e coada)", "en": "1 cup of strong passion fruit juice (pulp of 4 to 5 fruits, blended and strained)", "es": "1 taza de zumo concentrado de maracuyá (pulpa de 4 a 5 frutas, triturada y colada)" },
+        { "pt": "1 lata de leite condensado (395 g)", "en": "1 can of condensed milk (395 g)", "es": "1 lata de leche condensada (395 g)" },
+        { "pt": "1 caixa de creme de leite (200 g) ou nata batida", "en": "1 carton of cream (200 g) or whipped cream", "es": "1 brick de nata (200 g) o nata montada" },
+        { "pt": "Polpa de 1 maracujá com sementes para decorar", "en": "Pulp of 1 passion fruit with seeds to decorate", "es": "Pulpa de 1 maracuyá con semillas para decorar" }
+      ],
+      "steps": [
+        { "pt": "Bata o suco, o leite condensado e o creme de leite no liquidificador por 3 minutos.", "en": "Blend the juice, condensed milk and cream for 3 minutes.", "es": "Tritura el zumo, la leche condensada y la nata 3 minutos." },
+        { "pt": "Despeje numa travessa ou em taças.", "en": "Pour into a dish or glasses.", "es": "Vierte en una fuente o en copas." },
+        { "pt": "Leve à geladeira por pelo menos 3 horas e cubra com a polpa antes de servir.", "en": "Chill at least 3 hours and top with the pulp before serving.", "es": "Refrigera al menos 3 horas y cubre con la pulpa antes de servir." }
+      ]
+    },
+    {
+      "id": "guava-paste",
+      "group": "fruit",
+      "icon": "🍬",
+      "title": { "pt": "Goiabada caseira", "en": "Homemade guava paste", "es": "Dulce de guayaba casero" },
+      "summary": { "pt": "O doce de corte da roça. Com queijo fresco vira romeu e julieta.", "en": "The classic sliceable farm sweet. With fresh cheese it is a Brazilian favourite.", "es": "El dulce de corte del campo. Con queso fresco es un clásico." },
+      "serves": 20,
+      "minutes": 90,
+      "uses": ["guava", "sugarcane"],
+      "ingredients": [
+        { "pt": "1 kg de goiabas vermelhas maduras", "en": "1 kg of ripe red guavas", "es": "1 kg de guayabas rojas maduras" },
+        { "pt": "600 g de açúcar", "en": "600 g of sugar", "es": "600 g de azúcar" },
+        { "pt": "1 xícara de água", "en": "1 cup of water", "es": "1 taza de agua" }
+      ],
+      "steps": [
+        { "pt": "Lave, tire as pontas e corte as goiabas. Bata com a água e passe numa peneira para tirar as sementes.", "en": "Wash, trim and cut the guavas. Blend with the water and push through a sieve to remove the seeds.", "es": "Lava, quita las puntas y corta las guayabas. Tritura con el agua y pasa por un colador para quitar las semillas." },
+        { "pt": "Cozinhe a polpa com o açúcar em panela grossa, em fogo baixo, mexendo sempre, por 50 a 60 minutos.", "en": "Cook the pulp with the sugar in a heavy pan on low heat, stirring constantly, for 50 to 60 minutes.", "es": "Cuece la pulpa con el azúcar en una olla gruesa a fuego bajo, removiendo siempre, de 50 a 60 minutos." },
+        { "pt": "Está pronta quando soltar do fundo da panela. Despeje numa forma untada e deixe esfriar até firmar.", "en": "It is ready when it pulls away from the bottom of the pan. Pour into a greased tin and leave to set.", "es": "Está lista cuando se despega del fondo de la olla. Vierte en un molde engrasado y deja que cuaje." }
+      ],
+      "safety": { "pt": "O doce quente espirra e queima: use colher de cabo longo e luva.", "en": "The hot paste spits and burns: use a long-handled spoon and an oven glove.", "es": "El dulce caliente salpica y quema: usa una cuchara de mango largo y un guante." }
+    },
+    {
+      "id": "stone-fruit-compote",
+      "group": "fruit",
+      "icon": "🍑",
+      "title": { "pt": "Compota de pêssego, ameixa e cereja", "en": "Peach, plum and cherry compote", "es": "Compota de melocotón, ciruela y cereza" },
+      "summary": { "pt": "Frutas de caroço cozidas rápido numa calda leve. Vai com iogurte, bolo ou sozinha.", "en": "Stone fruit poached quickly in a light syrup. Good with yogurt, cake or on its own.", "es": "Frutas de hueso cocidas rápido en un almíbar ligero. Va con yogur, bizcocho o sola." },
+      "serves": 6,
+      "minutes": 25,
+      "uses": ["peach", "plum", "cherry", "sugarcane"],
+      "ingredients": [
+        { "pt": "4 pêssegos e 4 ameixas sem caroço, em gomos", "en": "4 peaches and 4 plums, stoned and cut in wedges", "es": "4 melocotones y 4 ciruelas sin hueso, en gajos" },
+        { "pt": "1 xícara de cerejas sem caroço", "en": "1 cup of pitted cherries", "es": "1 taza de cerezas sin hueso" },
+        { "pt": "Meia xícara de açúcar e meia de água", "en": "Half a cup of sugar and half a cup of water", "es": "Media taza de azúcar y media de agua" },
+        { "pt": "1 pau de canela e casca de limão", "en": "1 cinnamon stick and lemon peel", "es": "1 rama de canela y piel de limón" }
+      ],
+      "steps": [
+        { "pt": "Ferva a água com o açúcar, a canela e a casca de limão por 3 minutos.", "en": "Boil the water with the sugar, cinnamon and lemon peel for 3 minutes.", "es": "Hierve el agua con el azúcar, la canela y la piel de limón 3 minutos." },
+        { "pt": "Junte os pêssegos e as ameixas e cozinhe 6 a 8 minutos, até amaciar sem desmanchar.", "en": "Add the peaches and plums and simmer 6 to 8 minutes, until tender but whole.", "es": "Añade los melocotones y las ciruelas y cuece de 6 a 8 minutos, hasta que estén tiernos pero enteros." },
+        { "pt": "Junte as cerejas, cozinhe mais 2 minutos e deixe esfriar na calda.", "en": "Add the cherries, cook 2 more minutes and cool in the syrup.", "es": "Añade las cerezas, cuece 2 minutos más y deja enfriar en el almíbar." }
+      ],
+      "tip": { "pt": "Na geladeira, num pote fechado, dura até 5 dias.", "en": "Keeps up to 5 days in a closed jar in the fridge.", "es": "En la nevera, en un bote cerrado, dura hasta 5 días." }
+    },
+    {
+      "id": "figs-in-syrup",
+      "group": "fruit",
+      "icon": "🍇",
+      "title": { "pt": "Figo em calda", "en": "Green figs in syrup", "es": "Higos en almíbar" },
+      "summary": { "pt": "Doce tradicional feito com figos verdes, ainda firmes, numa calda escura e perfumada.", "en": "A traditional sweet of firm green figs in a dark, fragrant syrup.", "es": "Dulce tradicional de higos verdes y firmes en un almíbar oscuro y perfumado." },
+      "serves": 8,
+      "minutes": 120,
+      "uses": ["fig", "sugarcane"],
+      "ingredients": [
+        { "pt": "1 kg de figos verdes (antes de amadurecer)", "en": "1 kg of unripe green figs", "es": "1 kg de higos verdes (antes de madurar)" },
+        { "pt": "1 kg de açúcar", "en": "1 kg of sugar", "es": "1 kg de azúcar" },
+        { "pt": "1 litro de água, cravos e 1 pau de canela", "en": "1 litre of water, cloves and 1 cinnamon stick", "es": "1 litro de agua, clavos y 1 rama de canela" }
+      ],
+      "steps": [
+        { "pt": "Faça um corte em cruz na base de cada figo e ferva em água por 10 minutos. Escorra e repita mais 2 vezes, trocando a água, para tirar o leite amargo.", "en": "Cut a cross in the base of each fig and boil 10 minutes. Drain and repeat 2 more times with fresh water to remove the bitter sap.", "es": "Haz un corte en cruz en la base de cada higo y hierve 10 minutos. Escurre y repite 2 veces más con agua nueva para quitar la savia amarga." },
+        { "pt": "Faça uma calda com o açúcar, a água e as especiarias.", "en": "Make a syrup with the sugar, water and spices.", "es": "Haz un almíbar con el azúcar, el agua y las especias." },
+        { "pt": "Cozinhe os figos na calda em fogo baixo por 1 hora, até ficarem escuros e brilhantes. Guarde em potes de vidro limpos.", "en": "Simmer the figs in the syrup for 1 hour until dark and glossy. Store in clean glass jars.", "es": "Cuece los higos en el almíbar a fuego bajo 1 hora, hasta que estén oscuros y brillantes. Guarda en frascos de vidrio limpios." }
+      ],
+      "safety": { "pt": "O leite do figo irrita a pele: use luvas ao cortar.", "en": "Fig sap irritates the skin: wear gloves when cutting.", "es": "La savia del higo irrita la piel: usa guantes al cortar." }
+    },
+    {
+      "id": "yogurt-persimmon",
+      "group": "fruit",
+      "icon": "🥛",
+      "title": { "pt": "Iogurte caseiro com caqui", "en": "Homemade yogurt with persimmon", "es": "Yogur casero con caqui" },
+      "summary": { "pt": "Iogurte natural feito com o leite da criação, servido com caqui bem maduro.", "en": "Plain yogurt made with your own milk, served with very ripe persimmon.", "es": "Yogur natural hecho con la leche de tus animales, servido con caqui bien maduro." },
+      "serves": 6,
+      "minutes": 600,
+      "uses": ["cows", "goats", "persimmon"],
+      "ingredients": [
+        { "pt": "1 litro de leite de vaca ou de cabra", "en": "1 litre of cow's or goat's milk", "es": "1 litro de leche de vaca o de cabra" },
+        { "pt": "1 pote (170 g) de iogurte natural integral, com fermento vivo", "en": "1 pot (170 g) of plain whole yogurt with live cultures", "es": "1 envase (170 g) de yogur natural entero con fermentos vivos" },
+        { "pt": "2 caquis maduros e mel a gosto", "en": "2 ripe persimmons and honey to taste", "es": "2 caquis maduros y miel al gusto" }
+      ],
+      "steps": [
+        { "pt": "Aqueça o leite até 85 °C (quase fervendo), mexendo, e deixe esfriar até 45 °C, quando der para manter o dedo dentro por 10 segundos.", "en": "Heat the milk to 85 °C (almost boiling), stirring, then cool to 45 °C, when you can hold a finger in it for 10 seconds.", "es": "Calienta la leche a 85 °C (casi hirviendo), removiendo, y deja enfriar a 45 °C, cuando puedas mantener el dedo dentro 10 segundos." },
+        { "pt": "Misture o iogurte, tampe e enrole a panela num cobertor, ou deixe no forno desligado com a luz acesa, por 8 a 10 horas.", "en": "Stir in the yogurt, cover and wrap the pan in a blanket, or leave in the switched-off oven with the light on, for 8 to 10 hours.", "es": "Añade el yogur, tapa y envuelve la olla en una manta, o déjala en el horno apagado con la luz encendida, de 8 a 10 horas." },
+        { "pt": "Quando firmar, leve à geladeira. Sirva com caqui em pedaços e mel.", "en": "Once set, refrigerate. Serve with persimmon pieces and honey.", "es": "Cuando cuaje, llévalo a la nevera. Sirve con caqui en trozos y miel." }
+      ],
+      "tip": { "pt": "Guarde meia xícara do seu iogurte para começar a próxima leva.", "en": "Keep half a cup of your yogurt to start the next batch.", "es": "Guarda media taza de tu yogur para empezar la siguiente tanda." },
+      "safety": { "pt": "Aquecer o leite a 85 °C é essencial com leite cru: elimina bactérias perigosas.", "en": "Heating to 85 °C is essential with raw milk: it kills dangerous bacteria.", "es": "Calentar a 85 °C es esencial con leche cruda: elimina bacterias peligrosas." }
+    },
+    {
+      "id": "cocada",
+      "group": "fruit",
+      "icon": "🥥",
+      "title": { "pt": "Cocada de leite", "en": "Brazilian coconut candy", "es": "Cocada de leche" },
+      "summary": { "pt": "Doce de coco fresco ralado, cozido no açúcar e no leite até dar ponto.", "en": "Fresh grated coconut cooked with sugar and milk until it sets.", "es": "Dulce de coco fresco rallado, cocido con azúcar y leche hasta que cuaja." },
+      "serves": 20,
+      "minutes": 40,
+      "uses": ["coconut", "sugarcane", "cows"],
+      "ingredients": [
+        { "pt": "1 coco seco ralado (cerca de 3 xícaras)", "en": "1 mature coconut, grated (about 3 cups)", "es": "1 coco seco rallado (unas 3 tazas)" },
+        { "pt": "2 xícaras de açúcar", "en": "2 cups of sugar", "es": "2 tazas de azúcar" },
+        { "pt": "1 xícara de leite", "en": "1 cup of milk", "es": "1 taza de leche" },
+        { "pt": "1 colher (sopa) de manteiga", "en": "1 tablespoon of butter", "es": "1 cucharada de mantequilla" }
+      ],
+      "steps": [
+        { "pt": "Leve tudo ao fogo médio numa panela grossa, mexendo sempre.", "en": "Put everything in a heavy pan over medium heat, stirring constantly.", "es": "Pon todo en una olla gruesa a fuego medio, removiendo sin parar." },
+        { "pt": "Cozinhe 20 a 25 minutos, até a mistura soltar do fundo da panela.", "en": "Cook 20 to 25 minutes, until the mixture pulls away from the pan.", "es": "Cuece de 20 a 25 minutos, hasta que la mezcla se despegue del fondo." },
+        { "pt": "Despeje em colheradas sobre uma superfície untada e deixe esfriar até firmar.", "en": "Drop spoonfuls onto a greased surface and leave to set.", "es": "Vierte cucharadas sobre una superficie engrasada y deja que cuajen." }
+      ],
+      "tip": { "pt": "Para abrir o coco, fure os olhos, escorra a água e leve 15 minutos ao forno: a casca racha e a polpa solta fácil.", "en": "To open the coconut, pierce the eyes, drain the water and bake 15 minutes: the shell cracks and the flesh comes away easily.", "es": "Para abrir el coco, perfora los ojos, escurre el agua y hornea 15 minutos: la cáscara se agrieta y la pulpa sale fácil." }
+    },
+    {
+      "id": "grape-juice",
+      "group": "drink",
+      "icon": "🍇",
+      "title": { "pt": "Suco de uva integral caseiro", "en": "Homemade pure grape juice", "es": "Zumo de uva casero" },
+      "summary": { "pt": "Extraído no vapor, sem água nem açúcar. Pode ser guardado em garrafas.", "en": "Steam-extracted with no added water or sugar. Can be bottled.", "es": "Extraído al vapor, sin agua ni azúcar. Se puede embotellar." },
+      "serves": 8,
+      "minutes": 60,
+      "uses": ["grape"],
+      "ingredients": [
+        { "pt": "3 kg de uvas maduras (Isabel, Bordô ou Niágara)", "en": "3 kg of ripe grapes (Concord-type grapes work best)", "es": "3 kg de uvas maduras (las de tipo Concord van mejor)" },
+        { "pt": "Panela extratora de suco, ou uma panela grande e um pano de coar", "en": "A steam juicer, or a large pot and a straining cloth", "es": "Una olla extractora de zumo, o una olla grande y un paño para colar" },
+        { "pt": "Garrafas de vidro limpas com tampa", "en": "Clean glass bottles with lids", "es": "Botellas de vidrio limpias con tapa" }
+      ],
+      "steps": [
+        { "pt": "Lave e desengace as uvas, descartando as estragadas.", "en": "Wash and destem the grapes, discarding any spoiled ones.", "es": "Lava y desgrana las uvas, desechando las estropeadas." },
+        { "pt": "Na extratora, cozinhe no vapor por 50 a 60 minutos e recolha o suco. Sem extratora: amasse, aqueça em fogo baixo por 15 minutos sem ferver e coe num pano.", "en": "In the steam juicer, steam for 50 to 60 minutes and collect the juice. Without one: crush, warm gently for 15 minutes without boiling and strain through cloth.", "es": "En la extractora, cuece al vapor de 50 a 60 minutos y recoge el zumo. Sin extractora: aplasta, calienta a fuego bajo 15 minutos sin hervir y cuela con un paño." },
+        { "pt": "Encha as garrafas com o suco ainda quente (acima de 85 °C), tampe e deixe esfriar de cabeça para baixo.", "en": "Fill the bottles with the juice still hot (above 85 °C), cap and cool upside down.", "es": "Llena las botellas con el zumo aún caliente (más de 85 °C), tapa y deja enfriar boca abajo." }
+      ],
+      "tip": { "pt": "Na hora de servir, dilua com água gelada se achar forte.", "en": "Dilute with cold water when serving if you find it strong.", "es": "Al servir, diluye con agua fría si lo encuentras fuerte." }
+    },
+    {
+      "id": "pineapple-mint-juice",
+      "group": "drink",
+      "icon": "🍍",
+      "title": { "pt": "Suco de abacaxi com hortelã e gengibre", "en": "Pineapple, mint and ginger juice", "es": "Zumo de piña con menta y jengibre" },
+      "summary": { "pt": "Refrescante para os dias de calor no campo.", "en": "A refresher for hot days in the field.", "es": "Refrescante para los días de calor en el campo." },
+      "serves": 4,
+      "minutes": 10,
+      "uses": ["pineapple", "mint", "ginger"],
+      "ingredients": [
+        { "pt": "Meio abacaxi descascado", "en": "Half a peeled pineapple", "es": "Media piña pelada" },
+        { "pt": "10 folhas de hortelã", "en": "10 mint leaves", "es": "10 hojas de menta" },
+        { "pt": "1 pedacinho de gengibre (1 cm)", "en": "A small piece of ginger (1 cm)", "es": "Un trocito de jengibre (1 cm)" },
+        { "pt": "1 litro de água gelada e açúcar a gosto", "en": "1 litre of cold water and sugar to taste", "es": "1 litro de agua fría y azúcar al gusto" }
+      ],
+      "steps": [
+        { "pt": "Corte o abacaxi em pedaços, tirando o miolo duro se quiser.", "en": "Cut the pineapple into chunks, removing the hard core if you like.", "es": "Corta la piña en trozos, quitando el centro duro si quieres." },
+        { "pt": "Bata com a hortelã, o gengibre e a água por 2 minutos.", "en": "Blend with the mint, ginger and water for 2 minutes.", "es": "Tritura con la menta, el jengibre y el agua 2 minutos." },
+        { "pt": "Coe, adoce se quiser e sirva com gelo.", "en": "Strain, sweeten if you like and serve over ice.", "es": "Cuela, endulza si quieres y sirve con hielo." }
+      ],
+      "tip": { "pt": "Ferva as cascas do abacaxi com água e cravo para fazer um chá refrescante.", "en": "Boil the pineapple peels with water and cloves for a refreshing tea.", "es": "Hierve las cáscaras de la piña con agua y clavo para un té refrescante." }
+    },
+    {
+      "id": "acerola-orange-juice",
+      "group": "drink",
+      "icon": "🍒",
+      "title": { "pt": "Suco de acerola com laranja", "en": "Acerola and orange juice", "es": "Zumo de acerola con naranja" },
+      "summary": { "pt": "Uma bomba de vitamina C, feita na hora.", "en": "A vitamin C boost, made fresh.", "es": "Una bomba de vitamina C, hecha al momento." },
+      "serves": 4,
+      "minutes": 10,
+      "uses": ["acerola", "orange"],
+      "ingredients": [
+        { "pt": "2 xícaras de acerolas maduras", "en": "2 cups of ripe acerolas", "es": "2 tazas de acerolas maduras" },
+        { "pt": "Suco de 4 laranjas", "en": "Juice of 4 oranges", "es": "Zumo de 4 naranjas" },
+        { "pt": "500 ml de água gelada", "en": "500 ml of cold water", "es": "500 ml de agua fría" },
+        { "pt": "Açúcar ou mel a gosto", "en": "Sugar or honey to taste", "es": "Azúcar o miel al gusto" }
+      ],
+      "steps": [
+        { "pt": "Lave as acerolas e tire os cabinhos.", "en": "Wash the acerolas and remove the stems.", "es": "Lava las acerolas y quita los rabitos." },
+        { "pt": "Bata com a água e o suco de laranja por 30 segundos, só para não quebrar os caroços.", "en": "Blend with the water and orange juice for just 30 seconds so the seeds do not break.", "es": "Tritura con el agua y el zumo de naranja solo 30 segundos para no romper las semillas." },
+        { "pt": "Coe, adoce e beba logo: a vitamina C cai rápido depois de batido.", "en": "Strain, sweeten and drink right away: vitamin C drops quickly once blended.", "es": "Cuela, endulza y bebe enseguida: la vitamina C baja rápido después de triturar." }
+      ],
+      "tip": { "pt": "Congele acerolas inteiras na safra: duram meses e o suco fica igual.", "en": "Freeze whole acerolas in season: they keep for months and make the same juice.", "es": "Congela las acerolas enteras en temporada: duran meses y el zumo queda igual." }
+    },
+    {
+      "id": "lemonade-stevia",
+      "group": "drink",
+      "icon": "🍋",
+      "title": { "pt": "Limonada com estévia e hortelã", "en": "Lemonade with stevia and mint", "es": "Limonada con estevia y menta" },
+      "summary": { "pt": "Adoçada com folhas de estévia do quintal, sem açúcar.", "en": "Sweetened with stevia leaves from the garden, no sugar.", "es": "Endulzada con hojas de estevia del huerto, sin azúcar." },
+      "serves": 4,
+      "minutes": 10,
+      "uses": ["lemon", "stevia", "mint"],
+      "ingredients": [
+        { "pt": "2 limões", "en": "2 lemons", "es": "2 limones" },
+        { "pt": "6 a 8 folhas frescas de estévia", "en": "6 to 8 fresh stevia leaves", "es": "6 a 8 hojas frescas de estevia" },
+        { "pt": "Algumas folhas de hortelã", "en": "A few mint leaves", "es": "Unas hojas de menta" },
+        { "pt": "1 litro de água gelada e gelo", "en": "1 litre of cold water and ice", "es": "1 litro de agua fría y hielo" }
+      ],
+      "steps": [
+        { "pt": "Bata a água com as folhas de estévia e de hortelã por 30 segundos.", "en": "Blend the water with the stevia and mint leaves for 30 seconds.", "es": "Tritura el agua con las hojas de estevia y de menta 30 segundos." },
+        { "pt": "Junte o suco dos limões (ou os limões em gomos, sem o miolo branco, batendo só 5 segundos).", "en": "Add the lemon juice (or lemon wedges without the white core, blending just 5 seconds).", "es": "Añade el zumo de los limones (o los limones en gajos sin el centro blanco, triturando solo 5 segundos)." },
+        { "pt": "Coe, prove e junte mais estévia se quiser mais doce. Sirva com gelo.", "en": "Strain, taste and add more stevia for extra sweetness. Serve over ice.", "es": "Cuela, prueba y añade más estevia si lo quieres más dulce. Sirve con hielo." }
+      ],
+      "tip": { "pt": "Folha de estévia adoça muito: comece com pouco, porque em excesso deixa gosto amargo.", "en": "Stevia leaves are very sweet: start with a few, as too many taste bitter.", "es": "La hoja de estevia endulza mucho: empieza con poca, porque en exceso amarga." }
+    },
+    {
+      "id": "herbal-tea",
+      "group": "drink",
+      "icon": "🍵",
+      "title": { "pt": "Chá calmante de camomila, melissa e capim-santo", "en": "Calming chamomile, lemon balm and lemongrass tea", "es": "Infusión de manzanilla, melisa y hierba limón" },
+      "summary": { "pt": "Chá da noite com três ervas do quintal, frescas ou secas.", "en": "An evening tea of three garden herbs, fresh or dried.", "es": "Infusión de noche con tres hierbas del huerto, frescas o secas." },
+      "serves": 2,
+      "minutes": 10,
+      "uses": ["chamomile", "lemonBalm", "lemongrass"],
+      "ingredients": [
+        { "pt": "1 colher (sopa) de flores de camomila", "en": "1 tablespoon of chamomile flowers", "es": "1 cucharada de flores de manzanilla" },
+        { "pt": "5 folhas de melissa (erva-cidreira)", "en": "5 lemon balm leaves", "es": "5 hojas de melisa" },
+        { "pt": "1 folha de capim-santo picada", "en": "1 lemongrass leaf, chopped", "es": "1 hoja de hierba limón picada" },
+        { "pt": "500 ml de água e mel a gosto", "en": "500 ml of water and honey to taste", "es": "500 ml de agua y miel al gusto" }
+      ],
+      "steps": [
+        { "pt": "Ferva a água e desligue o fogo.", "en": "Bring the water to the boil and turn off the heat.", "es": "Hierve el agua y apaga el fuego." },
+        { "pt": "Junte as ervas, tampe e deixe em infusão por 5 a 10 minutos.", "en": "Add the herbs, cover and steep for 5 to 10 minutes.", "es": "Añade las hierbas, tapa y deja reposar de 5 a 10 minutos." },
+        { "pt": "Coe e adoce com mel se quiser.", "en": "Strain and sweeten with honey if you like.", "es": "Cuela y endulza con miel si quieres." }
+      ],
+      "tip": { "pt": "Seque as ervas à sombra, em maços pendurados, e guarde em potes fechados.", "en": "Dry the herbs in the shade in hanging bunches and store in closed jars.", "es": "Seca las hierbas a la sombra en manojos colgados y guárdalas en botes cerrados." },
+      "safety": { "pt": "Quem tem alergia a margaridas e plantas parecidas pode reagir à camomila. Grávidas e quem toma remédio para dormir devem consultar um médico antes.", "en": "People allergic to daisies and similar plants may react to chamomile. Pregnant women and anyone on sleep medication should ask a doctor first.", "es": "Quien es alérgico a las margaritas y plantas parecidas puede reaccionar a la manzanilla. Embarazadas y quien toma medicación para dormir deben consultar a un médico antes." }
+    },
+    {
+      "id": "golden-milk",
+      "group": "drink",
+      "icon": "🥛",
+      "title": { "pt": "Leite dourado de cúrcuma e gengibre", "en": "Turmeric and ginger golden milk", "es": "Leche dorada de cúrcuma y jengibre" },
+      "summary": { "pt": "Bebida quente com a raiz fresca de cúrcuma e gengibre da horta.", "en": "A warm drink with fresh turmeric and ginger root from the garden.", "es": "Bebida caliente con raíz fresca de cúrcuma y jengibre del huerto." },
+      "serves": 2,
+      "minutes": 10,
+      "uses": ["turmeric", "ginger", "cows"],
+      "ingredients": [
+        { "pt": "500 ml de leite", "en": "500 ml of milk", "es": "500 ml de leche" },
+        { "pt": "2 cm de raiz de cúrcuma fresca ralada (ou 1 colher de chá em pó)", "en": "2 cm of fresh turmeric root, grated (or 1 teaspoon ground)", "es": "2 cm de raíz de cúrcuma fresca rallada (o 1 cucharadita en polvo)" },
+        { "pt": "1 cm de gengibre ralado", "en": "1 cm of grated ginger", "es": "1 cm de jengibre rallado" },
+        { "pt": "1 pitada de pimenta-do-reino, canela e mel a gosto", "en": "A pinch of black pepper, cinnamon and honey to taste", "es": "Una pizca de pimienta negra, canela y miel al gusto" }
+      ],
+      "steps": [
+        { "pt": "Aqueça o leite com a cúrcuma, o gengibre, a canela e a pimenta, sem ferver, por 5 minutos.", "en": "Warm the milk with the turmeric, ginger, cinnamon and pepper for 5 minutes without boiling.", "es": "Calienta la leche con la cúrcuma, el jengibre, la canela y la pimienta 5 minutos sin hervir." },
+        { "pt": "Coe numa peneira fina.", "en": "Strain through a fine sieve.", "es": "Cuela por un colador fino." },
+        { "pt": "Adoce com mel e beba quente.", "en": "Sweeten with honey and drink hot.", "es": "Endulza con miel y bebe caliente." }
+      ],
+      "tip": { "pt": "A cúrcuma fresca mancha mãos e tábuas: use luvas ao ralar.", "en": "Fresh turmeric stains hands and boards: wear gloves when grating.", "es": "La cúrcuma fresca mancha las manos y las tablas: usa guantes al rallar." }
+    },
+    {
+      "id": "home-roasted-coffee",
+      "group": "drink",
+      "icon": "☕",
+      "title": { "pt": "Café torrado em casa e coado no pano", "en": "Home-roasted coffee, brewed in a cloth filter", "es": "Café tostado en casa y colado en tela" },
+      "summary": { "pt": "Do grão seco no terreiro à xícara: torra na panela, moagem e coado.", "en": "From the sun-dried bean to the cup: pan roasting, grinding and brewing.", "es": "Del grano secado al sol a la taza: tostado en sartén, molienda y colado." },
+      "serves": 10,
+      "minutes": 40,
+      "uses": ["coffee"],
+      "ingredients": [
+        { "pt": "250 g de café beneficiado (grão verde, sem a casca)", "en": "250 g of green coffee beans, hulled", "es": "250 g de café verde, sin cáscara" },
+        { "pt": "Panela de ferro grossa e colher de pau", "en": "A heavy iron pan and a wooden spoon", "es": "Una sartén gruesa de hierro y una cuchara de madera" },
+        { "pt": "Para coar: 2 colheres (sopa) de pó para cada 200 ml de água", "en": "To brew: 2 tablespoons of ground coffee per 200 ml of water", "es": "Para colar: 2 cucharadas de café molido por cada 200 ml de agua" }
+      ],
+      "steps": [
+        { "pt": "Torre os grãos em fogo médio, mexendo sem parar, por 15 a 20 minutos. Primeiro ficam amarelos, depois estalam e chegam ao marrom-escuro.", "en": "Roast the beans over medium heat, stirring constantly, for 15 to 20 minutes. They turn yellow, then crack, then reach dark brown.", "es": "Tuesta los granos a fuego medio, removiendo sin parar, de 15 a 20 minutos. Primero amarillean, luego crujen y llegan al marrón oscuro." },
+        { "pt": "Espalhe numa peneira e abane para esfriar rápido e soltar a película. Espere 1 dia antes de moer.", "en": "Spread in a sieve and toss to cool quickly and loosen the chaff. Wait 1 day before grinding.", "es": "Extiende en un colador y agita para enfriar rápido y soltar la cascarilla. Espera 1 día antes de moler." },
+        { "pt": "Moa na hora. Ferva a água, deixe descansar 1 minuto (cerca de 92 °C) e despeje devagar sobre o pó no coador de pano.", "en": "Grind just before brewing. Boil the water, let it rest 1 minute (about 92 °C) and pour slowly over the grounds in the cloth filter.", "es": "Muele al momento. Hierve el agua, déjala reposar 1 minuto (unos 92 °C) y viértela despacio sobre el café en el colador de tela." }
+      ],
+      "tip": { "pt": "Guarde o café torrado em pote bem fechado, longe da luz, e moa só o que for usar.", "en": "Store roasted beans in a sealed jar away from light and grind only what you need.", "es": "Guarda el café tostado en un bote bien cerrado, lejos de la luz, y muele solo lo que vayas a usar." },
+      "safety": { "pt": "A torra solta muita fumaça: faça com a janela aberta ou ao ar livre.", "en": "Roasting gives off a lot of smoke: do it with the window open or outdoors.", "es": "El tostado suelta mucho humo: hazlo con la ventana abierta o al aire libre." }
+    },
+    {
+      "id": "hot-cocoa",
+      "group": "drink",
+      "icon": "🍫",
+      "title": { "pt": "Chocolate quente de cacau da roça", "en": "Farm cocoa hot chocolate", "es": "Chocolate caliente de cacao de la finca" },
+      "summary": { "pt": "Feito com amêndoas de cacau torradas e moídas em casa.", "en": "Made with cocoa beans roasted and ground at home.", "es": "Hecho con granos de cacao tostados y molidos en casa." },
+      "serves": 4,
+      "minutes": 15,
+      "uses": ["cacao", "cows", "sugarcane"],
+      "ingredients": [
+        { "pt": "100 g de amêndoas de cacau já fermentadas e secas", "en": "100 g of fermented, dried cocoa beans", "es": "100 g de granos de cacao fermentados y secos" },
+        { "pt": "1 litro de leite", "en": "1 litre of milk", "es": "1 litro de leche" },
+        { "pt": "4 colheres (sopa) de açúcar ou rapadura", "en": "4 tablespoons of sugar or rapadura", "es": "4 cucharadas de azúcar o panela" },
+        { "pt": "1 pitada de sal e canela", "en": "A pinch of salt and cinnamon", "es": "Una pizca de sal y canela" }
+      ],
+      "steps": [
+        { "pt": "Torre as amêndoas a 150 °C por 20 minutos, esfrie e descasque apertando com os dedos.", "en": "Roast the beans at 150 °C for 20 minutes, cool and peel by pinching them.", "es": "Tuesta los granos a 150 °C 20 minutos, enfría y pélalos apretando con los dedos." },
+        { "pt": "Moa os nibs no processador ou pilão até virar uma pasta.", "en": "Grind the nibs in a processor or mortar to a paste.", "es": "Muele los nibs en procesadora o mortero hasta formar una pasta." },
+        { "pt": "Aqueça o leite com a pasta, o açúcar, o sal e a canela, batendo com um batedor por 5 minutos. Coe se quiser mais liso.", "en": "Heat the milk with the paste, sugar, salt and cinnamon, whisking for 5 minutes. Strain for a smoother drink.", "es": "Calienta la leche con la pasta, el azúcar, la sal y la canela, batiendo 5 minutos. Cuela si lo quieres más suave." }
+      ],
+      "tip": { "pt": "O cacau precisa fermentar de 5 a 7 dias no cocho e secar ao sol antes de virar chocolate.", "en": "Cocoa must ferment 5 to 7 days in a box and dry in the sun before it can become chocolate.", "es": "El cacao debe fermentar de 5 a 7 días en un cajón y secarse al sol antes de convertirse en chocolate." }
+    },
+    {
+      "id": "hummus",
+      "group": "preserve",
+      "icon": "🫘",
+      "title": { "pt": "Homus de grão-de-bico", "en": "Chickpea hummus", "es": "Hummus de garbanzos" },
+      "summary": { "pt": "Pasta cremosa para passar no pão ou servir com legumes crus.", "en": "A creamy dip for bread or raw vegetables.", "es": "Crema para untar en pan o servir con verduras crudas." },
+      "serves": 6,
+      "minutes": 15,
+      "uses": ["chickpea", "garlic", "lemon"],
+      "ingredients": [
+        { "pt": "2 xícaras de grão-de-bico cozido e bem macio", "en": "2 cups of well-cooked chickpeas", "es": "2 tazas de garbanzos bien cocidos" },
+        { "pt": "3 colheres (sopa) de tahine (pasta de gergelim)", "en": "3 tablespoons of tahini", "es": "3 cucharadas de tahini" },
+        { "pt": "Suco de 1 limão e 1 dente de alho", "en": "Juice of 1 lemon and 1 garlic clove", "es": "Zumo de 1 limón y 1 diente de ajo" },
+        { "pt": "Azeite, sal, páprica e um pouco da água do cozimento", "en": "Olive oil, salt, paprika and a little cooking water", "es": "Aceite, sal, pimentón y un poco del agua de cocción" }
+      ],
+      "steps": [
+        { "pt": "Bata o grão-de-bico ainda morno com o tahine, o limão, o alho e o sal.", "en": "Blend the warm chickpeas with the tahini, lemon, garlic and salt.", "es": "Tritura los garbanzos templados con el tahini, el limón, el ajo y la sal." },
+        { "pt": "Junte a água do cozimento aos poucos até ficar bem cremoso.", "en": "Add cooking water little by little until very creamy.", "es": "Añade el agua de cocción poco a poco hasta que quede muy cremoso." },
+        { "pt": "Sirva com um fio de azeite e páprica por cima.", "en": "Serve with a drizzle of oil and paprika on top.", "es": "Sirve con un chorrito de aceite y pimentón por encima." }
+      ],
+      "tip": { "pt": "Na geladeira, dura 4 dias num pote fechado.", "en": "Keeps 4 days in a closed jar in the fridge.", "es": "En la nevera dura 4 días en un bote cerrado." }
+    },
+    {
+      "id": "guacamole",
+      "group": "preserve",
+      "icon": "🥑",
+      "title": { "pt": "Guacamole", "en": "Guacamole", "es": "Guacamole" },
+      "summary": { "pt": "Abacate amassado com tomate, cebola, coentro, pimenta e limão.", "en": "Mashed avocado with tomato, onion, coriander, chilli and lime.", "es": "Aguacate machacado con tomate, cebolla, cilantro, chile y limón." },
+      "serves": 4,
+      "minutes": 10,
+      "uses": ["avocado", "tomato", "onion", "cilantro", "chiliPepper", "lemon"],
+      "ingredients": [
+        { "pt": "2 abacates maduros (ou 1 abacate grande)", "en": "2 ripe avocados (or 1 large one)", "es": "2 aguacates maduros (o 1 grande)" },
+        { "pt": "1 tomate sem sementes e meia cebola, picados bem fino", "en": "1 seeded tomato and half an onion, finely chopped", "es": "1 tomate sin semillas y media cebolla, picados muy finos" },
+        { "pt": "1 pimenta picada e coentro", "en": "1 chilli, chopped, and coriander", "es": "1 chile picado y cilantro" },
+        { "pt": "Suco de 1 limão e sal", "en": "Juice of 1 lime and salt", "es": "Zumo de 1 limón y sal" }
+      ],
+      "steps": [
+        { "pt": "Amasse o abacate com um garfo, deixando uns pedaços.", "en": "Mash the avocado with a fork, leaving some chunks.", "es": "Machaca el aguacate con un tenedor, dejando algunos trozos." },
+        { "pt": "Junte o limão e o sal logo, para não escurecer.", "en": "Add the lime and salt straight away so it does not brown.", "es": "Añade el limón y la sal enseguida para que no se oscurezca." },
+        { "pt": "Misture o tomate, a cebola, a pimenta e o coentro e sirva na hora.", "en": "Stir in the tomato, onion, chilli and coriander and serve at once.", "es": "Mezcla el tomate, la cebolla, el chile y el cilantro y sirve enseguida." }
+      ]
+    },
+    {
+      "id": "jabuticaba-jam",
+      "group": "preserve",
+      "icon": "🫐",
+      "title": { "pt": "Geleia de jabuticaba", "en": "Jabuticaba jam", "es": "Mermelada de jabuticaba" },
+      "summary": { "pt": "A safra é curta e farta: a geleia guarda o sabor para o ano todo.", "en": "The harvest is short and abundant: jam keeps the flavour all year.", "es": "La cosecha es corta y abundante: la mermelada guarda el sabor todo el año." },
+      "serves": 10,
+      "minutes": 60,
+      "uses": ["jabuticaba", "sugarcane", "lemon"],
+      "ingredients": [
+        { "pt": "1 kg de jabuticabas maduras", "en": "1 kg of ripe jabuticabas", "es": "1 kg de jabuticabas maduras" },
+        { "pt": "500 g de açúcar", "en": "500 g of sugar", "es": "500 g de azúcar" },
+        { "pt": "Suco de 1 limão", "en": "Juice of 1 lemon", "es": "Zumo de 1 limón" },
+        { "pt": "2 xícaras de água", "en": "2 cups of water", "es": "2 tazas de agua" }
+      ],
+      "steps": [
+        { "pt": "Lave as frutas, aperte uma a uma para soltar a polpa e ferva as cascas na água por 20 minutos (é delas que vem a cor e a pectina).", "en": "Wash the fruit, squeeze each one to pop out the pulp and boil the skins in the water for 20 minutes (they give the colour and pectin).", "es": "Lava las frutas, aprieta cada una para sacar la pulpa y hierve las pieles en el agua 20 minutos (dan el color y la pectina)." },
+        { "pt": "Bata as cascas com a água, junte a polpa e passe na peneira para tirar os caroços.", "en": "Blend the skins with their water, add the pulp and push through a sieve to remove the seeds.", "es": "Tritura las pieles con su agua, añade la pulpa y pasa por un colador para quitar las semillas." },
+        { "pt": "Cozinhe com o açúcar e o limão, mexendo, por 30 a 40 minutos, até dar ponto: uma gota num pires frio não escorre.", "en": "Cook with the sugar and lemon, stirring, for 30 to 40 minutes, until set: a drop on a cold saucer does not run.", "es": "Cuece con el azúcar y el limón, removiendo, de 30 a 40 minutos, hasta el punto: una gota en un plato frío no corre." },
+        { "pt": "Encha potes de vidro esterilizados com a geleia quente, tampe e vire de cabeça para baixo até esfriar.", "en": "Fill sterilised glass jars with the hot jam, close and turn upside down until cool.", "es": "Llena frascos de vidrio esterilizados con la mermelada caliente, cierra y pon boca abajo hasta que enfríe." }
+      ],
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." }
+    },
+    {
+      "id": "berry-jam",
+      "group": "preserve",
+      "icon": "🍓",
+      "title": { "pt": "Geleia de frutas vermelhas", "en": "Mixed berry jam", "es": "Mermelada de frutos rojos" },
+      "summary": { "pt": "Morango, framboesa, amora e mirtilo juntos numa geleia só.", "en": "Strawberries, raspberries, blackberries and blueberries in one jam.", "es": "Fresas, frambuesas, moras y arándanos en una sola mermelada." },
+      "serves": 10,
+      "minutes": 40,
+      "uses": ["strawberry", "raspberry", "blackberry", "blueberry", "lemon", "sugarcane"],
+      "ingredients": [
+        { "pt": "1 kg de frutas vermelhas misturadas (morango, framboesa, amora, mirtilo)", "en": "1 kg of mixed berries (strawberry, raspberry, blackberry, blueberry)", "es": "1 kg de frutos rojos variados (fresa, frambuesa, mora, arándano)" },
+        { "pt": "600 g de açúcar", "en": "600 g of sugar", "es": "600 g de azúcar" },
+        { "pt": "Suco de 1 limão", "en": "Juice of 1 lemon", "es": "Zumo de 1 limón" }
+      ],
+      "steps": [
+        { "pt": "Lave as frutas, corte os morangos em pedaços e misture tudo com o açúcar. Deixe 1 hora para soltar o suco.", "en": "Wash the fruit, cut the strawberries and mix everything with the sugar. Leave 1 hour to release the juice.", "es": "Lava la fruta, corta las fresas y mezcla todo con el azúcar. Deja 1 hora para que suelte el jugo." },
+        { "pt": "Cozinhe com o limão em fogo médio, mexendo e tirando a espuma, por 20 a 25 minutos, até dar ponto no pires frio.", "en": "Cook with the lemon over medium heat, stirring and skimming, for 20 to 25 minutes, until it sets on a cold saucer.", "es": "Cuece con el limón a fuego medio, removiendo y quitando la espuma, de 20 a 25 minutos, hasta que cuaje en un plato frío." },
+        { "pt": "Envase quente em potes esterilizados, tampe e vire de cabeça para baixo.", "en": "Pot hot into sterilised jars, close and turn upside down.", "es": "Envasa en caliente en frascos esterilizados, cierra y pon boca abajo." }
+      ],
+      "tip": { "pt": "Frutas congeladas da safra servem igual.", "en": "Berries frozen at harvest work just as well.", "es": "Las frutas congeladas en temporada sirven igual." },
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." }
+    },
+    {
+      "id": "pesto",
+      "group": "preserve",
+      "icon": "🌿",
+      "title": { "pt": "Pesto de manjericão com girassol", "en": "Basil and sunflower seed pesto", "es": "Pesto de albahaca con pipas de girasol" },
+      "summary": { "pt": "O molho genovês com sementes de girassol no lugar dos pinhões. Para massa, pão ou legumes.", "en": "The Genoese sauce with sunflower seeds instead of pine nuts. For pasta, bread or vegetables.", "es": "La salsa genovesa con pipas de girasol en lugar de piñones. Para pasta, pan o verduras." },
+      "serves": 6,
+      "minutes": 10,
+      "uses": ["basil", "garlic", "sunflower", "cows"],
+      "ingredients": [
+        { "pt": "2 xícaras de folhas de manjericão", "en": "2 cups of basil leaves", "es": "2 tazas de hojas de albahaca" },
+        { "pt": "3 colheres (sopa) de sementes de girassol torradas", "en": "3 tablespoons of toasted sunflower seeds", "es": "3 cucharadas de pipas de girasol tostadas" },
+        { "pt": "1 dente de alho e 50 g de queijo curado ralado", "en": "1 garlic clove and 50 g of grated hard cheese", "es": "1 diente de ajo y 50 g de queso curado rallado" },
+        { "pt": "Meia xícara de azeite e sal", "en": "Half a cup of olive oil and salt", "es": "Media taza de aceite y sal" }
+      ],
+      "steps": [
+        { "pt": "Bata o manjericão, as sementes, o alho e o sal no processador ou amasse no pilão.", "en": "Blitz the basil, seeds, garlic and salt in a processor or pound in a mortar.", "es": "Tritura la albahaca, las pipas, el ajo y la sal en la procesadora o machaca en el mortero." },
+        { "pt": "Junte o azeite em fio até virar uma pasta solta.", "en": "Drizzle in the oil until it becomes a loose paste.", "es": "Añade el aceite en hilo hasta formar una pasta suelta." },
+        { "pt": "Misture o queijo no fim e acerte o sal.", "en": "Stir in the cheese at the end and season.", "es": "Incorpora el queso al final y ajusta la sal." }
+      ],
+      "tip": { "pt": "Cubra com uma camada de azeite para não escurecer.", "en": "Cover with a layer of oil so it does not darken.", "es": "Cúbrelo con una capa de aceite para que no se oscurezca." },
+      "safety": { "pt": "Alho cru no óleo pode causar botulismo: guarde na geladeira e use em até 5 dias, ou congele em forminhas de gelo.", "en": "Raw garlic in oil can cause botulism: keep in the fridge and use within 5 days, or freeze in ice-cube trays.", "es": "El ajo crudo en aceite puede causar botulismo: guárdalo en la nevera y úsalo en 5 días, o congélalo en cubiteras." }
+    },
+    {
+      "id": "green-sauce",
+      "group": "preserve",
+      "icon": "🌶️",
+      "title": { "pt": "Molho verde de ervas (chimichurri)", "en": "Herb green sauce (chimichurri)", "es": "Salsa verde de hierbas (chimichurri)" },
+      "summary": { "pt": "Ervas picadas com alho, pimenta e vinagre. Para churrasco, ovos e legumes.", "en": "Chopped herbs with garlic, chilli and vinegar. For grilled meat, eggs and vegetables.", "es": "Hierbas picadas con ajo, guindilla y vinagre. Para asados, huevos y verduras." },
+      "serves": 8,
+      "minutes": 10,
+      "uses": ["parsley", "oregano", "cilantro", "garlic", "chiliPepper"],
+      "ingredients": [
+        { "pt": "1 maço de salsinha e meio de coentro, picados", "en": "1 bunch of parsley and half a bunch of coriander, chopped", "es": "1 manojo de perejil y medio de cilantro, picados" },
+        { "pt": "1 colher (sopa) de orégano fresco ou seco", "en": "1 tablespoon of fresh or dried oregano", "es": "1 cucharada de orégano fresco o seco" },
+        { "pt": "3 dentes de alho e 1 pimenta, picados", "en": "3 garlic cloves and 1 chilli, chopped", "es": "3 dientes de ajo y 1 guindilla, picados" },
+        { "pt": "3 colheres (sopa) de vinagre, meia xícara de azeite e sal", "en": "3 tablespoons of vinegar, half a cup of olive oil and salt", "es": "3 cucharadas de vinagre, media taza de aceite y sal" }
+      ],
+      "steps": [
+        { "pt": "Pique tudo a faca, bem fino. No processador vira pasta.", "en": "Chop everything very finely by hand. A processor turns it into paste.", "es": "Pica todo muy fino a cuchillo. En la procesadora queda como pasta." },
+        { "pt": "Misture com o vinagre e o sal e depois com o azeite.", "en": "Mix with the vinegar and salt, then the oil.", "es": "Mezcla con el vinagre y la sal y luego con el aceite." },
+        { "pt": "Deixe descansar 30 minutos antes de servir.", "en": "Let it rest 30 minutes before serving.", "es": "Deja reposar 30 minutos antes de servir." }
+      ],
+      "safety": { "pt": "Guarde na geladeira e use em até 1 semana: alho e ervas cruas no óleo não devem ficar fora dela.", "en": "Keep in the fridge and use within 1 week: raw garlic and herbs in oil should not sit out.", "es": "Guárdala en la nevera y úsala en 1 semana: el ajo y las hierbas crudas en aceite no deben quedarse fuera." }
+    },
+    {
+      "id": "tzatziki",
+      "group": "preserve",
+      "icon": "🥒",
+      "title": { "pt": "Molho de iogurte com pepino e endro", "en": "Cucumber and dill yogurt sauce (tzatziki)", "es": "Salsa de yogur con pepino y eneldo (tzatziki)" },
+      "summary": { "pt": "Fresco e cremoso, feito com o iogurte da casa. Vai com carnes, pão e batata.", "en": "Fresh and creamy, made with homemade yogurt. Goes with meat, bread and potatoes.", "es": "Fresca y cremosa, hecha con yogur de casa. Va con carnes, pan y patatas." },
+      "serves": 6,
+      "minutes": 15,
+      "uses": ["cucumber", "dill", "mint", "garlic", "goats", "cows"],
+      "ingredients": [
+        { "pt": "2 xícaras de iogurte natural firme (de vaca ou de cabra)", "en": "2 cups of thick plain yogurt (cow or goat)", "es": "2 tazas de yogur natural espeso (de vaca o de cabra)" },
+        { "pt": "1 pepino ralado", "en": "1 cucumber, grated", "es": "1 pepino rallado" },
+        { "pt": "1 dente de alho ralado", "en": "1 garlic clove, grated", "es": "1 diente de ajo rallado" },
+        { "pt": "Endro e hortelã picados, azeite, limão e sal", "en": "Chopped dill and mint, olive oil, lemon and salt", "es": "Eneldo y menta picados, aceite, limón y sal" }
+      ],
+      "steps": [
+        { "pt": "Salgue o pepino ralado, deixe 10 minutos e esprema bem num pano para tirar a água.", "en": "Salt the grated cucumber, leave 10 minutes and squeeze out the water in a cloth.", "es": "Sala el pepino rallado, deja 10 minutos y escúrrelo bien en un paño." },
+        { "pt": "Misture com o iogurte, o alho, as ervas e um fio de limão.", "en": "Mix with the yogurt, garlic, herbs and a squeeze of lemon.", "es": "Mezcla con el yogur, el ajo, las hierbas y un chorrito de limón." },
+        { "pt": "Finalize com azeite e leve à geladeira por 30 minutos.", "en": "Finish with olive oil and chill for 30 minutes.", "es": "Termina con aceite y refrigera 30 minutos." }
+      ],
+      "tip": { "pt": "Para engrossar o iogurte caseiro, deixe-o escorrer num pano por 2 horas na geladeira.", "en": "To thicken homemade yogurt, drain it in a cloth for 2 hours in the fridge.", "es": "Para espesar el yogur casero, escúrrelo en un paño 2 horas en la nevera." }
+    },
+    {
+      "id": "herb-butter",
+      "group": "preserve",
+      "icon": "🧈",
+      "title": { "pt": "Manteiga caseira com ervas", "en": "Homemade herb butter", "es": "Mantequilla casera con hierbas" },
+      "summary": { "pt": "Manteiga batida da nata do leite, temperada com ervas da horta.", "en": "Butter churned from your own cream, flavoured with garden herbs.", "es": "Mantequilla batida de la nata de la leche, con hierbas del huerto." },
+      "serves": 8,
+      "minutes": 30,
+      "uses": ["cows", "sage", "tarragon", "chives", "parsley"],
+      "ingredients": [
+        { "pt": "500 ml de nata (creme de leite fresco) bem gelada", "en": "500 ml of well-chilled cream", "es": "500 ml de nata bien fría" },
+        { "pt": "2 colheres (sopa) de ervas picadas: sálvia, estragão, cebolinha e salsinha", "en": "2 tablespoons of chopped herbs: sage, tarragon, chives and parsley", "es": "2 cucharadas de hierbas picadas: salvia, estragón, cebollino y perejil" },
+        { "pt": "Meia colher (chá) de sal", "en": "Half a teaspoon of salt", "es": "Media cucharadita de sal" },
+        { "pt": "Água gelada", "en": "Iced water", "es": "Agua helada" }
+      ],
+      "steps": [
+        { "pt": "Bata a nata na batedeira por 8 a 12 minutos: ela vira chantili e depois separa em manteiga e soro.", "en": "Beat the cream for 8 to 12 minutes: it whips, then splits into butter and buttermilk.", "es": "Bate la nata de 8 a 12 minutos: primero se monta y luego se separa en mantequilla y suero." },
+        { "pt": "Escorra o soro (guarde para bolos) e lave a manteiga em água gelada, apertando, até a água sair limpa.", "en": "Drain the buttermilk (keep it for baking) and wash the butter in iced water, pressing, until the water runs clear.", "es": "Escurre el suero (guárdalo para bizcochos) y lava la mantequilla en agua helada, apretando, hasta que el agua salga limpia." },
+        { "pt": "Misture o sal e as ervas, enrole num papel-manteiga e leve à geladeira.", "en": "Work in the salt and herbs, roll up in baking paper and refrigerate.", "es": "Mezcla la sal y las hierbas, enróllala en papel de horno y refrigera." }
+      ],
+      "tip": { "pt": "Lavar bem a manteiga tira o soro que a faria azedar rápido.", "en": "Washing the butter well removes the buttermilk that would make it sour quickly.", "es": "Lavar bien la mantequilla quita el suero que la haría agriarse pronto." },
+      "safety": { "pt": "Nata de leite cru: pasteurize antes, aquecendo a 72 °C por 15 segundos e esfriando rápido.", "en": "Cream from raw milk: pasteurise it first by heating to 72 °C for 15 seconds and cooling quickly.", "es": "Nata de leche cruda: pasteurízala antes, calentándola a 72 °C 15 segundos y enfriando rápido." }
+    },
+    {
+      "id": "quick-pickles",
+      "group": "preserve",
+      "icon": "🥒",
+      "title": { "pt": "Picles rápido de legumes", "en": "Quick vegetable pickles", "es": "Encurtidos rápidos de verduras" },
+      "summary": { "pt": "Legumes crocantes numa salmoura de vinagre. Prontos em 1 dia, sem fermentação.", "en": "Crunchy vegetables in a vinegar brine. Ready in 1 day, no fermenting.", "es": "Verduras crujientes en salmuera de vinagre. Listas en 1 día, sin fermentar." },
+      "serves": 10,
+      "minutes": 30,
+      "uses": ["cucumber", "radish", "carrot", "cauliflower", "onion", "dill", "garlic"],
+      "ingredients": [
+        { "pt": "2 pepinos, 6 rabanetes e 2 cenouras em palitos ou rodelas", "en": "2 cucumbers, 6 radishes and 2 carrots in sticks or slices", "es": "2 pepinos, 6 rábanos y 2 zanahorias en bastones o rodajas" },
+        { "pt": "1 xícara de floretes de couve-flor e meia cebola em fatias", "en": "1 cup of cauliflower florets and half an onion, sliced", "es": "1 taza de ramilletes de coliflor y media cebolla en tiras" },
+        { "pt": "Endro e 3 dentes de alho", "en": "Dill and 3 garlic cloves", "es": "Eneldo y 3 dientes de ajo" },
+        { "pt": "Salmoura: 2 xícaras de vinagre, 2 de água, 2 colheres (sopa) de açúcar e 1 de sal", "en": "Brine: 2 cups of vinegar, 2 of water, 2 tablespoons of sugar and 1 of salt", "es": "Salmuera: 2 tazas de vinagre, 2 de agua, 2 cucharadas de azúcar y 1 de sal" }
+      ],
+      "steps": [
+        { "pt": "Arrume os legumes, o alho e o endro bem apertados em potes de vidro limpos.", "en": "Pack the vegetables, garlic and dill tightly into clean glass jars.", "es": "Coloca las verduras, el ajo y el eneldo bien apretados en frascos de vidrio limpios." },
+        { "pt": "Ferva a salmoura até dissolver o sal e o açúcar.", "en": "Boil the brine until the salt and sugar dissolve.", "es": "Hierve la salmuera hasta que se disuelvan la sal y el azúcar." },
+        { "pt": "Despeje quente sobre os legumes até cobrir, tampe, espere esfriar e leve à geladeira. Prontos no dia seguinte.", "en": "Pour over the vegetables while hot to cover, close, cool and refrigerate. Ready the next day.", "es": "Viértela caliente sobre las verduras hasta cubrir, cierra, deja enfriar y refrigera. Listos al día siguiente." }
+      ],
+      "safety": { "pt": "Estes picles não são esterilizados: mantenha na geladeira e consuma em até 1 mês.", "en": "These pickles are not heat-processed: keep in the fridge and eat within 1 month.", "es": "Estos encurtidos no están esterilizados: mantenlos en la nevera y consúmelos en 1 mes." }
+    },
+    {
+      "id": "hot-sauce",
+      "group": "preserve",
+      "icon": "🌶️",
+      "title": { "pt": "Molho de pimenta caseiro", "en": "Homemade chilli sauce", "es": "Salsa picante casera" },
+      "summary": { "pt": "Pimentas da horta batidas com alho e vinagre. Dura meses na geladeira.", "en": "Garden chillies blended with garlic and vinegar. Keeps for months in the fridge.", "es": "Guindillas del huerto trituradas con ajo y vinagre. Dura meses en la nevera." },
+      "serves": 20,
+      "minutes": 30,
+      "uses": ["chiliPepper", "garlic"],
+      "ingredients": [
+        { "pt": "200 g de pimentas (dedo-de-moça, malagueta ou de cheiro)", "en": "200 g of chillies", "es": "200 g de guindillas o chiles" },
+        { "pt": "4 dentes de alho", "en": "4 garlic cloves", "es": "4 dientes de ajo" },
+        { "pt": "1 xícara de vinagre", "en": "1 cup of vinegar", "es": "1 taza de vinagre" },
+        { "pt": "1 colher (chá) de sal e 1 de açúcar", "en": "1 teaspoon each of salt and sugar", "es": "1 cucharadita de sal y 1 de azúcar" }
+      ],
+      "steps": [
+        { "pt": "Use luvas. Tire os cabinhos e, se quiser menos ardido, as sementes.", "en": "Wear gloves. Remove the stems and, for less heat, the seeds.", "es": "Usa guantes. Quita los rabitos y, para que pique menos, las semillas." },
+        { "pt": "Ferva as pimentas, o alho e o vinagre por 10 minutos.", "en": "Simmer the chillies, garlic and vinegar for 10 minutes.", "es": "Hierve las guindillas, el ajo y el vinagre 10 minutos." },
+        { "pt": "Bata com o sal e o açúcar até ficar liso e envase quente em garrafinhas limpas.", "en": "Blend with the salt and sugar until smooth and bottle while hot in clean bottles.", "es": "Tritura con la sal y el azúcar hasta que quede liso y embotella en caliente en botellitas limpias." }
+      ],
+      "safety": { "pt": "Não ponha a mão nos olhos depois de mexer com pimenta. Guarde o molho na geladeira.", "en": "Do not touch your eyes after handling chillies. Keep the sauce in the fridge.", "es": "No te toques los ojos después de manipular guindillas. Guarda la salsa en la nevera." }
+    },
+    {
+      "id": "tomato-sauce",
+      "group": "preserve",
+      "icon": "🍅",
+      "title": { "pt": "Molho de tomate caseiro", "en": "Homemade tomato sauce", "es": "Salsa de tomate casera" },
+      "summary": { "pt": "Para aproveitar a safra: congela bem e serve para massa, carne e pizza.", "en": "Makes the most of the harvest: freezes well and works for pasta, meat and pizza.", "es": "Para aprovechar la cosecha: se congela bien y sirve para pasta, carne y pizza." },
+      "serves": 8,
+      "minutes": 60,
+      "uses": ["tomato", "onion", "garlic", "basil", "oregano"],
+      "ingredients": [
+        { "pt": "2 kg de tomates bem maduros", "en": "2 kg of very ripe tomatoes", "es": "2 kg de tomates muy maduros" },
+        { "pt": "1 cebola e 4 dentes de alho picados", "en": "1 onion and 4 garlic cloves, chopped", "es": "1 cebolla y 4 dientes de ajo picados" },
+        { "pt": "Folhas de manjericão e orégano", "en": "Basil leaves and oregano", "es": "Hojas de albahaca y orégano" },
+        { "pt": "Azeite, sal e 1 colher (chá) de açúcar", "en": "Olive oil, salt and 1 teaspoon of sugar", "es": "Aceite, sal y 1 cucharadita de azúcar" }
+      ],
+      "steps": [
+        { "pt": "Faça um corte em cruz nos tomates, mergulhe 1 minuto em água fervente e depois em água fria. Tire a pele e as sementes e pique.", "en": "Score a cross in the tomatoes, dip in boiling water for 1 minute then cold water. Peel, seed and chop.", "es": "Haz un corte en cruz en los tomates, sumérgelos 1 minuto en agua hirviendo y luego en agua fría. Pélalos, quita las semillas y pícalos." },
+        { "pt": "Refogue a cebola e o alho no azeite, junte os tomates, o sal e o açúcar.", "en": "Sauté the onion and garlic in oil, add the tomatoes, salt and sugar.", "es": "Sofríe la cebolla y el ajo en aceite, añade los tomates, la sal y el azúcar." },
+        { "pt": "Cozinhe destampado em fogo baixo por 40 minutos, mexendo de vez em quando. Junte as ervas no fim.", "en": "Simmer uncovered for 40 minutes, stirring now and then. Add the herbs at the end.", "es": "Cuece destapado a fuego bajo 40 minutos, removiendo de vez en cuando. Añade las hierbas al final." }
+      ],
+      "tip": { "pt": "Congele em potes ou sacos, em porções: dura 6 meses.", "en": "Freeze in tubs or bags in portions: keeps 6 months.", "es": "Congela en botes o bolsas por porciones: dura 6 meses." },
+      "safety": { "pt": "Guardar em vidro fora da geladeira exige técnica de conserva com acidez e tempo de banho-maria corretos. Na dúvida, congele.", "en": "Storing in jars outside the fridge needs proper canning with added acid and the right water-bath time. If in doubt, freeze.", "es": "Guardar en frascos fuera de la nevera exige técnica de conserva con acidez y tiempo de baño maría correctos. Ante la duda, congela." }
+    },
+    {
+      "id": "cured-olives",
+      "group": "preserve",
+      "icon": "🫒",
+      "title": { "pt": "Azeitonas curtidas em salmoura", "en": "Brine-cured olives", "es": "Aceitunas curadas en salmuera" },
+      "summary": { "pt": "A azeitona tirada do pé é amarga demais para comer: a salmoura tira o amargor em algumas semanas.", "en": "Olives straight off the tree are far too bitter to eat: brine removes the bitterness over a few weeks.", "es": "La aceituna recién cogida es demasiado amarga: la salmuera le quita el amargor en unas semanas." },
+      "serves": 20,
+      "minutes": 30,
+      "uses": ["olive", "garlic", "oregano", "lemon"],
+      "ingredients": [
+        { "pt": "1 kg de azeitonas frescas, sem machucados", "en": "1 kg of fresh, unbruised olives", "es": "1 kg de aceitunas frescas, sin golpes" },
+        { "pt": "Salmoura: 100 g de sal grosso por litro de água", "en": "Brine: 100 g of coarse salt per litre of water", "es": "Salmuera: 100 g de sal gruesa por litro de agua" },
+        { "pt": "Para temperar: alho, orégano, casca de limão e azeite", "en": "To flavour: garlic, oregano, lemon peel and olive oil", "es": "Para aliñar: ajo, orégano, piel de limón y aceite" }
+      ],
+      "steps": [
+        { "pt": "Faça um corte em cada azeitona com uma faca, até o caroço.", "en": "Slit each olive with a knife down to the stone.", "es": "Haz un corte en cada aceituna con un cuchillo hasta el hueso." },
+        { "pt": "Cubra com água e troque a água todo dia, por 10 a 14 dias, até o amargor diminuir.", "en": "Cover with water and change it every day for 10 to 14 days, until the bitterness eases.", "es": "Cubre con agua y cámbiala cada día de 10 a 14 días, hasta que baje el amargor." },
+        { "pt": "Passe para potes de vidro com a salmoura, cubra totalmente e deixe 2 a 4 semanas em lugar fresco, provando de vez em quando.", "en": "Move to glass jars with the brine, fully covered, and leave 2 to 4 weeks somewhere cool, tasting now and then.", "es": "Pásalas a frascos de vidrio con la salmuera, totalmente cubiertas, y déjalas de 2 a 4 semanas en un lugar fresco, probando de vez en cuando." },
+        { "pt": "Na hora de servir, escorra e tempere com alho, orégano, casca de limão e azeite.", "en": "To serve, drain and dress with garlic, oregano, lemon peel and olive oil.", "es": "Al servir, escurre y aliña con ajo, orégano, piel de limón y aceite." }
+      ],
+      "safety": { "pt": "As azeitonas precisam ficar sempre cobertas pela salmoura. Descarte se ficarem moles, com cheiro ruim ou mofo colorido. Depois de temperadas com alho e azeite, guarde na geladeira.", "en": "Keep the olives fully under the brine. Discard them if they turn soft, smell bad or grow coloured mould. Once dressed with garlic and oil, keep in the fridge.", "es": "Las aceitunas deben estar siempre cubiertas por la salmuera. Deséchalas si se ablandan, huelen mal o tienen moho de color. Una vez aliñadas con ajo y aceite, guárdalas en la nevera." }
     }
   ]
 }

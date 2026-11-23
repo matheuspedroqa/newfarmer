@@ -473,8 +473,14 @@
     "intro": "Recetas con lo que sale de la huerta y de los animales.",
     "groups": {
       "chicken": "Pollo",
+      "meat": "Cerdo, pato y cordero",
       "cheese": "Quesos",
-      "salad": "Ensaladas"
+      "salad": "Ensaladas",
+      "vegetable": "Verduras y hortalizas",
+      "grain": "Granos, panes y bizcochos",
+      "fruit": "Frutas y dulces",
+      "drink": "Infusiones y bebidas",
+      "preserve": "Salsas y conservas"
     },
     "serves": "{count} porciones",
     "minutes": "{count} min",
@@ -482,7 +488,8 @@
     "steps": "Preparación",
     "tip": "Consejo",
     "safety": "Seguridad",
-    "back": "Recetas"
+    "back": "Recetas",
+    "with": "Recetas con {name}"
   },
   "content": {
     "sources": "Fuentes",

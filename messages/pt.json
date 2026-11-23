@@ -473,8 +473,14 @@
     "intro": "Receitas com o que sai da horta e dos animais.",
     "groups": {
       "chicken": "Frango",
+      "meat": "Porco, pato e cordeiro",
       "cheese": "Queijos",
-      "salad": "Saladas"
+      "salad": "Saladas",
+      "vegetable": "Legumes e verduras",
+      "grain": "Grãos, pães e bolos",
+      "fruit": "Frutas e doces",
+      "drink": "Chás e bebidas",
+      "preserve": "Molhos e conservas"
     },
     "serves": "{count} porções",
     "minutes": "{count} min",
@@ -482,7 +488,8 @@
     "steps": "Modo de fazer",
     "tip": "Dica",
     "safety": "Segurança",
-    "back": "Receitas"
+    "back": "Receitas",
+    "with": "Receitas com {name}"
   },
   "content": {
     "sources": "Fontes",

@@ -61,7 +61,7 @@ export const cropContentSchema = z.object({
 });
 export type CropContent = z.infer<typeof cropContentSchema>;
 
-export const RECIPE_GROUPS = ["chicken", "cheese", "salad"] as const;
+export const RECIPE_GROUPS = ["chicken", "meat", "cheese", "salad", "vegetable", "grain", "fruit", "drink", "preserve"] as const;
 export type RecipeGroup = (typeof RECIPE_GROUPS)[number];
 
 const recipeSchema = z.object({
@@ -72,6 +72,8 @@ const recipeSchema = z.object({
   summary: textSchema,
   serves: z.number().int().positive(),
   minutes: z.number().int().positive(),
+  // Cultivos e animais usados: a receita aparece em "Receitas com ..." na página de cada um.
+  uses: z.array(z.enum([...CROP_IDS, ...ANIMAL_IDS])).min(1),
   ingredients: z.array(textSchema).min(3),
   steps: z.array(textSchema).min(3),
   tip: textSchema.optional(),

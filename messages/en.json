@@ -473,8 +473,14 @@
     "intro": "Recipes made with what comes from your garden and your animals.",
     "groups": {
       "chicken": "Chicken",
+      "meat": "Pork, duck and lamb",
       "cheese": "Cheeses",
-      "salad": "Salads"
+      "salad": "Salads",
+      "vegetable": "Vegetables",
+      "grain": "Grains, breads and cakes",
+      "fruit": "Fruit and sweets",
+      "drink": "Teas and drinks",
+      "preserve": "Sauces and preserves"
     },
     "serves": "Serves {count}",
     "minutes": "{count} min",
@@ -482,7 +488,8 @@
     "steps": "Method",
     "tip": "Tip",
     "safety": "Food safety",
-    "back": "Recipes"
+    "back": "Recipes",
+    "with": "Recipes with {name}"
   },
   "content": {
     "sources": "Sources",
