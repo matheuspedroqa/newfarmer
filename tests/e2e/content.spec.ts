@@ -112,6 +112,7 @@ test("página do alho-poró lista as receitas com ele e leva até a receita", as
   await links.getByRole("link", { name: /Quiche de alho-poró/ }).click();
   await expect(page).toHaveURL(/\/recipes\/leek-quiche$/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Quiche de alho-poró");
+  await expect(page.getByTestId("sources").getByRole("link").first()).toHaveAttribute("href", /^https:\/\//);
 });
 
 test("animal ou plantação inexistente mostra página não encontrada", async ({ page }) => {

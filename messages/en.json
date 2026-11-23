@@ -479,6 +479,7 @@
       "vegetable": "Vegetables",
       "grain": "Grains, breads and cakes",
       "fruit": "Fruit and sweets",
+      "jam": "Jams",
       "drink": "Teas and drinks",
       "preserve": "Sauces and preserves"
     },
@@ -489,7 +490,8 @@
     "tip": "Tip",
     "safety": "Food safety",
     "back": "Recipes",
-    "with": "Recipes with {name}"
+    "with": "Recipes with {name}",
+    "sourcesNote": "Recipe written by the NewFarmer team. The sources below back the technique and the safety steps."
   },
   "content": {
     "sources": "Sources",

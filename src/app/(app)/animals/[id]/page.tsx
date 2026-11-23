@@ -18,6 +18,7 @@ import { requireAccess } from "@/server/current-user";
 import { getDb } from "@/server/db";
 import { listDiary } from "@/server/diary";
 import { getFarm } from "@/server/farm";
+import { ItemIcon } from "@/components/ItemIcon";
 
 const SEASONS: Season[] = ["summer", "autumn", "winter", "spring"];
 const GUIDE_TABS = ["overview", "habitat", "feeding", "health", "breeding", "welfare"] as const;
@@ -66,7 +67,7 @@ export default async function AnimalPage({
             aria-current={a.id === id ? "page" : undefined}
             className={`flex min-h-11 shrink-0 items-center gap-1 rounded-full px-4 py-2 whitespace-nowrap md:min-h-0 ${a.id === id ? "bg-primary text-primary-text" : "bg-surface ring-1 ring-border hover:bg-soft"}`}
           >
-            <span aria-hidden>{a.icon}</span> {t(`animals.${a.id}`)}
+            <ItemIcon id={a.id} /> {t(`animals.${a.id}`)}
           </Link>
         ))}
       </nav>

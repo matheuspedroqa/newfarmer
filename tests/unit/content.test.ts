@@ -25,6 +25,15 @@ describe.each(ANIMAL_IDS)("ficha do animal %s", (id) => {
   });
 });
 
+describe("ícones", () => {
+  it("cada cultivo e cada animal tem o seu próprio ícone, sem repetir", () => {
+    const ids = [...CROP_IDS, ...ANIMAL_IDS];
+    const files = ids.map((id) => path.join(process.cwd(), "public", "icons", `${id}.svg`));
+    expect(ids.filter((_, i) => !fs.existsSync(files[i])), "sem arquivo (rode node scripts/icons/build.mjs)").toEqual([]);
+    expect(new Set(files.map((f) => fs.readFileSync(f, "utf8"))).size).toBe(ids.length);
+  });
+});
+
 describe("receitas", () => {
   it("são válidas e têm 5 de frango, até 6 queijos e 5 saladas", () => {
     const parsed = recipesSchema.safeParse(JSON.parse(fs.readFileSync(path.join(process.cwd(), "content", "recipes.json"), "utf8")));

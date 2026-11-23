@@ -32,8 +32,12 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     ...farm.animals.flatMap((a) => [`/animals/${a.id}`, `/animals/${a.id}?tab=diary`]),
     // shortcut: até 20 plantações, para não pesar no servidor; aumentar se alguém reclamar de faltar ficha offline.
     ...farm.crops.slice(0, 20).map((c) => `/crops/${c}`),
-    // As 16 receitas também, para abrir na cozinha sem sinal.
-    ...getRecipes().map((r) => `/recipes/${r.id}`),
+    // shortcut: só as receitas com o que a pessoa cria ou planta, até 20 (o sw.js só baixa as que ainda não tem);
+    // as outras ficam guardadas ao abrir com internet.
+    ...getRecipes()
+      .filter((r) => r.uses.some((u) => (farm.crops as string[]).includes(u) || farm.animals.some((a) => a.id === u)))
+      .slice(0, 20)
+      .map((r) => `/recipes/${r.id}`),
   ];
 
   // Trilho de ícones da variante D. MyFarm e Perfil ficam no menu da conta.

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { WeatherHero } from "@/components/WeatherHero";
 import { resolveLocale } from "@/i18n/locales";
 import { formatDay } from "@/lib/format";
-import { ANIMALS, CROPS } from "@/lib/catalog";
 import { monthlyTasks, plantableThisMonth, seasonFor } from "@/lib/seasons";
 import { getAllCropContent, getAnimalContent } from "@/server/content";
 import { requireAccess } from "@/server/current-user";
@@ -13,6 +12,7 @@ import { listDiary } from "@/server/diary";
 import { getFarm } from "@/server/farm";
 import { getForecast } from "@/server/forecast";
 import { getWeatherProvider } from "@/server/weather";
+import { ItemIcon } from "@/components/ItemIcon";
 
 const TILE_COLORS = [
   "bg-[#fbeedd] dark:bg-[#2b2316]",
@@ -30,7 +30,6 @@ export default async function DashboardPage() {
   const db = await getDb();
   const farm = await getFarm(db, user.id);
   const forecast = await getForecast(db, getWeatherProvider(), user.latitude, user.longitude);
-  const icon = (id: string) => ANIMALS.find((a) => a.id === id)!.icon;
   const locale = resolveLocale(await getLocale());
   const month = new Date().getMonth() + 1;
   const season = seasonFor(month, user.hemisphere);
@@ -61,7 +60,7 @@ export default async function DashboardPage() {
             data-testid={`animal-tile-${animal.id}`}
             className={`flex flex-col justify-between rounded-3xl p-5 ${TILE_COLORS[i % TILE_COLORS.length]}`}
           >
-            <span className="text-4xl" aria-hidden>{icon(animal.id)}</span>
+            <ItemIcon id={animal.id} className="size-10" />
             <div>
               <p className="font-display text-4xl font-bold">{animal.count}</p>
               <p className="text-sm opacity-70">{t(`animals.${animal.id}`)}</p>
@@ -87,7 +86,7 @@ export default async function DashboardPage() {
               <div className="mt-4 flex flex-wrap gap-2">
                 {farm.crops.map((id) => (
                   <span key={id} className="rounded-full bg-bg px-4 py-2">
-                    <span aria-hidden>{CROPS.find((c) => c.id === id)!.icon}</span> <b>{t(`crops.${id}`)}</b>
+                    <ItemIcon id={id} /> <b>{t(`crops.${id}`)}</b>
                   </span>
                 ))}
               </div>
@@ -97,7 +96,7 @@ export default async function DashboardPage() {
                   <ul className="mt-2 space-y-1">
                     {tasks.map((task) => (
                       <li key={task.cropId}>
-                        <span aria-hidden>{CROPS.find((c) => c.id === task.cropId)!.icon}</span>{" "}
+                        <ItemIcon id={task.cropId} />{" "}
                         <b>{t(`crops.${task.cropId}`)}</b> · {task.activities.map((a) => t(`activities.${a}`)).join(", ")}
                       </li>
                     ))}
@@ -122,7 +121,7 @@ export default async function DashboardPage() {
               {plantable.map((id) => (
                 <li key={id}>
                   <Link href={`/crops/${id}`} className="inline-flex min-h-11 items-center gap-1 rounded-full bg-bg px-4 py-2 ring-1 ring-border hover:ring-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
-                    <span aria-hidden>{CROPS.find((c) => c.id === id)!.icon}</span> {t(`crops.${id}`)}
+                    <ItemIcon id={id} /> {t(`crops.${id}`)}
                   </Link>
                 </li>
               ))}
@@ -138,7 +137,7 @@ export default async function DashboardPage() {
             <ul className="mt-2 space-y-1">
               {tips.map((tip) => (
                 <li key={tip.id}>
-                  <span aria-hidden>{icon(tip.id)}</span> <b>{t(`animals.${tip.id}`)}:</b> {tip.text}
+                  <ItemIcon id={tip.id} /> <b>{t(`animals.${tip.id}`)}:</b> {tip.text}
                 </li>
               ))}
             </ul>
@@ -154,7 +153,7 @@ export default async function DashboardPage() {
               {recentNotes.map((e) => (
                 <li key={e.id}>
                   <Link href={`/animals/${e.animalId}?tab=diary`} className="hover:underline">
-                    <span aria-hidden>{icon(e.animalId)}</span> <b>{formatDay(e.date, locale, "long")}</b> ·{" "}
+                    <ItemIcon id={e.animalId} /> <b>{formatDay(e.date, locale, "long")}</b> ·{" "}
                     {t(`diary.kinds.${e.kind}`)}{e.animalName && ` · ${e.animalName}`}: {e.note}
                   </Link>
                 </li>

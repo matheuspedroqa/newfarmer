@@ -8,6 +8,7 @@ import { offlineAware } from "@/lib/outbox";
 import { farmSchema, parseFarmForm, toFieldErrors } from "@/lib/validation";
 import type { Farm } from "@/server/farm";
 import { FieldError } from "./FieldError";
+import { ItemIcon } from "./ItemIcon";
 import { SubmitButton } from "./SubmitButton";
 
 type Action = (prev: FormState, formData: FormData) => Promise<FormState>;
@@ -92,7 +93,7 @@ export function FarmForm({
                     onChange={(e) => setChecked((c) => ({ ...c, [animal.id]: e.target.checked }))}
                     className="absolute top-3 right-3 h-5 w-5 accent-primary"
                   />
-                  <span className="text-4xl" aria-hidden>{animal.icon}</span>
+                  <ItemIcon id={animal.id} className="size-10" />
                   <span className="font-semibold">{t(`animals.${animal.id}`)}</span>
                 </label>
                 {on && (
@@ -144,7 +145,7 @@ export function FarmForm({
                   aria-label={t("farm.cropsRemove", { name: t(`crops.${crop.id}`) })}
                   className="inline-flex min-h-9 items-center gap-1 rounded-full bg-primary px-3 text-sm font-semibold text-primary-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
-                  <span aria-hidden>{crop.icon}</span> {t(`crops.${crop.id}`)} <span aria-hidden>✕</span>
+                  <ItemIcon id={crop.id} /> {t(`crops.${crop.id}`)} <span aria-hidden>✕</span>
                 </button>
               </li>
             ))}
@@ -170,7 +171,7 @@ export function FarmForm({
                         onChange={(e) => toggleCrop(crop.id, e.target.checked)}
                         className="accent-primary"
                       />
-                      <span aria-hidden>{crop.icon}</span>
+                      <ItemIcon id={crop.id} />
                       {t(`crops.${crop.id}`)}
                     </label>
                   ))}

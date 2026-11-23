@@ -27,7 +27,7 @@ self.addEventListener("fetch", (event) => {
 });
 
 // Só as páginas do app (as mesmas de offlinePaths no layout) ficam guardadas: nada de /admin nem de links com token.
-const SAVABLE = /^\/(dashboard|animals|crops|weather|myfarm|profile)(\/|$)/;
+const SAVABLE = /^\/(dashboard|animals|crops|recipes|weather|myfarm|profile)(\/|$)/;
 const savable = (url) => SAVABLE.test(new URL(url, self.location.origin).pathname);
 
 async function page(event) {
@@ -57,13 +57,13 @@ async function asset(request) {
   }
 }
 
-// Guarda a página e os scripts e estilos que ela usa, para ela funcionar (e salvar) sem internet.
+// Guarda a página e os scripts, estilos e ícones que ela usa, para ela funcionar (e salvar) sem internet.
 async function savePage(url, response) {
   if (!savable(url)) return;
   const html = await response.clone().text();
   await (await caches.open(PAGES)).put(url, response);
   const assets = await caches.open(ASSETS);
-  const files = new Set([...html.matchAll(/(?:src|href)="(\/_next\/static\/[^"]+)"/g)].map((m) => m[1].replace(/&amp;/g, "&")));
+  const files = new Set([...html.matchAll(/(?:src|href)="(\/(?:_next\/static|icons)\/[^"]+)"/g)].map((m) => m[1].replace(/&amp;/g, "&")));
   await Promise.all(
     [...files].map(async (file) => {
       if (await assets.match(file)) return;
@@ -92,6 +92,9 @@ async function pruneAssets() {
 
 async function warm(path) {
   if (!savable(path)) return;
+  // Receita já guardada não precisa vir de novo a cada hora: o texto só muda com nova versão do site,
+  // e abrir a receita com internet já atualiza a cópia.
+  if (path.startsWith("/recipes/") && (await (await caches.open(PAGES)).match(new URL(path, self.location.origin).href, { ignoreVary: true }))) return;
   try {
     let response = await fetch(path, { credentials: "same-origin" });
     if (!response.ok) return;

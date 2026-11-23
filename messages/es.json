@@ -479,6 +479,7 @@
       "vegetable": "Verduras y hortalizas",
       "grain": "Granos, panes y bizcochos",
       "fruit": "Frutas y dulces",
+      "jam": "Mermeladas",
       "drink": "Infusiones y bebidas",
       "preserve": "Salsas y conservas"
     },
@@ -489,7 +490,8 @@
     "tip": "Consejo",
     "safety": "Seguridad",
     "back": "Recetas",
-    "with": "Recetas con {name}"
+    "with": "Recetas con {name}",
+    "sourcesNote": "Receta escrita por el equipo de NewFarmer. Las fuentes de abajo respaldan la técnica y los cuidados de seguridad."
   },
   "content": {
     "sources": "Fuentes",

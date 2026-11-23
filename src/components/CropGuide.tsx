@@ -12,6 +12,7 @@ import { guidePath } from "@/lib/plant-guide";
 import { ACTIVITIES, userCalendar } from "@/lib/seasons";
 import { getCropContent } from "@/server/content";
 import type { ClimateZone } from "@/server/climate";
+import { ItemIcon } from "@/components/ItemIcon";
 
 const ZONES: ClimateZone[] = ["tropical", "subtropical", "temperate", "semiarid", "cold"];
 const alternates = (paths: Record<Locale, string>, lang: Locale): Metadata["alternates"] => ({ canonical: paths[lang], languages: { ...paths, "x-default": paths.en } });
@@ -36,7 +37,7 @@ export async function CropIndex({ lang }: { lang: Locale }) {
           <h2 className="font-display text-2xl font-bold">{t(`cropGroups.${g}`)}</h2>
           <ul className="mt-3 flex flex-wrap gap-2">
             {CROPS.filter((c) => c.group === g && getCropContent(c.id)).map((c) => (
-              <li key={c.id}><Link href={cropGuidePath(lang, c.id)} className={chip}><span aria-hidden>{c.icon}</span> {t(`crops.${c.id}`)}</Link></li>
+              <li key={c.id}><Link href={cropGuidePath(lang, c.id)} className={chip}><ItemIcon id={c.id} /> {t(`crops.${c.id}`)}</Link></li>
             ))}
           </ul>
         </section>
@@ -65,14 +66,13 @@ export async function CropGuidePage({ lang, params }: { lang: Locale; params: Pa
   const { id, content } = await resolveCrop(lang, params);
   const t = await getTranslations({ locale: lang });
   const crop = t(`crops.${id}`).toLocaleLowerCase(lang);
-  const icon = CROPS.find((c) => c.id === id)!.icon;
   const hemisphere = hemisphereFor(lang);
 
   return (
     <article className="mx-auto max-w-4xl space-y-8 px-5 py-12 md:px-8 md:py-16">
       <div>
         <Link href={cropGuidePath(lang)} className="inline-flex min-h-11 items-center text-sm text-primary hover:underline">← {t("cropGuide.indexTitle")}</Link>
-        <h1 className="mt-2 font-display text-4xl font-bold text-primary first-letter:uppercase"><span aria-hidden>{icon}</span> {t("cropGuide.title", { crop })}</h1>
+        <h1 className="mt-2 font-display text-4xl font-bold text-primary first-letter:uppercase"><ItemIcon id={id} /> {t("cropGuide.title", { crop })}</h1>
         <p className="mt-3 text-lg">{content.summary[lang]}</p>
         <p className="mt-2 text-sm text-muted">{t(`cropGuide.hemisphereNote.${hemisphere}`)}</p>
       </div>

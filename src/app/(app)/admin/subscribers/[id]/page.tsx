@@ -4,13 +4,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { setSubscriptionPausedAction } from "@/app/actions/admin";
 import { resolveLocale } from "@/i18n/locales";
-import { CROPS } from "@/lib/catalog";
 import { formatMoney, type Currency } from "@/lib/pricing";
 import { logSafely } from "@/server/activity-log";
 import { animalIcon, getSubscriberDetail } from "@/server/admin";
 import { requirePlatformAdmin } from "@/server/authz";
 import { getDb } from "@/server/db";
 import { clientIp } from "@/server/request-context";
+import { ItemIcon } from "@/components/ItemIcon";
 
 export async function generateMetadata(): Promise<Metadata> {
   return { title: (await getTranslations())("meta.subscriber") };
@@ -113,7 +113,7 @@ export default async function SubscriberDetailPage({ params, searchParams }: { p
             <ul className="mt-3 flex flex-wrap gap-2">
               {d.crops.map((c) => (
                 <li key={c} className={pill}>
-                  <span aria-hidden>{CROPS.find((x) => x.id === c)?.icon}</span> {tc(`crops.${c}`)}
+                  <ItemIcon id={c} /> {tc(`crops.${c}`)}
                 </li>
               ))}
             </ul>

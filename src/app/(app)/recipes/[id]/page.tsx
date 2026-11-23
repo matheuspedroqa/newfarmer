@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { SourcesList } from "@/components/SourcesList";
 import { resolveLocale } from "@/i18n/locales";
 import { getRecipes } from "@/server/content";
 import { requireAccess } from "@/server/current-user";
@@ -53,6 +54,11 @@ export default async function RecipePage({ params }: { params: Promise<{ id: str
       {recipe.tip && (
         <p className="max-w-3xl rounded-2xl bg-soft p-4"><strong>💡 {t("tip")}:</strong> {recipe.tip[locale]}</p>
       )}
+
+      <div>
+        <p className="mb-2 text-sm text-muted">{t("sourcesNote")}</p>
+        <SourcesList sources={recipe.sources} />
+      </div>
     </article>
   );
 }

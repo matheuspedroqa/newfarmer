@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { CROPS, CROP_GROUPS } from "@/lib/catalog";
 import { requireAccess } from "@/server/current-user";
+import { ItemIcon } from "@/components/ItemIcon";
 
 export async function generateMetadata(): Promise<Metadata> {
   return { title: (await getTranslations())("nav.crops") };
@@ -33,7 +34,7 @@ export default async function CropsIndex() {
                 data-testid={`crop-link-${c.id}`}
                 className="flex flex-col items-center rounded-3xl bg-surface p-5 text-center ring-1 ring-border hover:bg-hover"
               >
-                <span className="text-4xl" aria-hidden>{c.icon}</span>
+                <ItemIcon id={c.id} className="size-10" />
                 <span className="mt-2 font-semibold">{t(`crops.${c.id}`)}</span>
               </Link>
             ))}

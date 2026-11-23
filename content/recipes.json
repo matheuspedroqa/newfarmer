@@ -25,7 +25,10 @@
         { "pt": "Desligue, junte as ervas picadas e sirva quente.", "en": "Turn off the heat, stir in the chopped herbs and serve hot.", "es": "Apaga el fuego, añade las hierbas picadas y sirve caliente." }
       ],
       "tip": { "pt": "Galinha caipira mais velha é mais dura: cozinhe na panela de pressão por 40 minutos antes de seguir a receita.", "en": "An older free-range hen is tougher: pressure-cook it for 40 minutes before following the recipe.", "es": "Una gallina de campo vieja es más dura: cocínala 40 minutos en olla a presión antes de seguir la receta." },
-      "uses": ["chickens", "rice", "carrot", "potato", "onion", "garlic", "parsley", "chives"]
+      "uses": ["chickens", "rice", "carrot", "potato", "onion", "garlic", "parsley", "chives"],
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "chicken-rice",
@@ -51,7 +54,10 @@
         { "pt": "Finalize com o milho e o cheiro-verde.", "en": "Finish with the sweetcorn and herbs.", "es": "Termina con el maíz y las hierbas." }
       ],
       "tip": { "pt": "O frango precisa chegar a 74 °C no centro: corte o pedaço mais grosso e veja se não há sangue perto do osso.", "en": "Chicken must reach 74 °C in the centre: cut the thickest piece and check there is no blood near the bone.", "es": "El pollo debe llegar a 74 °C en el centro: corta el trozo más grueso y mira que no haya sangre cerca del hueso." },
-      "uses": ["chickens", "rice", "turmeric", "onion", "garlic", "tomato", "bellPepper", "corn"]
+      "uses": ["chickens", "rice", "turmeric", "onion", "garlic", "tomato", "bellPepper", "corn"],
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "roast-chicken",
@@ -77,7 +83,10 @@
         { "pt": "Deixe descansar 10 minutos antes de cortar.", "en": "Let it rest for 10 minutes before carving.", "es": "Déjalo reposar 10 minutos antes de cortar." }
       ],
       "tip": { "pt": "Furando a coxa, o caldo deve sair claro, sem sangue. Com termômetro, 74 °C na parte mais grossa.", "en": "When you pierce the thigh, the juices should run clear. With a thermometer, 74 °C in the thickest part.", "es": "Al pinchar el muslo, el jugo debe salir claro. Con termómetro, 74 °C en la parte más gruesa." },
-      "uses": ["chickens", "potato", "carrot", "garlic", "rosemary", "thyme", "sage", "lemon"]
+      "uses": ["chickens", "potato", "carrot", "garlic", "rosemary", "thyme", "sage", "lemon"],
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "chicken-okra",
@@ -103,7 +112,10 @@
         { "pt": "Junte o quiabo ao frango, cozinhe mais 10 minutos e finalize com cheiro-verde.", "en": "Add the okra to the chicken, cook 10 more minutes and finish with the herbs.", "es": "Junta el quimbombó con el pollo, cocina 10 minutos más y termina con las hierbas." }
       ],
       "tip": { "pt": "Lave e seque bem o quiabo antes de cortar: com ele seco, baba bem menos.", "en": "Wash and dry the okra well before slicing: dry okra is much less slimy.", "es": "Lava y seca bien el quimbombó antes de cortarlo: seco suelta mucha menos baba." },
-      "uses": ["chickens", "okra", "tomato", "onion", "garlic", "lemon"]
+      "uses": ["chickens", "okra", "tomato", "onion", "garlic", "lemon"],
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "chicken-pie",
@@ -128,7 +140,10 @@
         { "pt": "Polvilhe o queijo e asse a 180 °C por 40 a 45 minutos, até dourar.", "en": "Sprinkle with cheese and bake at 180 °C for 40 to 45 minutes, until golden.", "es": "Espolvorea el queso y hornea a 180 °C durante 40 a 45 minutos, hasta dorar." }
       ],
       "tip": { "pt": "Use o caldo do cozimento do frango no lugar de parte do leite: a massa fica mais saborosa.", "en": "Use the chicken cooking broth instead of some of the milk for a tastier batter.", "es": "Usa el caldo de cocción del pollo en lugar de parte de la leche: la masa queda más sabrosa." },
-      "uses": ["chickens", "carrot", "corn", "pea", "onion", "tomato", "wheat", "cows"]
+      "uses": ["chickens", "carrot", "corn", "pea", "onion", "tomato", "wheat", "cows"],
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "fresh-cheese",
@@ -153,7 +168,11 @@
         { "pt": "Vire o queijo depois de 30 minutos, salgue o outro lado e leve à geladeira na forma. Consuma em até 10 dias.", "en": "Turn the cheese after 30 minutes, salt the other side and refrigerate in the mould. Eat within 10 days.", "es": "Da vuelta al queso a los 30 minutos, sala el otro lado y refrigera en el molde. Consúmelo en 10 días." }
       ],
       "safety": { "pt": "Queijo fresco de leite cru pode transmitir brucelose, tuberculose e listeria. Sempre pasteurize o leite e use utensílios fervidos.", "en": "Fresh cheese made from raw milk can spread brucellosis, tuberculosis and listeria. Always pasteurize the milk and use boiled utensils.", "es": "El queso fresco de leche cruda puede transmitir brucelosis, tuberculosis y listeria. Pasteuriza siempre la leche y usa utensilios hervidos." },
-      "uses": ["cows", "goats"]
+      "uses": ["cows", "goats"],
+      "sources": [
+        { "title": "New Mexico State University — Making Homemade Cheese", "url": "https://pubs.nmsu.edu/_e/E216/" },
+        { "title": "U.S. FDA — Raw Milk Misconceptions and the Danger of Raw Milk Consumption", "url": "https://www.fda.gov/food/buy-store-serve-safe-food/raw-milk-misconceptions-and-danger-raw-milk-consumption" }
+      ]
     },
     {
       "id": "semi-cured-cheese",
@@ -178,7 +197,11 @@
         { "pt": "Cure de 15 a 21 dias em lugar fresco (10 a 15 °C) e ventilado, virando e limpando a casca a cada 2 dias.", "en": "Age 15 to 21 days in a cool (10 to 15 °C), airy place, turning and wiping the rind every 2 days.", "es": "Cura de 15 a 21 días en un lugar fresco (10 a 15 °C) y ventilado, girando y limpiando la corteza cada 2 días." }
       ],
       "safety": { "pt": "Use leite pasteurizado. Mofo branco ou azul na casca sai com pano e salmoura; mofo preto, rosa ou cheiro de amônia forte: descarte o queijo.", "en": "Use pasteurized milk. White or blue mould on the rind can be wiped off with brine; black or pink mould or a strong ammonia smell means throw it away.", "es": "Usa leche pasteurizada. El moho blanco o azul de la corteza se limpia con salmuera; moho negro, rosa u olor fuerte a amoníaco: desecha el queso." },
-      "uses": ["cows"]
+      "uses": ["cows"],
+      "sources": [
+        { "title": "New Mexico State University — Making Homemade Cheese", "url": "https://pubs.nmsu.edu/_e/E216/" },
+        { "title": "U.S. FDA — Raw Milk Misconceptions and the Danger of Raw Milk Consumption", "url": "https://www.fda.gov/food/buy-store-serve-safe-food/raw-milk-misconceptions-and-danger-raw-milk-consumption" }
+      ]
     },
     {
       "id": "colonial-cheese",
@@ -203,7 +226,11 @@
         { "pt": "Cure por cerca de 30 dias a 12 a 15 °C, virando e limpando a casca a cada 2 dias.", "en": "Age about 30 days at 12 to 15 °C, turning and wiping the rind every 2 days.", "es": "Cura unos 30 días a 12 a 15 °C, girando y limpiando la corteza cada 2 días." }
       ],
       "safety": { "pt": "Use leite pasteurizado e vacas com exames de brucelose e tuberculose em dia.", "en": "Use pasteurized milk from cows with up-to-date brucellosis and tuberculosis tests.", "es": "Usa leche pasteurizada de vacas con pruebas de brucelosis y tuberculosis al día." },
-      "uses": ["cows"]
+      "uses": ["cows"],
+      "sources": [
+        { "title": "New Mexico State University — Making Homemade Cheese", "url": "https://pubs.nmsu.edu/_e/E216/" },
+        { "title": "U.S. FDA — Raw Milk Misconceptions and the Danger of Raw Milk Consumption", "url": "https://www.fda.gov/food/buy-store-serve-safe-food/raw-milk-misconceptions-and-danger-raw-milk-consumption" }
+      ]
     },
     {
       "id": "butter-cheese",
@@ -227,7 +254,11 @@
         { "pt": "Despeje numa forma untada com manteiga, deixe esfriar e guarde na geladeira por até 30 dias.", "en": "Pour into a buttered mould, let it cool and keep in the fridge for up to 30 days.", "es": "Vierte en un molde untado con mantequilla, deja enfriar y guarda en la nevera hasta 30 días." }
       ],
       "tip": { "pt": "A nata separada do leite vira a própria manteiga de garrafa: bata até virar manteiga e ferva até ficar dourada e límpida.", "en": "The cream taken off the milk can become the clarified butter: churn it into butter, then simmer until golden and clear.", "es": "La nata que quitas de la leche puede ser la mantequilla clarificada: bátela hasta hacer mantequilla y hiérvela hasta que quede dorada y clara." },
-      "uses": ["cows", "lemon"]
+      "uses": ["cows", "lemon"],
+      "sources": [
+        { "title": "New Mexico State University — Making Homemade Cheese", "url": "https://pubs.nmsu.edu/_e/E216/" },
+        { "title": "U.S. FDA — Raw Milk Misconceptions and the Danger of Raw Milk Consumption", "url": "https://www.fda.gov/food/buy-store-serve-safe-food/raw-milk-misconceptions-and-danger-raw-milk-consumption" }
+      ]
     },
     {
       "id": "ricotta",
@@ -250,7 +281,11 @@
         { "pt": "Deixe escorrer por 1 hora e guarde na geladeira. Consuma em até 5 dias.", "en": "Let it drain for 1 hour and refrigerate. Eat within 5 days.", "es": "Deja escurrir 1 hora y guarda en la nevera. Consúmela en 5 días." }
       ],
       "tip": { "pt": "O soro que sobra no fim pode ir para as galinhas e os porcos, em pequena quantidade.", "en": "The whey left over at the end can go to the chickens and pigs, in small amounts.", "es": "El suero que sobra al final puede ir a las gallinas y los cerdos, en poca cantidad." },
-      "uses": ["cows", "goats"]
+      "uses": ["cows", "goats"],
+      "sources": [
+        { "title": "New Mexico State University — Making Homemade Cheese", "url": "https://pubs.nmsu.edu/_e/E216/" },
+        { "title": "U.S. FDA — Raw Milk Misconceptions and the Danger of Raw Milk Consumption", "url": "https://www.fda.gov/food/buy-store-serve-safe-food/raw-milk-misconceptions-and-danger-raw-milk-consumption" }
+      ]
     },
     {
       "id": "coalho-cheese",
@@ -274,7 +309,11 @@
         { "pt": "Desenforme, corte em barras ou espetos e guarde na geladeira por até 20 dias.", "en": "Unmould, cut into bars or skewers and keep in the fridge for up to 20 days.", "es": "Desmolda, corta en barras o brochetas y guarda en la nevera hasta 20 días." }
       ],
       "safety": { "pt": "Mesmo indo para a brasa, use leite pasteurizado: o calor por fora não chega ao centro do queijo.", "en": "Even though it goes on the grill, use pasteurized milk: the outside heat does not reach the centre.", "es": "Aunque vaya a la parrilla, usa leche pasteurizada: el calor de fuera no llega al centro." },
-      "uses": ["cows"]
+      "uses": ["cows"],
+      "sources": [
+        { "title": "New Mexico State University — Making Homemade Cheese", "url": "https://pubs.nmsu.edu/_e/E216/" },
+        { "title": "U.S. FDA — Raw Milk Misconceptions and the Danger of Raw Milk Consumption", "url": "https://www.fda.gov/food/buy-store-serve-safe-food/raw-milk-misconceptions-and-danger-raw-milk-consumption" }
+      ]
     },
     {
       "id": "garden-salad",
@@ -296,7 +335,10 @@
         { "pt": "Misture os ingredientes do molho num pote fechado e chacoalhe.", "en": "Shake the dressing ingredients together in a closed jar.", "es": "Mezcla los ingredientes del aliño en un frasco cerrado y agita." },
         { "pt": "Junte folhas, rabanete e cebolinha e tempere só na hora de servir.", "en": "Combine the leaves, radish and chives and dress just before serving.", "es": "Junta hojas, rábano y cebollino y aliña justo antes de servir." }
       ],
-      "uses": ["lettuce", "arugula", "radish", "chives", "lemon"]
+      "uses": ["lettuce", "arugula", "radish", "chives", "lemon"],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "tomato-salad",
@@ -319,7 +361,10 @@
         { "pt": "Misture tudo com as ervas, tempere com azeite, vinagre, sal e orégano.", "en": "Toss everything with the herbs and season with olive oil, vinegar, salt and oregano.", "es": "Mezcla todo con las hierbas y aliña con aceite, vinagre, sal y orégano." },
         { "pt": "Deixe descansar 10 minutos antes de servir para pegar gosto.", "en": "Leave for 10 minutes before serving so the flavours blend.", "es": "Deja reposar 10 minutos antes de servir para que tome sabor." }
       ],
-      "uses": ["tomato", "cucumber", "onion", "basil", "parsley", "oregano"]
+      "uses": ["tomato", "cucumber", "onion", "basil", "parsley", "oregano"],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "potato-egg-salad",
@@ -343,7 +388,10 @@
         { "pt": "Junte tudo com cuidado e leve à geladeira por 30 minutos antes de servir.", "en": "Fold everything together gently and chill for 30 minutes before serving.", "es": "Junta todo con cuidado y refrigera 30 minutos antes de servir." }
       ],
       "tip": { "pt": "Ovo muito fresco é difícil de descascar: para salada, use ovos de 4 a 5 dias.", "en": "Very fresh eggs are hard to peel: for salad, use eggs that are 4 to 5 days old.", "es": "El huevo muy fresco cuesta pelarlo: para ensalada, usa huevos de 4 a 5 días." },
-      "uses": ["potato", "chickens", "carrot", "onion", "parsley", "cows"]
+      "uses": ["potato", "chickens", "carrot", "onion", "parsley", "cows"],
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "cabbage-salad",
@@ -365,7 +413,10 @@
         { "pt": "Bata os ingredientes do molho e misture com a salada.", "en": "Whisk the dressing and toss it with the salad.", "es": "Bate el aliño y mézclalo con la ensalada." },
         { "pt": "Sirva gelada.", "en": "Serve chilled.", "es": "Sirve fría." }
       ],
-      "uses": ["cabbage", "carrot", "parsley"]
+      "uses": ["cabbage", "carrot", "parsley"],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "beet-salad",
@@ -389,7 +440,10 @@
         { "pt": "Por cima, espalhe o queijo, a hortelã e as nozes.", "en": "Top with the cheese, mint and nuts.", "es": "Por encima, reparte el queso, la menta y las nueces." }
       ],
       "tip": { "pt": "As folhas novas da beterraba também vão na salada, cruas ou refogadas.", "en": "Young beet leaves can go in the salad too, raw or sautéed.", "es": "Las hojas jóvenes de la remolacha también van en la ensalada, crudas o salteadas." },
-      "uses": ["beet", "mint", "sunflower", "cows"]
+      "uses": ["beet", "mint", "sunflower", "cows"],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "leek-quiche",
@@ -413,7 +467,10 @@
         { "pt": "Abra a massa numa forma de 24 cm, fure com um garfo e asse por 12 minutos a 200 °C.", "en": "Roll the dough into a 24 cm tin, prick it with a fork and bake for 12 minutes at 200 °C.", "es": "Extiende la masa en un molde de 24 cm, pínchala con un tenedor y hornea 12 minutos a 200 °C." },
         { "pt": "Bata ovos, creme, queijo e temperos, junte o alho-poró, despeje na massa e asse por 25 a 30 minutos a 180 °C, até firmar.", "en": "Whisk the eggs, cream, cheese and seasoning, stir in the leek, pour into the crust and bake 25 to 30 minutes at 180 °C until set.", "es": "Bate los huevos, la nata, el queso y los condimentos, añade el puerro, vierte sobre la masa y hornea de 25 a 30 minutos a 180 °C hasta que cuaje." }
       ],
-      "tip": { "pt": "Lave bem o alho-poró: a terra fica presa entre as camadas.", "en": "Wash the leek well: soil hides between the layers.", "es": "Lava bien el puerro: la tierra se queda entre las capas." }
+      "tip": { "pt": "Lave bem o alho-poró: a terra fica presa entre as camadas.", "en": "Wash the leek well: soil hides between the layers.", "es": "Lava bien el puerro: la tierra se queda entre las capas." },
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "pumpkin-soup",
@@ -436,7 +493,10 @@
         { "pt": "Junte a abóbora, a cenoura e a água, tampe e cozinhe por 20 minutos, até tudo ficar macio.", "en": "Add the pumpkin, carrot and water, cover and cook for 20 minutes until soft.", "es": "Añade la calabaza, la zanahoria y el agua, tapa y cuece 20 minutos hasta que esté tierno." },
         { "pt": "Bata no liquidificador ou com mixer, acerte o sal e sirva quente.", "en": "Blend until smooth, season with salt and serve hot.", "es": "Tritura hasta que quede liso, ajusta la sal y sirve caliente." }
       ],
-      "tip": { "pt": "Torre as sementes da abóbora com sal e use por cima.", "en": "Roast the pumpkin seeds with salt and scatter on top.", "es": "Tuesta las pipas de la calabaza con sal y úsalas por encima." }
+      "tip": { "pt": "Torre as sementes da abóbora com sal e use por cima.", "en": "Roast the pumpkin seeds with salt and scatter on top.", "es": "Tuesta las pipas de la calabaza con sal y úsalas por encima." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "roasted-vegetables",
@@ -458,7 +518,10 @@
         { "pt": "Espalhe os legumes numa assadeira grande, sem amontoar, regue com azeite e tempere.", "en": "Spread the vegetables in a large tray without crowding, drizzle with oil and season.", "es": "Reparte las verduras en una bandeja grande sin amontonar, riega con aceite y sazona." },
         { "pt": "Asse por 35 a 40 minutos, mexendo na metade, até dourar nas pontas. Esprema o alho por cima.", "en": "Roast for 35 to 40 minutes, stirring halfway, until browned at the edges. Squeeze the garlic over.", "es": "Asa de 35 a 40 minutos, removiendo a mitad, hasta que se doren los bordes. Exprime el ajo por encima." }
       ],
-      "tip": { "pt": "Com assadeira cheia demais os legumes cozinham no vapor e não douram.", "en": "If the tray is too full the vegetables steam instead of browning.", "es": "Si la bandeja está muy llena, las verduras se cuecen al vapor y no se doran." }
+      "tip": { "pt": "Com assadeira cheia demais os legumes cozinham no vapor e não douram.", "en": "If the tray is too full the vegetables steam instead of browning.", "es": "Si la bandeja está muy llena, las verduras se cuecen al vapor y no se doran." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "green-beans-eggs",
@@ -479,6 +542,9 @@
         { "pt": "Cozinhe a vagem em água fervente com sal por 5 minutos e escorra.", "en": "Boil the beans in salted water for 5 minutes and drain.", "es": "Cuece las judías en agua hirviendo con sal 5 minutos y escurre." },
         { "pt": "Refogue a cebola e o alho no azeite, junte a vagem e salteie por 3 minutos.", "en": "Sauté the onion and garlic in oil, add the beans and toss for 3 minutes.", "es": "Sofríe la cebolla y el ajo en aceite, añade las judías y saltea 3 minutos." },
         { "pt": "Junte os ovos batidos e mexa até firmarem. Acerte o sal.", "en": "Add the beaten eggs and stir until just set. Season.", "es": "Añade los huevos batidos y remueve hasta que cuajen. Ajusta la sal." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
       ]
     },
     {
@@ -502,7 +568,10 @@
         { "pt": "Derreta a manteiga, junte a farinha e mexa 1 minuto. Adicione o leite aos poucos, mexendo até engrossar. Tempere e junte metade do queijo.", "en": "Melt the butter, stir in the flour for 1 minute, then whisk in the milk gradually until thick. Season and add half the cheese.", "es": "Derrite la mantequilla, añade la harina y remueve 1 minuto. Incorpora la leche poco a poco hasta que espese. Sazona y añade la mitad del queso." },
         { "pt": "Ponha os legumes numa travessa, cubra com o molho e o resto do queijo e asse a 200 °C por 20 minutos, até dourar.", "en": "Put the vegetables in a dish, cover with the sauce and remaining cheese and bake at 200 °C for 20 minutes until golden.", "es": "Pon las verduras en una fuente, cubre con la salsa y el resto del queso y hornea a 200 °C 20 minutos hasta dorar." }
       ],
-      "tip": { "pt": "Os talos do brócolis, descascados, cozinham junto e são doces.", "en": "Peeled broccoli stalks cook along with the florets and are sweet.", "es": "Los tallos del brócoli, pelados, se cuecen junto y son dulces." }
+      "tip": { "pt": "Os talos do brócolis, descascados, cozinham junto e são doces.", "en": "Peeled broccoli stalks cook along with the florets and are sweet.", "es": "Los tallos del brócoli, pelados, se cuecen junto y son dulces." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "roasted-brussels-sprouts",
@@ -523,6 +592,9 @@
         { "pt": "Aqueça o forno a 220 °C.", "en": "Heat the oven to 220 °C.", "es": "Precalienta el horno a 220 °C." },
         { "pt": "Misture as couves com azeite, sal e pimenta e espalhe com o lado cortado para baixo.", "en": "Toss the sprouts with oil, salt and pepper and lay them cut side down.", "es": "Mezcla las coles con aceite, sal y pimienta y colócalas con el corte hacia abajo." },
         { "pt": "Asse por 20 minutos, junte o alho e asse mais 5. Finalize com raspas e suco de limão.", "en": "Roast for 20 minutes, add the garlic and roast 5 more. Finish with lemon zest and juice.", "es": "Asa 20 minutos, añade el ajo y asa 5 más. Termina con la ralladura y el zumo de limón." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
       ]
     },
     {
@@ -544,7 +616,10 @@
         { "pt": "Doure o alho no azeite em fogo médio.", "en": "Lightly brown the garlic in the oil over medium heat.", "es": "Dora el ajo en el aceite a fuego medio." },
         { "pt": "Junte a couve e o sal e mexa por 2 a 3 minutos, só até murchar e ficar verde-viva.", "en": "Add the kale and salt and stir for 2 to 3 minutes, just until wilted and bright green.", "es": "Añade la col y la sal y remueve de 2 a 3 minutos, solo hasta que se ablande y quede verde intenso." }
       ],
-      "tip": { "pt": "Não tampe a panela, senão a couve escurece e amarga.", "en": "Do not cover the pan or the kale turns dark and bitter.", "es": "No tapes la sartén o la col se oscurece y amarga." }
+      "tip": { "pt": "Não tampe a panela, senão a couve escurece e amarga.", "en": "Do not cover the pan or the kale turns dark and bitter.", "es": "No tapes la sartén o la col se oscurece y amarga." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "spinach-omelette",
@@ -565,6 +640,9 @@
         { "pt": "Murche o espinafre na frigideira com um pouco de manteiga e reserve.", "en": "Wilt the spinach in the pan with a little butter and set aside.", "es": "Saltea las espinacas en la sartén con un poco de mantequilla y reserva." },
         { "pt": "Bata os ovos com sal, pimenta e cebolinha e despeje na frigideira quente com manteiga.", "en": "Beat the eggs with salt, pepper and chives and pour into the hot buttered pan.", "es": "Bate los huevos con sal, pimienta y cebollino y viértelos en la sartén caliente con mantequilla." },
         { "pt": "Quando a borda firmar, ponha o espinafre e o queijo de um lado, dobre e cozinhe mais 1 minuto.", "en": "When the edge sets, add the spinach and cheese to one half, fold and cook 1 more minute.", "es": "Cuando el borde cuaje, pon las espinacas y el queso en una mitad, dobla y cocina 1 minuto más." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
       ]
     },
     {
@@ -588,7 +666,10 @@
         { "pt": "Junte tomate, especiarias, grão-de-bico e 1 xícara de água e cozinhe 15 minutos.", "en": "Add the tomato, spices, chickpeas and 1 cup of water and simmer for 15 minutes.", "es": "Añade el tomate, las especias, los garbanzos y 1 taza de agua y cuece 15 minutos." },
         { "pt": "Junte as folhas picadas, cozinhe até murchar, acerte o sal e finalize com coentro.", "en": "Stir in the chopped leaves until wilted, season and finish with coriander.", "es": "Añade las hojas picadas hasta que se ablanden, ajusta la sal y termina con cilantro." }
       ],
-      "tip": { "pt": "Grão-de-bico seco: deixe de molho 12 horas e cozinhe na pressão por 25 minutos.", "en": "Dried chickpeas: soak 12 hours and pressure-cook for 25 minutes.", "es": "Garbanzos secos: remójalos 12 horas y cuécelos en olla a presión 25 minutos." }
+      "tip": { "pt": "Grão-de-bico seco: deixe de molho 12 horas e cozinhe na pressão por 25 minutos.", "en": "Dried chickpeas: soak 12 hours and pressure-cook for 25 minutes.", "es": "Garbanzos secos: remójalos 12 horas y cuécelos en olla a presión 25 minutos." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "chayote-stew",
@@ -609,7 +690,10 @@
         { "pt": "Junte o chuchu e o sal, tampe e cozinhe em fogo baixo por 12 a 15 minutos, sem água: ele solta a própria.", "en": "Add the chayote and salt, cover and cook on low for 12 to 15 minutes with no water: it releases its own.", "es": "Añade el chayote y la sal, tapa y cocina a fuego bajo de 12 a 15 minutos sin agua: suelta la suya." },
         { "pt": "Desligue quando estiver macio e finalize com salsinha.", "en": "Turn off when tender and finish with parsley.", "es": "Apaga cuando esté tierno y termina con perejil." }
       ],
-      "tip": { "pt": "Descasque com um fio de óleo nas mãos: a seiva do chuchu gruda e repuxa a pele.", "en": "Peel with a little oil on your hands: chayote sap is sticky and tightens the skin.", "es": "Pela con un poco de aceite en las manos: la savia del chayote es pegajosa y tira de la piel." }
+      "tip": { "pt": "Descasque com um fio de óleo nas mãos: a seiva do chuchu gruda e repuxa a pele.", "en": "Peel with a little oil on your hands: chayote sap is sticky and tightens the skin.", "es": "Pela con un poco de aceite en las manos: la savia del chayote es pegajosa y tira de la piel." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "artichoke-lemon",
@@ -631,7 +715,10 @@
         { "pt": "Cozinhe em água com sal e meio limão por 30 a 40 minutos, até uma folha de dentro sair fácil.", "en": "Simmer in salted water with half a lemon for 30 to 40 minutes, until an inner leaf pulls out easily.", "es": "Cuece en agua con sal y medio limón de 30 a 40 minutos, hasta que una hoja interior salga fácil." },
         { "pt": "Misture o suco do outro meio limão, o alho, o azeite e o sal e sirva como molho.", "en": "Mix the juice of the other half lemon with the garlic, oil and salt and serve as a dip.", "es": "Mezcla el zumo del otro medio limón con el ajo, el aceite y la sal y sírvelo como salsa." }
       ],
-      "tip": { "pt": "No coração, retire a parte peluda com uma colher antes de comer.", "en": "At the heart, scrape off the hairy choke with a spoon before eating.", "es": "En el corazón, retira la parte peluda con una cuchara antes de comer." }
+      "tip": { "pt": "No coração, retire a parte peluda com uma colher antes de comer.", "en": "At the heart, scrape off the hairy choke with a spoon before eating.", "es": "En el corazón, retira la parte peluda con una cuchara antes de comer." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "asparagus-eggs",
@@ -652,6 +739,9 @@
         { "pt": "Quebre a base dura de cada aspargo: ela parte sozinha no ponto certo.", "en": "Snap off the tough base of each spear: it breaks at the right place.", "es": "Quiebra la base dura de cada espárrago: se parte sola en el punto justo." },
         { "pt": "Cozinhe os ovos por 6 minutos em água fervente e passe para água fria.", "en": "Boil the eggs for 6 minutes and move them to cold water.", "es": "Cuece los huevos 6 minutos en agua hirviendo y pásalos a agua fría." },
         { "pt": "Cozinhe os aspargos 3 a 4 minutos em água com sal, escorra e regue com manteiga derretida e raspas de limão. Sirva com os ovos.", "en": "Cook the asparagus 3 to 4 minutes in salted water, drain and pour over melted butter and lemon zest. Serve with the eggs.", "es": "Cuece los espárragos de 3 a 4 minutos en agua con sal, escurre y riega con mantequilla derretida y ralladura de limón. Sirve con los huevos." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
       ]
     },
     {
@@ -674,7 +764,10 @@
         { "pt": "Misture com azeite, sal, pimenta e as ervas numa assadeira grande.", "en": "Toss with oil, salt, pepper and the herbs in a large tray.", "es": "Mezcla con aceite, sal, pimienta y las hierbas en una bandeja grande." },
         { "pt": "Asse por 40 minutos, virando na metade, até estarem macios por dentro e dourados por fora.", "en": "Roast for 40 minutes, turning halfway, until tender inside and golden outside.", "es": "Asa 40 minutos, dando la vuelta a mitad, hasta que estén tiernos por dentro y dorados por fuera." }
       ],
-      "tip": { "pt": "Asse a beterraba num canto para não tingir o resto.", "en": "Keep the beetroot in one corner so it does not stain the rest.", "es": "Pon la remolacha en una esquina para que no tiña el resto." }
+      "tip": { "pt": "Asse a beterraba num canto para não tingir o resto.", "en": "Keep the beetroot in one corner so it does not stain the rest.", "es": "Pon la remolacha en una esquina para que no tiña el resto." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "cassava-fries",
@@ -695,7 +788,10 @@
         { "pt": "Escorra, tire o fio do meio e corte em palitos.", "en": "Drain, remove the woody core and cut into sticks.", "es": "Escurre, quita la fibra central y corta en bastones." },
         { "pt": "Frite em óleo quente até dourar, escorra no papel e salgue.", "en": "Fry in hot oil until golden, drain on paper and salt.", "es": "Fríe en aceite caliente hasta dorar, escurre sobre papel y sala." }
       ],
-      "safety": { "pt": "Use só mandioca mansa (aipim). A mandioca brava tem veneno e não deve ser cozida em casa assim. Nunca coma mandioca crua.", "en": "Use only sweet cassava. Bitter cassava is toxic and must not be cooked this way at home. Never eat cassava raw.", "es": "Usa solo yuca dulce. La yuca amarga es tóxica y no debe cocinarse así en casa. Nunca comas yuca cruda." }
+      "safety": { "pt": "Use só mandioca mansa (aipim). A mandioca brava tem veneno e não deve ser cozida em casa assim. Nunca coma mandioca crua.", "en": "Use only sweet cassava. Bitter cassava is toxic and must not be cooked this way at home. Never eat cassava raw.", "es": "Usa solo yuca dulce. La yuca amarga es tóxica y no debe cocinarse así en casa. Nunca comas yuca cruda." },
+      "sources": [
+        { "title": "Food Standards Australia New Zealand — Cassava", "url": "https://www.foodstandards.gov.au/consumer/chemicals/cassava" }
+      ]
     },
     {
       "id": "yam-taro-puree",
@@ -716,7 +812,10 @@
         { "pt": "Escorra e amasse ainda quente.", "en": "Drain and mash while hot.", "es": "Escurre y machaca en caliente." },
         { "pt": "Doure o alho na manteiga, junte o purê e o leite e mexa até ficar cremoso. Finalize com cebolinha.", "en": "Brown the garlic in the butter, add the mash and milk and stir until creamy. Finish with chives.", "es": "Dora el ajo en la mantequilla, añade el puré y la leche y remueve hasta que quede cremoso. Termina con cebollino." }
       ],
-      "safety": { "pt": "Inhame (taro) e cará devem ser sempre bem cozidos: crus irritam a boca e a pele.", "en": "Taro and yam must always be well cooked: raw, they irritate the mouth and skin.", "es": "La malanga y el ñame deben cocerse siempre bien: crudos irritan la boca y la piel." }
+      "safety": { "pt": "Inhame (taro) e cará devem ser sempre bem cozidos: crus irritam a boca e a pele.", "en": "Taro and yam must always be well cooked: raw, they irritate the mouth and skin.", "es": "La malanga y el ñame deben cocerse siempre bien: crudos irritan la boca y la piel." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "celery-potato-soup",
@@ -737,6 +836,9 @@
         { "pt": "Refogue a cebola, o alho-poró e o aipo na manteiga por 8 minutos.", "en": "Soften the onion, leek and celery in the butter for 8 minutes.", "es": "Rehoga la cebolla, el puerro y el apio en la mantequilla 8 minutos." },
         { "pt": "Junte as batatas e o caldo e cozinhe 20 minutos.", "en": "Add the potatoes and stock and simmer for 20 minutes.", "es": "Añade las patatas y el caldo y cuece 20 minutos." },
         { "pt": "Bata, junte o leite, acerte o sal e sirva com folhas de aipo picadas.", "en": "Blend, stir in the milk, season and serve with chopped celery leaves.", "es": "Tritura, añade la leche, ajusta la sal y sirve con hojas de apio picadas." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
       ]
     },
     {
@@ -759,7 +861,10 @@
         { "pt": "Junte as ervilhas e cozinhe só 4 a 5 minutos, para não perder a cor.", "en": "Add the peas and cook only 4 to 5 minutes so they keep their colour.", "es": "Añade los guisantes y cuece solo de 4 a 5 minutos para que no pierdan el color." },
         { "pt": "Junte a hortelã, bata até ficar liso e acerte o sal.", "en": "Add the mint, blend until smooth and season.", "es": "Añade la menta, tritura hasta que quede liso y ajusta la sal." }
       ],
-      "tip": { "pt": "As vagens vazias rendem um caldo doce: ferva 20 minutos e coe.", "en": "The empty pods make a sweet stock: simmer 20 minutes and strain.", "es": "Las vainas vacías dan un caldo dulce: hiérvelas 20 minutos y cuela." }
+      "tip": { "pt": "As vagens vazias rendem um caldo doce: ferva 20 minutos e coe.", "en": "The empty pods make a sweet stock: simmer 20 minutes and strain.", "es": "Las vainas vacías dan un caldo dulce: hiérvelas 20 minutos y cuela." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "tropeiro-beans",
@@ -782,6 +887,10 @@
         { "pt": "Na mesma gordura, refogue cebola e alho, junte os ovos e mexa até firmarem.", "en": "In the same fat, sauté onion and garlic, add the eggs and scramble.", "es": "En la misma grasa, sofríe cebolla y ajo, añade los huevos y revuelve." },
         { "pt": "Junte o feijão, depois a farinha aos poucos, mexendo até ficar soltinho. Acerte o sal.", "en": "Add the beans, then the flour little by little, stirring until crumbly. Season.", "es": "Añade los frijoles y luego la harina poco a poco, removiendo hasta que quede suelto. Ajusta la sal." },
         { "pt": "Refogue a couve à parte por 2 minutos e sirva por cima, com cheiro-verde.", "en": "Sauté the kale separately for 2 minutes and serve on top with herbs.", "es": "Saltea la col aparte 2 minutos y sírvela por encima con hierbas." }
+      ],
+      "sources": [
+        { "title": "Food Standards Australia New Zealand — Cassava", "url": "https://www.foodstandards.gov.au/consumer/chemicals/cassava" },
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
       ]
     },
     {
@@ -805,7 +914,10 @@
         { "pt": "Refogue cebola, cenoura, aipo e alho no azeite por 5 minutos. Junte o tomate e o cominho.", "en": "Sauté onion, carrot, celery and garlic in oil for 5 minutes. Add the tomato and cumin.", "es": "Sofríe cebolla, zanahoria, apio y ajo en aceite 5 minutos. Añade el tomate y el comino." },
         { "pt": "Junte lentilha, louro e água e cozinhe 30 minutos, até a lentilha desmanchar um pouco. Acerte o sal.", "en": "Add the lentils, bay and water and simmer 30 minutes until the lentils start to break down. Season.", "es": "Añade las lentejas, el laurel y el agua y cuece 30 minutos hasta que empiecen a deshacerse. Ajusta la sal." }
       ],
-      "tip": { "pt": "Um fio de limão no prato realça o sabor.", "en": "A squeeze of lemon in the bowl lifts the flavour.", "es": "Un chorrito de limón en el plato realza el sabor." }
+      "tip": { "pt": "Um fio de limão no prato realça o sabor.", "en": "A squeeze of lemon in the bowl lifts the flavour.", "es": "Un chorrito de limón en el plato realza el sabor." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "edamame",
@@ -827,7 +939,10 @@
         { "pt": "Doure o alho e a pimenta no azeite por 1 minuto.", "en": "Fry the garlic and chilli in oil for 1 minute.", "es": "Dora el ajo y la guindilla en aceite 1 minuto." },
         { "pt": "Junte as vagens, salteie e polvilhe sal grosso. Coma só os grãos, apertando a vagem.", "en": "Add the pods, toss and sprinkle with coarse salt. Eat only the beans, squeezing them from the pod.", "es": "Añade las vainas, saltea y espolvorea sal gruesa. Come solo los granos, apretando la vaina." }
       ],
-      "safety": { "pt": "Soja sempre cozida: crua ela é indigesta.", "en": "Always cook soybeans: raw they are indigestible.", "es": "Cuece siempre la soja: cruda es indigesta." }
+      "safety": { "pt": "Soja sempre cozida: crua ela é indigesta.", "en": "Always cook soybeans: raw they are indigestible.", "es": "Cuece siempre la soja: cruda es indigesta." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "homemade-bread",
@@ -850,7 +965,10 @@
         { "pt": "Modele, ponha na assadeira e deixe crescer mais 40 minutos.", "en": "Shape, place on the tray and let it rise 40 more minutes.", "es": "Forma el pan, ponlo en la bandeja y deja crecer 40 minutos más." },
         { "pt": "Asse a 220 °C por 35 a 40 minutos, com uma vasilha de água no forno, até soar oco ao bater embaixo.", "en": "Bake at 220 °C for 35 to 40 minutes with a dish of water in the oven, until it sounds hollow when tapped underneath.", "es": "Hornea a 220 °C de 35 a 40 minutos con un recipiente de agua en el horno, hasta que suene hueco al golpear la base." }
       ],
-      "tip": { "pt": "Espere esfriar antes de cortar: o miolo ainda está terminando de assar.", "en": "Let it cool before slicing: the crumb is still setting.", "es": "Déjalo enfriar antes de cortar: la miga todavía se está asentando." }
+      "tip": { "pt": "Espere esfriar antes de cortar: o miolo ainda está terminando de assar.", "en": "Let it cool before slicing: the crumb is still setting.", "es": "Déjalo enfriar antes de cortar: la miga todavía se está asentando." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "granola",
@@ -872,6 +990,9 @@
         { "pt": "Aqueça o forno a 160 °C.", "en": "Heat the oven to 160 °C.", "es": "Precalienta el horno a 160 °C." },
         { "pt": "Misture tudo até a aveia ficar toda úmida e espalhe numa assadeira.", "en": "Mix everything until all the oats are coated and spread on a tray.", "es": "Mezcla todo hasta que la avena quede bien untada y extiéndela en una bandeja." },
         { "pt": "Asse 25 a 30 minutos, mexendo a cada 10, até dourar. Esfrie na assadeira: ela fica crocante ao esfriar.", "en": "Bake 25 to 30 minutes, stirring every 10, until golden. Cool on the tray: it crisps as it cools.", "es": "Hornea de 25 a 30 minutos, removiendo cada 10, hasta dorar. Enfría en la bandeja: se vuelve crujiente al enfriar." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
       ]
     },
     {
@@ -895,7 +1016,10 @@
         { "pt": "Refogue cebola, alho-poró, cenoura e aipo no azeite por 8 minutos.", "en": "Sauté the onion, leek, carrot and celery in oil for 8 minutes.", "es": "Sofríe la cebolla, el puerro, la zanahoria y el apio en aceite 8 minutos." },
         { "pt": "Junte a cevada, o tomilho e o caldo e cozinhe em fogo baixo por 40 a 50 minutos, até o grão ficar macio. Acerte o sal.", "en": "Add the barley, thyme and stock and simmer 40 to 50 minutes until the grain is tender. Season.", "es": "Añade la cebada, el tomillo y el caldo y cuece a fuego bajo de 40 a 50 minutos hasta que el grano esté tierno. Ajusta la sal." }
       ],
-      "tip": { "pt": "A cevada da lavoura precisa ser descascada (perolada) antes de ir para a panela.", "en": "Barley from the field needs its husk removed (pearled) before cooking.", "es": "La cebada del campo debe pelarse (perlarse) antes de cocinarla." }
+      "tip": { "pt": "A cevada da lavoura precisa ser descascada (perolada) antes de ir para a panela.", "en": "Barley from the field needs its husk removed (pearled) before cooking.", "es": "La cebada del campo debe pelarse (perlarse) antes de cocinarla." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "popped-sorghum",
@@ -916,7 +1040,10 @@
         { "pt": "Junte o sorgo, tampe e balance a panela enquanto estoura, de 2 a 4 minutos.", "en": "Add the sorghum, cover and shake the pan as it pops, 2 to 4 minutes.", "es": "Añade el sorgo, tapa y agita la olla mientras revienta, de 2 a 4 minutos." },
         { "pt": "Desligue quando os estalos espaçarem e tempere.", "en": "Turn off when the popping slows and season.", "es": "Apaga cuando los estallidos se espacien y sazona." }
       ],
-      "tip": { "pt": "Sorgo granífero branco estoura melhor que o sorgo forrageiro.", "en": "White grain sorghum pops better than forage sorghum.", "es": "El sorgo granífero blanco revienta mejor que el forrajero." }
+      "tip": { "pt": "Sorgo granífero branco estoura melhor que o sorgo forrageiro.", "en": "White grain sorghum pops better than forage sorghum.", "es": "El sorgo granífero blanco revienta mejor que el forrajero." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "corn-pudding",
@@ -939,7 +1066,10 @@
         { "pt": "Leve ao fogo com o açúcar e o sal, mexendo sem parar por 15 a 20 minutos, até engrossar.", "en": "Cook with the sugar and salt, stirring constantly for 15 to 20 minutes, until thick.", "es": "Cuece con el azúcar y la sal, removiendo sin parar de 15 a 20 minutos, hasta que espese." },
         { "pt": "Despeje em potinhos, polvilhe canela e sirva frio ou morno.", "en": "Pour into small bowls, dust with cinnamon and serve cold or warm.", "es": "Vierte en cuencos, espolvorea canela y sirve frío o templado." }
       ],
-      "tip": { "pt": "Use milho verde no ponto de pamonha: ao apertar o grão, sai um leite branco.", "en": "Use corn at the milky stage: pressing a kernel releases white juice.", "es": "Usa maíz en estado lechoso: al apretar el grano sale un jugo blanco." }
+      "tip": { "pt": "Use milho verde no ponto de pamonha: ao apertar o grão, sai um leite branco.", "en": "Use corn at the milky stage: pressing a kernel releases white juice.", "es": "Usa maíz en estado lechoso: al apretar el grano sale un jugo blanco." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "banana-cake",
@@ -961,6 +1091,9 @@
         { "pt": "Aqueça o forno a 180 °C e unte uma forma.", "en": "Heat the oven to 180 °C and grease a tin.", "es": "Precalienta el horno a 180 °C y engrasa un molde." },
         { "pt": "Misture as bananas, os ovos, o óleo e o açúcar. Junte a farinha, a aveia e a canela e, por último, o fermento.", "en": "Mix the bananas, eggs, oil and sugar. Fold in the flour, oats and cinnamon, then the baking powder.", "es": "Mezcla los plátanos, los huevos, el aceite y el azúcar. Añade la harina, la avena y la canela y, al final, la levadura." },
         { "pt": "Asse 40 minutos, até o palito sair limpo.", "en": "Bake 40 minutes, until a skewer comes out clean.", "es": "Hornea 40 minutos, hasta que el palillo salga limpio." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
       ]
     },
     {
@@ -984,7 +1117,10 @@
         { "pt": "Passe para uma tigela, junte a farinha e o fermento e asse a 180 °C por 35 a 40 minutos.", "en": "Pour into a bowl, fold in the flour and baking powder and bake at 180 °C for 35 to 40 minutes.", "es": "Pásalo a un bol, añade la harina y la levadura y hornea a 180 °C de 35 a 40 minutos." },
         { "pt": "Ferva o suco com o açúcar por 3 minutos e regue o bolo ainda quente.", "en": "Boil the juice with the sugar for 3 minutes and pour over the warm cake.", "es": "Hierve el zumo con el azúcar 3 minutos y riega el bizcocho aún caliente." }
       ],
-      "tip": { "pt": "Tirar a parte branca grossa da casca deixa o bolo menos amargo.", "en": "Removing the thick white pith makes the cake less bitter.", "es": "Quitar la parte blanca gruesa de la piel hace el bizcocho menos amargo." }
+      "tip": { "pt": "Tirar a parte branca grossa da casca deixa o bolo menos amargo.", "en": "Removing the thick white pith makes the cake less bitter.", "es": "Quitar la parte blanca gruesa de la piel hace el bizcocho menos amargo." },
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "lavender-cookies",
@@ -1007,7 +1143,11 @@
         { "pt": "Corte rodelas de 1 cm e asse a 170 °C por 12 a 15 minutos, até as bordas dourarem levemente.", "en": "Slice into 1 cm rounds and bake at 170 °C for 12 to 15 minutes, until lightly golden at the edges.", "es": "Corta rodajas de 1 cm y hornea a 170 °C de 12 a 15 minutos, hasta que los bordes se doren ligeramente." }
       ],
       "tip": { "pt": "Use pouca lavanda: em excesso fica com gosto de sabonete.", "en": "Go easy on the lavender: too much tastes of soap.", "es": "Usa poca lavanda: en exceso sabe a jabón." },
-      "safety": { "pt": "Use só lavanda que não recebeu agrotóxico. A lavanda-inglesa (Lavandula angustifolia) é a indicada para cozinhar.", "en": "Only use lavender that has not been sprayed. English lavender (Lavandula angustifolia) is the one for cooking.", "es": "Usa solo lavanda sin pesticidas. La lavanda inglesa (Lavandula angustifolia) es la indicada para cocinar." }
+      "safety": { "pt": "Use só lavanda que não recebeu agrotóxico. A lavanda-inglesa (Lavandula angustifolia) é a indicada para cozinhar.", "en": "Only use lavender that has not been sprayed. English lavender (Lavandula angustifolia) is the one for cooking.", "es": "Usa solo lavanda sin pesticidas. La lavanda inglesa (Lavandula angustifolia) es la indicada para cocinar." },
+      "sources": [
+        { "title": "NIH NCCIH — Lavender", "url": "https://www.nccih.nih.gov/health/lavender" },
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "roast-pork-apple",
@@ -1030,7 +1170,10 @@
         { "pt": "Asse a 180 °C por 1 hora, tire o papel e asse mais 20 a 30 minutos para dourar.", "en": "Roast at 180 °C for 1 hour, remove the foil and roast 20 to 30 minutes more to brown.", "es": "Asa a 180 °C 1 hora, quita el papel y asa de 20 a 30 minutos más para dorar." },
         { "pt": "Descanse 10 minutos antes de fatiar.", "en": "Rest 10 minutes before slicing.", "es": "Deja reposar 10 minutos antes de cortar." }
       ],
-      "safety": { "pt": "A carne de porco está pronta com 63 °C no centro, seguida de 3 minutos de descanso.", "en": "Pork is done at 63 °C in the centre, followed by a 3-minute rest.", "es": "El cerdo está hecho a 63 °C en el centro, seguido de 3 minutos de reposo." }
+      "safety": { "pt": "A carne de porco está pronta com 63 °C no centro, seguida de 3 minutos de descanso.", "en": "Pork is done at 63 °C in the centre, followed by a 3-minute rest.", "es": "El cerdo está hecho a 63 °C en el centro, seguido de 3 minutos de reposo." },
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "duck-orange",
@@ -1054,7 +1197,10 @@
         { "pt": "Ferva o suco das outras 2 laranjas com o mel e um pouco do caldo da assadeira até engrossar e sirva com o pato.", "en": "Boil the juice of the other 2 oranges with the honey and some pan juices until syrupy and serve with the duck.", "es": "Hierve el zumo de las otras 2 naranjas con la miel y un poco del jugo de la bandeja hasta que espese y sirve con el pato." }
       ],
       "tip": { "pt": "Guarde a gordura do pato: batatas assadas nela ficam ótimas.", "en": "Keep the duck fat: potatoes roasted in it are excellent.", "es": "Guarda la grasa del pato: las patatas asadas en ella quedan buenísimas." },
-      "safety": { "pt": "O pato inteiro está pronto com 74 °C na parte mais grossa da coxa.", "en": "A whole duck is done at 74 °C in the thickest part of the thigh.", "es": "El pato entero está hecho a 74 °C en la parte más gruesa del muslo." }
+      "safety": { "pt": "O pato inteiro está pronto com 74 °C na parte mais grossa da coxa.", "en": "A whole duck is done at 74 °C in the thickest part of the thigh.", "es": "El pato entero está hecho a 74 °C en la parte más gruesa del muslo." },
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "lamb-rosemary",
@@ -1076,7 +1222,10 @@
         { "pt": "Ponha numa assadeira com meio copo de água, cubra com papel-alumínio e asse a 170 °C por 1 hora e meia.", "en": "Place in a tray with half a glass of water, cover with foil and roast at 170 °C for 1 and a half hours.", "es": "Ponlo en una bandeja con medio vaso de agua, cubre con papel de aluminio y asa a 170 °C hora y media." },
         { "pt": "Tire o papel, junte as batatas em volta e asse mais 40 minutos a 200 °C, até tudo dourar.", "en": "Remove the foil, add the potatoes around it and roast 40 more minutes at 200 °C until browned.", "es": "Quita el papel, pon las patatas alrededor y asa 40 minutos más a 200 °C hasta dorar." }
       ],
-      "safety": { "pt": "Cordeiro inteiro em peça está seguro com 63 °C no centro e 3 minutos de descanso; carne moída precisa de 71 °C.", "en": "A whole cut of lamb is safe at 63 °C in the centre with a 3-minute rest; minced lamb needs 71 °C.", "es": "Una pieza entera de cordero es segura a 63 °C en el centro con 3 minutos de reposo; la carne picada necesita 71 °C." }
+      "safety": { "pt": "Cordeiro inteiro em peça está seguro com 63 °C no centro e 3 minutos de descanso; carne moída precisa de 71 °C.", "en": "A whole cut of lamb is safe at 63 °C in the centre with a 3-minute rest; minced lamb needs 71 °C.", "es": "Una pieza entera de cordero es segura a 63 °C en el centro con 3 minutos de reposo; la carne picada necesita 71 °C." },
+      "sources": [
+        { "title": "USDA FSIS — Safe Minimum Internal Temperature Chart", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" }
+      ]
     },
     {
       "id": "quinoa-tabbouleh",
@@ -1098,7 +1247,10 @@
         { "pt": "Cozinhe em 2 xícaras de água com sal por 15 minutos, até a água secar. Espalhe para esfriar.", "en": "Cook in 2 cups of salted water for 15 minutes until the water is absorbed. Spread out to cool.", "es": "Cuece en 2 tazas de agua con sal 15 minutos hasta que se absorba. Extiéndela para que se enfríe." },
         { "pt": "Misture com os legumes e as ervas e tempere com limão, azeite e sal.", "en": "Mix with the vegetables and herbs and dress with lemon, oil and salt.", "es": "Mezcla con las verduras y las hierbas y aliña con limón, aceite y sal." }
       ],
-      "tip": { "pt": "A quinoa da lavoura tem saponina na casca: lave em várias águas até parar de espumar.", "en": "Home-grown quinoa has saponin on its coat: rinse in several waters until it stops foaming.", "es": "La quinoa del campo tiene saponina: lávala en varias aguas hasta que deje de hacer espuma." }
+      "tip": { "pt": "A quinoa da lavoura tem saponina na casca: lave em várias águas até parar de espumar.", "en": "Home-grown quinoa has saponin on its coat: rinse in several waters until it stops foaming.", "es": "La quinoa del campo tiene saponina: lávala en varias aguas hasta que deje de hacer espuma." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "fennel-orange-salad",
@@ -1120,7 +1272,10 @@
         { "pt": "Descasque as laranjas a faca e solte os gomos, guardando o suco que escorrer.", "en": "Peel the oranges with a knife and cut out the segments, saving the juice.", "es": "Pela las naranjas a cuchillo y saca los gajos, guardando el zumo." },
         { "pt": "Monte com o funcho, as laranjas, as azeitonas e a hortelã e regue com o suco, azeite e sal.", "en": "Arrange the fennel, oranges, olives and mint and dress with the juice, oil and salt.", "es": "Monta el hinojo, las naranjas, las aceitunas y la menta y aliña con el zumo, aceite y sal." }
       ],
-      "tip": { "pt": "As folhinhas do funcho também vão na salada.", "en": "The fennel fronds go in the salad too.", "es": "Las hojitas del hinojo también van en la ensalada." }
+      "tip": { "pt": "As folhinhas do funcho também vão na salada.", "en": "The fennel fronds go in the salad too.", "es": "Las hojitas del hinojo también van en la ensalada." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "rice-pudding",
@@ -1141,6 +1296,9 @@
         { "pt": "Cozinhe o arroz em 2 xícaras de água por 10 minutos.", "en": "Cook the rice in 2 cups of water for 10 minutes.", "es": "Cuece el arroz en 2 tazas de agua 10 minutos." },
         { "pt": "Junte o leite, a casca de limão e a canela e cozinhe em fogo baixo por 30 minutos, mexendo sempre.", "en": "Add the milk, lemon peel and cinnamon and simmer 30 minutes, stirring often.", "es": "Añade la leche, la piel de limón y la canela y cuece a fuego bajo 30 minutos, removiendo a menudo." },
         { "pt": "Junte o açúcar, cozinhe mais 5 minutos, tire a casca e a canela e sirva com canela em pó.", "en": "Add the sugar, cook 5 more minutes, remove the peel and stick and serve dusted with cinnamon.", "es": "Añade el azúcar, cuece 5 minutos más, retira la piel y la canela y sirve con canela molida." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
       ]
     },
     {
@@ -1164,7 +1322,10 @@
         { "pt": "Junte a farinha, o açúcar e o sal e bata mais um pouco.", "en": "Add the flour, sugar and salt and blitz a little more.", "es": "Añade la harina, el azúcar y la sal y tritura un poco más." },
         { "pt": "Aperte com força em forminhas ou num copinho e desenforme.", "en": "Press firmly into small moulds or a shot glass and turn out.", "es": "Aprieta con fuerza en moldecitos o en un vaso pequeño y desmolda." }
       ],
-      "safety": { "pt": "Descarte amendoim mofado ou com gosto amargo: pode ter aflatoxina.", "en": "Throw away mouldy or bitter peanuts: they may contain aflatoxin.", "es": "Desecha los cacahuetes con moho o sabor amargo: pueden tener aflatoxina." }
+      "safety": { "pt": "Descarte amendoim mofado ou com gosto amargo: pode ter aflatoxina.", "en": "Throw away mouldy or bitter peanuts: they may contain aflatoxin.", "es": "Desecha los cacahuetes con moho o sabor amargo: pueden tener aflatoxina." },
+      "sources": [
+        { "title": "Food Standards Australia New Zealand — Cassava", "url": "https://www.foodstandards.gov.au/consumer/chemicals/cassava" }
+      ]
     },
     {
       "id": "apple-pear-crumble",
@@ -1185,6 +1346,9 @@
         { "pt": "Misture as frutas com o açúcar e a canela num refratário.", "en": "Toss the fruit with the sugar and cinnamon in a baking dish.", "es": "Mezcla la fruta con el azúcar y la canela en una fuente." },
         { "pt": "Esfregue a aveia, a farinha, o açúcar e a manteiga com os dedos até formar uma farofa grossa.", "en": "Rub the oats, flour, sugar and butter together with your fingers into coarse crumbs.", "es": "Frota la avena, la harina, el azúcar y la mantequilla con los dedos hasta formar migas gruesas." },
         { "pt": "Cubra as frutas e asse a 190 °C por 30 a 35 minutos, até dourar e a fruta borbulhar.", "en": "Cover the fruit and bake at 190 °C for 30 to 35 minutes, until golden and bubbling.", "es": "Cubre la fruta y hornea a 190 °C de 30 a 35 minutos, hasta que se dore y la fruta burbujee." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
       ]
     },
     {
@@ -1207,7 +1371,10 @@
         { "pt": "Misture numa tigela grande com cuidado, para não amassar.", "en": "Mix gently in a large bowl so the fruit does not bruise.", "es": "Mezcla con cuidado en un bol grande para no aplastar la fruta." },
         { "pt": "Regue com a polpa do maracujá, junte a hortelã e leve à geladeira por 15 minutos antes de servir.", "en": "Spoon over the passion fruit pulp, add the mint and chill 15 minutes before serving.", "es": "Riega con la pulpa de maracuyá, añade la menta y refrigera 15 minutos antes de servir." }
       ],
-      "tip": { "pt": "Sem açúcar ela fica melhor no mesmo dia; no dia seguinte as frutas soltam muita água.", "en": "Without sugar it is best eaten the same day; by the next day the fruit releases a lot of juice.", "es": "Sin azúcar está mejor el mismo día; al día siguiente la fruta suelta mucho jugo." }
+      "tip": { "pt": "Sem açúcar ela fica melhor no mesmo dia; no dia seguinte as frutas soltam muita água.", "en": "Without sugar it is best eaten the same day; by the next day the fruit releases a lot of juice.", "es": "Sin azúcar está mejor el mismo día; al día siguiente la fruta suelta mucho jugo." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "passion-fruit-mousse",
@@ -1228,6 +1395,9 @@
         { "pt": "Bata o suco, o leite condensado e o creme de leite no liquidificador por 3 minutos.", "en": "Blend the juice, condensed milk and cream for 3 minutes.", "es": "Tritura el zumo, la leche condensada y la nata 3 minutos." },
         { "pt": "Despeje numa travessa ou em taças.", "en": "Pour into a dish or glasses.", "es": "Vierte en una fuente o en copas." },
         { "pt": "Leve à geladeira por pelo menos 3 horas e cubra com a polpa antes de servir.", "en": "Chill at least 3 hours and top with the pulp before serving.", "es": "Refrigera al menos 3 horas y cubre con la pulpa antes de servir." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
       ]
     },
     {
@@ -1249,7 +1419,10 @@
         { "pt": "Cozinhe a polpa com o açúcar em panela grossa, em fogo baixo, mexendo sempre, por 50 a 60 minutos.", "en": "Cook the pulp with the sugar in a heavy pan on low heat, stirring constantly, for 50 to 60 minutes.", "es": "Cuece la pulpa con el azúcar en una olla gruesa a fuego bajo, removiendo siempre, de 50 a 60 minutos." },
         { "pt": "Está pronta quando soltar do fundo da panela. Despeje numa forma untada e deixe esfriar até firmar.", "en": "It is ready when it pulls away from the bottom of the pan. Pour into a greased tin and leave to set.", "es": "Está lista cuando se despega del fondo de la olla. Vierte en un molde engrasado y deja que cuaje." }
       ],
-      "safety": { "pt": "O doce quente espirra e queima: use colher de cabo longo e luva.", "en": "The hot paste spits and burns: use a long-handled spoon and an oven glove.", "es": "El dulce caliente salpica y quema: usa una cuchara de mango largo y un guante." }
+      "safety": { "pt": "O doce quente espirra e queima: use colher de cabo longo e luva.", "en": "The hot paste spits and burns: use a long-handled spoon and an oven glove.", "es": "El dulce caliente salpica y quema: usa una cuchara de mango largo y un guante." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "stone-fruit-compote",
@@ -1271,7 +1444,10 @@
         { "pt": "Junte os pêssegos e as ameixas e cozinhe 6 a 8 minutos, até amaciar sem desmanchar.", "en": "Add the peaches and plums and simmer 6 to 8 minutes, until tender but whole.", "es": "Añade los melocotones y las ciruelas y cuece de 6 a 8 minutos, hasta que estén tiernos pero enteros." },
         { "pt": "Junte as cerejas, cozinhe mais 2 minutos e deixe esfriar na calda.", "en": "Add the cherries, cook 2 more minutes and cool in the syrup.", "es": "Añade las cerezas, cuece 2 minutos más y deja enfriar en el almíbar." }
       ],
-      "tip": { "pt": "Na geladeira, num pote fechado, dura até 5 dias.", "en": "Keeps up to 5 days in a closed jar in the fridge.", "es": "En la nevera, en un bote cerrado, dura hasta 5 días." }
+      "tip": { "pt": "Na geladeira, num pote fechado, dura até 5 dias.", "en": "Keeps up to 5 days in a closed jar in the fridge.", "es": "En la nevera, en un bote cerrado, dura hasta 5 días." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "figs-in-syrup",
@@ -1292,7 +1468,10 @@
         { "pt": "Faça uma calda com o açúcar, a água e as especiarias.", "en": "Make a syrup with the sugar, water and spices.", "es": "Haz un almíbar con el azúcar, el agua y las especias." },
         { "pt": "Cozinhe os figos na calda em fogo baixo por 1 hora, até ficarem escuros e brilhantes. Guarde em potes de vidro limpos.", "en": "Simmer the figs in the syrup for 1 hour until dark and glossy. Store in clean glass jars.", "es": "Cuece los higos en el almíbar a fuego bajo 1 hora, hasta que estén oscuros y brillantes. Guarda en frascos de vidrio limpios." }
       ],
-      "safety": { "pt": "O leite do figo irrita a pele: use luvas ao cortar.", "en": "Fig sap irritates the skin: wear gloves when cutting.", "es": "La savia del higo irrita la piel: usa guantes al cortar." }
+      "safety": { "pt": "O leite do figo irrita a pele: use luvas ao cortar.", "en": "Fig sap irritates the skin: wear gloves when cutting.", "es": "La savia del higo irrita la piel: usa guantes al cortar." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "yogurt-persimmon",
@@ -1314,7 +1493,11 @@
         { "pt": "Quando firmar, leve à geladeira. Sirva com caqui em pedaços e mel.", "en": "Once set, refrigerate. Serve with persimmon pieces and honey.", "es": "Cuando cuaje, llévalo a la nevera. Sirve con caqui en trozos y miel." }
       ],
       "tip": { "pt": "Guarde meia xícara do seu iogurte para começar a próxima leva.", "en": "Keep half a cup of your yogurt to start the next batch.", "es": "Guarda media taza de tu yogur para empezar la siguiente tanda." },
-      "safety": { "pt": "Aquecer o leite a 85 °C é essencial com leite cru: elimina bactérias perigosas.", "en": "Heating to 85 °C is essential with raw milk: it kills dangerous bacteria.", "es": "Calentar a 85 °C es esencial con leche cruda: elimina bacterias peligrosas." }
+      "safety": { "pt": "Aquecer o leite a 85 °C é essencial com leite cru: elimina bactérias perigosas.", "en": "Heating to 85 °C is essential with raw milk: it kills dangerous bacteria.", "es": "Calentar a 85 °C es esencial con leche cruda: elimina bacterias peligrosas." },
+      "sources": [
+        { "title": "University of Alaska Fairbanks Cooperative Extension — Making Yogurt at Home", "url": "https://uaf.edu/ces/publications/database/food/making-yogurt.php" },
+        { "title": "U.S. FDA — Raw Milk Misconceptions and the Danger of Raw Milk Consumption", "url": "https://www.fda.gov/food/buy-store-serve-safe-food/raw-milk-misconceptions-and-danger-raw-milk-consumption" }
+      ]
     },
     {
       "id": "cocada",
@@ -1336,7 +1519,10 @@
         { "pt": "Cozinhe 20 a 25 minutos, até a mistura soltar do fundo da panela.", "en": "Cook 20 to 25 minutes, until the mixture pulls away from the pan.", "es": "Cuece de 20 a 25 minutos, hasta que la mezcla se despegue del fondo." },
         { "pt": "Despeje em colheradas sobre uma superfície untada e deixe esfriar até firmar.", "en": "Drop spoonfuls onto a greased surface and leave to set.", "es": "Vierte cucharadas sobre una superficie engrasada y deja que cuajen." }
       ],
-      "tip": { "pt": "Para abrir o coco, fure os olhos, escorra a água e leve 15 minutos ao forno: a casca racha e a polpa solta fácil.", "en": "To open the coconut, pierce the eyes, drain the water and bake 15 minutes: the shell cracks and the flesh comes away easily.", "es": "Para abrir el coco, perfora los ojos, escurre el agua y hornea 15 minutos: la cáscara se agrieta y la pulpa sale fácil." }
+      "tip": { "pt": "Para abrir o coco, fure os olhos, escorra a água e leve 15 minutos ao forno: a casca racha e a polpa solta fácil.", "en": "To open the coconut, pierce the eyes, drain the water and bake 15 minutes: the shell cracks and the flesh comes away easily.", "es": "Para abrir el coco, perfora los ojos, escurre el agua y hornea 15 minutos: la cáscara se agrieta y la pulpa sale fácil." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "grape-juice",
@@ -1357,7 +1543,10 @@
         { "pt": "Na extratora, cozinhe no vapor por 50 a 60 minutos e recolha o suco. Sem extratora: amasse, aqueça em fogo baixo por 15 minutos sem ferver e coe num pano.", "en": "In the steam juicer, steam for 50 to 60 minutes and collect the juice. Without one: crush, warm gently for 15 minutes without boiling and strain through cloth.", "es": "En la extractora, cuece al vapor de 50 a 60 minutos y recoge el zumo. Sin extractora: aplasta, calienta a fuego bajo 15 minutos sin hervir y cuela con un paño." },
         { "pt": "Encha as garrafas com o suco ainda quente (acima de 85 °C), tampe e deixe esfriar de cabeça para baixo.", "en": "Fill the bottles with the juice still hot (above 85 °C), cap and cool upside down.", "es": "Llena las botellas con el zumo aún caliente (más de 85 °C), tapa y deja enfriar boca abajo." }
       ],
-      "tip": { "pt": "Na hora de servir, dilua com água gelada se achar forte.", "en": "Dilute with cold water when serving if you find it strong.", "es": "Al servir, diluye con agua fría si lo encuentras fuerte." }
+      "tip": { "pt": "Na hora de servir, dilua com água gelada se achar forte.", "en": "Dilute with cold water when serving if you find it strong.", "es": "Al servir, diluye con agua fría si lo encuentras fuerte." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "pineapple-mint-juice",
@@ -1379,7 +1568,10 @@
         { "pt": "Bata com a hortelã, o gengibre e a água por 2 minutos.", "en": "Blend with the mint, ginger and water for 2 minutes.", "es": "Tritura con la menta, el jengibre y el agua 2 minutos." },
         { "pt": "Coe, adoce se quiser e sirva com gelo.", "en": "Strain, sweeten if you like and serve over ice.", "es": "Cuela, endulza si quieres y sirve con hielo." }
       ],
-      "tip": { "pt": "Ferva as cascas do abacaxi com água e cravo para fazer um chá refrescante.", "en": "Boil the pineapple peels with water and cloves for a refreshing tea.", "es": "Hierve las cáscaras de la piña con agua y clavo para un té refrescante." }
+      "tip": { "pt": "Ferva as cascas do abacaxi com água e cravo para fazer um chá refrescante.", "en": "Boil the pineapple peels with water and cloves for a refreshing tea.", "es": "Hierve las cáscaras de la piña con agua y clavo para un té refrescante." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "acerola-orange-juice",
@@ -1401,7 +1593,10 @@
         { "pt": "Bata com a água e o suco de laranja por 30 segundos, só para não quebrar os caroços.", "en": "Blend with the water and orange juice for just 30 seconds so the seeds do not break.", "es": "Tritura con el agua y el zumo de naranja solo 30 segundos para no romper las semillas." },
         { "pt": "Coe, adoce e beba logo: a vitamina C cai rápido depois de batido.", "en": "Strain, sweeten and drink right away: vitamin C drops quickly once blended.", "es": "Cuela, endulza y bebe enseguida: la vitamina C baja rápido después de triturar." }
       ],
-      "tip": { "pt": "Congele acerolas inteiras na safra: duram meses e o suco fica igual.", "en": "Freeze whole acerolas in season: they keep for months and make the same juice.", "es": "Congela las acerolas enteras en temporada: duran meses y el zumo queda igual." }
+      "tip": { "pt": "Congele acerolas inteiras na safra: duram meses e o suco fica igual.", "en": "Freeze whole acerolas in season: they keep for months and make the same juice.", "es": "Congela las acerolas enteras en temporada: duran meses y el zumo queda igual." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "lemonade-stevia",
@@ -1423,7 +1618,10 @@
         { "pt": "Junte o suco dos limões (ou os limões em gomos, sem o miolo branco, batendo só 5 segundos).", "en": "Add the lemon juice (or lemon wedges without the white core, blending just 5 seconds).", "es": "Añade el zumo de los limones (o los limones en gajos sin el centro blanco, triturando solo 5 segundos)." },
         { "pt": "Coe, prove e junte mais estévia se quiser mais doce. Sirva com gelo.", "en": "Strain, taste and add more stevia for extra sweetness. Serve over ice.", "es": "Cuela, prueba y añade más estevia si lo quieres más dulce. Sirve con hielo." }
       ],
-      "tip": { "pt": "Folha de estévia adoça muito: comece com pouco, porque em excesso deixa gosto amargo.", "en": "Stevia leaves are very sweet: start with a few, as too many taste bitter.", "es": "La hoja de estevia endulza mucho: empieza con poca, porque en exceso amarga." }
+      "tip": { "pt": "Folha de estévia adoça muito: comece com pouco, porque em excesso deixa gosto amargo.", "en": "Stevia leaves are very sweet: start with a few, as too many taste bitter.", "es": "La hoja de estevia endulza mucho: empieza con poca, porque en exceso amarga." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "herbal-tea",
@@ -1446,7 +1644,10 @@
         { "pt": "Coe e adoce com mel se quiser.", "en": "Strain and sweeten with honey if you like.", "es": "Cuela y endulza con miel si quieres." }
       ],
       "tip": { "pt": "Seque as ervas à sombra, em maços pendurados, e guarde em potes fechados.", "en": "Dry the herbs in the shade in hanging bunches and store in closed jars.", "es": "Seca las hierbas a la sombra en manojos colgados y guárdalas en botes cerrados." },
-      "safety": { "pt": "Quem tem alergia a margaridas e plantas parecidas pode reagir à camomila. Grávidas e quem toma remédio para dormir devem consultar um médico antes.", "en": "People allergic to daisies and similar plants may react to chamomile. Pregnant women and anyone on sleep medication should ask a doctor first.", "es": "Quien es alérgico a las margaritas y plantas parecidas puede reaccionar a la manzanilla. Embarazadas y quien toma medicación para dormir deben consultar a un médico antes." }
+      "safety": { "pt": "Quem tem alergia a margaridas e plantas parecidas pode reagir à camomila. Grávidas e quem toma remédio para dormir devem consultar um médico antes.", "en": "People allergic to daisies and similar plants may react to chamomile. Pregnant women and anyone on sleep medication should ask a doctor first.", "es": "Quien es alérgico a las margaritas y plantas parecidas puede reaccionar a la manzanilla. Embarazadas y quien toma medicación para dormir deben consultar a un médico antes." },
+      "sources": [
+        { "title": "NIH NCCIH — Chamomile", "url": "https://www.nccih.nih.gov/health/chamomile" }
+      ]
     },
     {
       "id": "golden-milk",
@@ -1468,7 +1669,10 @@
         { "pt": "Coe numa peneira fina.", "en": "Strain through a fine sieve.", "es": "Cuela por un colador fino." },
         { "pt": "Adoce com mel e beba quente.", "en": "Sweeten with honey and drink hot.", "es": "Endulza con miel y bebe caliente." }
       ],
-      "tip": { "pt": "A cúrcuma fresca mancha mãos e tábuas: use luvas ao ralar.", "en": "Fresh turmeric stains hands and boards: wear gloves when grating.", "es": "La cúrcuma fresca mancha las manos y las tablas: usa guantes al rallar." }
+      "tip": { "pt": "A cúrcuma fresca mancha mãos e tábuas: use luvas ao ralar.", "en": "Fresh turmeric stains hands and boards: wear gloves when grating.", "es": "La cúrcuma fresca mancha las manos y las tablas: usa guantes al rallar." },
+      "sources": [
+        { "title": "NIH NCCIH — Turmeric", "url": "https://www.nccih.nih.gov/health/turmeric" }
+      ]
     },
     {
       "id": "home-roasted-coffee",
@@ -1490,7 +1694,10 @@
         { "pt": "Moa na hora. Ferva a água, deixe descansar 1 minuto (cerca de 92 °C) e despeje devagar sobre o pó no coador de pano.", "en": "Grind just before brewing. Boil the water, let it rest 1 minute (about 92 °C) and pour slowly over the grounds in the cloth filter.", "es": "Muele al momento. Hierve el agua, déjala reposar 1 minuto (unos 92 °C) y viértela despacio sobre el café en el colador de tela." }
       ],
       "tip": { "pt": "Guarde o café torrado em pote bem fechado, longe da luz, e moa só o que for usar.", "en": "Store roasted beans in a sealed jar away from light and grind only what you need.", "es": "Guarda el café tostado en un bote bien cerrado, lejos de la luz, y muele solo lo que vayas a usar." },
-      "safety": { "pt": "A torra solta muita fumaça: faça com a janela aberta ou ao ar livre.", "en": "Roasting gives off a lot of smoke: do it with the window open or outdoors.", "es": "El tostado suelta mucho humo: hazlo con la ventana abierta o al aire libre." }
+      "safety": { "pt": "A torra solta muita fumaça: faça com a janela aberta ou ao ar livre.", "en": "Roasting gives off a lot of smoke: do it with the window open or outdoors.", "es": "El tostado suelta mucho humo: hazlo con la ventana abierta o al aire libre." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "hot-cocoa",
@@ -1512,7 +1719,10 @@
         { "pt": "Moa os nibs no processador ou pilão até virar uma pasta.", "en": "Grind the nibs in a processor or mortar to a paste.", "es": "Muele los nibs en procesadora o mortero hasta formar una pasta." },
         { "pt": "Aqueça o leite com a pasta, o açúcar, o sal e a canela, batendo com um batedor por 5 minutos. Coe se quiser mais liso.", "en": "Heat the milk with the paste, sugar, salt and cinnamon, whisking for 5 minutes. Strain for a smoother drink.", "es": "Calienta la leche con la pasta, el azúcar, la sal y la canela, batiendo 5 minutos. Cuela si lo quieres más suave." }
       ],
-      "tip": { "pt": "O cacau precisa fermentar de 5 a 7 dias no cocho e secar ao sol antes de virar chocolate.", "en": "Cocoa must ferment 5 to 7 days in a box and dry in the sun before it can become chocolate.", "es": "El cacao debe fermentar de 5 a 7 días en un cajón y secarse al sol antes de convertirse en chocolate." }
+      "tip": { "pt": "O cacau precisa fermentar de 5 a 7 dias no cocho e secar ao sol antes de virar chocolate.", "en": "Cocoa must ferment 5 to 7 days in a box and dry in the sun before it can become chocolate.", "es": "El cacao debe fermentar de 5 a 7 días en un cajón y secarse al sol antes de convertirse en chocolate." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "hummus",
@@ -1534,7 +1744,10 @@
         { "pt": "Junte a água do cozimento aos poucos até ficar bem cremoso.", "en": "Add cooking water little by little until very creamy.", "es": "Añade el agua de cocción poco a poco hasta que quede muy cremoso." },
         { "pt": "Sirva com um fio de azeite e páprica por cima.", "en": "Serve with a drizzle of oil and paprika on top.", "es": "Sirve con un chorrito de aceite y pimentón por encima." }
       ],
-      "tip": { "pt": "Na geladeira, dura 4 dias num pote fechado.", "en": "Keeps 4 days in a closed jar in the fridge.", "es": "En la nevera dura 4 días en un bote cerrado." }
+      "tip": { "pt": "Na geladeira, dura 4 dias num pote fechado.", "en": "Keeps 4 days in a closed jar in the fridge.", "es": "En la nevera dura 4 días en un bote cerrado." },
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
+      ]
     },
     {
       "id": "guacamole",
@@ -1555,11 +1768,14 @@
         { "pt": "Amasse o abacate com um garfo, deixando uns pedaços.", "en": "Mash the avocado with a fork, leaving some chunks.", "es": "Machaca el aguacate con un tenedor, dejando algunos trozos." },
         { "pt": "Junte o limão e o sal logo, para não escurecer.", "en": "Add the lime and salt straight away so it does not brown.", "es": "Añade el limón y la sal enseguida para que no se oscurezca." },
         { "pt": "Misture o tomate, a cebola, a pimenta e o coentro e sirva na hora.", "en": "Stir in the tomato, onion, chilli and coriander and serve at once.", "es": "Mezcla el tomate, la cebolla, el chile y el cilantro y sirve enseguida." }
+      ],
+      "sources": [
+        { "title": "USDA FSIS — Keep Food Safe! Food Safety Basics", "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/steps-keep-food-safe" }
       ]
     },
     {
       "id": "jabuticaba-jam",
-      "group": "preserve",
+      "group": "jam",
       "icon": "🫐",
       "title": { "pt": "Geleia de jabuticaba", "en": "Jabuticaba jam", "es": "Mermelada de jabuticaba" },
       "summary": { "pt": "A safra é curta e farta: a geleia guarda o sabor para o ano todo.", "en": "The harvest is short and abundant: jam keeps the flavour all year.", "es": "La cosecha es corta y abundante: la mermelada guarda el sabor todo el año." },
@@ -1578,11 +1794,14 @@
         { "pt": "Cozinhe com o açúcar e o limão, mexendo, por 30 a 40 minutos, até dar ponto: uma gota num pires frio não escorre.", "en": "Cook with the sugar and lemon, stirring, for 30 to 40 minutes, until set: a drop on a cold saucer does not run.", "es": "Cuece con el azúcar y el limón, removiendo, de 30 a 40 minutos, hasta el punto: una gota en un plato frío no corre." },
         { "pt": "Encha potes de vidro esterilizados com a geleia quente, tampe e vire de cabeça para baixo até esfriar.", "en": "Fill sterilised glass jars with the hot jam, close and turn upside down until cool.", "es": "Llena frascos de vidrio esterilizados con la mermelada caliente, cierra y pon boca abajo hasta que enfríe." }
       ],
-      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." }
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — Jams & Jellies", "url": "https://nchfp.uga.edu/how/make-jam-jelly" }
+      ]
     },
     {
       "id": "berry-jam",
-      "group": "preserve",
+      "group": "jam",
       "icon": "🍓",
       "title": { "pt": "Geleia de frutas vermelhas", "en": "Mixed berry jam", "es": "Mermelada de frutos rojos" },
       "summary": { "pt": "Morango, framboesa, amora e mirtilo juntos numa geleia só.", "en": "Strawberries, raspberries, blackberries and blueberries in one jam.", "es": "Fresas, frambuesas, moras y arándanos en una sola mermelada." },
@@ -1600,7 +1819,11 @@
         { "pt": "Envase quente em potes esterilizados, tampe e vire de cabeça para baixo.", "en": "Pot hot into sterilised jars, close and turn upside down.", "es": "Envasa en caliente en frascos esterilizados, cierra y pon boca abajo." }
       ],
       "tip": { "pt": "Frutas congeladas da safra servem igual.", "en": "Berries frozen at harvest work just as well.", "es": "Las frutas congeladas en temporada sirven igual." },
-      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." }
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — Berry Jams without Pectin", "url": "https://nchfp.uga.edu/how/make-jam-jelly/jams/berry-jams-without-pectin/" },
+        { "title": "National Center for Home Food Preservation (UGA) — Jams & Jellies", "url": "https://nchfp.uga.edu/how/make-jam-jelly" }
+      ]
     },
     {
       "id": "pesto",
@@ -1623,7 +1846,10 @@
         { "pt": "Misture o queijo no fim e acerte o sal.", "en": "Stir in the cheese at the end and season.", "es": "Incorpora el queso al final y ajusta la sal." }
       ],
       "tip": { "pt": "Cubra com uma camada de azeite para não escurecer.", "en": "Cover with a layer of oil so it does not darken.", "es": "Cúbrelo con una capa de aceite para que no se oscurezca." },
-      "safety": { "pt": "Alho cru no óleo pode causar botulismo: guarde na geladeira e use em até 5 dias, ou congele em forminhas de gelo.", "en": "Raw garlic in oil can cause botulism: keep in the fridge and use within 5 days, or freeze in ice-cube trays.", "es": "El ajo crudo en aceite puede causar botulismo: guárdalo en la nevera y úsalo en 5 días, o congélalo en cubiteras." }
+      "safety": { "pt": "Alho cru no óleo pode causar botulismo: guarde na geladeira e use em até 5 dias, ou congele em forminhas de gelo.", "en": "Raw garlic in oil can cause botulism: keep in the fridge and use within 5 days, or freeze in ice-cube trays.", "es": "El ajo crudo en aceite puede causar botulismo: guárdalo en la nevera y úsalo en 5 días, o congélalo en cubiteras." },
+      "sources": [
+        { "title": "Oregon State University Extension — Herbs and vegetables in oil", "url": "https://extension.oregonstate.edu/catalog/pub/sp-50-701-herbs-vegetables-oil" }
+      ]
     },
     {
       "id": "green-sauce",
@@ -1645,7 +1871,10 @@
         { "pt": "Misture com o vinagre e o sal e depois com o azeite.", "en": "Mix with the vinegar and salt, then the oil.", "es": "Mezcla con el vinagre y la sal y luego con el aceite." },
         { "pt": "Deixe descansar 30 minutos antes de servir.", "en": "Let it rest 30 minutes before serving.", "es": "Deja reposar 30 minutos antes de servir." }
       ],
-      "safety": { "pt": "Guarde na geladeira e use em até 1 semana: alho e ervas cruas no óleo não devem ficar fora dela.", "en": "Keep in the fridge and use within 1 week: raw garlic and herbs in oil should not sit out.", "es": "Guárdala en la nevera y úsala en 1 semana: el ajo y las hierbas crudas en aceite no deben quedarse fuera." }
+      "safety": { "pt": "Guarde na geladeira e use em até 1 semana: alho e ervas cruas no óleo não devem ficar fora dela.", "en": "Keep in the fridge and use within 1 week: raw garlic and herbs in oil should not sit out.", "es": "Guárdala en la nevera y úsala en 1 semana: el ajo y las hierbas crudas en aceite no deben quedarse fuera." },
+      "sources": [
+        { "title": "Oregon State University Extension — Herbs and vegetables in oil", "url": "https://extension.oregonstate.edu/catalog/pub/sp-50-701-herbs-vegetables-oil" }
+      ]
     },
     {
       "id": "tzatziki",
@@ -1667,7 +1896,10 @@
         { "pt": "Misture com o iogurte, o alho, as ervas e um fio de limão.", "en": "Mix with the yogurt, garlic, herbs and a squeeze of lemon.", "es": "Mezcla con el yogur, el ajo, las hierbas y un chorrito de limón." },
         { "pt": "Finalize com azeite e leve à geladeira por 30 minutos.", "en": "Finish with olive oil and chill for 30 minutes.", "es": "Termina con aceite y refrigera 30 minutos." }
       ],
-      "tip": { "pt": "Para engrossar o iogurte caseiro, deixe-o escorrer num pano por 2 horas na geladeira.", "en": "To thicken homemade yogurt, drain it in a cloth for 2 hours in the fridge.", "es": "Para espesar el yogur casero, escúrrelo en un paño 2 horas en la nevera." }
+      "tip": { "pt": "Para engrossar o iogurte caseiro, deixe-o escorrer num pano por 2 horas na geladeira.", "en": "To thicken homemade yogurt, drain it in a cloth for 2 hours in the fridge.", "es": "Para espesar el yogur casero, escúrrelo en un paño 2 horas en la nevera." },
+      "sources": [
+        { "title": "University of Alaska Fairbanks Cooperative Extension — Making Yogurt at Home", "url": "https://uaf.edu/ces/publications/database/food/making-yogurt.php" }
+      ]
     },
     {
       "id": "herb-butter",
@@ -1690,7 +1922,10 @@
         { "pt": "Misture o sal e as ervas, enrole num papel-manteiga e leve à geladeira.", "en": "Work in the salt and herbs, roll up in baking paper and refrigerate.", "es": "Mezcla la sal y las hierbas, enróllala en papel de horno y refrigera." }
       ],
       "tip": { "pt": "Lavar bem a manteiga tira o soro que a faria azedar rápido.", "en": "Washing the butter well removes the buttermilk that would make it sour quickly.", "es": "Lavar bien la mantequilla quita el suero que la haría agriarse pronto." },
-      "safety": { "pt": "Nata de leite cru: pasteurize antes, aquecendo a 72 °C por 15 segundos e esfriando rápido.", "en": "Cream from raw milk: pasteurise it first by heating to 72 °C for 15 seconds and cooling quickly.", "es": "Nata de leche cruda: pasteurízala antes, calentándola a 72 °C 15 segundos y enfriando rápido." }
+      "safety": { "pt": "Nata de leite cru: pasteurize antes, aquecendo a 72 °C por 15 segundos e esfriando rápido.", "en": "Cream from raw milk: pasteurise it first by heating to 72 °C for 15 seconds and cooling quickly.", "es": "Nata de leche cruda: pasteurízala antes, calentándola a 72 °C 15 segundos y enfriando rápido." },
+      "sources": [
+        { "title": "U.S. FDA — Raw Milk Misconceptions and the Danger of Raw Milk Consumption", "url": "https://www.fda.gov/food/buy-store-serve-safe-food/raw-milk-misconceptions-and-danger-raw-milk-consumption" }
+      ]
     },
     {
       "id": "quick-pickles",
@@ -1712,7 +1947,10 @@
         { "pt": "Ferva a salmoura até dissolver o sal e o açúcar.", "en": "Boil the brine until the salt and sugar dissolve.", "es": "Hierve la salmuera hasta que se disuelvan la sal y el azúcar." },
         { "pt": "Despeje quente sobre os legumes até cobrir, tampe, espere esfriar e leve à geladeira. Prontos no dia seguinte.", "en": "Pour over the vegetables while hot to cover, close, cool and refrigerate. Ready the next day.", "es": "Viértela caliente sobre las verduras hasta cubrir, cierra, deja enfriar y refrigera. Listos al día siguiente." }
       ],
-      "safety": { "pt": "Estes picles não são esterilizados: mantenha na geladeira e consuma em até 1 mês.", "en": "These pickles are not heat-processed: keep in the fridge and eat within 1 month.", "es": "Estos encurtidos no están esterilizados: mantenlos en la nevera y consúmelos en 1 mes." }
+      "safety": { "pt": "Estes picles não são esterilizados: mantenha na geladeira e consuma em até 1 mês.", "en": "These pickles are not heat-processed: keep in the fridge and eat within 1 month.", "es": "Estos encurtidos no están esterilizados: mantenlos en la nevera y consúmelos en 1 mes." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — General Information on Pickling", "url": "https://nchfp.uga.edu/how/pickle/general-information-pickling/general-information-on-pickling/" }
+      ]
     },
     {
       "id": "hot-sauce",
@@ -1734,7 +1972,10 @@
         { "pt": "Ferva as pimentas, o alho e o vinagre por 10 minutos.", "en": "Simmer the chillies, garlic and vinegar for 10 minutes.", "es": "Hierve las guindillas, el ajo y el vinagre 10 minutos." },
         { "pt": "Bata com o sal e o açúcar até ficar liso e envase quente em garrafinhas limpas.", "en": "Blend with the salt and sugar until smooth and bottle while hot in clean bottles.", "es": "Tritura con la sal y el azúcar hasta que quede liso y embotella en caliente en botellitas limpias." }
       ],
-      "safety": { "pt": "Não ponha a mão nos olhos depois de mexer com pimenta. Guarde o molho na geladeira.", "en": "Do not touch your eyes after handling chillies. Keep the sauce in the fridge.", "es": "No te toques los ojos después de manipular guindillas. Guarda la salsa en la nevera." }
+      "safety": { "pt": "Não ponha a mão nos olhos depois de mexer com pimenta. Guarde o molho na geladeira.", "en": "Do not touch your eyes after handling chillies. Keep the sauce in the fridge.", "es": "No te toques los ojos después de manipular guindillas. Guarda la salsa en la nevera." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — General Information on Pickling", "url": "https://nchfp.uga.edu/how/pickle/general-information-pickling/general-information-on-pickling/" }
+      ]
     },
     {
       "id": "tomato-sauce",
@@ -1757,7 +1998,10 @@
         { "pt": "Cozinhe destampado em fogo baixo por 40 minutos, mexendo de vez em quando. Junte as ervas no fim.", "en": "Simmer uncovered for 40 minutes, stirring now and then. Add the herbs at the end.", "es": "Cuece destapado a fuego bajo 40 minutos, removiendo de vez en cuando. Añade las hierbas al final." }
       ],
       "tip": { "pt": "Congele em potes ou sacos, em porções: dura 6 meses.", "en": "Freeze in tubs or bags in portions: keeps 6 months.", "es": "Congela en botes o bolsas por porciones: dura 6 meses." },
-      "safety": { "pt": "Guardar em vidro fora da geladeira exige técnica de conserva com acidez e tempo de banho-maria corretos. Na dúvida, congele.", "en": "Storing in jars outside the fridge needs proper canning with added acid and the right water-bath time. If in doubt, freeze.", "es": "Guardar en frascos fuera de la nevera exige técnica de conserva con acidez y tiempo de baño maría correctos. Ante la duda, congela." }
+      "safety": { "pt": "Guardar em vidro fora da geladeira exige técnica de conserva com acidez e tempo de banho-maria corretos. Na dúvida, congele.", "en": "Storing in jars outside the fridge needs proper canning with added acid and the right water-bath time. If in doubt, freeze.", "es": "Guardar en frascos fuera de la nevera exige técnica de conserva con acidez y tiempo de baño maría correctos. Ante la duda, congela." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — Freezing Tomatoes", "url": "https://nchfp.uga.edu/how/freeze/vegetable/freezing-tomatoes/" }
+      ]
     },
     {
       "id": "cured-olives",
@@ -1779,7 +2023,194 @@
         { "pt": "Passe para potes de vidro com a salmoura, cubra totalmente e deixe 2 a 4 semanas em lugar fresco, provando de vez em quando.", "en": "Move to glass jars with the brine, fully covered, and leave 2 to 4 weeks somewhere cool, tasting now and then.", "es": "Pásalas a frascos de vidrio con la salmuera, totalmente cubiertas, y déjalas de 2 a 4 semanas en un lugar fresco, probando de vez en cuando." },
         { "pt": "Na hora de servir, escorra e tempere com alho, orégano, casca de limão e azeite.", "en": "To serve, drain and dress with garlic, oregano, lemon peel and olive oil.", "es": "Al servir, escurre y aliña con ajo, orégano, piel de limón y aceite." }
       ],
-      "safety": { "pt": "As azeitonas precisam ficar sempre cobertas pela salmoura. Descarte se ficarem moles, com cheiro ruim ou mofo colorido. Depois de temperadas com alho e azeite, guarde na geladeira.", "en": "Keep the olives fully under the brine. Discard them if they turn soft, smell bad or grow coloured mould. Once dressed with garlic and oil, keep in the fridge.", "es": "Las aceitunas deben estar siempre cubiertas por la salmuera. Deséchalas si se ablandan, huelen mal o tienen moho de color. Una vez aliñadas con ajo y aceite, guárdalas en la nevera." }
+      "safety": { "pt": "As azeitonas precisam ficar sempre cobertas pela salmoura. Descarte se ficarem moles, com cheiro ruim ou mofo colorido. Depois de temperadas com alho e azeite, guarde na geladeira.", "en": "Keep the olives fully under the brine. Discard them if they turn soft, smell bad or grow coloured mould. Once dressed with garlic and oil, keep in the fridge.", "es": "Las aceitunas deben estar siempre cubiertas por la salmuera. Deséchalas si se ablandan, huelen mal o tienen moho de color. Una vez aliñadas con ajo y aceite, guárdalas en la nevera." },
+      "sources": [
+        { "title": "University of California ANR — Olives: Safe Methods for Home Pickling (Publication 8267)", "url": "https://escholarship.org/uc/item/55d9628m" }
+      ]
+    },
+    {
+      "id": "strawberry-jam",
+      "group": "jam",
+      "icon": "🍓",
+      "title": { "pt": "Geleia de morango", "en": "Strawberry jam", "es": "Mermelada de fresa" },
+      "summary": { "pt": "A geleia mais pedida, com pedaços de fruta e só três ingredientes.", "en": "The all-time favourite, with chunks of fruit and just three ingredients.", "es": "La mermelada favorita, con trozos de fruta y solo tres ingredientes." },
+      "serves": 10,
+      "minutes": 40,
+      "uses": ["strawberry", "lemon", "sugarcane"],
+      "ingredients": [
+        { "pt": "1 kg de morangos maduros", "en": "1 kg of ripe strawberries", "es": "1 kg de fresas maduras" },
+        { "pt": "600 g de açúcar", "en": "600 g of sugar", "es": "600 g de azúcar" },
+        { "pt": "Suco de 1 limão", "en": "Juice of 1 lemon", "es": "Zumo de 1 limón" }
+      ],
+      "steps": [
+        { "pt": "Lave, tire as folhas e corte os morangos ao meio. Misture com o açúcar e deixe 1 hora.", "en": "Wash, hull and halve the strawberries. Mix with the sugar and leave 1 hour.", "es": "Lava, quita las hojas y corta las fresas por la mitad. Mezcla con el azúcar y deja 1 hora." },
+        { "pt": "Cozinhe com o limão em fogo médio por 20 a 25 minutos, mexendo e tirando a espuma.", "en": "Cook with the lemon over medium heat for 20 to 25 minutes, stirring and skimming.", "es": "Cuece con el limón a fuego medio de 20 a 25 minutos, removiendo y quitando la espuma." },
+        { "pt": "Está no ponto quando uma gota num pires frio enruga ao ser empurrada com o dedo.", "en": "It is set when a drop on a cold saucer wrinkles when you push it with a finger.", "es": "Está en su punto cuando una gota en un plato frío se arruga al empujarla con el dedo." },
+        { "pt": "Envase quente em potes esterilizados, tampe e vire de cabeça para baixo até esfriar.", "en": "Pot hot into sterilised jars, close and turn upside down until cool.", "es": "Envasa en caliente en frascos esterilizados, cierra y pon boca abajo hasta que enfríe." }
+      ],
+      "tip": { "pt": "Morangos um pouco verdes têm mais pectina e ajudam a geleia a firmar.", "en": "A few slightly underripe strawberries add pectin and help the jam set.", "es": "Unas cuantas fresas algo verdes aportan pectina y ayudan a que cuaje." },
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — Berry Jams without Pectin", "url": "https://nchfp.uga.edu/how/make-jam-jelly/jams/berry-jams-without-pectin/" },
+        { "title": "National Center for Home Food Preservation (UGA) — Jams & Jellies", "url": "https://nchfp.uga.edu/how/make-jam-jelly" }
+      ]
+    },
+    {
+      "id": "orange-marmalade",
+      "group": "jam",
+      "icon": "🍊",
+      "title": { "pt": "Geleia de laranja com casca", "en": "Orange marmalade", "es": "Mermelada de naranja amarga" },
+      "summary": { "pt": "Geleia de laranja com tirinhas de casca, doce e levemente amarga.", "en": "Orange jam with thin strips of peel, sweet with a gentle bitterness.", "es": "Mermelada de naranja con tiras de piel, dulce y ligeramente amarga." },
+      "serves": 12,
+      "minutes": 120,
+      "uses": ["orange", "lemon", "sugarcane"],
+      "ingredients": [
+        { "pt": "1 kg de laranjas", "en": "1 kg of oranges", "es": "1 kg de naranjas" },
+        { "pt": "1 limão", "en": "1 lemon", "es": "1 limón" },
+        { "pt": "800 g de açúcar", "en": "800 g of sugar", "es": "800 g de azúcar" },
+        { "pt": "1 litro de água", "en": "1 litre of water", "es": "1 litro de agua" }
+      ],
+      "steps": [
+        { "pt": "Lave bem as frutas, tire a casca em tiras finas (só a parte colorida) e esprema o suco. Guarde as sementes e a parte branca num saquinho de pano.", "en": "Scrub the fruit, peel the coloured zest into thin strips and squeeze the juice. Tie the seeds and pith in a cloth bag.", "es": "Lava bien la fruta, saca la piel en tiras finas (solo la parte de color) y exprime el zumo. Ata las semillas y la parte blanca en una bolsita de tela." },
+        { "pt": "Cozinhe as cascas, o suco, a água e o saquinho por 40 minutos, até as cascas ficarem macias.", "en": "Simmer the peel, juice, water and bag for 40 minutes, until the peel is soft.", "es": "Cuece las pieles, el zumo, el agua y la bolsita 40 minutos, hasta que la piel esté tierna." },
+        { "pt": "Esprema e tire o saquinho (ele soltou a pectina), junte o açúcar e ferva forte por 15 a 20 minutos.", "en": "Squeeze and remove the bag (it has released the pectin), add the sugar and boil hard for 15 to 20 minutes.", "es": "Exprime y retira la bolsita (ha soltado la pectina), añade el azúcar y hierve fuerte de 15 a 20 minutos." },
+        { "pt": "Está no ponto quando uma gota num pires frio enruga ao ser empurrada com o dedo.", "en": "It is set when a drop on a cold saucer wrinkles when you push it with a finger.", "es": "Está en su punto cuando una gota en un plato frío se arruga al empujarla con el dedo." },
+        { "pt": "Envase quente em potes esterilizados, tampe e vire de cabeça para baixo até esfriar.", "en": "Pot hot into sterilised jars, close and turn upside down until cool.", "es": "Envasa en caliente en frascos esterilizados, cierra y pon boca abajo hasta que enfríe." }
+      ],
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — Jams & Jellies", "url": "https://nchfp.uga.edu/how/make-jam-jelly" }
+      ]
+    },
+    {
+      "id": "grape-jam",
+      "group": "jam",
+      "icon": "🍇",
+      "title": { "pt": "Geleia de uva", "en": "Grape jam", "es": "Mermelada de uva" },
+      "summary": { "pt": "Feita com as cascas, que dão a cor e o sabor forte da uva.", "en": "Made with the skins, which give the colour and the deep grape flavour.", "es": "Hecha con las pieles, que dan el color y el sabor intenso de la uva." },
+      "serves": 10,
+      "minutes": 60,
+      "uses": ["grape", "sugarcane", "lemon"],
+      "ingredients": [
+        { "pt": "1,5 kg de uvas (Isabel, Bordô ou Niágara)", "en": "1.5 kg of grapes (Concord-type are best)", "es": "1,5 kg de uvas (las de tipo Concord van mejor)" },
+        { "pt": "700 g de açúcar", "en": "700 g of sugar", "es": "700 g de azúcar" },
+        { "pt": "Suco de 1 limão", "en": "Juice of 1 lemon", "es": "Zumo de 1 limón" }
+      ],
+      "steps": [
+        { "pt": "Lave, desengace e aperte as uvas para separar a polpa das cascas. Pique as cascas.", "en": "Wash, destem and squeeze the grapes to separate pulp from skins. Chop the skins.", "es": "Lava, desgrana y aprieta las uvas para separar la pulpa de las pieles. Pica las pieles." },
+        { "pt": "Aqueça a polpa até amolecer (5 minutos) e passe na peneira para tirar as sementes.", "en": "Heat the pulp until soft (5 minutes) and push through a sieve to remove the seeds.", "es": "Calienta la pulpa hasta que se ablande (5 minutos) y pásala por un colador para quitar las semillas." },
+        { "pt": "Junte polpa, cascas, açúcar e limão e cozinhe 30 minutos, mexendo.", "en": "Combine pulp, skins, sugar and lemon and cook 30 minutes, stirring.", "es": "Junta la pulpa, las pieles, el azúcar y el limón y cuece 30 minutos, removiendo." },
+        { "pt": "Está no ponto quando uma gota num pires frio enruga ao ser empurrada com o dedo.", "en": "It is set when a drop on a cold saucer wrinkles when you push it with a finger.", "es": "Está en su punto cuando una gota en un plato frío se arruga al empujarla con el dedo." },
+        { "pt": "Envase quente em potes esterilizados, tampe e vire de cabeça para baixo até esfriar.", "en": "Pot hot into sterilised jars, close and turn upside down until cool.", "es": "Envasa en caliente en frascos esterilizados, cierra y pon boca abajo hasta que enfríe." }
+      ],
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — Jams & Jellies", "url": "https://nchfp.uga.edu/how/make-jam-jelly" }
+      ]
+    },
+    {
+      "id": "pineapple-mint-jam",
+      "group": "jam",
+      "icon": "🍍",
+      "title": { "pt": "Geleia de abacaxi com hortelã", "en": "Pineapple and mint jam", "es": "Mermelada de piña con menta" },
+      "summary": { "pt": "Doce e refrescante. Vai bem com queijo fresco e com carne de porco.", "en": "Sweet and refreshing. Good with fresh cheese and with pork.", "es": "Dulce y refrescante. Va bien con queso fresco y con cerdo." },
+      "serves": 10,
+      "minutes": 50,
+      "uses": ["pineapple", "mint", "lemon", "sugarcane"],
+      "ingredients": [
+        { "pt": "1 abacaxi grande, picado bem miúdo ou ralado", "en": "1 large pineapple, finely chopped or grated", "es": "1 piña grande, picada muy fina o rallada" },
+        { "pt": "500 g de açúcar", "en": "500 g of sugar", "es": "500 g de azúcar" },
+        { "pt": "Suco de 1 limão", "en": "Juice of 1 lemon", "es": "Zumo de 1 limón" },
+        { "pt": "Um punhado de folhas de hortelã picadas", "en": "A handful of chopped mint leaves", "es": "Un puñado de hojas de menta picadas" }
+      ],
+      "steps": [
+        { "pt": "Cozinhe o abacaxi com o próprio suco por 15 minutos.", "en": "Cook the pineapple in its own juice for 15 minutes.", "es": "Cuece la piña en su propio jugo 15 minutos." },
+        { "pt": "Junte o açúcar e o limão e cozinhe mais 25 a 30 minutos, mexendo, até engrossar.", "en": "Add the sugar and lemon and cook 25 to 30 minutes more, stirring, until thick.", "es": "Añade el azúcar y el limón y cuece de 25 a 30 minutos más, removiendo, hasta que espese." },
+        { "pt": "Desligue, junte a hortelã e mexa.", "en": "Turn off the heat and stir in the mint.", "es": "Apaga el fuego y añade la menta." },
+        { "pt": "Envase quente em potes esterilizados, tampe e vire de cabeça para baixo até esfriar.", "en": "Pot hot into sterilised jars, close and turn upside down until cool.", "es": "Envasa en caliente en frascos esterilizados, cierra y pon boca abajo hasta que enfríe." }
+      ],
+      "tip": { "pt": "O abacaxi tem pouca pectina: a geleia fica mais mole, no estilo de doce em pedaços.", "en": "Pineapple is low in pectin: the jam stays softer, more like a chunky preserve.", "es": "La piña tiene poca pectina: la mermelada queda más blanda, como una confitura en trozos." },
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — Jams & Jellies", "url": "https://nchfp.uga.edu/how/make-jam-jelly" }
+      ]
+    },
+    {
+      "id": "mango-passion-fruit-jam",
+      "group": "jam",
+      "icon": "🥭",
+      "title": { "pt": "Geleia de manga com maracujá", "en": "Mango and passion fruit jam", "es": "Mermelada de mango y maracuyá" },
+      "summary": { "pt": "A doçura da manga com a acidez do maracujá. As sementes ficam crocantes.", "en": "Sweet mango with tart passion fruit. The seeds stay crunchy.", "es": "El dulzor del mango con la acidez del maracuyá. Las semillas quedan crujientes." },
+      "serves": 10,
+      "minutes": 45,
+      "uses": ["mango", "passionFruit", "lemon", "sugarcane"],
+      "ingredients": [
+        { "pt": "3 mangas maduras em cubos (cerca de 1 kg de polpa)", "en": "3 ripe mangoes, cubed (about 1 kg of flesh)", "es": "3 mangos maduros en cubos (cerca de 1 kg de pulpa)" },
+        { "pt": "Polpa de 3 maracujás, com sementes", "en": "Pulp of 3 passion fruits, with seeds", "es": "Pulpa de 3 maracuyás, con semillas" },
+        { "pt": "500 g de açúcar", "en": "500 g of sugar", "es": "500 g de azúcar" },
+        { "pt": "Suco de 1 limão", "en": "Juice of 1 lemon", "es": "Zumo de 1 limón" }
+      ],
+      "steps": [
+        { "pt": "Cozinhe a manga com o açúcar e o limão por 20 minutos, amassando os pedaços.", "en": "Cook the mango with the sugar and lemon for 20 minutes, mashing the pieces.", "es": "Cuece el mango con el azúcar y el limón 20 minutos, aplastando los trozos." },
+        { "pt": "Junte a polpa do maracujá e cozinhe mais 10 a 15 minutos, mexendo.", "en": "Add the passion fruit pulp and cook 10 to 15 minutes more, stirring.", "es": "Añade la pulpa de maracuyá y cuece de 10 a 15 minutos más, removiendo." },
+        { "pt": "Está no ponto quando uma gota num pires frio enruga ao ser empurrada com o dedo.", "en": "It is set when a drop on a cold saucer wrinkles when you push it with a finger.", "es": "Está en su punto cuando una gota en un plato frío se arruga al empujarla con el dedo." },
+        { "pt": "Envase quente em potes esterilizados, tampe e vire de cabeça para baixo até esfriar.", "en": "Pot hot into sterilised jars, close and turn upside down until cool.", "es": "Envasa en caliente en frascos esterilizados, cierra y pon boca abajo hasta que enfríe." }
+      ],
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — Jams & Jellies", "url": "https://nchfp.uga.edu/how/make-jam-jelly" }
+      ]
+    },
+    {
+      "id": "peach-jam",
+      "group": "jam",
+      "icon": "🍑",
+      "title": { "pt": "Geleia de pêssego", "en": "Peach jam", "es": "Mermelada de melocotón" },
+      "summary": { "pt": "Aproveita os pêssegos maduros demais para a mesa.", "en": "Uses up peaches too ripe for the table.", "es": "Aprovecha los melocotones demasiado maduros para la mesa." },
+      "serves": 10,
+      "minutes": 45,
+      "uses": ["peach", "lemon", "sugarcane"],
+      "ingredients": [
+        { "pt": "1 kg de pêssegos maduros", "en": "1 kg of ripe peaches", "es": "1 kg de melocotones maduros" },
+        { "pt": "600 g de açúcar", "en": "600 g of sugar", "es": "600 g de azúcar" },
+        { "pt": "Suco de 1 limão", "en": "Juice of 1 lemon", "es": "Zumo de 1 limón" }
+      ],
+      "steps": [
+        { "pt": "Mergulhe os pêssegos 1 minuto em água fervente e depois em água fria. Tire a pele e o caroço e pique.", "en": "Dip the peaches 1 minute in boiling water, then cold water. Peel, stone and chop.", "es": "Sumerge los melocotones 1 minuto en agua hirviendo y luego en agua fría. Pélalos, quita el hueso y pícalos." },
+        { "pt": "Cozinhe com o açúcar e o limão por 25 a 30 minutos, mexendo e tirando a espuma.", "en": "Cook with the sugar and lemon for 25 to 30 minutes, stirring and skimming.", "es": "Cuece con el azúcar y el limón de 25 a 30 minutos, removiendo y quitando la espuma." },
+        { "pt": "Está no ponto quando uma gota num pires frio enruga ao ser empurrada com o dedo.", "en": "It is set when a drop on a cold saucer wrinkles when you push it with a finger.", "es": "Está en su punto cuando una gota en un plato frío se arruga al empujarla con el dedo." },
+        { "pt": "Envase quente em potes esterilizados, tampe e vire de cabeça para baixo até esfriar.", "en": "Pot hot into sterilised jars, close and turn upside down until cool.", "es": "Envasa en caliente en frascos esterilizados, cierra y pon boca abajo hasta que enfríe." }
+      ],
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — Jams & Jellies", "url": "https://nchfp.uga.edu/how/make-jam-jelly" }
+      ]
+    },
+    {
+      "id": "chili-pepper-jam",
+      "group": "jam",
+      "icon": "🌶️",
+      "title": { "pt": "Geleia de pimenta", "en": "Chilli pepper jam", "es": "Mermelada de pimiento picante" },
+      "summary": { "pt": "Doce e ardida, para servir com queijo, carnes e torradas.", "en": "Sweet and hot, to serve with cheese, meat and toast.", "es": "Dulce y picante, para servir con queso, carnes y tostadas." },
+      "serves": 8,
+      "minutes": 40,
+      "uses": ["chiliPepper", "bellPepper", "sugarcane"],
+      "ingredients": [
+        { "pt": "150 g de pimentas dedo-de-moça picadas, sem sementes", "en": "150 g of red chillies, seeded and chopped", "es": "150 g de guindillas rojas sin semillas, picadas" },
+        { "pt": "1 pimentão vermelho picado bem miúdo", "en": "1 red bell pepper, finely chopped", "es": "1 pimiento rojo picado muy fino" },
+        { "pt": "500 g de açúcar", "en": "500 g of sugar", "es": "500 g de azúcar" },
+        { "pt": "1 xícara de vinagre de maçã", "en": "1 cup of cider vinegar", "es": "1 taza de vinagre de manzana" }
+      ],
+      "steps": [
+        { "pt": "Use luvas para mexer nas pimentas.", "en": "Wear gloves to handle the chillies.", "es": "Usa guantes para manipular las guindillas." },
+        { "pt": "Cozinhe as pimentas, o pimentão, o vinagre e o açúcar em fogo médio por 25 a 30 minutos, mexendo, até virar uma calda grossa e brilhante.", "en": "Simmer the chillies, pepper, vinegar and sugar for 25 to 30 minutes, stirring, until thick and glossy.", "es": "Cuece las guindillas, el pimiento, el vinagre y el azúcar a fuego medio de 25 a 30 minutos, removiendo, hasta que espese y brille." },
+        { "pt": "Ela engrossa mais ao esfriar: desligue quando estiver como mel quente.", "en": "It thickens further as it cools: turn off when it looks like warm honey.", "es": "Espesa más al enfriarse: apaga cuando parezca miel caliente." },
+        { "pt": "Envase quente em potes esterilizados, tampe e vire de cabeça para baixo até esfriar.", "en": "Pot hot into sterilised jars, close and turn upside down until cool.", "es": "Envasa en caliente en frascos esterilizados, cierra y pon boca abajo hasta que enfríe." }
+      ],
+      "safety": { "pt": "Esterilize os potes fervendo-os por 10 minutos. Depois de aberta, guarde na geladeira. Descarte se aparecer mofo.", "en": "Sterilise the jars by boiling them for 10 minutes. Once opened, keep in the fridge. Discard if mould appears.", "es": "Esteriliza los frascos hirviéndolos 10 minutos. Una vez abierta, guárdala en la nevera. Deséchala si aparece moho." },
+      "sources": [
+        { "title": "National Center for Home Food Preservation (UGA) — Jams & Jellies", "url": "https://nchfp.uga.edu/how/make-jam-jelly" }
+      ]
     }
   ]
 }

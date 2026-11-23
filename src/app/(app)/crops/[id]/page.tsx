@@ -6,11 +6,12 @@ import { MonthCalendar } from "@/components/MonthCalendar";
 import { RecipeLinks } from "@/components/RecipeLinks";
 import { SourcesList } from "@/components/SourcesList";
 import { resolveLocale } from "@/i18n/locales";
-import { CROPS, CROP_IDS, type CropId } from "@/lib/catalog";
+import { CROP_IDS, type CropId } from "@/lib/catalog";
 import type { Text } from "@/lib/content-schema";
 import { ACTIVITIES, userCalendar } from "@/lib/seasons";
 import { getCropContent } from "@/server/content";
 import { requireAccess } from "@/server/current-user";
+import { ItemIcon } from "@/components/ItemIcon";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
@@ -25,13 +26,12 @@ export default async function CropPage({ params }: { params: Promise<{ id: strin
   const t = await getTranslations();
   const locale = resolveLocale(await getLocale());
   const content = getCropContent(id as CropId);
-  const crop = CROPS.find((c) => c.id === id)!;
   const tx = (v: Text) => v[locale];
   const back = (
     <Link href="/crops" className="inline-flex min-h-11 items-center text-sm text-primary hover:underline md:min-h-0">← {t("cropPage.groups")}</Link>
   );
   const title = (
-    <h1 className="font-display text-4xl font-bold"><span aria-hidden>{crop.icon}</span> {t(`crops.${id}`)}</h1>
+    <h1 className="font-display text-4xl font-bold"><ItemIcon id={id} /> {t(`crops.${id}`)}</h1>
   );
 
   if (!content) {

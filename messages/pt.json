@@ -479,6 +479,7 @@
       "vegetable": "Legumes e verduras",
       "grain": "Grãos, pães e bolos",
       "fruit": "Frutas e doces",
+      "jam": "Geleias",
       "drink": "Chás e bebidas",
       "preserve": "Molhos e conservas"
     },
@@ -489,7 +490,8 @@
     "tip": "Dica",
     "safety": "Segurança",
     "back": "Receitas",
-    "with": "Receitas com {name}"
+    "with": "Receitas com {name}",
+    "sourcesNote": "Receita escrita pela equipe NewFarmer. As fontes abaixo embasam a técnica e os cuidados de segurança."
   },
   "content": {
     "sources": "Fontes",

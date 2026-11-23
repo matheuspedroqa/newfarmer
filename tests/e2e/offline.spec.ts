@@ -50,6 +50,22 @@ test("anotação feita sem internet fica no aparelho e é enviada quando a inter
   await expect(page.getByTestId("diary-entry")).toHaveCount(1);
 });
 
+test("receita aberta com internet abre depois sem internet, com os ícones", async ({ page, context }) => {
+  await signupWithCows(page);
+  await page.waitForFunction(() => !!navigator.serviceWorker?.controller);
+  for (const p of ["/recipes/fresh-cheese", "/animals/cows"]) {
+    await page.goto(p);
+    await page.waitForLoadState("networkidle");
+  }
+  await context.setOffline(true);
+  await page.goto("/recipes/fresh-cheese");
+  await expect(page.getByTestId("recipe-safety")).toBeVisible();
+  await page.goto("/animals/cows");
+  const icon = page.getByRole("navigation").locator('img[src="/icons/cows.svg"]').first();
+  await expect.poll(() => icon.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
+  await context.setOffline(false);
+});
+
 test("falha de rede no envio (online) guarda a anotação na fila e depois envia", async ({ page }) => {
   await signupWithCows(page);
   await page.goto("/animals/cows?tab=diary");

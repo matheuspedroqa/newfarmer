@@ -5,12 +5,12 @@ import { getTranslations } from "next-intl/server";
 import { GuideSignup } from "@/components/GuideSignup";
 import { btn } from "@/components/PriceCard";
 import type { Locale } from "@/i18n/locales";
-import { CROPS } from "@/lib/catalog";
 import { KNOWLEDGE_COUNTRIES, type KnowledgeCountry } from "@/lib/countries";
 import { ClimateMap } from "@/components/ClimateMap";
 import { cropGuidePath } from "@/lib/crop-guide";
 import { COUNTRY_CLIMATES, guidePath, guidePaths, monthName, parseGuide } from "@/lib/plant-guide";
 import { guideZones } from "@/server/guide-newsletter";
+import { ItemIcon } from "@/components/ItemIcon";
 
 const MONTHS = Array.from({ length: 12 }, (_, i) => i + 1);
 const alternates = (paths: Record<Locale, string>, lang: Locale): Metadata["alternates"] => ({ canonical: paths[lang], languages: { ...paths, "x-default": paths.en } });
@@ -71,7 +71,6 @@ export async function GuideMonth({ lang, params }: { lang: Locale; params: Param
   const vars = { month: monthName(lang, month), inCountry: t(`guide.inCountry.${country}`) };
   const prev = ((month + 10) % 12) + 1;
   const next = (month % 12) + 1;
-  const icon = (id: string) => CROPS.find((c) => c.id === id)!.icon;
 
   return (
     <article className="mx-auto max-w-4xl px-5 py-12 md:px-8 md:py-16">
@@ -90,7 +89,7 @@ export async function GuideMonth({ lang, params }: { lang: Locale; params: Param
                 {tasks.map((task) => (
                   <li key={task.cropId}>
                     <Link href={cropGuidePath(lang, task.cropId)} className={chip}>
-                      <span aria-hidden>{icon(task.cropId)}</span> <b>{t(`crops.${task.cropId}`)}</b>
+                      <ItemIcon id={task.cropId} /> <b>{t(`crops.${task.cropId}`)}</b>
                       <span className="text-sm text-muted">· {task.activities.map((a) => t(`activities.${a}`)).join(", ")}</span>
                     </Link>
                   </li>
